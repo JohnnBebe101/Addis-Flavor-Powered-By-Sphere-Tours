@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+Ethiopic:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "DM Sans", sans-serif;
+  --font-ethiopic: "Noto Sans Ethiopic", sans-serif;
+  
+  --color-coffee-red: #A67C52;
+  --color-teal: #2D2926;
+  --color-sandstone: #FDFCF0;
+  --color-linen-white: #FFFFFF;
+  --color-gold: #5A5A40;
+  --color-dark-bg: #2D2926;
+}
+
+/* Custom Animations & Styles */
+@keyframes steam {
+  0% {
+    transform: translateY(0) scaleX(1) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-25px) scaleX(1.2) rotate(5deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-60px) scaleX(1.5) rotate(-10deg);
+    opacity: 0;
+  }
+}
+
+.steam-particle {
+  animation: steam 4s ease-in-out infinite;
+}
+
+/* Scrollbar customization */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Ethiopian traditional border shema pattern */
+.shema-border {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #5A5A40,
+    #5A5A40 10px,
+    #A67C52 10px,
+    #A67C52 20px,
+    #2D2926 20px,
+    #2D2926 30px,
+    #FDFCF0 30px,
+    #FDFCF0 40px
+  );
+  height: 8px;
+  width: 100%;
+}
+
+.shema-border-subtle {
+  background-image: radial-gradient(circle, #5A5A40 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+}
+
