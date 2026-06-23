@@ -34,6 +34,8 @@ import Navbar from './components/Navbar';
 import ReviewsCarousel from './components/ReviewsCarousel';
 import JebenaDeepDive from './components/JebenaDeepDive';
 import BookingWidget from './components/BookingWidget';
+import BecomeHost from './components/BecomeHost';
+import OurStory from './components/OurStory';
 
 import heroBgImg from './assets/images/addis_hero_bg_1782233695273.jpg';
 import jebenaPourImg from './assets/images/addis_jebena_pour_1782233715156.jpg';
@@ -51,6 +53,7 @@ export default function App() {
     'home-meal': 0,
     'coffee-only': 0
   });
+  const [activeView, setActiveView] = useState<'home' | 'become-host' | 'our-story'>('home');
 
   const translations = TRANSLATIONS[currentLang];
 
@@ -80,6 +83,266 @@ export default function App() {
     handleScroll(); // initial call
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Professional Dynamic SEO, AEO, and GEO Optimization Hook
+  useEffect(() => {
+    // 1. Set dynamic, intent-focused page title and description
+    let pageTitle = "Addis Flavor | Authentic Cooking Classes & Home Meals in Addis Ababa";
+    let pageDesc = "Discover authentic culinary experiences in Addis Ababa, Ethiopia. Book private cooking classes, traditional coffee ceremonies, and home cooked meals with vetted local host families. Powered by Sphere Tour and Travel.";
+    
+    if (currentLang === 'fr') {
+      pageTitle = "Addis Flavor | Cours de cuisine authentiques & repas chez l'habitant à Addis-Abeba";
+      pageDesc = "Découvrez des expériences culinaires authentiques à Addis-Abeba, Éthiopie. Réservez des cours de cuisine privés, des cérémonies du café et des repas faits maison avec des familles locales agréées. Propulsé par Sphere Tour & Travel.";
+    } else if (currentLang === 'am') {
+      pageTitle = "አዲስ ፍሌቨር | በአዲስ አበባ ውስጥ የባህል ምግብ ዝግጅት እና የቤት ውስጥ ምግቦች";
+      pageDesc = "በአዲስ አበባ ውስጥ እውነተኛ ባህላዊ የኢትዮጵያ ምግብ ዝግጅት እና የቤት ውስጥ ምግቦች ልምዶችን ያስይዙ። በስፌር ቱር ኤንድ ትራቭል (Sphere Tour & Travel) የተዘጋጀ።";
+    }
+
+    if (activeView === 'become-host') {
+      if (currentLang === 'en') {
+        pageTitle = "Become a Host - Share Ethiopian Hospitality | Addis Flavor";
+        pageDesc = "Join our network of passionate home cooks and host families in Addis Ababa. Earn a sustainable income while sharing traditional Ethiopian recipes and hospitality with travelers from around the globe.";
+      } else if (currentLang === 'fr') {
+        pageTitle = "Devenir Hôte - Partagez l'hospitalité éthiopienne | Addis Flavor";
+        pageDesc = "Rejoignez notre réseau de cuisiniers passionnés et de familles d'accueil à Addis-Abeba. Gagnez un revenu durable tout en partageant des recettes traditionnelles éthiopiennes.";
+      } else if (currentLang === 'am') {
+        pageTitle = "አስተናጋጅ ይሁኑ - የኢትዮጵያን እንግዳ ተቀባይነት ያካፍሉ | አዲስ ፍሌቨር";
+        pageDesc = "በአዲስ አበባ ውስጥ ፍቅር ካላቸው የቤት ውስጥ አብሳይዎች እና አስተናጋጅ ቤተሰቦች ጋር ይቀላቀሉ። ባህላዊ የኢትዮጵያ ምግቦችን እና እንግዳ ተቀባይነትን ለአለም ያጋሩ።";
+      }
+    } else if (activeView === 'our-story') {
+      if (currentLang === 'en') {
+        pageTitle = "Our Story - Powered by Sphere Tour & Travel Ethiopia | Addis Flavor";
+        pageDesc = "Learn about Addis Flavor, a premium culinary initiative operated by Sphere Tour and Travel, Addis Ababa's leading sustainable tour agency. Meet our founders and read our community vetting safety guidelines.";
+      } else if (currentLang === 'fr') {
+        pageTitle = "Notre histoire - Par Sphere Tour & Travel Éthiopie | Addis Flavor";
+        pageDesc = "Découvrez l'histoire d'Addis Flavor, une initiative culinaire exclusive opérée par Sphere Tour and Travel, l'agence leader du tourisme durable à Addis-Abeba.";
+      } else if (currentLang === 'am') {
+        pageTitle = "ታሪካችን - በስፌር ቱር ኤንድ ትራቭል ኢትዮጵያ የተዘጋጀ | አዲስ ፍሌቨር";
+        pageDesc = "ስለ አዲስ ፍሌቨር እና ስለ ስፌር ቱር ኤንድ ትራቭል ኢትዮጵያ ትብብር ይረዱ። የአካባቢውን ቤተሰቦች በዘላቂ ቱሪዝም እና በምግብ ጥበብ እናበቃለን።";
+      }
+    }
+
+    document.title = pageTitle;
+
+    // Set meta description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name', 'description');
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.setAttribute('content', pageDesc);
+
+    // 2. Generate and inject JSON-LD multi-entity structured data graph
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TravelAgency",
+          "@id": "https://sphere-voyage-ethiopie.com/#agency",
+          "name": "Sphere Tour and Travel Ethiopia",
+          "alternateName": "Sphere Voyage Éthiopie",
+          "url": "https://sphere-voyage-ethiopie.com/en/sphere-travel-ethiopia.html",
+          "logo": "https://ais-dev-7ztma3cspdikyc7vu3ioyv-6490217518.europe-west2.run.app/assets/images/addis_jebena_pour_1782233715156.jpg",
+          "image": "https://ais-dev-7ztma3cspdikyc7vu3ioyv-6490217518.europe-west2.run.app/assets/images/addis_hero_bg_1782233695273.jpg",
+          "description": "Licensed and leading tour operator based in Addis Ababa, Ethiopia, specializing in sustainable, immersive, and cultural journeys like Addis Flavor.",
+          "telephone": "+251911223344",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Bole Road, Near Friendship Building",
+            "addressLocality": "Addis Ababa",
+            "addressRegion": "Addis Ababa",
+            "postalCode": "1000",
+            "addressCountry": "ET"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "9.005401",
+            "longitude": "38.763611"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+251911223344",
+            "contactType": "customer service",
+            "areaServed": "Worldwide",
+            "availableLanguage": ["English", "Amharic", "French"]
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://ais-dev-7ztma3cspdikyc7vu3ioyv-6490217518.europe-west2.run.app/#brand",
+          "name": "Addis Flavor",
+          "parentOrganization": {
+            "@type": "TravelAgency",
+            "@id": "https://sphere-voyage-ethiopie.com/#agency"
+          },
+          "description": "Premium local culinary initiative offering immersive home dining, cooking classes, and traditional coffee ceremonies with local vetted hosts in Addis Ababa.",
+          "url": "https://ais-dev-7ztma3cspdikyc7vu3ioyv-6490217518.europe-west2.run.app/",
+          "telephone": "+251911223344",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Bole, Piazza, Yeka, Guellele",
+            "addressLocality": "Addis Ababa",
+            "addressCountry": "ET"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://ais-dev-7ztma3cspdikyc7vu3ioyv-6490217518.europe-west2.run.app/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://ais-dev-7ztma3cspdikyc7vu3ioyv-6490217518.europe-west2.run.app/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": activeView === 'become-host' ? "Become a Host" : activeView === 'our-story' ? "Our Story" : "Experiences",
+              "item": activeView === 'become-host' 
+                ? "https://ais-dev-7ztma3cspdikyc7vu3ioyv-6490217518.europe-west2.run.app/#become-host"
+                : activeView === 'our-story'
+                  ? "https://ais-dev-7ztma3cspdikyc7vu3ioyv-6490217518.europe-west2.run.app/#our-story"
+                  : "https://ais-dev-7ztma3cspdikyc7vu3ioyv-6490217518.europe-west2.run.app/#experiences"
+            }
+          ]
+        },
+        {
+          "@type": "TouristTrip",
+          "@id": "https://ais-dev-7ztma3cspdikyc7vu3ioyv-6490217518.europe-west2.run.app/#trip-cooking-class",
+          "name": "Addis Ababa Master Cooking Class",
+          "description": "Learn the secrets of ancient Ethiopian cooking under the guidance of a friendly neighborhood host. Bake teff sourdough Injera and stir spicy wots from scratch.",
+          "touristType": "Food and Culture Lovers",
+          "subTrip": {
+            "@type": "TouristTrip",
+            "duration": "PT4H"
+          },
+          "provider": {
+            "@type": "TravelAgency",
+            "@id": "https://sphere-voyage-ethiopie.com/#agency"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "49.00",
+            "priceCurrency": "USD",
+            "eligibleRegion": {
+              "@type": "Place",
+              "name": "Addis Ababa, Ethiopia"
+            },
+            "category": "Culinary Tour"
+          }
+        },
+        {
+          "@type": "TouristTrip",
+          "@id": "https://ais-dev-7ztma3cspdikyc7vu3ioyv-6490217518.europe-west2.run.app/#trip-home-meal",
+          "name": "Local Home Meal Experience & Coffee Ceremony",
+          "description": "Dine around a traditional Mesob basket, share the multi-dish Beyaynetu feast (or rich meat doro wat), and experience authentic warmth with songs and stories inside a private Addis Ababa family home.",
+          "touristType": "Culinary Travelers",
+          "subTrip": {
+            "@type": "TouristTrip",
+            "duration": "PT2.5H"
+          },
+          "provider": {
+            "@type": "TravelAgency",
+            "@id": "https://sphere-voyage-ethiopie.com/#agency"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "35.00",
+            "priceCurrency": "USD",
+            "eligibleRegion": {
+              "@type": "Place",
+              "name": "Addis Ababa, Ethiopia"
+            },
+            "category": "Private Home Dining"
+          }
+        },
+        {
+          "@type": "TouristTrip",
+          "@id": "https://ais-dev-7ztma3cspdikyc7vu3ioyv-6490217518.europe-west2.run.app/#trip-coffee-only",
+          "name": "The Sacred Coffee Ceremony & Mindfulness Ritual",
+          "description": "An intimate, spiritual immersion into the world's original coffee culture. Learn the slow three-pour brewing method using the clay Jebena.",
+          "touristType": "Coffee Enthusiasts & Spiritual Seekers",
+          "subTrip": {
+            "@type": "TouristTrip",
+            "duration": "PT1.5H"
+          },
+          "provider": {
+            "@type": "TravelAgency",
+            "@id": "https://sphere-voyage-ethiopie.com/#agency"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "25.00",
+            "priceCurrency": "USD",
+            "eligibleRegion": {
+              "@type": "Place",
+              "name": "Addis Ababa, Ethiopia"
+            },
+            "category": "Cultural Ritual"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://ais-dev-7ztma3cspdikyc7vu3ioyv-6490217518.europe-west2.run.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Where do the Addis Flavor cooking classes and food experiences take place?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "All sessions and traditional coffee ceremonies are held inside the private family kitchens and green gardens of vetted local host families in cozy Addis Ababa neighborhoods like Bole, Piazza, Yeka, and Guellele. Secure addresses are sent immediately upon booking confirmation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does pricing and payment work for Addis Flavor tours?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Addis Flavor offers professional private tours starting at $25 to $49 per person. Payment is highly flexible: no immediate credit card charges are made on our website. You pay your host directly on-site during your session using cash or local electronic wallet options like Telebirr."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the durations of the culinary tours?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Addis Ababa Master Cooking Class lasts between 3.5 to 4 hours. The Local Home Meal Experience takes 2 to 2.5 hours, and The Sacred Coffee Ceremony is a 1.5-hour intimate mindfulness ritual."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can traditional Ethiopian meals accommodate vegan, vegetarian, or gluten-free diets?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! Ethiopian Orthodox Christian fasting rules make more than half of our dishes naturally vegan (the 'Bayenetu' platter). Additionally, we provide 100% pure gluten-free Teff Injera, dairy-free options, and strictly halal-vetted meats upon request."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the relationship between Addis Flavor and Sphere Tour and Travel?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Addis Flavor is an exclusive, locally managed culinary experience designed, operated, and backed by Sphere Tour and Travel, a leading fully licensed tour operator based in Addis Ababa, Ethiopia. Sphere Travel ensures optimal transit safety, certified hosts, and sustainable tourism standards."
+              }
+            }
+          ]
+        }
+      ]
+    };
+
+    let script = document.getElementById('json-ld-seo');
+    if (!script) {
+      script = document.createElement('script');
+      script.setAttribute('id', 'json-ld-seo');
+      script.setAttribute('type', 'application/ld+json');
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(structuredData);
+  }, [activeView, currentLang]);
 
   const handleOpenBooking = () => {
     setIsBookingOpen(true);
@@ -126,10 +389,34 @@ export default function App() {
         setLang={setLang}
         translations={translations}
         onBookClick={handleOpenBooking}
+        activeView={activeView}
+        onViewChange={(view) => setActiveView(view)}
+        isGlobalDark={isGlobalDark}
       />
 
-      {/* 3. HERO HEROIC BANNER */}
-      <header
+      {activeView === 'become-host' ? (
+        <BecomeHost
+          currentLang={currentLang}
+          isGlobalDark={isGlobalDark}
+          onBackToHome={() => {
+            setActiveView('home');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+        />
+      ) : activeView === 'our-story' ? (
+        <OurStory
+          currentLang={currentLang}
+          isGlobalDark={isGlobalDark}
+          onBackToHome={() => {
+            setActiveView('home');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          onBookClick={handleOpenBooking}
+        />
+      ) : (
+        <>
+          {/* 3. HERO HEROIC BANNER */}
+          <header
         id="hero-banner"
         className="relative h-[90vh] flex items-center justify-center bg-cover bg-center overflow-hidden"
         style={{
@@ -325,6 +612,7 @@ export default function App() {
                         alt={pkg.nameEn}
                         className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"
+                        loading="lazy"
                       />
                       {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -487,6 +775,7 @@ export default function App() {
                         alt="Scrollytelling background"
                         className="w-full h-full object-cover transition-all duration-700 filter saturate-[1.1] scale-100"
                         referrerPolicy="no-referrer"
+                        loading="lazy"
                       />
                       {/* Overlay card */}
                       <div className="absolute inset-0 bg-gradient-to-t from-teal/90 via-transparent to-transparent" />
@@ -657,6 +946,7 @@ export default function App() {
                 alt="Ethiopian coffee ceremony traditional vertical"
                 className="absolute inset-0 w-full h-full object-cover filter saturate-[1.1] hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
+                loading="lazy"
               />
               {/* Image dark/warm overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-teal/95 via-teal/20 to-transparent" />
@@ -733,9 +1023,9 @@ export default function App() {
 
           <div className="space-y-6">
             <div className="border border-teal/10 p-5 rounded-2xl bg-sandstone/20">
-              <h4 className="font-serif font-bold text-sm text-teal">
+              <h3 className="font-serif font-bold text-sm text-teal">
                 {currentLang === 'en' ? 'Where do these experiences take place?' : currentLang === 'fr' ? 'Où se déroulent ces expériences ?' : 'ልምዶቹ የት ነው የሚከናወኑት?'}
-              </h4>
+              </h3>
               <p className="text-xs text-teal/70 leading-relaxed mt-2 font-sans">
                 {currentLang === 'en'
                   ? 'All sessions are held in the private family kitchens and gardens of our vetted local hosts in comfortable Addis Ababa neighborhoods like Bole, Piazza, Yeka, and Guellele. Host locations are sent immediately upon booking confirmation.'
@@ -746,9 +1036,9 @@ export default function App() {
             </div>
 
             <div className="border border-teal/10 p-5 rounded-2xl bg-sandstone/20">
-              <h4 className="font-serif font-bold text-sm text-teal">
+              <h3 className="font-serif font-bold text-sm text-teal">
                 {currentLang === 'en' ? 'How does payment work?' : currentLang === 'fr' ? 'Comment fonctionne le paiement ?' : 'ክፍያ እንዴት ነው የሚሰራው?'}
-              </h4>
+              </h3>
               <p className="text-xs text-teal/70 leading-relaxed mt-2 font-sans">
                 {currentLang === 'en'
                   ? 'This website simulates local booking authorization. No immediate cash is charged from your card. You pay your host directly on-site or via flexible electronic options (Telebirr/Cash) during your culinary session.'
@@ -759,9 +1049,9 @@ export default function App() {
             </div>
 
             <div className="border border-teal/10 p-5 rounded-2xl bg-sandstone/20">
-              <h4 className="font-serif font-bold text-sm text-teal">
+              <h3 className="font-serif font-bold text-sm text-teal">
                 {currentLang === 'en' ? 'Can you accommodate dietary restrictions?' : currentLang === 'fr' ? 'Pouvez-vous adapter le menu aux restrictions alimentaires ?' : 'የምግብ አለርጂ ካለብኝ ማስተናገድ ትችላላችሁ?'}
-              </h4>
+              </h3>
               <p className="text-xs text-teal/70 leading-relaxed mt-2 font-sans">
                 {currentLang === 'en'
                   ? 'Absolutely. Traditional Ethiopian cuisine is highly accommodating. Over half of our dishes are naturally vegan (the fasting "Bayenetu" platter). We also offer pure gluten-free Teff Injera, dairy-free options, and halal-vetted meats.'
@@ -773,6 +1063,8 @@ export default function App() {
           </div>
         </div>
       </section>
+      </>
+      )}
 
       {/* 12. FOOTER (Traveling Spoon Clone Columns + Newsletter + popular destinations list) */}
       <footer id="booking-anchor" className="bg-teal text-linen-white pt-16 pb-8 border-t-8 border-gold">
@@ -819,7 +1111,17 @@ export default function App() {
                 {currentLang === 'en' ? 'JOIN US' : currentLang === 'fr' ? 'REJOIGNEZ-NOUS' : 'ይቀላቀሉን'}
               </h4>
               <ul className="space-y-2 text-xs text-linen-white/70 font-sans">
-                <li><a href="#host" className="hover:text-gold transition-colors">{currentLang === 'en' ? 'Become a Host' : currentLang === 'fr' ? 'Devenir hôte' : 'አስተናጋጅ ይሁኑ'}</a></li>
+                <li>
+                  <button
+                    onClick={() => {
+                      setActiveView('become-host');
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="hover:text-gold transition-colors text-left"
+                  >
+                    {currentLang === 'en' ? 'Become a Host' : currentLang === 'fr' ? 'Devenir hôte' : 'አስተናጋጅ ይሁኑ'}
+                  </button>
+                </li>
                 <li><a href="#ambassador" className="hover:text-gold transition-colors">{currentLang === 'en' ? 'Become an Ambassador' : currentLang === 'fr' ? 'Devenir ambassadeur' : 'አምባሳደር ይሁኑ'}</a></li>
                 <li><a href="#agency" className="hover:text-gold transition-colors">{currentLang === 'en' ? 'Travel Agency Login' : currentLang === 'fr' ? 'Accès agences de voyage' : 'የጉዞ ወኪል መግቢያ'}</a></li>
                 <li><a href="#terms" className="hover:text-gold transition-colors">{currentLang === 'en' ? 'Host Terms & Guidelines' : currentLang === 'fr' ? 'Conditions & Directives des hôtes' : 'የአስተናጋጆች መመሪያ'}</a></li>
