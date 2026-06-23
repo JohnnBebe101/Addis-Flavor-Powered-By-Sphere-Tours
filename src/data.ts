@@ -4,6 +4,9 @@
  */
 
 import { Language, Translations, ExperiencePackage, HostReview } from './types';
+import cookingClassImg from './assets/images/addis_cooking_class_1782233734033.jpg';
+import heroBgImg from './assets/images/addis_hero_bg_1782233695273.jpg';
+import jebenaPourImg from './assets/images/addis_jebena_pour_1782233715156.jpg';
 
 export const TRANSLATIONS: Record<Language, Translations> = {
   en: {
@@ -163,7 +166,7 @@ export const PACKAGES: ExperiencePackage[] = [
     durationAm: "ከ 3.5 - 4 ሰዓታት",
     durationFr: "3.5 - 4 heures",
     emoji: "🍳",
-    imageUrl: "/src/assets/images/addis_cooking_class_1782233734033.jpg",
+    imageUrl: cookingClassImg,
     descEn: "Learn the secrets of ancient Ethiopian cooking under the guidance of a friendly neighborhood host. Sift teff flour, pour sourdough onto the hot Mitad clay griddle, and balance direct flavors in deep slow-cooked wats.",
     descAm: "በአካባቢው ተወዳጅ በሆኑ አስተናጋጅ መሪነት የጥንቱን የኢትዮጵያ ምግብ አዘገጃጀት ሚስጥሮችን ይማሩ። ጤፍ ያብጥሩ፣ የእንጀራ ሊጥ በምጣድ ላይ ያፍስሱ፣ እና የሚጣፍጥ ቀይ ወጥ ያብስሉ::",
     descFr: "Découvrez les secrets de la cuisine éthiopienne ancestrale sous la direction d'un hôte local chaleureux. Tamisez la farine de teff, versez la pâte au levain sur la plaque d'argile Mitad brûlante et équilibrez les saveurs intenses de wats mijotés.",
@@ -217,7 +220,7 @@ export const PACKAGES: ExperiencePackage[] = [
     durationAm: "ከ 2 - 2.5 ሰዓታት",
     durationFr: "2 - 2.5 heures",
     emoji: "🍲",
-    imageUrl: "/src/assets/images/addis_hero_bg_1782233695273.jpg",
+    imageUrl: heroBgImg,
     descEn: "Step into a beautiful, multi-generational family home in Bole or Piazza. Dine at a traditional Mesob basket, share the multi-dish Beyaynetu feast (or rich meat doro wat), and experience authentic warmth with songs and stories.",
     descAm: "በቦሌ ወይም በፒያሳ ወደሚገኝ ውብ ባለብዙ ትውልድ ቤተሰብ ቤት ይግቡ። በባህላዊ መሶብ ላይ ይመገቡ፣ የጾም ባየነቱ (ወይም በዶሮ ወጥ) ማዕድ ይጋሩ፣ እና በባህላዊ ዘፈኖች ታጅበው እውነተኛውን የሀገር ፍቅር ይለማመዱ።",
     descFr: "Entrez dans une magnifique maison familiale multigénérationnelle à Bole ou Piazza. Dînez autour d'un panier traditionnel Mesob, partagez le festin multi-plats Beyaynetu (ou un ragoût de poulet Doro Wat) et vivez une hospitalité authentique rythmée par des chants et des histoires.",
@@ -271,7 +274,7 @@ export const PACKAGES: ExperiencePackage[] = [
     durationAm: "1.5 ሰዓታት",
     durationFr: "1.5 heure",
     emoji: "☕",
-    imageUrl: "/src/assets/images/addis_jebena_pour_1782233715156.jpg",
+    imageUrl: jebenaPourImg,
     descEn: "An intimate, spiritual immersion into the world's original coffee culture. Sit in an incense-lit room, learn the slow three-pour brewing method using the clay Jebena, and enjoy the calming transition of each round.",
     descAm: "ወደ ቀደመው የቡና ባህል ጥልቅ እና መንፈሳዊ ጉዞ። በዕጣን በታወደ ክፍል ውስጥ ይቀመጡ፣ የሸክላ ጀበናን በመጠቀም የቡና መውረጃ ዘዴን ይማሩ እና የእያንዳንዱን ዙር ሰላማዊ ሽግግር ይለማመዱ።",
     descFr: "Une immersion intime et spirituelle dans la culture originelle du café. Installez-vous dans une pièce parfumée à l'encens, apprenez la méthode lente d'infusion en trois versements avec la Jebena en argile et savourez la transition apaisante de chaque tour.",

@@ -35,6 +35,9 @@ import ReviewsCarousel from './components/ReviewsCarousel';
 import JebenaDeepDive from './components/JebenaDeepDive';
 import BookingWidget from './components/BookingWidget';
 
+import heroBgImg from './assets/images/addis_hero_bg_1782233695273.jpg';
+import jebenaPourImg from './assets/images/addis_jebena_pour_1782233715156.jpg';
+
 export default function App() {
   const [currentLang, setLang] = useState<Language>('en');
   const [isGlobalDark, setGlobalDark] = useState(false);
@@ -55,18 +58,20 @@ export default function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const element = document.getElementById('scrollytelling-showcase');
+      const element = document.getElementById('scrollytelling-stages-container');
       if (!element) return;
       const rect = element.getBoundingClientRect();
-      const elementHeight = rect.height;
-      const viewHeight = window.innerHeight;
+      const totalHeight = rect.height;
       
-      // Calculate scrollytelling section scroll percentage:
-      // Start tracking as soon as section top enters viewport (rect.top <= viewHeight)
-      // End tracking when section bottom leaves viewport (rect.bottom <= 0)
-      const totalArea = elementHeight + viewHeight;
-      const visibleAmount = viewHeight - rect.top;
-      const percentage = totalArea > 0 ? (visibleAmount / totalArea) * 100 : 0;
+      const navbarHeight = window.innerWidth >= 768 ? 68 : 58;
+      const progressOffset = navbarHeight + 54;
+      
+      const scrolled = progressOffset - rect.top;
+      let percentage = 0;
+      if (scrolled > 0) {
+        const scrollableRange = totalHeight - (window.innerHeight - progressOffset);
+        percentage = scrollableRange > 0 ? (scrolled / scrollableRange) * 100 : 0;
+      }
       
       setScrollyProgress(isNaN(percentage) ? 0 : Math.min(100, Math.max(0, percentage)));
     };
@@ -128,7 +133,7 @@ export default function App() {
         id="hero-banner"
         className="relative h-[90vh] flex items-center justify-center bg-cover bg-center overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(27, 58, 75, 0.45), rgba(15, 23, 42, 0.85)), url('/src/assets/images/addis_hero_bg_1782233695273.jpg')`
+          backgroundImage: `linear-gradient(to bottom, rgba(27, 58, 75, 0.45), rgba(15, 23, 42, 0.85)), url(${heroBgImg})`
         }}
       >
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 space-y-6">
@@ -420,19 +425,39 @@ export default function App() {
 
       {/* 8. SCROLLYTELLING SECTIONS (Apple style Sticky elements) */}
       <section id="scrollytelling-showcase" className="py-16 bg-sandstone/30 relative">
+        {/* Intro Heading - Always scrolled above the progress bar */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-4xl font-serif tracking-tight">
+              {currentLang === 'en' ? 'Taste the Soul: Behind the Scenes' : currentLang === 'fr' ? 'Goûtez l’âme : Coulisses' : 'የአዲስ ፍሌቨር በስተጀርባ ታሪኮች'}
+            </h2>
+            <p className="text-xs font-mono uppercase text-coffee-red tracking-widest mt-2">
+              {currentLang === 'en' ? 'SENSORY IMMERSION STAGE' : currentLang === 'fr' ? 'PHASE D’IMMERSION SENSORIELLE' : 'የስሜት ህዋሳት ማነቃቂያ ደረጃ'}
+            </p>
+          </div>
+        </div>
+
         {/* Sticky Scroll Progress Bar */}
-        <div className="sticky top-[58px] md:top-[68px] left-0 right-0 z-30 bg-sandstone/95 backdrop-blur-md py-2.5 border-b border-teal/10 shadow-sm transition-all duration-300">
+        <div className={`sticky top-[58px] md:top-[68px] left-0 right-0 z-30 backdrop-blur-md py-3 border-b shadow-sm transition-all duration-300 ${
+          isGlobalDark
+            ? 'bg-dark-bg/95 border-linen-white/10'
+            : 'bg-sandstone/95 border-teal/10'
+        }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-widest text-teal">
+            <div className={`flex items-center justify-between text-[10px] font-mono uppercase tracking-widest ${
+              isGlobalDark ? 'text-linen-white/70' : 'text-teal'
+            }`}>
               <span className="font-bold text-coffee-red flex items-center gap-1.5">
                 <span className="inline-block w-2 h-2 rounded-full bg-coffee-red animate-pulse" />
                 {currentLang === 'en' ? 'Immersive Journey Progress' : currentLang === 'fr' ? 'Progression du voyage immersif' : 'የምግብ ዝግጅት ጉዞ ሂደት'}
               </span>
-              <span className="font-semibold text-gold">
+              <span className={`font-semibold ${isGlobalDark ? 'text-linen-white/90' : 'text-gold'}`}>
                 {currentLang === 'en' ? 'STAGES' : currentLang === 'fr' ? 'ÉTAPES' : 'ደረጃዎች'} {Math.round(scrollyProgress)}%
               </span>
             </div>
-            <div className="w-full bg-teal/10 h-1.5 mt-2 rounded-full overflow-hidden">
+            <div className={`w-full h-1.5 mt-2 rounded-full overflow-hidden ${
+              isGlobalDark ? 'bg-linen-white/15' : 'bg-teal/10'
+            }`}>
               <div
                 className="bg-coffee-red h-full rounded-full transition-all duration-150 ease-out"
                 style={{ width: `${scrollyProgress}%` }}
@@ -441,16 +466,8 @@ export default function App() {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-2xl sm:text-4xl font-serif tracking-tight">
-              {currentLang === 'en' ? 'Taste the Soul: Behind the Scenes' : currentLang === 'fr' ? 'Goûtez l’âme : Coulisses' : 'የአዲስ ፍሌቨር በስተጀርባ ታሪኮች'}
-            </h2>
-            <p className="text-xs font-mono uppercase text-coffee-red tracking-widest mt-2">
-              {currentLang === 'en' ? 'SENSORY IMMERSION STAGE' : currentLang === 'fr' ? 'PHASE D’IMMERSION SENSORIELLE' : 'የስሜት ህዋሳት ማነቃቂያ ደረጃ'}
-            </p>
-          </div>
-
+        {/* Stages/Packages Container */}
+        <div id="scrollytelling-stages-container" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
           <div className="space-y-24">
             {PACKAGES.map((pkg, pIdx) => {
               const currentActiveIdx = activeScrollyStep[pkg.id] || 0;
@@ -636,7 +653,7 @@ export default function App() {
             {/* Right side massive vertical image with Traveling Spoon Waters Quote (Coconut parallel) */}
             <div className="lg:col-span-6 relative rounded-3xl overflow-hidden shadow-2xl min-h-[400px] flex items-end">
               <img
-                src="/src/assets/images/addis_jebena_pour_1782233715156.jpg"
+                src={jebenaPourImg}
                 alt="Ethiopian coffee ceremony traditional vertical"
                 className="absolute inset-0 w-full h-full object-cover filter saturate-[1.1] hover:scale-105 transition-transform duration-700"
                 referrerPolicy="no-referrer"
