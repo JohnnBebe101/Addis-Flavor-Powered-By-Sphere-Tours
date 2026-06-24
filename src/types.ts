@@ -13,6 +13,7 @@ export interface Translations {
   navBook: string;
   navBecomeHost: string;
   navHelp: string;
+  navContact: string;
   navGiveGift: string;
   navLogin: string;
   navSignUp: string;

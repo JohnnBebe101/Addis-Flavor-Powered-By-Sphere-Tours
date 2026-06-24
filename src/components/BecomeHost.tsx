@@ -616,8 +616,9 @@ export default function BecomeHost({ currentLang, isGlobalDark, onBackToHome }: 
                         </div>
                       </div>
                       <div>
-                        <label className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">{t.neighborhood} *</label>
+                        <label htmlFor="become-host-neighborhood" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">{t.neighborhood} *</label>
                         <select
+                          id="become-host-neighborhood"
                           required
                           value={formData.neighborhood}
                           onChange={(e) => setFormData({ ...formData, neighborhood: e.target.value })}

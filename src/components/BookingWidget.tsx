@@ -226,7 +226,7 @@ export default function BookingWidget({
             <div className="space-y-4">
               {/* Select Package */}
               <div className="space-y-1.5">
-                <label className="text-xs font-mono uppercase text-teal/60 tracking-wider">
+                <label htmlFor="booking-package-select" className="text-xs font-mono uppercase text-teal/60 tracking-wider">
                   {currentLang === 'en' ? 'Select Experience' : currentLang === 'fr' ? "Sélectionner l'expérience" : 'ልምድ ይምረጡ'}
                 </label>
                 <select
@@ -245,7 +245,7 @@ export default function BookingWidget({
 
               {/* Datepicker */}
               <div className="space-y-1.5">
-                <label className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+                <label htmlFor="booking-date-picker" className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
                   <Calendar className="w-3.5 h-3.5 text-coffee-red" />
                   <span>{currentLang === 'en' ? 'Choose Date' : currentLang === 'fr' ? 'Choisir la date' : 'ቀን ይምረጡ'}</span>
                 </label>

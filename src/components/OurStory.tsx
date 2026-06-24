@@ -83,7 +83,7 @@ export default function OurStory({ currentLang, isGlobalDark, onBackToHome, onBo
         subtitle: "A partnership between passionate food enthusiasts and Sphere Tour & Travel's expert local guides.",
         f1Title: "Co-Founder & Lead Host Director",
         f1Desc: "With over 15 years of experience showcasing Ethiopia's cultural richness, her vision is to preserve traditional family recipes and share the legendary warmth of Ethiopian hospitality with the world.",
-        f2Title: "Director of Sphere Tour and Travel",
+        f2Title: "General Manager of Sphere Tour and Travel",
         f2Desc: "A sustainable tourism pioneer, he co-founded Addis Flavor to empower local families, bringing authentic and respectful tourism straight to the dining rooms of Addis Ababa."
       },
       howItWorks: {
@@ -170,7 +170,7 @@ export default function OurStory({ currentLang, isGlobalDark, onBackToHome, onBo
         subtitle: "በምግብ አፍቃሪዎች እና በስፌር ትራቭል ባለሙያ አስጎብኚዎች መካከል የተደረገ ውብ ትብብር።",
         f1Title: "ተባባሪ መስራች እና ዋና አስተናጋጅ ዳይሬክተር",
         f1Desc: "የኢትዮጵያን ባህላዊ ብልጽግና በማሳየት ከ15 ዓመታት በላይ ልምድ ያላት ስትሆን፣ ራዕይዋ ባህላዊ የቤተሰብ የምግብ አዘገጃጀት መመሪያዎችን ጠብቆ ማቆየት እና የታዋቂውን የኢትዮጵያውያንን እንግዶች የመቀበል ባህል ለአለም ማካፈል ነው።",
-        f2Title: "የስፌር ቱር ኤንድ ትራቭል ዳይሬክተር",
+        f2Title: "የስፌር ቱር ኤንድ ትራቭል ዋና ስራ አስኪያጅ",
         f2Desc: "የዘላቂ ቱሪዝም ፈር ቀዳጅ ሲሆን፣ የአካባቢውን ቤተሰቦች ለማብቃት አዲስ ፍሌቨርን በጋራ መስርቷል፤ እውነተኛ እና የተከበረ ቱሪዝምን በቀጥታ ወደ አዲስ አበባ የመመገቢያ ክፍሎች ያመጣል።"
       },
       howItWorks: {
@@ -257,7 +257,7 @@ export default function OurStory({ currentLang, isGlobalDark, onBackToHome, onBo
         subtitle: "Un partenariat entre passionnés de gastronomie et les guides locaux experts de Sphere Tour & Travel.",
         f1Title: "Co-fondatrice & Directrice des Hôtes",
         f1Desc: "Forte de plus de 15 ans d'expérience dans la promotion de la richesse culturelle de l'Éthiopie, sa vision est de préserver les recettes familiales traditionnelles et de partager la légendaire hospitalité éthiopienne.",
-        f2Title: "Directeur de Sphere Tour and Travel",
+        f2Title: "Directeur Général de Sphere Tour and Travel",
         f2Desc: "Pionnier du tourisme durable, il a cofondé Addis Flavor pour autonomiser les familles locales, apportant un tourisme authentique directement dans les foyers d'Addis-Abeba."
       },
       howItWorks: {
@@ -581,10 +581,12 @@ export default function OurStory({ currentLang, isGlobalDark, onBackToHome, onBo
               isGlobalDark ? 'bg-white/5 border-linen-white/10' : 'bg-sandstone/15 border-teal/5'
             } flex flex-col space-y-4`}>
               <div className="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center text-gold text-2xl font-serif font-bold">
-                M
+                {currentLang === 'am' ? 'ሃ' : 'H'}
               </div>
               <div>
-                <h4 className="text-lg font-serif font-bold uppercase">Mimi Abebe</h4>
+                <h4 className="text-lg font-serif font-bold uppercase">
+                  {currentLang === 'am' ? 'ሃረግ' : 'Hareg'}
+                </h4>
                 <p className="text-xs font-mono text-gold font-bold uppercase tracking-wider">{t.founders.f1Title}</p>
               </div>
               <p className="text-sm opacity-75 leading-relaxed font-sans">
@@ -599,7 +601,9 @@ export default function OurStory({ currentLang, isGlobalDark, onBackToHome, onBo
                 S
               </div>
               <div>
-                <h4 className="text-lg font-serif font-bold uppercase">Sphere Tour & Travel Team</h4>
+                <h4 className="text-lg font-serif font-bold uppercase">
+                  {currentLang === 'am' ? 'ሰይፈገብርኤል ሽፈራው' : 'Seifegebiel Shifferaw'}
+                </h4>
                 <p className="text-xs font-mono text-gold font-bold uppercase tracking-wider">{t.founders.f2Title}</p>
               </div>
               <p className="text-sm opacity-75 leading-relaxed font-sans">
@@ -781,6 +785,44 @@ export default function OurStory({ currentLang, isGlobalDark, onBackToHome, onBo
                   className="inline-block px-6 py-2.5 border border-gold hover:bg-gold text-gold hover:text-teal font-mono text-xs font-extrabold uppercase rounded-full transition-all duration-300 text-center"
                 >
                   {t.careers.applyBtn}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* HEAD OFFICE OFFICIAL ADDRESS & CONTACTS */}
+          <div className={`p-8 rounded-3xl border ${
+            isGlobalDark ? 'bg-white/5 border-linen-white/10' : 'bg-sandstone/15 border-teal/5'
+          } max-w-4xl mx-auto space-y-6`}>
+            <div className="flex items-center space-x-3 text-gold">
+              <MapPin className="w-5 h-5 text-coffee-red" />
+              <h4 className="text-base sm:text-lg font-serif font-bold uppercase">
+                {currentLang === 'en' ? 'Sphere Tour & Travel Head Office' : currentLang === 'fr' ? 'Siège Social Sphere Tour & Travel' : 'ስፌር ቱር ኤንድ ትራቭል ዋና መስሪያ ቤት'}
+              </h4>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm font-sans">
+              <div className="space-y-1">
+                <span className="block text-[10px] font-mono uppercase tracking-wider text-gold font-bold">
+                  {currentLang === 'en' ? 'OFFICE ADDRESS' : currentLang === 'fr' ? 'ADRESSE DU BUREAU' : 'የቢሮ አድራሻ'}
+                </span>
+                <p className="opacity-80 text-xs sm:text-sm">
+                  Ras Abebe Dumtew Street National Tower, 3rd Floor, Office N° 220, Addis Ababa
+                </p>
+              </div>
+              <div className="space-y-1">
+                <span className="block text-[10px] font-mono uppercase tracking-wider text-gold font-bold">
+                  {currentLang === 'en' ? 'DIRECT PHONE' : currentLang === 'fr' ? 'LIGNE DIRECTE' : 'ቀጥታ ስልክ'}
+                </span>
+                <p className="opacity-80 font-mono text-xs sm:text-sm">
+                  091 120 9882
+                </p>
+              </div>
+              <div className="space-y-1">
+                <span className="block text-[10px] font-mono uppercase tracking-wider text-gold font-bold">
+                  {currentLang === 'en' ? 'EMAIL SUPPORT' : currentLang === 'fr' ? 'ASSISTANCE E-MAIL' : 'የኢሜል ድጋፍ'}
+                </span>
+                <a href="mailto:info@sphere-voyage-ethiopie.com" className="block opacity-80 hover:text-gold transition-colors break-all text-xs sm:text-sm font-mono">
+                  info@sphere-voyage-ethiopie.com
                 </a>
               </div>
             </div>
