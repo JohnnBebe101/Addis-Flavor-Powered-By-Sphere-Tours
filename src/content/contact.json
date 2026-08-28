@@ -1,0 +1,23 @@
+{
+  "modalTitle": "Contact Our Experience Team",
+  "modalSub": "Powered and operated by Sphere Tour & Travel. Send us a message and we'll reply within 2 hours.",
+  "fullName": "Full Name",
+  "emailAddress": "Email Address",
+  "subject": "Subject / Topic",
+  "message": "Your Message",
+  "subjectPlaceholder": "Select inquiry topic...",
+  "topics": [
+    "Custom Private Culinary Tour",
+    "Special Dietary Request",
+    "Large Group Booking Inquiry",
+    "Become a Host Partner",
+    "Other Inquiries"
+  ],
+  "sendBtn": "Send Message",
+  "sending": "Sending...",
+  "successTitle": "Message Received! Amesegenalehu!",
+  "successDesc": "Your message has been safely delivered to our Sphere Tour & Travel customer experience desk in Addis Ababa. We will reach out to you within the next 2 hours via email or phone.",
+  "closeBtn": "Close Window",
+  "officeAddress": "Ras Abebe Dumtew Street National Tower, 3rd Floor, Office N° 220, Addis Ababa",
+  "officeHours": "Office Hours: Mon - Sat, 8:30 AM - 6:00 PM (EAT)"
+}

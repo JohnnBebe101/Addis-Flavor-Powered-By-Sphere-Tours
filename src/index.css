@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+Ethiopic:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-sans: "DM Sans", sans-serif;
-  --font-ethiopic: "Noto Sans Ethiopic", sans-serif;
-  
-  --color-coffee-red: #A67C52;
-  --color-teal: #2D2926;
-  --color-sandstone: #FDFCF0;
-  --color-linen-white: #FFFFFF;
-  --color-gold: #5A5A40;
-  --color-dark-bg: #2D2926;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-ethiopic: 'Noto Sans Ethiopic', sans-serif;
+
+  --color-coffee-red: #a67c52;
+  --color-teal: #2d2926;
+  --color-sandstone: #fdfcf0;
+  --color-linen-white: #ffffff;
+  --color-gold: #5a5a40;
+  --color-dark-bg: #2d2926;
 }
 
 /* Custom Animations & Styles */
@@ -50,21 +50,175 @@
 .shema-border {
   background-image: repeating-linear-gradient(
     45deg,
-    #5A5A40,
-    #5A5A40 10px,
-    #A67C52 10px,
-    #A67C52 20px,
-    #2D2926 20px,
-    #2D2926 30px,
-    #FDFCF0 30px,
-    #FDFCF0 40px
+    #5a5a40,
+    #5a5a40 10px,
+    #a67c52 10px,
+    #a67c52 20px,
+    #2d2926 20px,
+    #2d2926 30px,
+    #fdfcf0 30px,
+    #fdfcf0 40px
   );
   height: 8px;
   width: 100%;
 }
 
 .shema-border-subtle {
-  background-image: radial-gradient(circle, #5A5A40 1.5px, transparent 1.5px);
+  background-image: radial-gradient(circle, #5a5a40 1.5px, transparent 1.5px);
   background-size: 12px 12px;
 }
 
+/* Motion replacement animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+@keyframes staggerFadeIn {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.25s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
+
+.animate-slide-out-right {
+  animation: slideOutRight 0.3s cubic-bezier(0.32, 0.72, 0, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.2s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.2s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out forwards;
+}
+
+.animate-scale-out {
+  animation: scaleOut 0.2s ease-out forwards;
+}
+
+.animate-stagger-fade {
+  animation: staggerFadeIn 0.3s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-stagger-fade:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.animate-stagger-fade:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.animate-stagger-fade:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.animate-stagger-fade:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.animate-stagger-fade:nth-child(5) {
+  animation-delay: 0.25s;
+}
+
+/* Hamburger icon rotation */
+.hamburger-rotate {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+.hamburger-rotate.open {
+  transform: rotate(180deg) scale(1.1);
+}

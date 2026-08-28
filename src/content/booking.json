@@ -1,0 +1,46 @@
+{
+  "title": "Book Your Cultural Feast",
+  "subtitle": "Private customized experience with certified Addis local hosts.",
+  "steps": {
+    "selectExperience": "Select Experience",
+    "chooseDate": "Choose Date",
+    "confirmation": "Confirmation"
+  },
+  "details": {
+    "experience": "Experience",
+    "date": "Date",
+    "partySize": "Party Size",
+    "dietary": "Dietary",
+    "totalPaid": "Total Paid"
+  },
+  "dietary": {
+    "vegan": {
+      "label": "Vegan (Bayenetu / Fasting)",
+      "desc": "Ethiopian Orthodox Christian fasting creates a rich tradition of plant-based dishes."
+    },
+    "glutenFree": {
+      "label": "Gluten-Free (Pure Teff Injera)",
+      "desc": "100% Teff Injera is naturally gluten-free and rich in iron and fiber."
+    },
+    "halal": {
+      "label": "Halal Options",
+      "desc": "Strictly halal-certified meat options are available for all experiences."
+    }
+  },
+  "payment": {
+    "noInstantCharge": "No Instant Charged",
+    "description": "This is a simulated booking authorization. You pay your host directly on-site during your session."
+  },
+  "success": {
+    "title": "Simulated Secure Checkout Successful",
+    "subtitle": "Your private culinary experience has been confirmed.",
+    "standardMenu": "Standard Menu"
+  },
+  "buttons": {
+    "back": "Back",
+    "next": "Next",
+    "bookNow": "Book Now",
+    "verifying": "Verifying...",
+    "doneClose": "Done & Close"
+  }
+}

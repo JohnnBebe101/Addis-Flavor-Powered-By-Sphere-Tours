@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://addisababacitytours.com/sitemap.xml

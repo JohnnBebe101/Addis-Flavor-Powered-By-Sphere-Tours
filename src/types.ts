@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export type Language = 'en' | 'am' | 'fr';
+export type Language = 'en';
 
 export interface Translations {
   announcement: string;
@@ -56,38 +56,20 @@ export interface Translations {
 
 export interface ExperiencePackage {
   id: string;
-  nameEn: string;
-  nameAm: string;
-  nameFr: string;
-  tagEn: string;
-  tagAm: string;
-  tagFr: string;
+  name: string;
+  tag: string;
   price: number;
-  durationEn: string;
-  durationAm: string;
-  durationFr: string;
-  descEn: string;
-  descAm: string;
-  descFr: string;
+  duration: string;
+  desc: string;
   emoji: string;
   imageUrl: string;
-  stepsEn: string[];
-  stepsAm: string[];
-  stepsFr: string[];
-  stepsDescEn: string[];
-  stepsDescAm: string[];
-  stepsDescFr: string[];
+  steps: string[];
+  stepsDesc: string[];
 }
 
 export interface HostReview {
   id: string;
-  quoteEn: string;
-  quoteAm: string;
-  quoteFr: string;
-  authorEn: string;
-  authorAm: string;
-  authorFr: string;
-  locationEn: string;
-  locationAm: string;
-  locationFr: string;
+  quote: string;
+  author: string;
+  location: string;
 }

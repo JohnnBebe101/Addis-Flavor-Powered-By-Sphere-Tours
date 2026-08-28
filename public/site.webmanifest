@@ -1,0 +1,9 @@
+{
+  "name": "Addis Ababa City Tours",
+  "short_name": "AA City Tours",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1B3A4B",
+  "theme_color": "#C44B3B",
+  "description": "Authentic city tours and coffee culture in Addis Ababa"
+}

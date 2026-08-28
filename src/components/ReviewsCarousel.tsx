@@ -5,15 +5,14 @@
 
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
-import { HostReview, Language } from '../types';
+import { HostReview } from '../types';
 
 interface ReviewsCarouselProps {
   reviews: HostReview[];
-  currentLang: Language;
   onBookClick: () => void;
 }
 
-export default function ReviewsCarousel({ reviews, currentLang, onBookClick }: ReviewsCarouselProps) {
+export default function ReviewsCarousel({ reviews, onBookClick }: ReviewsCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -40,7 +39,7 @@ export default function ReviewsCarousel({ reviews, currentLang, onBookClick }: R
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 relative">
         <p className="text-center font-mono text-[10px] text-teal/60 uppercase tracking-widest mb-2">
-          {currentLang === 'en' ? 'Traveler Review from ' : currentLang === 'fr' ? 'Avis de voyageur du ' : 'የጎብኚ አስተያየት - '}
+          {'Traveler Review from '}
           <span className="font-semibold text-coffee-red">June 19, 2026</span>
         </p>
 
@@ -63,16 +62,14 @@ export default function ReviewsCarousel({ reviews, currentLang, onBookClick }: R
             </div>
 
             <blockquote className="text-base md:text-lg font-serif text-teal leading-relaxed max-w-2xl mx-auto">
-              "{currentLang === 'en' ? activeReview.quoteEn : currentLang === 'fr' ? activeReview.quoteFr : activeReview.quoteAm}"
+              "{activeReview.quote}"
             </blockquote>
 
             <div className="mt-4">
               <p className="font-mono text-[10px] uppercase tracking-wider text-teal/80">
-                {currentLang === 'en' ? activeReview.authorEn : currentLang === 'fr' ? activeReview.authorFr : activeReview.authorAm}
+                {activeReview.author}
                 <span className="text-teal/30 mx-2">|</span>
-                <span className="font-sans text-teal/60">
-                  {currentLang === 'en' ? activeReview.locationEn : currentLang === 'fr' ? activeReview.locationFr : activeReview.locationAm}
-                </span>
+                <span className="font-sans text-teal/60">{activeReview.location}</span>
               </p>
 
               <button
@@ -80,7 +77,7 @@ export default function ReviewsCarousel({ reviews, currentLang, onBookClick }: R
                 onClick={onBookClick}
                 className="mt-2.5 inline-block font-mono text-[10px] font-bold text-coffee-red hover:text-gold uppercase tracking-widest border-b border-coffee-red hover:border-gold pb-0.5 transition-all duration-200"
               >
-                {currentLang === 'en' ? 'BOOK NOW' : currentLang === 'fr' ? 'RÉSERVER MAINTENANT' : 'ቦታ ያስይዙ'}
+                {'BOOK NOW'}
               </button>
             </div>
           </div>

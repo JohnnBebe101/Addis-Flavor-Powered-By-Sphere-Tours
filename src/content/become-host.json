@@ -1,0 +1,72 @@
+{
+  "heroTitle": "Join our host community",
+  "introText": "Hosts are at the heart of the Addis Ababa City Tours community, and we would love to talk with you if you think you might be a good fit to join our growing community.",
+  "idealHostTitle": "An ideal host",
+  "idealHostDesc": "We love connecting with passionate cooks who care about the food they create and delight in sharing it with others. Are you a talented home cook? Are you passionate about the cultural traditions that make your cuisine unique? We would love to meet you and give you the opportunity to make money doing what you love and share it with travelers.",
+  "appProcessTitle": "Application Process",
+  "steps": [
+    "Submit online application form",
+    "Phone/Skype interview",
+    "In-person visit and tasting",
+    "Enter your payment details and get ready to host!"
+  ],
+  "applyBtn": "APPLY TODAY",
+  "askSuperHost": "ASK OUR SUPER HOST A QUESTION",
+  "askSuperHostSub": "Click here to email one of our hosts and ask them a question",
+  "trustTitle": "Trust & safety",
+  "trustDesc": "We want you to feel 100% comfortable when hosting. This is why we have made sure that every Addis Ababa City Tours booking is covered by our host guarantee that covers you should any problems arise. Additionally, we communicate as much information about our guests as possible and allow you to communicate with them directly so that you never have to accept a booking without feeling absolutely comfortable about it.",
+  "faqBtn": "READ OUR HOST FAQS",
+  "feedbackTitle": "Host Feedback",
+  "feedbackQuote": "It was a pleasure to host people from all over the world. We had a wonderful interaction and sharing of experiences with our guests. It was gratifying to know that they enjoyed the meal so much. We didn't want our guests to leave and neither did they. We look forward to hosting for Addis Ababa City Tours again.",
+  "feedbackAuthor": "Tigist & Family, Bole Neighborhood, Addis Ababa",
+  "bottomText": "We can't wait to hear from you.",
+  "backBtn": "Back to Experiences",
+  "formTitle": "Host Application Form",
+  "formSub": "Share your culinary talent with global travelers in Addis Ababa",
+  "fullName": "Full Name",
+  "emailAddress": "Email Address",
+  "phoneNumber": "Phone Number",
+  "neighborhood": "Neighborhood in Addis",
+  "experienceYears": "Cooking Experience (Years)",
+  "specialties": "Your Signature Dishes & Specialties",
+  "aboutYou": "Tell us a bit about yourself and your home",
+  "stepLabel": "Step {current} of {total}",
+  "submitBtn": "Submit Application",
+  "successTitle": "Application Submitted Successfully!",
+  "successDesc": "Thank you for applying to become an Addis Ababa City Tours host! Our community team will review your application and reach out within 2-3 business days for a short phone chat.",
+  "closeBtn": "Close Window",
+  "askTitle": "Ask Mimi, our Super Host",
+  "askSub": "Mimi has hosted over 150 sessions in her cozy home in Piazza.",
+  "askPlaceholder": "Ask anything about preparing Injera, managing group sizes, or hosting vibe...",
+  "sendMsg": "Send Message",
+  "replyTitle": "Mimi's Instant Wisdom:",
+  "replyText": "Selam! I am so happy you are considering hosting. For me, the secret is making guests feel like family from the first minute. Don't worry about speaking perfect English; the food and your warmth speak all languages! Let me know if you have more questions.",
+  "faqs": [
+    {
+      "q": "How much money can I earn as an Addis Ababa City Tours host?",
+      "a": "Hosts set their own availability and we recommend competitive starting rates of $25 to $45 per guest depending on the experience (Cooking Class vs. Traditional Meal). You keep 85% of the booking price, and we handle all marketing, secure credit card transactions, translation support, and customer support."
+    },
+    {
+      "q": "What are the requirements to become a host?",
+      "a": "You need a clean, welcoming home kitchen and dining area in Addis Ababa, a deep passion for traditional Ethiopian food, and a warm, friendly attitude. You do not need to be a professional chef—we love authentic home-style cooking!"
+    },
+    {
+      "q": "How does the host guarantee protect me?",
+      "a": "Addis Ababa City Tours provides complete insurance coverage up to $10,000 for property damage and accidental liabilities during any authorized booking session, so you can host with total peace of mind."
+    },
+    {
+      "q": "Can I choose which guests to host?",
+      "a": "Absolutely! You have 100% control. You will receive detailed traveler profiles, party sizes, dietary requirements, and can chat directly with them before confirming any booking request."
+    }
+  ],
+  "neighborhoods": [
+    { "value": "bole", "label": "Bole" },
+    { "value": "piazza", "label": "Piazza" },
+    { "value": "yeka", "label": "Yeka" },
+    { "value": "guellele", "label": "Guellele" },
+    { "value": "kazanchis", "label": "Kazanchis" },
+    { "value": "sheraton", "label": "Sheraton Area" },
+    { "value": "sarbet", "label": "Sarbet" },
+    { "value": "mercato", "label": "Mercato" }
+  ]
+}
