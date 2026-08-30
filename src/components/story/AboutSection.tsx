@@ -50,9 +50,7 @@ export default function AboutSection({
             {content.title}
           </h2>
           <div className="w-16 h-1 bg-gold rounded-full" />
-          <p className="text-lg leading-relaxed font-serif opacity-90 italic">
-            "{content.desc1}"
-          </p>
+          <p className="text-lg leading-relaxed font-serif opacity-90 italic">"{content.desc1}"</p>
           <p className="text-sm leading-relaxed opacity-75 font-sans">{content.desc2}</p>
         </div>
         <div className="lg:col-span-5 relative">

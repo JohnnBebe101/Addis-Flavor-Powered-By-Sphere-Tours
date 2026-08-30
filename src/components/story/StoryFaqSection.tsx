@@ -23,11 +23,14 @@ export default function StoryFaqSection({
   content,
   isGlobalDark,
   faqOpen,
-  setFaqOpen,
+  setFaqOpen: _setFaqOpen,
   toggleFaq,
 }: StoryFaqSectionProps) {
   return (
-    <section id="story-section-faq" className="scroll-mt-36 border-t border-current/10 pt-16 space-y-12">
+    <section
+      id="story-section-faq"
+      className="scroll-mt-36 border-t border-current/10 pt-16 space-y-12"
+    >
       <div className="max-w-3xl mx-auto text-center space-y-4">
         <div className="inline-flex items-center space-x-2 text-gold font-mono uppercase tracking-widest text-xs">
           <HelpCircle className="w-4 h-4 text-coffee-red" />

@@ -26,5 +26,8 @@
     "strictNullChecks": true,
     "noUnusedLocals": true,
     "noFallthroughCasesInSwitch": true
-  }
+  },
+  "exclude": [
+    "src/components/_archived"
+  ]
 }

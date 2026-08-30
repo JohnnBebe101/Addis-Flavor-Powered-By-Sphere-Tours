@@ -1,96 +1,203 @@
 {
   "hero": {
-    "decorativeLabel": "Authentic Ethiopian Hospitality",
-    "liveCaptureLabel": "Live Capture",
-    "liveCaptureDesc": "Preparing authentic Injera and Shiro, ADDIS ABABA, ETHIOPIA"
-  },
-  "experiences": {
-    "title": "Which story will you taste?",
-    "subtitle": "Select an immersive experience. Click explore to expand steps inline and map out your culinary adventure.",
-    "milestonesLabel": "Core Milestones & Timeline",
-    "exploreLabel": "EXPLORE CULINARY STEPS",
-    "collapseLabel": "COLLAPSE STEPS"
-  },
-  "behindTheScenes": {
-    "title": "Taste the Soul: Behind the Scenes",
-    "subtitle": "SENSORY IMMERSION STAGE"
-  },
-  "vettedHosts": {
-    "localTrustLabel": "LOCAL TRUST",
-    "inHomeMealsTitle": "In-home Meals",
-    "inHomeMealsDuration": "1.5 - 2 hrs",
-    "inHomeMealsDesc": "Experience the joy of an authentic homemade feast, eating exactly the way the locals do while discussing local history, culinary lore, and social customs.",
-    "cookingExpTitle": "Cooking Experiences",
-    "cookingExpDuration": "3 - 4 hrs",
-    "cookingExpDesc": "Discover ancient culinary traditions passed down through generations. Whip stews, knead teff, and learn to roast raw beans over live charcoal.",
-    "marketVisitsTitle": "Market visits",
-    "marketVisitsDuration": "1 - 2 hrs",
-    "marketVisitsDesc": "Explore a vibrant nearby open-air market with your host, discovering the best local cardamoms, cinnamon, pure butter, and organic produce.",
-    "quote": "\"Addis Ababa City Tours is a brilliant idea. The world needs it.\"",
-    "quoteAuthor": "– Alice Waters, Chef & Activist"
-  },
-  "onlineClasses": {
-    "label": "VIRTUAL CLASSES",
-    "ctaLabel": "VIEW ONLINE CLASSES"
-  },
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "items": [
+    "slides": [
       {
-        "q": "Where do these experiences take place?",
-        "a": "Most of these home cooking experiences and coffee ceremonies are held inside cozy, real local host kitchens and residential compounds. The exact address is sent immediately after booking validation."
+        "id": 1,
+        "title": "Addis Ababa City Tours — Book Direct, Save 15%, Get Local Expertise",
+        "subtitle": "Licensed local operator. 500+ five-star reviews. Free cancellation up to 24 hours. Explore the National Museum, Merkato, and hidden gems with guides born and raised in Addis Ababa.",
+        "ctaPrimary": "Browse City Tours",
+        "ctaSecondary": "Watch Video",
+        "trustSignal": "⭐⭐⭐⭐⭐ 4.9/5 from 127 reviews on TripAdvisor",
+        "image": "/images/hero/addis-ababa-national-museum.jpg"
       },
       {
-        "q": "How does payment work?",
-        "a": "This website simulates local booking authorization. No immediate cash is charged from your card. You pay your host directly on-site or via flexible electronic options (Telebirr/Cash) during your culinary session."
+        "id": 2,
+        "title": "Day Trips from Addis Ababa — Monasteries, Gorges & UNESCO Sites",
+        "subtitle": "Escape the city and explore Ethiopia's highlands. Visit 13th-century monasteries, dramatic gorges, and UNESCO World Heritage Sites—all in a single day. Expert guides, small groups, unforgettable experiences.",
+        "ctaPrimary": "Explore Day Trips",
+        "ctaSecondary": "View Itineraries",
+        "trustSignal": "Licensed by Ministry of Tourism of Ethiopia",
+        "image": "/images/hero/debre-libanos-monastery.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Private Tours — Fully Customizable, Flexible Pickup, Personal Guide",
+        "subtitle": "Travel on your schedule. Choose your attractions, set your pace, and enjoy personalized attention from your dedicated guide. Perfect for families, couples, and travelers with specific interests.",
+        "ctaPrimary": "Build Your Tour",
+        "ctaSecondary": "WhatsApp Us",
+        "trustSignal": "500+ Five-Star Reviews",
+        "image": "/images/hero/private-tour-entoto.jpg"
       }
     ]
   },
-  "footer": {
-    "brandDesc": "Connecting travelers directly to local grandmothers and home cooks in Addis Ababa for shared culinary joy, songs, stories, and coffee ritual mindfulness.",
-    "companyInfoTitle": "COMPANY INFO",
-    "companyLinks": [
-      { "label": "About Us", "href": "#about" },
-      { "label": "Founders", "href": "#founders" },
-      { "label": "How it works", "href": "#works" },
-      { "label": "Safety Guarantee", "href": "#safety" },
-      { "label": "Press Center", "href": "#press" },
-      { "label": "Careers", "href": "#careers" }
-    ],
-    "joinUsTitle": "JOIN US",
-    "joinUsLinks": [
-      { "label": "Become a Host", "action": "become-host" },
-      { "label": "Become an Ambassador", "href": "#ambassador" },
-      { "label": "Travel Agency Login", "href": "#agency" },
-      { "label": "Host Terms & Guidelines", "href": "#terms" }
-    ],
-    "newsletterTitle": "SUBSCRIBE TO NEWSLETTER!",
-    "newsletterDesc": "Follow the rich aroma of local spices and coffee ceremony events.",
-    "newsletterPlaceholder": "Enter Email Address",
-    "newsletterBtn": "ADD ME",
-    "newsletterSuccess": "Subscribed!",
-    "sphereOfficeTitle": "SPHERE HEAD OFFICE",
-    "destinationsTitle": "MOST POPULAR ADDIS ABABA DESTINATIONS",
-    "copyright": "Addis Ababa City Tours Powered by Sphere Tour & Travel",
-    "builtBy": "Built with love by Johnny Technologies",
-    "legalLinks": [
-      { "label": "Terms of Service", "href": "#terms" },
-      { "label": "Privacy Policy", "href": "#privacy" },
-      { "label": "Cookie Policy", "href": "#cookie" },
-      { "label": "Our Blog", "href": "#blog" }
+  "tourCategorySelector": {
+    "headline": "Choose Your Adventure",
+    "subheadline": "From half-day city highlights to full-day UNESCO excursions, we have the perfect tour for your schedule and interests.",
+    "categories": [
+      {
+        "id": "city-tours",
+        "title": "City Tours",
+        "description": "Half-day and full-day tours of Addis Ababa's top attractions: National Museum, Merkato, Holy Trinity Cathedral, and more.",
+        "priceFrom": "From $42",
+        "link": "/tours/"
+      },
+      {
+        "id": "day-trips",
+        "title": "Day Trips",
+        "description": "Escape the city: Debre Libanos Monastery, Tiya UNESCO Site, Menagesha Forest, Bishoftu Crater Lakes.",
+        "priceFrom": "From $75",
+        "link": "/tours/"
+      },
+      {
+        "id": "private-custom",
+        "title": "Private & Custom",
+        "description": "Fully customizable itineraries, flexible pickup times, dedicated guide. Perfect for families and special interests.",
+        "priceFrom": "Price on Request",
+        "link": "/custom-tour/"
+      }
     ]
   },
-  "stickyBar": {
-    "label": "Private Experience",
-    "priceRange": "$25 - $49",
-    "priceUnit": "/ guest"
+  "featuredTours": {
+    "headline": "Our Most Popular Tours",
+    "subheadline": "Choose from our top-rated Addis Ababa city tours and day trips. All tours include expert local guides, hotel pickup, and best price guarantee."
   },
-  "seo": {
-    "homeTitle": "Addis Ababa City Tours | Authentic Cooking Classes & Home Meals in Addis Ababa",
-    "homeDesc": "Discover authentic culinary experiences in Addis Ababa, Ethiopia. Book private cooking classes, traditional coffee ceremonies, and home cooked meals with vetted local host families. Powered by Sphere Tour and Travel.",
-    "becomeHostTitle": "Become a Host - Share Ethiopian Hospitality | Addis Ababa City Tours",
-    "becomeHostDesc": "Join our network of passionate home cooks and host families in Addis Ababa. Earn a sustainable income while sharing traditional Ethiopian recipes and hospitality with travelers from around the globe.",
-    "ourStoryTitle": "Our Story - Powered by Sphere Tour & Travel Ethiopia | Addis Ababa City Tours",
-    "ourStoryDesc": "Learn about Addis Ababa City Tours, a premium culinary initiative operated by Sphere Tour and Travel, Addis Ababa's leading sustainable tour agency. Meet our founders and read our community vetting safety guidelines."
+  "whyChooseUs": {
+    "headline": "Why Book With Addis Ababa City Tour?",
+    "benefits": [
+      {
+        "id": 1,
+        "icon": "map-pin",
+        "title": "Local Experts",
+        "description": "We live here, guide here, and know Addis Ababa better than any online travel agency. Our guides are born and raised in the city, speak fluent English, and share stories you won't find in guidebooks."
+      },
+      {
+        "id": 2,
+        "icon": "price-tag",
+        "title": "Best Price Guarantee",
+        "description": "Book direct and save 15% compared to GetYourGuide and Viator. No hidden fees, no service charges. Plus, you'll get flexible pickup times and personalized service."
+      },
+      {
+        "id": 3,
+        "icon": "shield",
+        "title": "Flexible & Safe",
+        "description": "Free cancellation up to 24 hours before your tour. Licensed by Ethiopia's Ministry of Tourism. Fully insured vehicles and 24/7 WhatsApp support."
+      }
+    ]
+  },
+  "addisHighlights": {
+    "headline": "Explore Addis Ababa's Top Attractions",
+    "subheadline": "From ancient fossils to vibrant markets, Addis Ababa is a city of contrasts and discoveries. Here are the must-see highlights.",
+    "attractions": [
+      {
+        "id": 1,
+        "title": "National Museum of Ethiopia",
+        "description": "Home to Lucy, the 3.2-million-year-old hominid fossil that revolutionized our understanding of human evolution. Recently renovated in 2025 with improved exhibits and security.",
+        "link": "/destinations/addis-ababa/"
+      },
+      {
+        "id": 2,
+        "title": "Addis Mercato (Merkato)",
+        "description": "Africa's largest open-air market, with over 13,000 vendors selling spices, textiles, coffee, and traditional crafts. A sensory explosion and cultural immersion.",
+        "link": "/destinations/addis-ababa/"
+      },
+      {
+        "id": 3,
+        "title": "Holy Trinity Cathedral",
+        "description": "Architectural masterpiece and final resting place of Emperor Haile Selassie. Features stunning stained glass, intricate carvings, and religious murals.",
+        "link": "/destinations/addis-ababa/"
+      },
+      {
+        "id": 4,
+        "title": "Entoto Park",
+        "description": "Panoramic city views from Addis Ababa's highest point (3,200 meters). Historic Entoto Maryam Church, eucalyptus forests, and the founding location of the city in 1886.",
+        "link": "/destinations/addis-ababa/"
+      }
+    ]
+  },
+  "dayTripDestinations": {
+    "headline": "Day Trips from Addis Ababa",
+    "subheadline": "Escape the city and explore Ethiopia's highlands, monasteries, UNESCO sites, and crater lakes—all within a few hours' drive.",
+    "destinations": [
+      {
+        "id": 1,
+        "title": "Debre Libanos Monastery",
+        "description": "13th-century monastery perched on a dramatic gorge. Founded by Saint Tekle Haymanot, still an active spiritual center. Spot gelada baboons and enjoy breathtaking views.",
+        "link": "/destinations/debre-libanos/"
+      },
+      {
+        "id": 2,
+        "title": "Tiya UNESCO World Heritage Site",
+        "description": "32 carved stone stelae dating to the 11th–13th centuries. A mysterious burial complex with enigmatic symbols and decorations. Designated UNESCO World Heritage Site in 1980.",
+        "link": "/destinations/tiya/"
+      },
+      {
+        "id": 3,
+        "title": "Menagesha Suba Forest",
+        "description": "One of Ethiopia's last remaining highland rainforests. Hike through ancient juniper and podocarpus trees, spot endemic birds, and visit cascading waterfalls.",
+        "link": "/destinations/menagesha-forest/"
+      },
+      {
+        "id": 4,
+        "title": "Bishoftu (Debre Zeit) Crater Lakes",
+        "description": "Five stunning crater lakes in the Rift Valley. Swim, kayak, or relax at resort facilities. Perfect for families and travelers seeking a leisurely day trip.",
+        "link": "/destinations/bishoftu/"
+      }
+    ]
+  },
+  "howBookingWorks": {
+    "headline": "How Booking Works",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Select Your Tour",
+        "description": "Browse our tours and choose the one that fits your schedule and interests. Read detailed itineraries, reviews, and practical information."
+      },
+      {
+        "id": 2,
+        "title": "Check Availability",
+        "description": "Choose your date, number of guests, and pickup location. See real-time availability and instant pricing."
+      },
+      {
+        "id": 3,
+        "title": "Confirm & Pay",
+        "description": "Complete your booking securely online. Receive instant confirmation and your guide's contact information. Free cancellation up to 24 hours before your tour."
+      }
+    ]
+  },
+  "practicalInfo": {
+    "headline": "Plan Your Visit to Addis Ababa",
+    "columns": [
+      {
+        "id": 1,
+        "title": "Visa Requirements",
+        "description": "Most nationalities require a visa (available on arrival or e-visa). Check requirements before travel. We can assist with visa support letters for confirmed bookings."
+      },
+      {
+        "id": 2,
+        "title": "Best Time to Visit",
+        "description": "October to March (dry season, mild temperatures 15–25 °C). Peak tourist season is November–February, coinciding with major festivals like Timket (Epiphany) in January."
+      },
+      {
+        "id": 3,
+        "title": "Currency & Payments",
+        "description": "Ethiopian Birr (ETB). ATMs widely available. Credit cards accepted at major hotels and restaurants. We accept USD, EUR, and ETB for tour payments."
+      },
+      {
+        "id": 4,
+        "title": "Altitude & Health",
+        "description": "Addis Ababa is at 2,400 meters (7,874 feet). Take it easy on your first day, stay hydrated, and avoid heavy exertion initially. Tap water is not safe to drink (bottled water provided on tours)."
+      }
+    ],
+    "ctaLink": "/travel-guide/"
+  },
+  "finalCta": {
+    "headline": "Ready to Explore Addis Ababa?",
+    "subheadline": "Browse our tours and book your authentic Ethiopian adventure today.",
+    "ctaPrimary": "View All Tours",
+    "ctaSecondary": "Or contact us to customize your tour"
+  },
+  "metadata": {
+    "lastUpdated": "2026-08-28",
+    "version": "1.0"
   }
 }

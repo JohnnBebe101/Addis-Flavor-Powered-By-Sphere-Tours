@@ -17,9 +17,7 @@ export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
       className="fixed bottom-0 left-0 right-0 z-40 bg-sandstone/95 backdrop-blur-md py-3 px-4 border-t border-teal/10 flex items-center justify-between sm:hidden"
     >
       <div>
-        <span className="text-[10px] uppercase font-mono text-teal/60">
-          Private Experience
-        </span>
+        <span className="text-[10px] uppercase font-mono text-teal/60">Private Experience</span>
         <p className="text-sm font-bold text-coffee-red">
           $25 - $49 <span className="text-[10px] text-teal/70 font-sans">/ guest</span>
         </p>

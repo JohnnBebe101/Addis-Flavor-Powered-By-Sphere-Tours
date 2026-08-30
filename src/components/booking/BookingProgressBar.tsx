@@ -7,14 +7,10 @@ import { Check } from 'lucide-react';
 
 interface BookingProgressBarProps {
   step: 1 | 2 | 3;
-  translations: {
-    stepAbol: string;
-    stepTona: string;
-    stepBereka: string;
-  };
+  stepLabels: string[];
 }
 
-export function BookingProgressBar({ step, translations }: BookingProgressBarProps) {
+export function BookingProgressBar({ step, stepLabels }: BookingProgressBarProps) {
   return (
     <div className="px-6 py-3 bg-sandstone/60 flex items-center justify-between border-b border-teal/5">
       <div className="flex items-center space-x-1.5">
@@ -30,7 +26,7 @@ export function BookingProgressBar({ step, translations }: BookingProgressBarPro
             step === 1 ? 'text-coffee-red font-bold' : 'text-teal/50'
           }`}
         >
-          {translations.stepAbol?.split(' ')[0] || 'Abol'}
+          {stepLabels[0]}
         </span>
       </div>
 
@@ -49,7 +45,7 @@ export function BookingProgressBar({ step, translations }: BookingProgressBarPro
             step === 2 ? 'text-gold font-bold' : 'text-teal/50'
           }`}
         >
-          {translations.stepTona?.split(' ')[0] || 'Tona'}
+          {stepLabels[1]}
         </span>
       </div>
 
@@ -68,7 +64,7 @@ export function BookingProgressBar({ step, translations }: BookingProgressBarPro
             step === 3 ? 'text-teal font-bold' : 'text-teal/50'
           }`}
         >
-          {translations.stepBereka?.split(' ')[0] || 'Bereka'}
+          {stepLabels[2]}
         </span>
       </div>
     </div>

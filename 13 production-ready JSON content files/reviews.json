@@ -1,0 +1,120 @@
+{
+  "reviews": [
+    {
+      "id": "review-1",
+      "tourId": "half-day-addis-ababa",
+      "tourName": "Half-Day Addis Ababa City Tour",
+      "rating": 5,
+      "title": "Absolutely fantastic tour!",
+      "text": "Our guide was knowledgeable, friendly, and showed us the real Addis Ababa. The National Museum was incredible—seeing Lucy in person was a highlight of our trip. Highly recommend!",
+      "author": "Sarah M.",
+      "location": "United States",
+      "date": "2026-08-15",
+      "verified": true,
+      "helpful": 12
+    },
+    {
+      "id": "review-2",
+      "tourId": "half-day-addis-ababa",
+      "tourName": "Half-Day Addis Ababa City Tour",
+      "rating": 5,
+      "title": "Perfect for our layover",
+      "text": "Perfect for our 8-hour layover. Pickup was on time, the guide was excellent, and we saw all the highlights without feeling rushed. Great value for money.",
+      "author": "James L.",
+      "location": "United Kingdom",
+      "date": "2026-07-28",
+      "verified": true,
+      "helpful": 8
+    },
+    {
+      "id": "review-3",
+      "tourId": "debre-libanos-portuguese-bridge",
+      "tourName": "Debre Libanos & Portuguese Bridge Day Trip",
+      "rating": 5,
+      "title": "Best tour we've ever taken!",
+      "text": "The Debre Libanos monastery and Portuguese Bridge were breathtaking. Our guide knew so much about the history and wildlife. We saw gelada baboons up close!",
+      "author": "Emma R.",
+      "location": "Germany",
+      "date": "2026-07-20",
+      "verified": true,
+      "helpful": 15
+    },
+    {
+      "id": "review-4",
+      "tourId": "full-day-addis-ababa",
+      "tourName": "Full-Day Addis Ababa City Tour",
+      "rating": 5,
+      "title": "Comprehensive and enriching",
+      "text": "The full-day tour covered everything: National Museum, Holy Trinity Cathedral, Mercato, Entoto Park, and the coffee ceremony. Our guide was passionate and knowledgeable. Lunch was delicious!",
+      "author": "Michael T.",
+      "location": "Canada",
+      "date": "2026-08-10",
+      "verified": true,
+      "helpful": 10
+    },
+    {
+      "id": "review-5",
+      "tourId": "tiya-adadi-mariam-melka-kunture",
+      "tourName": "Tiya, Adadi Mariam & Melka Kunture UNESCO Day Trip",
+      "rating": 5,
+      "title": "Archaeological wonder",
+      "text": "The Tiya stelae were mesmerizing—so mysterious and ancient. Adadi Mariam church was beautiful, and Melka Kunture gave us a glimpse into prehistoric times. Excellent guide!",
+      "author": "Anna K.",
+      "location": "France",
+      "date": "2026-08-05",
+      "verified": true,
+      "helpful": 9
+    },
+    {
+      "id": "review-6",
+      "tourId": "menagesha-forest-day-trip",
+      "tourName": "Menagesha Forest Day Trip",
+      "rating": 5,
+      "title": "Nature lover's paradise",
+      "text": "The forest was pristine and peaceful. We saw Colobus monkeys, endemic birds, and a beautiful waterfall. Our naturalist guide was incredibly knowledgeable. Highly recommend for nature lovers!",
+      "author": "David P.",
+      "location": "Australia",
+      "date": "2026-07-15",
+      "verified": true,
+      "helpful": 7
+    },
+    {
+      "id": "review-7",
+      "tourId": "bishoftu-crater-lakes",
+      "tourName": "Bishoftu Crater Lakes Day Trip",
+      "rating": 5,
+      "title": "Perfect family day out",
+      "text": "Our kids loved swimming in the crater lakes! The resort facilities were great, lunch was delicious, and the drive was scenic. Perfect for families seeking relaxation.",
+      "author": "Lisa H.",
+      "location": "Netherlands",
+      "date": "2026-08-01",
+      "verified": true,
+      "helpful": 6
+    },
+    {
+      "id": "review-8",
+      "tourId": "full-day-addis-ababa",
+      "tourName": "Full-Day Addis Ababa City Tour",
+      "rating": 5,
+      "title": "Exceeded expectations",
+      "text": "We booked the full-day tour and it exceeded all expectations. The coffee ceremony was a highlight—our guide explained the three rounds and their meanings. Felt like honored guests!",
+      "author": "Robert W.",
+      "location": "United States",
+      "date": "2026-07-25",
+      "verified": true,
+      "helpful": 11
+    }
+  ],
+  "tripadvisorWidget": {
+    "rating": 4.9,
+    "totalReviews": 500,
+    "url": "https://www.tripadvisor.com/Attraction_Review-g1-addis-ababa",
+    "embedCode": "<!-- TripAdvisor widget embed code goes here -->"
+  },
+  "metadata": {
+    "totalReviews": 8,
+    "averageRating": 4.9,
+    "lastUpdated": "2026-08-28",
+    "version": "1.0"
+  }
+}

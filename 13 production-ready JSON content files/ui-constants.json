@@ -1,0 +1,104 @@
+{
+  "buttons": {
+    "primary": "Book Now",
+    "secondary": "View All Tours",
+    "tertiary": "Learn More",
+    "cta": "BOOK A TOUR",
+    "whatsapp": "WhatsApp Us",
+    "contact": "Contact Us",
+    "viewItineraries": "View Itineraries",
+    "browseTours": "Browse City Tours",
+    "exploreDayTrips": "Explore Day Trips",
+    "buildYourTour": "Build Your Tour",
+    "checkAvailability": "Check Availability",
+    "reserveYourSpot": "Reserve Your Spot",
+    "readMore": "Read More",
+    "seeDetails": "See Details",
+    "readFullItinerary": "Read Full Itinerary",
+    "compareTours": "Compare Tours",
+    "planMyDay": "Plan My Day",
+    "viewAllReviews": "View All Reviews",
+    "viewAllFaqs": "View All FAQs"
+  },
+  "formLabels": {
+    "booking": {
+      "tour": "Select Your Tour",
+      "tourPlaceholder": "Choose a tour...",
+      "date": "Tour Date",
+      "datePlaceholder": "DD/MM/YYYY",
+      "guests": "Number of Guests",
+      "guestsPlaceholder": "2",
+      "pickupLocation": "Pickup Location",
+      "pickupLocationPlaceholder": "Hotel name or address",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "phone": "WhatsApp or Phone",
+      "phonePlaceholder": "+251-911-XXX-XXX",
+      "specialRequirements": "Special Requirements",
+      "specialRequirementsPlaceholder": "Dietary needs, mobility issues, etc."
+    },
+    "contact": {
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "topic": "Topic",
+      "topicPlaceholder": "General Inquiry",
+      "message": "Your Message",
+      "messagePlaceholder": "How can we help you?"
+    }
+  },
+  "errorMessages": {
+    "booking": [
+      "Please select a tour.",
+      "Please choose a valid date (at least 24 hours in advance).",
+      "Please enter the number of guests.",
+      "Please enter your pickup location.",
+      "Please enter your full name.",
+      "Please enter a valid email address.",
+      "Please enter your phone number."
+    ],
+    "contact": [
+      "Please enter your name.",
+      "Please enter a valid email address.",
+      "Please select a topic.",
+      "Please enter your message."
+    ],
+    "general": [
+      "Something went wrong. Please try again.",
+      "Unable to process your request. Please contact us via WhatsApp or phone."
+    ]
+  },
+  "successMessages": {
+    "booking": "Thank you for your booking! We've received your request and will confirm your tour within 24 hours. You'll receive an email with your booking details and your guide's contact information. Amesegenalehu!",
+    "contact": "Thank you for your message! We'll get back to you within 24 hours. For urgent inquiries, please WhatsApp us at +251-911-XXX-XXX. Amesegenalehu!",
+    "newsletter": "Thank you for subscribing! You'll receive our latest travel guides, tour updates, and special offers via email. Welcome to the Addis Ababa City Tour family!"
+  },
+  "loadingMessages": [
+    "Checking availability...",
+    "Processing your booking...",
+    "Sending your message..."
+  ],
+  "progressBarLabels": [
+    "Step 1: Select Tour & Date",
+    "Step 2: Your Details",
+    "Step 3: Review & Confirm"
+  ],
+  "tooltips": {
+    "booking": {
+      "tourDate": "Tours depart daily at 08:00 or 14:00. Book at least 24 hours in advance.",
+      "numberOfGuests": "Small groups (max 6 people). Private tours available for larger groups.",
+      "pickupLocation": "We offer complimentary pickup from all hotels in central Addis Ababa (Bole, Piassa, Meskel Square areas)."
+    },
+    "pricing": {
+      "childPrice": "Children 6–17 years. Infants (0–5) are free.",
+      "privateTour": "Private tours include dedicated guide and vehicle, flexible itinerary, and personalized attention."
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2026-08-28",
+    "version": "1.0"
+  }
+}

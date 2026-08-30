@@ -1,0 +1,1296 @@
+{
+  "tours": [
+    {
+      "id": "half-day-addis-ababa",
+      "slug": "half-day-addis-ababa-city-tour",
+      "name": "Half-Day Addis Ababa City Tour",
+      "subtitle": "National Museum, Merkato & Meskel Square",
+      "shortDescription": "4-hour guided tour of Addis Ababa's top attractions: National Museum (Lucy fossil), Addis Mercato, Meskel Square. Perfect for layover passengers or travelers with limited time.",
+      "fullDescription": "The Half-Day Addis Ababa City Tour is a 4-hour guided experience showcasing Addis Ababa's top attractions: the National Museum (home to Lucy, the 3.2-million-year-old fossil), Addis Mercato (Africa's largest open-air market), and Meskel Square (historic plaza with Menelik II statue). Perfect for layover passengers or travelers with limited time, this tour includes hotel pickup, expert local guide, and all entrance fees.",
+      "tourType": "city-tour",
+      "duration": "4 hours",
+      "durationMinutes": 240,
+      "groupSize": "Small group (max 6)",
+      "maxGroupSize": 6,
+      "rating": 4.9,
+      "reviewCount": 127,
+      "availability": "Daily at 08:00 or 14:00",
+      "difficulty": "Easy",
+      "minAge": 6,
+      "itinerary": [
+        {
+          "time": "08:00",
+          "activity": "Hotel pickup in central Addis Ababa",
+          "duration": "30 minutes"
+        },
+        {
+          "time": "08:30–10:00",
+          "activity": "National Museum of Ethiopia (Lucy fossil, archaeological collections)",
+          "duration": "1.5 hours"
+        },
+        {
+          "time": "10:30–12:30",
+          "activity": "Addis Mercato exploration (spices, textiles, coffee, crafts)",
+          "duration": "2 hours"
+        },
+        {
+          "time": "13:00–13:30",
+          "activity": "Meskel Square and Menelik II statue",
+          "duration": "30 minutes"
+        },
+        {
+          "time": "13:30",
+          "activity": "Drop-off at your hotel or preferred location",
+          "duration": "—"
+        }
+      ],
+      "highlights": [
+        "Visit the National Museum of Ethiopia and see Lucy, the 3.2-million-year-old hominid fossil",
+        "Explore Addis Mercato, Africa's largest open-air market with over 13,000 vendors",
+        "Discover Meskel Square and the historic Menelik II statue",
+        "Learn from an expert local guide born and raised in Addis Ababa",
+        "Enjoy hotel pickup and drop-off in central Addis Ababa",
+        "All entrance fees included—no hidden costs"
+      ],
+      "included": [
+        "Professional English-speaking guide",
+        "Private vehicle with driver",
+        "Hotel pickup and drop-off (central Addis Ababa)",
+        "All entrance fees",
+        "Bottled water"
+      ],
+      "excluded": [
+        "Gratuities (optional)",
+        "Personal expenses and shopping",
+        "Meals and beverages"
+      ],
+      "pricing": {
+        "currency": "USD",
+        "private": {
+          "1-2": {
+            "adult": 65,
+            "child": 45,
+            "infant": 0
+          },
+          "3-4": {
+            "adult": 55,
+            "child": 40,
+            "infant": 0
+          },
+          "5-6": {
+            "adult": 48,
+            "child": 35,
+            "infant": 0
+          }
+        },
+        "smallGroup": {
+          "adult": 42,
+          "child": 30,
+          "infant": 0
+        }
+      },
+      "pickupPolicy": "Complimentary pickup from all hotels in central Addis Ababa (Bole, Piassa, Meskel Square areas). Pickup time confirmed 24 hours before tour.",
+      "meetingPoint": "Hotel lobby or agreed pickup location in central Addis Ababa",
+      "whatToBring": [
+        "Comfortable walking shoes",
+        "Sun protection (hat, sunglasses, sunscreen)",
+        "Camera",
+        "Light jacket (mornings can be cool at 2,400m altitude)",
+        "Bottled water (provided, but extra recommended)"
+      ],
+      "fitnessLevel": "Easy. Suitable for all fitness levels. Involves moderate walking (2–3 km total) on paved surfaces.",
+      "cancellationPolicy": "Free cancellation up to 24 hours before the tour start time. Cancellations within 24 hours or no-shows are non-refundable. Weather-related cancellations qualify for full refund or free rescheduling.",
+      "faqs": [
+        {
+          "question": "What time does the half-day tour start?",
+          "answer": "The half-day tour departs at 08:00 or 14:00 daily. Pickup time will be confirmed 24 hours before your tour."
+        },
+        {
+          "question": "Is the National Museum included in the price?",
+          "answer": "Yes, all entrance fees are included in the tour price. No additional costs."
+        },
+        {
+          "question": "Can I customize the itinerary?",
+          "answer": "The half-day tour follows a fixed itinerary to ensure you see the highlights within 4 hours. For customized itineraries, please book a private tour."
+        }
+      ],
+      "images": [
+        "/images/tours/half-day-addis-ababa-hero.jpg",
+        "/images/tours/half-day-addis-ababa-national-museum.jpg",
+        "/images/tours/half-day-addis-ababa-merkato.jpg",
+        "/images/tours/half-day-addis-ababa-meskel-square.jpg"
+      ],
+      "relatedTours": [
+        "full-day-addis-ababa",
+        "addis-ababa-highlights",
+        "airport-layover-tour"
+      ],
+      "seo": {
+        "pageTitle": "Half-Day Addis Ababa City Tour — National Museum & Merkato | From $42",
+        "metaDescription": "4-hour guided tour of Addis Ababa's top attractions: National Museum (Lucy fossil), Addis Mercato, Meskel Square. Hotel pickup, expert guide, all entrance fees. From $42. Book direct and save 15%.",
+        "h1": "Half-Day Addis Ababa City Tour — National Museum, Merkato & Meskel Square",
+        "h2s": [
+          "What is the Half-Day Addis Ababa City Tour?",
+          "Tour Highlights",
+          "Detailed Itinerary",
+          "What's Included & Excluded",
+          "Pricing",
+          "What Travelers Say",
+          "Frequently Asked Questions",
+          "Licensed & Trusted",
+          "You May Also Like",
+          "Ready to Book Your Half-Day City Tour?"
+        ]
+      },
+      "lastVerified": "2026-08-28"
+    },
+    {
+      "id": "full-day-addis-ababa",
+      "slug": "full-day-addis-ababa-city-tour",
+      "name": "Full-Day Addis Ababa City Tour",
+      "subtitle": "Comprehensive City Highlights with Coffee Ceremony",
+      "shortDescription": "8–9 hour comprehensive city tour: National Museum, Ethnological Museum, Holy Trinity Cathedral, Addis Mercato, Entoto Park panoramic views, and traditional coffee ceremony.",
+      "fullDescription": "The Full-Day Addis Ababa City Tour is an 8–9 hour comprehensive exploration of Ethiopia's vibrant capital. Visit the National Museum (Lucy fossil), Ethnological Museum, Holy Trinity Cathedral (Emperor Haile Selassie's final resting place), Addis Mercato, Entoto Park (panoramic city views from 3,200 meters), and experience a traditional *buna* (coffee) ceremony. Includes lunch at a local restaurant serving authentic Ethiopian cuisine.",
+      "tourType": "city-tour",
+      "duration": "8–9 hours",
+      "durationMinutes": 510,
+      "groupSize": "Small group (max 6)",
+      "maxGroupSize": 6,
+      "rating": 4.9,
+      "reviewCount": 143,
+      "availability": "Daily at 08:00",
+      "difficulty": "Moderate",
+      "minAge": 6,
+      "itinerary": [
+        {
+          "time": "08:00",
+          "activity": "Hotel pickup in central Addis Ababa",
+          "duration": "30 minutes"
+        },
+        {
+          "time": "08:30–10:00",
+          "activity": "National Museum of Ethiopia (Lucy fossil, archaeological collections)",
+          "duration": "1.5 hours"
+        },
+        {
+          "time": "10:30–11:30",
+          "activity": "Ethnological Museum (former palace of Haile Selassie, cultural artifacts)",
+          "duration": "1 hour"
+        },
+        {
+          "time": "12:00–13:00",
+          "activity": "Holy Trinity Cathedral (Emperor Haile Selassie's tomb, stained glass, religious murals)",
+          "duration": "1 hour"
+        },
+        {
+          "time": "13:00–14:00",
+          "activity": "Lunch at local restaurant (traditional Ethiopian cuisine)",
+          "duration": "1 hour"
+        },
+        {
+          "time": "14:30–15:30",
+          "activity": "Addis Mercato exploration (spices, textiles, coffee, crafts)",
+          "duration": "1 hour"
+        },
+        {
+          "time": "16:00–17:00",
+          "activity": "Entoto Park (panoramic city views, Entoto Maryam Church, eucalyptus forests)",
+          "duration": "1 hour"
+        },
+        {
+          "time": "17:00–17:30",
+          "activity": "Traditional *buna* (coffee) ceremony",
+          "duration": "30 minutes"
+        },
+        {
+          "time": "17:30–18:00",
+          "activity": "Drop-off at your hotel or preferred location",
+          "duration": "—"
+        }
+      ],
+      "highlights": [
+        "National Museum of Ethiopia and Lucy, the 3.2-million-year-old hominid fossil",
+        "Ethnological Museum in Haile Selassie's former palace",
+        "Holy Trinity Cathedral with Emperor Haile Selassie's tomb and stunning stained glass",
+        "Addis Mercato, Africa's largest open-air market",
+        "Entoto Park panoramic views from Addis Ababa's highest point (3,200 meters)",
+        "Traditional *buna* (coffee) ceremony with three rounds: *abol*, *tona*, *bereka*",
+        "Lunch featuring authentic Ethiopian cuisine (*injera*, *doro wat*, vegetarian options)",
+        "Expert local guide with deep historical and cultural knowledge"
+      ],
+      "included": [
+        "Professional English-speaking guide",
+        "Private vehicle with driver",
+        "Hotel pickup and drop-off (central Addis Ababa)",
+        "All entrance fees",
+        "Lunch at local restaurant (traditional Ethiopian cuisine)",
+        "Traditional *buna* (coffee) ceremony",
+        "Bottled water"
+      ],
+      "excluded": [
+        "Gratuities (optional)",
+        "Personal expenses and shopping",
+        "Additional meals and beverages"
+      ],
+      "pricing": {
+        "currency": "USD",
+        "private": {
+          "1-2": {
+            "adult": 95,
+            "child": 65,
+            "infant": 0
+          },
+          "3-4": {
+            "adult": 80,
+            "child": 55,
+            "infant": 0
+          },
+          "5-6": {
+            "adult": 72,
+            "child": 50,
+            "infant": 0
+          }
+        },
+        "smallGroup": {
+          "adult": 69,
+          "child": 50,
+          "infant": 0
+        }
+      },
+      "pickupPolicy": "Complimentary pickup from all hotels in central Addis Ababa (Bole, Piassa, Meskel Square areas). Pickup time confirmed 24 hours before tour.",
+      "meetingPoint": "Hotel lobby or agreed pickup location in central Addis Ababa",
+      "whatToBring": [
+        "Comfortable walking shoes",
+        "Sun protection (hat, sunglasses, sunscreen)",
+        "Camera",
+        "Light jacket (mornings can be cool at 2,400m altitude)",
+        "Modest clothing for church visits (shoulders and knees covered)",
+        "Bottled water (provided, but extra recommended)"
+      ],
+      "fitnessLevel": "Moderate. Suitable for most fitness levels. Involves walking (4–5 km total) on paved and uneven surfaces. Some stairs at Entoto Park.",
+      "cancellationPolicy": "Free cancellation up to 24 hours before the tour start time. Cancellations within 24 hours or no-shows are non-refundable. Weather-related cancellations qualify for full refund or free rescheduling.",
+      "faqs": [
+        {
+          "question": "What time does the full-day tour start and end?",
+          "answer": "The full-day tour departs at 08:00 and returns between 17:30–18:00, depending on traffic and pace."
+        },
+        {
+          "question": "Is lunch included?",
+          "answer": "Yes, lunch at a local restaurant serving traditional Ethiopian cuisine is included in the tour price."
+        },
+        {
+          "question": "What should I wear for the church visit?",
+          "answer": "Modest clothing is required: shoulders and knees must be covered. Remove hats and shoes before entering the church."
+        },
+        {
+          "question": "Is the coffee ceremony suitable for vegetarians/vegans?",
+          "answer": "Yes, the coffee ceremony is plant-based. Lunch includes vegetarian options (*injera* with various vegetable *wats*)."
+        }
+      ],
+      "images": [
+        "/images/tours/full-day-addis-ababa-hero.jpg",
+        "/images/tours/full-day-addis-ababa-national-museum.jpg",
+        "/images/tours/full-day-addis-ababa-holy-trinity.jpg",
+        "/images/tours/full-day-addis-ababa-entoto.jpg",
+        "/images/tours/full-day-addis-ababa-coffee-ceremony.jpg"
+      ],
+      "relatedTours": [
+        "half-day-addis-ababa",
+        "addis-ababa-highlights",
+        "debre-libanos-portuguese-bridge"
+      ],
+      "seo": {
+        "pageTitle": "Full-Day Addis Ababa City Tour — Comprehensive Highlights | From $69",
+        "metaDescription": "8–9 hour comprehensive city tour: National Museum, Ethnological Museum, Holy Trinity Cathedral, Addis Mercato, Entoto Park, coffee ceremony. Lunch included. From $69. Book direct and save 15%.",
+        "h1": "Full-Day Addis Ababa City Tour — Comprehensive City Highlights with Coffee Ceremony",
+        "h2s": [
+          "What is the Full-Day Addis Ababa City Tour?",
+          "Tour Highlights",
+          "Detailed Itinerary",
+          "What's Included & Excluded",
+          "Pricing",
+          "What Travelers Say",
+          "Frequently Asked Questions",
+          "Licensed & Trusted",
+          "You May Also Like",
+          "Ready to Book Your Full-Day City Tour?"
+        ]
+      },
+      "lastVerified": "2026-08-28"
+    },
+    {
+      "id": "addis-ababa-highlights",
+      "slug": "addis-ababa-highlights-tour",
+      "name": "Addis Ababa Highlights Tour",
+      "subtitle": "Best of the City in 6 Hours",
+      "shortDescription": "6-hour tour covering Addis Ababa's essential attractions: National Museum, Holy Trinity Cathedral, Addis Mercato, and Entoto Park. Perfect balance of culture, history, and panoramic views.",
+      "fullDescription": "The Addis Ababa Highlights Tour is a 6-hour curated experience covering the city's essential attractions: National Museum (Lucy fossil), Holy Trinity Cathedral (Emperor Haile Selassie's tomb), Addis Mercato (Africa's largest market), and Entoto Park (panoramic city views). Perfect for travelers who want a comprehensive overview without the full-day commitment. Includes expert local guide, hotel pickup, and all entrance fees.",
+      "tourType": "city-tour",
+      "duration": "6 hours",
+      "durationMinutes": 360,
+      "groupSize": "Small group (max 6)",
+      "maxGroupSize": 6,
+      "rating": 4.8,
+      "reviewCount": 98,
+      "availability": "Daily at 08:00 or 13:00",
+      "difficulty": "Moderate",
+      "minAge": 6,
+      "itinerary": [
+        {
+          "time": "08:00",
+          "activity": "Hotel pickup in central Addis Ababa",
+          "duration": "30 minutes"
+        },
+        {
+          "time": "08:30–10:00",
+          "activity": "National Museum of Ethiopia (Lucy fossil, archaeological collections)",
+          "duration": "1.5 hours"
+        },
+        {
+          "time": "10:30–11:30",
+          "activity": "Holy Trinity Cathedral (Emperor Haile Selassie's tomb, stained glass, religious murals)",
+          "duration": "1 hour"
+        },
+        {
+          "time": "12:00–13:00",
+          "activity": "Addis Mercato exploration (spices, textiles, coffee, crafts)",
+          "duration": "1 hour"
+        },
+        {
+          "time": "13:00–14:00",
+          "activity": "Lunch break (not included, guide can recommend local restaurants)",
+          "duration": "1 hour"
+        },
+        {
+          "time": "14:30–15:30",
+          "activity": "Entoto Park (panoramic city views, Entoto Maryam Church, eucalyptus forests)",
+          "duration": "1 hour"
+        },
+        {
+          "time": "15:30–16:00",
+          "activity": "Drop-off at your hotel or preferred location",
+          "duration": "—"
+        }
+      ],
+      "highlights": [
+        "National Museum of Ethiopia and Lucy, the 3.2-million-year-old hominid fossil",
+        "Holy Trinity Cathedral with Emperor Haile Selassie's tomb and stunning stained glass",
+        "Addis Mercato, Africa's largest open-air market",
+        "Entoto Park panoramic views from Addis Ababa's highest point (3,200 meters)",
+        "Expert local guide with deep historical and cultural knowledge",
+        "Perfect balance of culture, history, and scenic views in 6 hours"
+      ],
+      "included": [
+        "Professional English-speaking guide",
+        "Private vehicle with driver",
+        "Hotel pickup and drop-off (central Addis Ababa)",
+        "All entrance fees",
+        "Bottled water"
+      ],
+      "excluded": [
+        "Lunch",
+        "Gratuities (optional)",
+        "Personal expenses and shopping",
+        "Additional meals and beverages"
+      ],
+      "pricing": {
+        "currency": "USD",
+        "private": {
+          "1-2": {
+            "adult": 80,
+            "child": 55,
+            "infant": 0
+          },
+          "3-4": {
+            "adult": 68,
+            "child": 48,
+            "infant": 0
+          },
+          "5-6": {
+            "adult": 60,
+            "child": 42,
+            "infant": 0
+          }
+        },
+        "smallGroup": {
+          "adult": 55,
+          "child": 40,
+          "infant": 0
+        }
+      },
+      "pickupPolicy": "Complimentary pickup from all hotels in central Addis Ababa (Bole, Piassa, Meskel Square areas). Pickup time confirmed 24 hours before tour.",
+      "meetingPoint": "Hotel lobby or agreed pickup location in central Addis Ababa",
+      "whatToBring": [
+        "Comfortable walking shoes",
+        "Sun protection (hat, sunglasses, sunscreen)",
+        "Camera",
+        "Light jacket (mornings can be cool at 2,400m altitude)",
+        "Modest clothing for church visits (shoulders and knees covered)",
+        "Cash for lunch (not included)"
+      ],
+      "fitnessLevel": "Moderate. Suitable for most fitness levels. Involves walking (3–4 km total) on paved and uneven surfaces. Some stairs at Entoto Park.",
+      "cancellationPolicy": "Free cancellation up to 24 hours before the tour start time. Cancellations within 24 hours or no-shows are non-refundable. Weather-related cancellations qualify for full refund or free rescheduling.",
+      "faqs": [
+        {
+          "question": "Is lunch included in the highlights tour?",
+          "answer": "No, lunch is not included. Your guide can recommend local restaurants near Addis Mercato where you can enjoy authentic Ethiopian cuisine."
+        },
+        {
+          "question": "Can I skip the church visit if I prefer?",
+          "answer": "Yes, the itinerary can be adjusted. You can spend more time at Entoto Park or explore additional neighborhoods instead."
+        }
+      ],
+      "images": [
+        "/images/tours/addis-ababa-highlights-hero.jpg",
+        "/images/tours/addis-ababa-highlights-national-museum.jpg",
+        "/images/tours/addis-ababa-highlights-holy-trinity.jpg",
+        "/images/tours/addis-ababa-highlights-entoto.jpg"
+      ],
+      "relatedTours": [
+        "half-day-addis-ababa",
+        "full-day-addis-ababa",
+        "airport-layover-tour"
+      ],
+      "seo": {
+        "pageTitle": "Addis Ababa Highlights Tour — Best of the City in 6 Hours | From $55",
+        "metaDescription": "6-hour tour covering National Museum, Holy Trinity Cathedral, Addis Mercato, Entoto Park. Perfect balance of culture, history, and views. From $55. Book direct and save 15%.",
+        "h1": "Addis Ababa Highlights Tour — Best of the City in 6 Hours",
+        "h2s": [
+          "What is the Addis Ababa Highlights Tour?",
+          "Tour Highlights",
+          "Detailed Itinerary",
+          "What's Included & Excluded",
+          "Pricing",
+          "What Travelers Say",
+          "Frequently Asked Questions",
+          "Licensed & Trusted",
+          "You May Also Like",
+          "Ready to Book Your Highlights Tour?"
+        ]
+      },
+      "lastVerified": "2026-08-28"
+    },
+    {
+      "id": "debre-libanos-portuguese-bridge",
+      "slug": "debre-libanos-portuguese-bridge",
+      "name": "Debre Libanos & Portuguese Bridge Day Trip",
+      "subtitle": "13th-Century Monastery, Blue Nile Gorge & Gelada Baboons",
+      "shortDescription": "8–9 hour excursion to Debre Libanos Monastery (13th century), dramatic Blue Nile Gorge views from Portuguese Bridge, and wild gelada baboons in their natural habitat.",
+      "fullDescription": "The Debre Libanos & Portuguese Bridge Day Trip is an 8–9 hour excursion north of Addis Ababa to one of Ethiopia's most important religious sites. Visit the 13th-century Debre Libanos Monastery, founded by Saint Tekle Haymanot, enjoy dramatic Blue Nile Gorge views from Portuguese Bridge, and spot wild gelada baboons in their natural habitat. Includes expert guide, private transport, and lunch at a local restaurant overlooking the gorge.",
+      "tourType": "day-trip",
+      "duration": "8–9 hours",
+      "durationMinutes": 510,
+      "groupSize": "Small group (max 6)",
+      "maxGroupSize": 6,
+      "rating": 4.9,
+      "reviewCount": 98,
+      "availability": "Daily at 07:30",
+      "difficulty": "Moderate",
+      "minAge": 8,
+      "itinerary": [
+        {
+          "time": "07:30",
+          "activity": "Hotel pickup in central Addis Ababa",
+          "duration": "30 minutes"
+        },
+        {
+          "time": "07:30–09:30",
+          "activity": "Scenic drive north through Ethiopian highlands (90 km, 2 hours)",
+          "duration": "2 hours"
+        },
+        {
+          "time": "09:30–11:30",
+          "activity": "Debre Libanos Monastery visit (church, cave, museum if open)",
+          "duration": "2 hours"
+        },
+        {
+          "time": "11:30–12:30",
+          "activity": "Portuguese Bridge and Jemma Gorge viewpoint",
+          "duration": "1 hour"
+        },
+        {
+          "time": "12:30–13:30",
+          "activity": "Lunch at local restaurant overlooking gorge",
+          "duration": "1 hour"
+        },
+        {
+          "time": "13:30–15:30",
+          "activity": "Return drive to Addis Ababa (wildlife spotting en route)",
+          "duration": "2 hours"
+        },
+        {
+          "time": "15:30–16:00",
+          "activity": "Drop-off at your hotel or preferred location",
+          "duration": "—"
+        }
+      ],
+      "highlights": [
+        "13th-century Debre Libanos Monastery founded by Saint Tekle Haymanot",
+        "Sacred cave where the saint meditated for seven years",
+        "Dramatic Jemma River Gorge ('Ethiopian Grand Canyon')",
+        "Historic Portuguese Bridge with 600-meter waterfall views",
+        "Wild gelada baboons in their natural habitat",
+        "Endemic bird species viewing (Black-headed Woodland Oriole, Red-billed Starling)",
+        "Scenic highland drive through traditional villages",
+        "Hidden sacred waterfall (optional short hike)"
+      ],
+      "included": [
+        "Professional English-speaking guide",
+        "Private vehicle with driver",
+        "Hotel pickup and drop-off (central Addis Ababa)",
+        "All entrance fees",
+        "Lunch at local restaurant (traditional Ethiopian cuisine)",
+        "Bottled water"
+      ],
+      "excluded": [
+        "Gratuities (optional)",
+        "Personal expenses",
+        "Additional meals and beverages"
+      ],
+      "pricing": {
+        "currency": "USD",
+        "private": {
+          "1-2": {
+            "adult": 120,
+            "child": 85,
+            "infant": 0
+          },
+          "3-4": {
+            "adult": 105,
+            "child": 75,
+            "infant": 0
+          },
+          "5-6": {
+            "adult": 95,
+            "child": 70,
+            "infant": 0
+          }
+        },
+        "smallGroup": {
+          "adult": 85,
+          "child": 60,
+          "infant": 0
+        }
+      },
+      "pickupPolicy": "Complimentary pickup from all hotels in central Addis Ababa (Bole, Piassa, Meskel Square areas). Pickup time confirmed 24 hours before tour.",
+      "meetingPoint": "Hotel lobby or agreed pickup location in central Addis Ababa",
+      "whatToBring": [
+        "Comfortable walking shoes with good grip",
+        "Sun protection (hat, sunglasses, sunscreen)",
+        "Camera with extra batteries",
+        "Binoculars (for wildlife and bird watching)",
+        "Light jacket (mornings can be cool in highlands)",
+        "Bottled water (provided, but extra recommended)"
+      ],
+      "fitnessLevel": "Moderate. Suitable for most fitness levels. Involves walking (2–3 km total) on uneven terrain and some stairs at monastery. Not wheelchair accessible.",
+      "cancellationPolicy": "Free cancellation up to 24 hours before the tour start time. Cancellations within 24 hours or no-shows are non-refundable. Weather-related cancellations qualify for full refund or free rescheduling.",
+      "faqs": [
+        {
+          "question": "How far is Debre Libanos from Addis Ababa?",
+          "answer": "Debre Libanos is approximately 90 km north of Addis Ababa, about 2 hours drive each way through scenic highland roads."
+        },
+        {
+          "question": "Will we definitely see gelada baboons?",
+          "answer": "Gelada baboons are wild animals and sightings cannot be guaranteed. However, they are commonly seen in the gorge area, especially in the morning. Our guides know their usual haunts and will do their best to spot them."
+        },
+        {
+          "question": "Is the monastery still active?",
+          "answer": "Yes, Debre Libanos is still an active monastery with resident monks. Visitors should dress modestly (shoulders and knees covered) and speak respectfully."
+        },
+        {
+          "question": "What is the best time to visit?",
+          "answer": "October to March (dry season) offers the clearest views and best wildlife spotting. The gorge is particularly dramatic after the rainy season (September–October)."
+        }
+      ],
+      "images": [
+        "/images/tours/debre-libanos-hero.jpg",
+        "/images/tours/debre-libanos-monastery.jpg",
+        "/images/tours/debre-libanos-portuguese-bridge.jpg",
+        "/images/tours/debre-libanos-gorge.jpg",
+        "/images/tours/debre-libanos-gelada-baboons.jpg"
+      ],
+      "relatedTours": [
+        "tiya-adadi-mariam-melka-kunture",
+        "menagesha-forest-day-trip",
+        "full-day-addis-ababa"
+      ],
+      "seo": {
+        "pageTitle": "Debre Libanos & Portuguese Bridge Day Trip — Monastery & Gorge | From $85",
+        "metaDescription": "8–9 hour excursion to 13th-century Debre Libanos Monastery, dramatic Blue Nile Gorge views from Portuguese Bridge, wild gelada baboons. Lunch included. From $85. Book direct and save 15%.",
+        "h1": "Debre Libanos Monastery & Portuguese Bridge Day Trip — Gorges, Gelada Baboons & 13th-Century Spirituality",
+        "h2s": [
+          "What is the Debre Libanos & Portuguese Bridge Day Trip?",
+          "Tour Highlights",
+          "Detailed Itinerary",
+          "What's Included & Excluded",
+          "Pricing",
+          "What Travelers Say",
+          "Frequently Asked Questions",
+          "Licensed & Trusted",
+          "You May Also Like",
+          "Ready to Book Your Debre Libanos Day Trip?"
+        ]
+      },
+      "lastVerified": "2026-08-28"
+    },
+    {
+      "id": "tiya-adadi-mariam-melka-kunture",
+      "slug": "tiya-adadi-mariam-melka-kunture",
+      "name": "Tiya, Adadi Mariam & Melka Kunture UNESCO Day Trip",
+      "subtitle": "Ancient Stelae, Rock-Hewn Churches & Archaeological Treasures",
+      "shortDescription": "9–10 hour archaeological adventure: Tiya UNESCO World Heritage Site (32 carved stone stelae), 13th-century Adadi Mariam rock-hewn church, Melka Kunture Paleolithic site.",
+      "fullDescription": "The Tiya, Adadi Mariam & Melka Kunture UNESCO Day Trip is a 9–10 hour archaeological adventure south of Addis Ababa. Visit the Tiya UNESCO World Heritage Site (32 carved stone stelae from the 11th–13th centuries), explore the 13th-century Adadi Mariam rock-hewn church (built during King Lalibela's reign), and discover the Melka Kunture Paleolithic archaeological site with stone tools and fossils. Includes expert archaeological guide, private transport, and lunch.",
+      "tourType": "day-trip",
+      "duration": "9–10 hours",
+      "durationMinutes": 570,
+      "groupSize": "Small group (max 6)",
+      "maxGroupSize": 6,
+      "rating": 4.9,
+      "reviewCount": 87,
+      "availability": "Daily at 07:00",
+      "difficulty": "Moderate",
+      "minAge": 10,
+      "itinerary": [
+        {
+          "time": "07:00",
+          "activity": "Hotel pickup in central Addis Ababa",
+          "duration": "30 minutes"
+        },
+        {
+          "time": "07:00–08:30",
+          "activity": "Scenic drive south (55 km, 1.5 hours)",
+          "duration": "1.5 hours"
+        },
+        {
+          "time": "08:30–10:00",
+          "activity": "Melka Kunture Archaeological Site (museum, excavation areas)",
+          "duration": "1.5 hours"
+        },
+        {
+          "time": "10:00–11:00",
+          "activity": "Drive to Adadi Mariam (35 km, 1 hour)",
+          "duration": "1 hour"
+        },
+        {
+          "time": "11:00–12:00",
+          "activity": "Adadi Mariam Rock-Hewn Church visit",
+          "duration": "1 hour"
+        },
+        {
+          "time": "12:00–13:00",
+          "activity": "Drive to Tiya (20 km, 30 minutes)",
+          "duration": "1 hour"
+        },
+        {
+          "time": "13:00–14:30",
+          "activity": "Tiya UNESCO Stelae Field exploration",
+          "duration": "1.5 hours"
+        },
+        {
+          "time": "14:30–15:30",
+          "activity": "Lunch in Butajira",
+          "duration": "1 hour"
+        },
+        {
+          "time": "15:30–17:30",
+          "activity": "Return drive to Addis Ababa (90 km, 2 hours)",
+          "duration": "2 hours"
+        },
+        {
+          "time": "17:30–18:00",
+          "activity": "Drop-off at your hotel or preferred location",
+          "duration": "—"
+        }
+      ],
+      "highlights": [
+        "Tiya UNESCO World Heritage Site (designated 1980) with 32 carved stone stelae",
+        "Adadi Mariam 13th-century rock-hewn church (built by King Lalibela)",
+        "Melka Kunture Paleolithic archaeological site (stone tools, fossils, open-air museum)",
+        "Expert archaeological and historical commentary",
+        "Scenic highland drive through traditional villages",
+        "Lunch in Butajira with traditional Ethiopian cuisine"
+      ],
+      "included": [
+        "Professional English-speaking guide (specialized in archaeology and history)",
+        "Private vehicle with driver",
+        "Hotel pickup and drop-off (central Addis Ababa)",
+        "All entrance fees",
+        "Lunch at local restaurant",
+        "Bottled water"
+      ],
+      "excluded": [
+        "Gratuities (optional)",
+        "Personal expenses",
+        "Additional meals and beverages"
+      ],
+      "pricing": {
+        "currency": "USD",
+        "private": {
+          "1-2": {
+            "adult": 135,
+            "child": 95,
+            "infant": 0
+          },
+          "3-4": {
+            "adult": 115,
+            "child": 85,
+            "infant": 0
+          },
+          "5-6": {
+            "adult": 105,
+            "child": 80,
+            "infant": 0
+          }
+        },
+        "smallGroup": {
+          "adult": 95,
+          "child": 70,
+          "infant": 0
+        }
+      },
+      "pickupPolicy": "Complimentary pickup from all hotels in central Addis Ababa (Bole, Piassa, Meskel Square areas). Pickup time confirmed 24 hours before tour.",
+      "meetingPoint": "Hotel lobby or agreed pickup location in central Addis Ababa",
+      "whatToBring": [
+        "Comfortable walking shoes",
+        "Sun protection (hat, sunglasses, sunscreen)",
+        "Camera",
+        "Notebook and pen (for archaeological notes)",
+        "Light jacket (mornings can be cool)",
+        "Bottled water (provided, but extra recommended)"
+      ],
+      "fitnessLevel": "Moderate. Suitable for most fitness levels. Involves walking (3–4 km total) on uneven terrain at archaeological sites. Not wheelchair accessible.",
+      "cancellationPolicy": "Free cancellation up to 24 hours before the tour start time. Cancellations within 24 hours or no-shows are non-refundable. Weather-related cancellations qualify for full refund or free rescheduling.",
+      "faqs": [
+        {
+          "question": "What makes Tiya a UNESCO World Heritage Site?",
+          "answer": "Tiya contains 32 carved stone stelae dating to the 11th–13th centuries, featuring enigmatic symbols and decorations. It's one of the most important archaeological sites in Ethiopia, designated UNESCO World Heritage in 1980."
+        },
+        {
+          "question": "Is the Adadi Mariam church similar to Lalibela?",
+          "answer": "Yes, Adadi Mariam is a rock-hewn church built during the same period as the Lalibela churches (13th century). While smaller, it features similar architectural techniques and religious significance."
+        },
+        {
+          "question": "What will I see at Melka Kunture?",
+          "answer": "Melka Kunture is a Paleolithic archaeological site with stone tools, fossils, and an open-air museum. You'll see excavation areas where archaeologists have discovered tools dating back over 1 million years."
+        }
+      ],
+      "images": [
+        "/images/tours/tiya-adadi-mariam-melka-kunture-hero.jpg",
+        "/images/tours/tiya-adadi-mariam-melka-kunture-tiya-stelae.jpg",
+        "/images/tours/tiya-adadi-mariam-melka-kunture-adadi-mariam.jpg",
+        "/images/tours/tiya-adadi-mariam-melka-kunture-melka-kunture.jpg"
+      ],
+      "relatedTours": [
+        "debre-libanos-portuguese-bridge",
+        "menagesha-forest-day-trip",
+        "full-day-addis-ababa"
+      ],
+      "seo": {
+        "pageTitle": "Tiya, Adadi Mariam & Melka Kunture UNESCO Day Trip | From $95",
+        "metaDescription": "9–10 hour archaeological adventure: Tiya UNESCO Site (32 stelae), 13th-century Adadi Mariam rock-hewn church, Melka Kunture Paleolithic site. Lunch included. From $95. Book direct and save 15%.",
+        "h1": "Tiya, Adadi Mariam & Melka Kunture UNESCO Day Trip — Ancient Stelae, Rock-Hewn Churches & Archaeological Treasures",
+        "h2s": [
+          "What is the Tiya, Adadi Mariam & Melka Kunture UNESCO Day Trip?",
+          "Tour Highlights",
+          "Detailed Itinerary",
+          "What's Included & Excluded",
+          "Pricing",
+          "What Travelers Say",
+          "Frequently Asked Questions",
+          "Licensed & Trusted",
+          "You May Also Like",
+          "Ready to Book Your UNESCO Day Trip?"
+        ]
+      },
+      "lastVerified": "2026-08-28"
+    },
+    {
+      "id": "menagesha-forest-day-trip",
+      "slug": "menagesha-forest-day-trip",
+      "name": "Menagesha Forest Day Trip",
+      "subtitle": "Highland Rainforest, Waterfalls & Endemic Wildlife",
+      "shortDescription": "8–9 hour nature excursion through pristine highland rainforest, endemic birds and wildlife, cascading waterfalls, and picnic lunch in nature.",
+      "fullDescription": "The Menagesha Forest Day Trip is an 8–9 hour nature excursion through one of Ethiopia's last remaining highland rainforests. Hike through ancient juniper and podocarpus trees, spot endemic birds and wildlife, visit cascading waterfalls, and enjoy a picnic lunch in nature. Perfect for nature lovers and hikers seeking an escape from the city. Includes expert naturalist guide, private transport, and picnic lunch.",
+      "tourType": "day-trip",
+      "duration": "8–9 hours",
+      "durationMinutes": 510,
+      "groupSize": "Small group (max 6)",
+      "maxGroupSize": 6,
+      "rating": 4.7,
+      "reviewCount": 76,
+      "availability": "Daily at 07:30",
+      "difficulty": "Moderate to Challenging",
+      "minAge": 12,
+      "itinerary": [
+        {
+          "time": "07:30",
+          "activity": "Hotel pickup in central Addis Ababa",
+          "duration": "30 minutes"
+        },
+        {
+          "time": "07:30–08:30",
+          "activity": "Scenic drive to Menagesha Forest (35 km, 1 hour)",
+          "duration": "1 hour"
+        },
+        {
+          "time": "08:30–11:30",
+          "activity": "Forest hike (ancient juniper, podocarpus trees, endemic birds, wildlife)",
+          "duration": "3 hours"
+        },
+        {
+          "time": "11:30–12:30",
+          "activity": "Waterfall visit and picnic lunch",
+          "duration": "1 hour"
+        },
+        {
+          "time": "12:30–14:30",
+          "activity": "Continued hike or relaxation time",
+          "duration": "2 hours"
+        },
+        {
+          "time": "14:30–15:30",
+          "activity": "Return drive to Addis Ababa",
+          "duration": "1 hour"
+        },
+        {
+          "time": "15:30–16:00",
+          "activity": "Drop-off at your hotel or preferred location",
+          "duration": "—"
+        }
+      ],
+      "highlights": [
+        "One of Ethiopia's last remaining highland rainforests",
+        "Ancient juniper and podocarpus trees (some over 500 years old)",
+        "Endemic bird species (Ethiopian White-eye, Yellow-fronted Parrot, Black-headed Woodland Oriole)",
+        "Wildlife spotting (Colobus monkeys, bushbucks, duikers)",
+        "Cascading waterfalls (seasonal, best September–March)",
+        "Picnic lunch in pristine natural setting",
+        "Expert naturalist guide with deep ecological knowledge"
+      ],
+      "included": [
+        "Professional English-speaking guide (specialized in ecology and wildlife)",
+        "Private vehicle with driver",
+        "Hotel pickup and drop-off (central Addis Ababa)",
+        "All entrance fees",
+        "Picnic lunch (sandwiches, fruits, snacks, bottled water)",
+        "Bottled water"
+      ],
+      "excluded": [
+        "Gratuities (optional)",
+        "Personal expenses",
+        "Additional meals and beverages",
+        "Hiking poles (can be rented if needed)"
+      ],
+      "pricing": {
+        "currency": "USD",
+        "private": {
+          "1-2": {
+            "adult": 110,
+            "child": 80,
+            "infant": 0
+          },
+          "3-4": {
+            "adult": 95,
+            "child": 70,
+            "infant": 0
+          },
+          "5-6": {
+            "adult": 88,
+            "child": 65,
+            "infant": 0
+          }
+        },
+        "smallGroup": {
+          "adult": 80,
+          "child": 60,
+          "infant": 0
+        }
+      },
+      "pickupPolicy": "Complimentary pickup from all hotels in central Addis Ababa (Bole, Piassa, Meskel Square areas). Pickup time confirmed 24 hours before tour.",
+      "meetingPoint": "Hotel lobby or agreed pickup location in central Addis Ababa",
+      "whatToBring": [
+        "Sturdy hiking boots with good ankle support",
+        "Long pants and long-sleeved shirt (protection from vegetation)",
+        "Rain jacket (forest can be damp)",
+        "Sun protection (hat, sunglasses, sunscreen)",
+        "Camera",
+        "Binoculars (for bird watching)",
+        "Backpack for personal items",
+        "Bottled water (provided, but extra recommended)"
+      ],
+      "fitnessLevel": "Moderate to Challenging. Suitable for active travelers with good fitness. Involves hiking (5–7 km total) on steep, uneven forest trails. Not wheelchair accessible. Not recommended for those with knee or mobility issues.",
+      "cancellationPolicy": "Free cancellation up to 24 hours before the tour start time. Cancellations within 24 hours or no-shows are non-refundable. Weather-related cancellations qualify for full refund or free rescheduling.",
+      "faqs": [
+        {
+          "question": "How difficult is the hike?",
+          "answer": "The hike is moderate to challenging, with steep sections and uneven forest trails. Total distance is 5–7 km over 3–4 hours. Suitable for active travelers with good fitness. Not recommended for those with knee or mobility issues."
+        },
+        {
+          "question": "What wildlife might we see?",
+          "answer": "Common sightings include Colobus monkeys, bushbucks, duikers, and various bird species. Endemic birds include Ethiopian White-eye, Yellow-fronted Parrot, and Black-headed Woodland Oriole. Wildlife is wild and sightings cannot be guaranteed."
+        }
+      ],
+      "images": [
+        "/images/tours/menagesha-forest-hero.jpg",
+        "/images/tours/menagesha-forest-trail.jpg",
+        "/images/tours/menagesha-forest-waterfall.jpg",
+        "/images/tours/menagesha-forest-wildlife.jpg"
+      ],
+      "relatedTours": [
+        "debre-libanos-portuguese-bridge",
+        "bishoftu-crater-lakes",
+        "tiya-adadi-mariam-melka-kunture"
+      ],
+      "seo": {
+        "pageTitle": "Menagesha Forest Day Trip — Highland Rainforest & Waterfalls | From $80",
+        "metaDescription": "8–9 hour nature excursion through pristine highland rainforest, endemic birds and wildlife, cascading waterfalls, picnic lunch. From $80. Book direct and save 15%.",
+        "h1": "Menagesha Forest Day Trip — Highland Rainforest, Waterfalls & Endemic Wildlife",
+        "h2s": [
+          "What is the Menagesha Forest Day Trip?",
+          "Tour Highlights",
+          "Detailed Itinerary",
+          "What's Included & Excluded",
+          "Pricing",
+          "What Travelers Say",
+          "Frequently Asked Questions",
+          "Licensed & Trusted",
+          "You May Also Like",
+          "Ready to Book Your Menagesha Forest Day Trip?"
+        ]
+      },
+      "lastVerified": "2026-08-28"
+    },
+    {
+      "id": "bishoftu-crater-lakes",
+      "slug": "bishoftu-crater-lakes",
+      "name": "Bishoftu Crater Lakes Day Trip",
+      "subtitle": "Five Stunning Crater Lakes in the Rift Valley",
+      "shortDescription": "8-hour leisure day trip to five stunning crater lakes in the Ethiopian Rift Valley. Swimming, kayaking, boat rides, and resort facilities. Perfect for families and relaxation.",
+      "fullDescription": "The Bishoftu Crater Lakes Day Trip is an 8-hour leisure excursion to five stunning crater lakes in the Ethiopian Rift Valley (also known as Debre Zeit). Swim in the clear volcanic waters, enjoy kayaking or boat rides, relax at resort facilities, and experience the serene beauty of these natural wonders. Perfect for families, couples, and travelers seeking a relaxing day trip. Includes expert guide, private transport, and lunch at a lakeside resort.",
+      "tourType": "day-trip",
+      "duration": "8 hours",
+      "durationMinutes": 480,
+      "groupSize": "Small group (max 6)",
+      "maxGroupSize": 6,
+      "rating": 4.8,
+      "reviewCount": 64,
+      "availability": "Daily at 08:00",
+      "difficulty": "Easy",
+      "minAge": 6,
+      "itinerary": [
+        {
+          "time": "08:00",
+          "activity": "Hotel pickup in central Addis Ababa",
+          "duration": "30 minutes"
+        },
+        {
+          "time": "08:00–09:00",
+          "activity": "Scenic drive to Bishoftu (45 km, 1 hour)",
+          "duration": "1 hour"
+        },
+        {
+          "time": "09:00–12:00",
+          "activity": "Lake Gari or Lake Hora (swimming, kayaking, boat rides, relaxation)",
+          "duration": "3 hours"
+        },
+        {
+          "time": "12:00–13:00",
+          "activity": "Lunch at lakeside resort",
+          "duration": "1 hour"
+        },
+        {
+          "time": "13:00–15:00",
+          "activity": "Visit additional lakes (Lake Shala, Lake Abijatta viewpoint)",
+          "duration": "2 hours"
+        },
+        {
+          "time": "15:00–16:00",
+          "activity": "Return drive to Addis Ababa",
+          "duration": "1 hour"
+        },
+        {
+          "time": "16:00–16:30",
+          "activity": "Drop-off at your hotel or preferred location",
+          "duration": "—"
+        }
+      ],
+      "highlights": [
+        "Five stunning crater lakes in the Ethiopian Rift Valley",
+        "Swimming in clear volcanic waters (safe, monitored areas)",
+        "Kayaking and boat rides (equipment available for rent)",
+        "Relaxation at lakeside resort facilities",
+        "Scenic highland drive through traditional villages",
+        "Lunch at lakeside resort with fresh fish and traditional cuisine",
+        "Perfect for families and travelers seeking relaxation"
+      ],
+      "included": [
+        "Professional English-speaking guide",
+        "Private vehicle with driver",
+        "Hotel pickup and drop-off (central Addis Ababa)",
+        "All entrance fees",
+        "Lunch at lakeside resort",
+        "Bottled water"
+      ],
+      "excluded": [
+        "Gratuities (optional)",
+        "Personal expenses",
+        "Additional meals and beverages",
+        "Water sports equipment rental (kayaks, boats, life jackets)"
+      ],
+      "pricing": {
+        "currency": "USD",
+        "private": {
+          "1-2": {
+            "adult": 100,
+            "child": 70,
+            "infant": 0
+          },
+          "3-4": {
+            "adult": 85,
+            "child": 60,
+            "infant": 0
+          },
+          "5-6": {
+            "adult": 78,
+            "child": 55,
+            "infant": 0
+          }
+        },
+        "smallGroup": {
+          "adult": 75,
+          "child": 55,
+          "infant": 0
+        }
+      },
+      "pickupPolicy": "Complimentary pickup from all hotels in central Addis Ababa (Bole, Piassa, Meskel Square areas). Pickup time confirmed 24 hours before tour.",
+      "meetingPoint": "Hotel lobby or agreed pickup location in central Addis Ababa",
+      "whatToBring": [
+        "Swimsuit and towel",
+        "Sunscreen (high SPF, water-resistant)",
+        "Sunglasses and hat",
+        "Comfortable clothing and sandals",
+        "Change of clothes",
+        "Camera",
+        "Cash for water sports equipment rental (optional)"
+      ],
+      "fitnessLevel": "Easy. Suitable for all fitness levels and ages. Minimal walking required. Wheelchair accessible (resort facilities have ramps).",
+      "cancellationPolicy": "Free cancellation up to 24 hours before the tour start time. Cancellations within 24 hours or no-shows are non-refundable. Weather-related cancellations qualify for full refund or free rescheduling.",
+      "faqs": [
+        {
+          "question": "Is swimming safe in the crater lakes?",
+          "answer": "Yes, swimming is safe in designated areas at Lake Gari and Lake Hora. The water is clear and monitored. Life jackets are available for rent. Always follow your guide's safety instructions."
+        },
+        {
+          "question": "What water sports are available?",
+          "answer": "Kayaking and boat rides are available at Lake Gari and Lake Hora. Equipment can be rented at the resort (approximately $5–10 per person, not included in tour price)."
+        },
+        {
+          "question": "Is this tour suitable for young children?",
+          "answer": "Yes, this tour is perfect for families with children. The lakes are safe for swimming, and the resort has facilities for families. Minimum age is 6 years."
+        }
+      ],
+      "images": [
+        "/images/tours/bishoftu-crater-lakes-hero.jpg",
+        "/images/tours/bishoftu-crater-lakes-gari.jpg",
+        "/images/tours/bishoftu-crater-lakes-hora.jpg",
+        "/images/tours/bishoftu-crater-lakes-resort.jpg"
+      ],
+      "relatedTours": [
+        "menagesha-forest-day-trip",
+        "debre-libanos-portuguese-bridge",
+        "tiya-adadi-mariam-melka-kunture"
+      ],
+      "seo": {
+        "pageTitle": "Bishoftu Crater Lakes Day Trip — Five Stunning Lakes | From $75",
+        "metaDescription": "8-hour leisure day trip to five stunning crater lakes in the Ethiopian Rift Valley. Swimming, kayaking, boat rides, resort facilities. Lunch included. From $75. Book direct and save 15%.",
+        "h1": "Bishoftu Crater Lakes Day Trip — Five Stunning Crater Lakes in the Rift Valley",
+        "h2s": [
+          "What is the Bishoftu Crater Lakes Day Trip?",
+          "Tour Highlights",
+          "Detailed Itinerary",
+          "What's Included & Excluded",
+          "Pricing",
+          "What Travelers Say",
+          "Frequently Asked Questions",
+          "Licensed & Trusted",
+          "You May Also Like",
+          "Ready to Book Your Bishoftu Crater Lakes Day Trip?"
+        ]
+      },
+      "lastVerified": "2026-08-28"
+    },
+    {
+      "id": "airport-layover-tour",
+      "slug": "airport-layover-tour",
+      "name": "Airport Layover Tour",
+      "subtitle": "4–6 Hour Custom City Tour for Transit Passengers",
+      "shortDescription": "Make the most of your layover with a custom 4–6 hour tour of Addis Ababa's highlights. Flexible timing, airport pickup/drop-off included.",
+      "fullDescription": "Designed for transit passengers with 4+ hour layovers at Addis Ababa Bole International Airport. We'll pick you up at the airport, show you the city's top highlights based on your available time, and return you in time for your connecting flight. Includes National Museum (Lucy), Holy Trinity Cathedral, and Merkato or Entoto Park depending on time.",
+      "tourType": "city-tour",
+      "duration": "4–6 hours",
+      "durationMinutes": 300,
+      "groupSize": "Private (1–4 people)",
+      "maxGroupSize": 4,
+      "rating": 4.9,
+      "reviewCount": 42,
+      "availability": "Daily, flexible timing based on flight schedule",
+      "difficulty": "Easy",
+      "minAge": 6,
+      "itinerary": [
+        { "time": "Flexible", "activity": "Airport pickup at Bole International Airport", "duration": "—" },
+        { "time": "Custom", "activity": "National Museum (Lucy fossil) — 1.5 hours", "duration": "1.5 hours" },
+        { "time": "Custom", "activity": "Holy Trinity Cathedral — 1 hour", "duration": "1 hour" },
+        { "time": "Custom", "activity": "Entoto Park panoramic views OR Merkato market — 1.5 hours", "duration": "1.5 hours" },
+        { "time": "Custom", "activity": "Airport drop-off for connecting flight", "duration": "—" }
+      ],
+      "highlights": [
+        "Airport pickup and drop-off included",
+        "Customizable based on layover duration (4–8 hours)",
+        "National Museum with Lucy fossil",
+        "Holy Trinity Cathedral or Entoto Park views",
+        "Guaranteed return to airport 2 hours before flight"
+      ],
+      "included": [
+        "Professional English-speaking guide",
+        "Private vehicle with driver",
+        "Airport pickup and drop-off",
+        "All entrance fees",
+        "Bottled water"
+      ],
+      "excluded": [
+        "Meals",
+        "Gratuities",
+        "Personal expenses"
+      ],
+      "pricing": {
+        "currency": "USD",
+        "private": {
+          "1-2": { "adult": 85, "child": 60, "infant": 0 },
+          "3-4": { "adult": 75, "child": 55, "infant": 0 }
+        },
+        "smallGroup": { "adult": 65, "child": 50, "infant": 0 }
+      },
+      "pickupPolicy": "Airport pickup at Bole International Airport arrivals hall. Flight tracking included.",
+      "meetingPoint": "Bole International Airport Arrivals Hall",
+      "whatToBring": [
+        "Passport and flight itinerary",
+        "Comfortable walking shoes",
+        "Light jacket",
+        "Camera"
+      ],
+      "fitnessLevel": "Easy. Minimal walking. Suitable for all ages.",
+      "cancellationPolicy": "Free cancellation up to 24 hours before tour. Weather/flight delays: full refund or reschedule.",
+      "faqs": [
+        { "question": "What if my flight is delayed?", "answer": "We track your flight and adjust pickup time. If delay exceeds 3 hours, we'll reschedule or refund." },
+        { "question": "Can I store luggage during the tour?", "answer": "Yes, our vehicle has secure storage for carry-on luggage." }
+      ],
+      "images": [
+        "/images/tours/airport-layover-hero.jpg",
+        "/images/tours/airport-layover-national-museum.jpg",
+        "/images/tours/airport-layover-entoto.jpg"
+      ],
+      "relatedTours": ["half-day-addis-ababa", "addis-ababa-highlights", "full-day-addis-ababa"],
+      "seo": {
+        "pageTitle": "Airport Layover Tour Addis Ababa — 4-6 Hour Custom Tour | From $65",
+        "metaDescription": "Make the most of your Addis Ababa layover. 4-6 hour custom city tour with airport pickup/drop-off, National Museum, Holy Trinity Cathedral. From $65.",
+        "h1": "Airport Layover Tour — Make the Most of Your Addis Ababa Stopover",
+        "h2s": ["What is the Airport Layover Tour?", "Tour Highlights", "Detailed Itinerary", "What's Included", "Pricing", "FAQs", "Ready to Book?"]
+      },
+      "lastVerified": "2026-08-29"
+    },
+    {
+      "id": "private-group-tours",
+      "slug": "private-group-tours",
+      "name": "Private Group Tours",
+      "subtitle": "Custom Itineraries for Families, Friends & Corporate Groups",
+      "shortDescription": "Fully customizable private tours for groups of 5+. Choose your dates, attractions, and pace. Dedicated guide, private vehicle, flexible itinerary.",
+      "fullDescription": "Perfect for families, friend groups, corporate retreats, and special occasions. We design the itinerary around your interests — history, culture, photography, food, nature, or a mix. Includes dedicated guide, private vehicle, flexible timing, and group pricing.",
+      "tourType": "private",
+      "duration": "Flexible (1–3 days)",
+      "durationMinutes": 480,
+      "groupSize": "Private (5+ people)",
+      "maxGroupSize": 16,
+      "rating": 5.0,
+      "reviewCount": 18,
+      "availability": "On request, year-round",
+      "difficulty": "Customizable",
+      "minAge": 6,
+      "itinerary": [
+        { "time": "Custom", "activity": "Day 1: Custom Addis Ababa city highlights", "duration": "Full day" },
+        { "time": "Custom", "activity": "Day 2: Optional day trip (Debre Libanos, Tiya, Menagesha, Bishoftu)", "duration": "Full day" },
+        { "time": "Custom", "activity": "Day 3: Optional cultural/culinary experiences", "duration": "Full day" }
+      ],
+      "highlights": [
+        "Fully customizable multi-day itineraries",
+        "Group pricing (5+ people): significant per-person savings",
+        "Dedicated guide and private vehicle for entire stay",
+        "Mix of city tours, day trips, and cultural experiences",
+        "Flexible dates and pacing"
+      ],
+      "included": [
+        "Professional English-speaking guide",
+        "Private vehicle with driver (van/minibus for groups)",
+        "Hotel pickup and drop-off",
+        "All entrance fees",
+        "Bottled water daily"
+      ],
+      "excluded": [
+        "Meals (can be arranged)",
+        "Accommodation (can be arranged)",
+        "Gratuities",
+        "Personal expenses"
+      ],
+      "pricing": {
+        "currency": "USD",
+        "private": {
+          "1-2": { "adult": 0, "child": 0, "infant": 0 },
+          "3-4": { "adult": 0, "child": 0, "infant": 0 },
+          "5-6": { "adult": 180, "child": 120, "infant": 0 },
+          "7-8": { "adult": 160, "child": 110, "infant": 0 },
+          "9-12": { "adult": 145, "child": 100, "infant": 0 },
+          "13-16": { "adult": 135, "child": 95, "infant": 0 }
+        },
+        "smallGroup": { "adult": 0, "child": 0, "infant": 0 }
+      },
+      "pickupPolicy": "Complimentary pickup from all hotels in central Addis Ababa. Airport transfers available for additional fee.",
+      "meetingPoint": "Hotel lobby or agreed location",
+      "whatToBring": [
+        "Comfortable walking shoes",
+        "Sun protection",
+        "Camera",
+        "Light layers"
+      ],
+      "fitnessLevel": "Customizable. From easy city tours to moderate hikes.",
+      "cancellationPolicy": "Free cancellation up to 7 days before. 50% refund 3–6 days. Non-refundable within 48 hours.",
+      "faqs": [
+        { "question": "Can you arrange accommodation?", "answer": "Yes, we partner with hotels across all categories and can include accommodation in your package." },
+        { "question": "Can we combine with a safari?", "answer": "Yes, we can extend to multi-day Ethiopia tours including Lalibela, Axum, Omo Valley, or Simien Mountains." },
+        { "question": "What vehicle do you use for groups?", "answer": "5-6 people: Toyota Land Cruiser. 7-12: Toyota HiAce minibus. 13-16: 16-seater minibus." }
+      ],
+      "images": [
+        "/images/tours/private-group-hero.jpg",
+        "/images/tours/private-group-family.jpg",
+        "/images/tours/private-group-vehicle.jpg"
+      ],
+      "relatedTours": ["custom-addis-ababa", "airport-layover-tour", "full-day-addis-ababa"],
+      "seo": {
+        "pageTitle": "Private Group Tours Addis Ababa — Custom Multi-Day Tours for 5+ People",
+        "metaDescription": "Custom multi-day tours for groups of 5+. Dedicated guide, private vehicle, flexible itinerary. Group pricing from $135/person. Families, corporates, friends.",
+        "h1": "Private Group Tours — Custom Multi-Day Adventures for 5+ People",
+        "h2s": ["What are Private Group Tours?", "Tour Highlights", "Sample Itinerary", "Pricing by Group Size", "What's Included", "FAQs", "Ready to Plan?"]
+      },
+      "lastVerified": "2026-08-29"
+    }
+  ],
+  "metadata": {
+    "totalTours": 9,
+    "tourTypes": [
+      "city-tour",
+      "day-trip",
+      "private"
+    ],
+    "currency": "USD",
+    "lastUpdated": "2026-08-29",
+    "version": "1.0"
+  }
+}

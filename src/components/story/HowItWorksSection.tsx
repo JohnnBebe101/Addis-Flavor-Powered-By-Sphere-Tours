@@ -36,9 +36,7 @@ export default function HowItWorksSection({ content }: HowItWorksSectionProps) {
             1
           </div>
           <h4 className="text-lg font-serif font-bold uppercase">{content.step1Title}</h4>
-          <p className="text-sm opacity-75 leading-relaxed font-sans">
-            {content.step1Desc}
-          </p>
+          <p className="text-sm opacity-75 leading-relaxed font-sans">{content.step1Desc}</p>
         </div>
 
         <div className="space-y-4 text-center sm:text-left">
@@ -46,9 +44,7 @@ export default function HowItWorksSection({ content }: HowItWorksSectionProps) {
             2
           </div>
           <h4 className="text-lg font-serif font-bold uppercase">{content.step2Title}</h4>
-          <p className="text-sm opacity-75 leading-relaxed font-sans">
-            {content.step2Desc}
-          </p>
+          <p className="text-sm opacity-75 leading-relaxed font-sans">{content.step2Desc}</p>
         </div>
 
         <div className="space-y-4 text-center sm:text-left">
@@ -56,9 +52,7 @@ export default function HowItWorksSection({ content }: HowItWorksSectionProps) {
             3
           </div>
           <h4 className="text-lg font-serif font-bold uppercase">{content.step3Title}</h4>
-          <p className="text-sm opacity-75 leading-relaxed font-sans">
-            {content.step3Desc}
-          </p>
+          <p className="text-sm opacity-75 leading-relaxed font-sans">{content.step3Desc}</p>
         </div>
       </div>
     </section>

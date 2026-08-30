@@ -18,7 +18,13 @@ interface AccordionProps {
   className?: string;
 }
 
-export function Accordion({ items, openIndex, onToggle, isGlobalDark = false, className = '' }: AccordionProps) {
+export function Accordion({
+  items,
+  openIndex,
+  onToggle,
+  isGlobalDark = false,
+  className = '',
+}: AccordionProps) {
   return (
     <div className={`space-y-4 ${className}`}>
       {items.map((item, idx) => (
@@ -40,7 +46,9 @@ export function Accordion({ items, openIndex, onToggle, isGlobalDark = false, cl
             )}
           </button>
           {openIndex === idx && (
-            <p className="text-sm leading-relaxed opacity-85 mt-2 pl-2 border-l-2 border-gold py-1">{item.a}</p>
+            <p className="text-sm leading-relaxed opacity-85 mt-2 pl-2 border-l-2 border-gold py-1">
+              {item.a}
+            </p>
           )}
         </div>
       ))}

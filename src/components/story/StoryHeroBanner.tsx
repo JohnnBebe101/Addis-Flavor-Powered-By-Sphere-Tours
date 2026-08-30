@@ -8,7 +8,11 @@ interface StoryHeroBannerProps {
   onBackToHome: () => void;
 }
 
-export default function StoryHeroBanner({ heroBgImg, content, onBackToHome }: StoryHeroBannerProps) {
+export default function StoryHeroBanner({
+  heroBgImg,
+  content,
+  onBackToHome,
+}: StoryHeroBannerProps) {
   const { heroTitle, backBtn, companyInfo } = content;
 
   return (

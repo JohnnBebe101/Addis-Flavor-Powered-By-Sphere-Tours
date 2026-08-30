@@ -3,114 +3,100 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Users } from 'lucide-react';
+import { User, Calendar, Users, MapPin } from 'lucide-react';
 
 interface BookingStep2Props {
-  guestCount: number;
-  setGuestCount: (count: number) => void;
-  dietary: {
-    vegan: boolean;
-    glutenFree: boolean;
-    halal: boolean;
+  formData: {
+    fullName: string;
+    email: string;
+    phone: string;
+    pickupLocation: string;
+    specialRequirements: string;
   };
-  setDietary: (dietary: { vegan: boolean; glutenFree: boolean; halal: boolean }) => void;
+  onChange: (field: string, value: any) => void;
   translations: {
-    dietaryFilterLabel: string;
-    dietaryVegan: string;
-    dietaryGlutenFree: string;
-    dietaryHalal: string;
+    bookNowButton: string;
   };
 }
 
 export function BookingStep2({
-  guestCount,
-  setGuestCount,
-  dietary,
-  setDietary,
+  formData,
+  onChange,
   translations,
 }: BookingStep2Props) {
   return (
     <div className="space-y-4">
       <div className="space-y-1.5">
         <label className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
-          <Users className="w-3.5 h-3.5 text-gold" />
-          <span>Number of Guests</span>
+          <User className="w-3.5 h-3.5 text-gold" />
+          <span>Full Name</span>
         </label>
-        <div className="flex items-center space-x-4 bg-sandstone rounded-xl p-1.5 w-fit">
-          <button
-            id="guest-decrement"
-            type="button"
-            onClick={() => setGuestCount(Math.max(1, guestCount - 1))}
-            className="w-8 h-8 rounded-lg bg-linen-white hover:bg-teal/5 flex items-center justify-center font-bold text-sm text-teal active:scale-95 border border-teal/10"
-          >
-            -
-          </button>
-          <span className="font-mono text-sm font-bold px-2">{guestCount}</span>
-          <button
-            id="guest-increment"
-            type="button"
-            onClick={() => setGuestCount(Math.min(10, guestCount + 1))}
-            className="w-8 h-8 rounded-lg bg-linen-white hover:bg-teal/5 flex items-center justify-center font-bold text-sm text-teal active:scale-95 border border-teal/10"
-          >
-            +
-          </button>
-        </div>
+        <input
+          type="text"
+          value={formData.fullName}
+          onChange={(e) => onChange('fullName', e.target.value)}
+          placeholder="John Doe"
+          className="w-full bg-sandstone border border-teal/10 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-coffee-red"
+          required
+        />
       </div>
 
-      <div className="space-y-2.5">
-        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider">
-          {translations.dietaryFilterLabel}
+      <div className="space-y-1.5">
+        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+          <Calendar className="w-3.5 h-3.5 text-gold" />
+          <span>Email Address</span>
         </label>
+        <input
+          type="email"
+          value={formData.email}
+          onChange={(e) => onChange('email', e.target.value)}
+          placeholder="john@example.com"
+          className="w-full bg-sandstone border border-teal/10 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-coffee-red"
+          required
+        />
+      </div>
 
-        <div className="space-y-2">
-          <label className="flex items-center space-x-3 bg-sandstone/40 p-3 rounded-xl border border-teal/5 hover:bg-sandstone/80 cursor-pointer transition-colors">
-            <input
-              id="diet-vegan"
-              type="checkbox"
-              checked={dietary.vegan}
-              onChange={(e) => setDietary({ ...dietary, vegan: e.target.checked })}
-              className="rounded border-teal/30 text-coffee-red focus:ring-coffee-red"
-            />
-            <div>
-              <p className="text-xs font-bold text-teal">{translations.dietaryVegan}</p>
-              <p className="text-[10px] text-teal/60">
-                Traditional 100% plant-based Ethiopian Lentils/Veggie platter (Fasting bayenetu).
-              </p>
-            </div>
-          </label>
+      <div className="space-y-1.5">
+        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+          <Users className="w-3.5 h-3.5 text-gold" />
+          <span>WhatsApp or Phone</span>
+        </label>
+        <input
+          type="tel"
+          value={formData.phone}
+          onChange={(e) => onChange('phone', e.target.value)}
+          placeholder="+251-911-XXX-XXX"
+          className="w-full bg-sandstone border border-teal/10 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-coffee-red"
+          required
+        />
+      </div>
 
-          <label className="flex items-center space-x-3 bg-sandstone/40 p-3 rounded-xl border border-teal/5 hover:bg-sandstone/80 cursor-pointer transition-colors">
-            <input
-              id="diet-gf"
-              type="checkbox"
-              checked={dietary.glutenFree}
-              onChange={(e) => setDietary({ ...dietary, glutenFree: e.target.checked })}
-              className="rounded border-teal/30 text-coffee-red focus:ring-coffee-red"
-            />
-            <div>
-              <p className="text-xs font-bold text-teal">{translations.dietaryGlutenFree}</p>
-              <p className="text-[10px] text-teal/60">
-                Host ensures 100% pure premium Teff Injera (no barley or wheat flour blend).
-              </p>
-            </div>
-          </label>
+      <div className="space-y-1.5">
+        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+          <MapPin className="w-3.5 h-3.5 text-gold" />
+          <span>Pickup Location</span>
+        </label>
+        <input
+          type="text"
+          value={formData.pickupLocation}
+          onChange={(e) => onChange('pickupLocation', e.target.value)}
+          placeholder="Hotel name or address"
+          className="w-full bg-sandstone border border-teal/10 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-coffee-red"
+          required
+        />
+      </div>
 
-          <label className="flex items-center space-x-3 bg-sandstone/40 p-3 rounded-xl border border-teal/5 hover:bg-sandstone/80 cursor-pointer transition-colors">
-            <input
-              id="diet-halal"
-              type="checkbox"
-              checked={dietary.halal}
-              onChange={(e) => setDietary({ ...dietary, halal: e.target.checked })}
-              className="rounded border-teal/30 text-coffee-red focus:ring-coffee-red"
-            />
-            <div>
-              <p className="text-xs font-bold text-teal">{translations.dietaryHalal}</p>
-              <p className="text-[10px] text-teal/60">
-                All meat dishes prepared according to traditional Halal standards.
-              </p>
-            </div>
-          </label>
-        </div>
+      <div className="space-y-1.5">
+        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider">
+          Special Requirements
+        </label>
+        <textarea
+          value={formData.specialRequirements}
+          onChange={(e) => onChange('specialRequirements', e.target.value)}
+          placeholder="Dietary needs, mobility issues, special occasions, etc."
+          rows={3}
+          className="w-full bg-sandstone border border-teal/10 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-coffee-red"
+        />
       </div>
     </div>
   );

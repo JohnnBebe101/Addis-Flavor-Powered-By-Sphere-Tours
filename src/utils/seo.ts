@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 
-export function getStructuredData(activeView: 'home' | 'become-host' | 'our-story', siteOrigin: string) {
+export function getStructuredData(
+  activeView: 'home' | 'become-host' | 'our-story',
+  siteOrigin: string,
+) {
   return {
     '@context': 'https://schema.org',
     '@graph': [

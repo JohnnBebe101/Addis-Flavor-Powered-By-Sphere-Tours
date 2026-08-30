@@ -1,0 +1,185 @@
+{
+  "greetings": [
+    {
+      "term": "Selam",
+      "pronunciation": "seh-LAHM",
+      "meaning": "Hello / Peace",
+      "usage": "General greeting, used throughout the day",
+      "example": "Selam! Welcome to Addis Ababa."
+    },
+    {
+      "term": "Tena yistilin",
+      "pronunciation": "teh-NAH yis-TIH-leen",
+      "meaning": "Good morning",
+      "usage": "Morning greeting (before noon)",
+      "example": "Tena yistilin! How was your night?"
+    },
+    {
+      "term": "Dehna neh?",
+      "pronunciation": "DEH-nah NEH?",
+      "meaning": "How are you?",
+      "usage": "Casual inquiry about well-being",
+      "example": "Dehna neh? Are you enjoying your tour?"
+    },
+    {
+      "term": "Amesegenalehu",
+      "pronunciation": "ah-meh-seh-geh-NAH-leh-hoo",
+      "meaning": "Thank you",
+      "usage": "Expressing gratitude",
+      "example": "Amesegenalehu! The tour was fantastic."
+    }
+  ],
+  "food": [
+    {
+      "term": "Buna",
+      "pronunciation": "BOO-nah",
+      "meaning": "Coffee",
+      "usage": "Traditional coffee ceremony",
+      "example": "Join us for a traditional *buna* (coffee) ceremony."
+    },
+    {
+      "term": "Jebena",
+      "pronunciation": "jeh-BEH-nah",
+      "meaning": "Clay coffee pot",
+      "usage": "Coffee brewing vessel",
+      "example": "Coffee is brewed in a *jebena* (traditional clay pot)."
+    },
+    {
+      "term": "Mesob",
+      "pronunciation": "meh-SOHB",
+      "meaning": "Woven basket table",
+      "usage": "Traditional dining table",
+      "example": "Meals are served on a *mesob* (traditional woven basket table)."
+    },
+    {
+      "term": "Injera",
+      "pronunciation": "ihn-JEH-rah",
+      "meaning": "Fermented flatbread",
+      "usage": "Staple of Ethiopian cuisine",
+      "example": "*Injera* (fermented flatbread) is the staple of Ethiopian cuisine."
+    },
+    {
+      "term": "Doro wat",
+      "pronunciation": "DOH-roh WAHT",
+      "meaning": "Spicy chicken stew",
+      "usage": "National dish of Ethiopia",
+      "example": "Try *doro wat* (spicy chicken stew), the national dish of Ethiopia."
+    },
+    {
+      "term": "Wat",
+      "pronunciation": "WAHT",
+      "meaning": "Stew",
+      "usage": "General term for Ethiopian stews",
+      "example": "Ethiopian *wats* (stews) are served on a bed of *injera*."
+    },
+    {
+      "term": "Kolo",
+      "pronunciation": "KOH-loh",
+      "meaning": "Roasted barley snacks",
+      "usage": "Snack served during coffee ceremony",
+      "example": "*Kolo* (roasted barley) is served during the coffee ceremony."
+    }
+  ],
+  "festivals": [
+    {
+      "term": "Timket",
+      "pronunciation": "TIHM-ket",
+      "meaning": "Epiphany Festival",
+      "usage": "Major Orthodox Christian festival (January 19)",
+      "example": "*Timket* (Epiphany Festival) is celebrated on January 19 with processions and baptisms."
+    },
+    {
+      "term": "Meskel",
+      "pronunciation": "MEHS-kel",
+      "meaning": "Finding of the True Cross",
+      "usage": "Major Orthodox Christian festival (September 27)",
+      "example": "*Meskel* Festival (Finding of the True Cross) is celebrated on September 27 with bonfires and processions."
+    }
+  ],
+  "places": [
+    {
+      "term": "Addis Ababa",
+      "pronunciation": "ah-DEES ah-BAH-bah",
+      "meaning": "New Flower",
+      "usage": "Capital city of Ethiopia",
+      "example": "*Addis Ababa* (New Flower) is Ethiopia's vibrant capital."
+    },
+    {
+      "term": "Debre Libanos",
+      "pronunciation": "DEH-breh lih-BAH-nohs",
+      "meaning": "Mount of Lebanon",
+      "usage": "13th-century monastery",
+      "example": "*Debre Libanos* (Mount of Lebanon) is a 13th-century monastery founded by Saint Tekle Haymanot."
+    },
+    {
+      "term": "Entoto",
+      "pronunciation": "ehn-TOH-toh",
+      "meaning": "Mount Entoto",
+      "usage": "Mountain north of Addis Ababa",
+      "example": "*Entoto* Park offers panoramic views from Addis Ababa's highest point (3,200 meters)."
+    },
+    {
+      "term": "Merkato",
+      "pronunciation": "mehr-KAH-toh",
+      "meaning": "Market",
+      "usage": "Addis Ababa's central market",
+      "example": "Addis *Merkato* is Africa's largest open-air market."
+    }
+  ],
+  "culturalTerms": [
+    {
+      "term": "Abol",
+      "pronunciation": "ah-BOHL",
+      "meaning": "First round of coffee ceremony",
+      "usage": "Strongest coffee round",
+      "example": "The coffee ceremony has three rounds: *abol* (first, strongest), *tona* (second), and *bereka* (third, meaning 'blessing')."
+    },
+    {
+      "term": "Tona",
+      "pronunciation": "TOH-nah",
+      "meaning": "Second round of coffee ceremony",
+      "usage": "Medium-strength coffee round",
+      "example": "The coffee ceremony has three rounds: *abol* (first), *tona* (second), and *bereka* (third)."
+    },
+    {
+      "term": "Bereka",
+      "pronunciation": "beh-REH-kah",
+      "meaning": "Third round of coffee ceremony (blessing)",
+      "usage": "Final, blessing round",
+      "example": "The coffee ceremony has three rounds: *abol* (first), *tona* (second), and *bereka* (third, meaning 'blessing')."
+    },
+    {
+      "term": "Tekle Haymanot",
+      "pronunciation": "TEH-kleh high-mah-NOHT",
+      "meaning": "Saint Tekle Haymanot",
+      "usage": "13th-century Ethiopian saint",
+      "example": "Saint *Tekle Haymanot* founded Debre Libanos Monastery in the 13th century."
+    },
+    {
+      "term": "Haile Selassie",
+      "pronunciation": "HIGH-leh seh-LAH-see-eh",
+      "meaning": "Emperor Haile Selassie",
+      "usage": "Former Emperor of Ethiopia (1930–1974)",
+      "example": "Emperor *Haile Selassie* is buried at Holy Trinity Cathedral in Addis Ababa."
+    },
+    {
+      "term": "Menelik II",
+      "pronunciation": "meh-NEH-lik",
+      "meaning": "Emperor Menelik II",
+      "usage": "Founder of Addis Ababa (1886)",
+      "example": "Emperor *Menelik II* founded Addis Ababa in 1886 on the site of natural hot springs."
+    }
+  ],
+  "metadata": {
+    "totalTerms": 23,
+    "categories": [
+      "Greetings",
+      "Food",
+      "Festivals",
+      "Places",
+      "Cultural Terms"
+    ],
+    "lastUpdated": "2026-08-28",
+    "version": "1.0"
+  }
+}

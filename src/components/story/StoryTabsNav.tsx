@@ -7,7 +7,12 @@ interface StoryTabsNavProps {
   onTabClick: (tab: TabType) => void;
 }
 
-export default function StoryTabsNav({ activeTab, tabs, isGlobalDark, onTabClick }: StoryTabsNavProps) {
+export default function StoryTabsNav({
+  activeTab,
+  tabs,
+  isGlobalDark,
+  onTabClick,
+}: StoryTabsNavProps) {
   return (
     <nav
       className={`sticky top-20 z-30 border-b shadow-sm transition-all duration-300 ${
@@ -28,8 +33,8 @@ export default function StoryTabsNav({ activeTab, tabs, isGlobalDark, onTabClick
                   isActive
                     ? 'bg-gold text-teal font-extrabold shadow'
                     : isGlobalDark
-                    ? 'text-linen-white/70 hover:text-gold hover:bg-white/5'
-                    : 'text-teal hover:text-coffee-red hover:bg-teal/5'
+                      ? 'text-linen-white/70 hover:text-gold hover:bg-white/5'
+                      : 'text-teal hover:text-coffee-red hover:bg-teal/5'
                 }`}
               >
                 {tabs[tab]}

@@ -14,7 +14,11 @@ interface CareersSectionProps {
   onBackToHome: () => void;
 }
 
-export default function CareersSection({ content, isGlobalDark, onBackToHome }: CareersSectionProps) {
+export default function CareersSection({
+  content,
+  isGlobalDark,
+  onBackToHome,
+}: CareersSectionProps) {
   const cardStyles = isGlobalDark
     ? 'bg-white/5 border-linen-white/10'
     : 'bg-sandstone/15 border-teal/5';
@@ -40,9 +44,7 @@ export default function CareersSection({ content, isGlobalDark, onBackToHome }: 
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div
-          className={`p-8 rounded-3xl border ${cardStyles} flex flex-col justify-between`}
-        >
+        <div className={`p-8 rounded-3xl border ${cardStyles} flex flex-col justify-between`}>
           <div className="space-y-4">
             <h4 className="text-lg font-serif font-bold uppercase">{content.c1Title}</h4>
             <p className="text-sm opacity-75 leading-relaxed font-sans">{content.c1Desc}</p>
@@ -57,9 +59,7 @@ export default function CareersSection({ content, isGlobalDark, onBackToHome }: 
           </div>
         </div>
 
-        <div
-          className={`p-8 rounded-3xl border ${cardStyles} flex flex-col justify-between`}
-        >
+        <div className={`p-8 rounded-3xl border ${cardStyles} flex flex-col justify-between`}>
           <div className="space-y-4">
             <h4 className="text-lg font-serif font-bold uppercase">{content.c2Title}</h4>
             <p className="text-sm opacity-75 leading-relaxed font-sans">{content.c2Desc}</p>
@@ -75,9 +75,7 @@ export default function CareersSection({ content, isGlobalDark, onBackToHome }: 
         </div>
       </div>
 
-      <div
-        className={`p-8 rounded-3xl border ${headOfficeStyles} max-w-4xl mx-auto space-y-6`}
-      >
+      <div className={`p-8 rounded-3xl border ${headOfficeStyles} max-w-4xl mx-auto space-y-6`}>
         <div className="flex items-center space-x-3 text-gold">
           <MapPin className="w-5 h-5 text-coffee-red" />
           <h4 className="text-base sm:text-lg font-serif font-bold uppercase">

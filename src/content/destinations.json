@@ -1,0 +1,446 @@
+{
+  "destinations": [
+    {
+      "id": "addis-ababa",
+      "slug": "addis-ababa",
+      "name": "Addis Ababa",
+      "subtitle": "Ethiopia's Vibrant Capital",
+      "shortDescription": "Addis Ababa—Ethiopia's vibrant capital—is at 2,400 meters altitude, home to Lucy (3.2-million-year-old fossil), Africa's largest market, and rich cultural heritage.",
+      "fullDescription": "Addis Ababa, meaning 'New Flower' in Amharic, is Ethiopia's bustling capital and the diplomatic capital of Africa (headquarters of the African Union). At 2,400 meters (7,874 feet) altitude, it's one of the highest capital cities in the world. Founded in 1886 by Emperor Menelik II on the site of natural hot springs, Addis Ababa has grown into a city of over 5 million people, blending ancient traditions with modern urban life. From the National Museum housing Lucy to the sensory explosion of Addis Mercato, from the spiritual grandeur of Holy Trinity Cathedral to the panoramic views of Entoto Park, Addis Ababa offers a unique window into Ethiopia's rich history and vibrant present.",
+      "highlights": [
+        "National Museum of Ethiopia (Lucy fossil, 3.2 million years old)",
+        "Addis Mercato (Africa's largest open-air market, 13,000+ vendors)",
+        "Holy Trinity Cathedral (Emperor Haile Selassie's tomb, stunning stained glass)",
+        "Ethnological Museum (former palace of Haile Selassie)",
+        "Entoto Park (panoramic city views from 3,200 meters)",
+        "Meskel Square (historic plaza with Menelik II statue)",
+        "Traditional *buna* (coffee) ceremonies",
+        "Vibrant nightlife and live *tezeta* (traditional music) venues"
+      ],
+      "topAttractions": [
+        {
+          "name": "National Museum of Ethiopia",
+          "description": "Home to Lucy, the 3.2-million-year-old hominid fossil that revolutionized our understanding of human evolution. Recently renovated in 2025 with improved exhibits and security.",
+          "visitDuration": "1.5–2 hours",
+          "entranceFee": "$10 (adults), $5 (children)"
+        },
+        {
+          "name": "Addis Mercato",
+          "description": "Africa's largest open-air market, with over 13,000 vendors selling spices, textiles, coffee, traditional crafts, and everything imaginable. A sensory explosion and cultural immersion.",
+          "visitDuration": "1–2 hours",
+          "entranceFee": "Free"
+        },
+        {
+          "name": "Holy Trinity Cathedral",
+          "description": "Architectural masterpiece and final resting place of Emperor Haile Selassie. Features stunning stained glass, intricate carvings, and religious murals.",
+          "visitDuration": "1 hour",
+          "entranceFee": "$5 (adults), $2 (children)"
+        },
+        {
+          "name": "Entoto Park",
+          "description": "Panoramic city views from Addis Ababa's highest point (3,200 meters). Historic Entoto Maryam Church, eucalyptus forests, and the founding location of the city in 1886.",
+          "visitDuration": "1–2 hours",
+          "entranceFee": "$8 (adults), $4 (children)"
+        },
+        {
+          "name": "Ethnological Museum",
+          "description": "Housed in the former palace of Emperor Haile Selassie, showcasing Ethiopia's diverse ethnic groups, traditional crafts, and cultural artifacts.",
+          "visitDuration": "1 hour",
+          "entranceFee": "$5 (adults), $2 (children)"
+        }
+      ],
+      "bestTimeToVisit": {
+        "season": "October to March (dry season)",
+        "temperature": "15–25 °C (59–77 °F)",
+        "rainfall": "Minimal",
+        "crowds": "Peak tourist season November–February",
+        "bestFor": "Clear skies, comfortable temperatures, major festivals (Timket in January, Meskel in September)"
+      },
+      "gettingThere": {
+        "airport": "Addis Ababa Bole International Airport (ADD) — 6 km from city center",
+        "transport": "Taxis, ride-hailing (Ride, Feres), hotel shuttles, public buses",
+        "fromAirport": "15–30 minutes by taxi (depending on traffic)"
+      },
+      "whereToStay": {
+        "neighborhoods": [
+          "Bole (upscale, near airport, international restaurants)",
+          "Piassa (historic center, budget-friendly, local atmosphere)",
+          "Meskel Square (central, business district, mid-range hotels)"
+        ],
+        "hotelTypes": "Budget ($20–40/night), Mid-range ($50–100/night), Luxury ($150–300/night)"
+      },
+      "safetyTips": [
+        "Addis Ababa is generally safe for tourists",
+        "Avoid walking alone at night in unfamiliar areas",
+        "Keep valuables secure and out of sight",
+        "Use registered taxis or ride-hailing apps",
+        "Tap water is not safe to drink (bottled water provided on tours)",
+        "Altitude sickness: take it easy on first day, stay hydrated"
+      ],
+      "culturalEtiquette": [
+        "Greet with 'Selam' (hello) or 'Tena yistilin' (good morning)",
+        "Dress modestly, especially when visiting churches (shoulders and knees covered)",
+        "Remove shoes before entering churches and some homes",
+        "Ask permission before photographing people",
+        "Use right hand for eating and greeting (left hand considered unclean)",
+        "Respect religious practices and fasting periods (Orthodox Christians fast Wednesdays and Fridays)"
+      ],
+      "relatedTours": [
+        "half-day-addis-ababa",
+        "full-day-addis-ababa",
+        "addis-ababa-highlights"
+      ],
+      "seo": {
+        "pageTitle": "Addis Ababa Travel Guide — Top Attractions, Tours & Practical Tips",
+        "metaDescription": "Complete Addis Ababa travel guide: top attractions (National Museum, Merkato, Holy Trinity), best tours, when to visit, getting around, where to stay, safety tips. Plan your perfect Ethiopian adventure.",
+        "h1": "Addis Ababa Travel Guide: Everything You Need to Know",
+        "h2s": [
+          "What is Addis Ababa known for?",
+          "Top Attractions in Addis Ababa",
+          "Best Tours in Addis Ababa",
+          "Best Time to Visit Addis Ababa",
+          "Getting Around Addis Ababa",
+          "Where to Stay in Addis Ababa",
+          "Safety & Practical Tips",
+          "Cultural Etiquette in Ethiopia",
+          "Frequently Asked Questions About Addis Ababa",
+          "More Ethiopia Travel Guides"
+        ]
+      },
+      "lastVerified": "2026-08-28"
+    },
+    {
+      "id": "debre-libanos",
+      "slug": "debre-libanos",
+      "name": "Debre Libanos",
+      "subtitle": "13th-Century Monastery & Blue Nile Gorge",
+      "shortDescription": "Debre Libanos is a 13th-century monastery founded by Saint Tekle Haymanot, perched on the dramatic Jemma River Gorge north of Addis Ababa.",
+      "fullDescription": "Debre Libanos, meaning 'Mount of Lebanon' in Amharic, is one of Ethiopia's most important religious sites. Founded in the 13th century by Saint Tekle Haymanot (one of Ethiopia's most revered saints), the monastery is perched on the edge of the dramatic Jemma River Gorge, a tributary of the Blue Nile. The saint meditated in a cave here for seven years, and his tomb remains a pilgrimage site. The monastery offers breathtaking views of the gorge (often called the 'Ethiopian Grand Canyon'), opportunities to spot wild gelada baboons, and a glimpse into Ethiopia's ancient Christian heritage.",
+      "highlights": [
+        "13th-century monastery founded by Saint Tekle Haymanot",
+        "Sacred cave where the saint meditated for seven years",
+        "Dramatic Jemma River Gorge views (600 meters deep)",
+        "Historic Portuguese Bridge viewpoint",
+        "Wild gelada baboons in natural habitat",
+        "Endemic bird species (Black-headed Woodland Oriole, Red-billed Starling)",
+        "Hidden sacred waterfall (optional short hike)"
+      ],
+      "topAttractions": [
+        {
+          "name": "Debre Libanos Monastery",
+          "description": "Active monastery with resident monks, featuring the main church, museum (when open), and the saint's tomb.",
+          "visitDuration": "1.5–2 hours",
+          "entranceFee": "$5 (adults), $2 (children)"
+        },
+        {
+          "name": "Portuguese Bridge",
+          "description": "Historic bridge built during Italian occupation, offering dramatic views of the Jemma Gorge and 600-meter waterfall.",
+          "visitDuration": "30 minutes–1 hour",
+          "entranceFee": "Free"
+        },
+        {
+          "name": "Gelada Baboon Viewing Area",
+          "description": "Natural habitat of gelada baboons ('bleeding-heart monkeys'), endemic to Ethiopian highlands.",
+          "visitDuration": "30 minutes–1 hour",
+          "entranceFee": "Free"
+        }
+      ],
+      "bestTimeToVisit": {
+        "season": "October to March (dry season)",
+        "temperature": "10–20 °C (50–68 °F)",
+        "rainfall": "Minimal",
+        "crowds": "Moderate year-round",
+        "bestFor": "Clearest gorge views, best wildlife spotting, comfortable hiking"
+      },
+      "gettingThere": {
+        "fromAddisAbaba": "90 km north, 2 hours drive",
+        "transport": "Private vehicle (recommended), organized tour",
+        "roadConditions": "Paved highway, scenic highland roads"
+      },
+      "whereToStay": {
+        "note": "No accommodation at Debre Libanos. Day trip from Addis Ababa recommended.",
+        "alternatives": "Stay in Addis Ababa and visit as day trip"
+      },
+      "safetyTips": [
+        "Monastery is active: dress modestly (shoulders and knees covered)",
+        "Remove shoes before entering church",
+        "Speak respectfully and ask permission before photographing monks",
+        "Gorge edges are unfenced: stay on marked paths",
+        "Gelada baboons are wild: maintain safe distance, do not feed"
+      ],
+      "culturalEtiquette": [
+        "Greet monks with 'Selam' (hello)",
+        "Women should cover hair when entering church (scarf provided if needed)",
+        "Do not point feet at religious objects or people",
+        "Photography may be restricted inside church: ask permission"
+      ],
+      "relatedTours": [
+        "debre-libanos-portuguese-bridge"
+      ],
+      "seo": {
+        "pageTitle": "Debre Libanos Monastery Guide — 13th-Century Spiritual Site & Gorge Views",
+        "metaDescription": "Complete Debre Libanos travel guide: 13th-century monastery, Saint Tekle Haymanot's cave, Blue Nile Gorge views, gelada baboons. Day trip from Addis Ababa. Plan your visit.",
+        "h1": "Debre Libanos Monastery: Complete Visitor Guide",
+        "h2s": [
+          "What is Debre Libanos?",
+          "History & Spiritual Significance",
+          "Top Attractions at Debre Libanos",
+          "Best Time to Visit",
+          "Getting to Debre Libanos",
+          "Safety & Practical Tips",
+          "Cultural Etiquette",
+          "Frequently Asked Questions"
+        ]
+      },
+      "lastVerified": "2026-08-28"
+    },
+    {
+      "id": "tiya",
+      "slug": "tiya",
+      "name": "Tiya",
+      "subtitle": "UNESCO World Heritage Site — Ancient Stelae Field",
+      "shortDescription": "Tiya is a UNESCO World Heritage Site featuring 32 carved stone stelae dating to the 11th–13th centuries, one of Ethiopia's most important archaeological sites.",
+      "fullDescription": "Tiya is one of Ethiopia's most enigmatic and important archaeological sites. Designated a UNESCO World Heritage Site in 1980, Tiya features 32 carved stone stelae (monolithic pillars) dating to the 11th–13th centuries. The stelae range from 1 to 5 meters in height and feature mysterious symbols and decorations, including swords, human figures, and enigmatic geometric patterns. The site is believed to be a burial complex, though its exact purpose and the civilization that created it remain subjects of archaeological debate. Tiya offers a fascinating glimpse into Ethiopia's ancient past and is a must-visit for history enthusiasts.",
+      "highlights": [
+        "32 carved stone stelae (11th–13th centuries)",
+        "UNESCO World Heritage Site (designated 1980)",
+        "Enigmatic symbols: swords, human figures, geometric patterns",
+        "Ancient burial complex (exact purpose still debated)",
+        "Open-air museum with informative signage",
+        "Expert archaeological commentary available"
+      ],
+      "topAttractions": [
+        {
+          "name": "Tiya Stelae Field",
+          "description": "Main archaeological site with 32 carved stone stelae, including the tallest at 5 meters.",
+          "visitDuration": "1–1.5 hours",
+          "entranceFee": "$10 (adults), $5 (children)"
+        },
+        {
+          "name": "Site Museum",
+          "description": "Small museum with artifacts, photographs, and explanatory panels about the stelae and archaeological research.",
+          "visitDuration": "30 minutes",
+          "entranceFee": "Included in site entrance"
+        }
+      ],
+      "bestTimeToVisit": {
+        "season": "October to March (dry season)",
+        "temperature": "15–25 °C (59–77 °F)",
+        "rainfall": "Minimal",
+        "crowds": "Low year-round",
+        "bestFor": "Clear skies, comfortable walking conditions, photography"
+      },
+      "gettingThere": {
+        "fromAddisAbaba": "85 km south, 1.5–2 hours drive",
+        "transport": "Private vehicle (recommended), organized tour",
+        "roadConditions": "Paved highway, good condition"
+      },
+      "whereToStay": {
+        "note": "No accommodation at Tiya. Day trip from Addis Ababa recommended.",
+        "alternatives": "Stay in Addis Ababa or Butajira (nearby town, basic guesthouses)"
+      },
+      "safetyTips": [
+        "Site is unfenced: watch for uneven ground",
+        "Do not climb or touch the stelae (protected archaeological site)",
+        "Bring sun protection (limited shade)",
+        "Carry bottled water (no facilities on site)"
+      ],
+      "culturalEtiquette": [
+        "Respect the archaeological site: do not remove stones or artifacts",
+        "Photography is allowed: be respectful of the site's significance",
+        "Local guides available: consider hiring for deeper historical context"
+      ],
+      "relatedTours": [
+        "tiya-adadi-mariam-melka-kunture"
+      ],
+      "seo": {
+        "pageTitle": "Tiya UNESCO Site Guide — Ancient Stelae Field & Archaeological Wonder",
+        "metaDescription": "Complete Tiya travel guide: 32 carved stone stelae (11th–13th centuries), UNESCO World Heritage Site, archaeological significance. Day trip from Addis Ababa. Plan your visit.",
+        "h1": "Tiya UNESCO World Heritage Site: Complete Visitor Guide",
+        "h2s": [
+          "What is Tiya?",
+          "History & Archaeological Significance",
+          "Top Attractions at Tiya",
+          "Best Time to Visit",
+          "Getting to Tiya",
+          "Safety & Practical Tips",
+          "Cultural Etiquette",
+          "Frequently Asked Questions"
+        ]
+      },
+      "lastVerified": "2026-08-28"
+    },
+    {
+      "id": "menagesha-forest",
+      "slug": "menagesha-forest",
+      "name": "Menagesha Forest",
+      "subtitle": "Highland Rainforest & Endemic Wildlife",
+      "shortDescription": "Menagesha Suba Forest is one of Ethiopia's last remaining highland rainforests, home to ancient trees, endemic birds, and wildlife including Colobus monkeys.",
+      "fullDescription": "Menagesha Suba Forest is one of Ethiopia's last remaining highland rainforests, a precious ecological treasure just 35 km southwest of Addis Ababa. Established as a protected area in 1958, the forest covers over 1,000 hectares and is home to ancient juniper and podocarpus trees (some over 500 years old), endemic bird species, and wildlife including Colobus monkeys, bushbucks, and duikers. The forest offers hiking trails through pristine nature, cascading waterfalls (seasonal, best September–March), and a peaceful escape from the city. Expert naturalist guides provide deep ecological knowledge and help spot wildlife.",
+      "highlights": [
+        "One of Ethiopia's last remaining highland rainforests",
+        "Ancient juniper and podocarpus trees (some over 500 years old)",
+        "Endemic bird species (Ethiopian White-eye, Yellow-fronted Parrot)",
+        "Wildlife: Colobus monkeys, bushbucks, duikers",
+        "Cascading waterfalls (seasonal, best September–March)",
+        "Hiking trails through pristine nature",
+        "Expert naturalist guides"
+      ],
+      "topAttractions": [
+        {
+          "name": "Forest Hiking Trails",
+          "description": "Network of trails through ancient forest, ranging from easy walks to challenging hikes.",
+          "visitDuration": "2–4 hours",
+          "entranceFee": "$5 (adults), $2 (children)"
+        },
+        {
+          "name": "Waterfall",
+          "description": "Seasonal waterfall, most dramatic September–March after rainy season.",
+          "visitDuration": "30 minutes–1 hour",
+          "entranceFee": "Included in forest entrance"
+        },
+        {
+          "name": "Wildlife Viewing Areas",
+          "description": "Designated spots for observing Colobus monkeys, bushbucks, and endemic birds.",
+          "visitDuration": "1–2 hours",
+          "entranceFee": "Included in forest entrance"
+        }
+      ],
+      "bestTimeToVisit": {
+        "season": "October to March (dry season)",
+        "temperature": "10–20 °C (50–68 °F)",
+        "rainfall": "Minimal",
+        "crowds": "Low year-round",
+        "bestFor": "Clear trails, best wildlife spotting, comfortable hiking"
+      },
+      "gettingThere": {
+        "fromAddisAbaba": "35 km southwest, 1 hour drive",
+        "transport": "Private vehicle (recommended), organized tour",
+        "roadConditions": "Paved road to forest entrance, then dirt track"
+      },
+      "whereToStay": {
+        "note": "No accommodation at Menagesha Forest. Day trip from Addis Ababa recommended.",
+        "alternatives": "Stay in Addis Ababa"
+      },
+      "safetyTips": [
+        "Wear sturdy hiking boots with good ankle support",
+        "Forest can be damp: bring rain jacket",
+        "Wildlife is wild: maintain safe distance, do not feed",
+        "Hike with guide: trails can be confusing",
+        "Carry bottled water and snacks"
+      ],
+      "culturalEtiquette": [
+        "Respect the protected area: do not remove plants or disturb wildlife",
+        "Photography is allowed: be respectful of the natural environment",
+        "Local guides available: consider hiring for ecological knowledge"
+      ],
+      "relatedTours": [
+        "menagesha-forest-day-trip"
+      ],
+      "seo": {
+        "pageTitle": "Menagesha Forest Guide — Highland Rainforest, Waterfalls & Wildlife",
+        "metaDescription": "Complete Menagesha Forest travel guide: ancient highland rainforest, endemic birds, Colobus monkeys, waterfalls. Day trip from Addis Ababa. Hiking trails and wildlife viewing.",
+        "h1": "Menagesha Forest: Complete Visitor Guide",
+        "h2s": [
+          "What is Menagesha Forest?",
+          "Ecological Significance",
+          "Top Attractions at Menagesha Forest",
+          "Best Time to Visit",
+          "Getting to Menagesha Forest",
+          "Safety & Practical Tips",
+          "Cultural Etiquette",
+          "Frequently Asked Questions"
+        ]
+      },
+      "lastVerified": "2026-08-28"
+    },
+    {
+      "id": "bishoftu",
+      "slug": "bishoftu",
+      "name": "Bishoftu (Debre Zeit)",
+      "subtitle": "Five Stunning Crater Lakes in the Rift Valley",
+      "shortDescription": "Bishoftu (also known as Debre Zeit) features five stunning crater lakes in the Ethiopian Rift Valley, perfect for swimming, kayaking, and relaxation.",
+      "fullDescription": "Bishoftu, also known as Debre Zeit, is a resort town 45 km southeast of Addis Ababa in the Ethiopian Rift Valley. The town is famous for its five stunning crater lakes: Lake Gari, Lake Hora, Lake Shala, Lake Abijatta, and Lake Kuriftu. These volcanic lakes offer crystal-clear waters perfect for swimming, kayaking, and boat rides. The lakes are surrounded by resort facilities, restaurants, and recreational areas, making Bishoftu a popular weekend getaway for Addis Ababa residents and a relaxing day trip for visitors. The town also hosts the Ethiopian Air Force Academy and offers a glimpse into local resort culture.",
+      "highlights": [
+        "Five stunning crater lakes in the Ethiopian Rift Valley",
+        "Swimming in clear volcanic waters (safe, monitored areas)",
+        "Kayaking and boat rides (equipment available for rent)",
+        "Resort facilities with restaurants and recreational areas",
+        "Scenic highland drive through traditional villages",
+        "Perfect for families and travelers seeking relaxation"
+      ],
+      "topAttractions": [
+        {
+          "name": "Lake Gari",
+          "description": "Most popular lake for swimming and water sports, with resort facilities and restaurants.",
+          "visitDuration": "2–4 hours",
+          "entranceFee": "$5 (adults), $2 (children)"
+        },
+        {
+          "name": "Lake Hora",
+          "description": "Serene lake with clear waters, perfect for kayaking and boat rides.",
+          "visitDuration": "2–4 hours",
+          "entranceFee": "$5 (adults), $2 (children)"
+        },
+        {
+          "name": "Lake Shala Viewpoint",
+          "description": "Panoramic viewpoint overlooking Lake Shala, the largest crater lake in Ethiopia.",
+          "visitDuration": "30 minutes–1 hour",
+          "entranceFee": "Free"
+        }
+      ],
+      "bestTimeToVisit": {
+        "season": "October to March (dry season)",
+        "temperature": "18–28 °C (64–82 °F)",
+        "rainfall": "Minimal",
+        "crowds": "Busiest on weekends and holidays",
+        "bestFor": "Swimming, water sports, clear lake views"
+      },
+      "gettingThere": {
+        "fromAddisAbaba": "45 km southeast, 1 hour drive",
+        "transport": "Private vehicle (recommended), organized tour, public bus",
+        "roadConditions": "Paved highway, good condition"
+      },
+      "whereToStay": {
+        "note": "Several resorts and guesthouses available in Bishoftu for overnight stays.",
+        "options": "Lake-side resorts ($50–150/night), budget guesthouses ($20–40/night)"
+      },
+      "safetyTips": [
+        "Swim only in designated areas (monitored by resort staff)",
+        "Life jackets available for rent: use for kayaking and boat rides",
+        "Sun protection essential: high altitude increases UV exposure",
+        "Keep valuables secure at resort facilities"
+      ],
+      "culturalEtiquette": [
+        "Dress modestly when not swimming (shoulders and knees covered)",
+        "Respect resort rules and other guests",
+        "Photography is allowed: be respectful of other visitors"
+      ],
+      "relatedTours": [
+        "bishoftu-crater-lakes"
+      ],
+      "seo": {
+        "pageTitle": "Bishoftu (Debre Zeit) Guide — Five Crater Lakes & Resort Town",
+        "metaDescription": "Complete Bishoftu travel guide: five crater lakes, swimming, kayaking, resort facilities. Day trip from Addis Ababa. Perfect for families and relaxation.",
+        "h1": "Bishoftu (Debre Zeit): Complete Visitor Guide",
+        "h2s": [
+          "What is Bishoftu?",
+          "The Five Crater Lakes",
+          "Top Attractions in Bishoftu",
+          "Best Time to Visit",
+          "Getting to Bishoftu",
+          "Where to Stay in Bishoftu",
+          "Safety & Practical Tips",
+          "Cultural Etiquette",
+          "Frequently Asked Questions"
+        ]
+      },
+      "lastVerified": "2026-08-28"
+    }
+  ],
+  "metadata": {
+    "totalDestinations": 5,
+    "lastUpdated": "2026-08-28",
+    "version": "1.0"
+  }
+}

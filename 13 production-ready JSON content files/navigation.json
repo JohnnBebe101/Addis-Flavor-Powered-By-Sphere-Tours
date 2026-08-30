@@ -1,0 +1,343 @@
+{
+  "header": {
+    "logo": {
+      "text": "Addis Ababa City Tour",
+      "link": "/",
+      "alt": "Addis Ababa City Tours - Licensed Local Tour Operator"
+    },
+    "mainMenu": [
+      {
+        "label": "Tours",
+        "link": "/tours/",
+        "type": "dropdown",
+        "columns": [
+          {
+            "title": "City Tours",
+            "items": [
+              {
+                "label": "Half-Day Addis Ababa City Tour",
+                "link": "/tours/half-day-addis-ababa-city-tour/",
+                "price": "From $42",
+                "duration": "4 hours"
+              },
+              {
+                "label": "Full-Day Addis Ababa City Tour",
+                "link": "/tours/full-day-addis-ababa-city-tour/",
+                "price": "From $69",
+                "duration": "8–9 hours"
+              },
+              {
+                "label": "Addis Ababa Highlights Tour",
+                "link": "/tours/addis-ababa-highlights-tour/",
+                "price": "From $55",
+                "duration": "6 hours"
+              }
+            ]
+          },
+          {
+            "title": "Day Trips",
+            "items": [
+              {
+                "label": "Debre Libanos & Portuguese Bridge",
+                "link": "/tours/debre-libanos-portuguese-bridge/",
+                "price": "From $85",
+                "duration": "8–9 hours"
+              },
+              {
+                "label": "Tiya, Adadi Mariam & Melka Kunture",
+                "link": "/tours/tiya-adadi-mariam-melka-kunture/",
+                "price": "From $95",
+                "duration": "9–10 hours"
+              },
+              {
+                "label": "Menagesha Forest Day Trip",
+                "link": "/tours/menagesha-forest-day-trip/",
+                "price": "From $80",
+                "duration": "8–9 hours"
+              },
+              {
+                "label": "Bishoftu Crater Lakes",
+                "link": "/tours/bishoftu-crater-lakes/",
+                "price": "From $75",
+                "duration": "8 hours"
+              }
+            ]
+          },
+          {
+            "title": "Private & Custom",
+            "items": [
+              {
+                "label": "Custom Addis Ababa Itinerary",
+                "link": "/custom-tour/",
+                "price": "Price on Request",
+                "duration": "Flexible"
+              },
+              {
+                "label": "Airport Layover Tour",
+                "link": "/tours/airport-layover-tour/",
+                "price": "From $65",
+                "duration": "4–6 hours"
+              },
+              {
+                "label": "Private Group Tours",
+                "link": "/tours/private-group-tours/",
+                "price": "Price on Request",
+                "duration": "Flexible"
+              },
+              {
+                "label": "Travel Agent Enquiries",
+                "link": "/travel-agents/",
+                "price": "B2B Portal",
+                "duration": "—"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Destinations",
+        "link": "/destinations/",
+        "type": "dropdown",
+        "columns": [
+          {
+            "title": "Addis Ababa",
+            "items": [
+              {
+                "label": "Addis Ababa Travel Guide",
+                "link": "/destinations/addis-ababa/",
+                "description": "Complete destination guide"
+              },
+              {
+                "label": "Top 10 Attractions in Addis Ababa",
+                "link": "/destinations/addis-ababa/#attractions",
+                "description": "Must-see highlights"
+              },
+              {
+                "label": "Best Time to Visit Addis Ababa",
+                "link": "/destinations/addis-ababa/#best-time",
+                "description": "Weather & festivals"
+              },
+              {
+                "label": "Airport Layover Planning Guide",
+                "link": "/travel-guide/airport-layover-planning/",
+                "description": "4–8 hour city tours"
+              }
+            ]
+          },
+          {
+            "title": "Day Trip Destinations",
+            "items": [
+              {
+                "label": "Debre Libanos Monastery Guide",
+                "link": "/destinations/debre-libanos/",
+                "description": "13th-century monastery"
+              },
+              {
+                "label": "Tiya UNESCO Site Guide",
+                "link": "/destinations/tiya/",
+                "description": "Ancient stelae field"
+              },
+              {
+                "label": "Menagesha Forest Guide",
+                "link": "/destinations/menagesha-forest/",
+                "description": "Highland rainforest"
+              },
+              {
+                "label": "Bishoftu Crater Lakes Guide",
+                "link": "/destinations/bishoftu/",
+                "description": "Five crater lakes"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Why Choose Us",
+        "link": "/why-choose-us/",
+        "type": "link"
+      },
+      {
+        "label": "Travel Guide",
+        "link": "/travel-guide/",
+        "type": "link"
+      },
+      {
+        "label": "Contact",
+        "link": "/contact/",
+        "type": "link"
+      }
+    ],
+    "ctaButton": {
+      "text": "BOOK A TOUR",
+      "link": "/tours/",
+      "color": "brand-primary-orange"
+    }
+  },
+  "mobileMenu": {
+    "items": [
+      {
+        "label": "Tours",
+        "link": "/tours/",
+        "type": "accordion"
+      },
+      {
+        "label": "Destinations",
+        "link": "/destinations/",
+        "type": "accordion"
+      },
+      {
+        "label": "Why Choose Us",
+        "link": "/why-choose-us/",
+        "type": "link"
+      },
+      {
+        "label": "Travel Guide",
+        "link": "/travel-guide/",
+        "type": "link"
+      },
+      {
+        "label": "Contact",
+        "link": "/contact/",
+        "type": "link"
+      },
+      {
+        "label": "BOOK A TOUR",
+        "link": "/tours/",
+        "type": "cta",
+        "color": "brand-primary-orange"
+      }
+    ]
+  },
+  "footer": {
+    "columns": [
+      {
+        "title": "Brand",
+        "links": [
+          {
+            "label": "Logo + Tagline",
+            "link": "/"
+          },
+          {
+            "label": "Instagram",
+            "link": "https://instagram.com/addisababacitytour",
+            "external": true
+          },
+          {
+            "label": "Facebook",
+            "link": "https://facebook.com/addisababacitytour",
+            "external": true
+          },
+          {
+            "label": "TripAdvisor",
+            "link": "https://tripadvisor.com/Attraction_Review-g1-addis-ababa",
+            "external": true
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About Us",
+            "link": "/about/"
+          },
+          {
+            "label": "Our Team",
+            "link": "/about/#team"
+          },
+          {
+            "label": "How It Works",
+            "link": "/why-choose-us/#how-it-works"
+          },
+          {
+            "label": "Safety & Responsibility",
+            "link": "/why-choose-us/#safety"
+          },
+          {
+            "label": "Reviews",
+            "link": "/reviews/"
+          }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          {
+            "label": "FAQs",
+            "link": "/why-choose-us/#faqs"
+          },
+          {
+            "label": "Contact Us",
+            "link": "/contact/"
+          },
+          {
+            "label": "Custom Tour Inquiry",
+            "link": "/custom-tour/"
+          },
+          {
+            "label": "Travel Agents",
+            "link": "/travel-agents/"
+          },
+          {
+            "label": "Booking Policy",
+            "link": "/booking-policy/"
+          }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          {
+            "label": "Terms & Conditions",
+            "link": "/terms/"
+          },
+          {
+            "label": "Privacy Policy",
+            "link": "/privacy/"
+          },
+          {
+            "label": "Cancellation Policy",
+            "link": "/cancellation-policy/"
+          },
+          {
+            "label": "Cookie Policy",
+            "link": "/cookies/"
+          }
+        ]
+      },
+      {
+        "title": "Contact",
+        "links": [
+          {
+            "label": "Sphere Head Office",
+            "link": "/contact/"
+          },
+          {
+            "label": "National Tower, Addis Ababa",
+            "link": "/contact/"
+          },
+          {
+            "label": "+251-911-XXX-XXX",
+            "link": "tel:+251911XXXXXX"
+          },
+          {
+            "label": "info@addisababacitytour.com",
+            "link": "mailto:info@addisababacitytour.com"
+          },
+          {
+            "label": "Office Hours: 9:00 AM – 6:00 PM",
+            "link": "/contact/"
+          }
+        ]
+      }
+    ],
+    "bottomRow": {
+      "copyright": "Copyright © 2026 Addis Ababa City Tour",
+      "poweredBy": "Powered by Sphere, Johnny Technologies"
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2026-08-28",
+    "version": "1.0"
+  }
+}
