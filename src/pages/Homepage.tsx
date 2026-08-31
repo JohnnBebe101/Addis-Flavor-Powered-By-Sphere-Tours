@@ -11,7 +11,6 @@ import { DayTripDestinationsCarousel } from '../components/home/DayTripDestinati
 import { HowBookingWorks } from '../components/home/HowBookingWorks';
 import { PracticalInfoGrid } from '../components/home/PracticalInfoGrid';
 import { FinalCTA } from '../components/home/FinalCTA';
-import { TrustBookingStrip } from '../components/home/TrustBookingStrip';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 
 import { Tour } from '../types';
@@ -109,14 +108,7 @@ export const Homepage: React.FC = () => {
 
   return (
     <>
-      {/* 4. TRUST & BOOKING STRIP */}
-      <TrustBookingStrip
-        tripAdvisorRating={4.9}
-        tripAdvisorReviewCount={500}
-        whatsappNumber={'+251-911-209-882'}
-      />
-
-      {/* 5. TOUR CATEGORY SELECTOR */}
+      {/* 4. TOUR CATEGORY SELECTOR */}
       <TourCategorySelector
         categories={tourCategoriesWithIcons}
         headline={homeData.tourCategorySelector.headline}

@@ -13,8 +13,8 @@ export function getStructuredData(
         name: 'Sphere Tour and Travel Ethiopia',
         alternateName: 'Addis Flavor',
         url: 'https://addisababacitytours.com',
-        logo: `${siteOrigin}/assets/images/addis_jebena_pour_1782233715156.jpg`,
-        image: `${siteOrigin}/assets/images/addis_hero_bg_1782233695273.jpg`,
+logo: `${siteOrigin}/images/about/jebena.jpg`,
+image: `${siteOrigin}/images/hero/addis-ababa-national-museum.jpg`,
         description:
           'Licensed and leading tour operator based in Addis Ababa, Ethiopia, specializing in sustainable, immersive, and cultural journeys like Addis Ababa City Tours.',
         telephone: '+251911209882',

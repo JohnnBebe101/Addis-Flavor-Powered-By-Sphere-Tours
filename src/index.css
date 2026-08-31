@@ -197,6 +197,23 @@
   opacity: 0;
 }
 
+/* Hero banner entrance animation */
+@keyframes heroSlideUp {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-hero-slide-up {
+  animation: heroSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+
 .animate-stagger-fade:nth-child(1) {
   animation-delay: 0.05s;
 }

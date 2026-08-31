@@ -4,7 +4,7 @@
  */
 
 import { useState, useEffect, useRef } from 'react';
-import { Flame, Search, ChevronRight, ChevronLeft, Pause, Play } from 'lucide-react';
+import { Search, ChevronRight, ChevronLeft, Pause, Play } from 'lucide-react';
 import { Tour } from '../../types';
 
 interface HeroSlide {
@@ -100,7 +100,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
   return (
     <header
       id="hero-banner"
-      className="relative h-[90vh] flex items-center justify-center bg-cover bg-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-cover bg-center overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onKeyDown={handleKeyDown}
@@ -111,8 +111,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
       <div
         className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(27, 58, 75, 0.45), rgba(15, 23, 42, 0.85)), url(${slides[activeSlide].image})`,
-          opacity: 1,
+          backgroundImage: `linear-gradient(to bottom, rgba(45, 41, 38, 0.10), rgba(45, 41, 38, 0.35)), url(${slides[activeSlide].image})`,
         }}
         aria-hidden="true"
       />
@@ -135,15 +134,15 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
 
       <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 space-y-6">
         {/* Announcement Badge */}
-        <div className="inline-flex items-center space-x-1.5 bg-gold/20 backdrop-blur-md border border-gold/40 text-gold px-4 py-1.5 rounded-full text-xs font-mono uppercase tracking-widest animate-pulse">
-          <Flame className="w-3.5 h-3.5 text-coffee-red fill-coffee-red" />
+        <div className="inline-flex items-center bg-gold/20 backdrop-blur-md border border-gold/40 text-gold px-4 py-1.5 rounded-full text-xs font-mono uppercase tracking-widest animate-hero-slide-up" style={{ animationDelay: '0ms' }}>
           <span>{slides[activeSlide].trustSignal}</span>
         </div>
 
         {/* Slide Title */}
         <h1
           id="hero-headline"
-          className="text-4xl sm:text-6xl font-serif font-extrabold text-linen-white tracking-tight leading-tight uppercase animate-fade-in"
+          className="text-3xl sm:text-5xl font-serif font-extrabold text-linen-white tracking-tight leading-tight uppercase animate-hero-slide-up"
+          style={{ animationDelay: '150ms' }}
         >
           {slides[activeSlide].title}
         </h1>
@@ -151,13 +150,14 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
         {/* Slide Subtitle */}
         <p
           id="hero-subheadline"
-          className="text-base sm:text-xl text-sandstone max-w-2xl mx-auto font-sans font-light leading-relaxed animate-fade-in"
+          className="text-sm sm:text-lg text-sandstone max-w-2xl mx-auto font-sans font-light leading-relaxed animate-hero-slide-up"
+          style={{ animationDelay: '300ms' }}
         >
           {slides[activeSlide].subtitle}
         </p>
 
         {/* Search & CTA */}
-        <div className="max-w-md mx-auto pt-4 animate-fade-in">
+        <div className="max-w-md mx-auto pt-4 animate-hero-slide-up" style={{ animationDelay: '450ms' }}>
           <div
             className="bg-linen-white/10 backdrop-blur-md border border-linen-white/20 p-2 rounded-full flex items-center shadow-2xl transition-all duration-300 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-gold has-[:focus-visible]:border-gold has-[:focus-visible]:ring_offset-2 has-[:focus-visible]:ring-offset-teal"
             aria-haspopup="listbox"
@@ -265,17 +265,10 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
           ))}
         </div>
 
-        {/* Live Capture Info */}
-        <div className="absolute bottom-6 right-6 hidden sm:block bg-black/40 backdrop-blur-sm border border-linen-white/10 p-2.5 rounded-xl text-left text-[10px] text-linen-white font-mono leading-tight">
-          <p className="text-gold uppercase tracking-wider font-semibold">'Live Capture'</p>
-          <p>'Preparing authentic Injera and Shiro, ADDIS ABABA, ETHIOPIA'</p>
-        </div>
+
       </div>
 
-      {/* Keyboard Navigation Hint */}
-      <div className="absolute bottom-6 left-6 hidden sm:block bg-black/40 backdrop-blur-sm border border-linen-white/10 p-2 rounded-lg text-[9px] text-linen-white/60 font-mono">
-        Use ← → keys to navigate
-      </div>
+
     </header>
   );
 };

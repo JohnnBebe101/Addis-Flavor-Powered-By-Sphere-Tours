@@ -6,6 +6,7 @@ import { Footer } from '../components/home/Footer';
 import { StickyBookingBar } from '../components/home/StickyBookingBar';
 import TourBookingModal from '../components/TourBookingModal';
 import ContactModal from '../components/ContactModal';
+import { FloatingWhatsApp } from '../components/FloatingWhatsApp';
 import { ErrorBoundary } from '../components/ErrorBoundary';
 import { TRANSLATIONS, NEIGHBORHOOD_DESTINATIONS } from '../data';
 import { Tour } from '../types';
@@ -68,6 +69,7 @@ export const Layout = () => {
         onClose={() => setIsBookingOpen(false)}
       />
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+      <FloatingWhatsApp />
     </>
   );
 };
