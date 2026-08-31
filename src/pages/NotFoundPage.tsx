@@ -13,11 +13,10 @@ export const NotFoundPage: React.FC = () => {
         <h1 className="text-7xl md:text-9xl font-serif font-extrabold text-teal tracking-tight mb-2">
           404
         </h1>
-        <h2 className="text-2xl md:text-3xl font-serif font-bold text-teal mb-4">
-          Page Not Found
-        </h2>
+        <h2 className="text-2xl md:text-3xl font-serif font-bold text-teal mb-4">Page Not Found</h2>
         <p className="text-lg text-teal/70 mb-8 max-w-md mx-auto">
-          Oops! The page you're looking for seems to have wandered off the map. Let's get you back on the right path.
+          Oops! The page you're looking for seems to have wandered off the map. Let's get you back
+          on the right path.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">

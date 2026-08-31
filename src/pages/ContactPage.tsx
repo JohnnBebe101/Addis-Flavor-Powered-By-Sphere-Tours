@@ -10,7 +10,8 @@ export const ContactPage: React.FC = () => {
             Contact Us
           </h1>
           <p className="text-lg text-teal/70 max-w-3xl mx-auto">
-            Have questions about our tours? Want to customize your itinerary? We're here to help. WhatsApp, call, or email us—we respond within 24 hours.
+            Have questions about our tours? Want to customize your itinerary? We're here to help.
+            WhatsApp, call, or email us—we respond within 24 hours.
           </p>
         </div>
       </section>
@@ -20,85 +21,153 @@ export const ContactPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
-              <h2 className="text-3xl font-serif font-bold text-teal mb-6">
-                Get in Touch
-              </h2>
-              <p className="text-teal/70 mb-8">
-                {contactData.contactInfo.headline}
-              </p>
+              <h2 className="text-3xl font-serif font-bold text-teal mb-6">Get in Touch</h2>
+              <p className="text-teal/70 mb-8">{contactData.contactInfo.headline}</p>
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <MapPin className="w-6 h-6 text-gold flex-shrink-0" />
                   <div>
-                    <p className="font-mono text-xs uppercase tracking-widest text-gold font-bold">Address</p>
+                    <p className="font-mono text-xs uppercase tracking-widest text-gold font-bold">
+                      Address
+                    </p>
                     <p className="text-teal/70">{contactData.contactInfo.address}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="w-6 h-6 text-gold flex-shrink-0" />
                   <div>
-                    <p className="font-mono text-xs uppercase tracking-widest text-gold font-bold">Phone / WhatsApp</p>
-                    <a href={`tel:${contactData.contactInfo.phone.replace(/\D/g, '')}`} className="text-teal/70 hover:text-gold transition-colors font-mono font-bold">{contactData.contactInfo.phone}</a>
+                    <p className="font-mono text-xs uppercase tracking-widest text-gold font-bold">
+                      Phone / WhatsApp
+                    </p>
+                    <a
+                      href={`tel:${contactData.contactInfo.phone.replace(/\D/g, '')}`}
+                      className="text-teal/70 hover:text-gold transition-colors font-mono font-bold"
+                    >
+                      {contactData.contactInfo.phone}
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <Mail className="w-6 h-6 text-gold flex-shrink-0" />
                   <div>
-                    <p className="font-mono text-xs uppercase tracking-widest text-gold font-bold">Email</p>
-                    <a href={`mailto:${contactData.contactInfo.email}`} className="text-teal/70 hover:text-gold transition-colors break-all font-mono font-semibold">{contactData.contactInfo.email}</a>
+                    <p className="font-mono text-xs uppercase tracking-widest text-gold font-bold">
+                      Email
+                    </p>
+                    <a
+                      href={`mailto:${contactData.contactInfo.email}`}
+                      className="text-teal/70 hover:text-gold transition-colors break-all font-mono font-semibold"
+                    >
+                      {contactData.contactInfo.email}
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <Mail className="w-6 h-6 text-gold flex-shrink-0" />
                   <div>
-                    <p className="font-mono text-xs uppercase tracking-widest text-gold font-bold">Office Hours</p>
+                    <p className="font-mono text-xs uppercase tracking-widest text-gold font-bold">
+                      Office Hours
+                    </p>
                     <p className="text-teal/70 font-mono">{contactData.contactInfo.officeHours}</p>
                   </div>
                 </div>
               </div>
 
               {/* WhatsApp CTA */}
-              <a href={`https://wa.me/${contactData.contactInfo.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md mt-8 inline-flex">
+              <a
+                href={`https://wa.me/${contactData.contactInfo.whatsapp.replace(/\D/g, '')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md mt-8 inline-flex"
+              >
                 <span>WhatsApp Us</span>
               </a>
             </div>
 
             {/* Contact Form */}
             <div className="bg-sandstone/50 rounded-2xl p-8 border border-teal/10">
-              <h3 className="text-2xl font-serif font-bold text-teal mb-2">
-                Send Us a Message
-              </h3>
+              <h3 className="text-2xl font-serif font-bold text-teal mb-2">Send Us a Message</h3>
               <p className="text-teal/70 mb-6">We'll get back to you within 24 hours.</p>
 
               <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">Full Name *</label>
-                    <input type="text" id="name" required placeholder="John Doe" className="w-full px-4 py-2.5 rounded-xl border border-teal/10 bg-linen-white text-teal focus:outline-none focus:ring-1 focus:ring-gold" />
+                    <label
+                      htmlFor="name"
+                      className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold"
+                    >
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      required
+                      placeholder="John Doe"
+                      className="w-full px-4 py-2.5 rounded-xl border border-teal/10 bg-linen-white text-teal focus:outline-none focus:ring-1 focus:ring-gold"
+                    />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">Email Address *</label>
-                    <input type="email" id="email" required placeholder="john@example.com" className="w-full px-4 py-2.5 rounded-xl border border-teal/10 bg-linen-white text-teal focus:outline-none focus:ring-1 focus:ring-gold" />
+                    <label
+                      htmlFor="email"
+                      className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold"
+                    >
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      required
+                      placeholder="john@example.com"
+                      className="w-full px-4 py-2.5 rounded-xl border border-teal/10 bg-linen-white text-teal focus:outline-none focus:ring-1 focus:ring-gold"
+                    />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="topic" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">Topic *</label>
-                  <select id="topic" required className="w-full px-4 py-2.5 rounded-xl border border-teal/10 bg-linen-white text-teal focus:outline-none focus:ring-1 focus:ring-gold cursor-pointer">
-                    <option value="" disabled>Select inquiry topic...</option>
-                    {contactData.contactForm.fields.find(f => f.name === 'topic')?.options?.map((opt, i) => (
-                      <option key={i} value={opt}>{opt}</option>
-                    ))}
+                  <label
+                    htmlFor="topic"
+                    className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold"
+                  >
+                    Topic *
+                  </label>
+                  <select
+                    id="topic"
+                    required
+                    className="w-full px-4 py-2.5 rounded-xl border border-teal/10 bg-linen-white text-teal focus:outline-none focus:ring-1 focus:ring-gold cursor-pointer"
+                  >
+                    <option value="" disabled>
+                      Select inquiry topic...
+                    </option>
+                    {contactData.contactForm.fields
+                      .find((f) => f.name === 'topic')
+                      ?.options?.map((opt, i) => (
+                        <option key={i} value={opt}>
+                          {opt}
+                        </option>
+                      ))}
                   </select>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">Your Message *</label>
-                  <textarea id="message" required rows={4} placeholder="How can we help you?" className="w-full px-4 py-2.5 rounded-xl border border-teal/10 bg-linen-white text-teal focus:outline-none focus:ring-1 focus:ring-gold" />
+                  <label
+                    htmlFor="message"
+                    className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold"
+                  >
+                    Your Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    required
+                    rows={4}
+                    placeholder="How can we help you?"
+                    className="w-full px-4 py-2.5 rounded-xl border border-teal/10 bg-linen-white text-teal focus:outline-none focus:ring-1 focus:ring-gold"
+                  />
                 </div>
 
-                <button type="submit" className="w-full py-3 px-4 rounded-xl bg-coffee-red text-linen-white text-xs uppercase tracking-wider font-bold hover:bg-coffee-red/90 transition-all flex items-center justify-center gap-2 shadow-md">
+                <button
+                  type="submit"
+                  className="w-full py-3 px-4 rounded-xl bg-coffee-red text-linen-white text-xs uppercase tracking-wider font-bold hover:bg-coffee-red/90 transition-all flex items-center justify-center gap-2 shadow-md"
+                >
                   <Send className="w-4 h-4" />
                   <span>Send Message</span>
                 </button>
@@ -109,11 +178,15 @@ export const ContactPage: React.FC = () => {
           {/* Custom Tour & Travel Agent Inquiry */}
           <div className="lg:col-span-1 space-y-8">
             <div className="bg-sandstone/50 rounded-2xl p-8 border border-teal/10">
-              <h3 className="text-xl font-serif font-bold text-teal mb-2">
-                Custom Tour Inquiry
-              </h3>
-              <p className="text-teal/70 mb-6">Want a fully customized itinerary? Tell us your interests, travel dates, and group size, and we'll create a personalized tour just for you.</p>
-              <a href="/custom-tour/" className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold hover:bg-gold/90 text-teal font-mono text-xs uppercase font-extrabold tracking-wider transition-all duration-300">
+              <h3 className="text-xl font-serif font-bold text-teal mb-2">Custom Tour Inquiry</h3>
+              <p className="text-teal/70 mb-6">
+                Want a fully customized itinerary? Tell us your interests, travel dates, and group
+                size, and we'll create a personalized tour just for you.
+              </p>
+              <a
+                href="/custom-tour/"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold hover:bg-gold/90 text-teal font-mono text-xs uppercase font-extrabold tracking-wider transition-all duration-300"
+              >
                 Request Custom Tour
               </a>
             </div>
@@ -122,8 +195,14 @@ export const ContactPage: React.FC = () => {
               <h3 className="text-xl font-serif font-bold text-teal mb-2">
                 Travel Agent Partnerships
               </h3>
-              <p className="text-teal/70 mb-6">Are you a travel agent or tour operator? We offer competitive commissions, reliable service, and local expertise for your clients visiting Addis Ababa.</p>
-              <a href="/travel-agents/" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300">
+              <p className="text-teal/70 mb-6">
+                Are you a travel agent or tour operator? We offer competitive commissions, reliable
+                service, and local expertise for your clients visiting Addis Ababa.
+              </p>
+              <a
+                href="/travel-agents/"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300"
+              >
                 Become a Partner
               </a>
             </div>
@@ -142,7 +221,10 @@ export const ContactPage: React.FC = () => {
           </div>
           <div className="max-w-3xl mx-auto space-y-4">
             {contactData.faqs.items.map((faq, idx) => (
-              <details key={idx} className="group bg-linen-white rounded-xl p-6 border border-teal/10">
+              <details
+                key={idx}
+                className="group bg-linen-white rounded-xl p-6 border border-teal/10"
+              >
                 <summary className="flex items-center justify-between cursor-pointer list-none font-serif font-bold text-teal group-hover:text-coffee-red transition-colors">
                   {faq.question}
                   <ChevronRight className="w-5 h-5 text-gold transition-transform duration-300 group-open:rotate-90" />

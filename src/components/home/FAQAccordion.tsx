@@ -14,7 +14,10 @@ interface FAQAccordionProps {
   };
 }
 
-export const FAQAccordion: React.FC<FAQAccordionProps> = ({ category = 'general', translations }) => {
+export const FAQAccordion: React.FC<FAQAccordionProps> = ({
+  category = 'general',
+  translations,
+}) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const faqs = faqsData.faqs[category] || [];
 

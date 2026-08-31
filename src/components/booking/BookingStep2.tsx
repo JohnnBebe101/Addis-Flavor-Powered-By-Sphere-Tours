@@ -13,8 +13,8 @@ interface BookingStep2Props {
     pickupLocation: string;
     specialRequirements: string;
   };
-  onChange: (field: string, value: any) => void;
-  translations: {
+  onChange: (field: string, value: string | number) => void;
+  translations?: {
     bookNowButton: string;
   };
 }
@@ -22,7 +22,7 @@ interface BookingStep2Props {
 export function BookingStep2({
   formData,
   onChange,
-  translations,
+  translations: _translations,
 }: BookingStep2Props) {
   return (
     <div className="space-y-4">

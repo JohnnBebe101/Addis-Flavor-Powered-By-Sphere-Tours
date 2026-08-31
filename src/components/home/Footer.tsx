@@ -1,5 +1,4 @@
 import React from 'react';
-import { Translations } from '../../types';
 import navigationData from '../../content/navigation.json';
 
 interface NavFooterLink {
@@ -9,26 +8,10 @@ interface NavFooterLink {
 }
 
 interface FooterProps {
-  _isGlobalDark: boolean;
-  translations: Translations;
-  newsletterEmail: string;
-  setNewsletterEmail: (email: string) => void;
-  newsletterSubbed: boolean;
-  _setNewsletterSubbed: (subbed: boolean) => void;
-  handleNewsletterSubmit: (e: React.FormEvent) => void;
   NEIGHBORHOOD_DESTINATIONS: Array<{ name: string }>;
 }
 
-export const Footer: React.FC<FooterProps> = ({
-  _isGlobalDark,
-  translations,
-  newsletterEmail,
-  setNewsletterEmail,
-  newsletterSubbed,
-  _setNewsletterSubbed,
-  handleNewsletterSubmit,
-  NEIGHBORHOOD_DESTINATIONS,
-}) => {
+export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => {
   const footerColumns = navigationData.footer.columns;
 
   return (
@@ -57,10 +40,7 @@ export const Footer: React.FC<FooterProps> = ({
                         {link.label}
                       </a>
                     ) : (
-                      <a
-                        href={link.link}
-                        className="hover:text-gold transition-colors"
-                      >
+                      <a href={link.link} className="hover:text-gold transition-colors">
                         {link.label}
                       </a>
                     )}
@@ -96,11 +76,13 @@ export const Footer: React.FC<FooterProps> = ({
             Built with love by Johnny Technologies
           </p>
           <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
-            {footerColumns.find((c: { title: string; links: NavFooterLink[] }) => c.title === 'Legal')?.links.map((link: NavFooterLink, idx: number) => (
-              <a key={idx} href={link.link} className="hover:text-gold transition-colors">
-                {link.label}
-              </a>
-            ))}
+            {footerColumns
+              .find((c: { title: string; links: NavFooterLink[] }) => c.title === 'Legal')
+              ?.links.map((link: NavFooterLink, idx: number) => (
+                <a key={idx} href={link.link} className="hover:text-gold transition-colors">
+                  {link.label}
+                </a>
+              ))}
           </div>
         </div>
       </div>

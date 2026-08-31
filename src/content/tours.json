@@ -120,11 +120,7 @@
         "/images/tours/half-day-addis-ababa-merkato.jpg",
         "/images/tours/half-day-addis-ababa-meskel-square.jpg"
       ],
-      "relatedTours": [
-        "full-day-addis-ababa",
-        "addis-ababa-highlights",
-        "airport-layover-tour"
-      ],
+      "relatedTours": ["full-day-addis-ababa", "addis-ababa-highlights", "airport-layover-tour"],
       "seo": {
         "pageTitle": "Half-Day Addis Ababa City Tour — National Museum & Merkato | From $42",
         "metaDescription": "4-hour guided tour of Addis Ababa's top attractions: National Museum (Lucy fossil), Addis Mercato, Meskel Square. Hotel pickup, expert guide, all entrance fees. From $42. Book direct and save 15%.",
@@ -446,11 +442,7 @@
         "/images/tours/addis-ababa-highlights-holy-trinity.jpg",
         "/images/tours/addis-ababa-highlights-entoto.jpg"
       ],
-      "relatedTours": [
-        "half-day-addis-ababa",
-        "full-day-addis-ababa",
-        "airport-layover-tour"
-      ],
+      "relatedTours": ["half-day-addis-ababa", "full-day-addis-ababa", "airport-layover-tour"],
       "seo": {
         "pageTitle": "Addis Ababa Highlights Tour — Best of the City in 6 Hours | From $55",
         "metaDescription": "6-hour tour covering National Museum, Holy Trinity Cathedral, Addis Mercato, Entoto Park. Perfect balance of culture, history, and views. From $55. Book direct and save 15%.",
@@ -542,11 +534,7 @@
         "Lunch at local restaurant (traditional Ethiopian cuisine)",
         "Bottled water"
       ],
-      "excluded": [
-        "Gratuities (optional)",
-        "Personal expenses",
-        "Additional meals and beverages"
-      ],
+      "excluded": ["Gratuities (optional)", "Personal expenses", "Additional meals and beverages"],
       "pricing": {
         "currency": "USD",
         "private": {
@@ -718,11 +706,7 @@
         "Lunch at local restaurant",
         "Bottled water"
       ],
-      "excluded": [
-        "Gratuities (optional)",
-        "Personal expenses",
-        "Additional meals and beverages"
-      ],
+      "excluded": ["Gratuities (optional)", "Personal expenses", "Additional meals and beverages"],
       "pricing": {
         "currency": "USD",
         "private": {
@@ -1137,10 +1121,22 @@
       "difficulty": "Easy",
       "minAge": 6,
       "itinerary": [
-        { "time": "Flexible", "activity": "Airport pickup at Bole International Airport", "duration": "—" },
-        { "time": "Custom", "activity": "National Museum (Lucy fossil) — 1.5 hours", "duration": "1.5 hours" },
+        {
+          "time": "Flexible",
+          "activity": "Airport pickup at Bole International Airport",
+          "duration": "—"
+        },
+        {
+          "time": "Custom",
+          "activity": "National Museum (Lucy fossil) — 1.5 hours",
+          "duration": "1.5 hours"
+        },
         { "time": "Custom", "activity": "Holy Trinity Cathedral — 1 hour", "duration": "1 hour" },
-        { "time": "Custom", "activity": "Entoto Park panoramic views OR Merkato market — 1.5 hours", "duration": "1.5 hours" },
+        {
+          "time": "Custom",
+          "activity": "Entoto Park panoramic views OR Merkato market — 1.5 hours",
+          "duration": "1.5 hours"
+        },
         { "time": "Custom", "activity": "Airport drop-off for connecting flight", "duration": "—" }
       ],
       "highlights": [
@@ -1157,11 +1153,7 @@
         "All entrance fees",
         "Bottled water"
       ],
-      "excluded": [
-        "Meals",
-        "Gratuities",
-        "Personal expenses"
-      ],
+      "excluded": ["Meals", "Gratuities", "Personal expenses"],
       "pricing": {
         "currency": "USD",
         "private": {
@@ -1181,8 +1173,14 @@
       "fitnessLevel": "Easy. Minimal walking. Suitable for all ages.",
       "cancellationPolicy": "Free cancellation up to 24 hours before tour. Weather/flight delays: full refund or reschedule.",
       "faqs": [
-        { "question": "What if my flight is delayed?", "answer": "We track your flight and adjust pickup time. If delay exceeds 3 hours, we'll reschedule or refund." },
-        { "question": "Can I store luggage during the tour?", "answer": "Yes, our vehicle has secure storage for carry-on luggage." }
+        {
+          "question": "What if my flight is delayed?",
+          "answer": "We track your flight and adjust pickup time. If delay exceeds 3 hours, we'll reschedule or refund."
+        },
+        {
+          "question": "Can I store luggage during the tour?",
+          "answer": "Yes, our vehicle has secure storage for carry-on luggage."
+        }
       ],
       "images": [
         "/images/tours/airport-layover-hero.jpg",
@@ -1194,7 +1192,15 @@
         "pageTitle": "Airport Layover Tour Addis Ababa — 4-6 Hour Custom Tour | From $65",
         "metaDescription": "Make the most of your Addis Ababa layover. 4-6 hour custom city tour with airport pickup/drop-off, National Museum, Holy Trinity Cathedral. From $65.",
         "h1": "Airport Layover Tour — Make the Most of Your Addis Ababa Stopover",
-        "h2s": ["What is the Airport Layover Tour?", "Tour Highlights", "Detailed Itinerary", "What's Included", "Pricing", "FAQs", "Ready to Book?"]
+        "h2s": [
+          "What is the Airport Layover Tour?",
+          "Tour Highlights",
+          "Detailed Itinerary",
+          "What's Included",
+          "Pricing",
+          "FAQs",
+          "Ready to Book?"
+        ]
       },
       "lastVerified": "2026-08-29"
     },
@@ -1216,9 +1222,21 @@
       "difficulty": "Customizable",
       "minAge": 6,
       "itinerary": [
-        { "time": "Custom", "activity": "Day 1: Custom Addis Ababa city highlights", "duration": "Full day" },
-        { "time": "Custom", "activity": "Day 2: Optional day trip (Debre Libanos, Tiya, Menagesha, Bishoftu)", "duration": "Full day" },
-        { "time": "Custom", "activity": "Day 3: Optional cultural/culinary experiences", "duration": "Full day" }
+        {
+          "time": "Custom",
+          "activity": "Day 1: Custom Addis Ababa city highlights",
+          "duration": "Full day"
+        },
+        {
+          "time": "Custom",
+          "activity": "Day 2: Optional day trip (Debre Libanos, Tiya, Menagesha, Bishoftu)",
+          "duration": "Full day"
+        },
+        {
+          "time": "Custom",
+          "activity": "Day 3: Optional cultural/culinary experiences",
+          "duration": "Full day"
+        }
       ],
       "highlights": [
         "Fully customizable multi-day itineraries",
@@ -1254,18 +1272,22 @@
       },
       "pickupPolicy": "Complimentary pickup from all hotels in central Addis Ababa. Airport transfers available for additional fee.",
       "meetingPoint": "Hotel lobby or agreed location",
-      "whatToBring": [
-        "Comfortable walking shoes",
-        "Sun protection",
-        "Camera",
-        "Light layers"
-      ],
+      "whatToBring": ["Comfortable walking shoes", "Sun protection", "Camera", "Light layers"],
       "fitnessLevel": "Customizable. From easy city tours to moderate hikes.",
       "cancellationPolicy": "Free cancellation up to 7 days before. 50% refund 3–6 days. Non-refundable within 48 hours.",
       "faqs": [
-        { "question": "Can you arrange accommodation?", "answer": "Yes, we partner with hotels across all categories and can include accommodation in your package." },
-        { "question": "Can we combine with a safari?", "answer": "Yes, we can extend to multi-day Ethiopia tours including Lalibela, Axum, Omo Valley, or Simien Mountains." },
-        { "question": "What vehicle do you use for groups?", "answer": "5-6 people: Toyota Land Cruiser. 7-12: Toyota HiAce minibus. 13-16: 16-seater minibus." }
+        {
+          "question": "Can you arrange accommodation?",
+          "answer": "Yes, we partner with hotels across all categories and can include accommodation in your package."
+        },
+        {
+          "question": "Can we combine with a safari?",
+          "answer": "Yes, we can extend to multi-day Ethiopia tours including Lalibela, Axum, Omo Valley, or Simien Mountains."
+        },
+        {
+          "question": "What vehicle do you use for groups?",
+          "answer": "5-6 people: Toyota Land Cruiser. 7-12: Toyota HiAce minibus. 13-16: 16-seater minibus."
+        }
       ],
       "images": [
         "/images/tours/private-group-hero.jpg",
@@ -1277,18 +1299,22 @@
         "pageTitle": "Private Group Tours Addis Ababa — Custom Multi-Day Tours for 5+ People",
         "metaDescription": "Custom multi-day tours for groups of 5+. Dedicated guide, private vehicle, flexible itinerary. Group pricing from $135/person. Families, corporates, friends.",
         "h1": "Private Group Tours — Custom Multi-Day Adventures for 5+ People",
-        "h2s": ["What are Private Group Tours?", "Tour Highlights", "Sample Itinerary", "Pricing by Group Size", "What's Included", "FAQs", "Ready to Plan?"]
+        "h2s": [
+          "What are Private Group Tours?",
+          "Tour Highlights",
+          "Sample Itinerary",
+          "Pricing by Group Size",
+          "What's Included",
+          "FAQs",
+          "Ready to Plan?"
+        ]
       },
       "lastVerified": "2026-08-29"
     }
   ],
   "metadata": {
     "totalTours": 9,
-    "tourTypes": [
-      "city-tour",
-      "day-trip",
-      "private"
-    ],
+    "tourTypes": ["city-tour", "day-trip", "private"],
     "currency": "USD",
     "lastUpdated": "2026-08-29",
     "version": "1.0"

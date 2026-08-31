@@ -10,7 +10,9 @@ export const ReviewsPage: React.FC = () => {
             What Travelers Say About Us
           </h1>
           <p className="text-lg text-teal/70 max-w-3xl mx-auto">
-            Read what travelers say about our Addis Ababa city tours and day trips. 500+ five-star reviews on TripAdvisor. 4.9/5 average rating. Licensed local operator. Book with confidence.
+            Read what travelers say about our Addis Ababa city tours and day trips. 500+ five-star
+            reviews on TripAdvisor. 4.9/5 average rating. Licensed local operator. Book with
+            confidence.
           </p>
         </div>
       </section>
@@ -29,7 +31,9 @@ export const ReviewsPage: React.FC = () => {
                 4.9 / 5 from 500+ reviews on TripAdvisor
               </span>
             </div>
-            <p className="text-[10px] text-teal/50">[TripAdvisor widget embed code will be inserted here]</p>
+            <p className="text-[10px] text-teal/50">
+              [TripAdvisor widget embed code will be inserted here]
+            </p>
           </div>
         </div>
       </section>
@@ -44,7 +48,10 @@ export const ReviewsPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {reviewsData.reviews.map((review) => (
-              <div key={review.id} className="bg-linen-white rounded-2xl p-6 border border-teal/10 hover:border-gold/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+              <div
+                key={review.id}
+                className="bg-linen-white rounded-2xl p-6 border border-teal/10 hover:border-gold/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col"
+              >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => {
                     return <Star key={i} className="w-5 h-5 fill-current text-gold" />;
@@ -68,7 +75,12 @@ export const ReviewsPage: React.FC = () => {
           </div>
 
           <div className="text-center mt-12">
-            <a href="https://tripadvisor.com/Attraction_Review-g1-addis-ababa" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-teal hover:bg-teal/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300">
+            <a
+              href="https://tripadvisor.com/Attraction_Review-g1-addis-ababa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-teal hover:bg-teal/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300"
+            >
               <span>View All Reviews on TripAdvisor</span>
             </a>
           </div>
@@ -84,10 +96,16 @@ export const ReviewsPage: React.FC = () => {
             Join thousands of satisfied travelers who have experienced the real Addis Ababa with us.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/tours/" className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md">
+            <a
+              href="/tours/"
+              className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md"
+            >
               View All Tours
             </a>
-            <a href="/contact/" className="px-8 py-3 rounded-full border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300">
+            <a
+              href="/contact/"
+              className="px-8 py-3 rounded-full border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300"
+            >
               Contact Us
             </a>
           </div>

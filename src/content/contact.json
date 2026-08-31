@@ -117,12 +117,7 @@
         "label": "Estimated Annual Client Volume to Ethiopia",
         "type": "select",
         "required": true,
-        "options": [
-          "1–10 clients",
-          "11–50 clients",
-          "51–100 clients",
-          "100+ clients"
-        ]
+        "options": ["1–10 clients", "11–50 clients", "51–100 clients", "100+ clients"]
       },
       {
         "name": "message",

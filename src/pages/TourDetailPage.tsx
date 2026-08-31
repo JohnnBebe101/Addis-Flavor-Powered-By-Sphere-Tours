@@ -8,11 +8,14 @@ import { useParams } from 'react-router-dom';
 import { Calendar, Users, MapPin, Check, Star, ChevronRight } from 'lucide-react';
 import toursData from '../content/tours.json';
 import reviewsData from '../content/reviews.json';
+import { ToursData, ReviewsData, TourItineraryItem, TourFAQ } from '../types';
 
 export const TourDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const tour = toursData.tours.find((t) => t.slug === slug) || toursData.tours[0];
-  const tourReviews = reviewsData.reviews.filter((r) => r.tourId === tour.id);
+  const typedToursData = toursData as unknown as ToursData;
+  const typedReviewsData = reviewsData as unknown as ReviewsData;
+  const tour = typedToursData.tours.find((t) => t.slug === slug) || typedToursData.tours[0];
+  const tourReviews = typedReviewsData.reviews.filter((r) => r.tourId === tour.id);
 
   const [showFullPricing, setShowFullPricing] = useState(false);
 
@@ -20,9 +23,13 @@ export const TourDetailPage: React.FC = () => {
     const rows: { label: string; adult: number; child: number }[] = [];
     const p = tour.pricing;
     if (p?.smallGroup && p.smallGroup.adult > 0) {
-      rows.push({ label: 'Small Group (per person)', adult: p.smallGroup.adult, child: p.smallGroup.child });
+      rows.push({
+        label: 'Small Group (per person)',
+        adult: p.smallGroup.adult,
+        child: p.smallGroup.child,
+      });
     }
-    Object.entries(p?.private || {}).forEach(([key, val]: any) => {
+    Object.entries(p?.private || {}).forEach(([key, val]) => {
       if (val && val.adult > 0) {
         rows.push({ label: `Private Tour (${key} people)`, adult: val.adult, child: val.child });
       }
@@ -39,11 +46,17 @@ export const TourDetailPage: React.FC = () => {
           <Star
             key={i}
             className={`w-5 h-5 ${
-              i < Math.floor(rating) ? 'fill-current text-gold' :
-              i === Math.floor(rating) && rating % 1 >= 0.5 ? 'fill-current text-gold clip-path' :
-              'text-gold/30'
+              i < Math.floor(rating)
+                ? 'fill-current text-gold'
+                : i === Math.floor(rating) && rating % 1 >= 0.5
+                  ? 'fill-current text-gold clip-path'
+                  : 'text-gold/30'
             }`}
-            style={i === Math.floor(rating) && rating % 1 >= 0.5 ? { clipPath: 'polygon(0 0, 50% 0, 50% 100%, 0 100%)' } : undefined}
+            style={
+              i === Math.floor(rating) && rating % 1 >= 0.5
+                ? { clipPath: 'polygon(0 0, 50% 0, 50% 100%, 0 100%)' }
+                : undefined
+            }
           />
         ))}
       </div>
@@ -53,7 +66,8 @@ export const TourDetailPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-linen-white">
       {/* Hero Section */}
-      <header className="relative h-[70vh] min-h-[500px] flex items-center justify-center bg-cover bg-center overflow-hidden"
+      <header
+        className="relative h-[70vh] min-h-[500px] flex items-center justify-center bg-cover bg-center overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(27, 58, 75, 0.45), rgba(15, 23, 42, 0.85)), url(${tour.images[0]})`,
         }}
@@ -78,10 +92,18 @@ export const TourDetailPage: React.FC = () => {
             {tour.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/contact/" className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md">
+            <a
+              href="/contact/"
+              className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md"
+            >
               Book Now
             </a>
-            <a href={`https://wa.me/251911209882`} target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-full border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300">
+            <a
+              href={`https://wa.me/251911209882`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 rounded-full border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300"
+            >
               WhatsApp Us
             </a>
           </div>
@@ -95,9 +117,7 @@ export const TourDetailPage: React.FC = () => {
             <h2 className="text-2xl font-serif font-bold text-teal mb-4">
               What is the {tour.name}?
             </h2>
-            <p className="text-teal/80 leading-relaxed mb-6">
-              {tour.fullDescription}
-            </p>
+            <p className="text-teal/80 leading-relaxed mb-6">{tour.fullDescription}</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="flex items-center gap-3 p-4 bg-sandstone/50 rounded-xl">
                 <div className="w-10 h-10 rounded-lg bg-coffee-red/10 text-coffee-red flex items-center justify-center flex-shrink-0">
@@ -142,7 +162,10 @@ export const TourDetailPage: React.FC = () => {
           </div>
           <ul className="space-y-4">
             {tour.highlights.map((highlight: string, idx: number) => (
-              <li key={idx} className="flex items-start gap-4 p-4 bg-sandstone/50 rounded-xl hover:bg-sandstone/80 transition-colors group">
+              <li
+                key={idx}
+                className="flex items-start gap-4 p-4 bg-sandstone/50 rounded-xl hover:bg-sandstone/80 transition-colors group"
+              >
                 <div className="w-10 h-10 rounded-lg bg-coffee-red/10 text-coffee-red flex items-center justify-center flex-shrink-0 group-hover:bg-coffee-red group-hover:text-linen-white transition-colors">
                   <Check className="w-5 h-5" />
                 </div>
@@ -162,14 +185,19 @@ export const TourDetailPage: React.FC = () => {
             </h2>
           </div>
           <div className="space-y-4">
-            {tour.itinerary.map((item: any, idx: number) => (
-              <div key={idx} className="bg-linen-white rounded-2xl p-6 border border-teal/10 hover:border-gold/40 hover:shadow-xl transition-all duration-300">
+            {tour.itinerary.map((item: TourItineraryItem, idx: number) => (
+              <div
+                key={idx}
+                className="bg-linen-white rounded-2xl p-6 border border-teal/10 hover:border-gold/40 hover:shadow-xl transition-all duration-300"
+              >
                 <div className="flex items-start gap-4">
                   <div className="w-14 h-14 rounded-xl bg-coffee-red/10 text-coffee-red flex items-center justify-center flex-shrink-0">
                     <span className="font-mono text-xl font-bold">{idx + 1}</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-serif font-bold text-teal mb-1">{item.time} — {item.activity}</h3>
+                    <h3 className="text-lg font-serif font-bold text-teal mb-1">
+                      {item.time} — {item.activity}
+                    </h3>
                     <p className="text-sm text-teal/70">{item.duration}</p>
                   </div>
                 </div>
@@ -223,14 +251,16 @@ export const TourDetailPage: React.FC = () => {
       <section className="py-16 bg-sandstone/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-teal mb-2">
-              Pricing
-            </h2>
-            <p className="text-teal/70">Per person in USD. Book direct and save 15% vs. GetYourGuide/Viator.</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-teal mb-2">Pricing</h2>
+            <p className="text-teal/70">
+              Per person in USD. Book direct and save 15% vs. GetYourGuide/Viator.
+            </p>
           </div>
 
           <div className="bg-linen-white rounded-2xl p-8 border border-teal/10 text-center">
-            <p className="text-xs font-mono uppercase tracking-widest text-teal/60 mb-2">Starting from</p>
+            <p className="text-xs font-mono uppercase tracking-widest text-teal/60 mb-2">
+              Starting from
+            </p>
             <p className="text-5xl font-serif font-extrabold text-coffee-red mb-2">
               ${startingPrice}
               <span className="text-lg text-teal/60 font-sans font-normal"> / person</span>
@@ -243,7 +273,9 @@ export const TourDetailPage: React.FC = () => {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300"
             >
               {showFullPricing ? 'Hide Full Pricing' : 'View Full Pricing'}
-              <ChevronRight className={`w-4 h-4 transition-transform duration-300 ${showFullPricing ? 'rotate-90' : ''}`} />
+              <ChevronRight
+                className={`w-4 h-4 transition-transform duration-300 ${showFullPricing ? 'rotate-90' : ''}`}
+              />
             </button>
 
             {showFullPricing && (
@@ -251,24 +283,40 @@ export const TourDetailPage: React.FC = () => {
                 <table className="w-full bg-linen-white rounded-2xl overflow-hidden border border-teal/10">
                   <thead className="bg-sandstone/50">
                     <tr>
-                      <th className="px-6 py-4 text-left font-mono text-xs uppercase tracking-wider text-teal/60">Tour Type</th>
-                      <th className="px-6 py-4 text-center font-mono text-xs uppercase tracking-wider text-teal/60">Adult (18+)</th>
-                      <th className="px-6 py-4 text-center font-mono text-xs uppercase tracking-wider text-teal/60">Child (6-17)</th>
-                      <th className="px-6 py-4 text-center font-mono text-xs uppercase tracking-wider text-teal/60">Infant (0-5)</th>
+                      <th className="px-6 py-4 text-left font-mono text-xs uppercase tracking-wider text-teal/60">
+                        Tour Type
+                      </th>
+                      <th className="px-6 py-4 text-center font-mono text-xs uppercase tracking-wider text-teal/60">
+                        Adult (18+)
+                      </th>
+                      <th className="px-6 py-4 text-center font-mono text-xs uppercase tracking-wider text-teal/60">
+                        Child (6-17)
+                      </th>
+                      <th className="px-6 py-4 text-center font-mono text-xs uppercase tracking-wider text-teal/60">
+                        Infant (0-5)
+                      </th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-teal/10">
                     {pricingRows.map((row, idx) => (
                       <tr key={idx} className="hover:bg-sandstone/50">
                         <td className="px-6 py-4 font-medium text-teal">{row.label}</td>
-                        <td className="px-6 py-4 text-center font-mono font-bold text-coffee-red">${row.adult}</td>
-                        <td className="px-6 py-4 text-center font-mono font-bold text-teal">${row.child}</td>
-                        <td className="px-6 py-4 text-center font-mono font-bold text-teal">Free</td>
+                        <td className="px-6 py-4 text-center font-mono font-bold text-coffee-red">
+                          ${row.adult}
+                        </td>
+                        <td className="px-6 py-4 text-center font-mono font-bold text-teal">
+                          ${row.child}
+                        </td>
+                        <td className="px-6 py-4 text-center font-mono font-bold text-teal">
+                          Free
+                        </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
-                <p className="text-center text-xs text-teal/60 mt-4">Book direct and save 15% vs. GetYourGuide/Viator prices. No hidden fees.</p>
+                <p className="text-center text-xs text-teal/60 mt-4">
+                  Book direct and save 15% vs. GetYourGuide/Viator prices. No hidden fees.
+                </p>
               </div>
             )}
           </div>
@@ -288,7 +336,9 @@ export const TourDetailPage: React.FC = () => {
                   <Star key={i} className="w-5 h-5 fill-current text-gold" />
                 ))}
               </div>
-              <span className="font-mono text-sm text-teal/80">4.9/5 from 500+ reviews on TripAdvisor</span>
+              <span className="font-mono text-sm text-teal/80">
+                4.9/5 from 500+ reviews on TripAdvisor
+              </span>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -296,18 +346,27 @@ export const TourDetailPage: React.FC = () => {
               <div key={review.id} className="bg-linen-white rounded-xl p-6 border border-teal/10">
                 <div className="flex items-center gap-0.5 mb-3">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className={`w-4 h-4 ${i < review.rating ? 'fill-current text-gold' : 'text-gold/30'}`} />
+                    <Star
+                      key={i}
+                      className={`w-4 h-4 ${i < review.rating ? 'fill-current text-gold' : 'text-gold/30'}`}
+                    />
                   ))}
                 </div>
-                <p className="font-serif text-teal leading-relaxed mb-4">&ldquo;{review.text}&rdquo;</p>
+                <p className="font-serif text-teal leading-relaxed mb-4">
+                  &ldquo;{review.text}&rdquo;
+                </p>
                 <div className="flex items-center justify-between text-[10px] font-mono text-teal/60">
-                  <span>{review.author} &mdash; {review.location}</span>
+                  <span>
+                    {review.author} &mdash; {review.location}
+                  </span>
                   <span>{review.tourName}</span>
                 </div>
               </div>
             ))}
             {tourReviews.length === 0 && (
-              <p className="col-span-full text-center text-teal/60">No reviews yet for this tour.</p>
+              <p className="col-span-full text-center text-teal/60">
+                No reviews yet for this tour.
+              </p>
             )}
           </div>
         </div>
@@ -322,8 +381,11 @@ export const TourDetailPage: React.FC = () => {
             </h2>
           </div>
           <div className="space-y-4">
-            {tour.faqs.map((faq: any, idx: number) => (
-              <details key={idx} className="group bg-linen-white rounded-xl p-6 border border-teal/10">
+            {tour.faqs.map((faq: TourFAQ, idx: number) => (
+              <details
+                key={idx}
+                className="group bg-linen-white rounded-xl p-6 border border-teal/10"
+              >
                 <summary className="flex items-center justify-between cursor-pointer list-none font-serif font-bold text-teal group-hover:text-coffee-red transition-colors">
                   {faq.question}
                   <ChevronRight className="w-5 h-5 text-gold transition-transform duration-300 group-open:rotate-90" />
@@ -340,9 +402,7 @@ export const TourDetailPage: React.FC = () => {
       {/* Trust & Safety */}
       <section className="py-16 bg-teal text-linen-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
-            Licensed & Trusted
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Licensed & Trusted</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="p-6">
               <div className="w-16 h-16 rounded-full bg-gold/20 text-gold flex items-center justify-center mx-auto mb-4">
@@ -356,14 +416,18 @@ export const TourDetailPage: React.FC = () => {
                 <span className="text-2xl">🛡️</span>
               </div>
               <h3 className="text-xl font-serif font-bold mb-2">Fully Insured</h3>
-              <p className="text-linen-white/80">Comprehensive liability insurance for your peace of mind</p>
+              <p className="text-linen-white/80">
+                Comprehensive liability insurance for your peace of mind
+              </p>
             </div>
             <div className="p-6">
               <div className="w-16 h-16 rounded-full bg-gold/20 text-gold flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">💬</span>
               </div>
               <h3 className="text-xl font-serif font-bold mb-2">24/7 WhatsApp Support</h3>
-              <p className="text-linen-white/80">We're here for you before, during, and after your tour</p>
+              <p className="text-linen-white/80">
+                We're here for you before, during, and after your tour
+              </p>
             </div>
           </div>
         </div>
@@ -376,13 +440,20 @@ export const TourDetailPage: React.FC = () => {
             Ready to Book Your {tour.name}?
           </h2>
           <p className="text-teal/70 max-w-xl mx-auto mb-8">
-            Secure your spot today and experience the best of Addis Ababa with our expert local guides.
+            Secure your spot today and experience the best of Addis Ababa with our expert local
+            guides.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/contact/" className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md">
+            <a
+              href="/contact/"
+              className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md"
+            >
               Book Now
             </a>
-            <a href="/contact/" className="px-8 py-3 rounded-full border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300">
+            <a
+              href="/contact/"
+              className="px-8 py-3 rounded-full border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300"
+            >
               Contact Us
             </a>
           </div>

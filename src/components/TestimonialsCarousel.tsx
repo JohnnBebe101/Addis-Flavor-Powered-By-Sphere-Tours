@@ -49,7 +49,13 @@ export default function TestimonialsCarousel({
       if (i < fullStars) {
         stars.push(<Star key={i} className="w-4 h-4 fill-current text-gold" />);
       } else if (i === fullStars && hasHalf) {
-        stars.push(<Star key={i} className="w-4 h-4 fill-current text-gold" style={{ clipPath: 'polygon(0 0, 50% 0, 50% 100%, 0 100%)' }} />);
+        stars.push(
+          <Star
+            key={i}
+            className="w-4 h-4 fill-current text-gold"
+            style={{ clipPath: 'polygon(0 0, 50% 0, 50% 100%, 0 100%)' }}
+          />,
+        );
       } else {
         stars.push(<Star key={i} className="w-4 h-4 text-gold/30" />);
       }
@@ -68,7 +74,8 @@ export default function TestimonialsCarousel({
           <div className="flex items-center justify-center gap-2 mb-2">
             {renderStars(tripAdvisorRating)}
             <span className="font-mono text-xs uppercase tracking-widest text-teal/80">
-              {tripAdvisorRating.toFixed(1)} / 5 from {tripAdvisorReviewCount}+ reviews on TripAdvisor
+              {tripAdvisorRating.toFixed(1)} / 5 from {tripAdvisorReviewCount}+ reviews on
+              TripAdvisor
             </span>
           </div>
           <p className="text-[10px] text-teal/50">[TripAdvisor embed code will be inserted here]</p>

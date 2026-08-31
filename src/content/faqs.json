@@ -155,12 +155,7 @@
   },
   "metadata": {
     "totalFaqs": 24,
-    "categories": [
-      "General",
-      "Booking",
-      "Tours",
-      "Practical Information"
-    ],
+    "categories": ["General", "Booking", "Tours", "Practical Information"],
     "lastUpdated": "2026-08-28",
     "version": "1.0"
   }

@@ -1,10 +1,24 @@
 import { useParams } from 'react-router-dom';
-import { ChevronRight, Calendar, MapPin, Clock, DollarSign, TreePine, Church, Landmark, Waves, ShieldCheck, Coffee, Check } from 'lucide-react';
+import {
+  ChevronRight,
+  Calendar,
+  MapPin,
+  Clock,
+  DollarSign,
+  TreePine,
+  Church,
+  Landmark,
+  Waves,
+  ShieldCheck,
+  Coffee,
+  Check,
+} from 'lucide-react';
 import destinationsData from '../content/destinations.json';
 
 export const DestinationDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const dest = destinationsData.destinations.find((d) => d.slug === slug) || destinationsData.destinations[0];
+  const dest =
+    destinationsData.destinations.find((d) => d.slug === slug) || destinationsData.destinations[0];
 
   const getIcon = (slug: string) => {
     if (slug === 'addis-ababa') return <Landmark className="w-7 h-7" />;
@@ -18,7 +32,8 @@ export const DestinationDetailPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-linen-white">
       {/* Hero Section */}
-      <header className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-cover bg-center overflow-hidden"
+      <header
+        className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-cover bg-center overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(27, 58, 75, 0.45), rgba(15, 23, 42, 0.85)), url(/images/destinations/${dest.slug}-hero.jpg)`,
         }}
@@ -49,9 +64,7 @@ export const DestinationDetailPage: React.FC = () => {
             <h2 className="text-2xl font-serif font-bold text-teal mb-4">
               What is {dest.name} known for?
             </h2>
-            <p className="text-teal/80 leading-relaxed mb-6">
-              {dest.shortDescription}
-            </p>
+            <p className="text-teal/80 leading-relaxed mb-6">{dest.shortDescription}</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="flex items-center gap-3 p-4 bg-sandstone/50 rounded-xl">
                 <div className="w-10 h-10 rounded-lg bg-coffee-red/10 text-coffee-red flex items-center justify-center flex-shrink-0">
@@ -68,7 +81,9 @@ export const DestinationDetailPage: React.FC = () => {
                 </div>
                 <div>
                   <p className="text-xs font-mono uppercase text-teal/60">Distance from Addis</p>
-                  <p className="font-semibold text-teal">{dest.gettingThere.fromAddisAbaba || 'In Addis Ababa'}</p>
+                  <p className="font-semibold text-teal">
+                    {dest.gettingThere.fromAddisAbaba || 'In Addis Ababa'}
+                  </p>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-4 bg-sandstone/50 rounded-xl">
@@ -89,37 +104,63 @@ export const DestinationDetailPage: React.FC = () => {
       <section className="py-8 bg-linen-white border-b border-teal/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-sandstone/50 rounded-xl p-6 border border-teal/10">
-            <h3 className="font-mono text-xs uppercase tracking-widest text-gold mb-4">Table of Contents</h3>
+            <h3 className="font-mono text-xs uppercase tracking-widest text-gold mb-4">
+              Table of Contents
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-              <a href="#attractions" className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50">
+              <a
+                href="#attractions"
+                className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50"
+              >
                 <ChevronRight className="w-4 h-4 text-gold" />
                 <span>Top Attractions</span>
               </a>
-              <a href="#tours" className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50">
+              <a
+                href="#tours"
+                className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50"
+              >
                 <ChevronRight className="w-4 h-4 text-gold" />
                 <span>Best Tours</span>
               </a>
-              <a href="#when-to-visit" className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50">
+              <a
+                href="#when-to-visit"
+                className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50"
+              >
                 <ChevronRight className="w-4 h-4 text-gold" />
                 <span>When to Visit</span>
               </a>
-              <a href="#getting-there" className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50">
+              <a
+                href="#getting-there"
+                className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50"
+              >
                 <ChevronRight className="w-4 h-4 text-gold" />
                 <span>Getting There</span>
               </a>
-              <a href="#where-to-stay" className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50">
+              <a
+                href="#where-to-stay"
+                className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50"
+              >
                 <ChevronRight className="w-4 h-4 text-gold" />
                 <span>Where to Stay</span>
               </a>
-              <a href="#safety" className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50">
+              <a
+                href="#safety"
+                className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50"
+              >
                 <ChevronRight className="w-4 h-4 text-gold" />
                 <span>Safety &amp; Tips</span>
               </a>
-              <a href="#culture" className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50">
+              <a
+                href="#culture"
+                className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50"
+              >
                 <ChevronRight className="w-4 h-4 text-gold" />
                 <span>Cultural Etiquette</span>
               </a>
-              <a href="#faq" className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50">
+              <a
+                href="#faq"
+                className="flex items-center gap-2 text-teal/80 hover:text-coffee-red transition-colors p-2 rounded-lg hover:bg-sandstone/50"
+              >
                 <ChevronRight className="w-4 h-4 text-gold" />
                 <span>FAQs</span>
               </a>
@@ -139,17 +180,26 @@ export const DestinationDetailPage: React.FC = () => {
           <div className="space-y-6">
             {dest.topAttractions.map((attraction, idx) => {
               return (
-                <div key={idx} className="bg-linen-white rounded-2xl p-6 border border-teal/10 hover:border-gold/40 hover:shadow-xl transition-all duration-300">
+                <div
+                  key={idx}
+                  className="bg-linen-white rounded-2xl p-6 border border-teal/10 hover:border-gold/40 hover:shadow-xl transition-all duration-300"
+                >
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 rounded-xl bg-coffee-red/10 text-coffee-red flex items-center justify-center flex-shrink-0">
                       {getIcon(dest.slug)}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-serif font-bold text-teal mb-1">{attraction.name}</h3>
+                      <h3 className="text-xl font-serif font-bold text-teal mb-1">
+                        {attraction.name}
+                      </h3>
                       <p className="text-teal/70 leading-relaxed mb-2">{attraction.description}</p>
                       <div className="flex flex-wrap gap-4 text-xs font-mono text-teal/60">
-                        <span><strong>Visit Duration:</strong> {attraction.visitDuration}</span>
-                        <span><strong>Entrance Fee:</strong> {attraction.entranceFee}</span>
+                        <span>
+                          <strong>Visit Duration:</strong> {attraction.visitDuration}
+                        </span>
+                        <span>
+                          <strong>Entrance Fee:</strong> {attraction.entranceFee}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -172,10 +222,20 @@ export const DestinationDetailPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {dest.relatedTours.slice(0, 3).map((tourSlug) => {
               return (
-                <div key={tourSlug} className="bg-linen-white rounded-2xl p-6 border border-teal/10 hover:border-gold/40 hover:shadow-xl transition-all duration-300">
-                  <h3 className="text-lg font-serif font-bold text-teal mb-2 capitalize">{tourSlug.replace(/-/g, ' ')}</h3>
-                  <p className="text-sm text-teal/70 mb-4">Discover {dest.name} with our expert guides.</p>
-                  <a href={`/tours/${tourSlug}/`} className="font-mono text-xs text-coffee-red hover:text-gold transition-colors flex items-center gap-1">
+                <div
+                  key={tourSlug}
+                  className="bg-linen-white rounded-2xl p-6 border border-teal/10 hover:border-gold/40 hover:shadow-xl transition-all duration-300"
+                >
+                  <h3 className="text-lg font-serif font-bold text-teal mb-2 capitalize">
+                    {tourSlug.replace(/-/g, ' ')}
+                  </h3>
+                  <p className="text-sm text-teal/70 mb-4">
+                    Discover {dest.name} with our expert guides.
+                  </p>
+                  <a
+                    href={`/tours/${tourSlug}/`}
+                    className="font-mono text-xs text-coffee-red hover:text-gold transition-colors flex items-center gap-1"
+                  >
                     View Tour
                     <ChevronRight className="w-3 h-3" />
                   </a>
@@ -193,28 +253,46 @@ export const DestinationDetailPage: React.FC = () => {
             When to Visit {dest.name}
           </h2>
           <div className="bg-sandstone/50 rounded-2xl p-8 border border-teal/10 mb-12">
-            <h3 className="text-xl font-serif font-bold text-teal mb-4">{dest.bestTimeToVisit.season}</h3>
-            <p className="text-teal/80 leading-relaxed mb-6">
-              {dest.bestTimeToVisit.bestFor}
-            </p>
+            <h3 className="text-xl font-serif font-bold text-teal mb-4">
+              {dest.bestTimeToVisit.season}
+            </h3>
+            <p className="text-teal/80 leading-relaxed mb-6">{dest.bestTimeToVisit.bestFor}</p>
             <div className="overflow-x-auto">
               <table className="w-full text-left">
                 <thead className="bg-sandstone/50">
                   <tr>
-                    <th className="px-6 py-3 font-mono text-xs uppercase tracking-wider text-teal/60">Season</th>
-                    <th className="px-6 py-3 text-center font-mono text-xs uppercase tracking-wider text-teal/60">Months</th>
-                    <th className="px-6 py-3 text-center font-mono text-xs uppercase tracking-wider text-teal/60">Weather</th>
-                    <th className="px-6 py-3 text-center font-mono text-xs uppercase tracking-wider text-teal/60">Crowds</th>
-                    <th className="px-6 py-3 text-center font-mono text-xs uppercase tracking-wider text-teal/60">Best For</th>
+                    <th className="px-6 py-3 font-mono text-xs uppercase tracking-wider text-teal/60">
+                      Season
+                    </th>
+                    <th className="px-6 py-3 text-center font-mono text-xs uppercase tracking-wider text-teal/60">
+                      Months
+                    </th>
+                    <th className="px-6 py-3 text-center font-mono text-xs uppercase tracking-wider text-teal/60">
+                      Weather
+                    </th>
+                    <th className="px-6 py-3 text-center font-mono text-xs uppercase tracking-wider text-teal/60">
+                      Crowds
+                    </th>
+                    <th className="px-6 py-3 text-center font-mono text-xs uppercase tracking-wider text-teal/60">
+                      Best For
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-teal/10">
                   <tr>
                     <td className="px-6 py-3 font-medium text-teal">Dry Season</td>
-                    <td className="px-6 py-3 text-center font-mono text-teal">{dest.bestTimeToVisit.season.split(' ')[0]}</td>
-                    <td className="px-6 py-3 text-center font-mono text-teal">{dest.bestTimeToVisit.temperature}</td>
-                    <td className="px-6 py-3 text-center font-mono text-teal">{dest.bestTimeToVisit.rainfall}</td>
-                    <td className="px-6 py-3 text-center font-mono text-teal">{dest.bestTimeToVisit.bestFor}</td>
+                    <td className="px-6 py-3 text-center font-mono text-teal">
+                      {dest.bestTimeToVisit.season.split(' ')[0]}
+                    </td>
+                    <td className="px-6 py-3 text-center font-mono text-teal">
+                      {dest.bestTimeToVisit.temperature}
+                    </td>
+                    <td className="px-6 py-3 text-center font-mono text-teal">
+                      {dest.bestTimeToVisit.rainfall}
+                    </td>
+                    <td className="px-6 py-3 text-center font-mono text-teal">
+                      {dest.bestTimeToVisit.bestFor}
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -236,21 +314,27 @@ export const DestinationDetailPage: React.FC = () => {
               </div>
               <h3 className="text-lg font-serif font-bold text-teal mb-2">From Addis Ababa</h3>
               <p className="text-teal/70">{dest.gettingThere.fromAddisAbaba || 'In Addis Ababa'}</p>
-              <p className="text-xs text-teal/60 mt-2">{dest.gettingThere.transport || 'Private vehicle recommended'}</p>
+              <p className="text-xs text-teal/60 mt-2">
+                {dest.gettingThere.transport || 'Private vehicle recommended'}
+              </p>
             </div>
             <div className="bg-linen-white rounded-2xl p-6 border border-teal/10">
               <div className="w-12 h-12 rounded-xl bg-gold/10 text-gold flex items-center justify-center mb-4">
                 <DollarSign className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-serif font-bold text-teal mb-2">Transport Options</h3>
-              <p className="text-teal/70">{dest.gettingThere.transport || 'Private vehicle, organized tour'}</p>
+              <p className="text-teal/70">
+                {dest.gettingThere.transport || 'Private vehicle, organized tour'}
+              </p>
             </div>
             <div className="bg-linen-white rounded-2xl p-6 border border-teal/10">
               <div className="w-12 h-12 rounded-xl bg-teal/10 text-teal flex items-center justify-center mb-4">
                 <Clock className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-serif font-bold text-teal mb-2">Travel Time</h3>
-              <p className="text-teal/70">{dest.gettingThere.roadConditions || 'Varies by destination'}</p>
+              <p className="text-teal/70">
+                {dest.gettingThere.roadConditions || 'Varies by destination'}
+              </p>
             </div>
           </div>
         </div>
@@ -278,7 +362,9 @@ export const DestinationDetailPage: React.FC = () => {
             </div>
             <div className="bg-linen-white rounded-2xl p-6 border border-teal/10">
               <h3 className="text-xl font-serif font-bold text-teal mb-2">Hotel Types</h3>
-              <p className="text-teal/70">{dest.whereToStay.hotelTypes || 'Various options available'}</p>
+              <p className="text-teal/70">
+                {dest.whereToStay.hotelTypes || 'Various options available'}
+              </p>
             </div>
           </div>
         </div>
@@ -360,7 +446,9 @@ export const DestinationDetailPage: React.FC = () => {
                 <ChevronRight className="w-5 h-5 text-gold transition-transform duration-300 group-open:rotate-90" />
               </summary>
               <div className="mt-4 text-teal/80 leading-relaxed animate-fade-in">
-                {dest.gettingThere.fromAddisAbaba} via {dest.gettingThere.transport || 'private vehicle'}. Road conditions: {dest.gettingThere.roadConditions || 'varies'}.
+                {dest.gettingThere.fromAddisAbaba} via{' '}
+                {dest.gettingThere.transport || 'private vehicle'}. Road conditions:{' '}
+                {dest.gettingThere.roadConditions || 'varies'}.
               </div>
             </details>
             <details className="group bg-linen-white rounded-xl p-6 border border-teal/10">
@@ -369,7 +457,8 @@ export const DestinationDetailPage: React.FC = () => {
                 <ChevronRight className="w-5 h-5 text-gold transition-transform duration-300 group-open:rotate-90" />
               </summary>
               <div className="mt-4 text-teal/80 leading-relaxed animate-fade-in">
-                Comfortable walking shoes, layers for temperature changes, sun protection. For religious sites: modest clothing covering shoulders and knees.
+                Comfortable walking shoes, layers for temperature changes, sun protection. For
+                religious sites: modest clothing covering shoulders and knees.
               </div>
             </details>
           </div>
@@ -383,21 +472,30 @@ export const DestinationDetailPage: React.FC = () => {
             More Ethiopia Travel Guides
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {destinationsData.destinations.filter((d) => d.slug !== dest.slug).slice(0, 3).map((d) => {
-              return (
-                <a key={d.slug} href={`/destinations/${d.slug}/`} className="bg-linen-white rounded-2xl p-6 border border-teal/10 hover:border-gold/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                  <div className="w-14 h-14 rounded-2xl bg-gold/10 text-gold flex items-center justify-center mb-4">
-                    {getIcon(d.slug)}
-                  </div>
-                  <h3 className="text-lg font-serif font-bold text-teal mb-2">{d.name}</h3>
-                  <p className="text-sm text-teal/70 leading-relaxed mb-4">{d.shortDescription}</p>
-                  <span className="font-mono text-xs text-coffee-red hover:text-gold transition-colors flex items-center gap-1">
-                    Read Guide
-                    <ChevronRight className="w-3 h-3" />
-                  </span>
-                </a>
-              );
-            })}
+            {destinationsData.destinations
+              .filter((d) => d.slug !== dest.slug)
+              .slice(0, 3)
+              .map((d) => {
+                return (
+                  <a
+                    key={d.slug}
+                    href={`/destinations/${d.slug}/`}
+                    className="bg-linen-white rounded-2xl p-6 border border-teal/10 hover:border-gold/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  >
+                    <div className="w-14 h-14 rounded-2xl bg-gold/10 text-gold flex items-center justify-center mb-4">
+                      {getIcon(d.slug)}
+                    </div>
+                    <h3 className="text-lg font-serif font-bold text-teal mb-2">{d.name}</h3>
+                    <p className="text-sm text-teal/70 leading-relaxed mb-4">
+                      {d.shortDescription}
+                    </p>
+                    <span className="font-mono text-xs text-coffee-red hover:text-gold transition-colors flex items-center gap-1">
+                      Read Guide
+                      <ChevronRight className="w-3 h-3" />
+                    </span>
+                  </a>
+                );
+              })}
           </div>
         </div>
       </section>
@@ -412,10 +510,16 @@ export const DestinationDetailPage: React.FC = () => {
             Book a tour with our expert local guides and experience the best of {dest.name}.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/tours/" className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md">
+            <a
+              href="/tours/"
+              className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md"
+            >
               View All Tours
             </a>
-            <a href="/custom-tour/" className="px-8 py-3 rounded-full border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300">
+            <a
+              href="/custom-tour/"
+              className="px-8 py-3 rounded-full border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300"
+            >
               Build Custom Trip
             </a>
           </div>

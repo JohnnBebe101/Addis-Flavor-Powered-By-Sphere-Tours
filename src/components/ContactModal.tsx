@@ -17,12 +17,62 @@ interface ContactModalProps {
 // Type for the new contact.json structure
 interface ContactData {
   hero: { headline: string; subheadline: string; image: string };
-  contactInfo: { headline: string; phone: string; whatsapp: string; email: string; address: string; officeHours: string };
-  contactForm: { headline: string; fields: Array<{ name: string; label: string; type: string; required: boolean; placeholder: string; options?: string[] }>; submitText: string; successMessage: string };
-  customTourInquiry: { headline: string; subheadline: string; fields: Array<{ name: string; label: string; type: string; required: boolean; placeholder: string; options?: string[] }>; submitText: string; successMessage: string };
-  travelAgentPartnership: { headline: string; subheadline: string; fields: Array<{ name: string; label: string; type: string; required: boolean; placeholder: string; options?: string[] }>; submitText: string; successMessage: string };
+  contactInfo: {
+    headline: string;
+    phone: string;
+    whatsapp: string;
+    email: string;
+    address: string;
+    officeHours: string;
+  };
+  contactForm: {
+    headline: string;
+    fields: Array<{
+      name: string;
+      label: string;
+      type: string;
+      required: boolean;
+      placeholder: string;
+      options?: string[];
+    }>;
+    submitText: string;
+    successMessage: string;
+  };
+  customTourInquiry: {
+    headline: string;
+    subheadline: string;
+    fields: Array<{
+      name: string;
+      label: string;
+      type: string;
+      required: boolean;
+      placeholder: string;
+      options?: string[];
+    }>;
+    submitText: string;
+    successMessage: string;
+  };
+  travelAgentPartnership: {
+    headline: string;
+    subheadline: string;
+    fields: Array<{
+      name: string;
+      label: string;
+      type: string;
+      required: boolean;
+      placeholder: string;
+      options?: string[];
+    }>;
+    submitText: string;
+    successMessage: string;
+  };
   faqs: { headline: string; items: Array<{ question: string; answer: string }> };
-  map: { headline: string; address: string; coordinates: { lat: number; lng: number }; embedCode: string };
+  map: {
+    headline: string;
+    address: string;
+    coordinates: { lat: number; lng: number };
+    embedCode: string;
+  };
   metadata: { lastUpdated: string; version: string };
 }
 
@@ -133,7 +183,9 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
                           type={field.type}
                           required={field.required}
                           value={formData[field.name as keyof typeof formData] || ''}
-                          onChange={(e) => setFormData({ ...formData, [field.name]: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({ ...formData, [field.name]: e.target.value })
+                          }
                           placeholder={field.placeholder}
                           className={`w-full px-4 py-2.5 rounded-xl border text-sm focus:outline-none focus:ring-1 focus:ring-gold ${
                             isGlobalDark

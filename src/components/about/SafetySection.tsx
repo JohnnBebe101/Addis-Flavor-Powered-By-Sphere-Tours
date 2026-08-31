@@ -12,7 +12,10 @@ interface SafetySectionProps {
   };
   isGlobalDark: boolean;
 }
-export default function SafetySection({ content, isGlobalDark }: SafetySectionProps) {
+export default function SafetySection({
+  content,
+  isGlobalDark: _isGlobalDark,
+}: SafetySectionProps) {
   return (
     <section
       id="story-section-safety"
@@ -33,9 +36,7 @@ export default function SafetySection({ content, isGlobalDark }: SafetySectionPr
       </div>{' '}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {' '}
-        <div
-          className="p-6 rounded-2xl border bg-sandstone/15 border-teal/5 space-y-3"
-        >
+        <div className="p-6 rounded-2xl border bg-sandstone/15 border-teal/5 space-y-3">
           {' '}
           <div className="w-10 h-10 rounded-xl bg-teal/10 flex items-center justify-center text-gold">
             {' '}
@@ -44,9 +45,7 @@ export default function SafetySection({ content, isGlobalDark }: SafetySectionPr
           <h4 className="text-base font-serif font-bold uppercase">{content.point1Title}</h4>{' '}
           <p className="text-xs opacity-75 leading-relaxed font-sans">{content.point1Desc}</p>{' '}
         </div>{' '}
-        <div
-          className="p-6 rounded-2xl border bg-sandstone/15 border-teal/5 space-y-3"
-        >
+        <div className="p-6 rounded-2xl border bg-sandstone/15 border-teal/5 space-y-3">
           {' '}
           <div className="w-10 h-10 rounded-xl bg-teal/10 flex items-center justify-center text-gold">
             {' '}
@@ -55,9 +54,7 @@ export default function SafetySection({ content, isGlobalDark }: SafetySectionPr
           <h4 className="text-base font-serif font-bold uppercase">{content.point2Title}</h4>{' '}
           <p className="text-xs opacity-75 leading-relaxed font-sans">{content.point2Desc}</p>{' '}
         </div>{' '}
-        <div
-          className="p-6 rounded-2xl border bg-sandstone/15 border-teal/5 space-y-3"
-        >
+        <div className="p-6 rounded-2xl border bg-sandstone/15 border-teal/5 space-y-3">
           {' '}
           <div className="w-10 h-10 rounded-xl bg-teal/10 flex items-center justify-center text-gold">
             {' '}

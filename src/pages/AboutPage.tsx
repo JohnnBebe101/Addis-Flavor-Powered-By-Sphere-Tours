@@ -94,16 +94,11 @@ export const AboutPage: React.FC = () => {
             title: mission.headline,
             step1Title: mission.points[0] ?? 'Select Your Experience',
             step1Desc:
-              mission.points[0] ??
-              'Browse our tours and choose the one that fits your schedule.',
+              mission.points[0] ?? 'Browse our tours and choose the one that fits your schedule.',
             step2Title: mission.points[1] ?? 'Book & Confirm',
-            step2Desc:
-              mission.points[1] ??
-              'Choose your date and group size. We handle the rest.',
+            step2Desc: mission.points[1] ?? 'Choose your date and group size. We handle the rest.',
             step3Title: mission.points[2] ?? 'Experience Ethiopia',
-            step3Desc:
-              mission.points[2] ??
-              'Meet your guide and experience authentic Ethiopia.',
+            step3Desc: mission.points[2] ?? 'Meet your guide and experience authentic Ethiopia.',
           }}
         />
 
@@ -122,8 +117,7 @@ export const AboutPage: React.FC = () => {
               'All guides trained in safety, first aid, and cultural sensitivity.',
             point3Title: licenses.items[2] ?? 'Sustainable Tourism',
             point3Desc:
-              licenses.items[2] ??
-              'We support local communities and preserve cultural heritage.',
+              licenses.items[2] ?? 'We support local communities and preserve cultural heritage.',
           }}
           isGlobalDark={false}
         />

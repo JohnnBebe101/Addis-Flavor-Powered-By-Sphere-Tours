@@ -19,7 +19,7 @@ interface BookingStep3Props {
     specialRequirements: string;
   };
   totalPrice: number;
-  translations: {
+  translations?: {
     bookNowButton: string;
   };
 }
@@ -28,13 +28,15 @@ export function BookingStep3({
   tour,
   formData,
   totalPrice,
-  translations,
+  translations: _translations,
 }: BookingStep3Props) {
   return (
     <div className="space-y-4">
       <div className="bg-sandstone/60 rounded-2xl p-4 border border-teal/10">
-        <p className="text-xs font-mono text-teal/60 uppercase tracking-wider mb-4">Review Your Booking</p>
-        
+        <p className="text-xs font-mono text-teal/60 uppercase tracking-wider mb-4">
+          Review Your Booking
+        </p>
+
         <div className="space-y-3 text-sm">
           <div className="flex items-start space-x-3">
             <div className="w-8 h-8 rounded-lg bg-coffee-red/10 text-coffee-red flex items-center justify-center flex-shrink-0">
@@ -52,7 +54,14 @@ export function BookingStep3({
             </div>
             <div>
               <p className="text-xs font-mono uppercase text-teal/60">Date</p>
-              <p className="font-semibold text-teal">{new Date(formData.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
+              <p className="font-semibold text-teal">
+                {new Date(formData.date).toLocaleDateString('en-US', {
+                  weekday: 'long',
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric',
+                })}
+              </p>
             </div>
           </div>
 
@@ -62,7 +71,9 @@ export function BookingStep3({
             </div>
             <div>
               <p className="text-xs font-mono uppercase text-teal/60">Guests</p>
-              <p className="font-semibold text-teal">{formData.guests} guest{formData.guests > 1 ? 's' : ''}</p>
+              <p className="font-semibold text-teal">
+                {formData.guests} guest{formData.guests > 1 ? 's' : ''}
+              </p>
             </div>
           </div>
 
@@ -126,12 +137,20 @@ export function BookingStep3({
           <span className="text-teal">Total</span>
           <span className="text-coffee-red">${totalPrice} USD</span>
         </div>
-        <p className="text-xs text-teal/60 mt-2">No instant charge - pay your guide directly on tour day</p>
+        <p className="text-xs text-teal/60 mt-2">
+          No instant charge - pay your guide directly on tour day
+        </p>
       </div>
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
-        <p className="text-xs text-amber-800 font-mono uppercase tracking-wider mb-2">Cancellation Policy</p>
-        <p className="text-xs text-amber-700">Free cancellation up to 24 hours before the tour start time. Cancellations within 24 hours or no-shows are non-refundable. Weather-related cancellations qualify for full refund or free rescheduling.</p>
+        <p className="text-xs text-amber-800 font-mono uppercase tracking-wider mb-2">
+          Cancellation Policy
+        </p>
+        <p className="text-xs text-amber-700">
+          Free cancellation up to 24 hours before the tour start time. Cancellations within 24 hours
+          or no-shows are non-refundable. Weather-related cancellations qualify for full refund or
+          free rescheduling.
+        </p>
       </div>
     </div>
   );

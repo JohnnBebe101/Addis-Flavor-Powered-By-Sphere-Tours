@@ -4,12 +4,20 @@ import destinationsData from '../content/destinations.json';
 export const DestinationListingPage: React.FC = () => {
   const destinationsWithIcons = destinationsData.destinations.map((dest, idx) => ({
     ...dest,
-    icon: idx === 0 ? <Landmark className="w-7 h-7" /> : 
-          idx === 1 ? <Church className="w-7 h-7" /> :
-          idx === 2 ? <TreePine className="w-7 h-7" /> :
-          idx === 3 ? <Waves className="w-7 h-7" /> :
-          idx === 4 ? <Mountain className="w-7 h-7" /> :
-          <Landmark className="w-7 h-7" />,
+    icon:
+      idx === 0 ? (
+        <Landmark className="w-7 h-7" />
+      ) : idx === 1 ? (
+        <Church className="w-7 h-7" />
+      ) : idx === 2 ? (
+        <TreePine className="w-7 h-7" />
+      ) : idx === 3 ? (
+        <Waves className="w-7 h-7" />
+      ) : idx === 4 ? (
+        <Mountain className="w-7 h-7" />
+      ) : (
+        <Landmark className="w-7 h-7" />
+      ),
   }));
 
   return (
@@ -20,7 +28,9 @@ export const DestinationListingPage: React.FC = () => {
             Destinations
           </h1>
           <p className="text-lg text-teal/70 max-w-3xl mx-auto">
-            Explore Addis Ababa and nearby destinations: Debre Libanos Monastery, Tiya UNESCO Site, Menagesha Forest, Bishoftu Crater Lakes. Complete travel guides with attractions, tips, and tour recommendations.
+            Explore Addis Ababa and nearby destinations: Debre Libanos Monastery, Tiya UNESCO Site,
+            Menagesha Forest, Bishoftu Crater Lakes. Complete travel guides with attractions, tips,
+            and tour recommendations.
           </p>
         </div>
       </section>
@@ -39,30 +49,28 @@ export const DestinationListingPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {destinationsWithIcons.map((dest) => {
               return (
-              <a
-                key={dest.slug}
-                href={`/destinations/${dest.slug}/`}
-                className="group p-6 rounded-2xl border border-teal/10 bg-linen-white hover:border-gold/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-gold/10 text-gold flex items-center justify-center mb-4 group-hover:bg-gold group-hover:text-teal transition-all duration-300">
-                  {dest.icon}
-                </div>
-                <h3 className="text-xl font-serif font-bold text-teal group-hover:text-coffee-red transition-colors mb-2">
-                  {dest.name}
-                </h3>
-                <p className="text-sm text-teal/70 leading-relaxed mb-4">
-                  {dest.shortDescription}
-                </p>
-                <div className="flex items-center justify-between pt-4 border-t border-teal/10">
-                  <span className="font-mono text-xs text-gold font-bold">
-                    View Guide
-                  </span>
-                  <span className="font-mono text-xs text-coffee-red group-hover:text-gold transition-colors flex items-center gap-1">
-                    Explore
-                    <ChevronRight className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </a>
+                <a
+                  key={dest.slug}
+                  href={`/destinations/${dest.slug}/`}
+                  className="group p-6 rounded-2xl border border-teal/10 bg-linen-white hover:border-gold/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-gold/10 text-gold flex items-center justify-center mb-4 group-hover:bg-gold group-hover:text-teal transition-all duration-300">
+                    {dest.icon}
+                  </div>
+                  <h3 className="text-xl font-serif font-bold text-teal group-hover:text-coffee-red transition-colors mb-2">
+                    {dest.name}
+                  </h3>
+                  <p className="text-sm text-teal/70 leading-relaxed mb-4">
+                    {dest.shortDescription}
+                  </p>
+                  <div className="flex items-center justify-between pt-4 border-t border-teal/10">
+                    <span className="font-mono text-xs text-gold font-bold">View Guide</span>
+                    <span className="font-mono text-xs text-coffee-red group-hover:text-gold transition-colors flex items-center gap-1">
+                      Explore
+                      <ChevronRight className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" />
+                    </span>
+                  </div>
+                </a>
               );
             })}
           </div>
@@ -75,7 +83,8 @@ export const DestinationListingPage: React.FC = () => {
             Plan Your Ethiopia Adventure
           </h2>
           <p className="text-lg text-linen-white/80 mb-8 max-w-2xl mx-auto">
-            From ancient monasteries to crater lakes, Ethiopia's wonders await. Let us help you craft the perfect itinerary.
+            From ancient monasteries to crater lakes, Ethiopia's wonders await. Let us help you
+            craft the perfect itinerary.
           </p>
           <a
             href="/custom-tour/"

@@ -47,7 +47,7 @@ type NavMobileItemFromJSON = {
 interface NavbarProps {
   translations: Translations;
   onBookClick: () => void;
-onContactClick: () => void;
+  onContactClick: () => void;
   isGlobalDark?: boolean;
 }
 
@@ -128,7 +128,12 @@ export default function Navbar({
                 aria-hidden="true"
               >
                 <path d="M50,15 C45,15 42,20 42,25 C42,27 43,29 45,31 L45,45 C35,47 28,55 28,65 C28,77 38,85 50,85 C62,85 72,77 72,65 C72,55 65,47 55,45 L55,31 C57,29 58,27 58,25 C58,20 55,15 50,15 Z M50,21 C52,21 53,23 53,25 C53,27 52,28 50,29 C48,28 47,27 47,25 C47,23 48,21 50,21 Z M50,49 C59,49 66,56 66,65 C66,74 59,81 50,81 C41,81 34,74 34,65 C34,56 41,49 50,49 Z" />
-                <circle cx="50" cy="65" r="5" className="text-coffee-red fill-current animate-pulse" />
+                <circle
+                  cx="50"
+                  cy="65"
+                  r="5"
+                  className="text-coffee-red fill-current animate-pulse"
+                />
               </svg>
             </div>
             <div className="flex flex-col">
@@ -250,7 +255,9 @@ export default function Navbar({
                   <span className="font-serif font-bold text-sm">{'Selam & Welcome!'}</span>
                 </div>
                 <p className="text-xs opacity-75 font-serif leading-relaxed italic">
-                  {'Discover Addis Ababa with licensed local guides. Authentic experiences, fair prices, unforgettable memories.'}
+                  {
+                    'Discover Addis Ababa with licensed local guides. Authentic experiences, fair prices, unforgettable memories.'
+                  }
                 </p>
               </div>
 
@@ -343,7 +350,7 @@ function DesktopNavItem({
   isGlobalDark,
   openDropdown,
   setOpenDropdown,
-  onBookClick,
+  onBookClick: _onBookClick,
   onContactClick,
   translations,
 }: {
@@ -361,7 +368,11 @@ function DesktopNavItem({
 
   if (isDropdown && item.columns) {
     return (
-      <div className="relative" onMouseEnter={() => setOpenDropdown(item.label)} onMouseLeave={() => setOpenDropdown(null)}>
+      <div
+        className="relative"
+        onMouseEnter={() => setOpenDropdown(item.label)}
+        onMouseLeave={() => setOpenDropdown(null)}
+      >
         <button
           className={`flex items-center space-x-1 uppercase tracking-wider text-xs transition-colors duration-200 ${
             isScrolled ? 'text-teal hover:text-coffee-red' : 'text-linen-white hover:text-gold'
@@ -370,15 +381,19 @@ function DesktopNavItem({
           aria-expanded={isOpen}
         >
           {translations[`nav${item.label.replace(/\s+/g, '')}` as keyof Translations] || item.label}
-          <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+          <ChevronDown
+            className={`w-3 h-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+          />
         </button>
 
         {isOpen && (
-          <div className="absolute left-0 top-full mt-2 z-50 grid grid-cols-1 md:grid-cols-3 gap-6 w-[720px] p-6 rounded-2xl shadow-2xl border animate-fade-in ${
+          <div
+            className="absolute left-0 top-full mt-2 z-50 grid grid-cols-1 md:grid-cols-3 gap-6 w-[720px] p-6 rounded-2xl shadow-2xl border animate-fade-in ${
             isGlobalDark
               ? 'bg-dark-bg border-linen-white/10 text-linen-white'
               : 'bg-linen-white border-teal/10 text-teal'
-          }">
+          }"
+          >
             {item.columns?.map((col, colIdx) => (
               <div key={colIdx} className="space-y-4">
                 <h4 className="font-mono text-[10px] uppercase tracking-widest text-gold font-bold mb-2">
@@ -412,7 +427,8 @@ function DesktopNavItem({
     );
   }
 
-  const label = translations[`nav${item.label.replace(/\s+/g, '')}` as keyof Translations] || item.label;
+  const label =
+    translations[`nav${item.label.replace(/\s+/g, '')}` as keyof Translations] || item.label;
 
   if (item.label === 'Contact') {
     return (
@@ -447,7 +463,7 @@ function MobileAccordionItem({
   openAccordion,
   setOpenAccordion,
   onBookClick,
-  onContactClick,
+  onContactClick: _onContactClick,
   closeMenu,
 }: {
   item: NavMobileItemFromJSON;
@@ -478,24 +494,28 @@ function MobileAccordionItem({
   }
 
   if (isAccordion) {
-    const desktopItem = navigationData.header.mainMenu.find((m: NavMenuItemFromJSON) => m.label === item.label);
+    const desktopItem = navigationData.header.mainMenu.find(
+      (m: NavMenuItemFromJSON) => m.label === item.label,
+    );
     return (
       <div className="border-b border-current/10">
         <button
           onClick={() => setOpenAccordion(isOpen ? null : item.label)}
           className={`w-full flex items-center justify-between py-3 px-2 text-base font-semibold tracking-wide uppercase transition-all duration-300 ${
-            isGlobalDark
-              ? 'text-linen-white/80 hover:text-gold'
-              : 'text-teal hover:text-coffee-red'
+            isGlobalDark ? 'text-linen-white/80 hover:text-gold' : 'text-teal hover:text-coffee-red'
           }`}
         >
           <span>{item.label}</span>
-          <ChevronRight className={`w-4 h-4 flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`} />
+          <ChevronRight
+            className={`w-4 h-4 flex-shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`}
+          />
         </button>
 
         {isOpen && desktopItem?.columns && (
-          <div className={`py-3 space-y-4 animate-fade-in ${isGlobalDark ? 'bg-white/5' : 'bg-teal/5'}`}>
-{desktopItem.columns.map((col, colIdx) => (
+          <div
+            className={`py-3 space-y-4 animate-fade-in ${isGlobalDark ? 'bg-white/5' : 'bg-teal/5'}`}
+          >
+            {desktopItem.columns.map((col, colIdx) => (
               <div key={colIdx} className="space-y-3">
                 <h5 className="font-mono text-[10px] uppercase tracking-widest text-gold font-bold pl-2">
                   {col.title}
@@ -516,7 +536,9 @@ function MobileAccordionItem({
                         <div className="flex items-center space-x-2 text-[10px] font-mono text-gold">
                           {subItem.price && <span>{subItem.price}</span>}
                           {subItem.duration && <span>{subItem.duration}</span>}
-                          {subItem.description && <span className="text-[9px] opacity-60">{subItem.description}</span>}
+                          {subItem.description && (
+                            <span className="text-[9px] opacity-60">{subItem.description}</span>
+                          )}
                         </div>
                       </a>
                     </li>
@@ -535,9 +557,7 @@ function MobileAccordionItem({
       href={item.link}
       onClick={closeMenu}
       className={`flex items-center justify-between py-3 px-2 text-base font-semibold tracking-wide uppercase transition-all duration-300 border-b border-current/10 ${
-        isGlobalDark
-          ? 'text-linen-white/80 hover:text-gold'
-          : 'text-teal hover:text-coffee-red'
+        isGlobalDark ? 'text-linen-white/80 hover:text-gold' : 'text-teal hover:text-coffee-red'
       }`}
     >
       <span>{item.label}</span>

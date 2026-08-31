@@ -28,7 +28,7 @@ interface AboutSectionProps {
 }
 export default function AboutSection({
   content,
-  isGlobalDark,
+  isGlobalDark: _isGlobalDark,
   onBookClick,
   cookingClassImg,
   jebenaPourImg,
@@ -81,9 +81,7 @@ export default function AboutSection({
         </div>{' '}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {' '}
-          <div
-            className="p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between bg-sandstone/15 border-teal/5"
-          >
+          <div className="p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between bg-sandstone/15 border-teal/5">
             {' '}
             <div className="space-y-4">
               {' '}
@@ -105,9 +103,7 @@ export default function AboutSection({
               <span>Book Meal</span> <ArrowUpRight className="w-3.5 h-3.5" />{' '}
             </button>{' '}
           </div>{' '}
-          <div
-            className="p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between bg-sandstone/15 border-teal/5"
-          >
+          <div className="p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between bg-sandstone/15 border-teal/5">
             {' '}
             <div className="space-y-4">
               {' '}
@@ -129,9 +125,7 @@ export default function AboutSection({
               <span>Book Class</span> <ArrowUpRight className="w-3.5 h-3.5" />{' '}
             </button>{' '}
           </div>{' '}
-          <div
-            className="p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between bg-sandstone/15 border-teal/5"
-          >
+          <div className="p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between bg-sandstone/15 border-teal/5">
             {' '}
             <div className="space-y-4">
               {' '}

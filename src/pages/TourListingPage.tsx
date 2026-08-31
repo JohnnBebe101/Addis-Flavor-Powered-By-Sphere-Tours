@@ -22,17 +22,48 @@ export const TourListingPage: React.FC = () => {
       <section className="py-8 bg-sandstone/10 border-b border-teal/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button className="px-4 py-2 rounded-full bg-coffee-red text-linen-white text-sm font-mono uppercase font-bold">All Tours</button>
-            <button className="px-4 py-2 rounded-full border border-teal/20 text-teal hover:bg-teal/5 text-sm font-mono uppercase font-bold">City Tours</button>
-            <button className="px-4 py-2 rounded-full border border-teal/20 text-teal hover:bg-teal/5 text-sm font-mono uppercase font-bold">Day Trips</button>
-            <button className="px-4 py-2 rounded-full border border-teal/20 text-teal hover:bg-teal/5 text-sm font-mono uppercase font-bold">Private & Custom</button>
+            <button className="px-4 py-2 rounded-full bg-coffee-red text-linen-white text-sm font-mono uppercase font-bold">
+              All Tours
+            </button>
+            <button className="px-4 py-2 rounded-full border border-teal/20 text-teal hover:bg-teal/5 text-sm font-mono uppercase font-bold">
+              City Tours
+            </button>
+            <button className="px-4 py-2 rounded-full border border-teal/20 text-teal hover:bg-teal/5 text-sm font-mono uppercase font-bold">
+              Day Trips
+            </button>
+            <button className="px-4 py-2 rounded-full border border-teal/20 text-teal hover:bg-teal/5 text-sm font-mono uppercase font-bold">
+              Private & Custom
+            </button>
           </div>
 
           <TourCategorySelector
             categories={[
-              { id: 'city-tours', title: 'City Tours', description: "Half-day and full-day tours of Addis Ababa's top attractions", priceFrom: 'From $42', link: '/tours/', icon: <MapPin className="w-7 h-7" /> },
-              { id: 'day-trips', title: 'Day Trips', description: 'Escape the city: Debre Libanos, Tiya UNESCO Site, Menagesha Forest, Bishoftu Crater Lakes', priceFrom: 'From $75', link: '/tours/', icon: <Mountain className="w-7 h-7" /> },
-              { id: 'private-custom', title: 'Private & Custom', description: 'Fully customizable itineraries, flexible pickup times, dedicated guide', priceFrom: 'Price on Request', link: '/custom-tour/', icon: <Crown className="w-7 h-7" /> },
+              {
+                id: 'city-tours',
+                title: 'City Tours',
+                description: "Half-day and full-day tours of Addis Ababa's top attractions",
+                priceFrom: 'From $42',
+                link: '/tours/',
+                icon: <MapPin className="w-7 h-7" />,
+              },
+              {
+                id: 'day-trips',
+                title: 'Day Trips',
+                description:
+                  'Escape the city: Debre Libanos, Tiya UNESCO Site, Menagesha Forest, Bishoftu Crater Lakes',
+                priceFrom: 'From $75',
+                link: '/tours/',
+                icon: <Mountain className="w-7 h-7" />,
+              },
+              {
+                id: 'private-custom',
+                title: 'Private & Custom',
+                description:
+                  'Fully customizable itineraries, flexible pickup times, dedicated guide',
+                priceFrom: 'Price on Request',
+                link: '/custom-tour/',
+                icon: <Crown className="w-7 h-7" />,
+              },
             ]}
             headline="Browse by Category"
             subheadline="Choose the type of experience that matches your travel style"
@@ -53,7 +84,8 @@ export const TourListingPage: React.FC = () => {
 
           <TourCardGrid
             translations={{
-              subheadline: 'Choose from our complete collection of Addis Ababa city tours and day trips',
+              subheadline:
+                'Choose from our complete collection of Addis Ababa city tours and day trips',
             }}
             tours={toursData.tours as Tour[]}
             expandedTourId={null}
@@ -69,7 +101,8 @@ export const TourListingPage: React.FC = () => {
             Can't Find What You're Looking For?
           </h2>
           <p className="text-lg text-linen-white/80 mb-8 max-w-2xl mx-auto">
-            We specialize in custom itineraries. Tell us your interests, dates, and group size, and we'll create a personalized tour just for you.
+            We specialize in custom itineraries. Tell us your interests, dates, and group size, and
+            we'll create a personalized tour just for you.
           </p>
           <a
             href="/custom-tour/"

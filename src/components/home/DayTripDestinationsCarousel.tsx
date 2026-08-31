@@ -54,13 +54,9 @@ export const DayTripDestinationsCarousel: React.FC<DayTripDestinationsCarouselPr
     <section id="day-trip-destinations" className="py-16 bg-sandstone/10 border-b border-teal/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-5xl font-serif tracking-tight mb-4">
-            {headline}
-          </h2>
+          <h2 className="text-3xl md:text-5xl font-serif tracking-tight mb-4">{headline}</h2>
           <div className="w-24 h-1 bg-coffee-red mx-auto mb-4 rounded-full" />
-          <p className="text-sm opacity-80 leading-relaxed font-sans">
-            {subheadline}
-          </p>
+          <p className="text-sm opacity-80 leading-relaxed font-sans">{subheadline}</p>
         </div>
 
         <div className="relative">
@@ -92,7 +88,9 @@ export const DayTripDestinationsCarousel: React.FC<DayTripDestinationsCarouselPr
                       </span>
                       <span className="font-mono text-xs text-coffee-red hover:text-gold transition-colors flex items-center gap-1">
                         Visit Guide
-                        <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                        <span className="transition-transform duration-300 group-hover:translate-x-1">
+                          →
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -126,7 +124,9 @@ export const DayTripDestinationsCarousel: React.FC<DayTripDestinationsCarouselPr
                 key={idx}
                 onClick={() => setActiveIndex(idx * itemsPerView)}
                 className={`h-1.5 transition-all duration-300 rounded-full ${
-                  idx === Math.floor(activeIndex / itemsPerView) ? 'w-4 bg-coffee-red' : 'w-1.5 bg-teal/20'
+                  idx === Math.floor(activeIndex / itemsPerView)
+                    ? 'w-4 bg-coffee-red'
+                    : 'w-1.5 bg-teal/20'
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />

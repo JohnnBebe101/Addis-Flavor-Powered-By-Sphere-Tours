@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useState } from 'react';
 import { Calendar, Users, Minus, Plus } from 'lucide-react';
 import { Tour } from '../../types';
 
@@ -13,8 +14,8 @@ interface BookingStep1Props {
     date: string;
     guests: number;
   };
-  onChange: (field: string, value: any) => void;
-  translations: {
+  onChange: (field: string, value: string | number) => void;
+  translations?: {
     bookNowButton: string;
   };
 }
@@ -23,9 +24,9 @@ export function BookingStep1({
   tours,
   formData,
   onChange,
-  translations,
+  translations: _translations,
 }: BookingStep1Props) {
-  const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
+  const [tomorrow] = useState(() => new Date(Date.now() + 86400000).toISOString().split('T')[0]);
 
   const handleGuestChange = (delta: number) => {
     const newGuests = Math.max(1, Math.min(10, formData.guests + delta));

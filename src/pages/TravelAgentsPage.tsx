@@ -28,11 +28,26 @@ export const TravelAgentsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {[
-              { icon: <Building2 className="w-8 h-8 text-gold" />, title: 'Competitive Commissions', desc: 'Industry-leading commission rates paid promptly on every booking.' },
-              { icon: <Globe className="w-8 h-8 text-gold" />, title: 'Local Expertise', desc: 'Licensed Ethiopian guides with deep knowledge of Addis Ababa and beyond.' },
-              { icon: <Users className="w-8 h-8 text-gold" />, title: 'Reliable Service', desc: '5.0/5 on TripAdvisor. Your clients are in safe, professional hands.' },
+              {
+                icon: <Building2 className="w-8 h-8 text-gold" />,
+                title: 'Competitive Commissions',
+                desc: 'Industry-leading commission rates paid promptly on every booking.',
+              },
+              {
+                icon: <Globe className="w-8 h-8 text-gold" />,
+                title: 'Local Expertise',
+                desc: 'Licensed Ethiopian guides with deep knowledge of Addis Ababa and beyond.',
+              },
+              {
+                icon: <Users className="w-8 h-8 text-gold" />,
+                title: 'Reliable Service',
+                desc: '5.0/5 on TripAdvisor. Your clients are in safe, professional hands.',
+              },
             ].map((benefit, idx) => (
-              <div key={idx} className="bg-sandstone/50 rounded-2xl p-8 border border-teal/10 text-center">
+              <div
+                key={idx}
+                className="bg-sandstone/50 rounded-2xl p-8 border border-teal/10 text-center"
+              >
                 <div className="flex justify-center mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-serif font-bold text-teal mb-2">{benefit.title}</h3>
                 <p className="text-teal/70">{benefit.desc}</p>
@@ -48,7 +63,9 @@ export const TravelAgentsPage: React.FC = () => {
           {isSubmitted ? (
             <div className="bg-linen-white rounded-2xl p-12 border border-gold/30 text-center">
               <CheckCircle2 className="w-16 h-16 text-gold mx-auto mb-4" />
-              <h2 className="text-2xl font-serif font-bold text-teal mb-2">Partnership Request Sent!</h2>
+              <h2 className="text-2xl font-serif font-bold text-teal mb-2">
+                Partnership Request Sent!
+              </h2>
               <p className="text-teal/70">{contactData.travelAgentPartnership.successMessage}</p>
               <a
                 href="/tours/"
@@ -60,12 +77,13 @@ export const TravelAgentsPage: React.FC = () => {
           ) : (
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="bg-linen-white rounded-2xl p-8 border border-teal/10">
-                <h2 className="text-2xl font-serif font-bold text-teal mb-6">
-                  Become a Partner
-                </h2>
+                <h2 className="text-2xl font-serif font-bold text-teal mb-6">Become a Partner</h2>
                 <div className="space-y-4">
                   <div>
-                    <label htmlFor="companyName" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">
+                    <label
+                      htmlFor="companyName"
+                      className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold"
+                    >
                       {contactData.travelAgentPartnership.fields[0].label} *
                     </label>
                     <input
@@ -78,7 +96,10 @@ export const TravelAgentsPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="website" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">
+                    <label
+                      htmlFor="website"
+                      className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold"
+                    >
                       {contactData.travelAgentPartnership.fields[1].label}
                     </label>
                     <input
@@ -90,7 +111,10 @@ export const TravelAgentsPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="clientVolume" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">
+                    <label
+                      htmlFor="clientVolume"
+                      className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold"
+                    >
                       {contactData.travelAgentPartnership.fields[2].label} *
                     </label>
                     <select
@@ -100,13 +124,18 @@ export const TravelAgentsPage: React.FC = () => {
                     >
                       <option value="">Select client volume</option>
                       {contactData.travelAgentPartnership.fields[2].options?.map((opt, i) => (
-                        <option key={i} value={opt}>{opt}</option>
+                        <option key={i} value={opt}>
+                          {opt}
+                        </option>
                       ))}
                     </select>
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">
+                    <label
+                      htmlFor="message"
+                      className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold"
+                    >
                       {contactData.travelAgentPartnership.fields[3].label} *
                     </label>
                     <textarea

@@ -32,7 +32,8 @@ export default function TourCardGrid({
           </h2>
           <div className="w-24 h-1 bg-coffee-red mx-auto mb-4 rounded-full" />
           <p className="text-sm opacity-80 leading-relaxed font-sans">
-            {translations.subheadline || 'Choose from our top-rated Addis Ababa city tours and day trips. All tours include expert local guides, hotel pickup, and best price guarantee.'}
+            {translations.subheadline ||
+              'Choose from our top-rated Addis Ababa city tours and day trips. All tours include expert local guides, hotel pickup, and best price guarantee.'}
           </p>
         </div>
 
@@ -109,13 +110,15 @@ export default function TourCardGrid({
                       </p>
 
                       {/* Availability badge */}
-                      <span className={`inline-block mt-3 px-2 py-1 text-[9px] font-mono uppercase rounded-full ${
-                        tour.availability === 'available'
-                          ? 'bg-emerald-100 text-emerald-700'
-                          : tour.availability === 'limited'
-                            ? 'bg-amber-100 text-amber-700'
-                            : 'bg-red-100 text-red-700'
-                      }`}>
+                      <span
+                        className={`inline-block mt-3 px-2 py-1 text-[9px] font-mono uppercase rounded-full ${
+                          tour.availability === 'available'
+                            ? 'bg-emerald-100 text-emerald-700'
+                            : tour.availability === 'limited'
+                              ? 'bg-amber-100 text-amber-700'
+                              : 'bg-red-100 text-red-700'
+                        }`}
+                      >
                         {tour.availability.charAt(0).toUpperCase() + tour.availability.slice(1)}
                       </span>
                     </div>
@@ -132,7 +135,9 @@ export default function TourCardGrid({
                                 <Check className="w-3.5 h-3.5" />
                               </div>
                               <div>
-                                <h5 className="font-bold text-teal">{item.time} — {item.activity}</h5>
+                                <h5 className="font-bold text-teal">
+                                  {item.time} — {item.activity}
+                                </h5>
                                 <p className="text-[10px] text-teal/70 leading-relaxed mt-0.5">
                                   {item.duration}
                                 </p>

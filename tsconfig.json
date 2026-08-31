@@ -27,7 +27,5 @@
     "noUnusedLocals": true,
     "noFallthroughCasesInSwitch": true
   },
-  "exclude": [
-    "src/components/_archived"
-  ]
+  "exclude": []
 }

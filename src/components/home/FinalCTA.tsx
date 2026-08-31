@@ -27,7 +27,9 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({
       id="final-cta"
       className="relative py-20 md:py-28 overflow-hidden"
       style={{
-        backgroundImage: backgroundImage ? `linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(27, 58, 75, 0.45)), url(${backgroundImage})` : undefined,
+        backgroundImage: backgroundImage
+          ? `linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(27, 58, 75, 0.45)), url(${backgroundImage})`
+          : undefined,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

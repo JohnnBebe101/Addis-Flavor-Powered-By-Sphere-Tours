@@ -12,11 +12,13 @@ export const router = createBrowserRouter([
       },
       {
         path: 'tours/',
-        lazy: () => import('../pages/TourListingPage').then((m) => ({ Component: m.TourListingPage })),
+        lazy: () =>
+          import('../pages/TourListingPage').then((m) => ({ Component: m.TourListingPage })),
       },
       {
         path: 'tours/:slug/',
-        lazy: () => import('../pages/TourDetailPage').then((m) => ({ Component: m.TourDetailPage })),
+        lazy: () =>
+          import('../pages/TourDetailPage').then((m) => ({ Component: m.TourDetailPage })),
       },
       {
         path: 'destinations/',
@@ -34,7 +36,8 @@ export const router = createBrowserRouter([
       },
       {
         path: 'why-choose-us/',
-        lazy: () => import('../pages/WhyChooseUsPage').then((m) => ({ Component: m.WhyChooseUsPage })),
+        lazy: () =>
+          import('../pages/WhyChooseUsPage').then((m) => ({ Component: m.WhyChooseUsPage })),
       },
       {
         path: 'travel-guide/',
@@ -64,11 +67,13 @@ export const router = createBrowserRouter([
       },
       {
         path: 'custom-tour/',
-        lazy: () => import('../pages/CustomTourPage').then((m) => ({ Component: m.CustomTourPage })),
+        lazy: () =>
+          import('../pages/CustomTourPage').then((m) => ({ Component: m.CustomTourPage })),
       },
       {
         path: 'travel-agents/',
-        lazy: () => import('../pages/TravelAgentsPage').then((m) => ({ Component: m.TravelAgentsPage })),
+        lazy: () =>
+          import('../pages/TravelAgentsPage').then((m) => ({ Component: m.TravelAgentsPage })),
       },
       {
         path: 'terms/',

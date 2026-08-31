@@ -5,13 +5,13 @@
 
 import { useState } from 'react';
 import { ShoppingBag } from 'lucide-react';
-import { Translations, Tour } from '../types';
-import bookingContent from '../content/booking.json';
-import { BookingProgressBar } from './booking/BookingProgressBar';
+import { Tour, Translations } from '../types';
 import { BookingStep1 } from './booking/BookingStep1';
 import { BookingStep2 } from './booking/BookingStep2';
 import { BookingStep3 } from './booking/BookingStep3';
 import { BookingSuccess } from './booking/BookingSuccess';
+import { BookingProgressBar } from './booking/BookingProgressBar';
+import bookingContent from '../content/booking.json';
 
 interface TourBookingModalProps {
   translations: Translations;
@@ -32,13 +32,27 @@ interface BookingFormData {
   specialRequirements: string;
 }
 
-const STEP_LABELS = [
-  'Select Tour & Date',
-  'Your Details',
-  'Review & Confirm',
-];
+interface BookingFlowStep {
+  title: string;
+  fields: Array<{
+    name: string;
+    label: string;
+    type: string;
+    required: boolean;
+    placeholder: string;
+    helpText?: string;
+    options?: Array<{ value: string; label: string }>;
+  }>;
+}
 
-const bookingJson = bookingContent as any;
+interface BookingFlow {
+  step1: BookingFlowStep;
+  step2: BookingFlowStep;
+}
+
+const STEP_LABELS = ['Select Tour & Date', 'Your Details', 'Review & Confirm'];
+
+const bookingJson = bookingContent as unknown as { bookingFlow: BookingFlow };
 
 export default function TourBookingModal({
   translations,
@@ -48,7 +62,7 @@ export default function TourBookingModal({
   initialTourId,
 }: TourBookingModalProps) {
   const [step, setStep] = useState<1 | 2 | 3>(1);
-  const [formData, setFormData] = useState<BookingFormData>({
+  const [formData, setFormData] = useState<BookingFormData>(() => ({
     tourId: initialTourId || tours[0].id,
     date: new Date(Date.now() + 86400000).toISOString().split('T')[0], // Tomorrow
     guests: 2,
@@ -57,7 +71,7 @@ export default function TourBookingModal({
     phone: '',
     pickupLocation: '',
     specialRequirements: '',
-  });
+  }));
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -99,7 +113,7 @@ export default function TourBookingModal({
     onClose();
   };
 
-  const handleInputChange = (field: keyof BookingFormData, value: any) => {
+  const handleInputChange = (field: keyof BookingFormData, value: string | number) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
@@ -129,7 +143,9 @@ export default function TourBookingModal({
             <ShoppingBag className="w-5 h-5 text-gold" />
             <span>{bookingJson.bookingFlow.step1.title}</span>
           </h3>
-          <p className="text-xs text-teal/60 font-sans mt-1">Select your tour, date, and number of guests</p>
+          <p className="text-xs text-teal/60 font-sans mt-1">
+            Select your tour, date, and number of guests
+          </p>
         </div>
 
         <BookingProgressBar step={step} stepLabels={STEP_LABELS} />
@@ -172,9 +188,7 @@ export default function TourBookingModal({
               <span className="text-[10px] font-mono uppercase text-teal/50 tracking-wider">
                 Estimated Total
               </span>
-              <p className="text-lg font-mono font-bold text-coffee-red">
-                ${totalPrice} USD
-              </p>
+              <p className="text-lg font-mono font-bold text-coffee-red">${totalPrice} USD</p>
             </div>
 
             <div className="flex space-x-3">

@@ -12,15 +12,11 @@ interface AboutFAQProps {
     q3: string;
     a3: string;
   };
-  isGlobalDark: boolean;
+  isGlobalDark?: boolean;
 }
-export default function AboutFAQ({
-  content,
-  isGlobalDark,
-}: AboutFAQProps) {
+export default function AboutFAQ({ content, isGlobalDark: _isGlobalDark }: AboutFAQProps) {
   const [faqOpen, setFaqOpen] = React.useState<Record<number, boolean>>({});
-  const toggleFaq = (idx: number) =>
-    setFaqOpen((prev) => ({ ...prev, [idx]: !prev[idx] }));
+  const toggleFaq = (idx: number) => setFaqOpen((prev) => ({ ...prev, [idx]: !prev[idx] }));
   return (
     <section
       id="story-section-faq"

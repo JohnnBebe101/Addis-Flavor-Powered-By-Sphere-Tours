@@ -42,7 +42,10 @@ export const CustomTourPage: React.FC = () => {
               <div className="bg-sandstone/50 rounded-2xl p-8 border border-teal/10">
                 <div className="space-y-4">
                   <div>
-                    <label htmlFor="travelDates" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold flex items-center gap-2">
+                    <label
+                      htmlFor="travelDates"
+                      className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold flex items-center gap-2"
+                    >
                       <Calendar className="w-4 h-4 text-gold" />
                       {contactData.customTourInquiry.fields[0].label} *
                     </label>
@@ -56,7 +59,10 @@ export const CustomTourPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="groupSize" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold flex items-center gap-2">
+                    <label
+                      htmlFor="groupSize"
+                      className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold flex items-center gap-2"
+                    >
                       <Users className="w-4 h-4 text-gold" />
                       {contactData.customTourInquiry.fields[1].label} *
                     </label>
@@ -72,7 +78,10 @@ export const CustomTourPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="interests" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold flex items-center gap-2">
+                    <label
+                      htmlFor="interests"
+                      className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold flex items-center gap-2"
+                    >
                       <Sparkles className="w-4 h-4 text-gold" />
                       {contactData.customTourInquiry.fields[2].label} *
                     </label>
@@ -86,7 +95,10 @@ export const CustomTourPage: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="budget" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">
+                    <label
+                      htmlFor="budget"
+                      className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold"
+                    >
                       {contactData.customTourInquiry.fields[3].label}
                     </label>
                     <select
@@ -95,7 +107,9 @@ export const CustomTourPage: React.FC = () => {
                     >
                       <option value="">Select a budget range</option>
                       {contactData.customTourInquiry.fields[3].options?.map((opt, i) => (
-                        <option key={i} value={opt}>{opt}</option>
+                        <option key={i} value={opt}>
+                          {opt}
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -120,13 +134,22 @@ export const CustomTourPage: React.FC = () => {
             Not Sure Where to Start?
           </h2>
           <p className="text-lg text-linen-white/80 mb-8 max-w-2xl mx-auto">
-            Browse our most popular tours for inspiration, or chat with us on WhatsApp for instant help.
+            Browse our most popular tours for inspiration, or chat with us on WhatsApp for instant
+            help.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/tours/" className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md">
+            <a
+              href="/tours/"
+              className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md"
+            >
               Browse All Tours
             </a>
-            <a href={`https://wa.me/${contactData.contactInfo.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-full bg-transparent border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300">
+            <a
+              href={`https://wa.me/${contactData.contactInfo.whatsapp.replace(/\D/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 rounded-full bg-transparent border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300"
+            >
               WhatsApp Us
             </a>
           </div>

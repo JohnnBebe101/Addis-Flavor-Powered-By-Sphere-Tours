@@ -44,8 +44,8 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
   const [activeSlide, setActiveSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+  const [progress, setProgress] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const progressRef = useRef(0);
   const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Auto-advance slides
@@ -65,10 +65,17 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
   useEffect(() => {
     if (!isPlaying || isHovered) return;
 
-    progressRef.current = 0;
+    let started = false;
     progressIntervalRef.current = setInterval(() => {
-      progressRef.current += 100 / 800; // 8 seconds = 800 * 10ms
-      if (progressRef.current >= 100) progressRef.current = 0;
+      if (!started) {
+        started = true;
+        setProgress(0);
+        return;
+      }
+      setProgress((prev) => {
+        const next = prev + 100 / 800; // 8 seconds = 800 * 10ms
+        return next >= 100 ? 0 : next;
+      });
     }, 10);
 
     return () => {
@@ -79,7 +86,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
   const handleSlideChange = (index: number) => {
     setActiveSlide(index);
     // Reset progress on manual change
-    progressRef.current = 0;
+    setProgress(0);
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
@@ -115,11 +122,11 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
         <div
           className="h-full bg-gold transition-all duration-10000 ease-linear"
           style={{
-            width: `${progressRef.current}%`,
+            width: `${progress}%`,
             transitionDuration: isPlaying && !isHovered ? '8000ms' : '0ms',
           }}
           role="progressbar"
-          aria-valuenow={Math.round(progressRef.current)}
+          aria-valuenow={Math.round(progress)}
           aria-valuemin={0}
           aria-valuemax={100}
           aria-label="Slide progress"
@@ -175,24 +182,30 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
               <option value="" className="text-teal font-sans">
                 {translations.heroSearchPlaceholder}
               </option>
-              {slides.flatMap((slide) => 
-                slide.id === 1 
-                  ? tours.filter(t => t.tourType === 'city-tour').map((tour) => (
-                      <option key={tour.id} value={tour.id} className="text-teal font-sans">
-                        {tour.name} (${tour.pricing.smallGroup.adult}/guest)
-                      </option>
-                    ))
+              {slides.flatMap((slide) =>
+                slide.id === 1
+                  ? tours
+                      .filter((t) => t.tourType === 'city-tour')
+                      .map((tour) => (
+                        <option key={tour.id} value={tour.id} className="text-teal font-sans">
+                          {tour.name} (${tour.pricing.smallGroup.adult}/guest)
+                        </option>
+                      ))
                   : slide.id === 2
-                  ? tours.filter(t => t.tourType === 'day-trip').map((tour) => (
-                      <option key={tour.id} value={tour.id} className="text-teal font-sans">
-                        {tour.name} (${tour.pricing.smallGroup.adult}/guest)
-                      </option>
-                    ))
-                  : tours.filter(t => t.tourType === 'private' || t.tourType === 'custom').map((tour) => (
-                      <option key={tour.id} value={tour.id} className="text-teal font-sans">
-                        {tour.name} (Price on Request)
-                      </option>
-                    ))
+                    ? tours
+                        .filter((t) => t.tourType === 'day-trip')
+                        .map((tour) => (
+                          <option key={tour.id} value={tour.id} className="text-teal font-sans">
+                            {tour.name} (${tour.pricing.smallGroup.adult}/guest)
+                          </option>
+                        ))
+                    : tours
+                        .filter((t) => t.tourType === 'private' || t.tourType === 'custom')
+                        .map((tour) => (
+                          <option key={tour.id} value={tour.id} className="text-teal font-sans">
+                            {tour.name} (Price on Request)
+                          </option>
+                        )),
               )}
             </select>
             <button
@@ -242,7 +255,9 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
               key={index}
               onClick={() => handleSlideChange(index)}
               className={`h-2 rounded-full transition-all duration-500 ${
-                index === activeSlide ? 'w-8 bg-gold' : 'w-2 bg-linen-white/40 hover:bg-linen-white/60'
+                index === activeSlide
+                  ? 'w-8 bg-gold'
+                  : 'w-2 bg-linen-white/40 hover:bg-linen-white/60'
               }`}
               aria-label={`Go to slide ${index + 1}`}
               aria-current={index === activeSlide ? 'true' : 'false'}

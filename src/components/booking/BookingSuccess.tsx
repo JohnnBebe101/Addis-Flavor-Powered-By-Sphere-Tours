@@ -19,8 +19,8 @@ interface BookingSuccessProps {
     specialRequirements: string;
   };
   totalPrice: number;
-  resetBooking: () => void;
-  translations: {
+  resetBooking?: () => void;
+  translations?: {
     bookNowButton: string;
   };
 }
@@ -29,8 +29,8 @@ export function BookingSuccess({
   selectedTour,
   formData,
   totalPrice,
-  resetBooking,
-  translations,
+  resetBooking: _resetBooking,
+  translations: _translations,
 }: BookingSuccessProps) {
   return (
     <div className="text-center py-6 space-y-4">
@@ -40,19 +40,42 @@ export function BookingSuccess({
       <h4 className="text-2xl font-serif text-teal font-bold">Booking Confirmed!</h4>
       <p className="text-sm text-teal/80 leading-relaxed max-w-sm mx-auto">
         Your private session for "{selectedTour.name}" has been successfully requested for{' '}
-        {new Date(formData.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}.
-        Your guide will message you shortly to coordinate arrival details!
+        {new Date(formData.date).toLocaleDateString('en-US', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}
+        . Your guide will message you shortly to coordinate arrival details!
       </p>
 
       <div className="bg-sandstone/80 rounded-2xl p-4 border border-teal/10 text-left max-w-sm mx-auto">
         <p className="text-xs font-mono text-teal/60 uppercase">Booking Details</p>
         <div className="mt-2 space-y-1 text-xs">
-          <p><strong>Tour:</strong> {selectedTour.name}</p>
-          <p><strong>Date:</strong> {new Date(formData.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
-          <p><strong>Guests:</strong> {formData.guests} guest{formData.guests > 1 ? 's' : ''}</p>
-          <p><strong>Name:</strong> {formData.fullName}</p>
-          <p><strong>Phone:</strong> {formData.phone}</p>
-          <p><strong>Pickup:</strong> {formData.pickupLocation}</p>
+          <p>
+            <strong>Tour:</strong> {selectedTour.name}
+          </p>
+          <p>
+            <strong>Date:</strong>{' '}
+            {new Date(formData.date).toLocaleDateString('en-US', {
+              weekday: 'long',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </p>
+          <p>
+            <strong>Guests:</strong> {formData.guests} guest{formData.guests > 1 ? 's' : ''}
+          </p>
+          <p>
+            <strong>Name:</strong> {formData.fullName}
+          </p>
+          <p>
+            <strong>Phone:</strong> {formData.phone}
+          </p>
+          <p>
+            <strong>Pickup:</strong> {formData.pickupLocation}
+          </p>
           <div className="border-t border-teal/10 pt-1.5 mt-1.5 flex justify-between font-bold text-sm">
             <span>Total:</span>
             <span className="text-coffee-red">${totalPrice} USD</span>
@@ -66,7 +89,9 @@ export function BookingSuccess({
       </div>
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 mt-4">
-        <p className="text-xs text-amber-800 font-mono uppercase tracking-wider mb-2">What Happens Next?</p>
+        <p className="text-xs text-amber-800 font-mono uppercase tracking-wider mb-2">
+          What Happens Next?
+        </p>
         <ul className="text-xs text-amber-700 space-y-1 text-left">
           <li>• Your guide will contact you via WhatsApp within 2 hours</li>
           <li>• You'll receive confirmation with guide details and pickup time</li>
