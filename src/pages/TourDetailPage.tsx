@@ -92,12 +92,16 @@ export const TourDetailPage: React.FC = () => {
             {tour.subtitle}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="/contact/"
+            <button
+              onClick={() => {
+                const params = new URLSearchParams(window.location.search);
+                params.set('book', tour.id);
+                window.location.search = params.toString();
+              }}
               className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md"
             >
               Book Now
-            </a>
+            </button>
             <a
               href={`https://wa.me/251911209882`}
               target="_blank"
@@ -399,6 +403,67 @@ export const TourDetailPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Related Tours — You May Also Like */}
+      {tour.relatedTours && tour.relatedTours.length > 0 && (
+        <section className="py-16 bg-linen-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-teal mb-2">
+                You May Also Like
+              </h2>
+              <p className="text-teal/70">Similar tours you might enjoy</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {tour.relatedTours
+                .map((relatedId) => typedToursData.tours.find((t) => t.id === relatedId))
+                .filter(Boolean)
+                .slice(0, 3)
+                .map((relatedTour) => (
+                  <a
+                    key={relatedTour!.id}
+                    href={`/tours/${relatedTour!.slug}/`}
+                    className="group bg-linen-white rounded-2xl border border-teal/10 overflow-hidden hover:border-gold/40 hover:shadow-xl transition-all duration-300"
+                  >
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={relatedTour!.images[0]}
+                        alt={relatedTour!.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                      <div className="absolute bottom-3 left-3 right-3 text-linen-white">
+                        <p className="text-[10px] uppercase font-mono tracking-wider opacity-85">
+                          {relatedTour!.duration}
+                        </p>
+                        <p className="text-sm font-bold">
+                          From ${relatedTour!.pricing.smallGroup.adult} USD
+                        </p>
+                      </div>
+                    </div>
+                    <div className="p-5">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-coffee-red bg-coffee-red/10 px-2 py-0.5 rounded-full">
+                        {relatedTour!.tourType === 'city-tour' ? 'City Tour' : relatedTour!.tourType === 'day-trip' ? 'Day Trip' : 'Private'}
+                      </span>
+                      <h3 className="text-lg font-serif font-bold text-teal mt-2 group-hover:text-coffee-red transition-colors">
+                        {relatedTour!.name}
+                      </h3>
+                      <p className="text-xs text-teal/70 mt-2 line-clamp-2">
+                        {relatedTour!.shortDescription}
+                      </p>
+                      <div className="flex items-center gap-1 mt-3">
+                        <Star className="w-3.5 h-3.5 fill-current text-gold" />
+                        <span className="text-xs font-bold text-teal">{relatedTour!.rating.toFixed(1)}</span>
+                        <span className="text-[10px] text-teal/60">({relatedTour!.reviewCount})</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Trust & Safety */}
       <section className="py-16 bg-teal text-linen-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -444,12 +509,16 @@ export const TourDetailPage: React.FC = () => {
             guides.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="/contact/"
+            <button
+              onClick={() => {
+                const params = new URLSearchParams(window.location.search);
+                params.set('book', tour.id);
+                window.location.search = params.toString();
+              }}
               className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md"
             >
               Book Now
-            </a>
+            </button>
             <a
               href="/contact/"
               className="px-8 py-3 rounded-full border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300"

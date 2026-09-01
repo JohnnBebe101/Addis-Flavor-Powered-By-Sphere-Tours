@@ -1,5 +1,6 @@
-import { Outlet, ScrollRestoration, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { Outlet, ScrollRestoration, useLocation, useSearchParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { NotificationBar } from '../components/NotificationBar';
 import Navbar from '../components/Navbar';
 import { HeroBanner } from '../components/home/HeroBanner';
 import { Footer } from '../components/home/Footer';
@@ -16,21 +17,24 @@ import homeData from '../content/home.json';
 export const Layout = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
-  const [searchSelection, setSearchSelection] = useState('');
-  const [isSelectFocused, setIsSelectFocused] = useState(false);
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    const bookTourId = searchParams.get('book');
+    if (bookTourId) {
+      setIsBookingOpen(true);
+      const newParams = new URLSearchParams(searchParams);
+      newParams.delete('book');
+      setSearchParams(newParams, { replace: true });
+    }
+  }, [search, searchParams, setSearchParams]);
 
   const handleOpenBooking = () => setIsBookingOpen(true);
 
-  const handleSelectSearchPackage = (tourId: string) => {
-    setSearchSelection(tourId);
-    if (tourId) {
-      setIsBookingOpen(true);
-    }
-  };
-
   return (
     <>
+      <NotificationBar />
       <Navbar
         translations={TRANSLATIONS}
         onBookClick={handleOpenBooking}
@@ -39,15 +43,7 @@ export const Layout = () => {
       {pathname === '/' && (
         <HeroBanner
           slides={homeData.hero.slides}
-          translations={{
-            heroSearchPlaceholder: TRANSLATIONS.heroSearchPlaceholder,
-            heroSearchGo: 'GO',
-          }}
           tours={toursData.tours as Tour[]}
-          searchSelection={searchSelection}
-          isSelectFocused={isSelectFocused}
-          setIsSelectFocused={setIsSelectFocused}
-          handleSelectSearchPackage={handleSelectSearchPackage}
           handleOpenBooking={handleOpenBooking}
         />
       )}
@@ -67,6 +63,7 @@ export const Layout = () => {
         tours={toursData.tours as Tour[]}
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
+        initialTourId={undefined}
       />
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
       <FloatingWhatsApp />

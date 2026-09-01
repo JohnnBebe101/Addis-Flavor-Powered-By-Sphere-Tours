@@ -5,6 +5,7 @@
 
 import TourCardGrid from '../components/home/TourCardGrid';
 import { TourCategorySelector } from '../components/home/TourCategorySelector';
+import { WhyChooseUsHero } from '../components/home/WhyChooseUsHero';
 import { WhyChooseUsPreview } from '../components/home/WhyChooseUsPreview';
 import { AddisHighlightsGrid } from '../components/home/AddisHighlightsGrid';
 import { DayTripDestinationsCarousel } from '../components/home/DayTripDestinationsCarousel';
@@ -13,6 +14,7 @@ import { PracticalInfoGrid } from '../components/home/PracticalInfoGrid';
 import { FinalCTA } from '../components/home/FinalCTA';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 
+import { useState } from 'react';
 import { Tour } from '../types';
 import homeData from '../content/home.json';
 import toursData from '../content/tours.json';
@@ -35,6 +37,13 @@ import {
 } from 'lucide-react';
 
 export const Homepage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<string>('all');
+
+  const filteredTours =
+    activeTab === 'all'
+      ? (toursData.tours as Tour[])
+      : (toursData.tours as Tour[]).filter((t) => t.tourType === activeTab);
+
   // Pre-compute data with icons
   const tourCategoriesWithIcons = homeData.tourCategorySelector.categories.map((cat, idx) => ({
     ...cat,
@@ -108,6 +117,12 @@ export const Homepage: React.FC = () => {
 
   return (
     <>
+      {/* 3. WHY CHOOSE US — HERO SECTION */}
+      <WhyChooseUsHero
+        headline={homeData.whyChooseUsHero.headline}
+        benefits={homeData.whyChooseUsHero.benefits}
+      />
+
       {/* 4. TOUR CATEGORY SELECTOR */}
       <TourCategorySelector
         categories={tourCategoriesWithIcons}
@@ -115,14 +130,46 @@ export const Homepage: React.FC = () => {
         subheadline={homeData.tourCategorySelector.subheadline}
       />
 
-      {/* 6. TOUR CARD GRID */}
-      <TourCardGrid
-        translations={homeData.featuredTours}
-        tours={toursData.tours as Tour[]}
-        expandedTourId={null}
-        setExpandedTourId={() => {}} // TODO: wire expansion state
-        handleSelectSearchPackage={() => {}} // TODO: wire to Layout search
-      />
+      {/* 6. TOUR CARD GRID — CATEGORY TABS */}
+      <section className="py-16 md:py-24 bg-sandstone/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <h2 className="text-3xl md:text-5xl font-serif tracking-tight mb-4">
+              {homeData.featuredTours.headline || 'Our Most Popular Tours'}
+            </h2>
+            <div className="w-24 h-1 bg-coffee-red mx-auto mb-4 rounded-full" />
+            <p className="text-sm opacity-80 leading-relaxed font-sans">
+              {homeData.featuredTours.subheadline}
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {[
+              { key: 'all', label: 'All Tours' },
+              { key: 'city-tour', label: 'City Tours' },
+              { key: 'day-trip', label: 'Day Trips' },
+              { key: 'private', label: 'Private & Custom' },
+            ].map((tab) => (
+              <button
+                key={tab.key}
+                onClick={() => setActiveTab(tab.key)}
+                className={`px-4 py-2 rounded-full text-xs font-mono uppercase font-bold tracking-wider transition-all duration-300 ${
+                  activeTab === tab.key
+                    ? 'bg-coffee-red text-linen-white shadow-md'
+                    : 'border border-teal/20 text-teal hover:bg-teal/5'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <TourCardGrid
+          tours={filteredTours}
+          carousel
+        />
+      </section>
 
       {/* 7. WHY CHOOSE US PREVIEW */}
       <WhyChooseUsPreview
@@ -171,9 +218,11 @@ export const Homepage: React.FC = () => {
         subheadline={homeData.finalCta.subheadline}
         ctaPrimary={homeData.finalCta.ctaPrimary}
         ctaSecondary={homeData.finalCta.ctaSecondary}
-        ctaPrimaryLink="/tours/"
-        ctaSecondaryLink="/contact/"
+        ctaPrimaryLink={homeData.finalCta.ctaPrimaryLink}
+        ctaSecondaryLink={homeData.finalCta.ctaSecondaryLink}
         backgroundImage="/images/hero/final-cta-bg.jpg"
+        image={homeData.finalCta.image}
+        badge={homeData.finalCta.badge}
       />
     </>
   );

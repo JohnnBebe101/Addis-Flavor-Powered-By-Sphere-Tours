@@ -11,6 +11,11 @@ interface FinalCTAProps {
   ctaPrimaryLink: string;
   ctaSecondaryLink: string;
   backgroundImage?: string;
+  image?: string;
+  badge?: {
+    text: string;
+    label: string;
+  };
 }
 
 export const FinalCTA: React.FC<FinalCTAProps> = ({
@@ -21,40 +26,73 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({
   ctaPrimaryLink,
   ctaSecondaryLink,
   backgroundImage,
+  image,
+  badge,
 }) => {
+  const imgSrc = image || backgroundImage;
+
   return (
-    <section
-      id="final-cta"
-      className="relative py-20 md:py-28 overflow-hidden"
-      style={{
-        backgroundImage: backgroundImage
-          ? `linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(27, 58, 75, 0.45)), url(${backgroundImage})`
-          : undefined,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/50" />
-      <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 space-y-6">
-        <h2 className="text-3xl md:text-5xl font-serif text-linen-white tracking-tight leading-tight">
-          {headline}
-        </h2>
-        <p className="text-base md:text-xl text-sandstone max-w-2xl mx-auto font-sans font-light leading-relaxed">
-          {subheadline}
-        </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <a
-            href={ctaPrimaryLink}
-            className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 transform active:scale-95 shadow-md flex items-center justify-center space-x-1"
-          >
-            <span>{ctaPrimary}</span>
-          </a>
-          <a
-            href={ctaSecondaryLink}
-            className="px-8 py-3 rounded-full bg-transparent border-2 border-gold hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 transform active:scale-95 flex items-center justify-center space-x-1"
-          >
-            <span>{ctaSecondary}</span>
-          </a>
+    <section id="final-cta" className="bg-teal">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[480px]">
+
+          {/* LEFT PANEL — Dark background with text */}
+          <div className="flex flex-col justify-center p-8 md:p-12 lg:p-16 space-y-6">
+            {/* Badge */}
+            {badge && (
+              <div className="flex items-center gap-3">
+                <div className="w-14 h-14 rounded-full bg-gold/20 flex items-center justify-center">
+                  <span className="text-gold font-serif font-bold text-lg">{badge.text}</span>
+                </div>
+                <span className="text-gold/80 font-mono text-xs uppercase tracking-wider">{badge.label}</span>
+              </div>
+            )}
+
+            {/* Headline */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-linen-white tracking-tight leading-tight">
+              {headline}
+            </h2>
+
+            {/* Subheadline */}
+            <p className="text-base md:text-lg text-sandstone/80 font-sans font-light leading-relaxed max-w-lg">
+              {subheadline}
+            </p>
+
+            {/* CTA buttons */}
+            <div className="flex flex-col sm:flex-row items-start gap-4 pt-2">
+              <a
+                href={ctaPrimaryLink}
+                className="px-8 py-3.5 rounded-full bg-gold hover:bg-gold/90 text-teal font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 transform active:scale-95 shadow-md"
+              >
+                {ctaPrimary}
+              </a>
+              <a
+                href={ctaSecondaryLink}
+                className="px-8 py-3.5 rounded-full bg-transparent border-2 border-gold/50 hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 transform active:scale-95"
+              >
+                {ctaSecondary}
+              </a>
+            </div>
+          </div>
+
+          {/* RIGHT PANEL — Full image, no overlay */}
+          <div className="relative min-h-[300px] lg:min-h-0">
+            {imgSrc && (
+              <img
+                src={imgSrc}
+                alt="Explore Addis Ababa"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            )}
+            {/* Gold badge overlay on image */}
+            {badge && (
+              <div className="absolute top-6 right-6 w-20 h-20 rounded-full bg-gold/90 flex flex-col items-center justify-center shadow-lg">
+                <span className="text-teal font-serif font-bold text-[10px] uppercase leading-none">{badge.label}</span>
+                <span className="text-teal font-serif font-bold text-xl leading-none mt-0.5">{badge.text}</span>
+              </div>
+            )}
+          </div>
+
         </div>
       </div>
     </section>

@@ -3,7 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Menu,
   X,
@@ -19,6 +20,7 @@ import {
 } from 'lucide-react';
 import { Translations } from '../types';
 import navigationData from '../content/navigation.json';
+import { MegaMenuDropdown } from './MegaMenuDropdown';
 
 type NavMenuItemFromJSON = {
   label: string;
@@ -86,9 +88,15 @@ export default function Navbar({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const navigate = useNavigate();
+
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (window.location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+    }
   };
 
   const handleBookClick = (e?: React.MouseEvent) => {
@@ -108,9 +116,9 @@ export default function Navbar({
       <nav
         id="navbar"
         ref={desktopMenuRef}
-        className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed left-0 right-0 z-[999] transition-all duration-300 ${
           isScrolled
-            ? 'top-0 bg-sandstone/95 backdrop-blur-md shadow-md py-3 text-teal'
+            ? 'top-9 bg-sandstone/95 backdrop-blur-md shadow-md py-3 text-teal'
             : 'top-9 bg-gradient-to-b from-black/60 to-transparent py-5 text-linen-white'
         }`}
       >
@@ -209,12 +217,12 @@ export default function Navbar({
           <div
             ref={mobileMenuRef}
             onClick={() => setIsMobileMenuOpen(false)}
-            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-md md:hidden animate-fade-in"
+            className="fixed inset-0 z-[980] bg-black/60 backdrop-blur-md md:hidden animate-fade-in"
           />
 
           <div
             id="mobile-drawer"
-            className={`fixed top-0 right-0 bottom-0 z-50 w-[85%] max-w-sm h-full flex flex-col justify-between p-6 shadow-2xl overflow-y-auto md:hidden animate-slide-in-right ${
+            className={`fixed top-0 right-0 bottom-0 z-[985] w-[85%] max-w-sm h-full flex flex-col justify-between p-6 shadow-2xl overflow-y-auto md:hidden animate-slide-in-right ${
               isGlobalDark
                 ? 'bg-dark-bg text-linen-white border-l border-linen-white/10'
                 : 'bg-linen-white text-teal border-l border-teal/10'
@@ -365,15 +373,40 @@ function DesktopNavItem({
 }) {
   const isOpen = openDropdown === item.label;
   const isDropdown = item.type === 'dropdown';
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = useCallback(() => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setOpenDropdown(item.label);
+  }, [item.label, setOpenDropdown]);
+
+  const handleMouseLeave = useCallback(() => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 200);
+  }, [setOpenDropdown]);
+
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
 
   if (isDropdown && item.columns) {
     return (
       <div
         className="relative"
-        onMouseEnter={() => setOpenDropdown(item.label)}
-        onMouseLeave={() => setOpenDropdown(null)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <button
+          ref={triggerRef}
           className={`flex items-center space-x-1 uppercase tracking-wider text-xs transition-colors duration-200 ${
             isScrolled ? 'text-teal hover:text-coffee-red' : 'text-linen-white hover:text-gold'
           }`}
@@ -386,43 +419,16 @@ function DesktopNavItem({
           />
         </button>
 
-        {isOpen && (
-          <div
-            className="absolute left-0 top-full mt-2 z-50 grid grid-cols-1 md:grid-cols-3 gap-6 w-[720px] p-6 rounded-2xl shadow-2xl border animate-fade-in ${
-            isGlobalDark
-              ? 'bg-dark-bg border-linen-white/10 text-linen-white'
-              : 'bg-linen-white border-teal/10 text-teal'
-          }"
-          >
-            {item.columns?.map((col, colIdx) => (
-              <div key={colIdx} className="space-y-4">
-                <h4 className="font-mono text-[10px] uppercase tracking-widest text-gold font-bold mb-2">
-                  {col.title}
-                </h4>
-                <ul className="space-y-2">
-                  {col.items.map((subItem, itemIdx) => (
-                    <li key={itemIdx}>
-                      <a
-                        href={subItem.link}
-                        className={`flex items-center justify-between py-2 px-3 rounded-lg transition-colors ${
-                          isGlobalDark
-                            ? 'hover:bg-white/5 hover:text-gold'
-                            : 'hover:bg-teal/5 hover:text-coffee-red'
-                        }`}
-                      >
-                        <span className="font-medium">{subItem.label}</span>
-                        <div className="flex items-center space-x-2 text-[10px] font-mono text-gold">
-                          {subItem.price && <span>{subItem.price}</span>}
-                          {subItem.duration && <span>{subItem.duration}</span>}
-                        </div>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        )}
+        <MegaMenuDropdown
+          isOpen={isOpen}
+          columns={item.columns}
+          link={item.link}
+          label={item.label}
+          isGlobalDark={isGlobalDark}
+          triggerRef={triggerRef}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        />
       </div>
     );
   }

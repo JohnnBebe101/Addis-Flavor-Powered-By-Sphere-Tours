@@ -4,7 +4,7 @@
  */
 
 import { useState, useEffect, useRef } from 'react';
-import { Search, ChevronRight, ChevronLeft, Pause, Play } from 'lucide-react';
+import { Search, ChevronRight, ChevronLeft, Pause, Play, Camera, Bed, UtensilsCrossed, MapPin } from 'lucide-react';
 import { Tour } from '../../types';
 
 interface HeroSlide {
@@ -19,26 +19,13 @@ interface HeroSlide {
 
 interface HeroBannerProps {
   slides: HeroSlide[];
-  translations: {
-    heroSearchPlaceholder: string;
-    heroSearchGo: string;
-  };
   tours: Tour[];
-  searchSelection: string;
-  isSelectFocused: boolean;
-  setIsSelectFocused: (value: boolean) => void;
-  handleSelectSearchPackage: (value: string) => void;
   handleOpenBooking: () => void;
 }
 
 export const HeroBanner: React.FC<HeroBannerProps> = ({
   slides,
-  translations,
   tours,
-  searchSelection,
-  isSelectFocused,
-  setIsSelectFocused,
-  handleSelectSearchPackage,
   handleOpenBooking,
 }) => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -47,6 +34,18 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
   const [progress, setProgress] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const progressIntervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Search category tabs
+  const categories = [
+    { id: 'all', label: 'Search All', icon: Search, placeholder: 'Attraction, activity or destination', searchPath: '/tours/' },
+    { id: 'tours', label: 'Things to Do', icon: Camera, placeholder: 'Search tours and activities', searchPath: '/tours/' },
+    { id: 'hotels', label: 'Hotels', icon: Bed, placeholder: 'Find hotels and accommodations', searchPath: '/travel-guide/' },
+    { id: 'restaurants', label: 'Restaurants', icon: UtensilsCrossed, placeholder: 'Restaurants and food experiences', searchPath: '/travel-guide/' },
+    { id: 'destinations', label: 'Destinations', icon: MapPin, placeholder: 'Explore destinations', searchPath: '/destinations/' },
+  ];
+
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
   // Auto-advance slides
   useEffect(() => {
@@ -141,7 +140,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
         {/* Slide Title */}
         <h1
           id="hero-headline"
-          className="text-3xl sm:text-5xl font-serif font-extrabold text-linen-white tracking-tight leading-tight uppercase animate-hero-slide-up"
+          className="text-4xl sm:text-6xl font-serif font-black text-linen-white tracking-tight leading-tight uppercase drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] animate-hero-slide-up"
           style={{ animationDelay: '150ms' }}
         >
           {slides[activeSlide].title}
@@ -150,79 +149,70 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
         {/* Slide Subtitle */}
         <p
           id="hero-subheadline"
-          className="text-sm sm:text-lg text-sandstone max-w-2xl mx-auto font-sans font-light leading-relaxed animate-hero-slide-up"
+          className="text-base sm:text-xl text-sandstone max-w-2xl mx-auto font-sans font-normal leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)] animate-hero-slide-up"
           style={{ animationDelay: '300ms' }}
         >
           {slides[activeSlide].subtitle}
         </p>
 
-        {/* Search & CTA */}
-        <div className="max-w-md mx-auto pt-4 animate-hero-slide-up" style={{ animationDelay: '450ms' }}>
-          <div
-            className="bg-linen-white/10 backdrop-blur-md border border-linen-white/20 p-2 rounded-full flex items-center shadow-2xl transition-all duration-300 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-gold has-[:focus-visible]:border-gold has-[:focus-visible]:ring_offset-2 has-[:focus-visible]:ring-offset-teal"
-            aria-haspopup="listbox"
-            aria-expanded={isSelectFocused}
+        {/* Search Bar with Category Tabs */}
+        <div className="max-w-3xl mx-auto pt-4 animate-hero-slide-up" style={{ animationDelay: '450ms' }}>
+          {/* Category Tabs */}
+          <div className="flex items-center justify-center gap-1 mb-3 overflow-x-auto pb-1">
+            {categories.map((cat) => {
+              const Icon = cat.icon;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono whitespace-nowrap transition-all duration-300 ${
+                    activeCategory === cat.id
+                      ? 'bg-linen-white/20 text-linen-white border border-linen-white/30'
+                      : 'text-linen-white/60 hover:text-linen-white/80 hover:bg-linen-white/10'
+                  }`}
+                >
+                  <Icon className="w-3.5 h-3.5" />
+                  <span>{cat.label}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Search Input */}
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (searchQuery.trim()) {
+                const cat = categories.find((c) => c.id === activeCategory);
+                window.location.href = `${cat?.searchPath || '/tours/'}?q=${encodeURIComponent(searchQuery.trim())}`;
+              }
+            }}
+            className="bg-linen-white/15 backdrop-blur-xl border border-linen-white/30 p-2 rounded-full flex items-center shadow-[0_4px_24px_rgba(0,0,0,0.4)] transition-all duration-300 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-gold has-[:focus-visible]:border-gold has-[:focus-visible]:ring-offset-2 has-[:focus-visible]:ring-offset-teal"
           >
             <div className="pl-4 text-linen-white/80">
               <Search className="w-5 h-5 text-gold" />
             </div>
-            <label htmlFor="hero-tour-search" className="sr-only">
-              {translations.heroSearchPlaceholder}
-            </label>
-            <select
-              id="hero-tour-search"
-              aria-label={translations.heroSearchPlaceholder}
-              value={searchSelection}
-              onChange={(e) => handleSelectSearchPackage(e.target.value)}
-              onFocus={() => setIsSelectFocused(true)}
-              onBlur={() => setIsSelectFocused(false)}
-              className="w-full bg-transparent text-linen-white text-xs sm:text-sm font-semibold py-2.5 px-3 focus:outline-none cursor-pointer placeholder-linen-white/60 select-reset appearance-none focus-visible:outline-none"
-              style={{ WebkitAppearance: 'none' }}
-            >
-              <option value="" className="text-teal font-sans">
-                {translations.heroSearchPlaceholder}
-              </option>
-              {slides.flatMap((slide) =>
-                slide.id === 1
-                  ? tours
-                      .filter((t) => t.tourType === 'city-tour')
-                      .map((tour) => (
-                        <option key={tour.id} value={tour.id} className="text-teal font-sans">
-                          {tour.name} (${tour.pricing.smallGroup.adult}/guest)
-                        </option>
-                      ))
-                  : slide.id === 2
-                    ? tours
-                        .filter((t) => t.tourType === 'day-trip')
-                        .map((tour) => (
-                          <option key={tour.id} value={tour.id} className="text-teal font-sans">
-                            {tour.name} (${tour.pricing.smallGroup.adult}/guest)
-                          </option>
-                        ))
-                    : tours
-                        .filter((t) => t.tourType === 'private' || t.tourType === 'custom')
-                        .map((tour) => (
-                          <option key={tour.id} value={tour.id} className="text-teal font-sans">
-                            {tour.name} (Price on Request)
-                          </option>
-                        )),
-              )}
-            </select>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={categories.find((c) => c.id === activeCategory)?.placeholder || 'Search...'}
+              className="w-full bg-transparent text-linen-white text-sm font-sans py-2.5 px-3 focus:outline-none placeholder-linen-white/50"
+              aria-label="Search"
+            />
             <button
-              id="hero-search-go-btn"
-              onClick={handleOpenBooking}
-              className="bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider px-8 py-3 sm:px-6 sm:py-2.5 min-h-[44px] sm:min-h-0 rounded-full transition-all duration-300 transform active:scale-95 shadow-md flex items-center justify-center space-x-1 flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-teal"
+              type="submit"
+              className="bg-gold hover:bg-gold/90 text-teal font-mono text-sm uppercase font-black tracking-wider px-8 py-3 min-h-[48px] rounded-full transition-all duration-300 transform active:scale-95 shadow-[0_2px_12px_rgba(166,124,82,0.5)] hover:shadow-[0_4px_20px_rgba(166,124,82,0.6)] flex items-center justify-center flex-shrink-0"
             >
-              <span>{translations.heroSearchGo || 'GO'}</span>
-              <ChevronRight className="w-3 h-3" />
+              Search
             </button>
-          </div>
+          </form>
         </div>
 
         {/* Navigation Arrows */}
         <button
           onClick={() => setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length)}
-          className="absolute left-6 top-1/2 -translate-y-1/2 p-2 rounded-full bg-linen-white/20 border border-linen-white/30 text-linen-white hover:bg-linen-white/30 hover:text-gold transition-all duration-300 z-20"
+          className="absolute left-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-linen-white/25 border border-linen-white/40 text-linen-white hover:bg-linen-white/40 hover:text-gold transition-all duration-300 z-20 shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6" />
@@ -230,7 +220,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
 
         <button
           onClick={() => setActiveSlide((prev) => (prev + 1) % slides.length)}
-          className="absolute right-6 top-1/2 -translate-y-1/2 p-2 rounded-full bg-linen-white/20 border border-linen-white/30 text-linen-white hover:bg-linen-white/30 hover:text-gold transition-all duration-300 z-20"
+          className="absolute right-6 top-1/2 -translate-y-1/2 p-3 rounded-full bg-linen-white/25 border border-linen-white/40 text-linen-white hover:bg-linen-white/40 hover:text-gold transition-all duration-300 z-20 shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
           aria-label="Next slide"
         >
           <ChevronRight className="w-6 h-6" />

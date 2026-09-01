@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { ChevronRight } from 'lucide-react';
-
 interface AddisHighlightsGridProps {
   attractions: Array<{
     id: number;
     title: string;
     description: string;
     link: string;
+    icon?: React.ReactNode;
+    image?: string;
   }>;
   headline: string;
   subheadline: string;
@@ -35,19 +35,33 @@ export const AddisHighlightsGrid: React.FC<AddisHighlightsGridProps> = ({
             <a
               key={attraction.id}
               href={attraction.link}
-              className="group p-6 rounded-2xl border border-teal/10 bg-linen-white hover:border-gold/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="group relative aspect-[4/5] rounded-2xl overflow-hidden"
             >
-              <div className="w-14 h-14 rounded-2xl bg-gold/10 text-gold flex items-center justify-center mb-4 group-hover:bg-gold group-hover:text-teal transition-all duration-300">
-                <span className="text-2xl">🏛️</span>
+              {/* Background image */}
+              {attraction.image ? (
+                <img
+                  src={attraction.image}
+                  alt={attraction.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="absolute inset-0 bg-teal flex items-center justify-center">
+                  <div className="text-linen-white/15">
+                    {attraction.icon || <span className="text-6xl">🏛️</span>}
+                  </div>
+                </div>
+              )}
+
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-teal via-teal/30 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300" />
+
+              {/* Title at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <h3 className="text-lg font-serif font-bold text-linen-white leading-snug group-hover:text-gold transition-colors duration-300 drop-shadow-lg">
+                  {attraction.title}
+                </h3>
               </div>
-              <h3 className="text-lg font-serif font-bold text-teal group-hover:text-coffee-red transition-colors mb-2">
-                {attraction.title}
-              </h3>
-              <p className="text-sm text-teal/70 leading-relaxed mb-4">{attraction.description}</p>
-              <span className="font-mono text-xs text-coffee-red group-hover:text-gold transition-colors flex items-center gap-1">
-                Visit on Our Tours
-                <ChevronRight className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" />
-              </span>
             </a>
           ))}
         </div>

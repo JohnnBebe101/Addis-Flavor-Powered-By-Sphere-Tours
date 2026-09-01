@@ -39,14 +39,14 @@
         "title": "City Tours",
         "description": "Half-day and full-day tours of Addis Ababa's top attractions: National Museum, Merkato, Holy Trinity Cathedral, and more.",
         "priceFrom": "From $42",
-        "link": "/tours/"
+        "link": "/tours/?category=city-tours"
       },
       {
         "id": "day-trips",
         "title": "Day Trips",
         "description": "Escape the city: Debre Libanos Monastery, Tiya UNESCO Site, Menagesha Forest, Bishoftu Crater Lakes.",
         "priceFrom": "From $75",
-        "link": "/tours/"
+        "link": "/tours/?category=day-trips"
       },
       {
         "id": "private-custom",
@@ -84,6 +84,31 @@
       }
     ]
   },
+  "whyChooseUsHero": {
+    "headline": "Why travelers choose us",
+    "benefits": [
+      {
+        "id": 1,
+        "title": "Born & Raised in Addis",
+        "description": "Local guides who know every hidden gem, story, and shortcut"
+      },
+      {
+        "id": 2,
+        "title": "Book Direct, Save 15%",
+        "description": "Best price guaranteed — no middleman fees or hidden charges"
+      },
+      {
+        "id": 3,
+        "title": "500+ Five-Star Reviews",
+        "description": "Trusted by travelers on TripAdvisor and Google"
+      },
+      {
+        "id": 4,
+        "title": "24/7 WhatsApp Support",
+        "description": "Always here to help — before and during your tour"
+      }
+    ]
+  },
   "addisHighlights": {
     "headline": "Explore Addis Ababa's Top Attractions",
     "subheadline": "From ancient fossils to vibrant markets, Addis Ababa is a city of contrasts and discoveries. Here are the must-see highlights.",
@@ -92,25 +117,29 @@
         "id": 1,
         "title": "National Museum of Ethiopia",
         "description": "Home to Lucy, the 3.2-million-year-old hominid fossil that revolutionized our understanding of human evolution. Recently renovated in 2025 with improved exhibits and security.",
-        "link": "/destinations/addis-ababa/"
+        "link": "/destinations/addis-ababa/",
+        "image": "/images/hero/addis-ababa-national-museum.jpg"
       },
       {
         "id": 2,
         "title": "Addis Mercato (Merkato)",
         "description": "Africa's largest open-air market, with over 13,000 vendors selling spices, textiles, coffee, and traditional crafts. A sensory explosion and cultural immersion.",
-        "link": "/destinations/addis-ababa/"
+        "link": "/destinations/addis-ababa/",
+        "image": "/images/tours/half-day-addis-ababa-merkato.jpg"
       },
       {
         "id": 3,
         "title": "Holy Trinity Cathedral",
         "description": "Architectural masterpiece and final resting place of Emperor Haile Selassie. Features stunning stained glass, intricate carvings, and religious murals.",
-        "link": "/destinations/addis-ababa/"
+        "link": "/destinations/addis-ababa/",
+        "image": "/images/tours/addis-ababa-highlights-holy-trinity.jpg"
       },
       {
         "id": 4,
         "title": "Entoto Park",
         "description": "Panoramic city views from Addis Ababa's highest point (3,200 meters). Historic Entoto Maryam Church, eucalyptus forests, and the founding location of the city in 1886.",
-        "link": "/destinations/addis-ababa/"
+        "link": "/destinations/addis-ababa/",
+        "image": "/images/tours/full-day-addis-ababa-entoto.jpg"
       }
     ]
   },
@@ -194,7 +223,14 @@
     "headline": "Ready to Explore Addis Ababa?",
     "subheadline": "Browse our tours and book your authentic Ethiopian adventure today.",
     "ctaPrimary": "View All Tours",
-    "ctaSecondary": "Or contact us to customize your tour"
+    "ctaPrimaryLink": "/tours/",
+    "ctaSecondary": "Or contact us to customize your tour",
+    "ctaSecondaryLink": "/contact/",
+    "image": "/images/hero/final-cta-bg.jpg",
+    "badge": {
+      "text": "2026",
+      "label": "Travelers' Choice"
+    }
   },
   "metadata": {
     "lastUpdated": "2026-08-28",
