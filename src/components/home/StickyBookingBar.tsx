@@ -1,16 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface StickyBookingBarProps {
   translations: {
     bookNowButton: string;
   };
-  handleOpenBooking: () => void;
 }
 
 export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
   translations,
-  handleOpenBooking,
 }) => {
+  const navigate = useNavigate();
+
   return (
     <div
       id="sticky-mobile-trigger"
@@ -24,7 +25,7 @@ export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
       </div>
       <button
         id="sticky-mobile-booking-btn"
-        onClick={handleOpenBooking}
+        onClick={() => navigate('/book/')}
         className="bg-coffee-red hover:bg-coffee-red/90 text-linen-white text-xs uppercase font-mono font-bold tracking-wider px-5 py-2.5 rounded-full shadow-md animate-pulse active:scale-95 transition-all"
       >
         {translations.bookNowButton}

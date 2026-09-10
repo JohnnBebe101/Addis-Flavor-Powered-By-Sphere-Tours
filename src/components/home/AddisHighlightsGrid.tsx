@@ -22,12 +22,13 @@ export const AddisHighlightsGrid: React.FC<AddisHighlightsGridProps> = ({
   subheadline,
 }) => {
   return (
-    <section id="addis-highlights" className="py-16 bg-linen-white border-b border-teal/10">
+    <section id="addis-highlights" className="py-12 bg-linen-white border-b border-teal/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-5xl font-serif tracking-tight mb-4">{headline}</h2>
-          <div className="w-24 h-1 bg-coffee-red mx-auto mb-4 rounded-full" />
-          <p className="text-sm opacity-80 leading-relaxed font-sans">{subheadline}</p>
+        <div className="text-center max-w-2xl mx-auto mb-6">
+          <h2 className="text-xl md:text-2xl font-serif font-bold text-teal tracking-tight">
+            {headline}
+          </h2>
+          <p className="text-xs text-teal/60 mt-2 font-sans">{subheadline}</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

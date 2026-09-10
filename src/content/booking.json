@@ -156,5 +156,44 @@
   "metadata": {
     "lastUpdated": "2026-08-28",
     "version": "1.0"
+  },
+  "page": {
+    "hero": {
+      "headline": "Book Your Addis Ababa Adventure",
+      "subheadline": "Secure your spot with our easy 3-step booking. No instant charge — pay your guide directly on tour day.",
+      "trustSignals": {
+        "rating": "4.9",
+        "reviewCount": "500+",
+        "badges": ["Free Cancellation", "Licensed Local Operator", "No Hidden Fees"]
+      }
+    },
+    "howItWorks": {
+      "headline": "How It Works",
+      "steps": [
+        { "title": "Choose Your Tour", "description": "Browse our curated tours and select your perfect experience.", "icon": "Search" },
+        { "title": "Enter Your Details", "description": "Pick your date, number of guests, and contact information.", "icon": "User" },
+        { "title": "Confirmed!", "description": "Your guide contacts you within 2 hours with pickup details.", "icon": "CheckCircle" }
+      ]
+    },
+    "sidebar": {
+      "helpHeadline": "Need Help Booking?",
+      "helpText": "Our team is available 24/7 on WhatsApp to help you choose the perfect tour.",
+      "whatsappCta": "Chat on WhatsApp",
+      "callCta": "Call Us",
+      "emailCta": "Email Us"
+    },
+    "included": {
+      "headline": "What's Included",
+      "items": [
+        "Licensed English-speaking local guide",
+        "Private vehicle with AC",
+        "Hotel pickup & drop-off (central Addis)",
+        "All entrance fees",
+        "Bottled water"
+      ]
+    },
+    "policies": {
+      "headline": "Booking Policies"
+    }
   }
 }

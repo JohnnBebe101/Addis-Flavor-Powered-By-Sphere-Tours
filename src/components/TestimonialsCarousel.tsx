@@ -103,7 +103,7 @@ export default function TestimonialsCarousel({
               <Quote className="w-6 h-6 text-gold/60 rotate-180" />
             </div>
 
-            <blockquote className="text-base md:text-lg font-serif text-teal leading-relaxed max-w-2xl mx-auto">
+            <blockquote className="text-sm font-serif text-teal leading-relaxed max-w-2xl mx-auto">
               "{activeTestimonial.text}"
             </blockquote>
 

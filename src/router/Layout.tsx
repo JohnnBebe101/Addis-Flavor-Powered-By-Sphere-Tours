@@ -1,11 +1,10 @@
-import { Outlet, ScrollRestoration, useLocation, useSearchParams } from 'react-router-dom';
+import { Outlet, ScrollRestoration, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { NotificationBar } from '../components/NotificationBar';
 import Navbar from '../components/Navbar';
 import { HeroBanner } from '../components/home/HeroBanner';
 import { Footer } from '../components/home/Footer';
 import { StickyBookingBar } from '../components/home/StickyBookingBar';
-import TourBookingModal from '../components/TourBookingModal';
 import ContactModal from '../components/ContactModal';
 import { FloatingWhatsApp } from '../components/FloatingWhatsApp';
 import { ErrorBoundary } from '../components/ErrorBoundary';
@@ -15,22 +14,19 @@ import toursData from '../content/tours.json';
 import homeData from '../content/home.json';
 
 export const Layout = () => {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const { pathname, search } = useLocation();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const bookTourId = searchParams.get('book');
+    const urlParams = new URLSearchParams(search);
+    const bookTourId = urlParams.get('book');
     if (bookTourId) {
-      setIsBookingOpen(true);
-      const newParams = new URLSearchParams(searchParams);
-      newParams.delete('book');
-      setSearchParams(newParams, { replace: true });
+      navigate(`/book/?tour=${bookTourId}`, { replace: true });
     }
-  }, [search, searchParams, setSearchParams]);
+  }, [search, navigate]);
 
-  const handleOpenBooking = () => setIsBookingOpen(true);
+  const handleOpenBooking = () => navigate('/book/');
 
   return (
     <>
@@ -56,14 +52,6 @@ export const Layout = () => {
       <Footer NEIGHBORHOOD_DESTINATIONS={NEIGHBORHOOD_DESTINATIONS} />
       <StickyBookingBar
         translations={{ bookNowButton: TRANSLATIONS.bookNowButton }}
-        handleOpenBooking={handleOpenBooking}
-      />
-      <TourBookingModal
-        translations={TRANSLATIONS}
-        tours={toursData.tours as Tour[]}
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-        initialTourId={undefined}
       />
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
       <FloatingWhatsApp />

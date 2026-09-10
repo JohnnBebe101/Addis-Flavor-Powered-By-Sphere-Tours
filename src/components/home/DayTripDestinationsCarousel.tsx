@@ -51,12 +51,13 @@ export const DayTripDestinationsCarousel: React.FC<DayTripDestinationsCarouselPr
   const visibleDestinations = destinations.slice(activeIndex, activeIndex + itemsPerView);
 
   return (
-    <section id="day-trip-destinations" className="py-16 bg-sandstone/10 border-b border-teal/10">
+    <section id="day-trip-destinations" className="py-12 bg-sandstone/10 border-b border-teal/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-5xl font-serif tracking-tight mb-4">{headline}</h2>
-          <div className="w-24 h-1 bg-coffee-red mx-auto mb-4 rounded-full" />
-          <p className="text-sm opacity-80 leading-relaxed font-sans">{subheadline}</p>
+        <div className="text-center max-w-2xl mx-auto mb-6">
+          <h2 className="text-xl md:text-2xl font-serif font-bold text-teal tracking-tight">
+            {headline}
+          </h2>
+          <p className="text-xs text-teal/60 mt-2 font-sans">{subheadline}</p>
         </div>
 
         <div className="relative">
@@ -76,7 +77,7 @@ export const DayTripDestinationsCarousel: React.FC<DayTripDestinationsCarouselPr
                     <div className="w-14 h-14 rounded-2xl bg-gold/10 text-gold flex items-center justify-center mb-4 group-hover:bg-gold group-hover:text-teal transition-all duration-300">
                       {dest.icon}
                     </div>
-                    <h3 className="text-lg font-serif font-bold text-teal group-hover:text-coffee-red transition-colors mb-2">
+                    <h3 className="text-lg font-serif font-semibold text-teal group-hover:text-coffee-red transition-colors mb-2">
                       {dest.title}
                     </h3>
                     <p className="text-sm text-teal/70 leading-relaxed mb-4 flex-1">

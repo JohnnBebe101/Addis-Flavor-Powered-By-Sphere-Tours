@@ -41,7 +41,7 @@ export default function AboutHeroBanner({
         </div>{' '}
         <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 pt-12">
           {' '}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-linen-white tracking-tight drop-shadow-md uppercase">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-linen-white tracking-tight drop-shadow-md uppercase">
             {' '}
             {heroTitle}{' '}
           </h1>{' '}

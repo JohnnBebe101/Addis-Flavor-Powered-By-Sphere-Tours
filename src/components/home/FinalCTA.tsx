@@ -49,12 +49,12 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({
             )}
 
             {/* Headline */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-linen-white tracking-tight leading-tight">
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-linen-white tracking-tight leading-tight">
               {headline}
             </h2>
 
             {/* Subheadline */}
-            <p className="text-base md:text-lg text-sandstone/80 font-sans font-light leading-relaxed max-w-lg">
+            <p className="text-xs md:text-sm text-sandstone/80 font-sans font-light leading-relaxed max-w-lg">
               {subheadline}
             </p>
 

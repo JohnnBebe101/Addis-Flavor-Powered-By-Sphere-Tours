@@ -15,13 +15,12 @@ interface WhyChooseUsPreviewProps {
 
 export const WhyChooseUsPreview: React.FC<WhyChooseUsPreviewProps> = ({ translations }) => {
   return (
-    <section id="why-choose-us-preview" className="py-16 bg-linen-white border-b border-teal/10">
+    <section id="why-choose-us-preview" className="py-12 bg-linen-white border-b border-teal/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-5xl font-serif tracking-tight mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-6">
+          <h2 className="text-xl md:text-2xl font-serif font-bold text-teal tracking-tight">
             {translations.whyChooseUsHeadline}
           </h2>
-          <div className="w-24 h-1 bg-coffee-red mx-auto mb-4 rounded-full" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

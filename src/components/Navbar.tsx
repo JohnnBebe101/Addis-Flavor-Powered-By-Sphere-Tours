@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import { Translations } from '../types';
 import navigationData from '../content/navigation.json';
-import { MegaMenuDropdown } from './MegaMenuDropdown';
+
 
 type NavMenuItemFromJSON = {
   label: string;
@@ -101,12 +101,12 @@ export default function Navbar({
 
   const handleBookClick = (e?: React.MouseEvent) => {
     e?.preventDefault();
-    onBookClick();
+    navigate('/book/');
   };
 
   const handleMobileBookClick = () => {
     setIsMobileMenuOpen(false);
-    onBookClick();
+    navigate('/book/');
   };
 
   const mainMenuItems = navigationData.header.mainMenu;
@@ -177,7 +177,7 @@ export default function Navbar({
 
             {/* BOOK A TOUR Button */}
             <a
-              href="/tours/"
+              href="/book/"
               onClick={handleBookClick}
               className={`px-5 py-2 rounded-full uppercase text-xs tracking-wider font-bold transition-all duration-300 ${
                 isScrolled
@@ -302,7 +302,7 @@ export default function Navbar({
                 <button
                   onClick={() => {
                     setIsMobileMenuOpen(false);
-                    onContactClick();
+                    navigate('/contact/');
                   }}
                   className="w-full flex items-center justify-center space-x-2 py-3.5 rounded-xl bg-coffee-red text-linen-white text-xs uppercase tracking-wider font-bold hover:bg-coffee-red/90 transition-all shadow-md active:scale-95"
                 >
@@ -419,16 +419,50 @@ function DesktopNavItem({
           />
         </button>
 
-        <MegaMenuDropdown
-          isOpen={isOpen}
-          columns={item.columns}
-          link={item.link}
-          label={item.label}
-          isGlobalDark={isGlobalDark}
-          triggerRef={triggerRef}
+        {/* Standard dropdown — fade + slide, no portal */}
+        <div
+          className={`absolute top-full left-0 mt-2 min-w-[460px] bg-linen-white rounded-xl shadow-xl border border-teal/10 p-5 transition-all duration-150 ease-out ${
+            isOpen
+              ? 'opacity-100 translate-y-0 pointer-events-auto'
+              : 'opacity-0 -translate-y-1 pointer-events-none'
+          }`}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-        />
+          role="menu"
+        >
+          {item.columns.map((col, colIdx) => (
+            <div key={colIdx} className={colIdx > 0 ? 'pt-3 mt-3 border-t border-teal/5' : ''}>
+              <h4 className="font-mono text-[11px] uppercase tracking-widest font-bold text-gold mb-2">
+                {col.title}
+              </h4>
+              <div className="space-y-0.5">
+                {col.items.map((subItem, itemIdx) => (
+                  <a
+                    key={itemIdx}
+                    href={subItem.link}
+                    className="flex items-center justify-between py-2 px-3 rounded-lg text-sm text-teal hover:bg-teal/5 hover:text-coffee-red transition-colors duration-150"
+                  >
+                    <span className="font-medium">{subItem.label}</span>
+                    <div className="flex items-center space-x-2 text-[11px] font-mono text-gold flex-shrink-0 ml-3">
+                      {subItem.price && <span>{subItem.price}</span>}
+                      {subItem.duration && <span className="opacity-60">· {subItem.duration}</span>}
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+          {item.link && (
+            <div className="border-t border-teal/10 pt-3 mt-3">
+              <a
+                href={item.link}
+                className="flex items-center justify-center font-mono text-xs font-bold uppercase tracking-wider text-coffee-red hover:text-teal transition-colors"
+              >
+                View All {item.label} →
+              </a>
+            </div>
+          )}
+        </div>
       </div>
     );
   }

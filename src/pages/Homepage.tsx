@@ -9,7 +9,6 @@ import { WhyChooseUsHero } from '../components/home/WhyChooseUsHero';
 import { WhyChooseUsPreview } from '../components/home/WhyChooseUsPreview';
 import { AddisHighlightsGrid } from '../components/home/AddisHighlightsGrid';
 import { DayTripDestinationsCarousel } from '../components/home/DayTripDestinationsCarousel';
-import { HowBookingWorks } from '../components/home/HowBookingWorks';
 import { PracticalInfoGrid } from '../components/home/PracticalInfoGrid';
 import { FinalCTA } from '../components/home/FinalCTA';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
@@ -30,8 +29,6 @@ import {
   Mountain,
   Waves,
   Calendar,
-  Users,
-  ChevronRight,
   Globe,
   DollarSign,
 } from 'lucide-react';
@@ -89,18 +86,6 @@ export const Homepage: React.FC = () => {
       ),
   }));
 
-  const howBookingWorksSteps = homeData.howBookingWorks.steps.map((step, idx) => ({
-    ...step,
-    icon:
-      idx === 0 ? (
-        <Calendar className="w-7 h-7" />
-      ) : idx === 1 ? (
-        <Users className="w-7 h-7" />
-      ) : (
-        <ChevronRight className="w-7 h-7" />
-      ),
-  }));
-
   const practicalInfoColumns = homeData.practicalInfo.columns.map((col, idx) => ({
     ...col,
     icon:
@@ -131,14 +116,13 @@ export const Homepage: React.FC = () => {
       />
 
       {/* 6. TOUR CARD GRID — CATEGORY TABS */}
-      <section className="py-16 md:py-24 bg-sandstone/10">
+      <section className="py-12 md:py-16 bg-sandstone/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-8">
-            <h2 className="text-3xl md:text-5xl font-serif tracking-tight mb-4">
+          <div className="text-center max-w-2xl mx-auto mb-6">
+            <h2 className="text-xl md:text-2xl font-serif font-bold text-teal tracking-tight">
               {homeData.featuredTours.headline || 'Our Most Popular Tours'}
             </h2>
-            <div className="w-24 h-1 bg-coffee-red mx-auto mb-4 rounded-full" />
-            <p className="text-sm opacity-80 leading-relaxed font-sans">
+            <p className="text-xs text-teal/60 mt-2 font-sans">
               {homeData.featuredTours.subheadline}
             </p>
           </div>
@@ -165,10 +149,18 @@ export const Homepage: React.FC = () => {
           </div>
         </div>
 
-        <TourCardGrid
-          tours={filteredTours}
-          carousel
-        />
+        <TourCardGrid tours={filteredTours} />
+
+        {/* View All Tours CTA */}
+        <div className="text-center mt-10">
+          <a
+            href="/tours/"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md"
+          >
+            <span>View All Tours</span>
+            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </a>
+        </div>
       </section>
 
       {/* 7. WHY CHOOSE US PREVIEW */}
@@ -198,21 +190,7 @@ export const Homepage: React.FC = () => {
         subheadline={homeData.dayTripDestinations.subheadline}
       />
 
-      {/* 10. HOW BOOKING WORKS */}
-      <HowBookingWorks steps={howBookingWorksSteps} headline={homeData.howBookingWorks.headline} />
-
-      {/* 11. TESTIMONIALS CAROUSEL */}
-      <TestimonialsCarousel testimonials={reviewsData.reviews} onBookClick={() => {}} />
-
-      {/* 11. PRACTICAL INFORMATION */}
-      <PracticalInfoGrid
-        columns={practicalInfoColumns}
-        headline={homeData.practicalInfo.headline}
-        ctaLink={homeData.practicalInfo.ctaLink}
-        ctaText="Read More in Our Travel Guide"
-      />
-
-      {/* 14. FINAL CTA */}
+      {/* FINAL CTA */}
       <FinalCTA
         headline={homeData.finalCta.headline}
         subheadline={homeData.finalCta.subheadline}
@@ -223,6 +201,17 @@ export const Homepage: React.FC = () => {
         backgroundImage="/images/hero/final-cta-bg.jpg"
         image={homeData.finalCta.image}
         badge={homeData.finalCta.badge}
+      />
+
+      {/* TESTIMONIALS CAROUSEL */}
+      <TestimonialsCarousel testimonials={reviewsData.reviews} onBookClick={() => {}} />
+
+      {/* PRACTICAL INFORMATION */}
+      <PracticalInfoGrid
+        columns={practicalInfoColumns}
+        headline={homeData.practicalInfo.headline}
+        ctaLink={homeData.practicalInfo.ctaLink}
+        ctaText="Read More in Our Travel Guide"
       />
     </>
   );

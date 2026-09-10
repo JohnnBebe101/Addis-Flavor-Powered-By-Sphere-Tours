@@ -27,10 +27,10 @@ export const WhyChooseUsHero: React.FC<WhyChooseUsHeroProps> = ({
   benefits,
 }) => {
   return (
-    <section id="why-choose-us-hero" className="py-12 bg-linen-white border-b border-teal/10">
+    <section id="why-choose-us-hero" className="py-10 bg-linen-white border-b border-teal/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title — Left-aligned like screenshot */}
-        <h2 className="text-2xl md:text-3xl font-serif font-bold text-teal mb-8 tracking-tight">
+        <h2 className="text-xl md:text-2xl font-serif font-bold text-teal mb-6 tracking-tight">
           {headline}
         </h2>
 

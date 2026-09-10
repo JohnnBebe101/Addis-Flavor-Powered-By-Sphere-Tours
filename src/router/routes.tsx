@@ -66,6 +66,10 @@ export const router = createBrowserRouter([
         lazy: () => import('../pages/ContactPage').then((m) => ({ Component: m.ContactPage })),
       },
       {
+        path: 'book/',
+        lazy: () => import('../pages/BookPage').then((m) => ({ Component: m.BookPage })),
+      },
+      {
         path: 'custom-tour/',
         lazy: () =>
           import('../pages/CustomTourPage').then((m) => ({ Component: m.CustomTourPage })),

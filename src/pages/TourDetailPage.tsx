@@ -4,7 +4,7 @@
  */
 
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Calendar, Users, MapPin, Check, Star, ChevronRight } from 'lucide-react';
 import toursData from '../content/tours.json';
 import reviewsData from '../content/reviews.json';
@@ -12,6 +12,7 @@ import { ToursData, ReviewsData, TourItineraryItem, TourFAQ } from '../types';
 
 export const TourDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
   const typedToursData = toursData as unknown as ToursData;
   const typedReviewsData = reviewsData as unknown as ReviewsData;
   const tour = typedToursData.tours.find((t) => t.slug === slug) || typedToursData.tours[0];
@@ -93,11 +94,7 @@ export const TourDetailPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
-              onClick={() => {
-                const params = new URLSearchParams(window.location.search);
-                params.set('book', tour.id);
-                window.location.search = params.toString();
-              }}
+              onClick={() => navigate(`/book/?tour=${tour.id}`)}
               className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md"
             >
               Book Now
@@ -510,11 +507,7 @@ export const TourDetailPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
-              onClick={() => {
-                const params = new URLSearchParams(window.location.search);
-                params.set('book', tour.id);
-                window.location.search = params.toString();
-              }}
+              onClick={() => navigate(`/book/?tour=${tour.id}`)}
               className="px-8 py-3 rounded-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 shadow-md"
             >
               Book Now
