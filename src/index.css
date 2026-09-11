@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Noto+Sans+Ethiopic:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import 'tailwindcss';
 
 @theme {
@@ -12,29 +11,6 @@
   --color-linen-white: #ffffff;
   --color-gold: #5a5a40;
   --color-dark-bg: #2d2926;
-}
-
-/* Custom Animations & Styles */
-@keyframes steam {
-  0% {
-    transform: translateY(0) scaleX(1) rotate(0deg);
-    opacity: 0;
-  }
-  15% {
-    opacity: 0.6;
-  }
-  50% {
-    transform: translateY(-25px) scaleX(1.2) rotate(5deg);
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateY(-60px) scaleX(1.5) rotate(-10deg);
-    opacity: 0;
-  }
-}
-
-.steam-particle {
-  animation: steam 4s ease-in-out infinite;
 }
 
 /* Scrollbar customization */
@@ -63,11 +39,6 @@
   width: 100%;
 }
 
-.shema-border-subtle {
-  background-image: radial-gradient(circle, #5a5a40 1.5px, transparent 1.5px);
-  background-size: 12px 12px;
-}
-
 /* Motion replacement animations */
 @keyframes fadeIn {
   from {
@@ -75,15 +46,6 @@
   }
   to {
     opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 
@@ -96,29 +58,9 @@
   }
 }
 
-@keyframes slideOutRight {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
-
 @keyframes slideUp {
   from {
     transform: translateY(10px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-10px);
     opacity: 0;
   }
   to {
@@ -138,17 +80,6 @@
   }
 }
 
-@keyframes scaleOut {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-}
-
 @keyframes staggerFadeIn {
   from {
     transform: translateX(20px);
@@ -164,32 +95,16 @@
   animation: fadeIn 0.25s ease-out forwards;
 }
 
-.animate-fade-out {
-  animation: fadeOut 0.25s ease-out forwards;
-}
-
 .animate-slide-in-right {
   animation: slideInRight 0.3s cubic-bezier(0.32, 0.72, 0, 1) forwards;
-}
-
-.animate-slide-out-right {
-  animation: slideOutRight 0.3s cubic-bezier(0.32, 0.72, 0, 1) forwards;
 }
 
 .animate-slide-up {
   animation: slideUp 0.2s ease-out forwards;
 }
 
-.animate-slide-down {
-  animation: slideDown 0.2s ease-out forwards;
-}
-
 .animate-scale-in {
   animation: scaleIn 0.2s ease-out forwards;
-}
-
-.animate-scale-out {
-  animation: scaleOut 0.2s ease-out forwards;
 }
 
 .animate-stagger-fade {

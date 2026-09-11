@@ -29,7 +29,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
   handleOpenBooking,
 }) => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [isPlaying] = useState(true);
+  const isPlaying = true;
   const [isHovered, setIsHovered] = useState(false);
   const [progress, setProgress] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);

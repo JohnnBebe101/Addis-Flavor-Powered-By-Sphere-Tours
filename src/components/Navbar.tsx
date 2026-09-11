@@ -21,6 +21,13 @@ import {
 import { Translations } from '../types';
 import navigationData from '../content/navigation.json';
 
+interface NavDropdownItem {
+  label: string;
+  link: string;
+  price?: string;
+  duration?: string;
+  description?: string;
+}
 
 type NavMenuItemFromJSON = {
   label: string;

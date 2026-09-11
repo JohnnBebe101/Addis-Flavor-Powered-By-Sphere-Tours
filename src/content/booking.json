@@ -93,10 +93,18 @@
         },
         {
           "name": "phone",
-          "label": "WhatsApp or Phone",
+          "label": "Phone Number",
           "type": "tel",
           "required": true,
           "placeholder": "+251-911-XXX-XXX"
+        },
+        {
+          "name": "whatsapp",
+          "label": "WhatsApp Number",
+          "type": "tel",
+          "required": false,
+          "placeholder": "+971 50 123 4567",
+          "helpText": "For instant confirmation & guide coordination"
         },
         {
           "name": "pickupLocation",
@@ -136,6 +144,11 @@
         {
           "name": "pickupLocation",
           "label": "Pickup Location",
+          "type": "readonly"
+        },
+        {
+          "name": "whatsapp",
+          "label": "WhatsApp",
           "type": "readonly"
         },
         {
@@ -194,6 +207,18 @@
     },
     "policies": {
       "headline": "Booking Policies"
+    },
+    "success": {
+      "whatsappCta": "Send Booking via WhatsApp",
+      "emailCta": "Email Booking Details",
+      "browseCta": "Browse More Tours",
+      "whatNextHeadline": "What Happens Next?",
+      "whatNextSteps": [
+        "Your guide will contact you via WhatsApp within 2 hours",
+        "You'll receive confirmation with guide details and pickup time",
+        "No instant charge — pay your guide directly on tour day",
+        "Free cancellation up to 24 hours before tour"
+      ]
     }
   }
 }

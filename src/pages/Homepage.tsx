@@ -13,7 +13,7 @@ import { PracticalInfoGrid } from '../components/home/PracticalInfoGrid';
 import { FinalCTA } from '../components/home/FinalCTA';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Tour } from '../types';
 import homeData from '../content/home.json';
 import toursData from '../content/tours.json';
@@ -42,7 +42,7 @@ export const Homepage: React.FC = () => {
       : (toursData.tours as Tour[]).filter((t) => t.tourType === activeTab);
 
   // Pre-compute data with icons
-  const tourCategoriesWithIcons = homeData.tourCategorySelector.categories.map((cat, idx) => ({
+  const tourCategoriesWithIcons = useMemo(() => homeData.tourCategorySelector.categories.map((cat, idx) => ({
     ...cat,
     icon:
       idx === 0 ? (
@@ -52,9 +52,9 @@ export const Homepage: React.FC = () => {
       ) : (
         <Crown className="w-7 h-7" />
       ),
-  }));
+  })), []);
 
-  const dayTripDestinationsWithIcons = homeData.dayTripDestinations.destinations.map(
+  const dayTripDestinationsWithIcons = useMemo(() => homeData.dayTripDestinations.destinations.map(
     (dest, idx) => ({
       ...dest,
       icon:
@@ -70,9 +70,9 @@ export const Homepage: React.FC = () => {
       priceFrom:
         idx === 0 ? 'From $85' : idx === 1 ? 'From $95' : idx === 2 ? 'From $80' : 'From $75',
     }),
-  );
+  ), []);
 
-  const attractionsWithIcons = homeData.addisHighlights.attractions.map((attr, idx) => ({
+  const attractionsWithIcons = useMemo(() => homeData.addisHighlights.attractions.map((attr, idx) => ({
     ...attr,
     icon:
       idx === 0 ? (
@@ -84,9 +84,9 @@ export const Homepage: React.FC = () => {
       ) : (
         <Mountain className="w-7 h-7" />
       ),
-  }));
+  })), []);
 
-  const practicalInfoColumns = homeData.practicalInfo.columns.map((col, idx) => ({
+  const practicalInfoColumns = useMemo(() => homeData.practicalInfo.columns.map((col, idx) => ({
     ...col,
     icon:
       idx === 0 ? (
@@ -98,7 +98,7 @@ export const Homepage: React.FC = () => {
       ) : (
         <Mountain className="w-7 h-7" />
       ),
-  }));
+  })), []);
 
   return (
     <>

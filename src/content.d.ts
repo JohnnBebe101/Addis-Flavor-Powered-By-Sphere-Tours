@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 
 declare module '*.json' {
-  const value: Record<string, unknown>;
+  const value: any;
   export default value;
 }
 
@@ -18,13 +18,4 @@ declare module '*.png' {
 declare module '*.svg' {
   const value: string;
   export default value;
-}
-
-// Navigation data types
-interface NavDropdownItem {
-  label: string;
-  link: string;
-  price?: string;
-  duration?: string;
-  description?: string;
 }

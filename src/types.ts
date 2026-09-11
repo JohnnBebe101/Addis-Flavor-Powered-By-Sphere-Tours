@@ -3,8 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export type Language = 'en';
-
 export interface Translations {
   brandName: string;
   navTours: string;

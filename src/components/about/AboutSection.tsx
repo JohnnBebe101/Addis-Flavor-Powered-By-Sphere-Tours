@@ -1,3 +1,8 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 import { Compass, Heart, Sparkles, ArrowUpRight, MapPin } from 'lucide-react';
 interface AboutSectionProps {
   content: {
@@ -61,6 +66,7 @@ export default function AboutSection({
           <img
             src={cookingClassImg}
             alt="Ethiopian culinary hosting"
+            loading="lazy"
             className="relative rounded-3xl object-cover w-full h-[350px] sm:h-[450px] shadow-2xl border-4 border-gold/25"
             referrerPolicy="no-referrer"
           />{' '}
@@ -176,6 +182,7 @@ export default function AboutSection({
           <img
             src={cookingClassImg}
             alt="Ethiopian family hosts"
+            loading="lazy"
             className="relative rounded-3xl object-cover w-full h-[350px] sm:h-[450px] shadow-2xl border-4 border-gold/25"
             referrerPolicy="no-referrer"
           />{' '}

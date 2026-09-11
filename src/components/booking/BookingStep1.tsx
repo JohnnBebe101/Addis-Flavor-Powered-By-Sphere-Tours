@@ -6,15 +6,13 @@
 import { useState } from 'react';
 import { Calendar, Users, Minus, Plus } from 'lucide-react';
 import { Tour } from '../../types';
+import type { BookingFormData } from '../../types/booking';
 
 interface BookingStep1Props {
   tours: Tour[];
-  formData: {
-    tourId: string;
-    date: string;
-    guests: number;
-  };
+  formData: Pick<BookingFormData, 'tourId' | 'date' | 'guests' | 'website_url'>;
   onChange: (field: string, value: string | number) => void;
+  showErrors?: boolean;
   translations?: {
     bookNowButton: string;
   };
@@ -24,6 +22,7 @@ export function BookingStep1({
   tours,
   formData,
   onChange,
+  showErrors,
   translations: _translations,
 }: BookingStep1Props) {
   const [tomorrow] = useState(() => new Date(Date.now() + 86400000).toISOString().split('T')[0]);
@@ -46,7 +45,9 @@ export function BookingStep1({
           id="booking-tour-select"
           value={formData.tourId}
           onChange={(e) => onChange('tourId', e.target.value)}
-          className="w-full bg-sandstone border border-teal/10 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-coffee-red focus:ring-1 focus:ring-coffee-red"
+          className={`w-full bg-sandstone border rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:border-coffee-red focus:ring-1 focus:ring-coffee-red ${
+            showErrors && !formData.tourId ? 'border-red-400' : 'border-teal/10'
+          }`}
         >
           {tours.map((tour) => (
             <option key={tour.id} value={tour.id}>
@@ -79,7 +80,7 @@ export function BookingStep1({
           <Users className="w-3.5 h-3.5 text-gold" />
           <span>Number of Guests</span>
         </label>
-        <div className="flex items-center space-x-4 bg-sandstone rounded-xl p-1.5 w-fit">
+        <div className="flex items-center space-x-4 bg-sandstone rounded-xl p-1.5 w-fit" role="group" aria-label="Number of guests">
           <button
             type="button"
             onClick={() => handleGuestChange(-1)}
@@ -102,6 +103,7 @@ export function BookingStep1({
             className="w-12 font-mono text-sm font-bold px-2 text-center bg-transparent border-none focus:outline-none text-teal"
             readOnly
             aria-label="Number of guests"
+            aria-live="polite"
           />
           <button
             type="button"
@@ -124,6 +126,17 @@ export function BookingStep1({
           </p>
         </div>
       </div>
+
+      <input
+        type="text"
+        name="website_url"
+        value={formData.website_url || ''}
+        onChange={(e) => onChange('website_url', e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        style={{ display: 'none' }}
+        aria-hidden="true"
+      />
     </div>
   );
 }

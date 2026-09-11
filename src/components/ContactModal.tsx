@@ -3,10 +3,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { X, Send, MapPin, Phone, Mail } from 'lucide-react';
 import contactContent from '../content/contact.json';
 import { SuccessMessage } from './ui/SuccessMessage';
+import { PhoneInput } from './ui/PhoneInput';
+import type { ContactFormData } from '../types/contact';
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -76,50 +79,100 @@ interface ContactData {
   metadata: { lastUpdated: string; version: string };
 }
 
-const contactJson = contactContent as unknown as ContactData;
+const contactJson = contactContent as ContactData;
 
 export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: ContactModalProps) {
-  const [formData, setFormData] = useState({
-    name: '',
+  const [formData, setFormData] = useState<ContactFormData>({
+    fullName: '',
     email: '',
+    phone: '',
+    whatsapp: '',
     topic: '',
     message: '',
   });
   const [isSending, setIsSending] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLElement | null>(null);
 
   const t = contactJson.contactForm;
 
   useEffect(() => {
+    return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
+  }, []);
+
+  useEffect(() => {
     if (isOpen) {
+      triggerRef.current = document.activeElement as HTMLElement;
       document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
+      const timer = setTimeout(() => {
+        const firstInput = modalRef.current?.querySelector<HTMLElement>(
+          'input:not([type="hidden"]), select, textarea, button[type="submit"]'
+        );
+        firstInput?.focus();
+      }, 50);
+      return () => { clearTimeout(timer); document.body.style.overflow = 'unset'; };
     }
-    return () => {
-      document.body.style.overflow = 'unset';
+    document.body.style.overflow = 'unset';
+    triggerRef.current?.focus();
+    return () => { document.body.style.overflow = 'unset'; };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') { resetForm(); return; }
+      if (e.key !== 'Tab') return;
+      const focusable = modalRef.current?.querySelectorAll<HTMLElement>(
+        'input:not([type="hidden"]), select, textarea, button, [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusable?.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleResize = () => {
+      const viewport = window.visualViewport;
+      if (viewport) {
+        const modal = document.getElementById('contact-modal-card');
+        if (modal) {
+          modal.style.maxHeight = `${viewport.height - 32}px`;
+          modal.style.marginTop = `${Math.max(0, viewport.offsetTop)}px`;
+        }
+      }
+    };
+    window.visualViewport?.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.visualViewport?.removeEventListener('resize', handleResize);
   }, [isOpen]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSending(true);
-    setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       setIsSending(false);
       setIsSuccess(true);
     }, 1500);
   };
 
   const resetForm = () => {
-    setFormData({ name: '', email: '', topic: '', message: '' });
+    setFormData({ fullName: '', email: '', phone: '', whatsapp: '', topic: '', message: '' });
     setIsSuccess(false);
     onClose();
   };
 
   if (!isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+  return createPortal(
+    <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/70 backdrop-blur-md animate-fade-in"
@@ -128,6 +181,12 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
 
       {/* Modal Card */}
       <div
+        ref={modalRef}
+        id="contact-modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-modal-title"
+        aria-describedby="contact-modal-desc"
         className={`relative w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl border animate-scale-in ${
           isGlobalDark
             ? 'bg-dark-bg text-linen-white border-linen-white/10'
@@ -144,6 +203,7 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
           </div>
           <button
             onClick={resetForm}
+            aria-label="Close contact form"
             className={`p-2 rounded-full transition-colors ${
               isGlobalDark
                 ? 'bg-white/5 hover:bg-white/10 text-linen-white'
@@ -158,10 +218,10 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
           {!isSuccess ? (
             <div key="form" className="space-y-6 animate-slide-up">
               <div>
-                <h3 className="text-2xl font-serif font-bold tracking-tight uppercase mb-2 text-gold">
+                <h3 id="contact-modal-title" className="text-2xl font-serif font-bold tracking-tight uppercase mb-2 text-gold">
                   {t.headline}
                 </h3>
-                <p className="text-xs sm:text-sm opacity-80 leading-relaxed font-sans">
+                <p id="contact-modal-desc" className="text-xs sm:text-sm opacity-80 leading-relaxed font-sans">
                   {contactJson.contactInfo.headline}
                 </p>
               </div>
@@ -195,6 +255,29 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
                         />
                       </div>
                     ))}
+                </div>
+
+                <div>
+                  <label htmlFor="modal-phone" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">
+                    Phone Number
+                  </label>
+                  <PhoneInput
+                    id="modal-phone"
+                    value={formData.phone}
+                    onChange={(val) => setFormData({ ...formData, phone: val })}
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="modal-whatsapp" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">
+                    WhatsApp Number
+                  </label>
+                  <PhoneInput
+                    id="modal-whatsapp"
+                    value={formData.whatsapp}
+                    onChange={(val) => setFormData({ ...formData, whatsapp: val })}
+                    helperText="For instant responses via WhatsApp"
+                  />
                 </div>
 
                 {t.fields
@@ -312,6 +395,7 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
           )}
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

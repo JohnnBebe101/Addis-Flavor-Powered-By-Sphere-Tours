@@ -1,31 +1,21 @@
-import { useState, useEffect, useMemo } from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import {
-  Search, User, Calendar, Users, MapPin, CheckCircle,
-  ChevronRight, Phone, MessageCircle, Mail, Star, Shield,
-  ArrowLeft, Loader2,
+  CheckCircle,
+  ChevronRight, Phone, MessageCircle, Star, Shield,
+  ArrowLeft, Loader2, Minus, Plus,
 } from 'lucide-react';
 import bookingContent from '../content/booking.json';
 import toursData from '../content/tours.json';
 import { ToursData } from '../types';
+import type { BookingFormData, BookingStep } from '../types/booking';
+import { STEP_LABELS, STEP_ICONS } from '../constants/booking';
+import { BookingStep1 } from '../components/booking/BookingStep1';
+import { BookingStep2 } from '../components/booking/BookingStep2';
+import { BookingStep3 } from '../components/booking/BookingStep3';
+import { BookingSuccess } from '../components/booking/BookingSuccess';
 
-interface BookingFormData {
-  tourId: string;
-  date: string;
-  guests: number;
-  fullName: string;
-  email: string;
-  phone: string;
-  pickupLocation: string;
-  specialRequirements: string;
-}
-
-type BookingStep = 1 | 2 | 3;
-
-const STEP_LABELS = ['Tour & Date', 'Your Details', 'Review & Confirm'];
-const STEP_ICONS = [Search, User, CheckCircle];
-
-const bookingJson = bookingContent as unknown as {
+const bookingJson = bookingContent as {
   page: {
     hero: { headline: string; subheadline: string; trustSignals: { rating: string; reviewCount: string; badges: string[] } };
     howItWorks: { headline: string; steps: { title: string; description: string; icon: string }[] };
@@ -38,14 +28,25 @@ const bookingJson = bookingContent as unknown as {
 
 export const BookPage: React.FC = () => {
   const [searchParams] = useSearchParams();
-  const navigate = useNavigate();
-  const typedToursData = toursData as unknown as ToursData;
+  const typedToursData = toursData as ToursData;
   const tours = typedToursData.tours;
 
   const [step, setStep] = useState<BookingStep>(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [openPolicy, setOpenPolicy] = useState<string | null>(null);
+  const [showErrors, setShowErrors] = useState(false);
+  const [policiesAgreed, setPoliciesAgreed] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
+  }, []);
+
+  useEffect(() => {
+    const card = document.getElementById('booking-form-card');
+    if (card) { card.setAttribute('tabindex', '-1'); card.focus(); }
+  }, [step]);
 
   const initialTourId = searchParams.get('tour') || tours[0]?.id || '';
 
@@ -56,8 +57,10 @@ export const BookPage: React.FC = () => {
     fullName: '',
     email: '',
     phone: '',
+    whatsapp: '',
     pickupLocation: '',
     specialRequirements: '',
+    website_url: '',
   }));
 
   useEffect(() => {
@@ -65,43 +68,101 @@ export const BookPage: React.FC = () => {
     if (tourId) setFormData((prev) => ({ ...prev, tourId }));
   }, [searchParams]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      const viewport = window.visualViewport;
+      if (viewport) {
+        const form = document.getElementById('booking-form-card');
+        if (form) {
+          form.style.maxHeight = `${viewport.height - 32}px`;
+          form.style.marginTop = `${Math.max(0, viewport.offsetTop)}px`;
+        }
+      }
+    };
+    window.visualViewport?.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.visualViewport?.removeEventListener('resize', handleResize);
+  }, []);
+
   const selectedTour = useMemo(
     () => tours.find((t) => t.id === formData.tourId) || tours[0],
     [tours, formData.tourId]
   );
 
-  const totalPrice = selectedTour ? selectedTour.pricing.smallGroup.adult * formData.guests : 0;
+  const totalPrice = useMemo(
+    () => selectedTour ? selectedTour.pricing.smallGroup.adult * formData.guests : 0,
+    [selectedTour, formData.guests]
+  );
 
-  const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
+  if (!selectedTour) {
+    return (
+      <div className="min-h-screen bg-linen-white flex items-center justify-center">
+        <div className="text-center space-y-4 p-8">
+          <p className="text-lg font-serif text-teal">No tours available at the moment.</p>
+          <p className="text-sm text-teal/60">Please check back later or contact us for assistance.</p>
+          <a href="/contact/" className="inline-block px-6 py-3 rounded-full bg-coffee-red text-linen-white text-xs uppercase font-bold tracking-wider">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    );
+  }
 
-  const handleInputChange = (field: keyof BookingFormData, value: string | number) => {
+  const handleInputChange = useCallback((field: string, value: string | number) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
-  };
+  }, []);
 
-  const handleNext = () => {
-    if (step === 1) {
-      setStep(2);
-    } else if (step === 2) {
+  const validateStep = useCallback((stepToValidate: BookingStep): boolean => {
+    if (stepToValidate === 1) return !!formData.tourId && !!formData.date && formData.guests >= 1;
+    if (stepToValidate === 2) {
+      return !!formData.fullName.trim()
+        && !!formData.email.trim()
+        && formData.email.includes('@')
+        && !!formData.phone.trim()
+        && !!formData.pickupLocation.trim();
+    }
+    if (stepToValidate === 3) return policiesAgreed;
+    return true;
+  }, [formData, policiesAgreed]);
+
+  const handleNext = useCallback(() => {
+    if (!validateStep(step)) {
+      setShowErrors(true);
+      return;
+    }
+    setShowErrors(false);
+    if (step === 2) {
       setIsSubmitting(true);
-      setTimeout(() => {
+      timeoutRef.current = setTimeout(() => {
         setIsSubmitting(false);
         setIsSuccess(true);
         setStep(3);
       }, 1800);
+    } else {
+      setStep((prev) => (prev + 1) as BookingStep);
     }
-  };
+  }, [step, validateStep]);
 
-  const handleBack = () => {
+  const handleBack = useCallback(() => {
     if (step === 2) setStep(1);
     if (step === 3) setStep(2);
-  };
+    setShowErrors(false);
+  }, [step]);
+
+  const handleEdit = useCallback((targetStep: 1 | 2) => {
+    setStep(targetStep);
+    setShowErrors(false);
+  }, []);
 
   const p = bookingJson.page;
-  const policies = bookingJson.policies;
+
+  const handleGuestChange = useCallback((delta: number) => {
+    const newGuests = Math.max(1, Math.min(10, formData.guests + delta));
+    handleInputChange('guests', newGuests);
+  }, [formData.guests, handleInputChange]);
 
   return (
     <div className="min-h-screen bg-linen-white">
-      {/* Hero */}
       <section className="py-12 sm:py-16 bg-sandstone/10 border-b border-teal/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-teal tracking-tight mb-4">
@@ -126,13 +187,10 @@ export const BookPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Main Content */}
       <section className="py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-            {/* Booking Form — 2/3 width */}
             <div className="lg:col-span-2">
-              {/* Progress Bar */}
               <div className="flex items-center gap-2 mb-8">
                 {STEP_LABELS.map((label, idx) => {
                   const StepIcon = STEP_ICONS[idx];
@@ -155,156 +213,65 @@ export const BookPage: React.FC = () => {
                 })}
               </div>
 
-              {/* Step Content */}
-              <div className="bg-sandstone/30 rounded-2xl border border-teal/10 p-6 sm:p-8">
+              <div id="booking-form-card" className="bg-sandstone/30 rounded-2xl border border-teal/10 p-6 sm:p-8 overflow-y-auto">
                 {isSuccess ? (
-                  /* Success State */
-                  <div className="text-center py-8 space-y-4">
-                    <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto animate-bounce">
-                      <CheckCircle className="w-10 h-10" />
-                    </div>
-                    <h3 className="text-2xl font-serif font-bold text-teal">Booking Confirmed!</h3>
-                    <p className="text-teal/70 max-w-md mx-auto">
-                      Your booking for "{selectedTour.name}" has been received. Your guide will contact you via WhatsApp within 2 hours.
-                    </p>
-                    <div className="bg-linen-white rounded-xl p-4 border border-teal/10 text-left max-w-sm mx-auto space-y-1 text-sm">
-                      <p><strong>Tour:</strong> {selectedTour.name}</p>
-                      <p><strong>Date:</strong> {new Date(formData.date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}</p>
-                      <p><strong>Guests:</strong> {formData.guests}</p>
-                      <p><strong>Total:</strong> <span className="text-coffee-red font-bold">${totalPrice} USD</span></p>
-                    </div>
-                    <button onClick={() => navigate('/tours/')} className="px-6 py-2.5 rounded-full bg-coffee-red text-linen-white text-xs uppercase font-bold tracking-wider hover:bg-coffee-red/90 transition-all">
-                      Browse More Tours
-                    </button>
-                  </div>
+                  <BookingSuccess
+                    selectedTour={selectedTour}
+                    formData={{
+                      tourId: formData.tourId,
+                      date: formData.date,
+                      guests: formData.guests,
+                      fullName: formData.fullName,
+                      email: formData.email,
+                      phone: formData.phone,
+                      whatsapp: formData.whatsapp,
+                      pickupLocation: formData.pickupLocation,
+                      specialRequirements: formData.specialRequirements,
+                    }}
+                    totalPrice={totalPrice}
+                  />
                 ) : step === 1 ? (
-                  /* Step 1: Tour & Date */
-                  <div className="space-y-5">
-                    <div>
-                      <label className="text-xs font-mono uppercase text-teal/60 tracking-wider mb-1.5 block">Select Your Tour</label>
-                      <select value={formData.tourId} onChange={(e) => handleInputChange('tourId', e.target.value)}
-                        className="w-full bg-linen-white border border-teal/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coffee-red focus:ring-1 focus:ring-coffee-red">
-                        {tours.map((tour) => (
-                          <option key={tour.id} value={tour.id}>{tour.name} — ${tour.pricing.smallGroup.adult}/guest</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label className="text-xs font-mono uppercase text-teal/60 tracking-wider mb-1.5 flex items-center gap-1.5">
-                        <Calendar className="w-3.5 h-3.5 text-coffee-red" /> Tour Date
-                      </label>
-                      <input type="date" value={formData.date} min={tomorrow} onChange={(e) => handleInputChange('date', e.target.value)}
-                        className="w-full bg-linen-white border border-teal/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coffee-red" />
-                      <p className="text-xs text-teal/50 mt-1">Tours depart daily at 08:00 or 14:00. Book at least 24 hours in advance.</p>
-                    </div>
-                    <div>
-                      <label className="text-xs font-mono uppercase text-teal/60 tracking-wider mb-1.5 flex items-center gap-1.5">
-                        <Users className="w-3.5 h-3.5 text-gold" /> Number of Guests
-                      </label>
-                      <div className="flex items-center gap-4 bg-linen-white rounded-xl p-2 w-fit border border-teal/10">
-                        <button onClick={() => handleInputChange('guests', Math.max(1, formData.guests - 1))}
-                          className="w-9 h-9 rounded-lg hover:bg-teal/5 flex items-center justify-center border border-teal/10 active:scale-95">
-                          <span className="text-lg">−</span>
-                        </button>
-                        <span className="font-mono font-bold text-lg w-8 text-center">{formData.guests}</span>
-                        <button onClick={() => handleInputChange('guests', Math.min(10, formData.guests + 1))}
-                          className="w-9 h-9 rounded-lg hover:bg-teal/5 flex items-center justify-center border border-teal/10 active:scale-95">
-                          <span className="text-lg">+</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                  <BookingStep1
+                    tours={tours}
+                    formData={{ tourId: formData.tourId, date: formData.date, guests: formData.guests, website_url: formData.website_url }}
+                    onChange={handleInputChange}
+                    showErrors={showErrors}
+                  />
                 ) : step === 2 ? (
-                  /* Step 2: Your Details */
-                  <div className="space-y-5">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider mb-1.5 flex items-center gap-1.5">
-                          <User className="w-3.5 h-3.5 text-gold" /> Full Name
-                        </label>
-                        <input type="text" value={formData.fullName} onChange={(e) => handleInputChange('fullName', e.target.value)} required placeholder="John Doe"
-                          className="w-full bg-linen-white border border-teal/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coffee-red" />
-                      </div>
-                      <div>
-                        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider mb-1.5 flex items-center gap-1.5">
-                          <Mail className="w-3.5 h-3.5 text-gold" /> Email Address
-                        </label>
-                        <input type="email" value={formData.email} onChange={(e) => handleInputChange('email', e.target.value)} required placeholder="john@example.com"
-                          className="w-full bg-linen-white border border-teal/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coffee-red" />
-                      </div>
-                    </div>
-                    <div>
-                      <label className="text-xs font-mono uppercase text-teal/60 tracking-wider mb-1.5 flex items-center gap-1.5">
-                        <Phone className="w-3.5 h-3.5 text-gold" /> WhatsApp or Phone
-                      </label>
-                      <input type="tel" value={formData.phone} onChange={(e) => handleInputChange('phone', e.target.value)} required placeholder="+251-911-XXX-XXX"
-                        className="w-full bg-linen-white border border-teal/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coffee-red" />
-                    </div>
-                    <div>
-                      <label className="text-xs font-mono uppercase text-teal/60 tracking-wider mb-1.5 flex items-center gap-1.5">
-                        <MapPin className="w-3.5 h-3.5 text-gold" /> Pickup Location
-                      </label>
-                      <input type="text" value={formData.pickupLocation} onChange={(e) => handleInputChange('pickupLocation', e.target.value)} required placeholder="Hotel name or address"
-                        className="w-full bg-linen-white border border-teal/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coffee-red" />
-                      <p className="text-xs text-teal/50 mt-1">Complimentary pickup from central Addis Ababa (Bole, Piassa, Meskel Square).</p>
-                    </div>
-                    <div>
-                      <label className="text-xs font-mono uppercase text-teal/60 tracking-wider mb-1.5">Special Requirements</label>
-                      <textarea value={formData.specialRequirements} onChange={(e) => handleInputChange('specialRequirements', e.target.value)}
-                        placeholder="Dietary needs, mobility issues, special occasions..." rows={3}
-                        className="w-full bg-linen-white border border-teal/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-coffee-red" />
-                    </div>
-                  </div>
+                  <BookingStep2
+                    formData={{
+                      fullName: formData.fullName,
+                      email: formData.email,
+                      phone: formData.phone,
+                      whatsapp: formData.whatsapp,
+                      pickupLocation: formData.pickupLocation,
+                      specialRequirements: formData.specialRequirements,
+                    }}
+                    onChange={handleInputChange}
+                    showErrors={showErrors}
+                  />
                 ) : (
-                  /* Step 3: Review */
-                  <div className="space-y-5">
-                    <p className="text-xs font-mono text-teal/60 uppercase tracking-wider">Review Your Booking</p>
-                    {[
-                      { label: 'Tour', value: selectedTour.name, icon: CheckCircle },
-                      { label: 'Date', value: new Date(formData.date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }), icon: Calendar },
-                      { label: 'Guests', value: `${formData.guests} guest${formData.guests > 1 ? 's' : ''}`, icon: Users },
-                      { label: 'Name', value: formData.fullName, icon: User },
-                      { label: 'Email', value: formData.email, icon: Mail },
-                      { label: 'Phone', value: formData.phone, icon: Phone },
-                      { label: 'Pickup', value: formData.pickupLocation, icon: MapPin },
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-coffee-red/10 text-coffee-red flex items-center justify-center flex-shrink-0">
-                          <item.icon className="w-4 h-4" />
-                        </div>
-                        <div>
-                          <p className="text-xs font-mono uppercase text-teal/60">{item.label}</p>
-                          <p className="font-semibold text-sm text-teal">{item.value}</p>
-                        </div>
-                      </div>
-                    ))}
-                    {formData.specialRequirements && (
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-coffee-red/10 text-coffee-red flex items-center justify-center flex-shrink-0">
-                          <CheckCircle className="w-4 h-4" />
-                        </div>
-                        <div>
-                          <p className="text-xs font-mono uppercase text-teal/60">Special Requirements</p>
-                          <p className="font-semibold text-sm text-teal">{formData.specialRequirements}</p>
-                        </div>
-                      </div>
-                    )}
-                    <div className="border-t border-teal/10 pt-4 flex justify-between items-center">
-                      <div>
-                        <p className="text-xs font-mono text-teal/60 uppercase">Estimated Total</p>
-                        <p className="text-2xl font-mono font-bold text-coffee-red">${totalPrice} USD</p>
-                        <p className="text-xs text-teal/50">No instant charge — pay on tour day</p>
-                      </div>
-                    </div>
-                    <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
-                      <p className="text-xs text-amber-800 font-mono uppercase tracking-wider mb-1">Cancellation Policy</p>
-                      <p className="text-xs text-amber-700">Free cancellation up to 24 hours before the tour start time.</p>
-                    </div>
-                  </div>
+                  <BookingStep3
+                    tour={selectedTour}
+                    formData={{
+                      tourId: formData.tourId,
+                      date: formData.date,
+                      guests: formData.guests,
+                      fullName: formData.fullName,
+                      email: formData.email,
+                      phone: formData.phone,
+                      whatsapp: formData.whatsapp,
+                      pickupLocation: formData.pickupLocation,
+                      specialRequirements: formData.specialRequirements,
+                    }}
+                    totalPrice={totalPrice}
+                    onEdit={handleEdit}
+                    policiesAgreed={policiesAgreed}
+                    onPoliciesChange={setPoliciesAgreed}
+                  />
                 )}
               </div>
 
-              {/* Navigation Buttons */}
               {!isSuccess && (
                 <div className="flex items-center justify-between mt-6">
                   {step > 1 ? (
@@ -312,7 +279,7 @@ export const BookPage: React.FC = () => {
                       <ArrowLeft className="w-4 h-4" /> Back
                     </button>
                   ) : <div />}
-                  <button onClick={handleNext} disabled={isSubmitting}
+                  <button onClick={handleNext} disabled={isSubmitting || (step === 3 && !policiesAgreed)}
                     className="flex items-center gap-2 px-8 py-3 rounded-full bg-coffee-red text-linen-white text-xs uppercase font-mono font-bold tracking-wider hover:bg-coffee-red/90 transition-all shadow-md disabled:opacity-50 active:scale-95">
                     {isSubmitting ? (
                       <><Loader2 className="w-4 h-4 animate-spin" /> <span>Processing...</span></>
@@ -326,22 +293,32 @@ export const BookPage: React.FC = () => {
               )}
             </div>
 
-            {/* Sidebar — 1/3 width */}
             <div className="lg:col-span-1 space-y-6">
-              {/* Tour Summary Card */}
               {selectedTour && (
                 <div className="bg-sandstone/30 rounded-2xl border border-teal/10 overflow-hidden">
                   <img src={selectedTour.images[0]} alt={selectedTour.name}
-                    className="w-full h-48 object-cover" />
+                    loading="lazy" className="w-full h-48 object-cover" />
                   <div className="p-5 space-y-3">
                     <div className="flex items-center gap-2">
                       <span className="px-2 py-0.5 bg-gold/10 text-gold text-[10px] font-mono uppercase rounded-full">{selectedTour.tourType}</span>
                       <span className="text-xs text-teal/60">{selectedTour.duration}</span>
                     </div>
                     <h3 className="font-serif font-bold text-teal text-lg">{selectedTour.name}</h3>
-                    <div className="flex items-baseline gap-2">
+                    <div className="flex items-center gap-2">
                       <span className="text-2xl font-mono font-bold text-coffee-red">${selectedTour.pricing.smallGroup.adult}</span>
                       <span className="text-xs text-teal/60">/ person × {formData.guests} = <strong className="text-coffee-red">${totalPrice}</strong></span>
+                    </div>
+                    <div className="flex items-center gap-4 pt-2">
+                      <button onClick={() => handleGuestChange(-1)}
+                        className="w-9 h-9 rounded-lg hover:bg-teal/5 flex items-center justify-center border border-teal/10 active:scale-95">
+                        <Minus className="w-4 h-4 text-teal" />
+                      </button>
+                      <span className="font-mono font-bold text-lg w-8 text-center text-teal">{formData.guests}</span>
+                      <button onClick={() => handleGuestChange(1)}
+                        className="w-9 h-9 rounded-lg hover:bg-teal/5 flex items-center justify-center border border-teal/10 active:scale-95">
+                        <Plus className="w-4 h-4 text-teal" />
+                      </button>
+                      <span className="text-xs text-teal/60">guests</span>
                     </div>
                     <div className="border-t border-teal/10 pt-3">
                       <p className="text-xs font-mono uppercase text-teal/60 mb-2">{p.included.headline}</p>
@@ -357,7 +334,6 @@ export const BookPage: React.FC = () => {
                 </div>
               )}
 
-              {/* Help Card */}
               <div className="bg-teal rounded-2xl p-5 text-linen-white space-y-3">
                 <h4 className="font-serif font-bold">{p.sidebar.helpHeadline}</h4>
                 <p className="text-xs text-linen-white/70">{p.sidebar.helpText}</p>
@@ -377,7 +353,6 @@ export const BookPage: React.FC = () => {
         </div>
       </section>
 
-      {/* How It Works */}
       <section className="py-12 sm:py-16 bg-sandstone/10 border-t border-teal/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-teal text-center mb-10">{p.howItWorks.headline}</h2>
@@ -395,12 +370,11 @@ export const BookPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Policies */}
       <section className="py-12 sm:py-16 bg-linen-white border-t border-teal/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-teal text-center mb-8">{p.policies.headline}</h2>
           <div className="space-y-3">
-            {Object.entries(policies).map(([key, policy]) => (
+            {Object.entries(bookingJson.policies).map(([key, policy]) => (
               <details key={key} className="bg-sandstone/30 rounded-xl border border-teal/10 overflow-hidden"
                 open={openPolicy === key} onToggle={(e) => setOpenPolicy(e.currentTarget.open ? key : null)}>
                 <summary className="flex items-center justify-between cursor-pointer p-5 font-serif font-bold text-teal hover:text-coffee-red transition-colors">

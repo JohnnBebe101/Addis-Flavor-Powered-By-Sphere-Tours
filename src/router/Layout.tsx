@@ -1,17 +1,23 @@
 import { Outlet, ScrollRestoration, useLocation, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { NotificationBar } from '../components/NotificationBar';
 import Navbar from '../components/Navbar';
-import { HeroBanner } from '../components/home/HeroBanner';
 import { Footer } from '../components/home/Footer';
 import { StickyBookingBar } from '../components/home/StickyBookingBar';
 import ContactModal from '../components/ContactModal';
 import { FloatingWhatsApp } from '../components/FloatingWhatsApp';
 import { ErrorBoundary } from '../components/ErrorBoundary';
 import { TRANSLATIONS, NEIGHBORHOOD_DESTINATIONS } from '../data';
-import { Tour } from '../types';
-import toursData from '../content/tours.json';
-import homeData from '../content/home.json';
+
+const HomeHero = lazy(() => import('../components/home/HomeHero').then(m => ({ default: m.HomeHero })));
+
+function RouteLoadingSkeleton() {
+  return (
+    <div className="min-h-[60vh] flex items-center justify-center">
+      <div className="w-8 h-8 border-2 border-coffee-red/20 border-t-coffee-red rounded-full animate-spin" />
+    </div>
+  );
+}
 
 export const Layout = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -30,6 +36,12 @@ export const Layout = () => {
 
   return (
     <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-coffee-red focus:text-linen-white focus:rounded-lg focus:text-sm focus:font-bold focus:outline-none"
+      >
+        Skip to main content
+      </a>
       <NotificationBar />
       <Navbar
         translations={TRANSLATIONS}
@@ -37,15 +49,17 @@ export const Layout = () => {
         onContactClick={() => setIsContactOpen(true)}
       />
       {pathname === '/' && (
-        <HeroBanner
-          slides={homeData.hero.slides}
-          tours={toursData.tours as Tour[]}
-          handleOpenBooking={handleOpenBooking}
-        />
+        <ErrorBoundary fallback={<div />}>
+          <Suspense fallback={<div className="min-h-[80vh] bg-sandstone/20 animate-pulse" />}>
+            <HomeHero />
+          </Suspense>
+        </ErrorBoundary>
       )}
       <main id="main-content">
         <ErrorBoundary>
-          <Outlet />
+          <Suspense fallback={<RouteLoadingSkeleton />}>
+            <Outlet />
+          </Suspense>
         </ErrorBoundary>
       </main>
       <ScrollRestoration />

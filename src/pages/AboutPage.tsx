@@ -40,7 +40,7 @@ export const AboutPage: React.FC = () => {
         activeTab="about"
         tabs={TABS as Record<string, string>}
         isGlobalDark={false}
-        onTabClick={() => {}} // TODO: wire tab state management
+        onTabClick={() => {}}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
@@ -67,7 +67,7 @@ export const AboutPage: React.FC = () => {
             startedBtn: 'Book a Tour',
           }}
           isGlobalDark={false}
-          onBookClick={() => {}} // TODO: wire to Layout booking modal
+          onBookClick={() => navigate('/book/')}
           cookingClassImg="/images/about/cooking.jpg"
           jebenaPourImg="/images/about/jebena.jpg"
         />

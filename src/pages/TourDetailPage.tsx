@@ -13,8 +13,8 @@ import { ToursData, ReviewsData, TourItineraryItem, TourFAQ } from '../types';
 export const TourDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const typedToursData = toursData as unknown as ToursData;
-  const typedReviewsData = reviewsData as unknown as ReviewsData;
+  const typedToursData = toursData as ToursData;
+  const typedReviewsData = reviewsData as ReviewsData;
   const tour = typedToursData.tours.find((t) => t.slug === slug) || typedToursData.tours[0];
   const tourReviews = typedReviewsData.reviews.filter((r) => r.tourId === tour.id);
 

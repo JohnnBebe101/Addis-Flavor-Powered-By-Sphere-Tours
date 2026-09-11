@@ -81,6 +81,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({
               <img
                 src={imgSrc}
                 alt="Explore Addis Ababa"
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover"
               />
             )}

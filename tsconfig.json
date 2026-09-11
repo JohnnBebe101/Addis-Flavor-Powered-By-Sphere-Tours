@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "experimentalDecorators": true,
-    "useDefineForClassFields": false,
     "module": "ESNext",
     "lib": [
       "ES2022",
@@ -27,5 +25,9 @@
     "noUnusedLocals": true,
     "noFallthroughCasesInSwitch": true
   },
-  "exclude": []
+  "exclude": [
+    "node_modules",
+    "dist",
+    "archived"
+  ]
 }

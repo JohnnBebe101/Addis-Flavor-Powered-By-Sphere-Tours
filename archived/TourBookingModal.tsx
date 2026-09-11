@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { ShoppingBag } from 'lucide-react';
-import { Tour, Translations } from '../types';
-import { BookingStep1 } from './booking/BookingStep1';
-import { BookingStep2 } from './booking/BookingStep2';
-import { BookingStep3 } from './booking/BookingStep3';
-import { BookingSuccess } from './booking/BookingSuccess';
-import { BookingProgressBar } from './booking/BookingProgressBar';
-import bookingContent from '../content/booking.json';
+import { Tour, Translations } from '../../types';
+import { BookingStep1 } from '../booking/BookingStep1';
+import { BookingStep2 } from '../booking/BookingStep2';
+import { BookingStep3 } from '../booking/BookingStep3';
+import { BookingSuccess } from '../booking/BookingSuccess';
+import { BookingProgressBar } from './BookingProgressBar';
+import bookingContent from '../../content/booking.json';
 
 interface TourBookingModalProps {
   translations: Translations;
@@ -28,6 +28,7 @@ interface BookingFormData {
   fullName: string;
   email: string;
   phone: string;
+  whatsapp: string;
   pickupLocation: string;
   specialRequirements: string;
 }
@@ -63,27 +64,42 @@ export default function TourBookingModal({
 }: TourBookingModalProps) {
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [formData, setFormData] = useState<BookingFormData>(() => ({
-    tourId: initialTourId || tours[0].id,
+    tourId: initialTourId || tours[0]?.id || '',
     date: new Date(Date.now() + 86400000).toISOString().split('T')[0], // Tomorrow
     guests: 2,
     fullName: '',
     email: '',
     phone: '',
+    whatsapp: '',
     pickupLocation: '',
     specialRequirements: '',
   }));
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [policiesAgreed, setPoliciesAgreed] = useState(false);
+  const [showErrors, setShowErrors] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
+  }, []);
+
+  if (!tours?.length) return null;
 
   const selectedTour = tours.find((t) => t.id === formData.tourId) || tours[0];
   const totalPrice = selectedTour.pricing.smallGroup.adult * formData.guests;
 
   const handleNextStep = () => {
+    if (!validateStep(step)) {
+      setShowErrors(true);
+      return;
+    }
+    setShowErrors(false);
     if (step === 1) {
       setStep(2);
     } else if (step === 2) {
       setIsSubmitting(true);
-      setTimeout(() => {
+      timeoutRef.current = setTimeout(() => {
         setIsSubmitting(false);
         setIsSuccess(true);
         setStep(3);
@@ -101,12 +117,13 @@ export default function TourBookingModal({
     setIsSuccess(false);
     setIsSubmitting(false);
     setFormData({
-      tourId: tours[0].id,
+      tourId: tours[0]?.id || '',
       date: new Date(Date.now() + 86400000).toISOString().split('T')[0],
       guests: 2,
       fullName: '',
       email: '',
       phone: '',
+      whatsapp: '',
       pickupLocation: '',
       specialRequirements: '',
     });
@@ -115,6 +132,19 @@ export default function TourBookingModal({
 
   const handleInputChange = (field: keyof BookingFormData, value: string | number) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const validateStep = (stepToValidate: number): boolean => {
+    if (stepToValidate === 1) return !!formData.tourId && !!formData.date && formData.guests >= 1;
+    if (stepToValidate === 2) {
+      return !!formData.fullName.trim()
+        && !!formData.email.trim()
+        && formData.email.includes('@')
+        && !!formData.phone.trim()
+        && !!formData.pickupLocation.trim();
+    }
+    if (stepToValidate === 3) return policiesAgreed;
+    return true;
   };
 
   if (!isOpen) return null;
@@ -171,6 +201,7 @@ export default function TourBookingModal({
               formData={formData}
               onChange={handleInputChange}
               translations={translations}
+              showErrors={showErrors}
             />
           ) : (
             <BookingStep3
@@ -178,6 +209,8 @@ export default function TourBookingModal({
               formData={formData}
               totalPrice={totalPrice}
               translations={translations}
+              policiesAgreed={policiesAgreed}
+              onPoliciesChange={setPoliciesAgreed}
             />
           )}
         </div>

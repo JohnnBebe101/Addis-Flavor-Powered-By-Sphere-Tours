@@ -1,9 +1,11 @@
-import { useState, FormEvent } from 'react';
+import { useState, useRef, useEffect, FormEvent } from 'react';
 import {
   MapPin, Phone, Mail, Send, MessageCircle, Clock,
   Star, ChevronRight, CheckCircle,
 } from 'lucide-react';
 import contactData from '../content/contact.json';
+import { PhoneInput } from '../components/ui/PhoneInput';
+import type { ContactFormData } from '../types/contact';
 
 interface ContactData {
   hero: { headline: string; subheadline: string; image: string };
@@ -21,26 +23,35 @@ interface ContactData {
   };
 }
 
-const cj = contactData as unknown as ContactData;
+const cj = contactData as ContactData;
 
 export const ContactPage: React.FC = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', topic: '', message: '' });
+  const [formData, setFormData] = useState<ContactFormData>({ name: '', fullName: '', email: '', phone: '', whatsapp: '', topic: '', message: '', website_url: '' });
   const [isSending, setIsSending] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
+  }, []);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    if (formData.website_url) { setIsSuccess(true); return; }
     setIsSending(true);
-    setTimeout(() => { setIsSending(false); setIsSuccess(true); }, 1500);
+    timeoutRef.current = setTimeout(() => { setIsSending(false); setIsSuccess(true); }, 1500);
   };
 
   const p = cj.page;
   const channelIcons: Record<string, typeof Phone> = { whatsapp: MessageCircle, phone: Phone, email: Mail };
+  const whatsappText = encodeURIComponent(
+    `Hello! I'd like to inquire about your tours.\n\nName: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nWhatsApp: ${formData.whatsapp || formData.phone}\nTopic: ${formData.topic}\nMessage: ${formData.message}`
+  );
 
   return (
     <div className="min-h-screen bg-linen-white">
       {/* Hero */}
-      <section className="py-12 sm:py-16 bg-sandstone/10 border-b border-teal/10">
+      <section className="py-16 sm:py-20 bg-sandstone/10 border-b border-teal/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-extrabold text-teal tracking-tight mb-4">{p.hero.headline}</h1>
           <p className="text-base sm:text-lg text-teal/70 max-w-2xl mx-auto mb-4">{p.hero.subheadline}</p>
@@ -50,11 +61,95 @@ export const ContactPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Info + Form */}
-      <section className="py-12 sm:py-16">
+      {/* Contact Form + Info */}
+      <section className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
-            {/* Left: Contact Info + Social Proof */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+            {/* Form - 2/3 width on desktop */}
+            <div className="lg:col-span-2">
+              <div className="bg-sandstone/30 rounded-2xl p-8 sm:p-10 border border-teal/10">
+                {isSuccess ? (
+                  <div className="text-center py-12 space-y-4">
+                    <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                      <CheckCircle className="w-8 h-8" />
+                    </div>
+                    <h3 className="text-2xl font-serif font-bold text-teal">{p.form.successTitle}</h3>
+                    <p className="text-teal/70 text-base max-w-md mx-auto">{cj.contactForm.successMessage}</p>
+                    <a href={`https://wa.me/${cj.contactInfo.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-coffee-red hover:text-gold">
+                      <MessageCircle className="w-4 h-4" /> Chat on WhatsApp for faster response
+                    </a>
+                  </div>
+                ) : (
+                  <>
+                    <h3 className="text-xl sm:text-2xl font-serif font-bold text-teal mb-1">{p.form.headline}</h3>
+                    <p className="text-sm text-teal/60 mb-6">{p.form.subheadline}</p>
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                      <div>
+                        <label className="block text-sm font-medium text-teal/80 mb-1.5">Full Name *</label>
+                        <input type="text" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="John Doe"
+                          className="w-full px-4 py-3 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-2 focus:ring-coffee-red/20 focus:border-coffee-red transition-all" />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-teal/80 mb-1.5">Email Address *</label>
+                        <input type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="john@example.com"
+                          className="w-full px-4 py-3 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-2 focus:ring-coffee-red/20 focus:border-coffee-red transition-all" />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-teal/80 mb-1.5">Phone Number *</label>
+                        <PhoneInput
+                          id="contact-phone"
+                          value={formData.phone}
+                          onChange={(val) => setFormData({ ...formData, phone: val })}
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-teal/80 mb-1.5">WhatsApp Number</label>
+                        <PhoneInput
+                          id="contact-whatsapp"
+                          value={formData.whatsapp}
+                          onChange={(val) => setFormData({ ...formData, whatsapp: val })}
+                          helperText="For instant responses via WhatsApp"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-teal/80 mb-1.5">Topic *</label>
+                        <select required value={formData.topic} onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
+                          className="w-full px-4 py-3 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-2 focus:ring-coffee-red/20 focus:border-coffee-red transition-all cursor-pointer">
+                          <option value="" disabled>Select inquiry topic...</option>
+                          {cj.contactForm.fields.find((f) => f.name === 'topic')?.options?.map((opt, i) => (
+                            <option key={i} value={opt}>{opt}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-teal/80 mb-1.5">Your Message *</label>
+                        <textarea required rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} placeholder="How can we help you?"
+                          className="w-full px-4 py-3 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-2 focus:ring-coffee-red/20 focus:border-coffee-red transition-all" />
+                      </div>
+                      {/* Honeypot - hidden from users, filled by bots */}
+                      <input 
+                        type="text" 
+                        name="website_url" 
+                        value={formData.website_url} 
+                        onChange={(e) => setFormData({ ...formData, website_url: e.target.value })}
+                        tabIndex={-1} 
+                        autoComplete="off" 
+                        style={{ display: 'none' }} 
+                        aria-hidden="true" 
+                      />
+                      <button type="submit" disabled={isSending}
+                        className="w-full py-3 px-4 rounded-xl bg-coffee-red text-linen-white text-xs uppercase tracking-wider font-bold hover:bg-coffee-red/90 transition-all flex items-center justify-center gap-2 shadow-md disabled:opacity-50">
+                        <Send className="w-4 h-4" />
+                        <span>{isSending ? 'Sending...' : cj.contactForm.submitText}</span>
+                      </button>
+                    </form>
+                  </>
+                )}
+              </div>
+            </div>
+
+            {/* Contact Info Sidebar - 1/3 width on desktop */}
             <div className="space-y-8">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-serif font-bold text-teal mb-3">{cj.contactInfo.headline}</h2>
@@ -84,8 +179,8 @@ export const ContactPage: React.FC = () => {
                 ))}
               </div>
 
-              {/* WhatsApp CTA */}
-              <a href={`https://wa.me/${cj.contactInfo.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer"
+              {/* WhatsApp CTA with pre-filled message */}
+              <a href={`https://wa.me/${cj.contactInfo.whatsapp.replace(/\D/g, '')}?text=${whatsappText}`} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all shadow-md">
                 <MessageCircle className="w-4 h-4" /> WhatsApp Us
               </a>
@@ -103,79 +198,12 @@ export const ContactPage: React.FC = () => {
                 </div>
               </div>
             </div>
-
-            {/* Right: Contact Form */}
-            <div className="bg-sandstone/30 rounded-2xl p-6 sm:p-8 border border-teal/10">
-              {isSuccess ? (
-                <div className="text-center py-8 space-y-4">
-                  <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto animate-bounce">
-                    <CheckCircle className="w-10 h-10" />
-                  </div>
-                  <h3 className="text-2xl font-serif font-bold text-teal">{p.form.successTitle}</h3>
-                  <p className="text-teal/70 text-sm">{cj.contactForm.successMessage}</p>
-                  <div className="bg-linen-white rounded-xl p-4 border border-teal/10 text-left max-w-sm mx-auto">
-                    <p className="text-xs font-mono uppercase text-teal/60 mb-2">{p.form.successNext}</p>
-                    <ul className="space-y-1.5">
-                      {p.form.successSteps.map((s, i) => (
-                        <li key={i} className="flex items-start gap-2 text-xs text-teal/80">
-                          <CheckCircle className="w-3.5 h-3.5 text-gold mt-0.5 flex-shrink-0" /> {s}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ) : (
-                <>
-                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-teal mb-1">{p.form.headline}</h3>
-                  <p className="text-sm text-teal/60 mb-6">{p.form.subheadline}</p>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">Full Name *</label>
-                        <input type="text" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="John Doe"
-                          className="w-full px-4 py-2.5 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-1 focus:ring-gold" />
-                      </div>
-                      <div>
-                        <label className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">Email Address *</label>
-                        <input type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="john@example.com"
-                          className="w-full px-4 py-2.5 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-1 focus:ring-gold" />
-                      </div>
-                    </div>
-                    <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">Phone / WhatsApp</label>
-                      <input type="tel" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} placeholder="+251-911-XXX-XXX"
-                        className="w-full px-4 py-2.5 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-1 focus:ring-gold" />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">Topic *</label>
-                      <select required value={formData.topic} onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-1 focus:ring-gold cursor-pointer">
-                        <option value="" disabled>Select inquiry topic...</option>
-                        {cj.contactForm.fields.find((f) => f.name === 'topic')?.options?.map((opt, i) => (
-                          <option key={i} value={opt}>{opt}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">Your Message *</label>
-                      <textarea required rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} placeholder="How can we help you?"
-                        className="w-full px-4 py-2.5 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-1 focus:ring-gold" />
-                    </div>
-                    <button type="submit" disabled={isSending}
-                      className="w-full py-3 px-4 rounded-xl bg-coffee-red text-linen-white text-xs uppercase tracking-wider font-bold hover:bg-coffee-red/90 transition-all flex items-center justify-center gap-2 shadow-md disabled:opacity-50">
-                      <Send className="w-4 h-4" />
-                      <span>{isSending ? 'Sending...' : cj.contactForm.submitText}</span>
-                    </button>
-                  </form>
-                </>
-              )}
-            </div>
           </div>
         </div>
       </section>
 
       {/* Quick Contact Cards */}
-      <section className="py-12 bg-sandstone/10 border-t border-teal/10">
+      <section className="py-16 sm:py-20 bg-sandstone/10 border-t border-teal/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-serif font-bold text-teal text-center mb-8">{p.quickContact.headline}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -207,7 +235,7 @@ export const ContactPage: React.FC = () => {
       </section>
 
       {/* Custom Tour & Travel Agent CTAs */}
-      <section className="py-12 sm:py-16">
+      <section className="py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-sandstone/30 rounded-2xl p-8 border border-teal/10">
@@ -229,7 +257,7 @@ export const ContactPage: React.FC = () => {
       </section>
 
       {/* FAQs */}
-      <section className="py-12 sm:py-16 bg-sandstone/10 border-t border-teal/10">
+      <section className="py-16 sm:py-20 bg-sandstone/10 border-t border-teal/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-teal text-center mb-8">{cj.faqs.headline}</h2>
           <div className="space-y-3">
@@ -247,7 +275,7 @@ export const ContactPage: React.FC = () => {
       </section>
 
       {/* Map */}
-      <section className="py-12 sm:py-16 bg-linen-white border-t border-teal/10">
+      <section className="py-16 sm:py-20 bg-linen-white border-t border-teal/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-serif font-bold text-teal text-center mb-8">{cj.map.headline}</h2>
           <div className="aspect-video w-full rounded-2xl overflow-hidden border border-teal/10">

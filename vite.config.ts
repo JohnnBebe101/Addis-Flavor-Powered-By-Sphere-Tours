@@ -40,5 +40,13 @@ export default defineConfig(() => ({
   },
   build: {
     outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'lucide': ['lucide-react'],
+        },
+      },
+    },
   },
 }));
