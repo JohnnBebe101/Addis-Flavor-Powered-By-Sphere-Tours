@@ -1,0 +1,43 @@
+{
+  "hero": {
+    "headline": "Airport Transfers in Addis Ababa",
+    "subheadline": "Arrange a reliable transfer between Bole International Airport and your hotel. We confirm availability and pricing after your request."
+  },
+  "howItWorks": [
+    {
+      "title": "Submit Your Details",
+      "description": "Share your flight info, arrival/departure time, and hotel or destination."
+    },
+    {
+      "title": "We Confirm",
+      "description": "Our team reviews your request and confirms vehicle availability and pricing."
+    },
+    {
+      "title": "Travel with Confidence",
+      "description": "Your driver meets you at the airport and takes you safely to your destination."
+    }
+  ],
+  "form": {
+    "headline": "Request an Airport Transfer",
+    "subheadline": "Fill out the form below and we'll confirm your transfer within 24 hours.",
+    "disclosure": "Pickup details, vehicle availability, and final pricing are confirmed after we review your request."
+  },
+  "faqs": [
+    {
+      "question": "Do you offer meet-and-greet at the airport?",
+      "answer": "Driver meeting arrangements can be discussed after your transfer is confirmed. Specific meet-and-greet services depend on availability."
+    },
+    {
+      "question": "What if my flight is delayed?",
+      "answer": "Let us know your updated arrival time. We'll adjust the driver schedule based on your new flight details."
+    },
+    {
+      "question": "Can I book a round-trip transfer?",
+      "answer": "Yes. Request both arrival and departure transfers in the same form and we'll coordinate both."
+    },
+    {
+      "question": "Do you provide child seats?",
+      "answer": "Child seats can be arranged upon request. Mention this in the special requirements field."
+    }
+  ]
+}

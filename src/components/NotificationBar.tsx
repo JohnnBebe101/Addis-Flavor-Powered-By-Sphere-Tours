@@ -14,18 +14,18 @@ export const NotificationBar = () => {
         </a>
         <span className="text-linen-white/20">|</span>
         <a
-          href="mailto:info@addisababacitytour.com"
+          href="mailto:info@addisabababylocals.com"
           className="flex items-center space-x-1.5 text-linen-white/80 hover:text-gold transition-colors"
         >
           <Mail className="w-3 h-3" />
-          <span className="text-[10px] font-mono tracking-wider">info@addisababacitytour.com</span>
+          <span className="text-[10px] font-mono tracking-wider">info@addisabababylocals.com</span>
         </a>
       </div>
 
       {/* Right: Social Icons */}
       <div className="flex items-center space-x-3">
         <a
-          href="https://instagram.com/addisababacitytour"
+          href="https://instagram.com/addisabababylocals"
           target="_blank"
           rel="noopener noreferrer"
           className="text-linen-white/60 hover:text-gold transition-colors"
@@ -34,7 +34,7 @@ export const NotificationBar = () => {
           <Instagram className="w-3.5 h-3.5" />
         </a>
         <a
-          href="https://facebook.com/addisababacitytour"
+          href="https://facebook.com/addisabababylocals"
           target="_blank"
           rel="noopener noreferrer"
           className="text-linen-white/60 hover:text-gold transition-colors"

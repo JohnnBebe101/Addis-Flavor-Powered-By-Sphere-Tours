@@ -20,7 +20,7 @@ const LEGAL_CONFIG: Record<
     icon: <FileText className="w-8 h-8 text-gold" />,
     lastUpdated: 'August 28, 2026',
     intro:
-      'Please read these terms and conditions carefully before booking a tour with Addis Ababa City Tour.',
+      'Please read these terms and conditions carefully before booking a tour with Addis Ababa by Locals.',
     sections: [bookingData.policies.booking, bookingData.policies.pricing],
   },
   privacy: {

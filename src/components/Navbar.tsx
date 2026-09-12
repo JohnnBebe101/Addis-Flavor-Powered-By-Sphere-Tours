@@ -161,7 +161,7 @@ export default function Navbar({
                 {translations.brandName}
               </span>
               <span className="text-[9px] font-mono uppercase tracking-widest text-gold mt-1">
-                {'Authentic City Tours'}
+                {'Powered by Sphere Tour & Travel'}
               </span>
             </div>
           </a>
@@ -326,7 +326,7 @@ export default function Navbar({
                 </div>
                 <div className="flex items-center space-x-4">
                   <a
-                    href="https://instagram.com/addisababacitytour"
+                    href="https://instagram.com/addisabababylocals"
                     className="opacity-70 hover:opacity-100 hover:text-gold transition-opacity"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -334,7 +334,7 @@ export default function Navbar({
                     <Instagram className="w-4 h-4" />
                   </a>
                   <a
-                    href="https://facebook.com/addisababacitytour"
+                    href="https://facebook.com/addisabababylocals"
                     className="opacity-70 hover:opacity-100 hover:text-gold transition-opacity"
                     target="_blank"
                     rel="noopener noreferrer"

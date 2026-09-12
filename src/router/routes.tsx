@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import Layout from './Layout';
 
 export const router = createBrowserRouter([
@@ -21,11 +21,33 @@ export const router = createBrowserRouter([
           import('../pages/TourDetailPage').then((m) => ({ Component: m.TourDetailPage })),
       },
       {
-        path: 'destinations/',
+        path: 'things-to-do/',
         lazy: () =>
-          import('../pages/DestinationListingPage').then((m) => ({
-            Component: m.DestinationListingPage,
+          import('../pages/ThingsToDoPage').then((m) => ({ Component: m.ThingsToDoPage })),
+      },
+      {
+        path: 'where-to-stay/',
+        lazy: () =>
+          import('../pages/WhereToStayPage').then((m) => ({ Component: m.WhereToStayPage })),
+      },
+      {
+        path: 'guides/',
+        lazy: () => import('../pages/GuidesPage').then((m) => ({ Component: m.GuidesPage })),
+      },
+      {
+        path: 'car-hire/',
+        lazy: () => import('../pages/CarHirePage').then((m) => ({ Component: m.CarHirePage })),
+      },
+      {
+        path: 'airport-transfers/',
+        lazy: () =>
+          import('../pages/AirportTransfersPage').then((m) => ({
+            Component: m.AirportTransfersPage,
           })),
+      },
+      {
+        path: 'destinations/',
+        element: <Navigate to="/things-to-do/" replace />,
       },
       {
         path: 'destinations/:slug/',

@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "headline": "Where to Stay in Addis Ababa",
+    "subheadline": "Explore Addis Ababa's neighbourhoods and find the right area for your stay. We provide personalised recommendations — not hotel inventory."
+  },
+  "areas": [
+    {
+      "name": "Bole",
+      "type": "Modern & Business",
+      "description": "Addis Ababa's modern hub with international hotels, restaurants, and proximity to Bole International Airport."
+    },
+    {
+      "name": "Kazanchis",
+      "type": "Central & Business",
+      "description": "Central business district with a mix of business hotels and local restaurants, close to the UN campus."
+    },
+    {
+      "name": "Piassa",
+      "type": "Historic & Cultural",
+      "description": "The old Italian quarter with colonial-era architecture, local cafés, and walking distance to Holy Trinity Cathedral."
+    },
+    {
+      "name": "Meskel Square",
+      "type": "Central & Cultural",
+      "description": "The heart of Addis Ababa, surrounded by cultural landmarks, the African Union, and major hotels."
+    },
+    {
+      "name": "Old Airport",
+      "type": "Residential & Quiet",
+      "description": "A quieter residential area with boutique hotels and local restaurants, popular with long-term visitors."
+    },
+    {
+      "name": "Sheraton Area",
+      "type": "Luxury & Premium",
+      "description": "Premium area near the Sheraton Addis, with upscale dining and embassy district proximity."
+    }
+  ],
+  "stayTypes": [
+    {
+      "title": "Short Stay",
+      "description": "1–3 nights for transit or quick visits. We recommend areas close to the airport or city centre.",
+      "icon": "home"
+    },
+    {
+      "title": "Business Travel",
+      "description": "Central locations near business districts with reliable WiFi and transport access.",
+      "icon": "building"
+    },
+    {
+      "title": "Family Stay",
+      "description": "Spacious accommodation in safe neighbourhoods with family-friendly dining options.",
+      "icon": "users"
+    },
+    {
+      "title": "Longer Stays",
+      "description": "Monthly or extended stays with self-catering options and local community access.",
+      "icon": "home"
+    }
+  ],
+  "howWeHelp": {
+    "headline": "How We Help You Find the Right Stay",
+    "description": "We don't sell hotel rooms. We provide personalised accommodation recommendations based on your travel plans, preferences, and budget.",
+    "steps": [
+      {
+        "title": "Tell Us Your Plans",
+        "description": "Share your travel dates, group size, and what you'd like to do in Addis Ababa."
+      },
+      {
+        "title": "We Recommend Areas",
+        "description": "Based on your plans, we suggest the best neighbourhoods and accommodation types."
+      },
+      {
+        "title": "Book Directly",
+        "description": "We connect you with recommended hotels and guesthouses for direct booking."
+      }
+    ]
+  },
+  "form": {
+    "headline": "Request Accommodation Recommendations",
+    "subheadline": "Tell us about your stay and we'll provide personalised suggestions within 24 hours.",
+    "disclosure": "Accommodation options and availability are confirmed after you send your request."
+  },
+  "faqs": [
+    {
+      "question": "Do you charge a booking fee?",
+      "answer": "No. Our accommodation recommendations are a free service for travellers booking tours or services with us."
+    },
+    {
+      "question": "Can you book hotels directly?",
+      "answer": "We provide recommendations and connect you with hotels for direct booking. We don't hold inventory or process payments for accommodation."
+    },
+    {
+      "question": "What if I need to change my booking?",
+      "answer": "Since you book directly with the hotel, any changes should be made through them. We can help communicate if needed."
+    },
+    {
+      "question": "Do you offer airport pickup with accommodation?",
+      "answer": "Yes, we can arrange airport transfers as part of your overall travel package. Add this to your enquiry."
+    }
+  ]
+}

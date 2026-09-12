@@ -11,9 +11,8 @@ export const ReviewsPage: React.FC = () => {
             What Travelers Say About Us
           </h1>
           <p className="text-lg text-teal/70 max-w-3xl mx-auto">
-            Read what travelers say about our Addis Ababa city tours and day trips. 500+ five-star
-            reviews on TripAdvisor. 4.9/5 average rating. Licensed local operator. Book with
-            confidence.
+            Read what travelers say about our Addis Ababa city tours and day trips. Licensed local
+            operator. Book with confidence.
           </p>
         </div>
       </section>

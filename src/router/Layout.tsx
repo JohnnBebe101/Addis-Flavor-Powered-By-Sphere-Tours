@@ -1,5 +1,5 @@
 import { Outlet, ScrollRestoration, useLocation, useNavigate } from 'react-router-dom';
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { NotificationBar } from '../components/NotificationBar';
 import Navbar from '../components/Navbar';
 import { Footer } from '../components/home/Footer';
@@ -7,9 +7,9 @@ import { StickyBookingBar } from '../components/home/StickyBookingBar';
 import ContactModal from '../components/ContactModal';
 import { FloatingWhatsApp } from '../components/FloatingWhatsApp';
 import { ErrorBoundary } from '../components/ErrorBoundary';
+import { CookieConsentProvider } from '../context/CookieConsentContext';
+import { CookieConsentBanner } from '../components/CookieConsentBanner';
 import { TRANSLATIONS, NEIGHBORHOOD_DESTINATIONS } from '../data';
-
-const HomeHero = lazy(() => import('../components/home/HomeHero').then(m => ({ default: m.HomeHero })));
 
 function RouteLoadingSkeleton() {
   return (
@@ -21,7 +21,7 @@ function RouteLoadingSkeleton() {
 
 export const Layout = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
-  const { pathname, search } = useLocation();
+  const { search } = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export const Layout = () => {
   const handleOpenBooking = () => navigate('/book/');
 
   return (
-    <>
+    <CookieConsentProvider>
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-coffee-red focus:text-linen-white focus:rounded-lg focus:text-sm focus:font-bold focus:outline-none"
@@ -48,13 +48,6 @@ export const Layout = () => {
         onBookClick={handleOpenBooking}
         onContactClick={() => setIsContactOpen(true)}
       />
-      {pathname === '/' && (
-        <ErrorBoundary fallback={<div />}>
-          <Suspense fallback={<div className="min-h-[80vh] bg-sandstone/20 animate-pulse" />}>
-            <HomeHero />
-          </Suspense>
-        </ErrorBoundary>
-      )}
       <main id="main-content">
         <ErrorBoundary>
           <Suspense fallback={<RouteLoadingSkeleton />}>
@@ -69,7 +62,8 @@ export const Layout = () => {
       />
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
       <FloatingWhatsApp />
-    </>
+      <CookieConsentBanner />
+    </CookieConsentProvider>
   );
 };
 

@@ -13,7 +13,10 @@ export const TRANSLATIONS: Translations = {
   navWhyChooseUs: 'Why Choose Us',
   navTravelGuide: 'Travel Guide',
   navContact: 'Contact Us',
-  navBook: 'BOOK A TOUR',
+  navBook: 'EXPLORE TOURS',
+  navThingsToDo: 'Things to Do',
+  navPlanYourVisit: 'Plan Your Visit',
+  navGettingAround: 'Getting Around',
   heroSearchPlaceholder: 'What do you want to experience?',
   bookNowButton: 'BOOK NOW',
 };

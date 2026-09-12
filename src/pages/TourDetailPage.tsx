@@ -338,7 +338,7 @@ export const TourDetailPage: React.FC = () => {
                 ))}
               </div>
               <span className="font-mono text-sm text-teal/80">
-                4.9/5 from 500+ reviews on TripAdvisor
+                Guest Reviews
               </span>
             </div>
           </div>

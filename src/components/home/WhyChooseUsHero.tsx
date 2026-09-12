@@ -7,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 
 interface WhyChooseUsHeroProps {
   headline: string;
+  editorialIntro?: string;
   benefits: Array<{
     id: number;
     title: string;
@@ -19,6 +20,7 @@ interface WhyChooseUsHeroProps {
 
 export const WhyChooseUsHero: React.FC<WhyChooseUsHeroProps> = ({
   headline,
+  editorialIntro,
   benefits,
 }) => {
   if (!benefits.length) return null;
@@ -29,6 +31,11 @@ export const WhyChooseUsHero: React.FC<WhyChooseUsHeroProps> = ({
         <h2 className="text-lg md:text-xl font-serif font-bold text-teal mb-4 tracking-tight text-center">
           {headline}
         </h2>
+        {editorialIntro && (
+          <p className="text-sm text-teal/70 text-center max-w-3xl mx-auto mb-5 leading-relaxed">
+            {editorialIntro}
+          </p>
+        )}
 
         {/* ROW 1: Hero card (8/12) + 1 small card (4/12) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 mb-3">

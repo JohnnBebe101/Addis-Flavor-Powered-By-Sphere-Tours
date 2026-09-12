@@ -64,7 +64,7 @@ export function BookingSuccess({
     `Total: $${totalPrice} USD\n\n` +
     `Please confirm this booking. Thank you!`
   );
-  const emailUrl = `mailto:info@addisababacitytour.com?subject=${emailSubject}&body=${emailBody}`;
+  const emailUrl = `mailto:info@addisabababylocals.com?subject=${emailSubject}&body=${emailBody}`;
 
   return (
     <div className="text-center py-6 space-y-4 animate-fade-in" role="status" aria-live="polite">

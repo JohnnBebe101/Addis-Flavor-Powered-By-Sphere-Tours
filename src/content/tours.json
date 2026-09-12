@@ -3,10 +3,10 @@
     {
       "id": "half-day-addis-ababa",
       "slug": "half-day-addis-ababa-city-tour",
-      "name": "Half-Day Addis Ababa City Tour",
+      "name": "Half-Day Addis Ababa by Locals",
       "subtitle": "National Museum, Merkato & Meskel Square",
       "shortDescription": "4-hour guided tour of Addis Ababa's top attractions: National Museum (Lucy fossil), Addis Mercato, Meskel Square. Perfect for layover passengers or travelers with limited time.",
-      "fullDescription": "The Half-Day Addis Ababa City Tour is a 4-hour guided experience showcasing Addis Ababa's top attractions: the National Museum (home to Lucy, the 3.2-million-year-old fossil), Addis Mercato (Africa's largest open-air market), and Meskel Square (historic plaza with Menelik II statue). Perfect for layover passengers or travelers with limited time, this tour includes hotel pickup, expert local guide, and all entrance fees.",
+      "fullDescription": "The Half-Day Addis Ababa by Locals is a 4-hour guided experience showcasing Addis Ababa's top attractions: the National Museum (home to Lucy, the 3.2-million-year-old fossil), Addis Mercato (Africa's largest open-air market), and Meskel Square (historic plaza with Menelik II statue). Perfect for layover passengers or travelers with limited time, this tour includes hotel pickup, expert local guide, and all entrance fees.",
       "tourType": "city-tour",
       "duration": "4 hours",
       "durationMinutes": 240,
@@ -122,11 +122,11 @@
       ],
       "relatedTours": ["full-day-addis-ababa", "addis-ababa-highlights", "airport-layover-tour"],
       "seo": {
-        "pageTitle": "Half-Day Addis Ababa City Tour — National Museum & Merkato | From $42",
+        "pageTitle": "Half-Day Addis Ababa by Locals — National Museum & Merkato | From $42",
         "metaDescription": "4-hour guided tour of Addis Ababa's top attractions: National Museum (Lucy fossil), Addis Mercato, Meskel Square. Hotel pickup, expert guide, all entrance fees. From $42. Book direct and save 15%.",
-        "h1": "Half-Day Addis Ababa City Tour — National Museum, Merkato & Meskel Square",
+        "h1": "Half-Day Addis Ababa by Locals — National Museum, Merkato & Meskel Square",
         "h2s": [
-          "What is the Half-Day Addis Ababa City Tour?",
+          "What is the Half-Day Addis Ababa by Locals?",
           "Tour Highlights",
           "Detailed Itinerary",
           "What's Included & Excluded",
@@ -143,10 +143,10 @@
     {
       "id": "full-day-addis-ababa",
       "slug": "full-day-addis-ababa-city-tour",
-      "name": "Full-Day Addis Ababa City Tour",
+      "name": "Full-Day Addis Ababa by Locals",
       "subtitle": "Comprehensive City Highlights with Coffee Ceremony",
       "shortDescription": "8–9 hour comprehensive city tour: National Museum, Ethnological Museum, Holy Trinity Cathedral, Addis Mercato, Entoto Park panoramic views, and traditional coffee ceremony.",
-      "fullDescription": "The Full-Day Addis Ababa City Tour is an 8–9 hour comprehensive exploration of Ethiopia's vibrant capital. Visit the National Museum (Lucy fossil), Ethnological Museum, Holy Trinity Cathedral (Emperor Haile Selassie's final resting place), Addis Mercato, Entoto Park (panoramic city views from 3,200 meters), and experience a traditional *buna* (coffee) ceremony. Includes lunch at a local restaurant serving authentic Ethiopian cuisine.",
+      "fullDescription": "The Full-Day Addis Ababa by Locals is an 8–9 hour comprehensive exploration of Ethiopia's vibrant capital. Visit the National Museum (Lucy fossil), Ethnological Museum, Holy Trinity Cathedral (Emperor Haile Selassie's final resting place), Addis Mercato, Entoto Park (panoramic city views from 3,200 meters), and experience a traditional *buna* (coffee) ceremony. Includes lunch at a local restaurant serving authentic Ethiopian cuisine.",
       "tourType": "city-tour",
       "duration": "8–9 hours",
       "durationMinutes": 510,
@@ -296,11 +296,11 @@
         "debre-libanos-portuguese-bridge"
       ],
       "seo": {
-        "pageTitle": "Full-Day Addis Ababa City Tour — Comprehensive Highlights | From $69",
+        "pageTitle": "Full-Day Addis Ababa by Locals — Comprehensive Highlights | From $69",
         "metaDescription": "8–9 hour comprehensive city tour: National Museum, Ethnological Museum, Holy Trinity Cathedral, Addis Mercato, Entoto Park, coffee ceremony. Lunch included. From $69. Book direct and save 15%.",
-        "h1": "Full-Day Addis Ababa City Tour — Comprehensive City Highlights with Coffee Ceremony",
+        "h1": "Full-Day Addis Ababa by Locals — Comprehensive City Highlights with Coffee Ceremony",
         "h2s": [
-          "What is the Full-Day Addis Ababa City Tour?",
+          "What is the Full-Day Addis Ababa by Locals?",
           "Tour Highlights",
           "Detailed Itinerary",
           "What's Included & Excluded",

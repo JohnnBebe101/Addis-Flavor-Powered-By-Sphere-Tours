@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "headline": "Car Hire & Private Driver in Addis Ababa",
+    "subheadline": "Request a vehicle and private driver for airport pickup, city travel, day trips, or multi-day itineraries. We provide quotes after reviewing your request."
+  },
+  "vehicleTypes": {
+    "headline": "Available Vehicle Types",
+    "options": [
+      {
+        "name": "Sedan",
+        "description": "Comfortable for 1–3 passengers. Ideal for city transfers and short trips.",
+        "passengers": "1–3",
+        "luggage": "2–3 bags"
+      },
+      {
+        "name": "SUV",
+        "description": "Spacious for 1–5 passengers. Perfect for day trips and rougher roads.",
+        "passengers": "1–5",
+        "luggage": "3–4 bags"
+      },
+      {
+        "name": "Minivan",
+        "description": "Group travel for 6–12 passengers. Best for families and small groups.",
+        "passengers": "6–12",
+        "luggage": "6–8 bags"
+      }
+    ]
+  },
+  "form": {
+    "headline": "Request a Car Hire Quote",
+    "subheadline": "Tell us about your trip and we'll provide a detailed quote within 24 hours.",
+    "disclosure": "Vehicle type, availability, driver details, and final price are confirmed after your request is reviewed."
+  },
+  "faqs": [
+    {
+      "question": "Do you offer self-drive car hire?",
+      "answer": "No. All our car hire includes a professional local driver who knows Addis Ababa's roads and traffic."
+    },
+    {
+      "question": "What's included in the price?",
+      "answer": "The quote includes vehicle, driver, fuel, and insurance. Parking fees and tolls are additional."
+    },
+    {
+      "question": "Can I hire a car for multiple days?",
+      "answer": "Yes. Multi-day car hire is available for city travel, day trips, and multi-day itineraries."
+    },
+    {
+      "question": "What if my plans change after booking?",
+      "answer": "Contact us as soon as possible. We can adjust the vehicle or schedule based on your updated plans."
+    }
+  ]
+}

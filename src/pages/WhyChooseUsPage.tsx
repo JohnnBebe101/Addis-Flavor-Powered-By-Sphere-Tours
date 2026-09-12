@@ -20,11 +20,11 @@ export const WhyChooseUsPage: React.FC = () => {
       <section className="py-16 bg-sandstone/10 border-b border-teal/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-serif font-extrabold text-teal tracking-tight mb-4">
-            Why Book Direct With Addis Ababa City Tour?
+            Why Book Direct With Addis Ababa by Locals?
           </h1>
           <p className="text-lg text-teal/70 max-w-3xl mx-auto">
             Book direct and save 15% vs. OTAs. Licensed local guides, private vehicles, flexible
-            pickup, 24/7 WhatsApp support. 500+ five-star reviews. Free cancellation up to 24 hours.
+            pickup, 24/7 WhatsApp support. Free cancellation up to 24 hours.
           </p>
         </div>
       </section>
@@ -217,7 +217,7 @@ export const WhyChooseUsPage: React.FC = () => {
                     Feature
                   </th>
                   <th className="px-6 py-4 text-center font-mono text-xs uppercase tracking-wider text-teal/60">
-                    Addis Ababa City Tour
+                    Addis Ababa by Locals
                   </th>
                   <th className="px-6 py-4 text-center font-mono text-xs uppercase tracking-wider text-teal/60">
                     GetYourGuide / Viator

@@ -115,12 +115,9 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
           </div>
         </div>
 
-        {/* Copyrights, Johnny Technologies, and Legal Links */}
+        {/* Copyrights and Legal Links */}
         <div className="pt-4 md:pt-1.5 lg:pt-4 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-1 text-[10px] text-linen-white/50 font-mono text-center md:text-left">
-          <p>{`Addis Ababa City Tours Powered by Sphere Tour & Travel`}</p>
-          <p className="text-linen-white/40 font-semibold px-2 md:border-l md:border-r md:border-linen-white/10 py-0.5 md:py-0">
-            Built with love by Johnny Technologies
-          </p>
+          <p>{`© 2026 Addis Ababa by Locals. All rights reserved. Powered by Sphere Tour & Travel.`}</p>
           <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
             {footerColumns
               .find((c: { title: string; links: NavFooterLink[] }) => c.title === 'Support & Legal')

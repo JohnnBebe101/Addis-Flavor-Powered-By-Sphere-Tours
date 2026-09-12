@@ -8,7 +8,7 @@
     "headline": "Get in Touch",
     "phone": "+251-911-XXX-XXX",
     "whatsapp": "+251-911-XXX-XXX",
-    "email": "info@addisababacitytour.com",
+    "email": "info@addisabababylocals.com",
     "address": "Sphere Head Office, National Tower, Addis Ababa, Ethiopia",
     "officeHours": "24/7 (WhatsApp), 9:00 AM – 6:00 PM (Office)"
   },
@@ -179,10 +179,10 @@
       ]
     },
     "socialProof": {
-      "rating": "4.9",
-      "reviewCount": "500+",
-      "source": "TripAdvisor",
-      "badge": "Travelers' Choice 2026"
+      "rating": "",
+      "reviewCount": "",
+      "source": "Google Reviews",
+      "badge": ""
     },
     "form": {
       "headline": "Send Us a Message",

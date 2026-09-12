@@ -37,7 +37,7 @@ export const WhyChooseUsPreview: React.FC<WhyChooseUsPreviewProps> = ({ translat
             </p>
           </div>
 
-          {/* Best Price Guarantee */}
+          {/* Book Direct & Save */}
           <div className="flex flex-col items-center p-6 group">
             <div className="w-16 h-16 rounded-2xl bg-coffee-red/10 text-coffee-red flex items-center justify-center transition-all duration-300 mb-4 border border-coffee-red/20 group-hover:scale-105">
               <Tag className="w-8 h-8 text-gold" />

@@ -61,7 +61,7 @@ export const AboutPage: React.FC = () => {
             offer3Sub: '',
             offer3Desc: whyDifferent.points[2]?.description ?? '',
             bannerQuote: ourStory.content,
-            bannerAuthor: 'Addis Ababa City Tours',
+            bannerAuthor: 'Addis Ababa by Locals',
             startedTitle: 'Started in 2018',
             startedDesc: ourStory.content,
             startedBtn: 'Book a Tour',
@@ -139,7 +139,7 @@ export const AboutPage: React.FC = () => {
             q0: 'What is the relationship with Sphere Tour and Travel?',
             a0:
               ourStory.content ??
-              'Addis Ababa City Tours is an exclusive initiative powered and operated by Sphere Tour and Travel.',
+              'Addis Ababa by Locals is an exclusive initiative powered and operated by Sphere Tour and Travel.',
             q1: 'Can my dietary requirements be accommodated?',
             a1: 'Absolutely! Ethiopian cuisine is highly friendly to vegans (due to Orthodox Christian fasting traditions or Bayenetu) and gluten-free diets (using 100% pure Teff Injera).',
             q2: 'Is it a private experience?',

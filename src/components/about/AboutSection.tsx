@@ -202,7 +202,7 @@ export default function AboutSection({
           <div className="pt-2">
             {' '}
             <a
-              href="https://addisababacitytours.com"
+              href="https://addisabababylocals.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 px-6 py-3.5 bg-gold hover:bg-coffee-red text-teal hover:text-linen-white font-mono text-xs font-extrabold uppercase rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5"

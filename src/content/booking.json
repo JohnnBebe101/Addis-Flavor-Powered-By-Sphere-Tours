@@ -13,7 +13,7 @@
     },
     "booking": {
       "headline": "Booking Terms & Conditions",
-      "content": "By booking a tour with Addis Ababa City Tour, you agree to the following terms and conditions.",
+      "content": "By booking a tour with Addis Ababa by Locals, you agree to the following terms and conditions.",
       "points": [
         "Minimum booking: 24 hours in advance",
         "Confirmation: Instant email confirmation upon booking",
@@ -175,9 +175,9 @@
       "headline": "Book Your Addis Ababa Adventure",
       "subheadline": "Secure your spot with our easy 3-step booking. No instant charge — pay your guide directly on tour day.",
       "trustSignals": {
-        "rating": "4.9",
-        "reviewCount": "500+",
-        "badges": ["Free Cancellation", "Licensed Local Operator", "No Hidden Fees"]
+        "rating": "",
+        "reviewCount": "",
+        "badges": ["Free Cancellation 24h", "Licensed Local Operator", "No Hidden Fees"]
       }
     },
     "howItWorks": {

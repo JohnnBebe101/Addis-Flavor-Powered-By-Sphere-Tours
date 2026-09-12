@@ -11,6 +11,9 @@ export interface Translations {
   navTravelGuide: string;
   navContact: string;
   navBook: string;
+  navThingsToDo: string;
+  navPlanYourVisit: string;
+  navGettingAround: string;
   heroSearchPlaceholder: string;
   bookNowButton: string;
 }

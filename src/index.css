@@ -1,16 +1,50 @@
 @import 'tailwindcss';
 
+:root {
+  --brand-primary-orange: #C75122;
+  --brand-primary-orange-hover: #A84318;
+  --brand-trust-blue: #1E5A8A;
+  --brand-trust-blue-hover: #16456B;
+  --brand-nature-green: #3D7A22;
+  --brand-nature-green-hover: #2F5F1A;
+  --brand-ground-brown: #8B5E3C;
+  --bg-light-primary: #FFFFFF;
+  --bg-light-secondary: #F8F9FA;
+  --bg-dark-footer: #1B2430;
+  --text-heading: #111827;
+  --text-body: #4B5563;
+  --text-inverse: #FFFFFF;
+  --border-divider: #E5E7EB;
+  --border-focus: #1E5A8A;
+}
+
 @theme {
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'DM Sans', sans-serif;
   --font-ethiopic: 'Noto Sans Ethiopic', sans-serif;
 
-  --color-coffee-red: #a67c52;
-  --color-teal: #2d2926;
-  --color-sandstone: #fdfcf0;
-  --color-linen-white: #ffffff;
-  --color-gold: #5a5a40;
-  --color-dark-bg: #2d2926;
+  --color-coffee-red: #C75122;
+  --color-teal: #111827;
+  --color-sandstone: #F8F9FA;
+  --color-linen-white: #FFFFFF;
+  --color-gold: #1E5A8A;
+  --color-dark-bg: #1B2430;
+
+  --color-brand-primary-orange: #C75122;
+  --color-brand-primary-orange-hover: #A84318;
+  --color-brand-trust-blue: #1E5A8A;
+  --color-brand-trust-blue-hover: #16456B;
+  --color-brand-nature-green: #3D7A22;
+  --color-brand-nature-green-hover: #2F5F1A;
+  --color-brand-ground-brown: #8B5E3C;
+  --color-text-heading: #111827;
+  --color-text-body: #4B5563;
+  --color-text-inverse: #FFFFFF;
+  --color-bg-light-primary: #FFFFFF;
+  --color-bg-light-secondary: #F8F9FA;
+  --color-bg-dark-footer: #1B2430;
+  --color-border-divider: #E5E7EB;
+  --color-border-focus: #1E5A8A;
 }
 
 /* Scrollbar customization */
@@ -26,17 +60,22 @@
 .shema-border {
   background-image: repeating-linear-gradient(
     45deg,
-    #5a5a40,
-    #5a5a40 10px,
-    #a67c52 10px,
-    #a67c52 20px,
-    #2d2926 20px,
-    #2d2926 30px,
-    #fdfcf0 30px,
-    #fdfcf0 40px
+    #1E5A8A,
+    #1E5A8A 10px,
+    #C75122 10px,
+    #C75122 20px,
+    #111827 20px,
+    #111827 30px,
+    #F8F9FA 30px,
+    #F8F9FA 40px
   );
   height: 8px;
   width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
 }
 
 /* Motion replacement animations */
