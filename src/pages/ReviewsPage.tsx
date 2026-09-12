@@ -1,5 +1,6 @@
 import { Star } from 'lucide-react';
 import reviewsData from '../content/reviews.json';
+import { GoogleReviewsWidget } from '../components/GoogleReviewsWidget';
 
 export const ReviewsPage: React.FC = () => {
   return (
@@ -19,21 +20,9 @@ export const ReviewsPage: React.FC = () => {
 
       <section className="py-16 bg-linen-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* TripAdvisor Widget Placeholder */}
-          <div className="mb-12 p-8 bg-sandstone/50 border border-teal/10 rounded-2xl text-center">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <div className="flex items-center gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-7 h-7 fill-current text-gold" />
-                ))}
-              </div>
-              <span className="font-mono text-sm uppercase tracking-widest text-teal/80">
-                4.9 / 5 from 500+ reviews on TripAdvisor
-              </span>
-            </div>
-            <p className="text-[10px] text-teal/50">
-              [TripAdvisor widget embed code will be inserted here]
-            </p>
+          {/* Google Reviews Widget */}
+          <div className="mb-12">
+            <GoogleReviewsWidget />
           </div>
         </div>
       </section>

@@ -39,21 +39,24 @@
         "title": "City Tours",
         "description": "Half-day and full-day tours of Addis Ababa's top attractions: National Museum, Merkato, Holy Trinity Cathedral, and more.",
         "priceFrom": "From $42",
-        "link": "/tours/?category=city-tours"
+        "link": "/tours/?category=city-tours",
+        "image": "/images/tours/half-day-addis-ababa-hero.jpg"
       },
       {
         "id": "day-trips",
         "title": "Day Trips",
-        "description": "Escape the city: Debre Libanos Monastery, Tiya UNESCO Site, Menagesha Forest, Bishoftu Crater Lakes.",
+        "description": "Debre Libanos Monastery, Tiya UNESCO Site, Menagesha Forest, Bishoftu Crater Lakes — full-day escapes from the city with expert local guides.",
         "priceFrom": "From $75",
-        "link": "/tours/?category=day-trips"
+        "link": "/tours/?category=day-trips",
+        "image": "/images/tours/debre-libanos-hero.jpg"
       },
       {
         "id": "private-custom",
         "title": "Private & Custom",
         "description": "Fully customizable itineraries, flexible pickup times, dedicated guide. Perfect for families and special interests.",
         "priceFrom": "Price on Request",
-        "link": "/custom-tour/"
+        "link": "/custom-tour/",
+        "image": "/images/tours/private-group-hero.jpg"
       }
     ]
   },
@@ -90,22 +93,42 @@
       {
         "id": 1,
         "title": "Born & Raised in Addis",
-        "description": "Local guides who know every hidden gem, story, and shortcut"
+        "description": "Local guides who know every hidden gem, story, and shortcut — not script readers, but neighbors showing you their city.",
+        "image": "/images/about/team-hero.jpg",
+        "link": "/about/",
+        "cta": "Meet Our Guides"
       },
       {
         "id": 2,
         "title": "Book Direct, Save 15%",
-        "description": "Best price guaranteed — no middleman fees or hidden charges"
+        "description": "Best price guaranteed — no middleman fees, no hidden charges. Flexible pickup times and personalized service included.",
+        "image": "/images/tours/addis-ababa-highlights-holy-trinity.jpg",
+        "link": "/tours/",
+        "cta": "View Tours"
       },
       {
         "id": 3,
-        "title": "500+ Five-Star Reviews",
-        "description": "Trusted by travelers on TripAdvisor and Google"
+        "title": "Powered by Sphere Tour & Travel",
+        "description": "Founded and operated by senior tourism experts of Addis Ababa. Over a decade of local expertise, licensed guides, and 500+ five-star reviews.",
+        "image": "/images/about/cooking.jpg",
+        "link": "/about/",
+        "cta": "Our Story"
       },
       {
         "id": 4,
         "title": "24/7 WhatsApp Support",
-        "description": "Always here to help — before and during your tour"
+        "description": "Always here to help — before and during your tour. Quick responses, local tips, and peace of mind.",
+        "image": "/images/tours/full-day-addis-ababa-coffee-ceremony.jpg",
+        "link": "/contact/",
+        "cta": "Contact Us"
+      },
+      {
+        "id": 5,
+        "title": "500+ Five-Star Reviews",
+        "description": "Rated 4.9/5 on TripAdvisor. Verified reviews from real travelers. Licensed by Ethiopia's Ministry of Tourism.",
+        "image": "/images/tours/addis-ababa-highlights-hero.jpg",
+        "link": "/reviews/",
+        "cta": "Read Reviews"
       }
     ]
   },
@@ -199,22 +222,30 @@
       {
         "id": 1,
         "title": "Visa Requirements",
-        "description": "Most nationalities require a visa (available on arrival or e-visa). Check requirements before travel. We can assist with visa support letters for confirmed bookings."
+        "description": "Most nationalities require a visa (available on arrival or e-visa). Check requirements before travel. We can assist with visa support letters for confirmed bookings.",
+        "image": "/images/travel-guide/airport-layover-planning.jpg",
+        "link": "/travel-guide/"
       },
       {
         "id": 2,
         "title": "Best Time to Visit",
-        "description": "October to March (dry season, mild temperatures 15–25 °C). Peak tourist season is November–February, coinciding with major festivals like Timket (Epiphany) in January."
+        "description": "October to March (dry season, mild temperatures 15–25 °C). Peak tourist season is November–February, coinciding with major festivals like Timket (Epiphany) in January.",
+        "image": "/images/travel-guide/best-time-to-visit.jpg",
+        "link": "/travel-guide/"
       },
       {
         "id": 3,
         "title": "Currency & Payments",
-        "description": "Ethiopian Birr (ETB). ATMs widely available. Credit cards accepted at major hotels and restaurants. We accept USD, EUR, and ETB for tour payments."
+        "description": "Ethiopian Birr (ETB). ATMs widely available. Credit cards accepted at major hotels and restaurants. We accept USD, EUR, and ETB for tour payments.",
+        "image": "/images/travel-guide/coffee-cultural-etiquette.jpg",
+        "link": "/travel-guide/"
       },
       {
         "id": 4,
         "title": "Altitude & Health",
-        "description": "Addis Ababa is at 2,400 meters (7,874 feet). Take it easy on your first day, stay hydrated, and avoid heavy exertion initially. Tap water is not safe to drink (bottled water provided on tours)."
+        "description": "Addis Ababa is at 2,400 meters (7,874 feet). Take it easy on your first day, stay hydrated, and avoid heavy exertion initially. Tap water is not safe to drink (bottled water provided on tours).",
+        "image": "/images/travel-guide/what-to-wear-religious-sites.jpg",
+        "link": "/travel-guide/"
       }
     ],
     "ctaLink": "/travel-guide/"

@@ -143,12 +143,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
 
       <div className="relative z-10 max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         {/* Per-slide text content — key forces remount on slide change */}
-        <div key={activeSlide} className="space-y-4">
-          {/* Announcement Badge */}
-          <div className="inline-flex items-center bg-gold/20 backdrop-blur-md border border-gold/40 text-gold px-4 py-1.5 rounded-full text-xs font-mono uppercase tracking-widest animate-hero-slide-up" style={{ animationDelay: '0ms', textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}>
-            <span>{slides[activeSlide].trustSignal}</span>
-          </div>
-
+        <div key={activeSlide} className="space-y-4 min-h-[180px] flex flex-col items-center justify-center">
           {/* Slide Title */}
           <h1
             id="hero-headline"
@@ -254,61 +249,7 @@ className="w-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mon
             </button>
           </form>
 
-          {/* Trust Signals + Action Links — OUTSIDE Search Box */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3 px-3 sm:px-4 mt-3">
-            {/* Trust Signals */}
-            <div className="flex items-center gap-2 text-linen-white/70 text-xs">
-              <span className="flex items-center gap-1">
-                <svg className="w-3.5 h-3.5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                </svg>
-                Free to search
-              </span>
-              <span className="text-linen-white/30">·</span>
-              <span>No hidden fees</span>
-            </div>
-
-            {/* Action Links */}
-            <div className="flex items-center gap-4 text-xs">
-              <a
-                href="/tours/"
-                className="flex items-center gap-1.5 text-linen-white/70 hover:text-gold transition-colors font-mono uppercase tracking-wider"
-              >
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
-                </svg>
-                View Deals
-              </a>
-              <span className="text-linen-white/30">|</span>
-              <a
-                href="tel:+251911209882"
-                className="flex items-center gap-1.5 text-linen-white/70 hover:text-gold transition-colors font-mono uppercase tracking-wider"
-              >
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                Call Us
-              </a>
-            </div>
-          </div>
         </div>
-
-        {/* Navigation Arrows */}
-        <button
-          onClick={() => setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length)}
-          className="absolute left-3 sm:left-6 top-[40%] -translate-y-1/2 p-2.5 sm:p-3 rounded-full bg-linen-white/25 border border-linen-white/40 text-linen-white hover:bg-linen-white/40 hover:text-gold transition-all duration-300 z-20 shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
-        </button>
-
-        <button
-          onClick={() => setActiveSlide((prev) => (prev + 1) % slides.length)}
-          className="absolute right-3 sm:right-6 top-[40%] -translate-y-1/2 p-2.5 sm:p-3 rounded-full bg-linen-white/25 border border-linen-white/40 text-linen-white hover:bg-linen-white/40 hover:text-gold transition-all duration-300 z-20 shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
-        </button>
 
         {/* Slide Indicators */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
@@ -327,6 +268,23 @@ className="w-full bg-coffee-red hover:bg-coffee-red/90 text-linen-white font-mon
           ))}
         </div>
       </div>
+
+      {/* Navigation Arrows — absolute hero edges */}
+      <button
+        onClick={() => setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length)}
+        className="absolute left-3 sm:left-5 lg:left-8 top-1/2 -translate-y-1/2 p-2.5 sm:p-3 rounded-full bg-linen-white/25 border border-linen-white/40 text-linen-white hover:bg-linen-white/40 hover:text-gold transition-all duration-300 z-30 shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+      </button>
+
+      <button
+        onClick={() => setActiveSlide((prev) => (prev + 1) % slides.length)}
+        className="absolute right-3 sm:right-5 lg:right-8 top-1/2 -translate-y-1/2 p-2.5 sm:p-3 rounded-full bg-linen-white/25 border border-linen-white/40 text-linen-white hover:bg-linen-white/40 hover:text-gold transition-all duration-300 z-30 shadow-[0_2px_12px_rgba(0,0,0,0.4)]"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+      </button>
 
       {/* Subtle bottom gradient for search bar readability */}
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" aria-hidden="true" />

@@ -6,18 +6,15 @@
 import TourCardGrid from '../components/home/TourCardGrid';
 import { TourCategorySelector } from '../components/home/TourCategorySelector';
 import { WhyChooseUsHero } from '../components/home/WhyChooseUsHero';
-import { WhyChooseUsPreview } from '../components/home/WhyChooseUsPreview';
 import { AddisHighlightsGrid } from '../components/home/AddisHighlightsGrid';
-import { DayTripDestinationsCarousel } from '../components/home/DayTripDestinationsCarousel';
 import { PracticalInfoGrid } from '../components/home/PracticalInfoGrid';
 import { FinalCTA } from '../components/home/FinalCTA';
-import TestimonialsCarousel from '../components/TestimonialsCarousel';
+import { GoogleReviewsWidget } from '../components/GoogleReviewsWidget';
 
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import { Tour } from '../types';
 import homeData from '../content/home.json';
 import toursData from '../content/tours.json';
-import reviewsData from '../content/reviews.json';
 
 import {
   MapPin,
@@ -25,22 +22,13 @@ import {
   Crown,
   Landmark,
   Church,
-  TreePine,
   Mountain,
-  Waves,
   Calendar,
   Globe,
   DollarSign,
 } from 'lucide-react';
 
 export const Homepage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>('all');
-
-  const filteredTours =
-    activeTab === 'all'
-      ? (toursData.tours as Tour[])
-      : (toursData.tours as Tour[]).filter((t) => t.tourType === activeTab);
-
   // Pre-compute data with icons
   const tourCategoriesWithIcons = useMemo(() => homeData.tourCategorySelector.categories.map((cat, idx) => ({
     ...cat,
@@ -53,24 +41,6 @@ export const Homepage: React.FC = () => {
         <Crown className="w-7 h-7" />
       ),
   })), []);
-
-  const dayTripDestinationsWithIcons = useMemo(() => homeData.dayTripDestinations.destinations.map(
-    (dest, idx) => ({
-      ...dest,
-      icon:
-        idx === 0 ? (
-          <Landmark className="w-7 h-7" />
-        ) : idx === 1 ? (
-          <Church className="w-7 h-7" />
-        ) : idx === 2 ? (
-          <TreePine className="w-7 h-7" />
-        ) : (
-          <Waves className="w-7 h-7" />
-        ),
-      priceFrom:
-        idx === 0 ? 'From $85' : idx === 1 ? 'From $95' : idx === 2 ? 'From $80' : 'From $75',
-    }),
-  ), []);
 
   const attractionsWithIcons = useMemo(() => homeData.addisHighlights.attractions.map((attr, idx) => ({
     ...attr,
@@ -85,6 +55,11 @@ export const Homepage: React.FC = () => {
         <Mountain className="w-7 h-7" />
       ),
   })), []);
+
+  const featuredTours = useMemo(
+    () => (toursData.tours as Tour[]).filter((t) => t.tourType !== 'private'),
+    [],
+  );
 
   const practicalInfoColumns = useMemo(() => homeData.practicalInfo.columns.map((col, idx) => ({
     ...col,
@@ -115,42 +90,19 @@ export const Homepage: React.FC = () => {
         subheadline={homeData.tourCategorySelector.subheadline}
       />
 
-      {/* 6. TOUR CARD GRID — CATEGORY TABS */}
-      <section className="py-12 md:py-16 bg-sandstone/10">
+      {/* 6. TOUR CARD GRID */}
+      <section className="py-16 bg-linen-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-6">
-            <h2 className="text-xl md:text-2xl font-serif font-bold text-teal tracking-tight">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-teal tracking-tight mb-4">
               {homeData.featuredTours.headline || 'Our Most Popular Tours'}
             </h2>
-            <p className="text-xs text-teal/60 mt-2 font-sans">
+            <p className="text-lg text-teal/60 font-sans">
               {homeData.featuredTours.subheadline}
             </p>
           </div>
-
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {[
-              { key: 'all', label: 'All Tours' },
-              { key: 'city-tour', label: 'City Tours' },
-              { key: 'day-trip', label: 'Day Trips' },
-              { key: 'private', label: 'Private & Custom' },
-            ].map((tab) => (
-              <button
-                key={tab.key}
-                onClick={() => setActiveTab(tab.key)}
-                className={`px-4 py-2 rounded-full text-xs font-mono uppercase font-bold tracking-wider transition-all duration-300 ${
-                  activeTab === tab.key
-                    ? 'bg-coffee-red text-linen-white shadow-md'
-                    : 'border border-teal/20 text-teal hover:bg-teal/5'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
         </div>
-
-        <TourCardGrid tours={filteredTours} />
-
+        <TourCardGrid tours={featuredTours} />
         {/* View All Tours CTA */}
         <div className="text-center mt-10">
           <a
@@ -163,31 +115,11 @@ export const Homepage: React.FC = () => {
         </div>
       </section>
 
-      {/* 7. WHY CHOOSE US PREVIEW */}
-      <WhyChooseUsPreview
-        translations={{
-          whyChooseUsHeadline: homeData.whyChooseUs.headline,
-          localExpertsTitle: homeData.whyChooseUs.benefits[0]?.title ?? 'Local Experts',
-          localExpertsDesc: homeData.whyChooseUs.benefits[0]?.description ?? '',
-          bestPriceTitle: homeData.whyChooseUs.benefits[1]?.title ?? 'Best Price Guarantee',
-          bestPriceDesc: homeData.whyChooseUs.benefits[1]?.description ?? '',
-          flexibleSafeTitle: homeData.whyChooseUs.benefits[2]?.title ?? 'Flexible & Safe',
-          flexibleSafeDesc: homeData.whyChooseUs.benefits[2]?.description ?? '',
-        }}
-      />
-
-      {/* 8. ADDIS ABABA HIGHLIGHTS */}
+      {/* 7. ADDIS ABABA HIGHLIGHTS */}
       <AddisHighlightsGrid
         attractions={attractionsWithIcons}
         headline={homeData.addisHighlights.headline}
         subheadline={homeData.addisHighlights.subheadline}
-      />
-
-      {/* 9. DAY TRIP DESTINATIONS CAROUSEL */}
-      <DayTripDestinationsCarousel
-        destinations={dayTripDestinationsWithIcons}
-        headline={homeData.dayTripDestinations.headline}
-        subheadline={homeData.dayTripDestinations.subheadline}
       />
 
       {/* FINAL CTA */}
@@ -203,8 +135,17 @@ export const Homepage: React.FC = () => {
         badge={homeData.finalCta.badge}
       />
 
-      {/* TESTIMONIALS CAROUSEL */}
-      <TestimonialsCarousel testimonials={reviewsData.reviews} onBookClick={() => {}} />
+      {/* GOOGLE REVIEWS WIDGET */}
+      <section className="py-8 bg-sandstone border-t border-b border-teal/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-4">
+            <p className="font-mono text-[10px] text-teal/60 uppercase tracking-widest">
+              Trusted by Travelers Worldwide
+            </p>
+          </div>
+          <GoogleReviewsWidget />
+        </div>
+      </section>
 
       {/* PRACTICAL INFORMATION */}
       <PracticalInfoGrid

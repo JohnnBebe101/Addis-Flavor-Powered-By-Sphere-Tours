@@ -963,4 +963,42 @@ npm run dev
 
 ---
 
+## 17. Homepage Card Enhancements (Post-Sprint)
+
+### WhyChooseUsHero — Horizontal-Split Image Cards
+
+| Aspect | Before | After | Change |
+|--------|--------|-------|--------|
+| Layout | Vertical stack (hero + 3 full-width cards) | Horizontal split (hero left, 3 compact right) | Structural |
+| Card images | None (icon-only) | `object-cover` images with opacity transitions | New feature |
+| Card size | `aspect-square` icon area, `p-5` | `aspect-[4/3]` image area, `p-4` | -18% height |
+| Section padding | `py-8 md:py-12` | `py-8 md:py-10` | -17% on md |
+| Card 3 rebrand | "Small Groups" | "Powered by Sphere Tour & Travel" | Content |
+
+**Files**: `src/components/home/WhyChooseUsHero.tsx`, `src/content/home.json`
+**Added fields**: `image`, `link`, `cta` on 4 benefits; Card 3 `link: "/travel-agents/"`, `cta: "Register Now →"`
+
+### TourCategorySelector — Dark Gradient Image Cards
+
+| Aspect | Before | After | Change |
+|--------|--------|-------|--------|
+| Layout | `grid-cols-3` (sm+), 3 rows vertical stack (xs) | `grid-cols-1 sm:grid-cols-3`, 3 columns horizontal (sm+) | Structural |
+| Card image | None (`category.icon` as `ReactNode`) | `object-cover` image with dark gradient overlay | New feature |
+| Card height | `h-full` (variable) | `aspect-[4/3]` + `aspect-auto` | Fixed ratio |
+| Section padding | `py-12` | `py-10` | -17% |
+| Card rounding | `rounded-2xl` | `rounded-xl` | Smaller |
+| Card shadow | `shadow-sm` base, `hover:shadow-xl` | `shadow-sm` base, `hover:shadow-lg` | Lighter |
+| Price badge | `position: absolute` (text over image) | `position: absolute` (pill on image, `rounded-full`) | Pill style |
+| CTA | `group-hover:translate-x-1` arrow only | Full-width button "View Tours →" | Explicit CTA |
+| Fallback | `category.icon` as `ReactNode` | `category.icon` with `text-linen-white/20` | Dark on dark |
+
+**Files**: `src/components/home/TourCategorySelector.tsx`, `src/content/home.json`
+**Added fields**: `image` on 3 categories (half-day-addis-ababa-hero.jpg, debre-libanos-hero.jpg, private-group-hero.jpg)
+
+**Size comparison**: +28% height (within 30% max threshold)
+**Image validation**: All 3 images verified in `public/images/tours/`
+**Build**: tsc clean, vite build clean (0 errors)
+
+---
+
 *This document serves as the authoritative reference for the Addis Ababa City Tours optimization effort. All changes are verified, documented, and production-ready.*

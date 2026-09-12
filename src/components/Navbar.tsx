@@ -382,6 +382,8 @@ function DesktopNavItem({
   const isDropdown = item.type === 'dropdown';
   const triggerRef = useRef<HTMLButtonElement>(null);
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const categoryTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleMouseEnter = useCallback(() => {
     if (closeTimeoutRef.current) {
@@ -394,14 +396,28 @@ function DesktopNavItem({
   const handleMouseLeave = useCallback(() => {
     closeTimeoutRef.current = setTimeout(() => {
       setOpenDropdown(null);
-    }, 200);
+      setActiveCategory(null);
+    }, 300);
   }, [setOpenDropdown]);
+
+  const handleCategoryEnter = useCallback((catTitle: string) => {
+    if (categoryTimeoutRef.current) {
+      clearTimeout(categoryTimeoutRef.current);
+      categoryTimeoutRef.current = null;
+    }
+    setActiveCategory(catTitle);
+  }, []);
+
+  const handleCategoryLeave = useCallback(() => {
+    categoryTimeoutRef.current = setTimeout(() => {
+      setActiveCategory(null);
+    }, 150);
+  }, []);
 
   useEffect(() => {
     return () => {
-      if (closeTimeoutRef.current) {
-        clearTimeout(closeTimeoutRef.current);
-      }
+      if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
+      if (categoryTimeoutRef.current) clearTimeout(categoryTimeoutRef.current);
     };
   }, []);
 
@@ -426,9 +442,9 @@ function DesktopNavItem({
           />
         </button>
 
-        {/* Standard dropdown — fade + slide, no portal */}
+        {/* 2-Level dropdown — categories left, items right */}
         <div
-          className={`absolute top-full left-0 mt-2 min-w-[460px] bg-linen-white rounded-xl shadow-xl border border-teal/10 p-5 transition-all duration-150 ease-out ${
+          className={`absolute top-full left-0 pt-2 min-w-[420px] bg-linen-white rounded-xl shadow-xl border border-teal/10 transition-all duration-150 ease-out ${
             isOpen
               ? 'opacity-100 translate-y-0 pointer-events-auto'
               : 'opacity-0 -translate-y-1 pointer-events-none'
@@ -437,13 +453,39 @@ function DesktopNavItem({
           onMouseLeave={handleMouseLeave}
           role="menu"
         >
-          {item.columns.map((col, colIdx) => (
-            <div key={colIdx} className={colIdx > 0 ? 'pt-3 mt-3 border-t border-teal/5' : ''}>
-              <h4 className="font-mono text-[11px] uppercase tracking-widest font-bold text-gold mb-2">
-                {col.title}
-              </h4>
-              <div className="space-y-0.5">
-                {col.items.map((subItem, itemIdx) => (
+          <div className="flex min-h-[200px]">
+            {/* Level 1 — Category headers */}
+            <div className="w-[160px] border-r border-teal/5 py-2 flex-shrink-0">
+              {item.columns?.map((col, colIdx) => (
+                <button
+                  key={colIdx}
+                  onMouseEnter={() => handleCategoryEnter(col.title)}
+                  onMouseLeave={handleCategoryLeave}
+                  className={`w-full text-left px-4 py-2.5 text-xs font-mono transition-colors duration-150 ${
+                    activeCategory === col.title
+                      ? 'bg-teal/5 text-coffee-red font-bold'
+                      : 'text-teal hover:bg-teal/5 hover:text-coffee-red'
+                  }`}
+                >
+                  {col.title}
+                </button>
+              ))}
+              {item.link && (
+                <div className="border-t border-teal/5 mt-1 pt-1">
+                  <a
+                    href={item.link}
+                    className="block px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider text-coffee-red hover:bg-teal/5 transition-colors"
+                  >
+                    View All {item.label} →
+                  </a>
+                </div>
+              )}
+            </div>
+
+            {/* Level 2 — Items for active category */}
+            <div className="flex-1 py-2 px-3">
+              {activeCategory ? (
+                item.columns?.find((c) => c.title === activeCategory)?.items.map((subItem, itemIdx) => (
                   <a
                     key={itemIdx}
                     href={subItem.link}
@@ -455,20 +497,14 @@ function DesktopNavItem({
                       {subItem.duration && <span className="opacity-60">· {subItem.duration}</span>}
                     </div>
                   </a>
-                ))}
-              </div>
+                ))
+              ) : (
+                <div className="flex items-center justify-center h-full text-xs text-teal/40 font-mono">
+                  Hover a category
+                </div>
+              )}
             </div>
-          ))}
-          {item.link && (
-            <div className="border-t border-teal/10 pt-3 mt-3">
-              <a
-                href={item.link}
-                className="flex items-center justify-center font-mono text-xs font-bold uppercase tracking-wider text-coffee-red hover:text-teal transition-colors"
-              >
-                View All {item.label} →
-              </a>
-            </div>
-          )}
+          </div>
         </div>
       </div>
     );
