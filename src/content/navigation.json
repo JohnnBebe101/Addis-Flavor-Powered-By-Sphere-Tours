@@ -213,121 +213,37 @@
       {
         "title": "Brand",
         "links": [
-          {
-            "label": "Logo + Tagline",
-            "link": "/"
-          },
-          {
-            "label": "Instagram",
-            "link": "https://instagram.com/addisababacitytour",
-            "external": true
-          },
-          {
-            "label": "Facebook",
-            "link": "https://facebook.com/addisababacitytour",
-            "external": true
-          },
-          {
-            "label": "TripAdvisor",
-            "link": "https://tripadvisor.com/Attraction_Review-g1-addis-ababa",
-            "external": true
-          }
+          { "label": "Logo + Tagline", "link": "/" },
+          { "label": "Instagram", "link": "https://instagram.com/addisababacitytour", "external": true },
+          { "label": "Facebook", "link": "https://facebook.com/addisababacitytour", "external": true },
+          { "label": "TripAdvisor", "link": "https://tripadvisor.com/Attraction_Review-g1-addis-ababa", "external": true }
         ]
       },
       {
         "title": "Company",
         "links": [
-          {
-            "label": "About Us",
-            "link": "/about/"
-          },
-          {
-            "label": "Our Team",
-            "link": "/about/#team"
-          },
-          {
-            "label": "How It Works",
-            "link": "/why-choose-us/#how-it-works"
-          },
-          {
-            "label": "Safety & Responsibility",
-            "link": "/why-choose-us/#safety"
-          },
-          {
-            "label": "Reviews",
-            "link": "/reviews/"
-          }
+          { "label": "About Us", "link": "/about/" },
+          { "label": "Safety & Responsibility", "link": "/why-choose-us/#safety" }
         ]
       },
       {
-        "title": "Support",
+        "title": "Support & Legal",
         "links": [
-          {
-            "label": "FAQs",
-            "link": "/why-choose-us/#faqs"
-          },
-          {
-            "label": "Contact Us",
-            "link": "/contact/"
-          },
-          {
-            "label": "Custom Tour Inquiry",
-            "link": "/custom-tour/"
-          },
-          {
-            "label": "Travel Agents",
-            "link": "/travel-agents/"
-          },
-          {
-            "label": "Booking Policy",
-            "link": "/booking-policy/"
-          }
-        ]
-      },
-      {
-        "title": "Legal",
-        "links": [
-          {
-            "label": "Terms & Conditions",
-            "link": "/terms/"
-          },
-          {
-            "label": "Privacy Policy",
-            "link": "/privacy/"
-          },
-          {
-            "label": "Cancellation Policy",
-            "link": "/cancellation-policy/"
-          },
-          {
-            "label": "Cookie Policy",
-            "link": "/cookies/"
-          }
+          { "label": "FAQs", "link": "/why-choose-us/#faqs" },
+          { "label": "Contact Us", "link": "/contact/" },
+          { "label": "Travel Agents", "link": "/travel-agents/" },
+          { "label": "Terms & Conditions", "link": "/terms/" },
+          { "label": "Privacy Policy", "link": "/privacy/" },
+          { "label": "Cancellation Policy", "link": "/cancellation-policy/" }
         ]
       },
       {
         "title": "Contact",
         "links": [
-          {
-            "label": "Sphere Head Office",
-            "link": "/contact/"
-          },
-          {
-            "label": "National Tower, Addis Ababa",
-            "link": "/contact/"
-          },
-          {
-            "label": "+251-911-XXX-XXX",
-            "link": "tel:+251911XXXXXX"
-          },
-          {
-            "label": "info@addisababacitytour.com",
-            "link": "mailto:info@addisababacitytour.com"
-          },
-          {
-            "label": "Office Hours: 9:00 AM – 6:00 PM",
-            "link": "/contact/"
-          }
+          { "label": "Sphere Head Office, National Tower", "link": "/contact/" },
+          { "label": "+251-911-XXX-XXX", "link": "tel:+251911XXXXXX" },
+          { "label": "info@addisababacitytour.com", "link": "mailto:info@addisababacitytour.com" },
+          { "label": "Office Hours: 9:00 AM – 6:00 PM", "link": "/contact/" }
         ]
       }
     ],
