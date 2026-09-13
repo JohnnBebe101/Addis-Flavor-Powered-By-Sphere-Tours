@@ -77,7 +77,7 @@ export function OrganizationJSONLD() {
         type: 'Organization',
         name: BRAND.name,
         url: BRAND.origin,
-        logo: `${BRAND.origin}/favicon.svg`,
+        logo: `${BRAND.origin}/logo-full.svg`,
         contactPoint: { telephone: BRAND.phone, contactType: 'customer service' },
         sameAs: [],
       }}

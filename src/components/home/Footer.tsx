@@ -1,5 +1,6 @@
 import React from 'react';
 import navigationData from '../../content/navigation.json';
+import { BrandLogo } from '../BrandLogo';
 
 interface NavFooterLink {
   label: string;
@@ -117,7 +118,10 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
 
         {/* Copyrights and Legal Links */}
         <div className="pt-4 md:pt-1.5 lg:pt-4 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-1 text-[10px] text-linen-white/50 font-mono text-center md:text-left">
-          <p>{`© 2026 Addis Ababa by Locals. All rights reserved. Powered by Sphere Tour & Travel.`}</p>
+          <div className="flex items-center gap-2">
+            <BrandLogo variant="mark" size="xs" className="opacity-50" />
+            <p>{`© 2026 Addis Ababa by Locals. All rights reserved. Powered by Sphere Tour & Travel.`}</p>
+          </div>
           <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
             {footerColumns
               .find((c: { title: string; links: NavFooterLink[] }) => c.title === 'Support & Legal')

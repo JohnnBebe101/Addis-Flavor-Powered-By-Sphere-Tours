@@ -7,6 +7,8 @@
     "ctaPrimaryLink": "/tours/",
     "ctaSecondary": "Plan My Visit",
     "ctaSecondaryLink": "#plan-your-visit",
+    "ctaBookNow": "Book Now",
+    "ctaBookNowLink": "/book/",
     "supportCue": "Need help planning? Contact the local Sphere Tour & Travel team.",
     "supportCueLink": "/contact/",
     "image": "/images/hero/addis-ababa-city-hero.jpg",
@@ -174,7 +176,7 @@
         "title": "City Tours",
         "description": "Explore Addis Ababa's museums, markets, historic sites, neighbourhoods, and viewpoints with a local guide.",
         "priceFrom": "From $42",
-        "link": "/tours/?category=city-tours",
+        "link": "/tours/?category=city-tour",
         "image": "/images/tours/half-day-addis-ababa-hero.jpg"
       },
       {
@@ -182,7 +184,7 @@
         "title": "Day Trips",
         "description": "Travel beyond the city for heritage sites, highland scenery, forests, monasteries, and other approved experiences.",
         "priceFrom": "From $75",
-        "link": "/tours/?category=day-trips",
+        "link": "/tours/?category=day-trip",
         "image": "/images/tours/debre-libanos-hero.jpg"
       },
       {
@@ -329,8 +331,8 @@
       "heading": "Thanks — Your Addis Ababa Plan Is Underway",
       "body": "We have received your request. A member of the Sphere Tour & Travel team will review your preferences and contact you using your selected method.",
       "nextActions": [
-        { "label": "Browse City Tours", "link": "/tours/?category=city-tours" },
-        { "label": "Explore Day Trips", "link": "/tours/?category=day-trips" },
+        { "label": "Browse City Tours", "link": "/tours/?category=city-tour" },
+        { "label": "Explore Day Trips", "link": "/tours/?category=day-trip" },
         { "label": "Read the Travel Guide", "link": "/travel-guide/" }
       ]
     }

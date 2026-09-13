@@ -40,12 +40,20 @@ export function StableHero() {
         <div className="w-full max-w-3xl">
           <HeroIntentRouter />
         </div>
-        <a
-          href={hero.supportCueLink}
-          className="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white/80 text-xs font-mono hover:bg-white/20 transition-colors"
-        >
-          {hero.supportCue}
-        </a>
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href={hero.ctaBookNowLink}
+            className="inline-flex items-center gap-2 px-6 py-2.5 bg-coffee-red text-linen-white rounded-full text-xs font-mono font-bold uppercase tracking-wider hover:bg-coffee-red/90 shadow-lg hover:shadow-xl transition-all"
+          >
+            {hero.ctaBookNow}
+          </a>
+          <a
+            href={hero.supportCueLink}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white/80 text-xs font-mono hover:bg-white/20 transition-colors"
+          >
+            {hero.supportCue}
+          </a>
+        </div>
       </div>
 
       {/* 3. Bottom service badges bar */}

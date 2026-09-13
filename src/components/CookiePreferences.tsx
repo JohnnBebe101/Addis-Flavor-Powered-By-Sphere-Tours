@@ -21,7 +21,7 @@ const CATEGORIES = [
   {
     key: 'functional' as const,
     label: 'Functional',
-    description: 'Enable features like Google Reviews widgets and embedded content.',
+    description: 'Enable embedded content and third-party interactive features.',
     alwaysOn: false,
   },
   {

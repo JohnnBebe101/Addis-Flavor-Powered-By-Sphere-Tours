@@ -130,6 +130,13 @@ export const router = createBrowserRouter([
           })),
       },
       {
+        path: 'plan-your-visit/',
+        lazy: () =>
+          import('../pages/PlanYourVisitRedirect').then((m) => ({
+            Component: m.PlanYourVisitRedirect,
+          })),
+      },
+      {
         path: '*',
         lazy: () => import('../pages/NotFoundPage').then((m) => ({ Component: m.NotFoundPage })),
       },
