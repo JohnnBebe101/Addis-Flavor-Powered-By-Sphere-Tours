@@ -49,8 +49,8 @@ export function DesktopNav({
           onClick={handleLogoClick}
           className="flex items-center space-x-3 focus:outline-none group"
         >
-          <div className="relative w-10 h-10 flex-shrink-0 flex items-center justify-center bg-gold/15 border border-gold/30 rounded-xl overflow-hidden group-hover:border-gold/60 transition-colors">
-            <BrandLogo variant="mark" size="md" className="w-7 h-7" />
+          <div className="relative w-12 h-12 flex-shrink-0 flex items-center justify-center bg-gold/15 border border-gold/30 rounded-xl overflow-hidden group-hover:border-gold/60 transition-colors">
+            <BrandLogo variant="mark" size="md" />
           </div>
           <div className="flex flex-col">
             <span

@@ -11,10 +11,10 @@ interface BrandLogoProps {
 }
 
 const sizeMap: Record<BrandLogoSize, { mark: string; full: string }> = {
-  xs: { mark: 'w-6 h-6', full: 'h-4 w-auto' },
-  sm: { mark: 'w-8 h-8', full: 'h-5 w-auto' },
-  md: { mark: 'w-10 h-10', full: 'h-6 w-auto' },
-  lg: { mark: 'w-12 h-12', full: 'h-8 w-auto' },
+  xs: { mark: 'w-7 h-7', full: 'h-5 w-auto' },
+  sm: { mark: 'w-9 h-9', full: 'h-6 w-auto' },
+  md: { mark: 'w-11 h-11', full: 'h-7 w-auto' },
+  lg: { mark: 'w-14 h-14', full: 'h-9 w-auto' },
 };
 
 const srcMap: Record<BrandLogoVariant, string> = {
