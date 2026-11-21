@@ -1,0 +1,2125 @@
+{
+  ".github/workflows/ci.yml": {
+    "mtime": 1787843035.335653,
+    "seen": 1795102864.1865497,
+    "ast_hash": "50f896fe266263b3c65b192b5690203d",
+    "semantic_hash": "50f896fe266263b3c65b192b5690203d"
+  },
+  "13 production-ready JSON content files/about.json": {
+    "mtime": 1787941466.5155985,
+    "seen": 1795102864.1865497,
+    "ast_hash": "868bb9c8e826627a8b9e6e66967ad6fa",
+    "semantic_hash": "868bb9c8e826627a8b9e6e66967ad6fa",
+    "ast_empty": true
+  },
+  "13 production-ready JSON content files/amharic-terms.json": {
+    "mtime": 1787941310.3692586,
+    "seen": 1795102864.1865497,
+    "ast_hash": "c92e4f1070334fee888c8e738c8afb20",
+    "semantic_hash": "c92e4f1070334fee888c8e738c8afb20",
+    "ast_empty": true
+  },
+  "13 production-ready JSON content files/booking.json": {
+    "mtime": 1787941516.3471396,
+    "seen": 1795102864.1865497,
+    "ast_hash": "dd621a15dc9ca0640950c6c79017ffba",
+    "semantic_hash": "dd621a15dc9ca0640950c6c79017ffba",
+    "ast_empty": true
+  },
+  "13 production-ready JSON content files/contact.json": {
+    "mtime": 1787941479.4195387,
+    "seen": 1795102864.1865497,
+    "ast_hash": "192b106fb223e9d17487fb07e15639d4",
+    "semantic_hash": "192b106fb223e9d17487fb07e15639d4",
+    "ast_empty": true
+  },
+  "13 production-ready JSON content files/destinations.json": {
+    "mtime": 1787941417.931422,
+    "seen": 1795102864.1865497,
+    "ast_hash": "ba20023b41c7b27ae3e49a3c4ea00a4b",
+    "semantic_hash": "ba20023b41c7b27ae3e49a3c4ea00a4b",
+    "ast_empty": true
+  },
+  "13 production-ready JSON content files/faqs.json": {
+    "mtime": 1787941428.742388,
+    "seen": 1795102864.1865497,
+    "ast_hash": "73ea533e664f93af0f46c853948e8cd7",
+    "semantic_hash": "73ea533e664f93af0f46c853948e8cd7",
+    "ast_empty": true
+  },
+  "13 production-ready JSON content files/home.json": {
+    "mtime": 1787941454.9021595,
+    "seen": 1795102864.1865497,
+    "ast_hash": "6763e3e53fb618707f60aaf1f669084d",
+    "semantic_hash": "6763e3e53fb618707f60aaf1f669084d",
+    "ast_empty": true
+  },
+  "13 production-ready JSON content files/navigation.json": {
+    "mtime": 1787941504.6907365,
+    "seen": 1795102864.1865497,
+    "ast_hash": "13aa3b5812b85871d68bec22c5eec8e1",
+    "semantic_hash": "13aa3b5812b85871d68bec22c5eec8e1",
+    "ast_empty": true
+  },
+  "13 production-ready JSON content files/reviews.json": {
+    "mtime": 1787941440.8399632,
+    "seen": 1795102864.1865497,
+    "ast_hash": "8c9d2cf452f4eed57bb35946884617c8",
+    "semantic_hash": "8c9d2cf452f4eed57bb35946884617c8",
+    "ast_empty": true
+  },
+  "13 production-ready JSON content files/seo-metadata.json": {
+    "mtime": 1787941530.471107,
+    "seen": 1795102864.1865497,
+    "ast_hash": "d3e7e4dd6af87ae0fc8c0a34350baab2",
+    "semantic_hash": "d3e7e4dd6af87ae0fc8c0a34350baab2",
+    "ast_empty": true
+  },
+  "13 production-ready JSON content files/tours.json": {
+    "mtime": 1787941387.7477245,
+    "seen": 1795102864.1865497,
+    "ast_hash": "08bd4c2d8822ce06780b0821076ee641",
+    "semantic_hash": "08bd4c2d8822ce06780b0821076ee641",
+    "ast_empty": true
+  },
+  "13 production-ready JSON content files/travel-guide.json": {
+    "mtime": 1787941492.6680143,
+    "seen": 1795102864.1865497,
+    "ast_hash": "d02f0816c910fbb725d6d72a21ef4b5f",
+    "semantic_hash": "d02f0816c910fbb725d6d72a21ef4b5f",
+    "ast_empty": true
+  },
+  "13 production-ready JSON content files/ui-constants.json": {
+    "mtime": 1787941545.7276359,
+    "seen": 1795102864.1865497,
+    "ast_hash": "b169f6f7cbb70f43bebb5d6ef17c8f31",
+    "semantic_hash": "b169f6f7cbb70f43bebb5d6ef17c8f31",
+    "ast_empty": true
+  },
+  "archived/BookingProgressBar.tsx": {
+    "mtime": 1788118461.9578202,
+    "seen": 1795102864.1865497,
+    "ast_hash": "ae7418e7d1914c572b0a0bfe16995405",
+    "semantic_hash": "ae7418e7d1914c572b0a0bfe16995405"
+  },
+  "archived/FAQAccordion.tsx": {
+    "mtime": 1788118464.6806502,
+    "seen": 1795102864.1925514,
+    "ast_hash": "81d53f797cfed8fc924c67f77a75a63f",
+    "semantic_hash": "81d53f797cfed8fc924c67f77a75a63f"
+  },
+  "archived/HowBookingWorks.tsx": {
+    "mtime": 1788118465.7472591,
+    "seen": 1795102864.1925514,
+    "ast_hash": "643ecb3ea1f0b09fd071af5914889c77",
+    "semantic_hash": "643ecb3ea1f0b09fd071af5914889c77"
+  },
+  "archived/TourBookingModal.tsx": {
+    "mtime": 1789159316.1706574,
+    "seen": 1795102864.1925514,
+    "ast_hash": "8277753bd3751f67ccd268b752063b45",
+    "semantic_hash": "8277753bd3751f67ccd268b752063b45"
+  },
+  "eslint.config.js": {
+    "mtime": 1795114771.4650004,
+    "seen": 1795116608.5463862,
+    "ast_hash": "45f909fee3d0f2d631973b3ed06f3cf7",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1795279680.363516,
+    "seen": 1795281268.084793,
+    "ast_hash": "52fe0ea4b25793767ab82e5e856e1050",
+    "semantic_hash": ""
+  },
+  "scripts/convert-placeholders.mjs": {
+    "mtime": 1788186898.7929373,
+    "seen": 1795102864.1925514,
+    "ast_hash": "b13d9b6368bce2f03f8c0841e248324a",
+    "semantic_hash": "b13d9b6368bce2f03f8c0841e248324a"
+  },
+  "src/App.tsx": {
+    "mtime": 1795273402.2449813,
+    "seen": 1795281268.0857942,
+    "ast_hash": "1516807c823ee23cbe834494f157b93e",
+    "semantic_hash": ""
+  },
+  "src/components/BrandLogo.tsx": {
+    "mtime": 1795112215.4993184,
+    "seen": 1795112763.713244,
+    "ast_hash": "556f0ab77f2ccc674c19532f9f684efd",
+    "semantic_hash": ""
+  },
+  "src/components/ContactModal.tsx": {
+    "mtime": 1789163968.2936754,
+    "seen": 1795102864.1925514,
+    "ast_hash": "a6d6cc61bb6428f9feb2de7136cc3d8e",
+    "semantic_hash": "a6d6cc61bb6428f9feb2de7136cc3d8e"
+  },
+  "src/components/CookieConsentBanner.tsx": {
+    "mtime": 1795273443.1876597,
+    "seen": 1795281268.0867934,
+    "ast_hash": "ae68235c4d9294c1a12b32557343fcae",
+    "semantic_hash": ""
+  },
+  "src/components/CookiePreferences.tsx": {
+    "mtime": 1789284160.6983075,
+    "seen": 1795102864.1925514,
+    "ast_hash": "efc9a3d84aa8b03bdc308057f1e7fc57",
+    "semantic_hash": "efc9a3d84aa8b03bdc308057f1e7fc57"
+  },
+  "src/components/ErrorBoundary.tsx": {
+    "mtime": 1789163483.4095612,
+    "seen": 1795102864.1925514,
+    "ast_hash": "aad22f9cbe49c7165a65d2e13a26c9db",
+    "semantic_hash": "aad22f9cbe49c7165a65d2e13a26c9db"
+  },
+  "src/components/FloatingWhatsApp.tsx": {
+    "mtime": 1788189322.6389575,
+    "seen": 1795102864.1925514,
+    "ast_hash": "b824d573773a340c013b9d9ad8bddb4a",
+    "semantic_hash": "b824d573773a340c013b9d9ad8bddb4a"
+  },
+  "src/components/GoogleReviewsWidget.tsx": {
+    "mtime": 1789284724.1351852,
+    "seen": 1795102864.1925514,
+    "ast_hash": "acb1965030deaf52b319475978ba4833",
+    "semantic_hash": "acb1965030deaf52b319475978ba4833"
+  },
+  "src/components/JSONLD.tsx": {
+    "mtime": 1795273829.6259344,
+    "seen": 1795281268.0887902,
+    "ast_hash": "73ed5cde0d1b6c8392420285eae74cb3",
+    "semantic_hash": ""
+  },
+  "src/components/Navbar.tsx": {
+    "mtime": 1795268196.0620334,
+    "seen": 1795281268.0887902,
+    "ast_hash": "6bc2a56d746fbd17ddcddc7f9d1042f7",
+    "semantic_hash": ""
+  },
+  "src/components/NotificationBar.tsx": {
+    "mtime": 1789237887.9913871,
+    "seen": 1795102864.1925514,
+    "ast_hash": "5f200973a4bae89ce30c362188f65656",
+    "semantic_hash": "5f200973a4bae89ce30c362188f65656"
+  },
+  "src/components/SEO.tsx": {
+    "mtime": 1789248472.4420214,
+    "seen": 1795102864.1925514,
+    "ast_hash": "74f4500e3682d326b7db70777e134ef7",
+    "semantic_hash": "74f4500e3682d326b7db70777e134ef7"
+  },
+  "src/components/TestimonialsCarousel.tsx": {
+    "mtime": 1789055124.3456252,
+    "seen": 1795102864.1925514,
+    "ast_hash": "dc1a488daefa4515840479b360ece774",
+    "semantic_hash": "dc1a488daefa4515840479b360ece774"
+  },
+  "src/components/about/AboutFAQ.tsx": {
+    "mtime": 1788118459.498432,
+    "seen": 1795102864.1925514,
+    "ast_hash": "acba775cd0e574feebd9fc515fce9344",
+    "semantic_hash": "acba775cd0e574feebd9fc515fce9344"
+  },
+  "src/components/about/AboutHeroBanner.tsx": {
+    "mtime": 1789055123.4369164,
+    "seen": 1795102864.1925514,
+    "ast_hash": "9273b52c60fa0e7052de826ae5cae84a",
+    "semantic_hash": "9273b52c60fa0e7052de826ae5cae84a"
+  },
+  "src/components/about/AboutSection.tsx": {
+    "mtime": 1789236856.6484609,
+    "seen": 1795102864.1925514,
+    "ast_hash": "a225516da95de1909d958d5587e2d057",
+    "semantic_hash": "a225516da95de1909d958d5587e2d057"
+  },
+  "src/components/about/AboutTabsNav.tsx": {
+    "mtime": 1788027239.7459557,
+    "seen": 1795102864.1925514,
+    "ast_hash": "e3bbdbce0ac0f51a478e520725f1b480",
+    "semantic_hash": "e3bbdbce0ac0f51a478e520725f1b480"
+  },
+  "src/components/about/HowItWorksSection.tsx": {
+    "mtime": 1788026756.4080176,
+    "seen": 1795102864.1925514,
+    "ast_hash": "8127cbd820d01dfcea7873b304a53873",
+    "semantic_hash": "8127cbd820d01dfcea7873b304a53873"
+  },
+  "src/components/about/PressSection.tsx": {
+    "mtime": 1788026756.4563527,
+    "seen": 1795102864.1925514,
+    "ast_hash": "a5e4a98e65e793dd4aa19bcebb28842a",
+    "semantic_hash": "a5e4a98e65e793dd4aa19bcebb28842a"
+  },
+  "src/components/about/SafetySection.tsx": {
+    "mtime": 1788118461.504175,
+    "seen": 1795102864.1925514,
+    "ast_hash": "169340eba276c4c9cfbdd9de1c1e3b95",
+    "semantic_hash": "169340eba276c4c9cfbdd9de1c1e3b95"
+  },
+  "src/components/about/TeamSection.tsx": {
+    "mtime": 1788027381.643939,
+    "seen": 1795102864.1925514,
+    "ast_hash": "9755dbccda437831471184db63d13a0a",
+    "semantic_hash": "9755dbccda437831471184db63d13a0a"
+  },
+  "src/components/booking/BookingStep1.tsx": {
+    "mtime": 1795109910.4383664,
+    "seen": 1795110156.8435283,
+    "ast_hash": "2395d53d8b0039b2cda26fed625ee3ba",
+    "semantic_hash": ""
+  },
+  "src/components/booking/BookingStep2.tsx": {
+    "mtime": 1795109929.3810477,
+    "seen": 1795110156.8435283,
+    "ast_hash": "fad6ad2371efca2095e2bffae04f22bc",
+    "semantic_hash": ""
+  },
+  "src/components/booking/BookingStep3.tsx": {
+    "mtime": 1795109942.6616366,
+    "seen": 1795110156.8435283,
+    "ast_hash": "237cd5b511d511e7dabfcc4a805aad8c",
+    "semantic_hash": ""
+  },
+  "src/components/booking/BookingSuccess.tsx": {
+    "mtime": 1789237888.8176892,
+    "seen": 1795102864.1925514,
+    "ast_hash": "5eca9e840ef24a91f2f3e2de5c5c35c1",
+    "semantic_hash": "5eca9e840ef24a91f2f3e2de5c5c35c1"
+  },
+  "src/components/home/AddisHighlightsGrid.tsx": {
+    "mtime": 1789066486.79667,
+    "seen": 1795102864.1925514,
+    "ast_hash": "ab1cf0e7daee76ba34218dfe49afae11",
+    "semantic_hash": "ab1cf0e7daee76ba34218dfe49afae11"
+  },
+  "src/components/home/DayTripDestinationsCarousel.tsx": {
+    "mtime": 1789066488.478502,
+    "seen": 1795102864.2001426,
+    "ast_hash": "3c8a474dc1090ea387e26cfc12db2f77",
+    "semantic_hash": "3c8a474dc1090ea387e26cfc12db2f77"
+  },
+  "src/components/home/FinalCTA.tsx": {
+    "mtime": 1789163509.9656744,
+    "seen": 1795102864.2001426,
+    "ast_hash": "32a1792f2ad825c4d99a96f0bbc735f0",
+    "semantic_hash": "32a1792f2ad825c4d99a96f0bbc735f0"
+  },
+  "src/components/home/Footer.tsx": {
+    "mtime": 1789310918.2031288,
+    "seen": 1795102864.2001426,
+    "ast_hash": "0760c667ca0fc6233971c5b74b8ed47c",
+    "semantic_hash": "0760c667ca0fc6233971c5b74b8ed47c"
+  },
+  "src/components/home/HeroIntentRouter.tsx": {
+    "mtime": 1795109588.133235,
+    "seen": 1795110156.851916,
+    "ast_hash": "1306871b57b86dd2c1fceee6e9e666e5",
+    "semantic_hash": ""
+  },
+  "src/components/home/PlanYourVisitBridge.tsx": {
+    "mtime": 1795109614.6077135,
+    "seen": 1795110156.851916,
+    "ast_hash": "0d22030ba0e41e1ddb0292682013040e",
+    "semantic_hash": ""
+  },
+  "src/components/home/PracticalInfoGrid.tsx": {
+    "mtime": 1789217484.2068195,
+    "seen": 1795102864.2001426,
+    "ast_hash": "8270ab0b5f0d1f7797623ff93858e441",
+    "semantic_hash": "8270ab0b5f0d1f7797623ff93858e441"
+  },
+  "src/components/home/ServiceDiscoveryCard.tsx": {
+    "mtime": 1789240635.7789001,
+    "seen": 1795102864.2001426,
+    "ast_hash": "889b43275e8a3f110e7dc4f72efbbc05",
+    "semantic_hash": "889b43275e8a3f110e7dc4f72efbbc05"
+  },
+  "src/components/home/StableHero.tsx": {
+    "mtime": 1795271952.4181695,
+    "seen": 1795281268.1023254,
+    "ast_hash": "6d937022e9e67dbf92e00dc46c195c3d",
+    "semantic_hash": ""
+  },
+  "src/components/home/StickyBookingBar.tsx": {
+    "mtime": 1789050353.2938862,
+    "seen": 1795102864.2001426,
+    "ast_hash": "877652503ec51a979f88a9890565a83e",
+    "semantic_hash": "877652503ec51a979f88a9890565a83e"
+  },
+  "src/components/home/TourCardGrid.tsx": {
+    "mtime": 1789067119.4212973,
+    "seen": 1795102864.2001426,
+    "ast_hash": "b6300ef8b50e2d5a5983263f15990ac8",
+    "semantic_hash": "b6300ef8b50e2d5a5983263f15990ac8"
+  },
+  "src/components/home/TourCategorySelector.tsx": {
+    "mtime": 1789215672.7843776,
+    "seen": 1795102864.2001426,
+    "ast_hash": "fde4b8123718a43cd5bdbb018bacfdb2",
+    "semantic_hash": "fde4b8123718a43cd5bdbb018bacfdb2"
+  },
+  "src/components/home/WhyChooseUsHero.tsx": {
+    "mtime": 1795112215.4194021,
+    "seen": 1795112763.7757018,
+    "ast_hash": "0d3aa2897af9d94daab6a2b36d33d26c",
+    "semantic_hash": ""
+  },
+  "src/components/home/WhyChooseUsPreview.tsx": {
+    "mtime": 1789237916.2760048,
+    "seen": 1795102864.2026708,
+    "ast_hash": "025d4d6e76fad5ad77aa87479e2b637d",
+    "semantic_hash": "025d4d6e76fad5ad77aa87479e2b637d"
+  },
+  "src/components/navbar/DesktopDropdownMenu.tsx": {
+    "mtime": 1789323005.480551,
+    "seen": 1795102864.2031806,
+    "ast_hash": "3dcb9c2baf1eb5873e052e6cb4df13cb",
+    "semantic_hash": "3dcb9c2baf1eb5873e052e6cb4df13cb"
+  },
+  "src/components/navbar/DesktopNav.tsx": {
+    "mtime": 1795112215.4214227,
+    "seen": 1795112763.7800095,
+    "ast_hash": "bc99b064c690e4004f5a8e341d3daccc",
+    "semantic_hash": ""
+  },
+  "src/components/navbar/MobileDrawer.tsx": {
+    "mtime": 1789324123.7051837,
+    "seen": 1795102864.2031806,
+    "ast_hash": "b6c90af21113fcccdc1bb1f1ad499790",
+    "semantic_hash": "b6c90af21113fcccdc1bb1f1ad499790"
+  },
+  "src/components/navbar/NavTypes.ts": {
+    "mtime": 1789319152.0233705,
+    "seen": 1795102864.2031806,
+    "ast_hash": "f8a68344e67c891b4d0e1984f99b13f0",
+    "semantic_hash": "f8a68344e67c891b4d0e1984f99b13f0"
+  },
+  "src/components/ui/Accordion.tsx": {
+    "mtime": 1787932359.2701976,
+    "seen": 1795102864.2031806,
+    "ast_hash": "6310e868061948ca7580efddff5b288d",
+    "semantic_hash": "6310e868061948ca7580efddff5b288d"
+  },
+  "src/components/ui/PhoneInput.tsx": {
+    "mtime": 1795109844.9416182,
+    "seen": 1795110156.8788767,
+    "ast_hash": "55d14bc86e225d25a279b788056500b2",
+    "semantic_hash": ""
+  },
+  "src/components/ui/SuccessMessage.tsx": {
+    "mtime": 1787932359.2907336,
+    "seen": 1795102864.2031806,
+    "ast_hash": "11a05002dcabb81dfba2663553569958",
+    "semantic_hash": "11a05002dcabb81dfba2663553569958"
+  },
+  "src/config/brand.ts": {
+    "mtime": 1789236384.5411222,
+    "seen": 1795102864.2031806,
+    "ast_hash": "4eff630588e1c991f5a74650f5ca42ec",
+    "semantic_hash": "4eff630588e1c991f5a74650f5ca42ec"
+  },
+  "src/constants/booking.ts": {
+    "mtime": 1789160991.2731788,
+    "seen": 1795102864.2031806,
+    "ast_hash": "9e1e3d53da65d0ea754519598f6e288e",
+    "semantic_hash": "9e1e3d53da65d0ea754519598f6e288e"
+  },
+  "src/content.d.ts": {
+    "mtime": 1789163954.648117,
+    "seen": 1795102864.2031806,
+    "ast_hash": "0bbc883a5b5061c856351dcb6d04b0be",
+    "semantic_hash": "0bbc883a5b5061c856351dcb6d04b0be"
+  },
+  "src/content/about.json": {
+    "mtime": 1789237841.341627,
+    "seen": 1795102864.2031806,
+    "ast_hash": "32cf4dcbafb3e1d3f49e48ff83dc788f",
+    "semantic_hash": "32cf4dcbafb3e1d3f49e48ff83dc788f",
+    "ast_empty": true
+  },
+  "src/content/airport-transfers.json": {
+    "mtime": 1789240509.0309205,
+    "seen": 1795102864.2031806,
+    "ast_hash": "5a3865d7d45d4ce593cc1b84b705057c",
+    "semantic_hash": "5a3865d7d45d4ce593cc1b84b705057c",
+    "ast_empty": true
+  },
+  "src/content/booking.json": {
+    "mtime": 1789237842.0079618,
+    "seen": 1795102864.2031806,
+    "ast_hash": "195da2d878ce59d07d8642cac8aca8bd",
+    "semantic_hash": "195da2d878ce59d07d8642cac8aca8bd",
+    "ast_empty": true
+  },
+  "src/content/car-hire.json": {
+    "mtime": 1789238187.0435443,
+    "seen": 1795102864.2031806,
+    "ast_hash": "40238215dda17aeaa5805b8148905abb",
+    "semantic_hash": "40238215dda17aeaa5805b8148905abb",
+    "ast_empty": true
+  },
+  "src/content/contact.json": {
+    "mtime": 1789237842.693037,
+    "seen": 1795102864.2031806,
+    "ast_hash": "2c4bad996e3bc71c2349f3e5976f687b",
+    "semantic_hash": "2c4bad996e3bc71c2349f3e5976f687b",
+    "ast_empty": true
+  },
+  "src/content/country-codes.json": {
+    "mtime": 1789152687.3785388,
+    "seen": 1795102864.2031806,
+    "ast_hash": "9d3c799e821928fc6bbcab30c242b012",
+    "semantic_hash": "9d3c799e821928fc6bbcab30c242b012",
+    "ast_empty": true
+  },
+  "src/content/destinations.json": {
+    "mtime": 1788118470.1564863,
+    "seen": 1795102864.2031806,
+    "ast_hash": "5adde6c2b62cd8c36d5c6fbd6ecc682f",
+    "semantic_hash": "5adde6c2b62cd8c36d5c6fbd6ecc682f",
+    "ast_empty": true
+  },
+  "src/content/faqs.json": {
+    "mtime": 1788118470.3000605,
+    "seen": 1795102864.2031806,
+    "ast_hash": "cda206916670f04541d8aca7364a4a9f",
+    "semantic_hash": "cda206916670f04541d8aca7364a4a9f",
+    "ast_empty": true
+  },
+  "src/content/guides.json": {
+    "mtime": 1789238181.0864837,
+    "seen": 1795102864.2031806,
+    "ast_hash": "6c4cbb620aea833bdce925696b6886b9",
+    "semantic_hash": "6c4cbb620aea833bdce925696b6886b9",
+    "ast_empty": true
+  },
+  "src/content/home.json": {
+    "mtime": 1789324145.6791713,
+    "seen": 1795102864.2031806,
+    "ast_hash": "2ccb93d424e07a1ac89e9512e3ae3dd5",
+    "semantic_hash": "2ccb93d424e07a1ac89e9512e3ae3dd5",
+    "ast_empty": true
+  },
+  "src/content/navigation.json": {
+    "mtime": 1789309260.6981285,
+    "seen": 1795102864.2031806,
+    "ast_hash": "36661f84b4ae91f5b22a65ea413a33e7",
+    "semantic_hash": "36661f84b4ae91f5b22a65ea413a33e7",
+    "ast_empty": true
+  },
+  "src/content/reviews.json": {
+    "mtime": 1789237851.6934223,
+    "seen": 1795102864.2031806,
+    "ast_hash": "92aded75ed1c0f488742527d6fc43c59",
+    "semantic_hash": "92aded75ed1c0f488742527d6fc43c59",
+    "ast_empty": true
+  },
+  "src/content/things-to-do.json": {
+    "mtime": 1789238167.520059,
+    "seen": 1795102864.2031806,
+    "ast_hash": "83de4eda08a186623adcf3e4f7af5b18",
+    "semantic_hash": "83de4eda08a186623adcf3e4f7af5b18",
+    "ast_empty": true
+  },
+  "src/content/tours.json": {
+    "mtime": 1789237847.0862663,
+    "seen": 1795102864.2031806,
+    "ast_hash": "fdf3a23ae9e387b445f0f0ff2a4bc238",
+    "semantic_hash": "fdf3a23ae9e387b445f0f0ff2a4bc238",
+    "ast_empty": true
+  },
+  "src/content/travel-guide.json": {
+    "mtime": 1788118472.066141,
+    "seen": 1795102864.2031806,
+    "ast_hash": "07b292639804b6f6356bd9e26326a9d4",
+    "semantic_hash": "07b292639804b6f6356bd9e26326a9d4",
+    "ast_empty": true
+  },
+  "src/content/where-to-stay.json": {
+    "mtime": 1789240508.378924,
+    "seen": 1795102864.2031806,
+    "ast_hash": "d7d04e4a8ebe30b4e93f7f95ae0f8842",
+    "semantic_hash": "d7d04e4a8ebe30b4e93f7f95ae0f8842",
+    "ast_empty": true
+  },
+  "src/context/CookieConsentContext.tsx": {
+    "mtime": 1795273423.2892184,
+    "seen": 1795281268.1159146,
+    "ast_hash": "650d44c2e3dbf53242aacfbf15043731",
+    "semantic_hash": ""
+  },
+  "src/data.ts": {
+    "mtime": 1789238012.1909106,
+    "seen": 1795102864.2031806,
+    "ast_hash": "748bbce9c3d3129ae82b13a75b851b66",
+    "semantic_hash": "748bbce9c3d3129ae82b13a75b851b66"
+  },
+  "src/hooks/useBodyScrollLock.ts": {
+    "mtime": 1789319153.059976,
+    "seen": 1795102864.2031806,
+    "ast_hash": "d894104a111fd6aa08dee5cb2424f810",
+    "semantic_hash": "d894104a111fd6aa08dee5cb2424f810"
+  },
+  "src/hooks/useClickOutside.ts": {
+    "mtime": 1789319159.4845772,
+    "seen": 1795102864.2031806,
+    "ast_hash": "a67ed8705858f9869a9c3dca6f881deb",
+    "semantic_hash": "a67ed8705858f9869a9c3dca6f881deb"
+  },
+  "src/hooks/useFocusTrap.ts": {
+    "mtime": 1789319453.8104935,
+    "seen": 1795102864.2031806,
+    "ast_hash": "26fd067ae4c8e323a9b25fae119037aa",
+    "semantic_hash": "26fd067ae4c8e323a9b25fae119037aa"
+  },
+  "src/hooks/useKeyboard.ts": {
+    "mtime": 1789319160.6116996,
+    "seen": 1795102864.2031806,
+    "ast_hash": "f0af6d061054ee83d13fd1c24a2cb148",
+    "semantic_hash": "f0af6d061054ee83d13fd1c24a2cb148"
+  },
+  "src/hooks/useReducedMotion.ts": {
+    "mtime": 1789319158.0899682,
+    "seen": 1795102864.2031806,
+    "ast_hash": "a340e299c36d8ec083fd0c42f6b3e0df",
+    "semantic_hash": "a340e299c36d8ec083fd0c42f6b3e0df"
+  },
+  "src/main.tsx": {
+    "mtime": 1795273452.4549994,
+    "seen": 1795281268.1179128,
+    "ast_hash": "42dd7e15f7b6c804aa6384092108ccfa",
+    "semantic_hash": ""
+  },
+  "src/pages/AboutPage.tsx": {
+    "mtime": 1789237882.705672,
+    "seen": 1795102864.2031806,
+    "ast_hash": "5a2b03a175c9fdf3a5c029e2a510281e",
+    "semantic_hash": "5a2b03a175c9fdf3a5c029e2a510281e"
+  },
+  "src/pages/AirportTransfersPage.tsx": {
+    "mtime": 1795109508.111485,
+    "seen": 1795110156.9452043,
+    "ast_hash": "88caefb35cdfd3a6c051e8af0c9f8262",
+    "semantic_hash": ""
+  },
+  "src/pages/BookPage.tsx": {
+    "mtime": 1789163989.7989106,
+    "seen": 1795102864.2031806,
+    "ast_hash": "2bdccf56585e89be270d5b2d5d49e4b1",
+    "semantic_hash": "2bdccf56585e89be270d5b2d5d49e4b1"
+  },
+  "src/pages/CarHirePage.tsx": {
+    "mtime": 1795109487.7962868,
+    "seen": 1795110156.9472346,
+    "ast_hash": "625102ac731980ef29f2bb73f9f5962c",
+    "semantic_hash": ""
+  },
+  "src/pages/ContactPage.tsx": {
+    "mtime": 1795109440.439847,
+    "seen": 1795110156.9472346,
+    "ast_hash": "d24babf1e5dd1be09a133e0f58507f6b",
+    "semantic_hash": ""
+  },
+  "src/pages/CustomTourPage.tsx": {
+    "mtime": 1788118473.5325816,
+    "seen": 1795102864.2031806,
+    "ast_hash": "02d8f363dd74ef73a54409ea53360c4c",
+    "semantic_hash": "02d8f363dd74ef73a54409ea53360c4c"
+  },
+  "src/pages/DestinationDetailPage.tsx": {
+    "mtime": 1788118473.8649197,
+    "seen": 1795102864.2031806,
+    "ast_hash": "a5a59ab6f5582048fc97aff8eb97ca6c",
+    "semantic_hash": "a5a59ab6f5582048fc97aff8eb97ca6c"
+  },
+  "src/pages/DestinationListingPage.tsx": {
+    "mtime": 1788118473.9576492,
+    "seen": 1795102864.2031806,
+    "ast_hash": "3bc2978ee96e03162afcb6327263af77",
+    "semantic_hash": "3bc2978ee96e03162afcb6327263af77"
+  },
+  "src/pages/GuidesPage.tsx": {
+    "mtime": 1795109534.5742497,
+    "seen": 1795110156.9545019,
+    "ast_hash": "d40201ddac3e6fd87472690471b03884",
+    "semantic_hash": ""
+  },
+  "src/pages/Homepage.tsx": {
+    "mtime": 1795273849.3277414,
+    "seen": 1795281268.1219835,
+    "ast_hash": "e4feb9265b44c8c30e46b84a7fc7421d",
+    "semantic_hash": ""
+  },
+  "src/pages/LegalPage.tsx": {
+    "mtime": 1789237883.2676442,
+    "seen": 1795102864.2031806,
+    "ast_hash": "157100ddfc2cf4ecd7ece88007e07028",
+    "semantic_hash": "157100ddfc2cf4ecd7ece88007e07028"
+  },
+  "src/pages/NotFoundPage.tsx": {
+    "mtime": 1788118474.3230803,
+    "seen": 1795102864.2031806,
+    "ast_hash": "9eb986990611f7bae78a885827eac5c1",
+    "semantic_hash": "9eb986990611f7bae78a885827eac5c1"
+  },
+  "src/pages/PlanYourVisitRedirect.tsx": {
+    "mtime": 1789286405.829892,
+    "seen": 1795102864.2031806,
+    "ast_hash": "99659744f71b9064f37cede43d16b8a4",
+    "semantic_hash": "99659744f71b9064f37cede43d16b8a4"
+  },
+  "src/pages/ReviewsPage.tsx": {
+    "mtime": 1789236852.810142,
+    "seen": 1795102864.2031806,
+    "ast_hash": "5e158e7f5d480674495e7e8073c4dab2",
+    "semantic_hash": "5e158e7f5d480674495e7e8073c4dab2"
+  },
+  "src/pages/ThingsToDoPage.tsx": {
+    "mtime": 1789238748.1551368,
+    "seen": 1795102864.2031806,
+    "ast_hash": "c98c22836ca702d7a15295488aa951d5",
+    "semantic_hash": "c98c22836ca702d7a15295488aa951d5"
+  },
+  "src/pages/TourDetailPage.tsx": {
+    "mtime": 1789238806.7900136,
+    "seen": 1795102864.2031806,
+    "ast_hash": "06ff007cea74891161675567b6183b35",
+    "semantic_hash": "06ff007cea74891161675567b6183b35"
+  },
+  "src/pages/TourListingPage.tsx": {
+    "mtime": 1788265094.8091178,
+    "seen": 1795102864.2031806,
+    "ast_hash": "e18a8caf3d1595a70e9d636f7233eec0",
+    "semantic_hash": "e18a8caf3d1595a70e9d636f7233eec0"
+  },
+  "src/pages/TravelAgentsPage.tsx": {
+    "mtime": 1788118474.8051412,
+    "seen": 1795102864.2031806,
+    "ast_hash": "6f3c27fef92a31fa051fdf3e7d6dea8a",
+    "semantic_hash": "6f3c27fef92a31fa051fdf3e7d6dea8a"
+  },
+  "src/pages/TravelGuideArticlePage.tsx": {
+    "mtime": 1788118474.9065323,
+    "seen": 1795102864.2031806,
+    "ast_hash": "768aa5eb9eb09cc1e6a5f34f5b04b6de",
+    "semantic_hash": "768aa5eb9eb09cc1e6a5f34f5b04b6de"
+  },
+  "src/pages/TravelGuideListingPage.tsx": {
+    "mtime": 1788118474.9793825,
+    "seen": 1795102864.2031806,
+    "ast_hash": "fa5762240918b92a7fa9a4c28f048977",
+    "semantic_hash": "fa5762240918b92a7fa9a4c28f048977"
+  },
+  "src/pages/WhereToStayPage.tsx": {
+    "mtime": 1795109519.9145694,
+    "seen": 1795110156.972247,
+    "ast_hash": "6ce939ffbc08bef5a435cd16dd551926",
+    "semantic_hash": ""
+  },
+  "src/pages/WhyChooseUsPage.tsx": {
+    "mtime": 1789237883.8552105,
+    "seen": 1795102864.2031806,
+    "ast_hash": "8f4b17b81e89008767fa47079dec3a20",
+    "semantic_hash": "8f4b17b81e89008767fa47079dec3a20"
+  },
+  "src/router/Layout.tsx": {
+    "mtime": 1795267908.006604,
+    "seen": 1795281268.1285915,
+    "ast_hash": "ccf34b8e4ffb01d51819491babbc2345",
+    "semantic_hash": ""
+  },
+  "src/router/routes.tsx": {
+    "mtime": 1795273388.359613,
+    "seen": 1795281268.1285915,
+    "ast_hash": "ec406ec29b01462d5f12aad982070a81",
+    "semantic_hash": ""
+  },
+  "src/types.ts": {
+    "mtime": 1789238010.5231607,
+    "seen": 1795102864.2031806,
+    "ast_hash": "d797b5f47e64b8475f8eb144e86c38da",
+    "semantic_hash": "d797b5f47e64b8475f8eb144e86c38da"
+  },
+  "src/types/booking.ts": {
+    "mtime": 1789160989.9859948,
+    "seen": 1795102864.2031806,
+    "ast_hash": "f5830d5668ad59a3b8a1cda55746067d",
+    "semantic_hash": "f5830d5668ad59a3b8a1cda55746067d"
+  },
+  "src/types/contact.ts": {
+    "mtime": 1789161151.1229048,
+    "seen": 1795102864.2031806,
+    "ast_hash": "1217c3b548d47220bb74988aef94166f",
+    "semantic_hash": "1217c3b548d47220bb74988aef94166f"
+  },
+  "tsconfig.json": {
+    "mtime": 1789164162.78796,
+    "seen": 1795102864.2031806,
+    "ast_hash": "2e3b259d3065428e1a295fc19f05f376",
+    "semantic_hash": "2e3b259d3065428e1a295fc19f05f376"
+  },
+  "vite.config.ts": {
+    "mtime": 1795112893.272461,
+    "seen": 1795113247.450149,
+    "ast_hash": "58624bb01fd802b9fbce81e9b8b76b93",
+    "semantic_hash": ""
+  },
+  ".github/ISSUE_TEMPLATE.md": {
+    "mtime": 1787836222.4571168,
+    "seen": 1795110156.9846556,
+    "ast_hash": "8472e87f7487e118d283c2a45604db70",
+    "semantic_hash": ""
+  },
+  ".github/PULL_REQUEST_TEMPLATE.md": {
+    "mtime": 1787836237.7872677,
+    "seen": 1795110156.9846556,
+    "ast_hash": "0de66197d919beaaec43685fbfb7ae96",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/booking-contact-pages.md": {
+    "mtime": 1789049856.4208765,
+    "seen": 1795110156.9846556,
+    "ast_hash": "70ffba1eed76ca101a85d4633aea1a88",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/category-card-enhancement.md": {
+    "mtime": 1789060677.8039076,
+    "seen": 1795110156.9846556,
+    "ast_hash": "cc1b69a2b36db92f4c91753b1a94242b",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/choose-your-adventure-cards.md": {
+    "mtime": 1789215552.6035557,
+    "seen": 1795110156.9846556,
+    "ast_hash": "6a177366ed969adc4a754c8dfd7fc649",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/contact-page-enhancement.md": {
+    "mtime": 1789143268.1252663,
+    "seen": 1795110156.9846556,
+    "ast_hash": "25db5bec23ecd0eb77708313a8398766",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/contact-page-minimal-enhancement.md": {
+    "mtime": 1789147687.5145786,
+    "seen": 1795110156.9846556,
+    "ast_hash": "69ba4a67c1438624bb34ebf3fc5dc9a2",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/font-refinement.md": {
+    "mtime": 1789055013.7168126,
+    "seen": 1795110156.9846556,
+    "ast_hash": "522d8d2ffdf90709e32c500e810c7d78",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/footer-restructuring.md": {
+    "mtime": 1789225581.3943925,
+    "seen": 1795110156.9846556,
+    "ast_hash": "453c984b6b4776cb2865962c75a209a7",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/google-reviews-widget.md": {
+    "mtime": 1789218586.6542392,
+    "seen": 1795110156.9846556,
+    "ast_hash": "acf54c2045418936e3bf9f0a975f5e59",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/hero-comprehensive-redesign.md": {
+    "mtime": 1789052508.0872722,
+    "seen": 1795110156.9846556,
+    "ast_hash": "02447f24a1a38c9620453b478e7f80e7",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/hero-search-bar-fix.md": {
+    "mtime": 1789051500.3612745,
+    "seen": 1795110156.9846556,
+    "ast_hash": "1481e37e9b7ea193fd506f1eb9508fe4",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/hero-search-bar-positioning.md": {
+    "mtime": 1789064265.5734391,
+    "seen": 1795110156.9846556,
+    "ast_hash": "81684cc2033c8921516b8535701f576e",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/hero-search-trust-integration.md": {
+    "mtime": 1789051843.58749,
+    "seen": 1795110156.9846556,
+    "ast_hash": "bfdb70aab78ce752a06faba151ee8743",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/hero-spacing-alignment.md": {
+    "mtime": 1789055521.1035378,
+    "seen": 1795110156.9846556,
+    "ast_hash": "af27764918f48d1968fdace20005cd67",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/hero-tabs-inside-box.md": {
+    "mtime": 1789052082.5562747,
+    "seen": 1795110156.9846556,
+    "ast_hash": "fbc91fe381a860479720cf44199bd41d",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/hero-ux-enhancements.md": {
+    "mtime": 1789048383.642398,
+    "seen": 1795110156.9846556,
+    "ast_hash": "adb60fbd5f08b170e6aa3691a352e1df",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/homepage-cleanup-and-cards.md": {
+    "mtime": 1789217068.8168862,
+    "seen": 1795110156.9846556,
+    "ast_hash": "a7d09db8091d2c7ca51823a67eb9bb94",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/homepage-header-standardization.md": {
+    "mtime": 1789066417.5141728,
+    "seen": 1795110156.9846556,
+    "ast_hash": "bbf56f2841f99b86d5fff392e7799f16",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/homepage-production-fixes.md": {
+    "mtime": 1789223327.900085,
+    "seen": 1795110156.9846556,
+    "ast_hash": "5654b29aba7ce440a33a5cb25547d0f6",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/homepage-section-reorder.md": {
+    "mtime": 1789062240.5652304,
+    "seen": 1795110156.9846556,
+    "ast_hash": "ce2379867e54b64f36657e40e30a6572",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/slider-header-sizing.md": {
+    "mtime": 1789054983.3042762,
+    "seen": 1795110156.9846556,
+    "ast_hash": "c6f3c3e11a688c5eff150ba239938510",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/sprint-6-edge-cases.md": {
+    "mtime": 1789163189.1426845,
+    "seen": 1795110156.9846556,
+    "ast_hash": "5d36604d4fbd3cd3ab186a52a6decb74",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/sprint-8-final-audit.md": {
+    "mtime": 1789163238.6471052,
+    "seen": 1795110156.9846556,
+    "ast_hash": "169ae2954e7a105ead719d2ec2b6bcc8",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/tour-card-redesign.md": {
+    "mtime": 1789056729.92707,
+    "seen": 1795110156.9846556,
+    "ast_hash": "2ac79cbabc06895c39ad6e4f6ab29acd",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/tour-carousel-to-grid.md": {
+    "mtime": 1789067052.5014071,
+    "seen": 1795110156.9846556,
+    "ast_hash": "9984effcee45cdaadc4df89192d9315d",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/why-choose-us-cards.md": {
+    "mtime": 1789213259.8060493,
+    "seen": 1795110156.9846556,
+    "ast_hash": "a7dc5f5ded7381d76813fe482c51ddcf",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/why-choose-us-compact.md": {
+    "mtime": 1789220292.5218363,
+    "seen": 1795110156.9846556,
+    "ast_hash": "48ff190da752d55a576bef44cd0c868c",
+    "semantic_hash": ""
+  },
+  ".opencode/plans/why-choose-us-fix.md": {
+    "mtime": 1789221018.1841815,
+    "seen": 1795110156.9846556,
+    "ast_hash": "5b1bd784bb4c937717582e7372e46492",
+    "semantic_hash": ""
+  },
+  "ADDIS-ABABA-BY-LOCALS-PRODUCTION-ENHANCEMENT-SPEC.md": {
+    "mtime": 1789234156.4729643,
+    "seen": 1795110156.9846556,
+    "ast_hash": "44d490215717f08918253308554e555d",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1795102482.9137127,
+    "seen": 1795110156.9846556,
+    "ast_hash": "9c9200425215c39e62e5f02c4a881233",
+    "semantic_hash": ""
+  },
+  "IMPLEMENTATION_PLAN.md": {
+    "mtime": 1787836141.5591483,
+    "seen": 1795110156.9846556,
+    "ast_hash": "abad2b53a6ba191f4ef2b9f3e3b61a5d",
+    "semantic_hash": ""
+  },
+  "MIGRATION-CHANGELOG.md": {
+    "mtime": 1788114787.5061085,
+    "seen": 1795110156.9846556,
+    "ast_hash": "736f4b194b3d7ac4a318597abf30a886",
+    "semantic_hash": ""
+  },
+  "OPTIMIZATION-REFACTORING-LOG.md": {
+    "mtime": 1789215884.6216521,
+    "seen": 1795110156.9846556,
+    "ast_hash": "4f9cec31e74a02311f40ff372edeb661",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1787836880.0240188,
+    "seen": 1795110156.9846556,
+    "ast_hash": "1cdeaf3b6c3b0cd746ec2a07233aa06e",
+    "semantic_hash": ""
+  },
+  "UPGRADE_TO_PRODUCTION.md": {
+    "mtime": 1787834292.8134193,
+    "seen": 1795110156.9846556,
+    "ast_hash": "c52722a25428f77729529c33fa0eb804",
+    "semantic_hash": ""
+  },
+  "UX-UI-REVAMP-MASTER-ENGINEERING-PLAYBOOK-UPGRADED.md": {
+    "mtime": 1789234500.6002448,
+    "seen": 1795110156.9846556,
+    "ast_hash": "999143e7d01f2b46bb7fc3cce41be921",
+    "semantic_hash": ""
+  },
+  "UX-UI-REVAMP-MASTER-ENGINEERING-PLAYBOOK.md": {
+    "mtime": 1787938684.7307115,
+    "seen": 1795110156.9846556,
+    "ast_hash": "69910964e6b46b36bbb2fcdc1c86b134",
+    "semantic_hash": ""
+  },
+  "UX-UI-STATE-DESC.md": {
+    "mtime": 1787935574.2900028,
+    "seen": 1795110156.9846556,
+    "ast_hash": "b5a9c975e9dc746c214107a3cf6fae01",
+    "semantic_hash": ""
+  },
+  "WEBSITE-COPYWRITING-MASTER-GUIDE-UPGRADED.md": {
+    "mtime": 1789234530.3740642,
+    "seen": 1795110156.9846556,
+    "ast_hash": "916f9f621853c5ce297f79c1dbfc8be5",
+    "semantic_hash": ""
+  },
+  "WEBSITE-COPYWRITING-MASTER-GUIDE.md": {
+    "mtime": 1787939392.2403984,
+    "seen": 1795110156.9846556,
+    "ast_hash": "46e5247a0ee37c8c074bc8857bfef143",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1795280818.1881,
+    "seen": 1795281268.1496713,
+    "ast_hash": "04a68bb52c7ad4d1fda1214472e8a5e9",
+    "semantic_hash": ""
+  },
+  "public/robots.txt": {
+    "mtime": 1789236921.5412538,
+    "seen": 1795110156.9846556,
+    "ast_hash": "703659a74a8bdf42b2722157b3896366",
+    "semantic_hash": ""
+  },
+  "scripts/find-legacy-strings.txt": {
+    "mtime": 1787836327.6735523,
+    "seen": 1795110156.9846556,
+    "ast_hash": "bcb7d1c9b4e5a2bb89d7389b4a841cba",
+    "semantic_hash": ""
+  },
+  "Gallery-not-optimized-resources/Addis-Ababa-typography-art-for-logo.png": {
+    "mtime": 1787918567.2286391,
+    "seen": 1795110156.9846556,
+    "ast_hash": "a03b60a4f45a17ae3dcbdcf276b70b07",
+    "semantic_hash": ""
+  },
+  "Gallery-not-optimized-resources/Addis-ababa-landmarks-vector-alt.png": {
+    "mtime": 1787918663.8376756,
+    "seen": 1795110156.9846556,
+    "ast_hash": "a1bfbc8a01c493e353ba7ff2e90ba1eb",
+    "semantic_hash": ""
+  },
+  "Gallery-not-optimized-resources/Addis-ababa-landmarks-vector-lineart-small.png": {
+    "mtime": 1787918405.4547982,
+    "seen": 1795110156.9846556,
+    "ast_hash": "87ebb050ed61bac38b134854fbc1a5a6",
+    "semantic_hash": ""
+  },
+  "Gallery-not-optimized-resources/Addis-ababa-landmarks-vector-tricolor-small.png": {
+    "mtime": 1787918439.55675,
+    "seen": 1795110156.9846556,
+    "ast_hash": "2fff54192d3588529beaf336063ecc9d",
+    "semantic_hash": ""
+  },
+  "Gallery-not-optimized-resources/Addis-ababa-landmarks-vector.png": {
+    "mtime": 1787918113.385719,
+    "seen": 1795110156.9846556,
+    "ast_hash": "f8c8206db66c6293a9dd8ec9353a7c65",
+    "semantic_hash": ""
+  },
+  "Gallery-not-optimized-resources/Welcome-to-Ethiopia-sign.png": {
+    "mtime": 1787918773.473615,
+    "seen": 1795110156.9846556,
+    "ast_hash": "f3de9a16a8045e681f89f51136c5594e",
+    "semantic_hash": ""
+  },
+  "Gallery-not-optimized-resources/i-love-ethiopia-sign.png": {
+    "mtime": 1787918906.72983,
+    "seen": 1795110156.9846556,
+    "ast_hash": "33612821f3680c3215c8ed658d7e8937",
+    "semantic_hash": ""
+  },
+  "STT_Logo_circle_copy.svg": {
+    "mtime": 1789378497.1134694,
+    "seen": 1795110156.9846556,
+    "ast_hash": "ab919e7306895d5e5e6b023c3a8a8fde",
+    "semantic_hash": ""
+  },
+  "addis-ababa-city-hero.jpg": {
+    "mtime": 1789245937.8391905,
+    "seen": 1795110156.9846556,
+    "ast_hash": "7e36733f28fbdd0e0bcdfcdf2fb68cd0",
+    "semantic_hash": ""
+  },
+  "addis-by-locals-logo.svg": {
+    "mtime": 1789309422.323373,
+    "seen": 1795110156.9846556,
+    "ast_hash": "6e01fc2d67f117d8edb55e056c233870",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-121196741-2138270682984431-430381333708358657-n-1024w.webp": {
+    "mtime": 1784471007.3697155,
+    "seen": 1795110156.9846556,
+    "ast_hash": "72d9217f19e54c27708ca79feec5d63a",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-121196741-2138270682984431-430381333708358657-n-1920w.webp": {
+    "mtime": 1784471006.864986,
+    "seen": 1795110156.9846556,
+    "ast_hash": "bd54b8526971f2da949b2eee1a176f69",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-121196741-2138270682984431-430381333708358657-n-640w.webp": {
+    "mtime": 1784471007.772169,
+    "seen": 1795110156.9846556,
+    "ast_hash": "639c9483e22db152fc5165dd434a30d0",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-124984465-2174975672647265-3989283338411214076-n-1024w.webp": {
+    "mtime": 1784471009.3949864,
+    "seen": 1795110156.9846556,
+    "ast_hash": "a99c38f81bc013fea469a60d72588237",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-124984465-2174975672647265-3989283338411214076-n-1920w.webp": {
+    "mtime": 1784471008.8981113,
+    "seen": 1795110156.9846556,
+    "ast_hash": "a242f6229f0a29823b0c4730779dc644",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-124984465-2174975672647265-3989283338411214076-n-640w.webp": {
+    "mtime": 1784471009.7656596,
+    "seen": 1795110156.9846556,
+    "ast_hash": "a8fdbc9035fe04df5e901c4170d33e27",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-182879992-2328672017277629-3537560015291495278-n-1024w.webp": {
+    "mtime": 1784471011.762798,
+    "seen": 1795110156.9846556,
+    "ast_hash": "384651c19f549b05d77bd4ed92891cc8",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-182879992-2328672017277629-3537560015291495278-n-1920w.webp": {
+    "mtime": 1784471011.2287076,
+    "seen": 1795110156.9846556,
+    "ast_hash": "01ce6714a1a5d9a8d25384cef48a171a",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-182879992-2328672017277629-3537560015291495278-n-640w.webp": {
+    "mtime": 1784471012.1370258,
+    "seen": 1795110156.9846556,
+    "ast_hash": "7527e94be636613a4067b656f5aeb48d",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-addis-ababa-city-tour-1-1-1024w.webp": {
+    "mtime": 1784471012.524317,
+    "seen": 1795110156.9846556,
+    "ast_hash": "84fd1dad43d2e0cc4a19f0470ebc8d2f",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-addis-ababa-city-tour-1-1-640w.webp": {
+    "mtime": 1784471012.7582252,
+    "seen": 1795110156.9846556,
+    "ast_hash": "da04f723913f130907d8b9fa2a54a5da",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-addis-ababa-city-tour-1-2-1024w.webp": {
+    "mtime": 1784471013.7898438,
+    "seen": 1795110156.9846556,
+    "ast_hash": "3dce45ba25ed351d7069c73862fdf277",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-addis-ababa-city-tour-1-2-640w.webp": {
+    "mtime": 1784471014.2306688,
+    "seen": 1795110156.9846556,
+    "ast_hash": "c7e24189bde0d6a236684af62afb085d",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-addis-ababa-city-tour-1-3-1024w.webp": {
+    "mtime": 1784471015.176872,
+    "seen": 1795110156.9846556,
+    "ast_hash": "9526ef7477a1a2c8751cafbf4c60d9c7",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-addis-ababa-city-tour-1-3-640w.webp": {
+    "mtime": 1784471015.6147668,
+    "seen": 1795110156.9846556,
+    "ast_hash": "c9a6c444544edee783cc706c46cb6386",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-addis-ababa-city-tour-1-4-1024w.webp": {
+    "mtime": 1784471017.3480408,
+    "seen": 1795110156.9846556,
+    "ast_hash": "179c29baa7e38015fddd81479ea3dfa9",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-addis-ababa-city-tour-1-4-1920w.webp": {
+    "mtime": 1784471016.8265133,
+    "seen": 1795110156.9846556,
+    "ast_hash": "4d5619c20d753a33e87541cf46612509",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-addis-ababa-city-tour-1-4-640w.webp": {
+    "mtime": 1784471017.7302568,
+    "seen": 1795110156.9846556,
+    "ast_hash": "fecb2985cbd19851167d41604bbeec6c",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-addis-ababa-city-tour-1-5-1024w.webp": {
+    "mtime": 1784471018.09001,
+    "seen": 1795110156.9846556,
+    "ast_hash": "fc958b3d3808dc2bf60ea535e2398a97",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-addis-ababa-city-tour-1-5-640w.webp": {
+    "mtime": 1784471018.3865263,
+    "seen": 1795110156.9846556,
+    "ast_hash": "86723d89cfb263e621b980c764f32950",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-bole-medhanialem-1024w.webp": {
+    "mtime": 1784471020.2610023,
+    "seen": 1795110156.9846556,
+    "ast_hash": "d79207b36c414fac193be7b93ac6311b",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-bole-medhanialem-1920w.webp": {
+    "mtime": 1784471019.7424653,
+    "seen": 1795110156.9846556,
+    "ast_hash": "c61bdfc6bfab8af1095b6b42d1a345c8",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-bole-medhanialem-640w.webp": {
+    "mtime": 1784471020.6485505,
+    "seen": 1795110156.9846556,
+    "ast_hash": "e5cef20c074ea0e64edaf88a02d7f6f6",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-city-view-1024w.webp": {
+    "mtime": 1784471022.3172781,
+    "seen": 1795110156.9846556,
+    "ast_hash": "2d93c92dffa72276673f16429652aa6d",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-city-view-1920w.webp": {
+    "mtime": 1784471021.754846,
+    "seen": 1795110156.9846556,
+    "ast_hash": "a8e70218fd11da9eb04430b8d04dbb70",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-city-view-640w.webp": {
+    "mtime": 1784471022.7255225,
+    "seen": 1795110156.9846556,
+    "ast_hash": "5b4b672664e347b98d08df0c21b6f9cb",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-entoto-1024w.webp": {
+    "mtime": 1784471024.6577542,
+    "seen": 1795110156.9846556,
+    "ast_hash": "3472f71cfa3eb47ec06bcd1255e5465e",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-entoto-1920w.webp": {
+    "mtime": 1784471024.055127,
+    "seen": 1795110156.9846556,
+    "ast_hash": "abad3f79f020c4c8796e6d81b5414dad",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-entoto-640w.webp": {
+    "mtime": 1784471025.1150093,
+    "seen": 1795110156.9856577,
+    "ast_hash": "27cdea0a9165331a6d23b2a7991b8385",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433210429-1024w.webp": {
+    "mtime": 1784471025.5771184,
+    "seen": 1795110156.9856577,
+    "ast_hash": "bd2ecc89f992c97db28309e25476194b",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433210429-640w.webp": {
+    "mtime": 1784471025.7806513,
+    "seen": 1795110156.9856577,
+    "ast_hash": "b7a0693bf75aab8758bec99c91a2f89a",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433220874-1024w.webp": {
+    "mtime": 1784471026.2084842,
+    "seen": 1795110156.9856577,
+    "ast_hash": "11ad54129d59bdb34919e94db6389653",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433220874-640w.webp": {
+    "mtime": 1784471026.4090602,
+    "seen": 1795110156.9856577,
+    "ast_hash": "e402f8400f0107e13d6db16607a39456",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433245742-1024w.webp": {
+    "mtime": 1784471026.9923613,
+    "seen": 1795110156.9856577,
+    "ast_hash": "e15f6ceb28b789675a0374b54f3ad854",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433245742-640w.webp": {
+    "mtime": 1784471027.3176134,
+    "seen": 1795110156.9856577,
+    "ast_hash": "03b08675f10fd01156220a79813fd6eb",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433421922-1024w.webp": {
+    "mtime": 1784471027.9295566,
+    "seen": 1795110156.9856577,
+    "ast_hash": "fc542d9477567a566798f9e3b50398c1",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433421922-640w.webp": {
+    "mtime": 1784471028.211084,
+    "seen": 1795110156.9856577,
+    "ast_hash": "735a6b8086a8240b75f766cb3d0ed86f",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433497312-1024w.webp": {
+    "mtime": 1784471028.8924556,
+    "seen": 1795110156.9856577,
+    "ast_hash": "dff57cb0fd3459812ca6894d3032a198",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433497312-640w.webp": {
+    "mtime": 1784471029.0992703,
+    "seen": 1795110156.9856577,
+    "ast_hash": "6133c11857c37de0000ab1602dd4453e",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433548187-1024w.webp": {
+    "mtime": 1784471029.7829957,
+    "seen": 1795110156.9856577,
+    "ast_hash": "23bd585eff9bd1fe69af44e952d7bd70",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433548187-640w.webp": {
+    "mtime": 1784471030.0682795,
+    "seen": 1795110156.9856577,
+    "ast_hash": "23a4f67e717c6efc3c56ea7462682eb9",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433795522-1024w.webp": {
+    "mtime": 1784471030.5084229,
+    "seen": 1795110156.9856577,
+    "ast_hash": "f5a468ca9b3d011f3a9daafe2ffece0e",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fb-img-1736433795522-640w.webp": {
+    "mtime": 1784471030.7124991,
+    "seen": 1795110156.9856577,
+    "ast_hash": "1fedd70d54cd1b7a795efecbe5e2d41e",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fendika-1024w.webp": {
+    "mtime": 1784471032.4840355,
+    "seen": 1795110156.9856577,
+    "ast_hash": "cadddc7360cf7d90e11f3daa9427373e",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fendika-1920w.webp": {
+    "mtime": 1784471031.9570158,
+    "seen": 1795110156.9856577,
+    "ast_hash": "3b8d3d1e0fb65626c71c49a4ea243369",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-fendika-640w.webp": {
+    "mtime": 1784471032.9569144,
+    "seen": 1795110156.9856577,
+    "ast_hash": "d4b4f83534e9e9a0fe927a90e7655903",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-museum-1024w.webp": {
+    "mtime": 1784471033.8389885,
+    "seen": 1795110156.9856577,
+    "ast_hash": "32005e3dfff844975fd0c94250ae9609",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-museum-640w.webp": {
+    "mtime": 1784471034.2826593,
+    "seen": 1795110156.9856577,
+    "ast_hash": "121337e87f5b025d5fd62a9694bd79cf",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-unity-park-palace-1024w.webp": {
+    "mtime": 1784471036.1023774,
+    "seen": 1795110156.9856577,
+    "ast_hash": "fb48a1626c5aa9e1cb39d1be1ec13485",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-unity-park-palace-1920w.webp": {
+    "mtime": 1784471035.5846336,
+    "seen": 1795110156.9856577,
+    "ast_hash": "65f29f402c67eec194e299ecfebb3cc2",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-unity-park-palace-640w.webp": {
+    "mtime": 1784471036.4898171,
+    "seen": 1795110156.9856577,
+    "ast_hash": "5a4cf2fd9b74c8fdb7c2e8b6936d5def",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-unity-park-zoo-1024w.webp": {
+    "mtime": 1784471037.485155,
+    "seen": 1795110156.9856577,
+    "ast_hash": "186c578bc30c17ebdeaa57fd3bb989db",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Addis Ababa City Tour/addis-ababa-city-tour-unity-park-zoo-640w.webp": {
+    "mtime": 1784471037.9700358,
+    "seen": 1795110156.9856577,
+    "ast_hash": "b69d6d70decafc26db3bdf9f9a925b3a",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Blog_2_db97435a17.jpg": {
+    "mtime": 1788179432.2844124,
+    "seen": 1795110156.9856577,
+    "ast_hash": "58aec389177564c02defe287fe9b4e10",
+    "semantic_hash": ""
+  },
+  "placeholder-images/Omo_3_736108eaa9.jpg": {
+    "mtime": 1788179432.2452798,
+    "seen": 1795110156.9856577,
+    "ast_hash": "3ebb65f59f193715ecbfadad9625ecd1",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-at-seife-1024w.webp": {
+    "mtime": 1784471095.087678,
+    "seen": 1795110156.9856577,
+    "ast_hash": "97c195aa5f506bcf9b4bb1503a2d94ad",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-at-seife-640w.webp": {
+    "mtime": 1784471095.3364594,
+    "seen": 1795110156.9856577,
+    "ast_hash": "8ded48e1561d7a8c29fa84a95e292517",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-at-seife4-1024w.webp": {
+    "mtime": 1784471095.9442484,
+    "seen": 1795110156.9856577,
+    "ast_hash": "89a809777b373385972cacc856ba3e8e",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-at-seife4-640w.webp": {
+    "mtime": 1784471096.1948423,
+    "seen": 1795110156.9856577,
+    "ast_hash": "24ce3603639e1919edfe17ee6fa14726",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-10-1024w.webp": {
+    "mtime": 1784471101.7033615,
+    "seen": 1795110156.9856577,
+    "ast_hash": "e8c98a6c2a1363fba75093d97df39621",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-10-1920w.webp": {
+    "mtime": 1784471099.8679674,
+    "seen": 1795110156.9856577,
+    "ast_hash": "c9d19df027ed5692cc58c6067d2d1506",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-10-640w.webp": {
+    "mtime": 1784471103.6478064,
+    "seen": 1795110156.9856577,
+    "ast_hash": "d5afa0531e04c1025a19be61225e945f",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-12-1-1024w.webp": {
+    "mtime": 1784471123.0638976,
+    "seen": 1795110156.9856577,
+    "ast_hash": "330f137423678350d8f7b7a66ea6130f",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-12-1-1920w.webp": {
+    "mtime": 1784471121.2584481,
+    "seen": 1795110156.9856577,
+    "ast_hash": "423c17de3a4269b3d9183ebbb197b780",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-12-1-640w.webp": {
+    "mtime": 1784471124.8595164,
+    "seen": 1795110156.9856577,
+    "ast_hash": "61d352017449bb55fc436a2f7d18a768",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-12-1-copy-1024w.webp": {
+    "mtime": 1784471116.175624,
+    "seen": 1795110156.9856577,
+    "ast_hash": "c92b48853917e92adcb81abd3f2bcf7c",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-12-1-copy-1920w.webp": {
+    "mtime": 1784471114.6700819,
+    "seen": 1795110156.9856577,
+    "ast_hash": "c4bb4638865628cd776a3af96b3effdd",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-12-1-copy-640w.webp": {
+    "mtime": 1784471117.699742,
+    "seen": 1795110156.9856577,
+    "ast_hash": "b3f105c734d155adf6c9a7fe8fc83a18",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-12-1024w.webp": {
+    "mtime": 1784471109.7603855,
+    "seen": 1795110156.9856577,
+    "ast_hash": "330f137423678350d8f7b7a66ea6130f",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-12-1920w.webp": {
+    "mtime": 1784471107.8276055,
+    "seen": 1795110156.9856577,
+    "ast_hash": "423c17de3a4269b3d9183ebbb197b780",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-12-640w.webp": {
+    "mtime": 1784471111.6621232,
+    "seen": 1795110156.9856577,
+    "ast_hash": "61d352017449bb55fc436a2f7d18a768",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-6-1024w.webp": {
+    "mtime": 1784471374.2050009,
+    "seen": 1795110156.9856577,
+    "ast_hash": "97404864f2ed63e020c6368533456854",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-6-1920w.webp": {
+    "mtime": 1784471372.3998377,
+    "seen": 1795110156.9856577,
+    "ast_hash": "412fa4cda3d4b543d5f744b6640fdff4",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-6-640w.webp": {
+    "mtime": 1784471375.8286388,
+    "seen": 1795110156.9856577,
+    "ast_hash": "9af3535c9e581e94144b24258fcaf1b0",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-9-1024w.webp": {
+    "mtime": 1784471416.3787422,
+    "seen": 1795110156.9856577,
+    "ast_hash": "3527985a55adc090f2b2b31c728e930a",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-9-1920w.webp": {
+    "mtime": 1784471413.755918,
+    "seen": 1795110156.9856577,
+    "ast_hash": "d0aa7a8391e788b6fb2df24d3d56d516",
+    "semantic_hash": ""
+  },
+  "placeholder-images/coffe-tour/coffee-coffee-testing-9-640w.webp": {
+    "mtime": 1784471419.1078143,
+    "seen": 1795110156.9856577,
+    "ast_hash": "a640b66bb5e009af40fab087564d48b4",
+    "semantic_hash": ""
+  },
+  "placeholder-images/medium_2d5c7ff2a205c33a25741e0212d7d63847e507c5_26730efa06.png": {
+    "mtime": 1788179431.1855063,
+    "seen": 1795110156.9856577,
+    "ast_hash": "5214d3eb21a4b2630b7fafd82a39e7fb",
+    "semantic_hash": ""
+  },
+  "placeholder-images/medium_Art_Exhibition_d1d0ab20bb.jpg": {
+    "mtime": 1788179431.9821353,
+    "seen": 1795110156.9856577,
+    "ast_hash": "34d70c1484ca48a8b14df263901fc052",
+    "semantic_hash": ""
+  },
+  "placeholder-images/medium_DJI_20241228080954_0312_D_fb2332518a.jpg": {
+    "mtime": 1788179431.651969,
+    "seen": 1795110156.9856577,
+    "ast_hash": "6655526e860081a17898c24467758c3a",
+    "semantic_hash": ""
+  },
+  "placeholder-images/medium_holy_trinity_d5bbb2e4fc.jpg": {
+    "mtime": 1788179431.2092493,
+    "seen": 1795110156.9856577,
+    "ast_hash": "f628f29330e28fb19e36c526add72546",
+    "semantic_hash": ""
+  },
+  "placeholder-images/medium_image_2025_12_09_10_13_25_839638c4d6.png": {
+    "mtime": 1788179431.0172544,
+    "seen": 1795110156.9856577,
+    "ast_hash": "43e856ef1ee0cd03ed7dd5ab81e8a70a",
+    "semantic_hash": ""
+  },
+  "placeholder-images/medium_image_2025_12_09_13_49_17_31e8f0e2dd.png": {
+    "mtime": 1788179431.625545,
+    "seen": 1795110156.9856577,
+    "ast_hash": "4c7c714452a3d44466683147162c5e2d",
+    "semantic_hash": ""
+  },
+  "placeholder-images/medium_image_2025_12_09_14_33_55_7417dc40ea.png": {
+    "mtime": 1788179431.144807,
+    "seen": 1795110156.9856577,
+    "ast_hash": "d4bf2a137edeaea451c7228143719396",
+    "semantic_hash": ""
+  },
+  "placeholder-images/medium_national_museum_c14583d4bb.jpg": {
+    "mtime": 1788179431.105789,
+    "seen": 1795110156.9856577,
+    "ast_hash": "3e936d925564679f674967f0345ce8f2",
+    "semantic_hash": ""
+  },
+  "placeholder-images/photo_2025_12_08_10_03_06_5ac4318468.jpg": {
+    "mtime": 1788179432.4265852,
+    "seen": 1795110156.9856577,
+    "ast_hash": "b7501606f184ca5e3151010fd1a3e50b",
+    "semantic_hash": ""
+  },
+  "placeholder-images/science_musiem_bcae003635.png": {
+    "mtime": 1788179432.3224926,
+    "seen": 1795110156.9856577,
+    "ast_hash": "85f9556ae4f2289c358de3c32e072a70",
+    "semantic_hash": ""
+  },
+  "public/apple-touch-icon.png": {
+    "mtime": 1789379916.462,
+    "seen": 1795110156.9856577,
+    "ast_hash": "fc8af7d9a2ba6eff217aa70d745ec630",
+    "semantic_hash": ""
+  },
+  "public/favicon.svg": {
+    "mtime": 1795268874.8789291,
+    "seen": 1795281268.1989603,
+    "ast_hash": "c26451e2a31fb21793ac97c1f653c7a8",
+    "semantic_hash": ""
+  },
+  "public/images/about/cooking.jpg": {
+    "mtime": 1795197689.892,
+    "seen": 1795281268.1989603,
+    "ast_hash": "2e32d5c03b317834a694c9007dd7a4f6",
+    "semantic_hash": ""
+  },
+  "public/images/about/jebena.jpg": {
+    "mtime": 1795197690.197,
+    "seen": 1795281268.1989603,
+    "ast_hash": "8db9ab7074eb2b34284700c4d6479e47",
+    "semantic_hash": ""
+  },
+  "public/images/about/team-hero.jpg": {
+    "mtime": 1795197690.642,
+    "seen": 1795281268.1989603,
+    "ast_hash": "17ea1425cf30addd15c449dff9e01ee0",
+    "semantic_hash": ""
+  },
+  "public/images/destinations/addis-ababa-hero.jpg": {
+    "mtime": 1795197690.965,
+    "seen": 1795281268.1989603,
+    "ast_hash": "787359fe4e37f1b463c29fb2534913ea",
+    "semantic_hash": ""
+  },
+  "public/images/destinations/bishoftu-hero.jpg": {
+    "mtime": 1795197691.316,
+    "seen": 1795281268.1989603,
+    "ast_hash": "2c4a75004551a46f3fa2b519c60c3fb9",
+    "semantic_hash": ""
+  },
+  "public/images/destinations/debre-libanos-hero.jpg": {
+    "mtime": 1795197691.653,
+    "seen": 1795281268.1989603,
+    "ast_hash": "469f8fd5e686589ac4af573d123e2e0b",
+    "semantic_hash": ""
+  },
+  "public/images/destinations/menagesha-forest-hero.jpg": {
+    "mtime": 1795197692.064,
+    "seen": 1795281268.1989603,
+    "ast_hash": "913be3387dad21c6cc4c153eba7ad7e1",
+    "semantic_hash": ""
+  },
+  "public/images/destinations/tiya-hero.jpg": {
+    "mtime": 1795197692.489,
+    "seen": 1795281268.1989603,
+    "ast_hash": "4395811a09a5a850bf2dbfcc7cf6a8bf",
+    "semantic_hash": ""
+  },
+  "public/images/hero/addis-ababa-city-hero.jpg": {
+    "mtime": 1795197714.199,
+    "seen": 1795281268.1989603,
+    "ast_hash": "c23316740cd1b6573813bee805308666",
+    "semantic_hash": ""
+  },
+  "public/images/hero/addis-ababa-national-museum.jpg": {
+    "mtime": 1795197714.672,
+    "seen": 1795281268.1989603,
+    "ast_hash": "e2018bd3b4e8876b2afca71c83245ab5",
+    "semantic_hash": ""
+  },
+  "public/images/hero/debre-libanos-monastery.jpg": {
+    "mtime": 1795197715.292,
+    "seen": 1795281268.1989603,
+    "ast_hash": "acb0f4bb0b4ea6696a58ac447f0568ba",
+    "semantic_hash": ""
+  },
+  "public/images/hero/final-cta-bg.jpg": {
+    "mtime": 1795197715.971,
+    "seen": 1795281268.1989603,
+    "ast_hash": "e6b644fc828c82933d2f77c94dbbde13",
+    "semantic_hash": ""
+  },
+  "public/images/hero/private-tour-entoto.jpg": {
+    "mtime": 1795197716.833,
+    "seen": 1795281268.1989603,
+    "ast_hash": "222d241d45a942ea31ce2f0b14048f5b",
+    "semantic_hash": ""
+  },
+  "public/images/icons/apple-touch-icon.png": {
+    "mtime": 1789311062.144,
+    "seen": 1795110156.9862106,
+    "ast_hash": "22440cb043dbb7706c3dd95fb952f309",
+    "semantic_hash": ""
+  },
+  "public/images/icons/icon-192.png": {
+    "mtime": 1789379916.323,
+    "seen": 1795110156.9862106,
+    "ast_hash": "88daea831023618af8f1f444e914264d",
+    "semantic_hash": ""
+  },
+  "public/images/icons/icon-512.png": {
+    "mtime": 1789379916.405,
+    "seen": 1795110156.9862106,
+    "ast_hash": "f9a555b3458a0e880e56441fd0d76009",
+    "semantic_hash": ""
+  },
+  "public/images/tours/addis-ababa-highlights-entoto.jpg": {
+    "mtime": 1795197717.128,
+    "seen": 1795281268.1999595,
+    "ast_hash": "68ef6e1207e7d91edbc1c11915d6ff4f",
+    "semantic_hash": ""
+  },
+  "public/images/tours/addis-ababa-highlights-hero.jpg": {
+    "mtime": 1795197717.616,
+    "seen": 1795281268.1999595,
+    "ast_hash": "77dd9af13cd6979e9118c327ddfefac1",
+    "semantic_hash": ""
+  },
+  "public/images/tours/addis-ababa-highlights-holy-trinity.jpg": {
+    "mtime": 1795197717.879,
+    "seen": 1795281268.1999595,
+    "ast_hash": "839f4ff91f125c5722fd0bdad5164cf5",
+    "semantic_hash": ""
+  },
+  "public/images/tours/addis-ababa-highlights-national-museum.jpg": {
+    "mtime": 1795197718.163,
+    "seen": 1795281268.1999595,
+    "ast_hash": "9b4299b7e8feaaae7c6d6e5eaf26e00a",
+    "semantic_hash": ""
+  },
+  "public/images/tours/airport-layover-entoto.jpg": {
+    "mtime": 1795197718.384,
+    "seen": 1795281268.1999595,
+    "ast_hash": "da8a54814839bd469adf90b10b21709b",
+    "semantic_hash": ""
+  },
+  "public/images/tours/airport-layover-hero.jpg": {
+    "mtime": 1795197718.757,
+    "seen": 1795281268.1999595,
+    "ast_hash": "ad9da86b676499a3883206768b9fa009",
+    "semantic_hash": ""
+  },
+  "public/images/tours/airport-layover-national-museum.jpg": {
+    "mtime": 1795197718.944,
+    "seen": 1795281268.1999595,
+    "ast_hash": "d971a624c7f2664ba24732227cf32589",
+    "semantic_hash": ""
+  },
+  "public/images/tours/bishoftu-crater-lakes-gari.jpg": {
+    "mtime": 1795197719.194,
+    "seen": 1795281268.1999595,
+    "ast_hash": "cec9396efb9f3f5ce9f400906d8fd776",
+    "semantic_hash": ""
+  },
+  "public/images/tours/bishoftu-crater-lakes-hero.jpg": {
+    "mtime": 1795197719.532,
+    "seen": 1795281268.1999595,
+    "ast_hash": "469f8fd5e686589ac4af573d123e2e0b",
+    "semantic_hash": ""
+  },
+  "public/images/tours/bishoftu-crater-lakes-hora.jpg": {
+    "mtime": 1795197719.836,
+    "seen": 1795281268.1999595,
+    "ast_hash": "2ce5a90f86a64f6fca411dbc7fdde959",
+    "semantic_hash": ""
+  },
+  "public/images/tours/bishoftu-crater-lakes-resort.jpg": {
+    "mtime": 1795197720.073,
+    "seen": 1795281268.1999595,
+    "ast_hash": "8e6f4817129609dba9f3c14a136d1b35",
+    "semantic_hash": ""
+  },
+  "public/images/tours/debre-libanos-gelada-baboons.jpg": {
+    "mtime": 1795197720.361,
+    "seen": 1795281268.1999595,
+    "ast_hash": "c80d718e5191e3b119cb267c00c78612",
+    "semantic_hash": ""
+  },
+  "public/images/tours/debre-libanos-gorge.jpg": {
+    "mtime": 1795197720.706,
+    "seen": 1795281268.1999595,
+    "ast_hash": "da8a54814839bd469adf90b10b21709b",
+    "semantic_hash": ""
+  },
+  "public/images/tours/debre-libanos-hero.jpg": {
+    "mtime": 1795197721.059,
+    "seen": 1795281268.1999595,
+    "ast_hash": "469f8fd5e686589ac4af573d123e2e0b",
+    "semantic_hash": ""
+  },
+  "public/images/tours/debre-libanos-monastery.jpg": {
+    "mtime": 1795197721.308,
+    "seen": 1795281268.1999595,
+    "ast_hash": "4b6ef27581bbe4b45a2ac0970590c1a7",
+    "semantic_hash": ""
+  },
+  "public/images/tours/debre-libanos-portuguese-bridge.jpg": {
+    "mtime": 1795197721.496,
+    "seen": 1795281268.1999595,
+    "ast_hash": "23524fed8cfd41e9dc32aa3b2c1c0acf",
+    "semantic_hash": ""
+  },
+  "public/images/tours/full-day-addis-ababa-coffee-ceremony.jpg": {
+    "mtime": 1795197721.712,
+    "seen": 1795281268.1999595,
+    "ast_hash": "c2257ddd598a17b7883f7f3836fe721f",
+    "semantic_hash": ""
+  },
+  "public/images/tours/full-day-addis-ababa-entoto.jpg": {
+    "mtime": 1795197721.905,
+    "seen": 1795281268.1999595,
+    "ast_hash": "da8a54814839bd469adf90b10b21709b",
+    "semantic_hash": ""
+  },
+  "public/images/tours/full-day-addis-ababa-hero.jpg": {
+    "mtime": 1795197722.373,
+    "seen": 1795281268.1999595,
+    "ast_hash": "9f1f606e5d3448e1da5b92f46efd9f64",
+    "semantic_hash": ""
+  },
+  "public/images/tours/full-day-addis-ababa-holy-trinity.jpg": {
+    "mtime": 1795197722.582,
+    "seen": 1795281268.1999595,
+    "ast_hash": "88e6881ccda14c85531aa2b6d4063ff7",
+    "semantic_hash": ""
+  },
+  "public/images/tours/full-day-addis-ababa-national-museum.jpg": {
+    "mtime": 1795197722.808,
+    "seen": 1795281268.1999595,
+    "ast_hash": "4b6ef27581bbe4b45a2ac0970590c1a7",
+    "semantic_hash": ""
+  },
+  "public/images/tours/half-day-addis-ababa-hero.jpg": {
+    "mtime": 1795197723.28,
+    "seen": 1795281268.1999595,
+    "ast_hash": "9ba80625f5fbdb3add12da2e0af42378",
+    "semantic_hash": ""
+  },
+  "public/images/tours/half-day-addis-ababa-merkato.jpg": {
+    "mtime": 1795197723.564,
+    "seen": 1795281268.1999595,
+    "ast_hash": "7f6343dcb4bc920d54b6a65dd0f2f1cf",
+    "semantic_hash": ""
+  },
+  "public/images/tours/half-day-addis-ababa-meskel-square.jpg": {
+    "mtime": 1795197723.756,
+    "seen": 1795281268.1999595,
+    "ast_hash": "23524fed8cfd41e9dc32aa3b2c1c0acf",
+    "semantic_hash": ""
+  },
+  "public/images/tours/half-day-addis-ababa-national-museum.jpg": {
+    "mtime": 1795197723.914,
+    "seen": 1795281268.1999595,
+    "ast_hash": "d971a624c7f2664ba24732227cf32589",
+    "semantic_hash": ""
+  },
+  "public/images/tours/menagesha-forest-hero.jpg": {
+    "mtime": 1795197724.322,
+    "seen": 1795281268.1999595,
+    "ast_hash": "b3262bdedec0c06ce243e9383223bb5e",
+    "semantic_hash": ""
+  },
+  "public/images/tours/menagesha-forest-trail.jpg": {
+    "mtime": 1795197724.523,
+    "seen": 1795281268.1999595,
+    "ast_hash": "23524fed8cfd41e9dc32aa3b2c1c0acf",
+    "semantic_hash": ""
+  },
+  "public/images/tours/menagesha-forest-waterfall.jpg": {
+    "mtime": 1795197724.788,
+    "seen": 1795281268.1999595,
+    "ast_hash": "da8a54814839bd469adf90b10b21709b",
+    "semantic_hash": ""
+  },
+  "public/images/tours/menagesha-forest-wildlife.jpg": {
+    "mtime": 1795197725.078,
+    "seen": 1795281268.1999595,
+    "ast_hash": "c80d718e5191e3b119cb267c00c78612",
+    "semantic_hash": ""
+  },
+  "public/images/tours/private-group-family.jpg": {
+    "mtime": 1795197725.314,
+    "seen": 1795281268.1999595,
+    "ast_hash": "9b4299b7e8feaaae7c6d6e5eaf26e00a",
+    "semantic_hash": ""
+  },
+  "public/images/tours/private-group-hero.jpg": {
+    "mtime": 1795197725.753,
+    "seen": 1795281268.1999595,
+    "ast_hash": "26157cef607c2553709455ddc7e592c2",
+    "semantic_hash": ""
+  },
+  "public/images/tours/private-group-vehicle.jpg": {
+    "mtime": 1795197726.072,
+    "seen": 1795281268.1999595,
+    "ast_hash": "7f6343dcb4bc920d54b6a65dd0f2f1cf",
+    "semantic_hash": ""
+  },
+  "public/images/tours/tiya-adadi-mariam-melka-kunture-adadi-mariam.jpg": {
+    "mtime": 1795197726.302,
+    "seen": 1795281268.1999595,
+    "ast_hash": "b2d323c13b394accfa7ff74e12e1620f",
+    "semantic_hash": ""
+  },
+  "public/images/tours/tiya-adadi-mariam-melka-kunture-hero.jpg": {
+    "mtime": 1795197726.531,
+    "seen": 1795281268.1999595,
+    "ast_hash": "0085c7f48720e5322a669a429ed9a234",
+    "semantic_hash": ""
+  },
+  "public/images/tours/tiya-adadi-mariam-melka-kunture-melka-kunture.jpg": {
+    "mtime": 1795197726.796,
+    "seen": 1795281268.1999595,
+    "ast_hash": "cec9396efb9f3f5ce9f400906d8fd776",
+    "semantic_hash": ""
+  },
+  "public/images/tours/tiya-adadi-mariam-melka-kunture-tiya-stelae.jpg": {
+    "mtime": 1795197727.053,
+    "seen": 1795281268.1999595,
+    "ast_hash": "ff5bd5669f912edd6d751be89fa352b5",
+    "semantic_hash": ""
+  },
+  "public/images/travel-guide/airport-layover-planning.jpg": {
+    "mtime": 1795197727.219,
+    "seen": 1795281268.1999595,
+    "ast_hash": "db40ccc8fa6dec53d3d89801cf7f1816",
+    "semantic_hash": ""
+  },
+  "public/images/travel-guide/best-time-to-visit.jpg": {
+    "mtime": 1795197727.416,
+    "seen": 1795281268.1999595,
+    "ast_hash": "9f4e30d2508269c9a04fc09204920591",
+    "semantic_hash": ""
+  },
+  "public/images/travel-guide/coffee-cultural-etiquette.jpg": {
+    "mtime": 1795197727.577,
+    "seen": 1795281268.1999595,
+    "ast_hash": "b3d9b091927179d287749fb7765a04e4",
+    "semantic_hash": ""
+  },
+  "public/images/travel-guide/day-trips-from-addis-ababa.jpg": {
+    "mtime": 1795197727.804,
+    "seen": 1795281268.1999595,
+    "ast_hash": "6cd55c9d4e400668beb2427f953ec81a",
+    "semantic_hash": ""
+  },
+  "public/images/travel-guide/things-to-do-addis-ababa.jpg": {
+    "mtime": 1795197728.033,
+    "seen": 1795281268.1999595,
+    "ast_hash": "937b48345799d8e4bb11123a80c577ed",
+    "semantic_hash": ""
+  },
+  "public/images/travel-guide/what-to-wear-religious-sites.jpg": {
+    "mtime": 1795197728.226,
+    "seen": 1795281268.1999595,
+    "ast_hash": "6f072d9c701e024c7158bd9c558cf2c0",
+    "semantic_hash": ""
+  },
+  "public/logo-full.svg": {
+    "mtime": 1795268875.3604865,
+    "seen": 1795281268.1999595,
+    "ast_hash": "bd3b272f32c3d28f76aa0a740b820bef",
+    "semantic_hash": ""
+  },
+  "public/logo-mark.svg": {
+    "mtime": 1795268875.6725411,
+    "seen": 1795281268.1999595,
+    "ast_hash": "bd3b272f32c3d28f76aa0a740b820bef",
+    "semantic_hash": ""
+  },
+  "sample hero for outline reference.png": {
+    "mtime": 1789232101.2087317,
+    "seen": 1795110156.9862106,
+    "ast_hash": "da8940afb80feb1cac64f92ee839dee5",
+    "semantic_hash": ""
+  },
+  "src/assets/images/addis_cooking_class_1782233734033.jpg": {
+    "mtime": 1782325596.1364956,
+    "seen": 1795110156.9862106,
+    "ast_hash": "8c9913f6ddd67cef07884ddaf5d80a3c",
+    "semantic_hash": ""
+  },
+  "src/assets/images/addis_hero_bg_1782233695273.jpg": {
+    "mtime": 1782325596.1704714,
+    "seen": 1795110156.9862106,
+    "ast_hash": "d899965cbc04f68c868f45f001e533b9",
+    "semantic_hash": ""
+  },
+  "src/assets/images/addis_host_community_1782240127083.jpg": {
+    "mtime": 1782325596.1851346,
+    "seen": 1795110156.9862106,
+    "ast_hash": "52cea7fa08b5d8c995e61aaf542d90e6",
+    "semantic_hash": ""
+  },
+  "src/assets/images/addis_host_dining_1782240144545.jpg": {
+    "mtime": 1782325596.2056756,
+    "seen": 1795110156.9862106,
+    "ast_hash": "8629da4a8c31ed2ce2a6b0f4975b3868",
+    "semantic_hash": ""
+  },
+  "src/assets/images/addis_jebena_pour_1782233715156.jpg": {
+    "mtime": 1782325596.2216218,
+    "seen": 1795110156.9862106,
+    "ast_hash": "9694a46d154494df277c9b373c08229b",
+    "semantic_hash": ""
+  },
+  "scripts/optimize-images.mjs": {
+    "mtime": 1795197640.7874453,
+    "seen": 1795281268.0857942,
+    "ast_hash": "669c49675e16e8f8e4bc6774291a7e4a",
+    "semantic_hash": ""
+  },
+  "scripts/check-image-budget.mjs": {
+    "mtime": 1795197476.6085966,
+    "seen": 1795281268.084793,
+    "ast_hash": "2f862e4c2ab5224f1b1ecfbf2f0ccd21",
+    "semantic_hash": ""
+  },
+  "scripts/check-font-budget.mjs": {
+    "mtime": 1795279859.444018,
+    "seen": 1795281268.084793,
+    "ast_hash": "4e36aa7c9133b33edcba5bc9d3d27475",
+    "semantic_hash": ""
+  },
+  "scripts/fetch-fonts.mjs": {
+    "mtime": 1795279835.420362,
+    "seen": 1795281268.0857942,
+    "ast_hash": "3f1971d5a97dc9948b70bd9bcf177a1d",
+    "semantic_hash": ""
+  },
+  "scripts/font-text-set.mjs": {
+    "mtime": 1795279774.0111752,
+    "seen": 1795281268.0857942,
+    "ast_hash": "e8dd78e4241b1850300c61755b0cdf7a",
+    "semantic_hash": ""
+  },
+  "scripts/generate-font-text-set.mjs": {
+    "mtime": 1795279783.4754868,
+    "seen": 1795281268.0857942,
+    "ast_hash": "19d5168bb11fdb154cd1ae8d4378f21b",
+    "semantic_hash": ""
+  },
+  "scripts/inline-css.mjs": {
+    "mtime": 1795271501.9873526,
+    "seen": 1795281268.0857942,
+    "ast_hash": "dcde507ecb5bf7cd5371237b26de64a7",
+    "semantic_hash": ""
+  },
+  "scripts/optimize-svg.mjs": {
+    "mtime": 1795268805.997249,
+    "seen": 1795281268.0857942,
+    "ast_hash": "705d501bec0c3a1476bcd004d7547871",
+    "semantic_hash": ""
+  },
+  "scripts/prerender.mjs": {
+    "mtime": 1795274805.1197996,
+    "seen": 1795281268.0857942,
+    "ast_hash": "be535cb302110f8b81305faf4bf59ce6",
+    "semantic_hash": ""
+  },
+  "src/components/home/FeaturedToursGrid.tsx": {
+    "mtime": 1795197323.3811674,
+    "seen": 1795281268.0988195,
+    "ast_hash": "27f6db03ebb45ee46e67acf39db0980c",
+    "semantic_hash": ""
+  },
+  "src/entry-server.tsx": {
+    "mtime": 1795273412.0681467,
+    "seen": 1795281268.1159146,
+    "ast_hash": "1c084fce03fe9a49cbf64e32093a49fa",
+    "semantic_hash": ""
+  },
+  "src/router/browserRouter.ts": {
+    "mtime": 1795273395.597545,
+    "seen": 1795281268.1285915,
+    "ast_hash": "08ed999c164c6891db59e8f2eaf31b2d",
+    "semantic_hash": ""
+  },
+  "vite.ssr.config.ts": {
+    "mtime": 1795273510.81756,
+    "seen": 1795281268.1305525,
+    "ast_hash": "4e187d4dff70fb9f5e1b5b3bd11e57c6",
+    "semantic_hash": ""
+  },
+  "public/images/hero/addis-ababa-city-hero-768.webp": {
+    "mtime": 1795197696.545,
+    "seen": 1795281268.1989603,
+    "ast_hash": "88f88f2fd26da17a8051996b317a8312",
+    "semantic_hash": ""
+  },
+  "public/images/og/addis-ababa-city-hero-og.jpg": {
+    "mtime": 1795119941.921,
+    "seen": 1795281268.1999595,
+    "ast_hash": "5944b2a4a9083ea14345985dafb3148c",
+    "semantic_hash": ""
+  },
+  ".opencode/package-lock.json": {
+    "mtime": 1789142046.9373655,
+    "seen": 1795110156.9862106,
+    "ast_hash": "f19fd8cf857e91f6b1d8ca98ec9dc00f",
+    "semantic_hash": ""
+  },
+  "package-lock.json": {
+    "mtime": 1789248450.5614967,
+    "seen": 1795110156.9862106,
+    "ast_hash": "63d1e4fcd3a6b6a7ec8716d88d34dc8c",
+    "semantic_hash": ""
+  }
+}

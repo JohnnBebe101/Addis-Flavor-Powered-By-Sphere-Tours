@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet-async';
 import { BRAND } from '../config/brand';
 
 interface OrganizationLD {
@@ -63,10 +62,18 @@ export function JSONLD({ data }: JSONLDProps) {
     ...('mainEntity' in data ? { mainEntity: data.mainEntity } : {}),
   };
 
+  /*
+   * The structured data is rendered as a plain script element rather than
+   * through Helmet.
+   *
+   * Helmet renders its tags inline during a server render, which would put a
+   * <title> and a pile of <meta> tags inside the body — and the client, where
+   * Helmet manages document.head instead, would then have nothing to
+   * hydrate. A script element is identical on both sides, and it keeps the
+   * JSON-LD in the prerendered HTML for crawlers that do not run JavaScript.
+   */
   return (
-    <Helmet>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(script) }} />
-    </Helmet>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(script) }} />
   );
 }
 

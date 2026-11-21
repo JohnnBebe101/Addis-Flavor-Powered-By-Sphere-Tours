@@ -76,7 +76,7 @@ export function BookingStep1({
       </div>
 
       <div className="space-y-1.5">
-        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+        <label htmlFor="booking-guests" className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
           <Users className="w-3.5 h-3.5 text-gold" />
           <span>Number of Guests</span>
         </label>
@@ -90,6 +90,8 @@ export function BookingStep1({
             <Minus className="w-4 h-4" />
           </button>
           <input
+            id="booking-guests"
+            name="guests"
             type="number"
             value={formData.guests}
             min={1}
@@ -102,7 +104,6 @@ export function BookingStep1({
             }}
             className="w-12 font-mono text-sm font-bold px-2 text-center bg-transparent border-none focus:outline-none text-teal"
             readOnly
-            aria-label="Number of guests"
             aria-live="polite"
           />
           <button

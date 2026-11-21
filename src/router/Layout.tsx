@@ -1,15 +1,21 @@
 import { Outlet, ScrollRestoration, useLocation, useNavigate } from 'react-router-dom';
-import { useState, useEffect, Suspense } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { NotificationBar } from '../components/NotificationBar';
 import Navbar from '../components/Navbar';
 import { Footer } from '../components/home/Footer';
 import { StickyBookingBar } from '../components/home/StickyBookingBar';
-import ContactModal from '../components/ContactModal';
 import { FloatingWhatsApp } from '../components/FloatingWhatsApp';
 import { ErrorBoundary } from '../components/ErrorBoundary';
 import { CookieConsentProvider } from '../context/CookieConsentContext';
 import { CookieConsentBanner } from '../components/CookieConsentBanner';
 import { TRANSLATIONS, NEIGHBORHOOD_DESTINATIONS } from '../data';
+
+/*
+ * The contact modal is only reachable through an explicit click, so it has no
+ * business in the entry bundle — that bundle competes with the hero image and
+ * the webfonts for bandwidth before the first paint.
+ */
+const ContactModal = lazy(() => import('../components/ContactModal'));
 
 function RouteLoadingSkeleton() {
   return (
@@ -60,7 +66,11 @@ export const Layout = () => {
       <StickyBookingBar
         translations={{ bookNowButton: TRANSLATIONS.bookNowButton }}
       />
-      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+      {isContactOpen && (
+        <Suspense fallback={null}>
+          <ContactModal isOpen onClose={() => setIsContactOpen(false)} />
+        </Suspense>
+      )}
       <FloatingWhatsApp />
       <CookieConsentBanner />
     </CookieConsentProvider>

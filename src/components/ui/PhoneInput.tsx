@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useId } from 'react';
 import { ChevronDown } from 'lucide-react';
 import countryCodesData from '../../content/country-codes.json';
 
@@ -8,9 +8,12 @@ interface PhoneInputProps {
   required?: boolean;
   helperText?: string;
   id?: string;
+  name?: string;
 }
 
-export function PhoneInput({ value, onChange, required, helperText, id }: PhoneInputProps) {
+export function PhoneInput({ value, onChange, required, helperText, id, name }: PhoneInputProps) {
+  const generatedId = useId();
+  const baseId = id || generatedId;
   const countries = countryCodesData.countries;
   const defaultDial = countries.find(c => c.code === countryCodesData.defaultCountryCode)?.dial || '+971';
 
@@ -66,9 +69,12 @@ export function PhoneInput({ value, onChange, required, helperText, id }: PhoneI
       <div className="flex gap-2">
         {isOther ? (
           <input
-            id={id}
+            id={baseId}
+            name={name}
             type="tel"
             inputMode="tel"
+            autoComplete="tel"
+            aria-describedby={`${baseId}-help`}
             value={manualNumber}
             onChange={(e) => setManualNumber(e.target.value)}
             placeholder="+1 201 555 0123"
@@ -79,6 +85,8 @@ export function PhoneInput({ value, onChange, required, helperText, id }: PhoneI
           <>
             <div className="relative flex-shrink-0">
               <select
+                id={`${baseId}-country`}
+                aria-label="Country calling code"
                 value={selectedDial}
                 onChange={(e) => handleCountryChange(e.target.value)}
                 className="appearance-none h-full px-3 py-3 pr-8 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm font-mono focus:outline-none focus:ring-2 focus:ring-coffee-red/20 focus:border-coffee-red cursor-pointer"
@@ -92,9 +100,12 @@ export function PhoneInput({ value, onChange, required, helperText, id }: PhoneI
               <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-teal/50 pointer-events-none" />
             </div>
             <input
-              id={id}
+              id={baseId}
+              name={name}
               type="tel"
               inputMode="numeric"
+              autoComplete="tel"
+              aria-describedby={`${baseId}-help`}
               value={localNumber}
               onChange={(e) => setLocalNumber(e.target.value.replace(/[^\d\s-]/g, ''))}
               placeholder={selectedCountry?.placeholder || ''}
@@ -104,7 +115,7 @@ export function PhoneInput({ value, onChange, required, helperText, id }: PhoneI
           </>
         )}
       </div>
-      <p className="text-[11px] text-teal/50 font-mono">
+      <p id={`${baseId}-help`} className="text-[11px] text-teal/50 font-mono">
         {isOther
           ? 'Include your country code (e.g., +1 for US, +44 for UK)'
           : helperText || (selectedCountry && `e.g., ${selectedDial} ${selectedCountry.placeholder}`)}

@@ -81,43 +81,68 @@ export function HeroIntentRouter() {
 
       <form onSubmit={handleSubmit} className="bg-linen-white/90 backdrop-blur-sm rounded-2xl p-3 border border-teal/10 shadow-lg">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-2">
-          {currentTab.fields.map((field) => (
-            <div key={field.name} className={field.type === 'textarea' ? 'sm:col-span-2' : ''}>
-              <label className="block text-[11px] font-mono text-teal/80 mb-1">{field.label}</label>
-              {field.type === 'select' ? (
-                <select
-                  value={fieldValues[field.name] || ''}
-                  onChange={(e) => handleFieldChange(field.name, e.target.value)}
-                  className="w-full px-3 py-2.5 border border-teal/15 rounded-lg text-sm text-teal bg-linen-white focus:ring-2 focus:ring-coffee-red focus:border-transparent"
-                >
-                  <option value="">{field.placeholder}</option>
-                  {field.options?.map((opt) => (
-                    <option key={opt} value={opt}>{opt}</option>
-                  ))}
-                </select>
-              ) : field.type === 'textarea' ? (
-                <textarea
-                  value={fieldValues[field.name] || ''}
-                  onChange={(e) => handleFieldChange(field.name, e.target.value)}
-                  placeholder={field.placeholder}
-                  rows={3}
-                  className="w-full px-3 py-2.5 border border-teal/15 rounded-lg text-sm text-teal bg-linen-white focus:ring-2 focus:ring-coffee-red focus:border-transparent resize-none"
-                />
-              ) : (
-                <input
-                  type={field.type}
-                  value={fieldValues[field.name] || ''}
-                  onChange={(e) => handleFieldChange(field.name, e.target.value)}
-                  placeholder={field.placeholder}
-                  min={'min' in field ? field.min : undefined}
-                  className="w-full px-3 py-2.5 border border-teal/15 rounded-lg text-sm text-teal bg-linen-white focus:ring-2 focus:ring-coffee-red focus:border-transparent"
-                />
-              )}
-              {errors[field.name] && (
-                <p className="text-[10px] text-coffee-red mt-1">{errors[field.name]}</p>
-              )}
-            </div>
-          ))}
+          {currentTab.fields.map((field) => {
+            const fieldId = `hero-${currentTab.id}-${field.name}`;
+            const errorId = `${fieldId}-error`;
+            const describedBy = errors[field.name] ? errorId : undefined;
+            const autoComplete =
+              field.type === 'email'
+                ? 'email'
+                : field.type === 'tel'
+                  ? 'tel'
+                  : 'off';
+            return (
+              <div key={field.name} className={field.type === 'textarea' ? 'sm:col-span-2' : ''}>
+                <label htmlFor={fieldId} className="block text-[11px] font-mono text-teal/80 mb-1">{field.label}</label>
+                {field.type === 'select' ? (
+                  <select
+                    id={fieldId}
+                    name={fieldId}
+                    aria-invalid={errors[field.name] ? true : undefined}
+                    aria-describedby={describedBy}
+                    value={fieldValues[field.name] || ''}
+                    onChange={(e) => handleFieldChange(field.name, e.target.value)}
+                    className="w-full px-3 py-2.5 border border-teal/15 rounded-lg text-sm text-teal bg-linen-white focus:ring-2 focus:ring-coffee-red focus:border-transparent"
+                  >
+                    <option value="">{field.placeholder}</option>
+                    {field.options?.map((opt) => (
+                      <option key={opt} value={opt}>{opt}</option>
+                    ))}
+                  </select>
+                ) : field.type === 'textarea' ? (
+                  <textarea
+                    id={fieldId}
+                    name={fieldId}
+                    autoComplete={autoComplete}
+                    aria-invalid={errors[field.name] ? true : undefined}
+                    aria-describedby={describedBy}
+                    value={fieldValues[field.name] || ''}
+                    onChange={(e) => handleFieldChange(field.name, e.target.value)}
+                    placeholder={field.placeholder}
+                    rows={3}
+                    className="w-full px-3 py-2.5 border border-teal/15 rounded-lg text-sm text-teal bg-linen-white focus:ring-2 focus:ring-coffee-red focus:border-transparent resize-none"
+                  />
+                ) : (
+                  <input
+                    id={fieldId}
+                    name={fieldId}
+                    type={field.type}
+                    autoComplete={autoComplete}
+                    aria-invalid={errors[field.name] ? true : undefined}
+                    aria-describedby={describedBy}
+                    value={fieldValues[field.name] || ''}
+                    onChange={(e) => handleFieldChange(field.name, e.target.value)}
+                    placeholder={field.placeholder}
+                    min={'min' in field ? field.min : undefined}
+                    className="w-full px-3 py-2.5 border border-teal/15 rounded-lg text-sm text-teal bg-linen-white focus:ring-2 focus:ring-coffee-red focus:border-transparent"
+                  />
+                )}
+                {errors[field.name] && (
+                  <p id={errorId} className="text-[10px] text-coffee-red mt-1">{errors[field.name]}</p>
+                )}
+              </div>
+            );
+          })}
         </div>
 
         {currentTab.disclosure && (

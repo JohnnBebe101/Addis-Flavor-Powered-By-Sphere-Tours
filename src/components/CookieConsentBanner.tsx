@@ -1,12 +1,32 @@
-import { useState } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { useCookieConsent } from '../context/CookieConsentContext';
-import { CookiePreferences } from './CookiePreferences';
+
+/*
+ * The preferences dialog opens behind a click, so it is fetched on demand
+ * instead of shipping in the entry bundle.
+ */
+const CookiePreferences = lazy(() =>
+  import('./CookiePreferences').then((m) => ({ default: m.CookiePreferences })),
+);
 
 export function CookieConsentBanner() {
   const { hasInteracted, acceptAll, rejectAll } = useCookieConsent();
   const [showPreferences, setShowPreferences] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
-  if (hasInteracted) return null;
+  /*
+   * The banner is only rendered after mount.
+   *
+   * The prerendered markup is produced on a machine with no localStorage, so it
+   * never contains the banner. Rendering it on the first client pass too would
+   * mean hydrating markup that was not there — and a returning visitor who
+   * already gave consent would get a different tree than the server sent. Both
+   * sides therefore render nothing on the first pass, and the banner appears
+   * one tick later if it is still needed.
+   */
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted || hasInteracted) return null;
 
   return (
     <>
@@ -58,7 +78,9 @@ export function CookieConsentBanner() {
       </div>
 
       {showPreferences && (
-        <CookiePreferences onClose={() => setShowPreferences(false)} />
+        <Suspense fallback={null}>
+          <CookiePreferences onClose={() => setShowPreferences(false)} />
+        </Suspense>
       )}
     </>
   );

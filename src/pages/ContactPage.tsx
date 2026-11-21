@@ -85,36 +85,38 @@ export const ContactPage: React.FC = () => {
                     <p className="text-sm text-teal/60 mb-6">{p.form.subheadline}</p>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div>
-                        <label className="block text-sm font-medium text-teal/80 mb-1.5">Full Name *</label>
-                        <input type="text" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="John Doe"
+                        <label htmlFor="contact-fullName" className="block text-sm font-medium text-teal/80 mb-1.5">Full Name *</label>
+                        <input id="contact-fullName" name="fullName" type="text" autoComplete="name" required value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} placeholder="John Doe"
                           className="w-full px-4 py-3 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-2 focus:ring-coffee-red/20 focus:border-coffee-red transition-all" />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-teal/80 mb-1.5">Email Address *</label>
-                        <input type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="john@example.com"
+                        <label htmlFor="contact-email" className="block text-sm font-medium text-teal/80 mb-1.5">Email Address *</label>
+                        <input id="contact-email" name="email" type="email" autoComplete="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} placeholder="john@example.com"
                           className="w-full px-4 py-3 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-2 focus:ring-coffee-red/20 focus:border-coffee-red transition-all" />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-teal/80 mb-1.5">Phone Number *</label>
+                        <label htmlFor="contact-phone" className="block text-sm font-medium text-teal/80 mb-1.5">Phone Number *</label>
                         <PhoneInput
                           id="contact-phone"
+                          name="phone"
                           value={formData.phone}
                           onChange={(val) => setFormData({ ...formData, phone: val })}
                           required
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-teal/80 mb-1.5">WhatsApp Number</label>
+                        <label htmlFor="contact-whatsapp" className="block text-sm font-medium text-teal/80 mb-1.5">WhatsApp Number</label>
                         <PhoneInput
                           id="contact-whatsapp"
+                          name="whatsapp"
                           value={formData.whatsapp}
                           onChange={(val) => setFormData({ ...formData, whatsapp: val })}
                           helperText="For instant responses via WhatsApp"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-teal/80 mb-1.5">Topic *</label>
-                        <select required value={formData.topic} onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
+                        <label htmlFor="contact-topic" className="block text-sm font-medium text-teal/80 mb-1.5">Topic *</label>
+                        <select id="contact-topic" name="topic" required value={formData.topic} onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
                           className="w-full px-4 py-3 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-2 focus:ring-coffee-red/20 focus:border-coffee-red transition-all cursor-pointer">
                           <option value="" disabled>Select inquiry topic...</option>
                           {cj.contactForm.fields.find((f) => f.name === 'topic')?.options?.map((opt, i) => (
@@ -123,13 +125,14 @@ export const ContactPage: React.FC = () => {
                         </select>
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-teal/80 mb-1.5">Your Message *</label>
-                        <textarea required rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} placeholder="How can we help you?"
+                        <label htmlFor="contact-message" className="block text-sm font-medium text-teal/80 mb-1.5">Your Message *</label>
+                        <textarea id="contact-message" name="message" required rows={5} autoComplete="off" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} placeholder="How can we help you?"
                           className="w-full px-4 py-3 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-2 focus:ring-coffee-red/20 focus:border-coffee-red transition-all" />
                       </div>
                       {/* Honeypot - hidden from users, filled by bots */}
                       <input 
                         type="text" 
+                        id="contact-website_url"
                         name="website_url" 
                         value={formData.website_url} 
                         onChange={(e) => setFormData({ ...formData, website_url: e.target.value })}

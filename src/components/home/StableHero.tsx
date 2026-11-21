@@ -9,20 +9,38 @@ const BADGE_ICONS: Record<string, React.ReactNode> = {
   car: <Car className="w-4 h-4" />,
 };
 
+/** Widths emitted by scripts/optimize-images.mjs for the hero source. */
+const HERO_WIDTHS = [640, 768, 1280, 1920] as const;
+
+function heroSrcSet(image: string, ext: 'avif' | 'webp'): string {
+  return HERO_WIDTHS.map(
+    (width) => `${image.replace(/\.(jpe?g|png)$/i, `-${width}.${ext}`)} ${width}w`,
+  ).join(', ');
+}
+
 export function StableHero() {
   const hero = homeData.hero;
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden bg-teal">
+      {/*
+        The background colour is the brand's dark ink, not a decoration: it keeps
+        the white hero copy legible in the moment before the image arrives.
+      */}
       {/* 1. Full-width background image */}
       <div className="absolute inset-0">
-        <img
-          src={hero.image}
-          alt="Addis Ababa cityscape at golden hour"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchPriority="high"
-        />
+        <picture className="block w-full h-full">
+          <source type="image/avif" srcSet={heroSrcSet(hero.image, 'avif')} sizes="100vw" />
+          <source type="image/webp" srcSet={heroSrcSet(hero.image, 'webp')} sizes="100vw" />
+          <img
+            src={hero.image}
+            alt="Addis Ababa cityscape at golden hour"
+            className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="low"
+            decoding="async"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50" />
       </div>
 

@@ -28,6 +28,10 @@ const DEFAULT_NECESSARY: ConsentPreferences = {
 };
 
 function loadConsent(): ConsentPreferences | null {
+  // There is no localStorage during the build-time prerender. Returning null
+  // there is what keeps the prerendered markup identical to the markup the
+  // browser produces on its first (hydration) render.
+  if (typeof window === 'undefined') return null;
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return null;

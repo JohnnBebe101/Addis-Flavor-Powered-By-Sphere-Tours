@@ -1,14 +1,28 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { Navigate, type RouteObject } from 'react-router-dom';
 import Layout from './Layout';
+import { Homepage } from '../pages/Homepage';
 
-export const router = createBrowserRouter([
+/**
+ * The route table, shared by the browser router and the prerenderer.
+ *
+ * It is deliberately a plain data structure: `createBrowserRouter` needs a
+ * `window`, so the server build imports this file and creates a memory router
+ * from the same routes instead. Keeping one definition means the prerendered
+ * markup and the hydrated markup are produced from the same tree.
+ */
+export const routes: RouteObject[] = [
   {
     path: '/',
     element: <Layout />,
     children: [
       {
+        // The landing route is imported statically, not via `lazy`. React Router's
+        // `lazy` resolves the module only after the entry chunk has executed, which
+        // put a second round trip in front of the first paint. A static import lets
+        // the bundler emit the homepage as a modulepreload, so it downloads in
+        // parallel with the entry chunk instead of being discovered late.
         index: true,
-        lazy: () => import('../pages/Homepage').then((m) => ({ Component: m.Homepage })),
+        element: <Homepage />,
       },
       {
         path: 'tours/',
@@ -142,4 +156,4 @@ export const router = createBrowserRouter([
       },
     ],
   },
-]);
+];

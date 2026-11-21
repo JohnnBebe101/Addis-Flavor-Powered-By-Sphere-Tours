@@ -124,22 +124,22 @@ export function WhereToStayPage() {
           <p className="text-sm text-coffee-red font-mono text-center mb-8">{whereToStayData.form.disclosure}</p>
           <form onSubmit={handleSubmit} data-netlify="true" method="POST" className="space-y-6">
             <input type="hidden" name="form-name" value="where-to-stay-enquiry" />
-            <p className="hidden"><label>Don't fill this out: <input name="botField" value={formData.botField} onChange={(e) => setFormData({ ...formData, botField: e.target.value })} /></label></p>
+            <p className="hidden"><label htmlFor="wheretostay-botField">Don't fill this out: <input id="wheretostay-botField" name="botField" value={formData.botField} onChange={(e) => setFormData({ ...formData, botField: e.target.value })} /></label></p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div><label className="block text-sm font-mono text-teal/80 mb-2">Full Name *</label><input name="fullName" type="text" required value={formData.fullName} onChange={(e) => setFormData({ ...formData, fullName: e.target.value })} className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white" /></div>
-              <div><label className="block text-sm font-mono text-teal/80 mb-2">Email *</label><input name="email" type="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white" /></div>
+              <div><label htmlFor="wheretostay-fullName" className="block text-sm font-mono text-teal/80 mb-2">Full Name *</label><input id="wheretostay-fullName" name="fullName" type="text" autoComplete="name" required value={formData.fullName} onChange={(e) => setFormData({ ...formData, fullName: e.target.value })} className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white" /></div>
+              <div><label htmlFor="wheretostay-email" className="block text-sm font-mono text-teal/80 mb-2">Email *</label><input id="wheretostay-email" name="email" type="email" autoComplete="email" required value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white" /></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div><label className="block text-sm font-mono text-teal/80 mb-2">WhatsApp or Phone</label><input name="whatsapp" type="tel" value={formData.whatsapp} onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })} className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white" /></div>
-              <div><label className="block text-sm font-mono text-teal/80 mb-2">Preferred Area</label>
-                <select name="area" value={formData.area} onChange={(e) => setFormData({ ...formData, area: e.target.value })} className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white">
+              <div><label htmlFor="wheretostay-whatsapp" className="block text-sm font-mono text-teal/80 mb-2">WhatsApp or Phone</label><input id="wheretostay-whatsapp" name="whatsapp" type="tel" autoComplete="tel" value={formData.whatsapp} onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })} className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white" /></div>
+              <div><label htmlFor="wheretostay-area" className="block text-sm font-mono text-teal/80 mb-2">Preferred Area</label>
+                <select id="wheretostay-area" name="area" value={formData.area} onChange={(e) => setFormData({ ...formData, area: e.target.value })} className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white">
                   <option value="">Select an area</option>{whereToStayData.areas.map((a) => <option key={a.name} value={a.name}>{a.name}</option>)}<option value="not-sure">Not sure yet</option>
                 </select>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div><label className="block text-sm font-mono text-teal/80 mb-2">Stay Type</label>
-                <select name="stayType" value={formData.stayType} onChange={(e) => setFormData({ ...formData, stayType: e.target.value })} className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white">
+              <div><label htmlFor="wheretostay-stayType" className="block text-sm font-mono text-teal/80 mb-2">Stay Type</label>
+                <select id="wheretostay-stayType" name="stayType" value={formData.stayType} onChange={(e) => setFormData({ ...formData, stayType: e.target.value })} className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white">
                   <option value="">Select stay type</option>
                   <option value="Short Stay">Short Stay</option>
                   <option value="Business Travel">Business Travel</option>
@@ -147,9 +147,9 @@ export function WhereToStayPage() {
                   <option value="Longer Stays">Longer Stays</option>
                 </select>
               </div>
-              <div><label className="block text-sm font-mono text-teal/80 mb-2">Preferred Dates</label><input name="dates" type="text" value={formData.dates} onChange={(e) => setFormData({ ...formData, dates: e.target.value })} placeholder="e.g. 15-20 Oct 2026" className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white" /></div>
+              <div><label htmlFor="wheretostay-dates" className="block text-sm font-mono text-teal/80 mb-2">Preferred Dates</label><input id="wheretostay-dates" name="dates" type="text" autoComplete="off" value={formData.dates} onChange={(e) => setFormData({ ...formData, dates: e.target.value })} placeholder="e.g. 15-20 Oct 2026" className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white" /></div>
             </div>
-            <div><label className="block text-sm font-mono text-teal/80 mb-2">Additional Requirements</label><textarea name="message" rows={4} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} placeholder="Budget range, preferences..." className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white resize-none" /></div>
+            <div><label htmlFor="wheretostay-message" className="block text-sm font-mono text-teal/80 mb-2">Additional Requirements</label><textarea id="wheretostay-message" name="message" rows={4} autoComplete="off" value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} placeholder="Budget range, preferences..." className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white resize-none" /></div>
             <button type="submit" disabled={isSubmitting} className="w-full px-8 py-4 bg-coffee-red text-linen-white rounded-lg font-mono text-sm uppercase tracking-wider hover:bg-coffee-red/90 transition-colors shadow-lg disabled:opacity-50">{isSubmitting ? 'Sending...' : 'Submit Enquiry'}</button>
           </form>
         </div>

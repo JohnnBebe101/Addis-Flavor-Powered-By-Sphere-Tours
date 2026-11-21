@@ -25,12 +25,15 @@ export function BookingStep2({
   return (
     <div className="space-y-4">
       <div className="space-y-1.5">
-        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+        <label htmlFor="booking-fullName" className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
           <User className="w-3.5 h-3.5 text-gold" />
           <span>Full Name</span>
         </label>
         <input
+          id="booking-fullName"
+          name="fullName"
           type="text"
+          autoComplete="name"
           value={formData.fullName}
           onChange={(e) => onChange('fullName', e.target.value)}
           placeholder="John Doe"
@@ -42,12 +45,15 @@ export function BookingStep2({
       </div>
 
       <div className="space-y-1.5">
-        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+        <label htmlFor="booking-email" className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
           <Calendar className="w-3.5 h-3.5 text-gold" />
           <span>Email Address</span>
         </label>
         <input
+          id="booking-email"
+          name="email"
           type="email"
+          autoComplete="email"
           value={formData.email}
           onChange={(e) => onChange('email', e.target.value)}
           placeholder="john@example.com"
@@ -59,12 +65,13 @@ export function BookingStep2({
       </div>
 
       <div className="space-y-1.5">
-        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+        <label htmlFor="booking-phone" className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
           <Users className="w-3.5 h-3.5 text-gold" />
           <span>Phone Number *</span>
         </label>
         <PhoneInput
           id="booking-phone"
+          name="phone"
           value={formData.phone}
           onChange={(val) => onChange('phone', val)}
           required
@@ -72,12 +79,13 @@ export function BookingStep2({
       </div>
 
       <div className="space-y-1.5">
-        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+        <label htmlFor="booking-whatsapp" className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
           <MessageCircle className="w-3.5 h-3.5 text-gold" />
           <span>WhatsApp Number</span>
         </label>
         <PhoneInput
           id="booking-whatsapp"
+          name="whatsapp"
           value={formData.whatsapp}
           onChange={(val) => onChange('whatsapp', val)}
           helperText="For instant confirmation & guide coordination"
@@ -85,12 +93,15 @@ export function BookingStep2({
       </div>
 
       <div className="space-y-1.5">
-        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+        <label htmlFor="booking-pickupLocation" className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
           <MapPin className="w-3.5 h-3.5 text-gold" />
           <span>Pickup Location</span>
         </label>
         <input
+          id="booking-pickupLocation"
+          name="pickupLocation"
           type="text"
+          autoComplete="off"
           value={formData.pickupLocation}
           onChange={(e) => onChange('pickupLocation', e.target.value)}
           placeholder="Hotel name or address"
@@ -102,10 +113,13 @@ export function BookingStep2({
       </div>
 
       <div className="space-y-1.5">
-        <label className="text-xs font-mono uppercase text-teal/60 tracking-wider">
+        <label htmlFor="booking-specialRequirements" className="text-xs font-mono uppercase text-teal/60 tracking-wider">
           Special Requirements
         </label>
         <textarea
+          id="booking-specialRequirements"
+          name="specialRequirements"
+          autoComplete="off"
           value={formData.specialRequirements}
           onChange={(e) => onChange('specialRequirements', e.target.value)}
           placeholder="Dietary needs, mobility issues, special occasions, etc."

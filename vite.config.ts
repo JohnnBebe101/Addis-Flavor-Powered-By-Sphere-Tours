@@ -9,10 +9,10 @@ export default defineConfig(() => ({
     react(),
     tailwindcss(),
     ViteImageOptimizer({
-      png: { quality: 80 },
-      jpeg: { quality: 75 },
-      webp: { quality: 80 },
-      avif: { quality: 70 },
+      // Raster images are owned by scripts/optimize-images.mjs (resize + mozjpeg + AVIF/WebP).
+      // Re-encoding them here at q75 always produced larger files than the originals and was
+      // skipped, so this plugin is limited to SVGs.
+      exclude: /\.(?:jpe?g|png)$/i,
       svg: {
         multipass: true,
         plugins: [

@@ -8,6 +8,8 @@ interface BrandLogoProps {
   size?: BrandLogoSize;
   className?: string;
   alt?: string;
+  /** Above-the-fold usage (navbar): load eagerly instead of lazily. */
+  priority?: boolean;
 }
 
 const sizeMap: Record<BrandLogoSize, { mark: string; full: string }> = {
@@ -27,6 +29,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   size = 'md',
   className = '',
   alt = 'Addis Ababa by Locals — Powered by Sphere Tour & Travel',
+  priority = false,
 }) => {
   const sizeClass = sizeMap[size][variant];
   const src = srcMap[variant];
@@ -36,7 +39,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
       src={src}
       alt={alt}
       className={`${sizeClass} object-contain ${className}`}
-      loading="lazy"
+      loading={priority ? 'eager' : 'lazy'}
       decoding="async"
     />
   );

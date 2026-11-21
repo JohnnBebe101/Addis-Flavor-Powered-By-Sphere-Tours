@@ -3,11 +3,18 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, lazy, Suspense } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NavbarProps } from './navbar/NavTypes';
 import { DesktopNav } from './navbar/DesktopNav';
-import { MobileDrawer } from './navbar/MobileDrawer';
+
+/*
+ * The drawer is only mounted once the hamburger is pressed, so its code is
+ * fetched on demand rather than sitting in the entry bundle.
+ */
+const MobileDrawer = lazy(() =>
+  import('./navbar/MobileDrawer').then((m) => ({ default: m.MobileDrawer })),
+);
 
 export default function Navbar({
   translations,
@@ -54,13 +61,17 @@ export default function Navbar({
         isMobileMenuOpen={isMobileMenuOpen}
         onToggleMobileMenu={toggleMobileMenu}
       />
-      <MobileDrawer
-        isOpen={isMobileMenuOpen}
-        onClose={closeMobileMenu}
-        isGlobalDark={isGlobalDark}
-        translations={translations}
-        onBookClick={handleBookClick}
-      />
+      {isMobileMenuOpen && (
+        <Suspense fallback={null}>
+          <MobileDrawer
+            isOpen={isMobileMenuOpen}
+            onClose={closeMobileMenu}
+            isGlobalDark={isGlobalDark}
+            translations={translations}
+            onBookClick={handleBookClick}
+          />
+        </Suspense>
+      )}
     </>
   );
 }

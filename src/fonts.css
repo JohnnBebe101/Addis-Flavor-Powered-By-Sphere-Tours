@@ -1,0 +1,65 @@
+/*
+ * GENERATED FILE — do not edit by hand.
+ * Run `npm run fonts` to regenerate after changing the font set.
+ *
+ * Self-hosted webfonts, replacing the render-blocking fonts.googleapis.com
+ * stylesheet.
+ *
+ * The Latin faces are `text=` subsets: only the glyphs this site renders
+ * (scripts/font-text-set.mjs). That keeps DM Sans and Playfair Display — the
+ * two preloaded faces on the LCP critical path — at ~62 KB combined instead of
+ * ~99 KB for the standard script subsets.
+ *
+ * `unicode-range` keeps each file dormant until a character it covers is used:
+ * a normal visit downloads only the two preloaded Latin faces (DM Sans and
+ * Playfair Display). The Ethiopic subset costs nothing unless such text appears,
+ * and any character outside a subset falls through to the system font stack.
+ *
+ * The `?v=` query is a content hash, which makes a long-lived immutable cache
+ * header safe: replacing a font file changes its URL.
+ */
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url('/fonts/dm-sans-normal.woff2?v=ddab76df') format('woff2');
+  unicode-range: U+20-7e, U+a3, U+a5, U+a9, U+ae, U+b0-b1, U+c1, U+c9, U+cd, U+d3, U+d7, U+da, U+dd, U+e1, U+e9, U+ed, U+f3, U+f7, U+fa, U+fd, U+106-107, U+139-13a, U+143-144, U+154-155, U+15a-15b, U+179-17a, U+1f4-1f5, U+301, U+1e30-1e31, U+1e3e-1e3f, U+1e54-1e55, U+1e82-1e83, U+2013-2014, U+2018-2019, U+201c-201d, U+2022, U+2026, U+20ac, U+2122, U+2190, U+2192, U+26a0, U+2715, U+fe0f;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url('/fonts/dm-sans-italic.woff2?v=fe1a2ebf') format('woff2');
+  unicode-range: U+20-7e, U+a3, U+a5, U+a9, U+ae, U+b0-b1, U+c1, U+c9, U+cd, U+d3, U+d7, U+da, U+dd, U+e1, U+e9, U+ed, U+f3, U+f7, U+fa, U+fd, U+106-107, U+139-13a, U+143-144, U+154-155, U+15a-15b, U+179-17a, U+1f4-1f5, U+301, U+1e30-1e31, U+1e3e-1e3f, U+1e54-1e55, U+1e82-1e83, U+2013-2014, U+2018-2019, U+201c-201d, U+2022, U+2026, U+20ac, U+2122, U+2190, U+2192, U+26a0, U+2715, U+fe0f;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/fonts/playfair-display-normal.woff2?v=c99c2140') format('woff2');
+  unicode-range: U+20-7e, U+a3, U+a5, U+a9, U+ae, U+b0-b1, U+c1, U+c9, U+cd, U+d3, U+d7, U+da, U+dd, U+e1, U+e9, U+ed, U+f3, U+f7, U+fa, U+fd, U+106-107, U+139-13a, U+143-144, U+154-155, U+15a-15b, U+179-17a, U+1f4-1f5, U+301, U+1e30-1e31, U+1e3e-1e3f, U+1e54-1e55, U+1e82-1e83, U+2013-2014, U+2018-2019, U+201c-201d, U+2022, U+2026, U+20ac, U+2122, U+2190, U+2192, U+26a0, U+2715, U+fe0f;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/fonts/playfair-display-italic.woff2?v=d69f555a') format('woff2');
+  unicode-range: U+20-7e, U+a3, U+a5, U+a9, U+ae, U+b0-b1, U+c1, U+c9, U+cd, U+d3, U+d7, U+da, U+dd, U+e1, U+e9, U+ed, U+f3, U+f7, U+fa, U+fd, U+106-107, U+139-13a, U+143-144, U+154-155, U+15a-15b, U+179-17a, U+1f4-1f5, U+301, U+1e30-1e31, U+1e3e-1e3f, U+1e54-1e55, U+1e82-1e83, U+2013-2014, U+2018-2019, U+201c-201d, U+2022, U+2026, U+20ac, U+2122, U+2190, U+2192, U+26a0, U+2715, U+fe0f;
+}
+
+@font-face {
+  font-family: 'Noto Sans Ethiopic';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/noto-sans-ethiopic-normal-ethiopic.woff2?v=ca2b45a5') format('woff2');
+  unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}

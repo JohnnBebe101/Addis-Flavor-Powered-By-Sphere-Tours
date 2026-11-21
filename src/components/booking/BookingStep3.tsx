@@ -202,6 +202,8 @@ export function BookingStep3({
 
       <label className="flex items-start gap-3 cursor-pointer group">
         <input
+          id="booking-policies"
+          name="policiesAgreed"
           type="checkbox"
           checked={policiesAgreed}
           onChange={(e) => onPoliciesChange(e.target.checked)}
