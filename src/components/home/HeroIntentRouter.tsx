@@ -67,7 +67,7 @@ export function HeroIntentRouter() {
           <button
             key={tab.id}
             onClick={() => handleTabChange(tab.id)}
-            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg font-mono text-[11px] uppercase tracking-wider whitespace-nowrap transition-all duration-200 ${
+            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg font-mono text-xs uppercase tracking-wider whitespace-nowrap transition-all duration-200 ${
               activeTab === tab.id
                 ? 'bg-coffee-red text-linen-white shadow-md'
                 : 'text-teal/70 hover:bg-teal/5 hover:text-teal'
@@ -93,7 +93,7 @@ export function HeroIntentRouter() {
                   : 'off';
             return (
               <div key={field.name} className={field.type === 'textarea' ? 'sm:col-span-2' : ''}>
-                <label htmlFor={fieldId} className="block text-[11px] font-mono text-teal/80 mb-1">{field.label}</label>
+                <label htmlFor={fieldId} className="block text-xs font-mono text-teal/80 mb-1">{field.label}</label>
                 {field.type === 'select' ? (
                   <select
                     id={fieldId}
@@ -138,7 +138,7 @@ export function HeroIntentRouter() {
                   />
                 )}
                 {errors[field.name] && (
-                  <p id={errorId} className="text-[10px] text-coffee-red mt-1">{errors[field.name]}</p>
+                  <p id={errorId} className="text-xs text-coffee-red mt-1">{errors[field.name]}</p>
                 )}
               </div>
             );
@@ -146,7 +146,7 @@ export function HeroIntentRouter() {
         </div>
 
         {currentTab.disclosure && (
-          <p className="text-[10px] text-teal/50 font-mono mb-3">{currentTab.disclosure}</p>
+          <p className="text-xs text-teal/50 font-mono mb-3">{currentTab.disclosure}</p>
         )}
 
         <button

@@ -88,7 +88,7 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({
             {/* Gold badge overlay on image */}
             {badge && (
               <div className="absolute top-6 right-6 w-20 h-20 rounded-full bg-gold/90 flex flex-col items-center justify-center shadow-lg">
-                <span className="text-teal font-serif font-bold text-[10px] uppercase leading-none">{badge.label}</span>
+                <span className="text-teal font-serif font-bold text-xs uppercase leading-none">{badge.label}</span>
                 <span className="text-teal font-serif font-bold text-xl leading-none mt-0.5">{badge.text}</span>
               </div>
             )}

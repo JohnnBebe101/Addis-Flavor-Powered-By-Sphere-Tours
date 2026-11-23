@@ -44,7 +44,7 @@ export const TravelGuideListingPage: React.FC = () => {
                     <span className="font-mono text-xs uppercase tracking-widest text-gold font-bold">
                       {article.category}
                     </span>
-                    <span className="text-[10px] text-teal/60">· {article.readTime}</span>
+                    <span className="text-xs text-teal/60">· {article.readTime}</span>
                   </div>
                   <h3 className="text-xl font-serif font-bold text-teal group-hover:text-coffee-red transition-colors mb-2">
                     {article.title}

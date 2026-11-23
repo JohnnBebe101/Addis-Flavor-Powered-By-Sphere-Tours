@@ -197,7 +197,7 @@ export const ContactPage: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-sm text-teal/80">{p.socialProof.reviewCount} verified reviews</span>
-                  <span className="px-2 py-0.5 bg-gold/10 text-gold text-[10px] font-mono uppercase rounded-full">{p.socialProof.badge}</span>
+                  <span className="px-2 py-0.5 bg-gold/10 text-gold text-xs font-mono uppercase rounded-full">{p.socialProof.badge}</span>
                 </div>
               </div>
             </div>
@@ -227,7 +227,7 @@ export const ContactPage: React.FC = () => {
                   </div>
                   <h3 className="font-serif font-bold">{ch.label}</h3>
                   <p className={`text-xs ${ch.primary ? 'text-linen-white/80' : 'text-teal/60'}`}>{ch.description}</p>
-                  <span className={`inline-block px-3 py-1 rounded-full text-[10px] font-mono uppercase ${
+                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-mono uppercase ${
                     ch.primary ? 'bg-linen-white/20 text-linen-white' : 'bg-gold/10 text-gold'
                   }`}>{ch.responseTime}</span>
                 </a>

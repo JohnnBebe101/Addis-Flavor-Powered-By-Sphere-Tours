@@ -93,7 +93,7 @@ function MobileAccordionItem({
               >
                 {desktopItem.columns.map((col, colIdx) => (
                   <div key={colIdx} className="space-y-3">
-                    <h5 className="font-mono text-[10px] uppercase tracking-widest text-gold font-bold pl-2">
+                    <h5 className="font-mono text-xs uppercase tracking-widest text-gold font-bold pl-2">
                       {col.title}
                     </h5>
                     <ul className="space-y-1 pl-2">
@@ -194,7 +194,7 @@ export function MobileDrawer({
                 <span className="font-serif text-xl tracking-tight text-coffee-red font-bold">
                   {translations.brandName}
                 </span>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-gold font-bold">
+                <span className="text-xs font-mono uppercase tracking-widest text-gold font-bold">
                   {'Addis Ababa'}
                 </span>
               </div>

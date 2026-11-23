@@ -78,10 +78,10 @@ export default function TestimonialsCarousel({
               TripAdvisor
             </span>
           </div>
-          <p className="text-[10px] text-teal/50">[TripAdvisor embed code will be inserted here]</p>
+          <p className="text-xs text-teal/50">[TripAdvisor embed code will be inserted here]</p>
         </div>
 
-        <p className="text-center font-mono text-[10px] text-teal/60 uppercase tracking-widest mb-2">
+        <p className="text-center font-mono text-xs text-teal/60 uppercase tracking-widest mb-2">
           {'Featured Traveler Reviews'}
         </p>
 
@@ -108,7 +108,7 @@ export default function TestimonialsCarousel({
             </blockquote>
 
             <div className="mt-4">
-              <p className="font-mono text-[10px] uppercase tracking-wider text-teal/80">
+              <p className="font-mono text-xs uppercase tracking-wider text-teal/80">
                 {activeTestimonial.author}
                 <span className="text-teal/30 mx-2">|</span>
                 <span className="font-sans text-teal/60">{activeTestimonial.location}</span>
@@ -119,7 +119,7 @@ export default function TestimonialsCarousel({
               <button
                 id={`book-now-review-${activeTestimonial.id}`}
                 onClick={onBookClick}
-                className="mt-2.5 inline-block font-mono text-[10px] font-bold text-coffee-red hover:text-gold uppercase tracking-widest border-b border-coffee-red hover:border-gold pb-0.5 transition-all duration-200"
+                className="mt-2.5 inline-block font-mono text-xs font-bold text-coffee-red hover:text-gold uppercase tracking-widest border-b border-coffee-red hover:border-gold pb-0.5 transition-all duration-200"
               >
                 {'BOOK NOW'}
               </button>

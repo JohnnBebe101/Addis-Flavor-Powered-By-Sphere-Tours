@@ -356,7 +356,7 @@ export const TourDetailPage: React.FC = () => {
                 <p className="font-serif text-teal leading-relaxed mb-4">
                   &ldquo;{review.text}&rdquo;
                 </p>
-                <div className="flex items-center justify-between text-[10px] font-mono text-teal/60">
+                <div className="flex items-center justify-between text-xs font-mono text-teal/60">
                   <span>
                     {review.author} &mdash; {review.location}
                   </span>
@@ -430,7 +430,7 @@ export const TourDetailPage: React.FC = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                       <div className="absolute bottom-3 left-3 right-3 text-linen-white">
-                        <p className="text-[10px] uppercase font-mono tracking-wider opacity-85">
+                        <p className="text-xs uppercase font-mono tracking-wider opacity-85">
                           {relatedTour!.duration}
                         </p>
                         <p className="text-sm font-bold">
@@ -439,7 +439,7 @@ export const TourDetailPage: React.FC = () => {
                       </div>
                     </div>
                     <div className="p-5">
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-coffee-red bg-coffee-red/10 px-2 py-0.5 rounded-full">
+                      <span className="text-xs font-mono font-bold uppercase tracking-wider text-coffee-red bg-coffee-red/10 px-2 py-0.5 rounded-full">
                         {relatedTour!.tourType === 'city-tour' ? 'City Tour' : relatedTour!.tourType === 'day-trip' ? 'Day Trip' : 'Private'}
                       </span>
                       <h3 className="text-lg font-serif font-bold text-teal mt-2 group-hover:text-coffee-red transition-colors">
@@ -451,7 +451,7 @@ export const TourDetailPage: React.FC = () => {
                       <div className="flex items-center gap-1 mt-3">
                         <Star className="w-3.5 h-3.5 fill-current text-gold" />
                         <span className="text-xs font-bold text-teal">{relatedTour!.rating.toFixed(1)}</span>
-                        <span className="text-[10px] text-teal/60">({relatedTour!.reviewCount})</span>
+                        <span className="text-xs text-teal/60">({relatedTour!.reviewCount})</span>
                       </div>
                     </div>
                   </a>
