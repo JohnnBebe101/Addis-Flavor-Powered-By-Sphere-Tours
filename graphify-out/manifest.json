@@ -127,9 +127,9 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1795279680.363516,
-    "seen": 1795281268.084793,
-    "ast_hash": "52fe0ea4b25793767ab82e5e856e1050",
+    "mtime": 1795447859.3569148,
+    "seen": 1795449074.341838,
+    "ast_hash": "564ea512e2e679e7cb18980e095a98f6",
     "semantic_hash": ""
   },
   "scripts/convert-placeholders.mjs": {
@@ -971,9 +971,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787836880.0240188,
-    "seen": 1795110156.9846556,
-    "ast_hash": "1cdeaf3b6c3b0cd746ec2a07233aa06e",
+    "mtime": 1795448897.877838,
+    "seen": 1795449074.6523929,
+    "ast_hash": "0a77f837c4bdda423f9d7a0ea2ec4765",
     "semantic_hash": ""
   },
   "UPGRADE_TO_PRODUCTION.md": {
@@ -2039,9 +2039,9 @@
     "semantic_hash": ""
   },
   "scripts/fetch-fonts.mjs": {
-    "mtime": 1795279835.420362,
-    "seen": 1795281268.0857942,
-    "ast_hash": "3f1971d5a97dc9948b70bd9bcf177a1d",
+    "mtime": 1795281503.0360167,
+    "seen": 1795449074.3479478,
+    "ast_hash": "9ac0c24f36b79579ece6fa0cfb097ce5",
     "semantic_hash": ""
   },
   "scripts/font-text-set.mjs": {
@@ -2108,6 +2108,36 @@
     "mtime": 1795119941.921,
     "seen": 1795281268.1999595,
     "ast_hash": "5944b2a4a9083ea14345985dafb3148c",
+    "semantic_hash": ""
+  },
+  "public/.well-known/ai-catalog.json": {
+    "mtime": 1795447746.7489407,
+    "seen": 1795449074.341838,
+    "ast_hash": "3a37b6c665998ae46b8eaa4a5c40e60d",
+    "semantic_hash": ""
+  },
+  "public/.well-known/ard.json": {
+    "mtime": 1795447746.7408156,
+    "seen": 1795449074.341838,
+    "ast_hash": "3a37b6c665998ae46b8eaa4a5c40e60d",
+    "semantic_hash": ""
+  },
+  "public/ai-catalog.json": {
+    "mtime": 1795447746.7535348,
+    "seen": 1795449074.341838,
+    "ast_hash": "3a37b6c665998ae46b8eaa4a5c40e60d",
+    "semantic_hash": ""
+  },
+  "scripts/generate-agent-files.mjs": {
+    "mtime": 1795447739.5438862,
+    "seen": 1795449074.3495014,
+    "ast_hash": "54260a06fe0f8b1e8032ea193acbdbc0",
+    "semantic_hash": ""
+  },
+  "public/llms.txt": {
+    "mtime": 1795448093.4570985,
+    "seen": 1795449074.6661248,
+    "ast_hash": "6ca4092e8159257f91a04884cf88c23c",
     "semantic_hash": ""
   },
   ".opencode/package-lock.json": {

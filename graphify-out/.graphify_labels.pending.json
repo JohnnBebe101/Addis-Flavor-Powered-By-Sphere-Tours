@@ -4,7 +4,7 @@
   "2": "react",
   "3": "BookPage.tsx",
   "4": "routes.tsx",
-  "5": "JSONLD.tsx",
+  "5": "ContactModal.tsx",
   "6": "Layout.tsx",
   "7": "AboutPage.tsx",
   "8": "compilerOptions",
@@ -13,9 +13,9 @@
   "11": "steps",
   "12": "package.json",
   "13": "ref_path",
-  "14": "font-text-set.mjs",
+  "14": "generate-agent-files.mjs",
   "15": "optimize-images.mjs",
-  "16": "TourListingPage.tsx",
+  "16": "eslint.config.js",
   "17": "scripts",
   "18": "TourDetailPage.tsx",
   "19": "ref_fs",
@@ -24,7 +24,5 @@
   "22": "HowBookingWorks.tsx",
   "23": "inline-css.mjs",
   "24": "check-image-budget.mjs",
-  "25": "optimize-svg.mjs",
-  "26": "FAQAccordion.tsx",
-  "27": "check-font-budget.mjs"
+  "25": "optimize-svg.mjs"
 }

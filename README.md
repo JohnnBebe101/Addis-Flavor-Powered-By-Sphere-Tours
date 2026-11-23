@@ -40,4 +40,6 @@ Output is in `dist/`.
 | `npm run dev` | Start dev server on port 3000 |
 | `npm run build` | Production build |
 | `npm run preview` | Preview production build |
+| `npm run agent-files` | Regenerate `public/llms.txt` and the ARD manifest (runs in `prebuild`) |
+| `npm run agent-files:check` | Fail if the generated agent files are stale |
 | `npm run lint` | Type-check with TypeScript |

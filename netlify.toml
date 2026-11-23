@@ -35,6 +35,34 @@
   [headers.values]
     Cache-Control = "public, max-age=3600"
 
+# Agent-facing files.
+#
+# The `/*` catch-all below answers any path Netlify does not find on disk with
+# app.html, so these three locations have to exist as real files — they do, they
+# are generated into public/ by scripts/generate-agent-files.mjs. The headers
+# below make the content type explicit and let cross-origin agent tooling read
+# the manifest without a CORS preflight.
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/.well-known/*"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/ai-catalog.json"
+  [headers.values]
+    Content-Type = "application/json; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+    Access-Control-Allow-Origin = "*"
+
 # Baseline hardening for every response.
 [[headers]]
   for = "/*"
