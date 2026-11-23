@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "headline": "Find a Local Guide in Addis Ababa",
+    "subheadline": "Connect with experienced local guides who know Addis Ababa's history, culture, and hidden gems. Tell us what you're interested in and we'll match you with the right guide."
+  },
+  "howItWorks": [
+    {
+      "title": "Tell Us Your Plans",
+      "description": "Share your interests, preferred date, group size, and language needs."
+    },
+    {
+      "title": "We Match You",
+      "description": "Our team reviews your request and matches you with a guide who fits your needs."
+    },
+    {
+      "title": "Confirm & Explore",
+      "description": "Your guide contacts you directly to confirm details and share local insights."
+    }
+  ],
+  "languages": {
+    "headline": "Available Languages",
+    "available": [
+      "English",
+      "Amharic",
+      "Oromo",
+      "Tigrinya",
+      "French",
+      "Spanish",
+      "Arabic",
+      "Italian",
+      "German",
+      "Mandarin"
+    ]
+  },
+  "form": {
+    "headline": "Request a Local Guide",
+    "subheadline": "Fill out the form below and we'll match you with the right guide for your Addis Ababa visit.",
+    "disclosure": "Guide availability, language capability, and final pricing are confirmed after we review your request."
+  },
+  "faqs": [
+    {
+      "question": "How far in advance should I book a guide?",
+      "answer": "We recommend at least 48 hours notice for guide matching. For same-day requests, contact us via WhatsApp for availability."
+    },
+    {
+      "question": "What does a local guide cost?",
+      "answer": "Guide fees depend on language, duration, and specialisation. We provide pricing after matching you with a guide."
+    },
+    {
+      "question": "Can guides accommodate special interests?",
+      "answer": "Yes. Our guides specialise in history, culture, photography, food, coffee ceremonies, and more. Tell us your interests."
+    },
+    {
+      "question": "What if I need a guide for multiple days?",
+      "answer": "Multi-day guide bookings are available. We can arrange a consistent guide for your entire Addis Ababa stay."
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "hero": {
+    "headline": "Discover Things to Do in Addis Ababa",
+    "subheadline": "From city tours and day trips to must-see landmarks, find experiences that match your interests and schedule."
+  },
+  "items": [
+    {
+      "id": 1,
+      "title": "Half-Day City Tour",
+      "category": "City Tours",
+      "description": "Explore Addis Ababa's highlights in half a day — National Museum, Merkato, and cultural landmarks with a local guide.",
+      "image": "/images/tours/half-day-addis-ababa-hero.jpg",
+      "link": "/tours/half-day-addis-ababa-city-tour/",
+      "duration": "4 hours",
+      "location": "Addis Ababa"
+    },
+    {
+      "id": 2,
+      "title": "Full-Day City Tour",
+      "category": "City Tours",
+      "description": "A comprehensive full-day tour covering all major attractions, local markets, and cultural experiences.",
+      "image": "/images/tours/full-day-addis-ababa-hero.jpg",
+      "link": "/tours/full-day-addis-ababa-city-tour/",
+      "duration": "8–9 hours",
+      "location": "Addis Ababa"
+    },
+    {
+      "id": 3,
+      "title": "Addis Ababa Highlights Tour",
+      "category": "City Tours",
+      "description": "See the best of Addis Ababa in a single day — perfect for first-time visitors with limited time.",
+      "image": "/images/tours/addis-ababa-highlights-hero.jpg",
+      "link": "/tours/addis-ababa-highlights-tour/",
+      "duration": "6 hours",
+      "location": "Addis Ababa"
+    },
+    {
+      "id": 4,
+      "title": "Debre Libanos & Portuguese Bridge",
+      "category": "Day Trips",
+      "description": "Visit the 13th-century Debre Libanos Monastery and the dramatic Portuguese Bridge on a full-day excursion.",
+      "image": "/images/tours/debre-libanos-hero.jpg",
+      "link": "/tours/debre-libanos-portuguese-bridge/",
+      "duration": "8–9 hours",
+      "location": "Debre Libanos"
+    },
+    {
+      "id": 5,
+      "title": "Tiya, Adadi Mariam & Melka Kunture",
+      "category": "Day Trips",
+      "description": "Explore UNESCO World Heritage stelae, an ancient rock-hewn church, and prehistoric archaeological sites.",
+      "image": "/images/tours/tiya-adadi-mariam-melka-kunture-hero.jpg",
+      "link": "/tours/tiya-adadi-mariam-melka-kunture/",
+      "duration": "9–10 hours",
+      "location": "South of Addis Ababa"
+    },
+    {
+      "id": 6,
+      "title": "Menagesha Forest Day Trip",
+      "category": "Day Trips",
+      "description": "Escape to the ancient Menagesha Forest for hiking, birdwatching, and mountain scenery.",
+      "image": "/images/tours/menagesha-forest-hero.jpg",
+      "link": "/tours/menagesha-forest-day-trip/",
+      "duration": "8–9 hours",
+      "location": "Menagesha Forest"
+    },
+    {
+      "id": 7,
+      "title": "Bishoftu Crater Lakes",
+      "category": "Day Trips",
+      "description": "Visit the stunning crater lakes of Bishoftu for scenic views and lakeside relaxation.",
+      "image": "/images/tours/bishoftu-crater-lakes-hero.jpg",
+      "link": "/tours/bishoftu-crater-lakes/",
+      "duration": "8 hours",
+      "location": "Bishoftu"
+    },
+    {
+      "id": 8,
+      "title": "National Museum of Ethiopia",
+      "category": "Must-Sees",
+      "description": "Home to Lucy (Dinkinesh) and extensive Ethiopian art and archaeological collections.",
+      "image": "/images/tours/addis-ababa-highlights-national-museum.jpg",
+      "link": "/things-to-do/",
+      "duration": "2–3 hours",
+      "location": "Arat Kilo"
+    },
+    {
+      "id": 9,
+      "title": "Holy Trinity Cathedral",
+      "category": "Must-Sees",
+      "description": "Ethiopia's most important cathedral, final resting place of Emperor Haile Selassie.",
+      "image": "/images/tours/addis-ababa-highlights-holy-trinity.jpg",
+      "link": "/things-to-do/",
+      "duration": "1–2 hours",
+      "location": "Arat Kilo"
+    },
+    {
+      "id": 10,
+      "title": "Merkato",
+      "category": "Must-Sees",
+      "description": "Africa's largest open-air market — a sensory experience of spices, coffee, textiles, and local life.",
+      "image": "/images/tours/half-day-addis-ababa-merkato.jpg",
+      "link": "/things-to-do/",
+      "duration": "2–3 hours",
+      "location": "Merato"
+    }
+  ],
+  "cta": {
+    "headline": "Need Help Choosing?",
+    "subheadline": "Not sure which tour or experience is right for you? Our local team can help you plan the perfect Addis Ababa visit.",
+    "buttonText": "Plan Your Visit",
+    "link": "/plan-your-visit/"
+  }
+}

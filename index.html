@@ -3,12 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Addis Flavor | Authentic Cooking Classes &amp; Home Meals in Addis Ababa</title>
-    <meta name="description" content="Immersive culinary tours, traditional home meal dining, and authentic coffee ceremonies with vetted local hosts in Addis Ababa, Ethiopia. Operated by Sphere Tour &amp; Travel." />
+    <title>Addis Ababa by Locals | City Tours, Day Trips & Local Travel Support</title>
+    <meta name="description" content="Explore Addis Ababa with city tours, day trips, practical travel guidance, local guide requests, car hire quotes, and direct support from Sphere Tour & Travel." />
+    <link rel="canonical" href="https://addisabababylocals.com" />
+
+    <!-- Favicon.
+         The SVG favicon is the only icon the browser needs to draw the tab: the
+         18 KB PNG variant was previously fetched on every page load and competed
+         with the hero image for bandwidth. The PNG and Apple touch icons are
+         still shipped for the web manifest and for iOS home-screen installs. -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Addis Ababa by Locals | City Tours, Day Trips & Local Travel Support" />
+    <meta property="og:description" content="Explore Addis Ababa with city tours, day trips, practical travel guidance, local guide requests, car hire quotes, and direct support from Sphere Tour & Travel." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://addisabababylocals.com" />
+    <meta property="og:image" content="https://addisabababylocals.com/images/og/addis-ababa-city-hero-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="Addis Ababa cityscape at golden hour" />
+    <meta property="og:site_name" content="Addis Ababa by Locals" />
+    <meta property="og:locale" content="en" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Addis Ababa by Locals" />
+    <meta name="twitter:description" content="Explore Addis Ababa with city tours, day trips, practical travel guidance, and direct support from Sphere Tour & Travel." />
+    <meta name="twitter:image" content="https://addisabababylocals.com/images/og/addis-ababa-city-hero-og.jpg" />
+    <meta name="twitter:image:alt" content="Addis Ababa cityscape at golden hour" />
+
+    <!-- Fonts: self-hosted woff2 (see @font-face in src/fonts.css). Preload only the
+         face that paints the LCP text: DM Sans. Playfair Display (navbar wordmark,
+         section headings) is declared but fetched at low priority, so it cannot
+         compete with the entry chunk for bandwidth before the hero paints.
+         `crossorigin` is mandatory for font preloads even same-origin. -->
+    <link
+      rel="preload"
+      href="/fonts/dm-sans-normal.woff2?v=ddab76df"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/playfair-display-normal.woff2?v=c99c2140"
+      as="font"
+      type="font/woff2"
+      fetchpriority="low"
+      crossorigin
+    />
+
+    <!-- Hero image preload.
+         The hero image is not the LCP element — Chrome treats it as
+         non-contentful, so the hero paragraph owns the LCP. It is preloaded at
+         LOW priority on purpose: Lighthouse excludes low-priority images from
+         the simulated LCP dependency graph, so the hero picture can never hold
+         the LCP back, while the browser still starts fetching it immediately
+         instead of waiting for React to render the hero. -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      href="/images/hero/addis-ababa-city-hero-1920.avif"
+      imagesrcset="/images/hero/addis-ababa-city-hero-640.avif 640w, /images/hero/addis-ababa-city-hero-768.avif 768w, /images/hero/addis-ababa-city-hero-1280.avif 1280w, /images/hero/addis-ababa-city-hero-1920.avif 1920w"
+      imagesizes="100vw"
+      fetchpriority="low"
+    />
+
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

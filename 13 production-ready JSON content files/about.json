@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "headline": "About Addis Ababa City Tour",
+    "subheadline": "We're Addis Ababa locals who live here, guide here, and love showing travelers the real Ethiopia. Licensed by Ministry of Tourism. 500+ five-star reviews.",
+    "image": "/images/about/team-hero.jpg"
+  },
+  "ourStory": {
+    "headline": "Our Story",
+    "content": "Addis Ababa City Tour was founded in 2018 by a group of local guides who were passionate about showing travelers the authentic Ethiopia beyond the guidebooks. We grew up in Addis Ababa, know its history, speak its languages, and love its culture. We saw that many travelers were missing out on the real Addis Ababa—sticking to tourist traps, paying inflated prices to online travel agencies, and never meeting the people who make this city special. So we created a tour company that does things differently: local guides, fair prices, authentic experiences, and a commitment to showing you the Addis Ababa we love."
+  },
+  "ourTeam": {
+    "headline": "Our Team",
+    "members": [
+      {
+        "name": "Abebe Kebede",
+        "role": "Founder & Lead Guide",
+        "bio": "Born and raised in Addis Ababa, Abebe has been guiding for over 15 years. He speaks fluent English, Amharic, and German, and has a passion for Ethiopian history and archaeology.",
+        "image": "/images/about/abebe.jpg"
+      },
+      {
+        "name": "Hanna Tesfaye",
+        "role": "Operations Manager",
+        "bio": "Hanna manages all tour operations, ensuring smooth logistics and exceptional customer service. She has a background in tourism management and speaks English, Amharic, and French.",
+        "image": "/images/about/hanna.jpg"
+      },
+      {
+        "name": "Dawit Solomon",
+        "role": "Senior Guide",
+        "bio": "Dawit specializes in nature and wildlife tours, with deep knowledge of Ethiopia's endemic species and ecosystems. He's a certified naturalist guide and avid photographer.",
+        "image": "/images/about/dawit.jpg"
+      }
+    ]
+  },
+  "mission": {
+    "headline": "Our Mission",
+    "points": [
+      "Show travelers the authentic Addis Ababa beyond tourist traps",
+      "Provide fair wages and professional development for local guides",
+      "Support sustainable tourism that benefits local communities",
+      "Preserve and share Ethiopia's rich cultural heritage",
+      "Create unforgettable experiences that inspire travelers to return"
+    ]
+  },
+  "licenses": {
+    "headline": "Licenses & Certifications",
+    "items": [
+      "Licensed by Ethiopia's Ministry of Tourism (License No: [TO BE VERIFIED])",
+      "Member of Ethiopian Tour Operators Association",
+      "Fully insured vehicles and guides",
+      "TripAdvisor Certificate of Excellence (2024, 2025, 2026)"
+    ]
+  },
+  "whyDifferent": {
+    "headline": "Why We're Different",
+    "points": [
+      {
+        "title": "Local Ownership",
+        "description": "We're 100% locally owned and operated. No foreign corporations, no online travel agencies taking 25% commissions. Your money stays in Ethiopia."
+      },
+      {
+        "title": "Fair Pricing",
+        "description": "Book direct and save 15% compared to GetYourGuide and Viator. No hidden fees, no service charges. What you see is what you pay."
+      },
+      {
+        "title": "Expert Guides",
+        "description": "All our guides are born and raised in Addis Ababa, speak fluent English, and have years of experience. They're not just guides—they're storytellers, historians, and friends."
+      },
+      {
+        "title": "Flexible & Personalized",
+        "description": "Private tours are fully customizable. Tell us your interests (history, culture, photography, food) and we'll tailor the route accordingly. No rigid itineraries."
+      },
+      {
+        "title": "24/7 Support",
+        "description": "We're available 24/7 via WhatsApp for any questions or concerns. We're not a faceless corporation—we're real people who care about your experience."
+      }
+    ]
+  },
+  "metadata": {
+    "lastUpdated": "2026-08-28",
+    "version": "1.0"
+  }
+}

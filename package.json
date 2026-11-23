@@ -1,35 +1,52 @@
 {
-  "name": "react-example",
+  "name": "addis-ababa-city-tours",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "predev": "node scripts/optimize-images.mjs --profile=ws2 && node scripts/optimize-svg.mjs",
     "dev": "vite --port=3000 --host=0.0.0.0",
+    "prebuild": "npm run agent-files && node scripts/optimize-images.mjs --profile=ws2 && node scripts/optimize-svg.mjs",
     "build": "vite build",
+    "postbuild": "node scripts/inline-css.mjs && node scripts/prerender.mjs && node scripts/check-image-budget.mjs && node scripts/check-font-budget.mjs",
     "preview": "vite preview",
-    "clean": "rm -rf dist server.js",
-    "lint": "tsc --noEmit"
+    "images": "node scripts/optimize-images.mjs --profile=all",
+    "svg": "node scripts/optimize-svg.mjs",
+    "fonts": "node scripts/fetch-fonts.mjs",
+    "agent-files": "node scripts/generate-agent-files.mjs",
+    "agent-files:check": "node scripts/generate-agent-files.mjs --check",
+    "clean": "rm -rf dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,css,json}\"",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@google/genai": "^2.4.0",
-    "@tailwindcss/vite": "^4.1.14",
-    "@vitejs/plugin-react": "^5.0.4",
     "lucide-react": "^0.546.0",
     "react": "^19.0.1",
     "react-dom": "^19.0.1",
-    "vite": "^6.2.3",
-    "express": "^4.21.2",
-    "dotenv": "^17.2.3",
-    "motion": "^12.23.24"
+    "react-helmet-async": "^3.0.0",
+    "react-router-dom": "^6.30.6"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.1.14",
     "@types/node": "^22.14.0",
-    "autoprefixer": "^10.4.21",
-    "esbuild": "^0.25.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "@vitejs/plugin-react": "^5.0.4",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.5",
+    "prettier": "^3.9.6",
+    "sharp": "^0.35.4",
+    "svgo": "^4.1.0",
     "tailwindcss": "^4.1.14",
-    "tsx": "^4.21.0",
     "typescript": "~5.8.2",
+    "typescript-eslint": "^8.68.0",
     "vite": "^6.2.3",
-    "@types/express": "^4.17.21"
+    "vite-plugin-image-optimizer": "^2.0.3"
   }
 }

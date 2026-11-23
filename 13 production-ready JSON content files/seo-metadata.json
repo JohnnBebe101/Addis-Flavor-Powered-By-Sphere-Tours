@@ -1,0 +1,118 @@
+{
+  "pages": {
+    "homepage": {
+      "path": "/",
+      "title": "Addis Ababa City Tours — Book Direct & Save 15% | Local Experts",
+      "description": "Explore Addis Ababa with licensed local guides. Half-day and full-day city tours, day trips to Debre Libanos, Tiya UNESCO Site, and more. Book direct and save 15%. 500+ five-star reviews.",
+      "h1": "Addis Ababa City Tours — Book Direct, Save 15%, Get Local Expertise",
+      "h2s": [
+        "Choose Your Adventure",
+        "Our Most Popular Tours",
+        "Why Book With Addis Ababa City Tour?",
+        "Explore Addis Ababa's Top Attractions",
+        "Day Trips from Addis Ababa",
+        "How Booking Works",
+        "What Travelers Say About Us",
+        "Plan Your Visit to Addis Ababa",
+        "Frequently Asked Questions",
+        "Ready to Explore Addis Ababa?"
+      ]
+    },
+    "toursListing": {
+      "path": "/tours/",
+      "title": "All Addis Ababa Tours — City Tours, Day Trips & Private Excursions",
+      "description": "Browse all Addis Ababa tours: half-day city tours from $42, full-day tours from $69, day trips from $75. Licensed guides, hotel pickup, best price guarantee. Book direct and save 15%.",
+      "h1": "All Addis Ababa Tours",
+      "h2s": [
+        "City Tours",
+        "Day Trips",
+        "Private & Custom Tours",
+        "Why Book Direct?",
+        "Frequently Asked Questions"
+      ]
+    },
+    "destinationsListing": {
+      "path": "/destinations/",
+      "title": "Destinations — Addis Ababa & Day Trip Guides",
+      "description": "Explore Addis Ababa and nearby destinations: Debre Libanos Monastery, Tiya UNESCO Site, Menagesha Forest, Bishoftu Crater Lakes. Complete travel guides with attractions, tips, and tour recommendations.",
+      "h1": "Destinations",
+      "h2s": [
+        "Addis Ababa",
+        "Day Trip Destinations",
+        "Plan Your Visit"
+      ]
+    },
+    "whyChooseUs": {
+      "path": "/why-choose-us/",
+      "title": "Why Choose Addis Ababa City Tour — Local Experts, Best Price, Flexible Booking",
+      "description": "Book direct and save 15% vs. OTAs. Licensed local guides, private vehicles, flexible pickup, 24/7 WhatsApp support. 500+ five-star reviews. Free cancellation up to 24 hours.",
+      "h1": "Why Book Direct With Addis Ababa City Tour?",
+      "h2s": [
+        "Local Knowledge & Expertise",
+        "Private & Small-Group Options",
+        "Transport & Pickup Information",
+        "Safety & Responsibility",
+        "Booking & Cancellation Policy",
+        "Frequently Asked Questions",
+        "Compare Us vs. Online Travel Agencies"
+      ]
+    },
+    "travelGuide": {
+      "path": "/travel-guide/",
+      "title": "Ethiopia Travel Guide — Addis Ababa Tips, Itineraries & Cultural Insights",
+      "description": "Expert travel guides for Addis Ababa and Ethiopia: best time to visit, what to wear, coffee ceremony etiquette, day trip itineraries, practical tips. Plan your perfect Ethiopian adventure.",
+      "h1": "Ethiopia Travel Guide",
+      "h2s": [
+        "Addis Ababa Guides",
+        "Day Trip Guides",
+        "Cultural Guides",
+        "Practical Information",
+        "Latest Articles"
+      ]
+    },
+    "about": {
+      "path": "/about/",
+      "title": "About Addis Ababa City Tour — Licensed Local Tour Operator Since 2018",
+      "description": "We're Addis Ababa locals who live here, guide here, and love showing travelers the real Ethiopia. Licensed by Ministry of Tourism. 500+ five-star reviews. Meet our team.",
+      "h1": "About Addis Ababa City Tour",
+      "h2s": [
+        "Our Story",
+        "Our Team",
+        "How We Started",
+        "Our Mission",
+        "Licenses & Certifications",
+        "Why We're Different"
+      ]
+    },
+    "reviews": {
+      "path": "/reviews/",
+      "title": "Addis Ababa City Tour Reviews — 500+ Five-Star Reviews on TripAdvisor",
+      "description": "Read what travelers say about our Addis Ababa city tours and day trips. 500+ five-star reviews on TripAdvisor. 4.9/5 average rating. Licensed local operator. Book with confidence.",
+      "h1": "What Travelers Say About Us",
+      "h2s": [
+        "TripAdvisor Reviews",
+        "Recent Testimonials",
+        "Why Travelers Choose Us",
+        "Share Your Experience"
+      ]
+    },
+    "contact": {
+      "path": "/contact/",
+      "title": "Contact Addis Ababa City Tour — WhatsApp, Phone & Email",
+      "description": "Contact us for tour bookings, custom itineraries, or travel questions. WhatsApp: +251-911-XXX-XXX. Email: info@addisababacitytour.com. Office hours: 24/7. We respond within 24 hours.",
+      "h1": "Contact Us",
+      "h2s": [
+        "Get in Touch",
+        "Custom Tour Inquiry",
+        "Travel Agent Partnerships",
+        "Frequently Asked Questions",
+        "Office Location & Hours"
+      ]
+    }
+  },
+  "metadata": {
+    "totalPages": 8,
+    "lastUpdated": "2026-08-28",
+    "version": "1.0"
+  }
+}

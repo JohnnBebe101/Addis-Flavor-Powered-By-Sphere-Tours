@@ -1,0 +1,224 @@
+{
+  "policies": {
+    "cancellation": {
+      "headline": "Cancellation Policy",
+      "content": "Free cancellation up to 24 hours before the tour start time. Cancellations within 24 hours or no-shows are non-refundable. Weather-related cancellations qualify for full refund or free rescheduling.",
+      "points": [
+        "Free cancellation up to 24 hours before tour start time",
+        "Cancellations within 24 hours: non-refundable",
+        "No-shows: non-refundable",
+        "Weather-related cancellations: full refund or free rescheduling",
+        "Refunds processed within 5–7 business days"
+      ]
+    },
+    "booking": {
+      "headline": "Booking Terms & Conditions",
+      "content": "By booking a tour with Addis Ababa by Locals, you agree to the following terms and conditions.",
+      "points": [
+        "Minimum booking: 24 hours in advance",
+        "Confirmation: Instant email confirmation upon booking",
+        "Voucher: Present email confirmation or mobile voucher to guide",
+        "Pickup: Complimentary pickup from central Addis Ababa hotels (Bole, Piassa, Meskel Square)",
+        "Punctuality: Tours depart on time. Late arrivals may result in missed tour (no refund)",
+        "Age restrictions: Most tours suitable for ages 6+. Menagesha Forest recommended for ages 12+",
+        "Fitness level: Most tours require moderate walking (2–5 km). Menagesha Forest requires good fitness",
+        "Wheelchair accessibility: Most tours not wheelchair accessible. Bishoftu Crater Lakes is wheelchair accessible",
+        "Dietary restrictions: Vegetarian, vegan, gluten-free options available with advance notice",
+        "Photography: Allowed at most sites. Restricted inside churches—ask permission",
+        "Liability: Participants join tours at their own risk. We carry full liability insurance"
+      ]
+    },
+    "pricing": {
+      "headline": "Pricing & Payment",
+      "content": "Transparent pricing with no hidden fees. Book direct and save 15% compared to online travel agencies.",
+      "points": [
+        "Prices shown are per person in USD",
+        "Children (6–17 years): discounted rates",
+        "Infants (0–5 years): free",
+        "Private tours: priced by group size (1–2, 3–4, 5–6 people)",
+        "Small group tours: per-person pricing",
+        "Payment methods: USD, EUR, ETB (Ethiopian Birr), credit cards (Visa, Mastercard)",
+        "Cash payments: accepted on tour (exact change appreciated)",
+        "No hidden fees: all entrance fees, guide, vehicle, and lunch (where included) are in the price",
+        "Gratuities: optional, not included",
+        "Personal expenses: not included (shopping, additional meals, beverages)"
+      ]
+    }
+  },
+  "bookingFlow": {
+    "step1": {
+      "title": "Select Tour & Date",
+      "fields": [
+        {
+          "name": "tour",
+          "label": "Select Your Tour",
+          "type": "select",
+          "required": true,
+          "placeholder": "Choose a tour..."
+        },
+        {
+          "name": "date",
+          "label": "Tour Date",
+          "type": "date",
+          "required": true,
+          "placeholder": "DD/MM/YYYY",
+          "helpText": "Tours depart daily at 08:00 or 14:00. Book at least 24 hours in advance."
+        },
+        {
+          "name": "guests",
+          "label": "Number of Guests",
+          "type": "number",
+          "required": true,
+          "placeholder": "2",
+          "helpText": "Small groups (max 6 people). Private tours available for larger groups."
+        }
+      ]
+    },
+    "step2": {
+      "title": "Your Details",
+      "fields": [
+        {
+          "name": "fullName",
+          "label": "Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "John Doe"
+        },
+        {
+          "name": "email",
+          "label": "Email Address",
+          "type": "email",
+          "required": true,
+          "placeholder": "john@example.com"
+        },
+        {
+          "name": "phone",
+          "label": "Phone Number",
+          "type": "tel",
+          "required": true,
+          "placeholder": "+251-911-XXX-XXX"
+        },
+        {
+          "name": "whatsapp",
+          "label": "WhatsApp Number",
+          "type": "tel",
+          "required": false,
+          "placeholder": "+971 50 123 4567",
+          "helpText": "For instant confirmation & guide coordination"
+        },
+        {
+          "name": "pickupLocation",
+          "label": "Pickup Location",
+          "type": "text",
+          "required": true,
+          "placeholder": "Hotel name or address",
+          "helpText": "We offer complimentary pickup from all hotels in central Addis Ababa (Bole, Piassa, Meskel Square areas)."
+        },
+        {
+          "name": "specialRequirements",
+          "label": "Special Requirements",
+          "type": "textarea",
+          "required": false,
+          "placeholder": "Dietary needs, mobility issues, etc."
+        }
+      ]
+    },
+    "step3": {
+      "title": "Review & Confirm",
+      "fields": [
+        {
+          "name": "tourName",
+          "label": "Tour",
+          "type": "readonly"
+        },
+        {
+          "name": "date",
+          "label": "Date",
+          "type": "readonly"
+        },
+        {
+          "name": "guests",
+          "label": "Guests",
+          "type": "readonly"
+        },
+        {
+          "name": "pickupLocation",
+          "label": "Pickup Location",
+          "type": "readonly"
+        },
+        {
+          "name": "whatsapp",
+          "label": "WhatsApp",
+          "type": "readonly"
+        },
+        {
+          "name": "totalPrice",
+          "label": "Total Price",
+          "type": "readonly"
+        },
+        {
+          "name": "cancellationPolicy",
+          "label": "Cancellation Policy",
+          "type": "readonly",
+          "value": "Free cancellation up to 24 hours before the tour start time."
+        }
+      ],
+      "submitText": "Confirm & Pay"
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2026-08-28",
+    "version": "1.0"
+  },
+  "page": {
+    "hero": {
+      "headline": "Book Your Addis Ababa Adventure",
+      "subheadline": "Secure your spot with our easy 3-step booking. No instant charge — pay your guide directly on tour day.",
+      "trustSignals": {
+        "rating": "",
+        "reviewCount": "",
+        "badges": ["Free Cancellation 24h", "Licensed Local Operator", "No Hidden Fees"]
+      }
+    },
+    "howItWorks": {
+      "headline": "How It Works",
+      "steps": [
+        { "title": "Choose Your Tour", "description": "Browse our curated tours and select your perfect experience.", "icon": "Search" },
+        { "title": "Enter Your Details", "description": "Pick your date, number of guests, and contact information.", "icon": "User" },
+        { "title": "Confirmed!", "description": "Your guide contacts you within 2 hours with pickup details.", "icon": "CheckCircle" }
+      ]
+    },
+    "sidebar": {
+      "helpHeadline": "Need Help Booking?",
+      "helpText": "Our team is available 24/7 on WhatsApp to help you choose the perfect tour.",
+      "whatsappCta": "Chat on WhatsApp",
+      "callCta": "Call Us",
+      "emailCta": "Email Us"
+    },
+    "included": {
+      "headline": "What's Included",
+      "items": [
+        "Licensed English-speaking local guide",
+        "Private vehicle with AC",
+        "Hotel pickup & drop-off (central Addis)",
+        "All entrance fees",
+        "Bottled water"
+      ]
+    },
+    "policies": {
+      "headline": "Booking Policies"
+    },
+    "success": {
+      "whatsappCta": "Send Booking via WhatsApp",
+      "emailCta": "Email Booking Details",
+      "browseCta": "Browse More Tours",
+      "whatNextHeadline": "What Happens Next?",
+      "whatNextSteps": [
+        "Your guide will contact you via WhatsApp within 2 hours",
+        "You'll receive confirmation with guide details and pickup time",
+        "No instant charge — pay your guide directly on tour day",
+        "Free cancellation up to 24 hours before tour"
+      ]
+    }
+  }
+}

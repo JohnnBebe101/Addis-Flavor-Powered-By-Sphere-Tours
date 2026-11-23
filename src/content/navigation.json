@@ -1,0 +1,242 @@
+{
+  "header": {
+    "logo": {
+      "text": "Addis Ababa by Locals",
+      "link": "/",
+      "alt": "Addis Ababa by Locals — Powered by Sphere Tour & Travel"
+    },
+    "mainMenu": [
+      {
+        "label": "Things to Do",
+        "link": "/things-to-do/",
+        "type": "dropdown",
+        "cta": { "label": "Explore All Tours", "link": "/tours/" },
+        "columns": [
+          {
+            "title": "City Tours",
+            "items": [
+              {
+                "label": "Half-Day City Tour",
+                "link": "/tours/half-day-addis-ababa-city-tour/"
+              },
+              {
+                "label": "Full-Day City Tour",
+                "link": "/tours/full-day-addis-ababa-city-tour/"
+              },
+              {
+                "label": "Highlights Tour",
+                "link": "/tours/addis-ababa-highlights-tour/"
+              }
+            ]
+          },
+          {
+            "title": "Day Trips",
+            "items": [
+              {
+                "label": "Debre Libanos & Portuguese Bridge",
+                "link": "/tours/debre-libanos-portuguese-bridge/"
+              },
+              {
+                "label": "Tiya, Adadi Mariam & Melka Kunture",
+                "link": "/tours/tiya-adadi-mariam-melka-kunture/"
+              },
+              {
+                "label": "Menagesha Forest Day Trip",
+                "link": "/tours/menagesha-forest-day-trip/"
+              },
+              {
+                "label": "Bishoftu Crater Lakes",
+                "link": "/tours/bishoftu-crater-lakes/"
+              }
+            ]
+          },
+          {
+            "title": "Private & Custom",
+            "items": [
+              {
+                "label": "Custom Itinerary",
+                "link": "/custom-tour/"
+              },
+              {
+                "label": "Airport Layover Tour",
+                "link": "/tours/airport-layover-tour/"
+              },
+              {
+                "label": "Private Group Tours",
+                "link": "/tours/private-group-tours/"
+              }
+            ]
+          },
+          {
+            "title": "Must-Sees",
+            "items": [
+              {
+                "label": "Must-Sees in Addis Ababa",
+                "link": "/things-to-do/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Plan Your Visit",
+        "link": "/plan-your-visit/",
+        "type": "dropdown",
+        "cta": { "label": "Contact Us", "link": "/contact/" },
+        "columns": [
+          {
+            "title": "Planning",
+            "items": [
+              {
+                "label": "Where to Stay",
+                "link": "/where-to-stay/"
+              },
+              {
+                "label": "First-Time Visitor Guide",
+                "link": "/travel-guide/"
+              },
+              {
+                "label": "Visa & Entry",
+                "link": "/travel-guide/"
+              },
+              {
+                "label": "Currency & Payments",
+                "link": "/travel-guide/"
+              },
+              {
+                "label": "Altitude & Health",
+                "link": "/travel-guide/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Getting Around",
+        "link": "/car-hire/",
+        "type": "dropdown",
+        "cta": { "label": "Request a Quote", "link": "/car-hire/" },
+        "columns": [
+          {
+            "title": "Transport & Support",
+            "items": [
+              {
+                "label": "Car Hire & Private Driver",
+                "link": "/car-hire/"
+              },
+              {
+                "label": "Airport Transfers",
+                "link": "/airport-transfers/"
+              },
+              {
+                "label": "Local Guides",
+                "link": "/guides/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Travel Guide",
+        "link": "/travel-guide/",
+        "type": "link"
+      },
+      {
+        "label": "Contact",
+        "link": "/contact/",
+        "type": "link"
+      }
+    ],
+    "ctaButton": {
+      "text": "EXPLORE TOURS",
+      "link": "/tours/",
+      "color": "brand-primary-orange"
+    }
+  },
+  "mobileMenu": {
+    "items": [
+      {
+        "label": "Things to Do",
+        "link": "/things-to-do/",
+        "type": "accordion"
+      },
+      {
+        "label": "Plan Your Visit",
+        "link": "/plan-your-visit/",
+        "type": "accordion"
+      },
+      {
+        "label": "Getting Around",
+        "link": "/car-hire/",
+        "type": "accordion"
+      },
+      {
+        "label": "Travel Guide",
+        "link": "/travel-guide/",
+        "type": "link"
+      },
+      {
+        "label": "Contact",
+        "link": "/contact/",
+        "type": "link"
+      },
+      {
+        "label": "EXPLORE TOURS",
+        "link": "/tours/",
+        "type": "cta",
+        "color": "brand-primary-orange"
+      }
+    ]
+  },
+  "footer": {
+    "columns": [
+      {
+        "title": "Company",
+        "links": [
+          { "label": "About Sphere Tour & Travel", "link": "/about/" },
+          { "label": "Welcome to Addis Ababa", "link": "/things-to-do/" },
+          { "label": "Safety & Responsibility", "link": "/about/#safety" },
+          { "label": "Google Reviews", "link": "/reviews/" }
+        ]
+      },
+      {
+        "title": "Explore",
+        "links": [
+          { "label": "City Tours", "link": "/tours/?category=city-tour" },
+          { "label": "Day Trips", "link": "/tours/?category=day-trip" },
+          { "label": "Private & Custom Tours", "link": "/custom-tour/" },
+          { "label": "Must-Sees in Addis Ababa", "link": "/things-to-do/" }
+        ]
+      },
+      {
+        "title": "Plan Your Visit",
+        "links": [
+          { "label": "Where to Stay", "link": "/where-to-stay/" },
+          { "label": "Car Hire & Transfers", "link": "/car-hire/" },
+          { "label": "Local Guides", "link": "/guides/" },
+          { "label": "Travel Guide", "link": "/travel-guide/" }
+        ]
+      },
+      {
+        "title": "Support & Legal",
+        "links": [
+          { "label": "FAQs", "link": "/travel-guide/" },
+          { "label": "Contact", "link": "/contact/" },
+          { "label": "Booking Policy", "link": "/terms/" },
+          { "label": "Terms and Conditions", "link": "/terms/" },
+          { "label": "Privacy Policy", "link": "/privacy/" },
+          { "label": "Cookie Preferences", "link": "/cookies/" },
+          { "label": "Cancellation Policy", "link": "/cancellation-policy/" }
+        ]
+      }
+    ],
+    "bottomRow": {
+      "copyright": "© 2026 Addis Ababa by Locals. All rights reserved.",
+      "poweredBy": "Powered by Sphere Tour & Travel"
+    }
+  },
+  "metadata": {
+    "lastUpdated": "2026-08-28",
+    "version": "1.0"
+  }
+}
