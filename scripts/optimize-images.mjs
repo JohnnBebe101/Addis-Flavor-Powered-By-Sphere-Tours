@@ -53,7 +53,12 @@ const MAX_LONG_EDGE = 1920;
 const AVIF_QUALITY = 50;
 const WEBP_QUALITY = 72;
 const JPEG_QUALITY = 72;
-const CONFIG_VERSION = 'v1';
+/**
+ * Bumped to v2 when the derivative width filter became inclusive. The hash is
+ * cache-keyed, so a stale v1 manifest would otherwise skip regenerating the
+ * 1920w hero derivative even after the fix.
+ */
+const CONFIG_VERSION = 'v2';
 
 /**
  * Open Graph / Twitter card image.
@@ -155,8 +160,14 @@ for (const source of sources) {
   originalBytes += statSync(source).size;
 
   if (wantDerivatives && entry.derivativesHash !== hash) {
-    const widths = widthSet.filter((w) => w < intrinsicWidth);
-    if (!widths.length) widths.push(Math.min(intrinsicWidth || 640, MAX_LONG_EDGE));
+    // The committed hero source is already capped at MAX_LONG_EDGE (1920px), so
+    // a strict `<` filter silently dropped the 1920w derivative that both
+    // StableHero's srcset and the image-budget gate require. Include widths that
+    // exactly match the source; `withoutEnlargement` still prevents upscaling on
+    // sources narrower than a requested step.
+    const maxWidth = Math.min(intrinsicWidth || 640, MAX_LONG_EDGE);
+    const widths = widthSet.filter((w) => w <= maxWidth);
+    if (!widths.length) widths.push(maxWidth);
 
     for (const width of widths) {
       const base = source.replace(/\.jpe?g$/i, '');

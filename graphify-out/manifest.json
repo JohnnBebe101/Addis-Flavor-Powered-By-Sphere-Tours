@@ -1625,80 +1625,80 @@
     "semantic_hash": ""
   },
   "public/images/about/cooking.jpg": {
-    "mtime": 1795197689.892,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451772.701,
+    "seen": 1795451900.3307562,
     "ast_hash": "2e32d5c03b317834a694c9007dd7a4f6",
     "semantic_hash": ""
   },
   "public/images/about/jebena.jpg": {
-    "mtime": 1795197690.197,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451772.953,
+    "seen": 1795451900.3307562,
     "ast_hash": "8db9ab7074eb2b34284700c4d6479e47",
     "semantic_hash": ""
   },
   "public/images/about/team-hero.jpg": {
-    "mtime": 1795197690.642,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451773.264,
+    "seen": 1795451900.3307562,
     "ast_hash": "17ea1425cf30addd15c449dff9e01ee0",
     "semantic_hash": ""
   },
   "public/images/destinations/addis-ababa-hero.jpg": {
-    "mtime": 1795197690.965,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451773.509,
+    "seen": 1795451900.3307562,
     "ast_hash": "787359fe4e37f1b463c29fb2534913ea",
     "semantic_hash": ""
   },
   "public/images/destinations/bishoftu-hero.jpg": {
-    "mtime": 1795197691.316,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451773.816,
+    "seen": 1795451900.3307562,
     "ast_hash": "2c4a75004551a46f3fa2b519c60c3fb9",
     "semantic_hash": ""
   },
   "public/images/destinations/debre-libanos-hero.jpg": {
-    "mtime": 1795197691.653,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451774.104,
+    "seen": 1795451900.3307562,
     "ast_hash": "469f8fd5e686589ac4af573d123e2e0b",
     "semantic_hash": ""
   },
   "public/images/destinations/menagesha-forest-hero.jpg": {
-    "mtime": 1795197692.064,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451774.482,
+    "seen": 1795451900.3307562,
     "ast_hash": "913be3387dad21c6cc4c153eba7ad7e1",
     "semantic_hash": ""
   },
   "public/images/destinations/tiya-hero.jpg": {
-    "mtime": 1795197692.489,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451774.888,
+    "seen": 1795451900.3307562,
     "ast_hash": "4395811a09a5a850bf2dbfcc7cf6a8bf",
     "semantic_hash": ""
   },
   "public/images/hero/addis-ababa-city-hero.jpg": {
-    "mtime": 1795197714.199,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451792.768,
+    "seen": 1795451900.3307562,
     "ast_hash": "c23316740cd1b6573813bee805308666",
     "semantic_hash": ""
   },
   "public/images/hero/addis-ababa-national-museum.jpg": {
-    "mtime": 1795197714.672,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451793.171,
+    "seen": 1795451900.3307562,
     "ast_hash": "e2018bd3b4e8876b2afca71c83245ab5",
     "semantic_hash": ""
   },
   "public/images/hero/debre-libanos-monastery.jpg": {
-    "mtime": 1795197715.292,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451793.556,
+    "seen": 1795451900.3307562,
     "ast_hash": "acb0f4bb0b4ea6696a58ac447f0568ba",
     "semantic_hash": ""
   },
   "public/images/hero/final-cta-bg.jpg": {
-    "mtime": 1795197715.971,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451793.951,
+    "seen": 1795451900.3307562,
     "ast_hash": "e6b644fc828c82933d2f77c94dbbde13",
     "semantic_hash": ""
   },
   "public/images/hero/private-tour-entoto.jpg": {
-    "mtime": 1795197716.833,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451794.391,
+    "seen": 1795451900.3307562,
     "ast_hash": "222d241d45a942ea31ce2f0b14048f5b",
     "semantic_hash": ""
   },
@@ -1721,254 +1721,254 @@
     "semantic_hash": ""
   },
   "public/images/tours/addis-ababa-highlights-entoto.jpg": {
-    "mtime": 1795197717.128,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451794.527,
+    "seen": 1795451900.3323703,
     "ast_hash": "68ef6e1207e7d91edbc1c11915d6ff4f",
     "semantic_hash": ""
   },
   "public/images/tours/addis-ababa-highlights-hero.jpg": {
-    "mtime": 1795197717.616,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451794.754,
+    "seen": 1795451900.3323703,
     "ast_hash": "77dd9af13cd6979e9118c327ddfefac1",
     "semantic_hash": ""
   },
   "public/images/tours/addis-ababa-highlights-holy-trinity.jpg": {
-    "mtime": 1795197717.879,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451794.899,
+    "seen": 1795451900.3323703,
     "ast_hash": "839f4ff91f125c5722fd0bdad5164cf5",
     "semantic_hash": ""
   },
   "public/images/tours/addis-ababa-highlights-national-museum.jpg": {
-    "mtime": 1795197718.163,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451795.042,
+    "seen": 1795451900.3323703,
     "ast_hash": "9b4299b7e8feaaae7c6d6e5eaf26e00a",
     "semantic_hash": ""
   },
   "public/images/tours/airport-layover-entoto.jpg": {
-    "mtime": 1795197718.384,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451795.211,
+    "seen": 1795451900.3323703,
     "ast_hash": "da8a54814839bd469adf90b10b21709b",
     "semantic_hash": ""
   },
   "public/images/tours/airport-layover-hero.jpg": {
-    "mtime": 1795197718.757,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451795.473,
+    "seen": 1795451900.3323703,
     "ast_hash": "ad9da86b676499a3883206768b9fa009",
     "semantic_hash": ""
   },
   "public/images/tours/airport-layover-national-museum.jpg": {
-    "mtime": 1795197718.944,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451795.639,
+    "seen": 1795451900.3323703,
     "ast_hash": "d971a624c7f2664ba24732227cf32589",
     "semantic_hash": ""
   },
   "public/images/tours/bishoftu-crater-lakes-gari.jpg": {
-    "mtime": 1795197719.194,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451795.823,
+    "seen": 1795451900.3323703,
     "ast_hash": "cec9396efb9f3f5ce9f400906d8fd776",
     "semantic_hash": ""
   },
   "public/images/tours/bishoftu-crater-lakes-hero.jpg": {
-    "mtime": 1795197719.532,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451796.029,
+    "seen": 1795451900.3323703,
     "ast_hash": "469f8fd5e686589ac4af573d123e2e0b",
     "semantic_hash": ""
   },
   "public/images/tours/bishoftu-crater-lakes-hora.jpg": {
-    "mtime": 1795197719.836,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451796.218,
+    "seen": 1795451900.3323703,
     "ast_hash": "2ce5a90f86a64f6fca411dbc7fdde959",
     "semantic_hash": ""
   },
   "public/images/tours/bishoftu-crater-lakes-resort.jpg": {
-    "mtime": 1795197720.073,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451796.354,
+    "seen": 1795451900.3323703,
     "ast_hash": "8e6f4817129609dba9f3c14a136d1b35",
     "semantic_hash": ""
   },
   "public/images/tours/debre-libanos-gelada-baboons.jpg": {
-    "mtime": 1795197720.361,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451796.523,
+    "seen": 1795451900.3323703,
     "ast_hash": "c80d718e5191e3b119cb267c00c78612",
     "semantic_hash": ""
   },
   "public/images/tours/debre-libanos-gorge.jpg": {
-    "mtime": 1795197720.706,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451796.645,
+    "seen": 1795451900.3323703,
     "ast_hash": "da8a54814839bd469adf90b10b21709b",
     "semantic_hash": ""
   },
   "public/images/tours/debre-libanos-hero.jpg": {
-    "mtime": 1795197721.059,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451796.848,
+    "seen": 1795451900.3323703,
     "ast_hash": "469f8fd5e686589ac4af573d123e2e0b",
     "semantic_hash": ""
   },
   "public/images/tours/debre-libanos-monastery.jpg": {
-    "mtime": 1795197721.308,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451797.021,
+    "seen": 1795451900.3323703,
     "ast_hash": "4b6ef27581bbe4b45a2ac0970590c1a7",
     "semantic_hash": ""
   },
   "public/images/tours/debre-libanos-portuguese-bridge.jpg": {
-    "mtime": 1795197721.496,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451797.183,
+    "seen": 1795451900.3323703,
     "ast_hash": "23524fed8cfd41e9dc32aa3b2c1c0acf",
     "semantic_hash": ""
   },
   "public/images/tours/full-day-addis-ababa-coffee-ceremony.jpg": {
-    "mtime": 1795197721.712,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451797.315,
+    "seen": 1795451900.3323703,
     "ast_hash": "c2257ddd598a17b7883f7f3836fe721f",
     "semantic_hash": ""
   },
   "public/images/tours/full-day-addis-ababa-entoto.jpg": {
-    "mtime": 1795197721.905,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451797.467,
+    "seen": 1795451900.3323703,
     "ast_hash": "da8a54814839bd469adf90b10b21709b",
     "semantic_hash": ""
   },
   "public/images/tours/full-day-addis-ababa-hero.jpg": {
-    "mtime": 1795197722.373,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451797.75,
+    "seen": 1795451900.3323703,
     "ast_hash": "9f1f606e5d3448e1da5b92f46efd9f64",
     "semantic_hash": ""
   },
   "public/images/tours/full-day-addis-ababa-holy-trinity.jpg": {
-    "mtime": 1795197722.582,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451797.903,
+    "seen": 1795451900.3323703,
     "ast_hash": "88e6881ccda14c85531aa2b6d4063ff7",
     "semantic_hash": ""
   },
   "public/images/tours/full-day-addis-ababa-national-museum.jpg": {
-    "mtime": 1795197722.808,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451798.043,
+    "seen": 1795451900.3323703,
     "ast_hash": "4b6ef27581bbe4b45a2ac0970590c1a7",
     "semantic_hash": ""
   },
   "public/images/tours/half-day-addis-ababa-hero.jpg": {
-    "mtime": 1795197723.28,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451798.311,
+    "seen": 1795451900.3323703,
     "ast_hash": "9ba80625f5fbdb3add12da2e0af42378",
     "semantic_hash": ""
   },
   "public/images/tours/half-day-addis-ababa-merkato.jpg": {
-    "mtime": 1795197723.564,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451798.463,
+    "seen": 1795451900.3323703,
     "ast_hash": "7f6343dcb4bc920d54b6a65dd0f2f1cf",
     "semantic_hash": ""
   },
   "public/images/tours/half-day-addis-ababa-meskel-square.jpg": {
-    "mtime": 1795197723.756,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451798.569,
+    "seen": 1795451900.3323703,
     "ast_hash": "23524fed8cfd41e9dc32aa3b2c1c0acf",
     "semantic_hash": ""
   },
   "public/images/tours/half-day-addis-ababa-national-museum.jpg": {
-    "mtime": 1795197723.914,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451798.674,
+    "seen": 1795451900.3323703,
     "ast_hash": "d971a624c7f2664ba24732227cf32589",
     "semantic_hash": ""
   },
   "public/images/tours/menagesha-forest-hero.jpg": {
-    "mtime": 1795197724.322,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451798.894,
+    "seen": 1795451900.3323703,
     "ast_hash": "b3262bdedec0c06ce243e9383223bb5e",
     "semantic_hash": ""
   },
   "public/images/tours/menagesha-forest-trail.jpg": {
-    "mtime": 1795197724.523,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451799.034,
+    "seen": 1795451900.3323703,
     "ast_hash": "23524fed8cfd41e9dc32aa3b2c1c0acf",
     "semantic_hash": ""
   },
   "public/images/tours/menagesha-forest-waterfall.jpg": {
-    "mtime": 1795197724.788,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451799.157,
+    "seen": 1795451900.3323703,
     "ast_hash": "da8a54814839bd469adf90b10b21709b",
     "semantic_hash": ""
   },
   "public/images/tours/menagesha-forest-wildlife.jpg": {
-    "mtime": 1795197725.078,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451799.323,
+    "seen": 1795451900.3323703,
     "ast_hash": "c80d718e5191e3b119cb267c00c78612",
     "semantic_hash": ""
   },
   "public/images/tours/private-group-family.jpg": {
-    "mtime": 1795197725.314,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451799.458,
+    "seen": 1795451900.3323703,
     "ast_hash": "9b4299b7e8feaaae7c6d6e5eaf26e00a",
     "semantic_hash": ""
   },
   "public/images/tours/private-group-hero.jpg": {
-    "mtime": 1795197725.753,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451799.669,
+    "seen": 1795451900.3323703,
     "ast_hash": "26157cef607c2553709455ddc7e592c2",
     "semantic_hash": ""
   },
   "public/images/tours/private-group-vehicle.jpg": {
-    "mtime": 1795197726.072,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451799.836,
+    "seen": 1795451900.3323703,
     "ast_hash": "7f6343dcb4bc920d54b6a65dd0f2f1cf",
     "semantic_hash": ""
   },
   "public/images/tours/tiya-adadi-mariam-melka-kunture-adadi-mariam.jpg": {
-    "mtime": 1795197726.302,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451799.989,
+    "seen": 1795451900.3323703,
     "ast_hash": "b2d323c13b394accfa7ff74e12e1620f",
     "semantic_hash": ""
   },
   "public/images/tours/tiya-adadi-mariam-melka-kunture-hero.jpg": {
-    "mtime": 1795197726.531,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451800.13,
+    "seen": 1795451900.3323703,
     "ast_hash": "0085c7f48720e5322a669a429ed9a234",
     "semantic_hash": ""
   },
   "public/images/tours/tiya-adadi-mariam-melka-kunture-melka-kunture.jpg": {
-    "mtime": 1795197726.796,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451800.265,
+    "seen": 1795451900.3323703,
     "ast_hash": "cec9396efb9f3f5ce9f400906d8fd776",
     "semantic_hash": ""
   },
   "public/images/tours/tiya-adadi-mariam-melka-kunture-tiya-stelae.jpg": {
-    "mtime": 1795197727.053,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451800.445,
+    "seen": 1795451900.3323703,
     "ast_hash": "ff5bd5669f912edd6d751be89fa352b5",
     "semantic_hash": ""
   },
   "public/images/travel-guide/airport-layover-planning.jpg": {
-    "mtime": 1795197727.219,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451800.541,
+    "seen": 1795451900.3323703,
     "ast_hash": "db40ccc8fa6dec53d3d89801cf7f1816",
     "semantic_hash": ""
   },
   "public/images/travel-guide/best-time-to-visit.jpg": {
-    "mtime": 1795197727.416,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451800.652,
+    "seen": 1795451900.3323703,
     "ast_hash": "9f4e30d2508269c9a04fc09204920591",
     "semantic_hash": ""
   },
   "public/images/travel-guide/coffee-cultural-etiquette.jpg": {
-    "mtime": 1795197727.577,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451800.739,
+    "seen": 1795451900.3323703,
     "ast_hash": "b3d9b091927179d287749fb7765a04e4",
     "semantic_hash": ""
   },
   "public/images/travel-guide/day-trips-from-addis-ababa.jpg": {
-    "mtime": 1795197727.804,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451800.86,
+    "seen": 1795451900.3323703,
     "ast_hash": "6cd55c9d4e400668beb2427f953ec81a",
     "semantic_hash": ""
   },
   "public/images/travel-guide/things-to-do-addis-ababa.jpg": {
-    "mtime": 1795197728.033,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451800.986,
+    "seen": 1795451900.3323703,
     "ast_hash": "937b48345799d8e4bb11123a80c577ed",
     "semantic_hash": ""
   },
   "public/images/travel-guide/what-to-wear-religious-sites.jpg": {
-    "mtime": 1795197728.226,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451801.102,
+    "seen": 1795451900.3323703,
     "ast_hash": "6f072d9c701e024c7158bd9c558cf2c0",
     "semantic_hash": ""
   },
@@ -2021,9 +2021,9 @@
     "semantic_hash": ""
   },
   "scripts/optimize-images.mjs": {
-    "mtime": 1795197640.7874453,
-    "seen": 1795281268.0857942,
-    "ast_hash": "669c49675e16e8f8e4bc6774291a7e4a",
+    "mtime": 1795451607.268923,
+    "seen": 1795451900.1787753,
+    "ast_hash": "9c3f3bf8465ba08c4b9ac2ac0862e489",
     "semantic_hash": ""
   },
   "scripts/check-image-budget.mjs": {
@@ -2099,14 +2099,14 @@
     "semantic_hash": ""
   },
   "public/images/hero/addis-ababa-city-hero-768.webp": {
-    "mtime": 1795197696.545,
-    "seen": 1795281268.1989603,
+    "mtime": 1795451779.15,
+    "seen": 1795451900.3307562,
     "ast_hash": "88f88f2fd26da17a8051996b317a8312",
     "semantic_hash": ""
   },
   "public/images/og/addis-ababa-city-hero-og.jpg": {
-    "mtime": 1795119941.921,
-    "seen": 1795281268.1999595,
+    "mtime": 1795451801.435,
+    "seen": 1795451900.3323703,
     "ast_hash": "5944b2a4a9083ea14345985dafb3148c",
     "semantic_hash": ""
   },

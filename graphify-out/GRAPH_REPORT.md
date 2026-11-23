@@ -1,7 +1,7 @@
 # Graph Report - Addis-Flavor-Powered-By-Sphere-Tours  (2026-11-23)
 
 ## Corpus Check
-- 141 files · ~266,505 words
+- 141 files · ~266,597 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 15 file(s) not represented in the graph (top: .woff2 5, (none) 4, .css 2)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `978b9ec2`
+- Built from commit: `1fbb376d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -51,21 +51,21 @@
 5. `compilerOptions` - 17 edges
 6. `Homepage()` - 16 edges
 7. `Layout()` - 12 edges
-8. `main()` - 11 edges
-9. `SEO()` - 11 edges
-10. `Tour` - 11 edges
+8. `Tour` - 11 edges
+9. `main()` - 11 edges
+10. `SEO()` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Footer()` --calls--> `BrandLogo()`  [EXTRACTED]
-  src/components/home/Footer.tsx → src/components/BrandLogo.tsx
-- `CookiePreferences()` --calls--> `useCookieConsent()`  [EXTRACTED]
-  src/components/CookiePreferences.tsx → src/context/CookieConsentContext.tsx
-- `Layout()` --calls--> `Navbar()`  [EXTRACTED]
-  src/router/Layout.tsx → src/components/Navbar.tsx
-- `Homepage()` --calls--> `SEO()`  [EXTRACTED]
-  src/pages/Homepage.tsx → src/components/SEO.tsx
 - `BookingStep2Props` --references--> `BookingFormData`  [EXTRACTED]
   src/components/booking/BookingStep2.tsx → src/types/booking.ts
+- `TourCardGridProps` --references--> `Tour`  [EXTRACTED]
+  src/components/home/TourCardGrid.tsx → src/types.ts
+- `Homepage()` --calls--> `SEO()`  [EXTRACTED]
+  src/pages/Homepage.tsx → src/components/SEO.tsx
+- `Footer()` --calls--> `BrandLogo()`  [EXTRACTED]
+  src/components/home/Footer.tsx → src/components/BrandLogo.tsx
+- `Layout()` --calls--> `Navbar()`  [EXTRACTED]
+  src/router/Layout.tsx → src/components/Navbar.tsx
 
 ## Import Cycles
 - None detected.
