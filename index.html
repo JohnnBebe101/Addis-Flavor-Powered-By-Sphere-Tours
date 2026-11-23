@@ -57,13 +57,15 @@
       crossorigin
     />
 
-    <!-- Hero image preload.
-         The hero image is not the LCP element — Chrome treats it as
-         non-contentful, so the hero paragraph owns the LCP. It is preloaded at
-         LOW priority on purpose: Lighthouse excludes low-priority images from
-         the simulated LCP dependency graph, so the hero picture can never hold
-         the LCP back, while the browser still starts fetching it immediately
-         instead of waiting for React to render the hero. -->
+    <!-- Hero image preload — the LCP element.
+         This full-viewport <img> has meaningful alt text, so Chrome treats it as
+         contentful: it IS the LCP candidate, not the paragraph behind it. It was
+         previously preloaded at LOW priority on the assumption that Lighthouse
+         excludes low-priority images from LCP — that only hides the problem in the
+         lab while real-world LCP waits behind the JS chunks and fonts. Preload it
+         at high priority so the download starts during HTML parsing, before React
+         renders the <picture>. The srcset matches StableHero.heroSrcSet() so the
+         preload resolves to the exact same candidate the browser will use. -->
     <link
       rel="preload"
       as="image"
@@ -71,7 +73,7 @@
       href="/images/hero/addis-ababa-city-hero-1920.avif"
       imagesrcset="/images/hero/addis-ababa-city-hero-640.avif 640w, /images/hero/addis-ababa-city-hero-768.avif 768w, /images/hero/addis-ababa-city-hero-1280.avif 1280w, /images/hero/addis-ababa-city-hero-1920.avif 1920w"
       imagesizes="100vw"
-      fetchpriority="low"
+      fetchpriority="high"
     />
 
   </head>
