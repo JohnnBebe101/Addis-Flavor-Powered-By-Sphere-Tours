@@ -1,17 +1,17 @@
-# Graph Report - Addis-Flavor-Powered-By-Sphere-Tours  (2026-11-23)
+# Graph Report - Addis-Flavor-Powered-By-Sphere-Tours  (2026-11-24)
 
 ## Corpus Check
-- 141 files · ~266,597 words
+- 142 files · ~266,520 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 15 file(s) not represented in the graph (top: .woff2 5, (none) 4, .css 2)
 
 ## Summary
-- 623 nodes · 1074 edges · 26 communities (24 shown, 2 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 2 edges (avg confidence: 0.85)
+- 634 nodes · 1094 edges · 27 communities (25 shown, 2 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1fbb376d`
+- Built from commit: `e418db5c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -42,10 +42,11 @@
 - inline-css.mjs
 - check-image-budget.mjs
 - optimize-svg.mjs
+- JSONLD.tsx
 
 ## God Nodes (most connected - your core abstractions)
 1. `lucide-react` - 52 edges
-2. `react` - 46 edges
+2. `react` - 47 edges
 3. `react-router-dom` - 24 edges
 4. `scripts` - 18 edges
 5. `compilerOptions` - 17 edges
@@ -56,53 +57,53 @@
 10. `SEO()` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `CookiePreferences()` --calls--> `useCookieConsent()`  [EXTRACTED]
+  src/components/CookiePreferences.tsx → src/context/cookieConsent.ts
 - `BookingStep2Props` --references--> `BookingFormData`  [EXTRACTED]
   src/components/booking/BookingStep2.tsx → src/types/booking.ts
 - `TourCardGridProps` --references--> `Tour`  [EXTRACTED]
   src/components/home/TourCardGrid.tsx → src/types.ts
 - `Homepage()` --calls--> `SEO()`  [EXTRACTED]
   src/pages/Homepage.tsx → src/components/SEO.tsx
-- `Footer()` --calls--> `BrandLogo()`  [EXTRACTED]
-  src/components/home/Footer.tsx → src/components/BrandLogo.tsx
-- `Layout()` --calls--> `Navbar()`  [EXTRACTED]
-  src/router/Layout.tsx → src/components/Navbar.tsx
+- `Layout()` --calls--> `Footer()`  [EXTRACTED]
+  src/router/Layout.tsx → src/components/home/Footer.tsx
 
 ## Import Cycles
 - None detected.
 
-## Communities (26 total, 2 thin omitted)
+## Communities (27 total, 2 thin omitted)
 
 ### Community 0 - "types.ts"
 Cohesion: 0.03
 Nodes (74): AboutData, AboutTeamMember, AboutWhyDifferentPoint, BookingData, BookingFlow, BookingFlowStep, BookingFormField, BookingPolicy (+66 more)
 
 ### Community 1 - "Homepage.tsx"
-Cohesion: 0.05
-Nodes (42): GoogleReviewsWidget(), SkeletonPlaceholder(), AddisHighlightsGridProps, FinalCTAProps, HeroIntentRouter(), TAB_ICONS, FormData, INITIAL_FORM (+34 more)
+Cohesion: 0.06
+Nodes (32): GoogleReviewsWidget(), SkeletonPlaceholder(), AddisHighlightsGridProps, FinalCTAProps, HeroIntentRouter(), TAB_ICONS, FormData, INITIAL_FORM (+24 more)
 
 ### Community 2 - "react"
 Cohesion: 0.10
-Nodes (30): FAQAccordionProps, react, BrandLogo(), BrandLogoProps, BrandLogoSize, BrandLogoVariant, sizeMap, srcMap (+22 more)
+Nodes (33): react, BrandLogo(), BrandLogoProps, BrandLogoSize, BrandLogoVariant, sizeMap, srcMap, Footer() (+25 more)
 
 ### Community 3 - "BookPage.tsx"
-Cohesion: 0.08
-Nodes (29): lucide-react, BookingStep1(), BookingStep1Props, BookingStep2(), BookingStep2Props, BookingStep3(), BookingStep3Props, BookingSuccess() (+21 more)
+Cohesion: 0.11
+Nodes (23): BookingStep1(), BookingStep1Props, BookingStep2(), BookingStep2Props, BookingStep3(), BookingStep3Props, BookingSuccess(), BookingSuccessProps (+15 more)
 
 ### Community 4 - "routes.tsx"
-Cohesion: 0.05
-Nodes (24): dependencies, lucide-react@^0.546.0, react@^19.0.1, react-dom@^19.0.1, react-helmet-async@^3.0.0, react-router-dom@^6.30.6, react-dom, react-helmet-async (+16 more)
+Cohesion: 0.07
+Nodes (14): dependencies, lucide-react@^0.546.0, react@^19.0.1, react-dom@^19.0.1, react-helmet-async@^3.0.0, react-router-dom@^6.30.6, react-dom, react-helmet-async (+6 more)
 
 ### Community 5 - "ContactModal.tsx"
-Cohesion: 0.13
-Nodes (12): ContactData, contactJson, ContactModal(), ContactModalProps, PhoneInput(), PhoneInputProps, SuccessMessage(), SuccessMessageProps (+4 more)
+Cohesion: 0.11
+Nodes (16): ContactData, contactJson, ContactModal(), ContactModalProps, countries, CountryCode, ParsedPhoneValue, parsePhoneValue() (+8 more)
 
 ### Community 6 - "Layout.tsx"
 Cohesion: 0.09
-Nodes (27): CookieConsentBanner(), CookiePreferences, CATEGORIES, CookiePreferences(), CookiePreferencesProps, ErrorBoundary, ErrorBoundaryState, FloatingWhatsApp() (+19 more)
+Nodes (28): CookieConsentBanner(), CookiePreferences, getClientSnapshot(), getServerSnapshot(), subscribeToClient(), CATEGORIES, CookiePreferences(), CookiePreferencesProps (+20 more)
 
 ### Community 7 - "AboutPage.tsx"
-Cohesion: 0.10
-Nodes (21): AboutFAQ(), AboutFAQProps, AboutHeroBanner(), AboutHeroBannerProps, AboutSection(), AboutSectionProps, AboutTabsNav(), AboutTabsNavProps (+13 more)
+Cohesion: 0.06
+Nodes (28): FAQAccordionProps, lucide-react, AboutFAQ(), AboutFAQProps, AboutHeroBanner(), AboutHeroBannerProps, AboutSection(), AboutSectionProps (+20 more)
 
 ### Community 8 - "compilerOptions"
 Cohesion: 0.11
@@ -168,25 +169,29 @@ Nodes (5): failures, files, HERO_AVIF_LIMITS, walk(), warnings
 Cohesion: 0.29
 Nodes (6): svgo@^4.1.0, svgo, changed, checkOnly, files, walk()
 
+### Community 26 - "JSONLD.tsx"
+Cohesion: 0.11
+Nodes (21): BreadcrumbJSONLD(), BreadcrumbLD, FAQJSONLD(), FAQPageLD, JSONLD(), JSONLDProps, LDData, LocalBusinessLD (+13 more)
+
 ## Knowledge Gaps
 - **1 isolated node(s):** `RFC-8141`
-  These have ≤1 connection - possible missing edges. (Counts symbols only; 311 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges. (Counts symbols only; 313 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `lucide-react` connect `BookPage.tsx` to `Homepage.tsx`, `react`, `routes.tsx`, `ContactModal.tsx`, `Layout.tsx`, `AboutPage.tsx`, `TourBookingModal.tsx`, `package.json`, `TourDetailPage.tsx`, `TestimonialsCarousel.tsx`?**
-  _High betweenness centrality (0.280) - this node is a cross-community bridge._
+- **Why does `lucide-react` connect `AboutPage.tsx` to `Homepage.tsx`, `react`, `BookPage.tsx`, `routes.tsx`, `ContactModal.tsx`, `Layout.tsx`, `TourBookingModal.tsx`, `package.json`, `TourDetailPage.tsx`, `TestimonialsCarousel.tsx`, `JSONLD.tsx`?**
+  _High betweenness centrality (0.277) - this node is a cross-community bridge._
 - **What connects `RFC-8141` to the rest of the system?**
   _1 weakly-connected nodes found - possible missing edges._
 - **Should `types.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.02666666666666667 - nodes in this community are weakly interconnected._
-- **Why does `react` connect `react` to `Homepage.tsx`, `BookPage.tsx`, `routes.tsx`, `ContactModal.tsx`, `Layout.tsx`, `AboutPage.tsx`, `TourBookingModal.tsx`, `package.json`, `TourDetailPage.tsx`, `TestimonialsCarousel.tsx`?**
-  _High betweenness centrality (0.233) - this node is a cross-community bridge._
+- **Why does `react` connect `react` to `Homepage.tsx`, `BookPage.tsx`, `routes.tsx`, `ContactModal.tsx`, `Layout.tsx`, `AboutPage.tsx`, `TourBookingModal.tsx`, `package.json`, `TourDetailPage.tsx`, `TestimonialsCarousel.tsx`, `JSONLD.tsx`?**
+  _High betweenness centrality (0.247) - this node is a cross-community bridge._
 - **Should `Homepage.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.05069124423963134 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06184012066365008 - nodes in this community are weakly interconnected._
 - **Why does `sharp` connect `ref_fs` to `package.json`, `optimize-images.mjs`?**
-  _High betweenness centrality (0.125) - this node is a cross-community bridge._
+  _High betweenness centrality (0.124) - this node is a cross-community bridge._
 - **Should `react` be split into smaller, more focused modules?**
-  _Cohesion score 0.09758454106280193 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10048309178743961 - nodes in this community are weakly interconnected._

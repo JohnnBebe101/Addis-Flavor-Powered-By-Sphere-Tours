@@ -24,5 +24,6 @@
   "22": "HowBookingWorks.tsx",
   "23": "inline-css.mjs",
   "24": "check-image-budget.mjs",
-  "25": "optimize-svg.mjs"
+  "25": "optimize-svg.mjs",
+  "26": "JSONLD.tsx"
 }
