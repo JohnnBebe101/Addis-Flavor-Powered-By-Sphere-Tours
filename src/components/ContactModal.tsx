@@ -197,7 +197,7 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
         <div className="p-6 border-b border-current/10 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <span className="w-2.5 h-2.5 rounded-full bg-gold animate-pulse" />
-            <span className="text-[10px] font-mono uppercase tracking-widest text-gold font-bold">
+            <span className="text-xs font-mono uppercase tracking-widest text-gold font-bold">
               SPHERE INQUIRY DESK
             </span>
           </div>
@@ -379,7 +379,7 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
                     </a>
                   </div>
                 </div>
-                <p className="text-[10px] font-mono opacity-60 italic pt-1 border-t border-current/10">
+                <p className="text-xs font-mono opacity-60 italic pt-1 border-t border-current/10">
                   {contactJson.contactInfo.officeHours}
                 </p>
               </div>

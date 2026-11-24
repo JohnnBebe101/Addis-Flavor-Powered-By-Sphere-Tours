@@ -62,11 +62,11 @@ export const WhyChooseUsHero: React.FC<WhyChooseUsHeroProps> = ({
                 <h3 className="text-sm lg:text-base font-bold text-teal mb-1 leading-snug group-hover:text-coffee-red transition-colors duration-200">
                   {benefits[0].title}
                 </h3>
-                <p className="text-[11px] text-teal/60 leading-relaxed mb-2 line-clamp-1">
+                <p className="text-xs text-teal/60 leading-relaxed mb-2 line-clamp-1">
                   {benefits[0].description}
                 </p>
                 {benefits[0].cta && (
-                  <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-coffee-red group-hover:underline transition-all duration-200">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-coffee-red group-hover:underline transition-all duration-200">
                     {benefits[0].cta}
                     <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
                   </span>
@@ -97,11 +97,11 @@ export const WhyChooseUsHero: React.FC<WhyChooseUsHeroProps> = ({
                 <h3 className="text-xs font-bold text-teal mb-0.5 leading-snug group-hover:text-coffee-red transition-colors duration-200 line-clamp-1">
                   {benefits[1].title}
                 </h3>
-                <p className="text-[10px] text-teal/60 leading-relaxed line-clamp-1 flex-1">
+                <p className="text-xs text-teal/60 leading-relaxed line-clamp-1 flex-1">
                   {benefits[1].description}
                 </p>
                 {benefits[1].cta && (
-                  <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-coffee-red group-hover:underline transition-all duration-200 mt-1.5">
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-coffee-red group-hover:underline transition-all duration-200 mt-1.5">
                     {benefits[1].cta}
                     <ArrowRight className="w-2.5 h-2.5 transition-transform duration-200 group-hover:translate-x-0.5" />
                   </span>
@@ -136,11 +136,11 @@ export const WhyChooseUsHero: React.FC<WhyChooseUsHeroProps> = ({
                   <h3 className="text-xs font-bold text-teal mb-0.5 leading-snug group-hover:text-coffee-red transition-colors duration-200 line-clamp-1">
                     {benefit.title}
                   </h3>
-                  <p className="text-[10px] text-teal/60 leading-relaxed line-clamp-1 flex-1">
+                  <p className="text-xs text-teal/60 leading-relaxed line-clamp-1 flex-1">
                     {benefit.description}
                   </p>
                   {benefit.cta && (
-                    <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-coffee-red group-hover:underline transition-all duration-200 mt-1">
+                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-coffee-red group-hover:underline transition-all duration-200 mt-1">
                       {benefit.cta}
                       <ArrowRight className="w-2.5 h-2.5 transition-transform duration-200 group-hover:translate-x-0.5" />
                     </span>

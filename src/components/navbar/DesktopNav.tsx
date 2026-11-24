@@ -61,7 +61,7 @@ export function DesktopNav({
             >
               {translations.brandName}
             </span>
-            <span className="text-[9px] font-mono uppercase tracking-widest text-gold mt-1">
+            <span className="text-xs font-mono uppercase tracking-widest text-gold mt-1">
               {'Powered by Sphere Tour & Travel'}
             </span>
           </div>

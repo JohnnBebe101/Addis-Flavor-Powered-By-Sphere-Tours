@@ -300,7 +300,7 @@ export const BookPage: React.FC = () => {
                     loading="lazy" className="w-full h-48 object-cover" />
                   <div className="p-5 space-y-3">
                     <div className="flex items-center gap-2">
-                      <span className="px-2 py-0.5 bg-gold/10 text-gold text-[10px] font-mono uppercase rounded-full">{selectedTour.tourType}</span>
+                      <span className="px-2 py-0.5 bg-gold/10 text-gold text-xs font-mono uppercase rounded-full">{selectedTour.tourType}</span>
                       <span className="text-xs text-teal/60">{selectedTour.duration}</span>
                     </div>
                     <h3 className="font-serif font-bold text-teal text-lg">{selectedTour.name}</h3>

@@ -115,7 +115,7 @@ export function PhoneInput({ value, onChange, required, helperText, id, name }: 
           </>
         )}
       </div>
-      <p id={`${baseId}-help`} className="text-[11px] text-teal/50 font-mono">
+      <p id={`${baseId}-help`} className="text-xs text-teal/50 font-mono">
         {isOther
           ? 'Include your country code (e.g., +1 for US, +44 for UK)'
           : helperText || (selectedCountry && `e.g., ${selectedDial} ${selectedCountry.placeholder}`)}

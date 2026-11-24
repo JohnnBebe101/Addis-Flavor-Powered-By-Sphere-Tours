@@ -46,7 +46,7 @@ export function StableHero() {
 
       {/* 2. Centered content — eyebrow + headline + supporting copy + intent widget + support cue */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-32 pb-32">
-        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/70 mb-3 font-semibold">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-white/70 mb-3 font-semibold">
           {hero.eyebrow}
         </p>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white text-center mb-4 drop-shadow-lg">
@@ -84,7 +84,7 @@ export function StableHero() {
                 className="flex items-center justify-center gap-2 text-linen-white"
               >
                 <span>{BADGE_ICONS[badge.icon]}</span>
-                <span className="font-mono text-[11px] uppercase tracking-wider font-semibold">
+                <span className="font-mono text-xs uppercase tracking-wider font-semibold">
                   {badge.label}
                 </span>
               </div>

@@ -25,7 +25,7 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-x-4 md:gap-y-1 lg:gap-6 pb-6 md:pb-1.5 border-b border-linen-white/10">
           {footerColumns.map((col: { title: string; links: NavFooterLink[] }, colIdx: number) => (
             <div key={colIdx} className="space-y-2.5 md:space-y-0.5 lg:space-y-2.5">
-              <h4 className="font-mono text-[10px] uppercase tracking-wider text-gold font-bold">
+              <h4 className="font-mono text-xs uppercase tracking-wider text-gold font-bold">
                 {col.title}
               </h4>
               <ul className="space-y-1.5 md:space-y-0.5 lg:space-y-1.5 text-xs text-linen-white/70 font-sans">
@@ -48,7 +48,7 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
 
           {/* Column 5: Payment Methods — brand-colored card icons */}
           <div className="space-y-2.5 md:space-y-0.5 lg:space-y-2.5">
-            <h4 className="font-mono text-[10px] uppercase tracking-wider text-gold font-bold">
+            <h4 className="font-mono text-xs uppercase tracking-wider text-gold font-bold">
               Payment Methods
             </h4>
             <div className="flex flex-wrap items-center gap-2">
@@ -100,7 +100,7 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
 
         {/* Popular Destinations footer section */}
         <div className="py-4 md:py-1.5 lg:py-4 border-b border-linen-white/10">
-          <h4 className="text-center font-mono text-[10px] uppercase tracking-widest text-gold mb-3 md:mb-1.5 lg:mb-3 font-bold">
+          <h4 className="text-center font-mono text-xs uppercase tracking-widest text-gold mb-3 md:mb-1.5 lg:mb-3 font-bold">
             {'MOST POPULAR ADDIS ABABA DESTINATIONS'}
           </h4>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-0.5 lg:gap-2 text-center text-xs text-linen-white/60 font-sans">
@@ -117,7 +117,7 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
         </div>
 
         {/* Copyrights and Legal Links */}
-        <div className="pt-4 md:pt-1.5 lg:pt-4 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-1 text-[10px] text-linen-white/50 font-mono text-center md:text-left">
+        <div className="pt-4 md:pt-1.5 lg:pt-4 flex flex-col md:flex-row items-center justify-between gap-3 md:gap-1 text-xs text-linen-white/50 font-mono text-center md:text-left">
           <div className="flex items-center gap-2">
             <BrandLogo variant="mark" size="xs" className="opacity-50" />
             <p>{`© 2026 Addis Ababa by Locals. All rights reserved. Powered by Sphere Tour & Travel.`}</p>

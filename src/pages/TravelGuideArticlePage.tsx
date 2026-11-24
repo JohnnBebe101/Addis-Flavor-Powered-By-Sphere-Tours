@@ -25,7 +25,7 @@ export const TravelGuideArticlePage: React.FC = () => {
             <span className="font-mono text-xs uppercase tracking-widest text-gold font-bold">
               {article.category}
             </span>
-            <span className="text-[10px] text-teal/60">· {article.readTime}</span>
+            <span className="text-xs text-teal/60">· {article.readTime}</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-serif font-extrabold text-teal tracking-tight mb-4">
@@ -112,7 +112,7 @@ export const TravelGuideArticlePage: React.FC = () => {
                     <span className="font-mono text-xs uppercase tracking-widest text-gold font-bold">
                       {a.category}
                     </span>
-                    <span className="text-[10px] text-teal/60">· {a.readTime}</span>
+                    <span className="text-xs text-teal/60">· {a.readTime}</span>
                   </div>
                   <h3 className="text-lg font-serif font-bold text-teal mb-2">{a.title}</h3>
                   <p className="text-sm text-teal/70 leading-relaxed mb-4 flex-1">{a.excerpt}</p>

@@ -10,7 +10,7 @@ export const NotificationBar = () => {
           className="flex items-center space-x-1.5 text-linen-white/80 hover:text-gold transition-colors"
         >
           <Phone className="w-3 h-3" />
-          <span className="text-[10px] font-mono tracking-wider">+251-911-209-882</span>
+          <span className="text-xs font-mono tracking-wider">+251-911-209-882</span>
         </a>
         <span className="text-linen-white/20">|</span>
         <a
@@ -18,7 +18,7 @@ export const NotificationBar = () => {
           className="flex items-center space-x-1.5 text-linen-white/80 hover:text-gold transition-colors"
         >
           <Mail className="w-3 h-3" />
-          <span className="text-[10px] font-mono tracking-wider">info@addisabababylocals.com</span>
+          <span className="text-xs font-mono tracking-wider">info@addisabababylocals.com</span>
         </a>
       </div>
 

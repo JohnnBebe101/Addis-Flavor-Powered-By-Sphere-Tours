@@ -142,7 +142,7 @@ export function CookiePreferences({ onClose }: CookiePreferencesProps) {
             </button>
           </div>
 
-          <p className="mt-4 text-[10px] text-teal/50 text-center">
+          <p className="mt-4 text-xs text-teal/50 text-center">
             You can change your preferences at any time by clicking &ldquo;Cookie Settings&rdquo; in the footer.
           </p>
         </div>

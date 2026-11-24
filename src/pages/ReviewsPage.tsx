@@ -49,14 +49,14 @@ export const ReviewsPage: React.FC = () => {
                   "{review.text}"
                 </blockquote>
                 <div className="mt-4">
-                  <p className="font-mono text-[10px] uppercase tracking-wider text-teal/80">
+                  <p className="font-mono text-xs uppercase tracking-wider text-teal/80">
                     {review.author}
                     <span className="text-teal/30 mx-2">|</span>
                     <span className="font-sans text-teal/60">{review.location}</span>
                     <span className="text-teal/30 mx-2">|</span>
                     <span className="font-sans text-teal/60">{review.date}</span>
                   </p>
-                  <p className="text-[10px] text-teal/50 mt-1">{review.tourName}</p>
+                  <p className="text-xs text-teal/50 mt-1">{review.tourName}</p>
                 </div>
               </div>
             ))}
