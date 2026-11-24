@@ -38,6 +38,9 @@ html {
   --color-sandstone: #F8F9FA;
   --color-linen-white: #FFFFFF;
   --color-gold: #1E5A8A;
+  /* Accessible accent for text on the dark brand background. #1E5A8A only
+     reaches ~2.4:1 on #111827; this lightened blue clears 4.5:1. */
+  --color-gold-light: #8ABBE0;
   --color-dark-bg: #1B2430;
 
   --color-brand-primary-orange: #C75122;

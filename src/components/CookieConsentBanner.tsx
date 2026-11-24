@@ -48,7 +48,7 @@ export function CookieConsentBanner() {
               </p>
               <a
                 href="/cookies/"
-                className="text-xs text-gold underline hover:text-gold/80 transition-colors"
+                className="text-xs text-gold-light underline hover:text-gold-light/90 transition-colors"
               >
                 Read our Cookie Policy
               </a>
@@ -62,7 +62,7 @@ export function CookieConsentBanner() {
               </button>
               <button
                 onClick={() => setShowPreferences(true)}
-                className="px-4 py-2.5 text-xs font-mono uppercase tracking-wider border border-gold text-gold rounded-lg hover:bg-gold/10 transition-colors"
+                className="px-4 py-2.5 text-xs font-mono uppercase tracking-wider border border-gold-light text-gold-light rounded-lg hover:bg-gold-light/10 transition-colors"
               >
                 Manage
               </button>

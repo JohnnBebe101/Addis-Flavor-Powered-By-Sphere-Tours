@@ -42,9 +42,9 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({
             {badge && (
               <div className="flex items-center gap-3">
                 <div className="w-14 h-14 rounded-full bg-gold/20 flex items-center justify-center">
-                  <span className="text-gold font-serif font-bold text-lg">{badge.text}</span>
+                  <span className="text-gold-light font-serif font-bold text-lg">{badge.text}</span>
                 </div>
-                <span className="text-gold/80 font-mono text-xs uppercase tracking-wider">{badge.label}</span>
+                <span className="text-gold-light/90 font-mono text-xs uppercase tracking-wider">{badge.label}</span>
               </div>
             )}
 
@@ -62,13 +62,13 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({
             <div className="flex flex-col sm:flex-row items-start gap-4 pt-2">
               <a
                 href={ctaPrimaryLink}
-                className="px-8 py-3.5 rounded-full bg-gold hover:bg-gold/90 text-teal font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 transform active:scale-95 shadow-md"
+                className="px-8 py-3.5 rounded-full bg-gold hover:bg-gold/90 text-linen-white font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 transform active:scale-95 shadow-md"
               >
                 {ctaPrimary}
               </a>
               <a
                 href={ctaSecondaryLink}
-                className="px-8 py-3.5 rounded-full bg-transparent border-2 border-gold/50 hover:bg-gold/10 text-gold font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 transform active:scale-95"
+                className="px-8 py-3.5 rounded-full bg-transparent border-2 border-gold-light/60 hover:bg-gold-light/10 text-gold-light font-mono text-xs uppercase font-bold tracking-wider transition-all duration-300 transform active:scale-95"
               >
                 {ctaSecondary}
               </a>

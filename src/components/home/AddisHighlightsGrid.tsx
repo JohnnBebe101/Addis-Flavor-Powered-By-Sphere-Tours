@@ -42,7 +42,7 @@ export const AddisHighlightsGrid: React.FC<AddisHighlightsGridProps> = ({
               {attraction.image ? (
                 <img
                   src={attraction.image}
-                  alt={attraction.title}
+                  alt=""
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
