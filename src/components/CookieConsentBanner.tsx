@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, useSyncExternalStore, lazy, Suspense } from 'react';
 import { useCookieConsent } from '../context/CookieConsentContext';
 
 /*
@@ -9,22 +9,22 @@ const CookiePreferences = lazy(() =>
   import('./CookiePreferences').then((m) => ({ default: m.CookiePreferences })),
 );
 
+/*
+ * The server snapshot is used while hydrating the prerendered HTML. Switching
+ * to the client snapshot afterward mounts the banner without a setState effect.
+ */
+const subscribeToClient = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
+
 export function CookieConsentBanner() {
   const { hasInteracted, acceptAll, rejectAll } = useCookieConsent();
   const [showPreferences, setShowPreferences] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  /*
-   * The banner is only rendered after mount.
-   *
-   * The prerendered markup is produced on a machine with no localStorage, so it
-   * never contains the banner. Rendering it on the first client pass too would
-   * mean hydrating markup that was not there — and a returning visitor who
-   * already gave consent would get a different tree than the server sent. Both
-   * sides therefore render nothing on the first pass, and the banner appears
-   * one tick later if it is still needed.
-   */
-  useEffect(() => setMounted(true), []);
+  const mounted = useSyncExternalStore(
+    subscribeToClient,
+    getClientSnapshot,
+    getServerSnapshot,
+  );
 
   if (!mounted || hasInteracted) return null;
 

@@ -62,11 +62,13 @@ export const BookPage: React.FC = () => {
     specialRequirements: '',
     website_url: '',
   }));
+  const [syncedTourParam, setSyncedTourParam] = useState(initialTourId);
 
-  useEffect(() => {
-    const tourId = searchParams.get('tour');
-    if (tourId) setFormData((prev) => ({ ...prev, tourId }));
-  }, [searchParams]);
+  const tourParam = searchParams.get('tour');
+  if (tourParam && tourParam !== syncedTourParam) {
+    setSyncedTourParam(tourParam);
+    setFormData((prev) => ({ ...prev, tourId: tourParam }));
+  }
 
   useEffect(() => {
     const handleResize = () => {

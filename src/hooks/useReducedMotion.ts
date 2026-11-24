@@ -1,15 +1,24 @@
-import { useState, useEffect } from 'react';
+import { useSyncExternalStore } from 'react';
+
+const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)';
+
+function subscribe(_onStoreChange: () => void): () => void {
+  if (typeof window === 'undefined' || !window.matchMedia) return () => {};
+
+  const mq = window.matchMedia(REDUCED_MOTION_QUERY);
+  mq.addEventListener('change', _onStoreChange);
+  return () => mq.removeEventListener('change', _onStoreChange);
+}
+
+function getSnapshot(): boolean {
+  if (typeof window === 'undefined' || !window.matchMedia) return false;
+  return window.matchMedia(REDUCED_MOTION_QUERY).matches;
+}
+
+function getServerSnapshot(): boolean {
+  return false;
+}
 
 export function useReducedMotion(): boolean {
-  const [prefersReduced, setPrefersReduced] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setPrefersReduced(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setPrefersReduced(e.matches);
-    mq.addEventListener('change', handler);
-    return () => mq.removeEventListener('change', handler);
-  }, []);
-
-  return prefersReduced;
+  return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 }

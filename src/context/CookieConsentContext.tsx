@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react';
+import { createContext, useContext, useState, useCallback, type ReactNode } from 'react';
 
 const STORAGE_KEY = 'cookie-consent';
 
@@ -48,11 +48,7 @@ function saveConsent(prefs: ConsentPreferences) {
 
 export function CookieConsentProvider({ children }: { children: ReactNode }) {
   const [consent, setConsentState] = useState<ConsentPreferences | null>(loadConsent);
-  const [hasInteracted, setHasInteracted] = useState(() => consent !== null);
-
-  useEffect(() => {
-    setHasInteracted(consent !== null);
-  }, [consent]);
+  const hasInteracted = consent !== null;
 
   const setConsent = useCallback((prefs: ConsentPreferences) => {
     const next = { ...prefs, necessary: true };
@@ -71,7 +67,6 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
   const resetConsent = useCallback(() => {
     localStorage.removeItem(STORAGE_KEY);
     setConsentState(null);
-    setHasInteracted(false);
   }, []);
 
   return (

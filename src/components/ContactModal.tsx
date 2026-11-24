@@ -135,7 +135,7 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
     };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen]);
+  }, [isOpen, resetForm]);
 
   useEffect(() => {
     if (!isOpen) return;

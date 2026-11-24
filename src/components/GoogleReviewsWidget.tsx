@@ -34,8 +34,8 @@ function SkeletonPlaceholder() {
 
 export const GoogleReviewsWidget: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
+  const scriptRequestedRef = useRef(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [scriptLoaded, setScriptLoaded] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -43,9 +43,20 @@ export const GoogleReviewsWidget: React.FC = () => {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
+        if (!entries[0].isIntersecting) return;
+
+        if (!scriptRequestedRef.current) {
+          scriptRequestedRef.current = true;
+          if (!document.querySelector(SCRIPT_SELECTOR)) {
+            const script = document.createElement('script');
+            script.src = ELSIGHT_SCRIPT_URL;
+            script.async = true;
+            document.head.appendChild(script);
+          }
         }
+
+        setIsVisible(true);
+        observer.disconnect();
       },
       { threshold: 0, rootMargin: '200px' }
     );
@@ -53,19 +64,6 @@ export const GoogleReviewsWidget: React.FC = () => {
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
-
-  useEffect(() => {
-    if (!isVisible || scriptLoaded) return;
-
-    if (!document.querySelector(SCRIPT_SELECTOR)) {
-      const script = document.createElement('script');
-      script.src = ELSIGHT_SCRIPT_URL;
-      script.async = true;
-      document.head.appendChild(script);
-    }
-
-    setScriptLoaded(true);
-  }, [isVisible, scriptLoaded]);
 
   return (
     <div ref={ref}>

@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useId } from 'react';
+import { useId } from 'react';
 import { ChevronDown } from 'lucide-react';
 import countryCodesData from '../../content/country-codes.json';
 
@@ -11,58 +11,57 @@ interface PhoneInputProps {
   name?: string;
 }
 
+interface CountryCode {
+  code: string;
+  name: string;
+  dial: string;
+  flag: string;
+  placeholder: string;
+}
+
+interface ParsedPhoneValue {
+  isOther: boolean;
+  selectedDial: string;
+  localNumber: string;
+  manualNumber: string;
+}
+
+const countries = countryCodesData.countries as CountryCode[];
+const defaultDial = countries.find(c => c.code === countryCodesData.defaultCountryCode)?.dial || '+971';
+
+function parsePhoneValue(value: string): ParsedPhoneValue {
+  if (!value) {
+    return { isOther: false, selectedDial: defaultDial, localNumber: '', manualNumber: '' };
+  }
+
+  const match = countries.find(c => c.dial && value.startsWith(c.dial));
+  if (match && match.code !== 'OTHER') {
+    return {
+      isOther: false,
+      selectedDial: match.dial,
+      localNumber: value.slice(match.dial.length),
+      manualNumber: '',
+    };
+  }
+
+  return { isOther: true, selectedDial: defaultDial, localNumber: '', manualNumber: value };
+}
+
 export function PhoneInput({ value, onChange, required, helperText, id, name }: PhoneInputProps) {
   const generatedId = useId();
   const baseId = id || generatedId;
-  const countries = countryCodesData.countries;
-  const defaultDial = countries.find(c => c.code === countryCodesData.defaultCountryCode)?.dial || '+971';
-
-  const [isOther, setIsOther] = useState(false);
-  const [selectedDial, setSelectedDial] = useState(defaultDial);
-  const [localNumber, setLocalNumber] = useState('');
-  const [manualNumber, setManualNumber] = useState('');
-
-  const stableOnChange = useCallback((val: string) => {
-    onChange(val);
-  }, [onChange]);
-
-  useEffect(() => {
-    if (!value) return;
-    const match = countries.find(c => c.dial && value.startsWith(c.dial));
-    if (match && match.code !== 'OTHER') {
-      setIsOther(false);
-      setSelectedDial(match.dial);
-      setLocalNumber(value.slice(match.dial.length));
-    } else {
-      setIsOther(true);
-      setManualNumber(value);
-    }
-  }, [value]);
-
-  useEffect(() => {
-    if (isOther) {
-      stableOnChange(manualNumber);
-    } else {
-      stableOnChange(localNumber ? `${selectedDial}${localNumber}` : '');
-    }
-  }, [isOther, selectedDial, localNumber, manualNumber, stableOnChange]);
+  const { isOther, selectedDial, localNumber, manualNumber } = parsePhoneValue(value);
+  const selectedCountry = countries.find(c => c.dial === selectedDial);
 
   const handleCountryChange = (dial: string) => {
     if (dial === '') {
-      setIsOther(true);
-      setManualNumber(localNumber ? `${selectedDial}${localNumber}` : '');
-    } else {
-      setIsOther(false);
-      setSelectedDial(dial);
-      if (manualNumber) {
-        const stripped = manualNumber.startsWith('+') ? manualNumber.slice(1) : manualNumber;
-        setLocalNumber(stripped);
-        setManualNumber('');
-      }
+      onChange(localNumber ? `${selectedDial}${localNumber}` : '');
+      return;
     }
-  };
 
-  const selectedCountry = countries.find(c => c.dial === selectedDial);
+    const stripped = manualNumber.startsWith('+') ? manualNumber.slice(1) : manualNumber;
+    onChange(`${dial}${stripped}`);
+  };
 
   return (
     <div className="space-y-1.5">
@@ -76,7 +75,7 @@ export function PhoneInput({ value, onChange, required, helperText, id, name }: 
             autoComplete="tel"
             aria-describedby={`${baseId}-help`}
             value={manualNumber}
-            onChange={(e) => setManualNumber(e.target.value)}
+            onChange={(e) => onChange(e.target.value)}
             placeholder="+1 201 555 0123"
             required={required}
             className="flex-1 min-w-0 px-4 py-3 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-2 focus:ring-coffee-red/20 focus:border-coffee-red transition-all font-mono"
@@ -107,7 +106,10 @@ export function PhoneInput({ value, onChange, required, helperText, id, name }: 
               autoComplete="tel"
               aria-describedby={`${baseId}-help`}
               value={localNumber}
-              onChange={(e) => setLocalNumber(e.target.value.replace(/[^\d\s-]/g, ''))}
+              onChange={(e) => {
+                const sanitized = e.target.value.replace(/[^\d\s-]/g, '');
+                onChange(sanitized ? `${selectedDial}${sanitized}` : '');
+              }}
               placeholder={selectedCountry?.placeholder || ''}
               required={required}
               className="flex-1 min-w-0 px-4 py-3 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm focus:outline-none focus:ring-2 focus:ring-coffee-red/20 focus:border-coffee-red transition-all"
