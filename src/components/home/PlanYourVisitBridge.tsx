@@ -155,7 +155,7 @@ export function PlanYourVisitBridge() {
                   <label
                     key={opt}
                     htmlFor={cbId}
-                    className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all cursor-pointer has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-coffee-red/40 ${
+                    className={`inline-flex min-h-[44px] items-center px-4 py-2 rounded-full text-xs font-mono transition-all cursor-pointer has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-coffee-red/40 ${
                       isSelected
                         ? 'bg-coffee-red text-linen-white'
                         : 'bg-sandstone text-teal/70 hover:bg-teal/10'
@@ -189,7 +189,7 @@ export function PlanYourVisitBridge() {
                   <label
                     key={opt}
                     htmlFor={cbId}
-                    className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all cursor-pointer has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-coffee-red/40 ${
+                    className={`inline-flex min-h-[44px] items-center px-4 py-2 rounded-full text-xs font-mono transition-all cursor-pointer has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-coffee-red/40 ${
                       isSelected
                         ? 'bg-coffee-red text-linen-white'
                         : 'bg-sandstone text-teal/70 hover:bg-teal/10'

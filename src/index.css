@@ -10,6 +10,29 @@ html {
   font-size: 16px;
 }
 
+/*
+ * Mobile touch-target floor.
+ *
+ * Buttons and form controls get a 44x44 CSS px minimum on small screens so no
+ * control depends on how much padding a particular Tailwind class happens to
+ * add. Inline text links are intentionally excluded: min-height does not apply
+ * to inline boxes, and forcing display:flex globally would break paragraph
+ * flow — those links get an inline-flex target in their components instead.
+ * Checkboxes/radios keep their native size; their labels carry the tap area.
+ */
+@media (max-width: 640px) {
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  input:not([type='hidden']):not([type='checkbox']):not([type='radio']),
+  select,
+  textarea {
+    min-height: 44px;
+  }
+}
+
 :root {
   --brand-primary-orange: #C75122;
   --brand-primary-orange-hover: #A84318;

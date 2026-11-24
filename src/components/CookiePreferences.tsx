@@ -84,7 +84,7 @@ export function CookiePreferences({ onClose }: CookiePreferencesProps) {
             <h2 className="text-xl font-serif font-bold text-teal">Cookie Preferences</h2>
             <button
               onClick={onClose}
-              className="w-8 h-8 flex items-center justify-center rounded-lg text-teal/50 hover:text-teal hover:bg-teal/5 transition-colors"
+              className="w-11 h-11 flex items-center justify-center rounded-lg text-teal/50 hover:text-teal hover:bg-teal/5 transition-colors"
               aria-label="Close"
             >
               <span className="text-lg leading-none">&times;</span>

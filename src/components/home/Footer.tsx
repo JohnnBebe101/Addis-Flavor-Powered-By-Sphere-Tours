@@ -32,11 +32,11 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
                 {col.links.map((link: NavFooterLink, linkIdx: number) => (
                   <li key={linkIdx}>
                     {link.external ? (
-                      <a href={link.link} target="_blank" rel="noopener noreferrer" className="hover:text-gold-light transition-colors">
+                      <a href={link.link} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center hover:text-gold-light transition-colors">
                         {link.label}
                       </a>
                     ) : (
-                      <a href={link.link} className="hover:text-gold-light transition-colors">
+                      <a href={link.link} className="inline-flex min-h-[44px] items-center hover:text-gold-light transition-colors">
                         {link.label}
                       </a>
                     )}
@@ -108,7 +108,7 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
               <a
                 key={idx}
                 href={`/destinations/${dest.name.toLowerCase().replace(/\s+/g, '-')}/`}
-                className="hover:text-gold-light transition-colors py-0.5 block"
+                className="flex min-h-[44px] items-center justify-center hover:text-gold-light transition-colors"
               >
                 {dest.name}
               </a>
@@ -127,7 +127,7 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
               .find((c: { title: string; links: NavFooterLink[] }) => c.title === 'Support & Legal')
               ?.links.filter((l: NavFooterLink) => ['Terms & Conditions', 'Privacy Policy', 'Cancellation Policy'].includes(l.label))
               .map((link: NavFooterLink, idx: number) => (
-                <a key={idx} href={link.link} className="hover:text-gold-light transition-colors">
+                <a key={idx} href={link.link} className="inline-flex min-h-[44px] items-center hover:text-gold-light transition-colors">
                   {link.label}
                 </a>
               ))}

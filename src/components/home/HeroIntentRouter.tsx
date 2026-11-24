@@ -62,12 +62,12 @@ export function HeroIntentRouter() {
 
   return (
     <div className="w-full">
-      <div className="flex gap-1 mb-3 bg-linen-white/80 backdrop-blur-sm rounded-xl p-1 border border-teal/10 shadow-sm overflow-x-auto">
+      <div className="flex gap-2 mb-3 bg-linen-white/80 backdrop-blur-sm rounded-xl p-1 border border-teal/10 shadow-sm overflow-x-auto">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => handleTabChange(tab.id)}
-            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg font-mono text-xs uppercase tracking-wider whitespace-nowrap transition-all duration-200 ${
+            className={`flex min-h-[44px] items-center gap-1.5 px-3 py-2 rounded-lg font-mono text-xs uppercase tracking-wider whitespace-nowrap transition-all duration-200 ${
               activeTab === tab.id
                 ? 'bg-coffee-red text-linen-white shadow-md'
                 : 'text-teal/70 hover:bg-teal/5 hover:text-teal'
