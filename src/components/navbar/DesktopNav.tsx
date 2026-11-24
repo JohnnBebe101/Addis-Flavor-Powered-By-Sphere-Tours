@@ -94,7 +94,7 @@ export function DesktopNav({
                 <button
                   key={item.label}
                   onClick={onContactClick}
-                  className={`px-5 py-2 rounded-full uppercase text-xs tracking-wider font-bold transition-all duration-300 ${
+                  className={`inline-flex min-h-[44px] items-center px-5 py-3 rounded-full uppercase text-xs tracking-wider font-bold transition-all duration-300 ${
                     isScrolled
                       ? 'bg-coffee-red text-linen-white hover:bg-coffee-red/90 shadow-md'
                       : 'bg-linen-white text-teal hover:bg-sandstone hover:scale-105'
@@ -109,7 +109,7 @@ export function DesktopNav({
               <a
                 key={item.label}
                 href={item.link}
-                className={`hover:text-coffee-red transition-colors duration-200 uppercase tracking-wider text-xs ${
+                className={`inline-flex min-h-[44px] items-center hover:text-coffee-red transition-colors duration-200 uppercase tracking-wider text-xs ${
                   isScrolled ? 'text-teal' : 'text-linen-white'
                 }`}
               >
@@ -122,7 +122,7 @@ export function DesktopNav({
           <a
             href="/tours/"
             onClick={handleExploreClick}
-            className={`px-5 py-2 rounded-full uppercase text-xs tracking-wider font-bold transition-all duration-300 ${
+            className={`inline-flex min-h-[44px] items-center px-5 py-3 rounded-full uppercase text-xs tracking-wider font-bold transition-all duration-300 ${
               isScrolled
                 ? 'bg-coffee-red text-linen-white hover:bg-coffee-red/90 shadow-md'
                 : 'bg-linen-white text-teal hover:bg-sandstone hover:scale-105'

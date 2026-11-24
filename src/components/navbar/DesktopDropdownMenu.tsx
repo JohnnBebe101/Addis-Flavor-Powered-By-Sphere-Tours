@@ -172,7 +172,7 @@ export function DesktopDropdownMenu({
                 onMouseLeave={handleCategoryLeave}
                 onClick={() => handleCategoryClick(col.title)}
                 role="menuitem"
-                className={`w-full text-left px-4 py-2.5 text-xs font-mono transition-colors duration-150 border-l-2 ${
+                className={`w-full min-h-[44px] text-left px-4 py-2.5 text-xs font-mono transition-colors duration-150 border-l-2 ${
                   activeCategory === col.title
                     ? 'bg-teal/5 text-coffee-red font-bold border-coffee-red'
                     : 'text-teal hover:bg-teal/5 hover:text-coffee-red border-transparent'
@@ -186,7 +186,7 @@ export function DesktopDropdownMenu({
                 <a
                   href={item.cta.link}
                   role="menuitem"
-                  className="block px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider text-coffee-red hover:bg-teal/5 transition-colors"
+                  className="flex min-h-[44px] items-center px-4 py-2.5 text-xs font-mono font-bold uppercase tracking-wider text-coffee-red hover:bg-teal/5 transition-colors"
                 >
                   {item.cta.label} →
                 </a>
@@ -202,7 +202,7 @@ export function DesktopDropdownMenu({
                   key={itemIdx}
                   href={subItem.link}
                   role="menuitem"
-                  className="flex items-center justify-between py-2 px-3 rounded-lg text-sm text-teal hover:bg-teal/5 hover:text-coffee-red transition-colors duration-150"
+                  className="flex min-h-[44px] items-center justify-between py-2 px-3 rounded-lg text-sm text-teal hover:bg-teal/5 hover:text-coffee-red transition-colors duration-150"
                 >
                   <span className="font-medium">{subItem.label}</span>
                 </a>

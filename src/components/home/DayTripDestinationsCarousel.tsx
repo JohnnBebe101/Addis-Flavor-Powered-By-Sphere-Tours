@@ -124,13 +124,17 @@ export const DayTripDestinationsCarousel: React.FC<DayTripDestinationsCarouselPr
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx * itemsPerView)}
-                className={`h-1.5 transition-all duration-300 rounded-full ${
-                  idx === Math.floor(activeIndex / itemsPerView)
-                    ? 'w-4 bg-coffee-red'
-                    : 'w-1.5 bg-teal/20'
-                }`}
+                className="flex h-11 w-11 items-center justify-center"
                 aria-label={`Go to slide ${idx + 1}`}
-              />
+              >
+                <span
+                  className={`block rounded-full transition-all duration-300 ${
+                    idx === Math.floor(activeIndex / itemsPerView)
+                      ? 'h-1.5 w-4 bg-coffee-red'
+                      : 'h-1.5 w-1.5 bg-teal/20'
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>

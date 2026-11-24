@@ -84,7 +84,7 @@ export function BookingStep1({
           <button
             type="button"
             onClick={() => handleGuestChange(-1)}
-            className="w-8 h-8 rounded-lg bg-linen-white hover:bg-teal/5 flex items-center justify-center font-bold text-sm text-teal active:scale-95 border border-teal/10"
+            className="w-11 h-11 rounded-lg bg-linen-white hover:bg-teal/5 flex items-center justify-center font-bold text-sm text-teal active:scale-95 border border-teal/10"
             aria-label="Decrease guests"
           >
             <Minus className="w-4 h-4" />
@@ -109,7 +109,7 @@ export function BookingStep1({
           <button
             type="button"
             onClick={() => handleGuestChange(1)}
-            className="w-8 h-8 rounded-lg bg-linen-white hover:bg-teal/5 flex items-center justify-center font-bold text-sm text-teal active:scale-95 border border-teal/10"
+            className="w-11 h-11 rounded-lg bg-linen-white hover:bg-teal/5 flex items-center justify-center font-bold text-sm text-teal active:scale-95 border border-teal/10"
             aria-label="Increase guests"
           >
             <Plus className="w-4 h-4" />

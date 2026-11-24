@@ -102,7 +102,7 @@ function MobileAccordionItem({
                           <a
                             href={subItem.link}
                             onClick={closeMenu}
-                            className={`flex items-center justify-between py-2 px-3 rounded-lg transition-colors text-sm ${
+                            className={`flex min-h-[44px] items-center justify-between py-2 px-3 rounded-lg transition-colors text-sm ${
                               isGlobalDark
                                 ? 'text-linen-white/80 hover:bg-white/5 hover:text-gold'
                                 : 'text-teal hover:bg-teal/5 hover:text-coffee-red'
@@ -281,7 +281,7 @@ export function MobileDrawer({
             <div className="flex items-center space-x-4">
               <a
                 href="https://instagram.com/addisabababylocals"
-                className="p-2 -m-2 opacity-70 hover:opacity-100 hover:text-gold transition-opacity"
+                className="flex min-h-[44px] min-w-[44px] items-center justify-center p-3 opacity-70 hover:opacity-100 hover:text-gold transition-opacity"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -290,7 +290,7 @@ export function MobileDrawer({
               </a>
               <a
                 href="https://facebook.com/addisabababylocals"
-                className="p-2 -m-2 opacity-70 hover:opacity-100 hover:text-gold transition-opacity"
+                className="flex min-h-[44px] min-w-[44px] items-center justify-center p-3 opacity-70 hover:opacity-100 hover:text-gold transition-opacity"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -299,7 +299,7 @@ export function MobileDrawer({
               </a>
               <a
                 href="https://tripadvisor.com/Attraction_Review-g1-addis-ababa"
-                className="p-2 -m-2 opacity-70 hover:opacity-100 hover:text-gold transition-opacity"
+                className="flex min-h-[44px] min-w-[44px] items-center justify-center p-3 opacity-70 hover:opacity-100 hover:text-gold transition-opacity"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="TripAdvisor"
