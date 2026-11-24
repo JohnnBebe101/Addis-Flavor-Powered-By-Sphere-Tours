@@ -25,18 +25,18 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-x-4 md:gap-y-1 lg:gap-6 pb-6 md:pb-1.5 border-b border-linen-white/10">
           {footerColumns.map((col: { title: string; links: NavFooterLink[] }, colIdx: number) => (
             <div key={colIdx} className="space-y-2.5 md:space-y-0.5 lg:space-y-2.5">
-              <h4 className="font-mono text-[10px] uppercase tracking-wider text-gold font-bold">
+              <h3 className="font-mono text-[10px] uppercase tracking-wider text-gold-light font-bold">
                 {col.title}
-              </h4>
+              </h3>
               <ul className="space-y-1.5 md:space-y-0.5 lg:space-y-1.5 text-xs text-linen-white/70 font-sans">
                 {col.links.map((link: NavFooterLink, linkIdx: number) => (
                   <li key={linkIdx}>
                     {link.external ? (
-                      <a href={link.link} target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">
+                      <a href={link.link} target="_blank" rel="noopener noreferrer" className="hover:text-gold-light transition-colors">
                         {link.label}
                       </a>
                     ) : (
-                      <a href={link.link} className="hover:text-gold transition-colors">
+                      <a href={link.link} className="hover:text-gold-light transition-colors">
                         {link.label}
                       </a>
                     )}
@@ -48,9 +48,9 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
 
           {/* Column 5: Payment Methods — brand-colored card icons */}
           <div className="space-y-2.5 md:space-y-0.5 lg:space-y-2.5">
-            <h4 className="font-mono text-[10px] uppercase tracking-wider text-gold font-bold">
+            <h3 className="font-mono text-[10px] uppercase tracking-wider text-gold-light font-bold">
               Payment Methods
-            </h4>
+            </h3>
             <div className="flex flex-wrap items-center gap-2">
               <div className="bg-white rounded px-1.5 py-1 flex items-center justify-center">
                 <svg viewBox="0 0 120 40" className="h-5 w-auto" xmlns="http://www.w3.org/2000/svg">
@@ -100,15 +100,15 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
 
         {/* Popular Destinations footer section */}
         <div className="py-4 md:py-1.5 lg:py-4 border-b border-linen-white/10">
-          <h4 className="text-center font-mono text-[10px] uppercase tracking-widest text-gold mb-3 md:mb-1.5 lg:mb-3 font-bold">
+          <h3 className="text-center font-mono text-[10px] uppercase tracking-widest text-gold-light mb-3 md:mb-1.5 lg:mb-3 font-bold">
             {'MOST POPULAR ADDIS ABABA DESTINATIONS'}
-          </h4>
+          </h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-0.5 lg:gap-2 text-center text-xs text-linen-white/60 font-sans">
             {NEIGHBORHOOD_DESTINATIONS.map((dest: { name: string }, idx: number) => (
               <a
                 key={idx}
                 href={`/destinations/${dest.name.toLowerCase().replace(/\s+/g, '-')}/`}
-                className="hover:text-gold transition-colors py-0.5 block"
+                className="hover:text-gold-light transition-colors py-0.5 block"
               >
                 {dest.name}
               </a>
@@ -127,7 +127,7 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
               .find((c: { title: string; links: NavFooterLink[] }) => c.title === 'Support & Legal')
               ?.links.filter((l: NavFooterLink) => ['Terms & Conditions', 'Privacy Policy', 'Cancellation Policy'].includes(l.label))
               .map((link: NavFooterLink, idx: number) => (
-                <a key={idx} href={link.link} className="hover:text-gold transition-colors">
+                <a key={idx} href={link.link} className="hover:text-gold-light transition-colors">
                   {link.label}
                 </a>
               ))}
