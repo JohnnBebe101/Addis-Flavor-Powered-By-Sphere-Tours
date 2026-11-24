@@ -6,14 +6,10 @@ import { useKeyboard } from '../../hooks/useKeyboard';
 import { useClickOutside } from '../../hooks/useClickOutside';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
 
-export function DesktopDropdownMenu({
-  item,
-  isScrolled,
-  translations,
-}: DesktopDropdownMenuProps) {
+export function DesktopDropdownMenu({ item, isScrolled, translations }: DesktopDropdownMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(
-    item.columns?.[0]?.title ?? null
+    item.columns?.[0]?.title ?? null,
   );
   const [panelPosition, setPanelPosition] = useState<'left' | 'right'>('left');
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -70,7 +66,7 @@ export function DesktopDropdownMenu({
       clearCategoryTimeout();
       setActiveCategory(catTitle);
     },
-    [clearCategoryTimeout]
+    [clearCategoryTimeout],
   );
 
   const handleCategoryLeave = useCallback(() => {
@@ -86,7 +82,7 @@ export function DesktopDropdownMenu({
       clearCategoryTimeout();
       setActiveCategory(catTitle);
     },
-    [clearCategoryTimeout]
+    [clearCategoryTimeout],
   );
 
   // Escape key to close
@@ -115,8 +111,7 @@ export function DesktopDropdownMenu({
     };
   }, [clearCloseTimeout, clearCategoryTimeout]);
 
-  const activeItems =
-    item.columns?.find((c) => c.title === activeCategory)?.items ?? [];
+  const activeItems = item.columns?.find((c) => c.title === activeCategory)?.items ?? [];
 
   const positionClass = panelPosition === 'right' ? 'right-0' : 'left-0';
 
@@ -135,12 +130,9 @@ export function DesktopDropdownMenu({
         aria-expanded={isOpen}
         onClick={isOpen ? () => setIsOpen(false) : open}
       >
-        {translations[`nav${item.label.replace(/\s+/g, '')}` as keyof Translations] ||
-          item.label}
+        {translations[`nav${item.label.replace(/\s+/g, '')}` as keyof Translations] || item.label}
         <ChevronDown
-          className={`w-3 h-3 transition-transform duration-200 ${
-            isOpen ? 'rotate-180' : ''
-          }`}
+          className={`w-3 h-3 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
 

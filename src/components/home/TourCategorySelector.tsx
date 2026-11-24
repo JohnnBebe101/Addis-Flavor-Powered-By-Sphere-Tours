@@ -76,7 +76,9 @@ export const TourCategorySelector: React.FC<TourCategorySelectorProps> = ({
                 {/* CTA button */}
                 <span className="inline-flex items-center justify-center w-full px-4 py-2 rounded-lg text-sm font-semibold bg-coffee-red text-linen-white group-hover:bg-gold transition-colors duration-200">
                   View Tours
-                  <span className="ml-1.5 transition-transform duration-200 group-hover:translate-x-1">→</span>
+                  <span className="ml-1.5 transition-transform duration-200 group-hover:translate-x-1">
+                    →
+                  </span>
                 </span>
               </div>
             </a>

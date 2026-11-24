@@ -36,9 +36,7 @@ export function ServiceDiscoveryCard({ services }: ServiceDiscoveryCardProps) {
           <h3 className="text-lg font-serif font-bold text-teal mb-2 group-hover:text-coffee-red transition-colors">
             {service.title}
           </h3>
-          <p className="text-sm text-teal/70 mb-4 flex-1 leading-relaxed">
-            {service.description}
-          </p>
+          <p className="text-sm text-teal/70 mb-4 flex-1 leading-relaxed">{service.description}</p>
           <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-coffee-red group-hover:underline">
             {service.cta}
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />

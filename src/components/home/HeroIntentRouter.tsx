@@ -79,21 +79,22 @@ export function HeroIntentRouter() {
         ))}
       </div>
 
-      <form onSubmit={handleSubmit} className="bg-linen-white/90 backdrop-blur-sm rounded-2xl p-3 border border-teal/10 shadow-lg">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-linen-white/90 backdrop-blur-sm rounded-2xl p-3 border border-teal/10 shadow-lg"
+      >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-2">
           {currentTab.fields.map((field) => {
             const fieldId = `hero-${currentTab.id}-${field.name}`;
             const errorId = `${fieldId}-error`;
             const describedBy = errors[field.name] ? errorId : undefined;
             const autoComplete =
-              field.type === 'email'
-                ? 'email'
-                : field.type === 'tel'
-                  ? 'tel'
-                  : 'off';
+              field.type === 'email' ? 'email' : field.type === 'tel' ? 'tel' : 'off';
             return (
               <div key={field.name} className={field.type === 'textarea' ? 'sm:col-span-2' : ''}>
-                <label htmlFor={fieldId} className="block text-xs font-mono text-teal/80 mb-1">{field.label}</label>
+                <label htmlFor={fieldId} className="block text-xs font-mono text-teal/80 mb-1">
+                  {field.label}
+                </label>
                 {field.type === 'select' ? (
                   <select
                     id={fieldId}
@@ -106,7 +107,9 @@ export function HeroIntentRouter() {
                   >
                     <option value="">{field.placeholder}</option>
                     {field.options?.map((opt) => (
-                      <option key={opt} value={opt}>{opt}</option>
+                      <option key={opt} value={opt}>
+                        {opt}
+                      </option>
                     ))}
                   </select>
                 ) : field.type === 'textarea' ? (
@@ -138,7 +141,9 @@ export function HeroIntentRouter() {
                   />
                 )}
                 {errors[field.name] && (
-                  <p id={errorId} className="text-xs text-coffee-red mt-1">{errors[field.name]}</p>
+                  <p id={errorId} className="text-xs text-coffee-red mt-1">
+                    {errors[field.name]}
+                  </p>
                 )}
               </div>
             );

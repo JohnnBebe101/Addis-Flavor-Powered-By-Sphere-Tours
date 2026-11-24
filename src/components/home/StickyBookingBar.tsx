@@ -7,9 +7,7 @@ interface StickyBookingBarProps {
   };
 }
 
-export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({
-  translations,
-}) => {
+export const StickyBookingBar: React.FC<StickyBookingBarProps> = ({ translations }) => {
   const navigate = useNavigate();
 
   return (

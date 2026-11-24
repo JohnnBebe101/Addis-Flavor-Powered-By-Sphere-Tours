@@ -83,9 +83,8 @@ export function DesktopNav({
 
             // Simple link items
             const label =
-              translations[
-                `nav${item.label.replace(/\s+/g, '')}` as keyof Translations
-              ] || item.label;
+              translations[`nav${item.label.replace(/\s+/g, '')}` as keyof Translations] ||
+              item.label;
 
             if (item.label === 'Contact') {
               return (

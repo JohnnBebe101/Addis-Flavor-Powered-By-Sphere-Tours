@@ -47,10 +47,7 @@ export const Layout = () => {
         Skip to main content
       </a>
       <NotificationBar />
-      <Navbar
-        translations={TRANSLATIONS}
-        onContactClick={() => setIsContactOpen(true)}
-      />
+      <Navbar translations={TRANSLATIONS} onContactClick={() => setIsContactOpen(true)} />
       <main id="main-content">
         <ErrorBoundary>
           <Suspense fallback={<RouteLoadingSkeleton />}>
@@ -60,9 +57,7 @@ export const Layout = () => {
       </main>
       <ScrollRestoration />
       <Footer NEIGHBORHOOD_DESTINATIONS={NEIGHBORHOOD_DESTINATIONS} />
-      <StickyBookingBar
-        translations={{ bookNowButton: TRANSLATIONS.bookNowButton }}
-      />
+      <StickyBookingBar translations={{ bookNowButton: TRANSLATIONS.bookNowButton }} />
       {isContactOpen && (
         <Suspense fallback={null}>
           <ContactModal isOpen onClose={() => setIsContactOpen(false)} />

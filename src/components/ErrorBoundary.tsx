@@ -22,9 +22,9 @@ export class ErrorBoundary extends React.Component<
   }
 
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    const isChunkLoad = error instanceof TypeError &&
-      (error.message.includes('dynamically imported module') ||
-       error.message.includes('fetch'));
+    const isChunkLoad =
+      error instanceof TypeError &&
+      (error.message.includes('dynamically imported module') || error.message.includes('fetch'));
     return { hasError: true, error, isChunkLoadError: isChunkLoad };
   }
 

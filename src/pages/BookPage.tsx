@@ -2,8 +2,15 @@ import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import {
   CheckCircle,
-  ChevronRight, Phone, MessageCircle, Star, Shield,
-  ArrowLeft, Loader2, Minus, Plus,
+  ChevronRight,
+  Phone,
+  MessageCircle,
+  Star,
+  Shield,
+  ArrowLeft,
+  Loader2,
+  Minus,
+  Plus,
 } from 'lucide-react';
 import bookingContent from '../content/booking.json';
 import toursData from '../content/tours.json';
@@ -17,13 +24,27 @@ import { BookingSuccess } from '../components/booking/BookingSuccess';
 
 const bookingJson = bookingContent as {
   page: {
-    hero: { headline: string; subheadline: string; trustSignals: { rating: string; reviewCount: string; badges: string[] } };
+    hero: {
+      headline: string;
+      subheadline: string;
+      trustSignals: { rating: string; reviewCount: string; badges: string[] };
+    };
     howItWorks: { headline: string; steps: { title: string; description: string; icon: string }[] };
-    sidebar: { helpHeadline: string; helpText: string; whatsappCta: string; callCta: string; emailCta: string };
+    sidebar: {
+      helpHeadline: string;
+      helpText: string;
+      whatsappCta: string;
+      callCta: string;
+      emailCta: string;
+    };
     included: { headline: string; items: string[] };
     policies: { headline: string };
   };
-  policies: { cancellation: { headline: string; points: string[] }; pricing: { headline: string; points: string[] }; booking: { headline: string; points: string[] } };
+  policies: {
+    cancellation: { headline: string; points: string[] };
+    pricing: { headline: string; points: string[] };
+    booking: { headline: string; points: string[] };
+  };
 };
 
 export const BookPage: React.FC = () => {
@@ -40,12 +61,17 @@ export const BookPage: React.FC = () => {
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
   }, []);
 
   useEffect(() => {
     const card = document.getElementById('booking-form-card');
-    if (card) { card.setAttribute('tabindex', '-1'); card.focus(); }
+    if (card) {
+      card.setAttribute('tabindex', '-1');
+      card.focus();
+    }
   }, [step]);
 
   const initialTourId = searchParams.get('tour') || tours[0]?.id || '';
@@ -88,30 +114,35 @@ export const BookPage: React.FC = () => {
 
   const selectedTour = useMemo(
     () => tours.find((t) => t.id === formData.tourId) || tours[0],
-    [tours, formData.tourId]
+    [tours, formData.tourId],
   );
 
   const totalPrice = useMemo(
-    () => selectedTour ? selectedTour.pricing.smallGroup.adult * formData.guests : 0,
-    [selectedTour, formData.guests]
+    () => (selectedTour ? selectedTour.pricing.smallGroup.adult * formData.guests : 0),
+    [selectedTour, formData.guests],
   );
 
   const handleInputChange = useCallback((field: string, value: string | number) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   }, []);
 
-  const validateStep = useCallback((stepToValidate: BookingStep): boolean => {
-    if (stepToValidate === 1) return !!formData.tourId && !!formData.date && formData.guests >= 1;
-    if (stepToValidate === 2) {
-      return !!formData.fullName.trim()
-        && !!formData.email.trim()
-        && formData.email.includes('@')
-        && !!formData.phone.trim()
-        && !!formData.pickupLocation.trim();
-    }
-    if (stepToValidate === 3) return policiesAgreed;
-    return true;
-  }, [formData, policiesAgreed]);
+  const validateStep = useCallback(
+    (stepToValidate: BookingStep): boolean => {
+      if (stepToValidate === 1) return !!formData.tourId && !!formData.date && formData.guests >= 1;
+      if (stepToValidate === 2) {
+        return (
+          !!formData.fullName.trim() &&
+          !!formData.email.trim() &&
+          formData.email.includes('@') &&
+          !!formData.phone.trim() &&
+          !!formData.pickupLocation.trim()
+        );
+      }
+      if (stepToValidate === 3) return policiesAgreed;
+      return true;
+    },
+    [formData, policiesAgreed],
+  );
 
   const handleNext = useCallback(() => {
     if (!validateStep(step)) {
@@ -142,10 +173,13 @@ export const BookPage: React.FC = () => {
     setShowErrors(false);
   }, []);
 
-  const handleGuestChange = useCallback((delta: number) => {
-    const newGuests = Math.max(1, Math.min(10, formData.guests + delta));
-    handleInputChange('guests', newGuests);
-  }, [formData.guests, handleInputChange]);
+  const handleGuestChange = useCallback(
+    (delta: number) => {
+      const newGuests = Math.max(1, Math.min(10, formData.guests + delta));
+      handleInputChange('guests', newGuests);
+    },
+    [formData.guests, handleInputChange],
+  );
 
   const p = bookingJson.page;
 
@@ -154,8 +188,13 @@ export const BookPage: React.FC = () => {
       <div className="min-h-screen bg-linen-white flex items-center justify-center">
         <div className="text-center space-y-4 p-8">
           <p className="text-lg font-serif text-teal">No tours available at the moment.</p>
-          <p className="text-sm text-teal/60">Please check back later or contact us for assistance.</p>
-          <a href="/contact/" className="inline-block px-6 py-3 rounded-full bg-coffee-red text-linen-white text-xs uppercase font-bold tracking-wider">
+          <p className="text-sm text-teal/60">
+            Please check back later or contact us for assistance.
+          </p>
+          <a
+            href="/contact/"
+            className="inline-block px-6 py-3 rounded-full bg-coffee-red text-linen-white text-xs uppercase font-bold tracking-wider"
+          >
             Contact Us
           </a>
         </div>
@@ -177,12 +216,16 @@ export const BookPage: React.FC = () => {
             <div className="flex items-center gap-1.5 bg-gold/10 px-3 py-1.5 rounded-full">
               <Star className="w-4 h-4 text-gold fill-gold" />
               <span className="text-sm font-bold text-teal">{p.hero.trustSignals.rating}</span>
-              <span className="text-xs text-teal/60">({p.hero.trustSignals.reviewCount} reviews)</span>
+              <span className="text-xs text-teal/60">
+                ({p.hero.trustSignals.reviewCount} reviews)
+              </span>
             </div>
             {p.hero.trustSignals.badges.map((badge, i) => (
               <div key={i} className="flex items-center gap-1.5 bg-teal/5 px-3 py-1.5 rounded-full">
                 <Shield className="w-3.5 h-3.5 text-gold" />
-                <span className="text-xs font-mono uppercase tracking-wider text-teal/80">{badge}</span>
+                <span className="text-xs font-mono uppercase tracking-wider text-teal/80">
+                  {badge}
+                </span>
               </div>
             ))}
           </div>
@@ -201,21 +244,44 @@ export const BookPage: React.FC = () => {
                   const isCompleted = step > stepNum || isSuccess;
                   return (
                     <div key={idx} className="flex items-center gap-2 flex-1">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-                        isCompleted ? 'bg-gold text-teal' : isActive ? 'bg-coffee-red text-linen-white' : 'bg-teal/10 text-teal/40'
-                      }`}>
-                        {isCompleted ? <CheckCircle className="w-4 h-4" /> : <StepIcon className="w-4 h-4" />}
+                      <div
+                        className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+                          isCompleted
+                            ? 'bg-gold text-teal'
+                            : isActive
+                              ? 'bg-coffee-red text-linen-white'
+                              : 'bg-teal/10 text-teal/40'
+                        }`}
+                      >
+                        {isCompleted ? (
+                          <CheckCircle className="w-4 h-4" />
+                        ) : (
+                          <StepIcon className="w-4 h-4" />
+                        )}
                       </div>
-                      <span className={`text-xs font-mono uppercase tracking-wider hidden sm:block ${
-                        isActive ? 'text-coffee-red font-bold' : isCompleted ? 'text-gold font-bold' : 'text-teal/40'
-                      }`}>{label}</span>
-                      {idx < 2 && <div className={`h-px flex-1 ${isCompleted ? 'bg-gold' : 'bg-teal/10'}`} />}
+                      <span
+                        className={`text-xs font-mono uppercase tracking-wider hidden sm:block ${
+                          isActive
+                            ? 'text-coffee-red font-bold'
+                            : isCompleted
+                              ? 'text-gold font-bold'
+                              : 'text-teal/40'
+                        }`}
+                      >
+                        {label}
+                      </span>
+                      {idx < 2 && (
+                        <div className={`h-px flex-1 ${isCompleted ? 'bg-gold' : 'bg-teal/10'}`} />
+                      )}
                     </div>
                   );
                 })}
               </div>
 
-              <div id="booking-form-card" className="bg-sandstone/30 rounded-2xl border border-teal/10 p-6 sm:p-8 overflow-y-auto">
+              <div
+                id="booking-form-card"
+                className="bg-sandstone/30 rounded-2xl border border-teal/10 p-6 sm:p-8 overflow-y-auto"
+              >
                 {isSuccess ? (
                   <BookingSuccess
                     selectedTour={selectedTour}
@@ -235,7 +301,12 @@ export const BookPage: React.FC = () => {
                 ) : step === 1 ? (
                   <BookingStep1
                     tours={tours}
-                    formData={{ tourId: formData.tourId, date: formData.date, guests: formData.guests, website_url: formData.website_url }}
+                    formData={{
+                      tourId: formData.tourId,
+                      date: formData.date,
+                      guests: formData.guests,
+                      website_url: formData.website_url,
+                    }}
                     onChange={handleInputChange}
                     showErrors={showErrors}
                   />
@@ -277,14 +348,24 @@ export const BookPage: React.FC = () => {
               {!isSuccess && (
                 <div className="flex items-center justify-between mt-6">
                   {step > 1 ? (
-                    <button onClick={handleBack} className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-teal/20 text-teal text-xs uppercase font-mono font-bold tracking-wider hover:bg-sandstone transition-colors">
+                    <button
+                      onClick={handleBack}
+                      className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-teal/20 text-teal text-xs uppercase font-mono font-bold tracking-wider hover:bg-sandstone transition-colors"
+                    >
                       <ArrowLeft className="w-4 h-4" /> Back
                     </button>
-                  ) : <div />}
-                  <button onClick={handleNext} disabled={isSubmitting || (step === 3 && !policiesAgreed)}
-                    className="flex items-center gap-2 px-8 py-3 rounded-full bg-coffee-red text-linen-white text-xs uppercase font-mono font-bold tracking-wider hover:bg-coffee-red/90 transition-all shadow-md disabled:opacity-50 active:scale-95">
+                  ) : (
+                    <div />
+                  )}
+                  <button
+                    onClick={handleNext}
+                    disabled={isSubmitting || (step === 3 && !policiesAgreed)}
+                    className="flex items-center gap-2 px-8 py-3 rounded-full bg-coffee-red text-linen-white text-xs uppercase font-mono font-bold tracking-wider hover:bg-coffee-red/90 transition-all shadow-md disabled:opacity-50 active:scale-95"
+                  >
                     {isSubmitting ? (
-                      <><Loader2 className="w-4 h-4 animate-spin" /> <span>Processing...</span></>
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" /> <span>Processing...</span>
+                      </>
                     ) : step === 3 ? (
                       <span>Confirm & Book</span>
                     ) : (
@@ -298,36 +379,56 @@ export const BookPage: React.FC = () => {
             <div className="lg:col-span-1 space-y-6">
               {selectedTour && (
                 <div className="bg-sandstone/30 rounded-2xl border border-teal/10 overflow-hidden">
-                  <img src={selectedTour.images[0]} alt={selectedTour.name}
-                    loading="lazy" className="w-full h-48 object-cover" />
+                  <img
+                    src={selectedTour.images[0]}
+                    alt={selectedTour.name}
+                    loading="lazy"
+                    className="w-full h-48 object-cover"
+                  />
                   <div className="p-5 space-y-3">
                     <div className="flex items-center gap-2">
-                      <span className="px-2 py-0.5 bg-gold/10 text-gold text-xs font-mono uppercase rounded-full">{selectedTour.tourType}</span>
+                      <span className="px-2 py-0.5 bg-gold/10 text-gold text-xs font-mono uppercase rounded-full">
+                        {selectedTour.tourType}
+                      </span>
                       <span className="text-xs text-teal/60">{selectedTour.duration}</span>
                     </div>
                     <h3 className="font-serif font-bold text-teal text-lg">{selectedTour.name}</h3>
                     <div className="flex items-center gap-2">
-                      <span className="text-2xl font-mono font-bold text-coffee-red">${selectedTour.pricing.smallGroup.adult}</span>
-                      <span className="text-xs text-teal/60">/ person × {formData.guests} = <strong className="text-coffee-red">${totalPrice}</strong></span>
+                      <span className="text-2xl font-mono font-bold text-coffee-red">
+                        ${selectedTour.pricing.smallGroup.adult}
+                      </span>
+                      <span className="text-xs text-teal/60">
+                        / person × {formData.guests} ={' '}
+                        <strong className="text-coffee-red">${totalPrice}</strong>
+                      </span>
                     </div>
                     <div className="flex items-center gap-4 pt-2">
-                      <button onClick={() => handleGuestChange(-1)}
-                        className="w-9 h-9 rounded-lg hover:bg-teal/5 flex items-center justify-center border border-teal/10 active:scale-95">
+                      <button
+                        onClick={() => handleGuestChange(-1)}
+                        className="w-9 h-9 rounded-lg hover:bg-teal/5 flex items-center justify-center border border-teal/10 active:scale-95"
+                      >
                         <Minus className="w-4 h-4 text-teal" />
                       </button>
-                      <span className="font-mono font-bold text-lg w-8 text-center text-teal">{formData.guests}</span>
-                      <button onClick={() => handleGuestChange(1)}
-                        className="w-9 h-9 rounded-lg hover:bg-teal/5 flex items-center justify-center border border-teal/10 active:scale-95">
+                      <span className="font-mono font-bold text-lg w-8 text-center text-teal">
+                        {formData.guests}
+                      </span>
+                      <button
+                        onClick={() => handleGuestChange(1)}
+                        className="w-9 h-9 rounded-lg hover:bg-teal/5 flex items-center justify-center border border-teal/10 active:scale-95"
+                      >
                         <Plus className="w-4 h-4 text-teal" />
                       </button>
                       <span className="text-xs text-teal/60">guests</span>
                     </div>
                     <div className="border-t border-teal/10 pt-3">
-                      <p className="text-xs font-mono uppercase text-teal/60 mb-2">{p.included.headline}</p>
+                      <p className="text-xs font-mono uppercase text-teal/60 mb-2">
+                        {p.included.headline}
+                      </p>
                       <ul className="space-y-1.5">
                         {p.included.items.map((item, i) => (
                           <li key={i} className="flex items-start gap-2 text-xs text-teal/80">
-                            <CheckCircle className="w-3.5 h-3.5 text-gold mt-0.5 flex-shrink-0" /> {item}
+                            <CheckCircle className="w-3.5 h-3.5 text-gold mt-0.5 flex-shrink-0" />{' '}
+                            {item}
                           </li>
                         ))}
                       </ul>
@@ -340,12 +441,18 @@ export const BookPage: React.FC = () => {
                 <h4 className="font-serif font-bold">{p.sidebar.helpHeadline}</h4>
                 <p className="text-xs text-linen-white/70">{p.sidebar.helpText}</p>
                 <div className="space-y-2">
-                  <a href="https://wa.me/251911209882" target="_blank" rel="noopener noreferrer"
-                    className="flex items-center gap-2 w-full px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-xs font-bold uppercase tracking-wider transition-colors">
+                  <a
+                    href="https://wa.me/251911209882"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 w-full px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-xs font-bold uppercase tracking-wider transition-colors"
+                  >
                     <MessageCircle className="w-4 h-4" /> {p.sidebar.whatsappCta}
                   </a>
-                  <a href="tel:+251911209882"
-                    className="flex items-center gap-2 w-full px-4 py-2.5 rounded-xl bg-coffee-red hover:bg-coffee-red/90 text-xs font-bold uppercase tracking-wider transition-colors">
+                  <a
+                    href="tel:+251911209882"
+                    className="flex items-center gap-2 w-full px-4 py-2.5 rounded-xl bg-coffee-red hover:bg-coffee-red/90 text-xs font-bold uppercase tracking-wider transition-colors"
+                  >
                     <Phone className="w-4 h-4" /> {p.sidebar.callCta}
                   </a>
                 </div>
@@ -357,7 +464,9 @@ export const BookPage: React.FC = () => {
 
       <section className="py-12 sm:py-16 bg-sandstone/10 border-t border-teal/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-teal text-center mb-10">{p.howItWorks.headline}</h2>
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-teal text-center mb-10">
+            {p.howItWorks.headline}
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {p.howItWorks.steps.map((s, i) => (
               <div key={i} className="text-center space-y-3">
@@ -374,14 +483,22 @@ export const BookPage: React.FC = () => {
 
       <section className="py-12 sm:py-16 bg-linen-white border-t border-teal/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-teal text-center mb-8">{p.policies.headline}</h2>
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-teal text-center mb-8">
+            {p.policies.headline}
+          </h2>
           <div className="space-y-3">
             {Object.entries(bookingJson.policies).map(([key, policy]) => (
-              <details key={key} className="bg-sandstone/30 rounded-xl border border-teal/10 overflow-hidden"
-                open={openPolicy === key} onToggle={(e) => setOpenPolicy(e.currentTarget.open ? key : null)}>
+              <details
+                key={key}
+                className="bg-sandstone/30 rounded-xl border border-teal/10 overflow-hidden"
+                open={openPolicy === key}
+                onToggle={(e) => setOpenPolicy(e.currentTarget.open ? key : null)}
+              >
                 <summary className="flex items-center justify-between cursor-pointer p-5 font-serif font-bold text-teal hover:text-coffee-red transition-colors">
                   {policy.headline}
-                  <ChevronRight className={`w-5 h-5 text-gold transition-transform duration-300 ${openPolicy === key ? 'rotate-90' : ''}`} />
+                  <ChevronRight
+                    className={`w-5 h-5 text-gold transition-transform duration-300 ${openPolicy === key ? 'rotate-90' : ''}`}
+                  />
                 </summary>
                 <div className="px-5 pb-5 space-y-2 animate-fade-in">
                   {policy.points.map((point, i) => (

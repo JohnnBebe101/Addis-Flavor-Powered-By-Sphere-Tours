@@ -76,11 +76,18 @@ export function BookingStep1({
       </div>
 
       <div className="space-y-1.5">
-        <label htmlFor="booking-guests" className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+        <label
+          htmlFor="booking-guests"
+          className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1"
+        >
           <Users className="w-3.5 h-3.5 text-gold" />
           <span>Number of Guests</span>
         </label>
-        <div className="flex items-center space-x-4 bg-sandstone rounded-xl p-1.5 w-fit" role="group" aria-label="Number of guests">
+        <div
+          className="flex items-center space-x-4 bg-sandstone rounded-xl p-1.5 w-fit"
+          role="group"
+          aria-label="Number of guests"
+        >
           <button
             type="button"
             onClick={() => handleGuestChange(-1)}

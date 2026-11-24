@@ -9,7 +9,7 @@ export function useFocusTrap<T extends HTMLElement>(active: boolean): RefObject<
 
     const getFocusable = () =>
       el.querySelectorAll<HTMLElement>(
-        'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+        'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])',
       );
 
     const focusable = getFocusable();

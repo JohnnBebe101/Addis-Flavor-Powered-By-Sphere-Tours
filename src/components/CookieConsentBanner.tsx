@@ -20,11 +20,7 @@ const getServerSnapshot = () => false;
 export function CookieConsentBanner() {
   const { hasInteracted, acceptAll, rejectAll } = useCookieConsent();
   const [showPreferences, setShowPreferences] = useState(false);
-  const mounted = useSyncExternalStore(
-    subscribeToClient,
-    getClientSnapshot,
-    getServerSnapshot,
-  );
+  const mounted = useSyncExternalStore(subscribeToClient, getClientSnapshot, getServerSnapshot);
 
   if (!mounted || hasInteracted) return null;
 
@@ -39,12 +35,11 @@ export function CookieConsentBanner() {
         <div className="max-w-4xl mx-auto bg-teal text-linen-white rounded-2xl shadow-2xl p-6 sm:p-8 border border-linen-white/10">
           <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
             <div className="flex-1">
-              <h2 className="text-lg font-serif font-bold mb-2">
-                We value your privacy
-              </h2>
+              <h2 className="text-lg font-serif font-bold mb-2">We value your privacy</h2>
               <p className="text-sm text-linen-white/70 leading-relaxed mb-1">
-                We use cookies to improve your experience, analyse site traffic, and serve relevant content.
-                You can accept all cookies, reject non-essential ones, or customise your preferences.
+                We use cookies to improve your experience, analyse site traffic, and serve relevant
+                content. You can accept all cookies, reject non-essential ones, or customise your
+                preferences.
               </p>
               <a
                 href="/cookies/"

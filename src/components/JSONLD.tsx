@@ -53,7 +53,16 @@ export function JSONLD({ data }: JSONLDProps) {
     ...('url' in data ? { url: data.url } : {}),
     ...('description' in data ? { description: data.description } : {}),
     ...('logo' in data ? { logo: data.logo } : {}),
-    ...('address' in data ? { address: { '@type': 'PostalAddress', streetAddress: data.address, addressLocality: 'Addis Ababa', addressCountry: 'ET' } } : {}),
+    ...('address' in data
+      ? {
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: data.address,
+            addressLocality: 'Addis Ababa',
+            addressCountry: 'ET',
+          },
+        }
+      : {}),
     ...('telephone' in data ? { telephone: data.telephone } : {}),
     ...('contactPoint' in data ? { contactPoint: data.contactPoint } : {}),
     ...('sameAs' in data ? { sameAs: data.sameAs } : {}),
@@ -73,7 +82,10 @@ export function JSONLD({ data }: JSONLDProps) {
    * JSON-LD in the prerendered HTML for crawlers that do not run JavaScript.
    */
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(script) }} />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(script) }}
+    />
   );
 }
 
@@ -99,7 +111,8 @@ export function LocalBusinessJSONLD() {
         type: 'LocalBusiness',
         name: BRAND.name,
         url: BRAND.origin,
-        description: 'Local tour operator offering city tours, day trips, local guides, car hire, and travel support in Addis Ababa, Ethiopia.',
+        description:
+          'Local tour operator offering city tours, day trips, local guides, car hire, and travel support in Addis Ababa, Ethiopia.',
         address: BRAND.address,
         telephone: BRAND.phone,
       }}
@@ -107,7 +120,15 @@ export function LocalBusinessJSONLD() {
   );
 }
 
-export function TouristTripJSONLD({ name, description, path }: { name: string; description: string; path: string }) {
+export function TouristTripJSONLD({
+  name,
+  description,
+  path,
+}: {
+  name: string;
+  description: string;
+  path: string;
+}) {
   return (
     <JSONLD
       data={{

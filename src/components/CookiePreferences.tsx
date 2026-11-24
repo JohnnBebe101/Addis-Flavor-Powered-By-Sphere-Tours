@@ -35,7 +35,7 @@ const CATEGORIES = [
 export function CookiePreferences({ onClose }: CookiePreferencesProps) {
   const { consent, setConsent } = useCookieConsent();
   const [draft, setDraft] = useState<ConsentPreferences>(
-    consent ?? { necessary: true, analytics: false, marketing: false, functional: false }
+    consent ?? { necessary: true, analytics: false, marketing: false, functional: false },
   );
   const dialogRef = useRef<HTMLDivElement>(null);
   const previousFocus = useRef<HTMLElement | null>(null);
@@ -93,10 +93,7 @@ export function CookiePreferences({ onClose }: CookiePreferencesProps) {
 
           <div className="space-y-4">
             {CATEGORIES.map((cat) => (
-              <div
-                key={cat.key}
-                className="p-4 rounded-xl border border-teal/10 bg-sandstone/30"
-              >
+              <div key={cat.key} className="p-4 rounded-xl border border-teal/10 bg-sandstone/30">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex-1">
                     <h3 className="font-mono text-sm font-semibold text-teal">{cat.label}</h3>
@@ -109,11 +106,7 @@ export function CookiePreferences({ onClose }: CookiePreferencesProps) {
                     disabled={cat.alwaysOn}
                     onClick={() => handleToggle(cat.key)}
                     className={`relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-coffee-red focus-visible:ring-offset-2 ${
-                      draft[cat.key]
-                        ? 'bg-coffee-red'
-                        : cat.alwaysOn
-                          ? 'bg-teal/30'
-                          : 'bg-teal/20'
+                      draft[cat.key] ? 'bg-coffee-red' : cat.alwaysOn ? 'bg-teal/30' : 'bg-teal/20'
                     } ${cat.alwaysOn ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'}`}
                   >
                     <span
@@ -143,7 +136,8 @@ export function CookiePreferences({ onClose }: CookiePreferencesProps) {
           </div>
 
           <p className="mt-4 text-xs text-teal/50 text-center">
-            You can change your preferences at any time by clicking &ldquo;Cookie Settings&rdquo; in the footer.
+            You can change your preferences at any time by clicking &ldquo;Cookie Settings&rdquo; in
+            the footer.
           </p>
         </div>
       </div>

@@ -105,7 +105,9 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
   }, [onClose]);
 
   useEffect(() => {
-    return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
   }, []);
 
   useEffect(() => {
@@ -114,30 +116,43 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
       document.body.style.overflow = 'hidden';
       const timer = setTimeout(() => {
         const firstInput = modalRef.current?.querySelector<HTMLElement>(
-          'input:not([type="hidden"]), select, textarea, button[type="submit"]'
+          'input:not([type="hidden"]), select, textarea, button[type="submit"]',
         );
         firstInput?.focus();
       }, 50);
-      return () => { clearTimeout(timer); document.body.style.overflow = 'unset'; };
+      return () => {
+        clearTimeout(timer);
+        document.body.style.overflow = 'unset';
+      };
     }
     document.body.style.overflow = 'unset';
     triggerRef.current?.focus();
-    return () => { document.body.style.overflow = 'unset'; };
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [isOpen]);
 
   useEffect(() => {
     if (!isOpen) return;
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') { resetForm(); return; }
+      if (e.key === 'Escape') {
+        resetForm();
+        return;
+      }
       if (e.key !== 'Tab') return;
       const focusable = modalRef.current?.querySelectorAll<HTMLElement>(
-        'input:not([type="hidden"]), select, textarea, button, [tabindex]:not([tabindex="-1"])'
+        'input:not([type="hidden"]), select, textarea, button, [tabindex]:not([tabindex="-1"])',
       );
       if (!focusable?.length) return;
       const first = focusable[0];
       const last = focusable[focusable.length - 1];
-      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
@@ -218,10 +233,16 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
           {!isSuccess ? (
             <div key="form" className="space-y-6 animate-slide-up">
               <div>
-                <h3 id="contact-modal-title" className="text-2xl font-serif font-bold tracking-tight uppercase mb-2 text-gold">
+                <h3
+                  id="contact-modal-title"
+                  className="text-2xl font-serif font-bold tracking-tight uppercase mb-2 text-gold"
+                >
                   {t.headline}
                 </h3>
-                <p id="contact-modal-desc" className="text-xs sm:text-sm opacity-80 leading-relaxed font-sans">
+                <p
+                  id="contact-modal-desc"
+                  className="text-xs sm:text-sm opacity-80 leading-relaxed font-sans"
+                >
                   {contactJson.contactInfo.headline}
                 </p>
               </div>
@@ -258,7 +279,10 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
                 </div>
 
                 <div>
-                  <label htmlFor="modal-phone" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">
+                  <label
+                    htmlFor="modal-phone"
+                    className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold"
+                  >
                     Phone Number
                   </label>
                   <PhoneInput
@@ -269,7 +293,10 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
                 </div>
 
                 <div>
-                  <label htmlFor="modal-whatsapp" className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold">
+                  <label
+                    htmlFor="modal-whatsapp"
+                    className="block text-xs font-mono uppercase tracking-wider mb-1.5 font-bold"
+                  >
                     WhatsApp Number
                   </label>
                   <PhoneInput
@@ -396,6 +423,6 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
         </div>
       </div>
     </div>,
-    document.body
+    document.body,
   );
 }

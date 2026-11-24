@@ -40,7 +40,9 @@ function TourCard({ tour, price }: { tour: Tour; price: string }) {
       <div className="p-4 flex flex-col flex-1 gap-2.5">
         {/* Tour Type Tag */}
         <div>
-          <span className={`inline-block px-2.5 py-0.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider ${typeTag.className}`}>
+          <span
+            className={`inline-block px-2.5 py-0.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider ${typeTag.className}`}
+          >
             {typeTag.label}
           </span>
         </div>
@@ -52,8 +54,18 @@ function TourCard({ tour, price }: { tour: Tour; price: string }) {
 
         {/* Duration */}
         <div className="flex items-center gap-1.5 text-xs text-teal/70">
-          <svg className="w-3.5 h-3.5 text-teal/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <svg
+            className="w-3.5 h-3.5 text-teal/50"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
           </svg>
           <span>{tour.duration}</span>
         </div>

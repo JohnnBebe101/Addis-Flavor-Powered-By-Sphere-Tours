@@ -337,9 +337,7 @@ export const TourDetailPage: React.FC = () => {
                   <Star key={i} className="w-5 h-5 fill-current text-gold" />
                 ))}
               </div>
-              <span className="font-mono text-sm text-teal/80">
-                Guest Reviews
-              </span>
+              <span className="font-mono text-sm text-teal/80">Guest Reviews</span>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -440,7 +438,11 @@ export const TourDetailPage: React.FC = () => {
                     </div>
                     <div className="p-5">
                       <span className="text-xs font-mono font-bold uppercase tracking-wider text-coffee-red bg-coffee-red/10 px-2 py-0.5 rounded-full">
-                        {relatedTour!.tourType === 'city-tour' ? 'City Tour' : relatedTour!.tourType === 'day-trip' ? 'Day Trip' : 'Private'}
+                        {relatedTour!.tourType === 'city-tour'
+                          ? 'City Tour'
+                          : relatedTour!.tourType === 'day-trip'
+                            ? 'Day Trip'
+                            : 'Private'}
                       </span>
                       <h3 className="text-lg font-serif font-bold text-teal mt-2 group-hover:text-coffee-red transition-colors">
                         {relatedTour!.name}
@@ -450,7 +452,9 @@ export const TourDetailPage: React.FC = () => {
                       </p>
                       <div className="flex items-center gap-1 mt-3">
                         <Star className="w-3.5 h-3.5 fill-current text-gold" />
-                        <span className="text-xs font-bold text-teal">{relatedTour!.rating.toFixed(1)}</span>
+                        <span className="text-xs font-bold text-teal">
+                          {relatedTour!.rating.toFixed(1)}
+                        </span>
                         <span className="text-xs text-teal/60">({relatedTour!.reviewCount})</span>
                       </div>
                     </div>

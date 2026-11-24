@@ -32,11 +32,19 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
                 {col.links.map((link: NavFooterLink, linkIdx: number) => (
                   <li key={linkIdx}>
                     {link.external ? (
-                      <a href={link.link} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[44px] items-center hover:text-gold-light transition-colors">
+                      <a
+                        href={link.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex min-h-[44px] items-center hover:text-gold-light transition-colors"
+                      >
                         {link.label}
                       </a>
                     ) : (
-                      <a href={link.link} className="inline-flex min-h-[44px] items-center hover:text-gold-light transition-colors">
+                      <a
+                        href={link.link}
+                        className="inline-flex min-h-[44px] items-center hover:text-gold-light transition-colors"
+                      >
                         {link.label}
                       </a>
                     )}
@@ -54,44 +62,114 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
             <div className="flex flex-wrap items-center gap-2">
               <div className="bg-white rounded px-1.5 py-1 flex items-center justify-center">
                 <svg viewBox="0 0 120 40" className="h-5 w-auto" xmlns="http://www.w3.org/2000/svg">
-                  <text x="60" y="30" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="30" fill="#1A1F71" fontStyle="italic" textAnchor="middle">VISA</text>
+                  <text
+                    x="60"
+                    y="30"
+                    fontFamily="Arial, sans-serif"
+                    fontWeight="bold"
+                    fontSize="30"
+                    fill="#1A1F71"
+                    fontStyle="italic"
+                    textAnchor="middle"
+                  >
+                    VISA
+                  </text>
                 </svg>
               </div>
               <div className="bg-white rounded px-1.5 py-1 flex items-center justify-center">
                 <svg viewBox="0 0 40 26" className="h-5 w-auto" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="15" cy="13" r="10" fill="#EB001B"/>
-                  <circle cx="25" cy="13" r="10" fill="#F79E1B"/>
-                  <path d="M20 4.5a10 10 0 0 1 0 17" fill="#FF5F00"/>
+                  <circle cx="15" cy="13" r="10" fill="#EB001B" />
+                  <circle cx="25" cy="13" r="10" fill="#F79E1B" />
+                  <path d="M20 4.5a10 10 0 0 1 0 17" fill="#FF5F00" />
                 </svg>
               </div>
               <div className="bg-white rounded px-1.5 py-1 flex items-center justify-center">
                 <svg viewBox="0 0 60 40" className="h-5 w-auto" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="0" y="0" width="60" height="40" rx="4" fill="#006FCF"/>
-                  <text x="30" y="26" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="14" fill="white" textAnchor="middle">AMEX</text>
+                  <rect x="0" y="0" width="60" height="40" rx="4" fill="#006FCF" />
+                  <text
+                    x="30"
+                    y="26"
+                    fontFamily="Arial, sans-serif"
+                    fontWeight="bold"
+                    fontSize="14"
+                    fill="white"
+                    textAnchor="middle"
+                  >
+                    AMEX
+                  </text>
                 </svg>
               </div>
               <div className="bg-white rounded px-1.5 py-1 flex items-center justify-center">
                 <svg viewBox="0 0 90 30" className="h-5 w-auto" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="15" cy="15" r="12" fill="#FF6000"/>
-                  <text x="32" y="21" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="13" fill="#333">DISCOVER</text>
+                  <circle cx="15" cy="15" r="12" fill="#FF6000" />
+                  <text
+                    x="32"
+                    y="21"
+                    fontFamily="Arial, sans-serif"
+                    fontWeight="bold"
+                    fontSize="13"
+                    fill="#333"
+                  >
+                    DISCOVER
+                  </text>
                 </svg>
               </div>
               <div className="bg-white rounded px-1.5 py-1 flex items-center justify-center">
                 <svg viewBox="0 0 50 36" className="h-5 w-auto" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="1" y="1" width="14" height="34" rx="4" fill="#007B40"/>
-                  <rect x="18" y="1" width="14" height="34" rx="4" fill="#006DBA"/>
-                  <rect x="35" y="1" width="14" height="34" rx="4" fill="#E30138"/>
-                  <text x="8" y="24" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="10" fill="white" textAnchor="middle">J</text>
-                  <text x="25" y="24" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="10" fill="white" textAnchor="middle">C</text>
-                  <text x="42" y="24" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="10" fill="white" textAnchor="middle">B</text>
+                  <rect x="1" y="1" width="14" height="34" rx="4" fill="#007B40" />
+                  <rect x="18" y="1" width="14" height="34" rx="4" fill="#006DBA" />
+                  <rect x="35" y="1" width="14" height="34" rx="4" fill="#E30138" />
+                  <text
+                    x="8"
+                    y="24"
+                    fontFamily="Arial, sans-serif"
+                    fontWeight="bold"
+                    fontSize="10"
+                    fill="white"
+                    textAnchor="middle"
+                  >
+                    J
+                  </text>
+                  <text
+                    x="25"
+                    y="24"
+                    fontFamily="Arial, sans-serif"
+                    fontWeight="bold"
+                    fontSize="10"
+                    fill="white"
+                    textAnchor="middle"
+                  >
+                    C
+                  </text>
+                  <text
+                    x="42"
+                    y="24"
+                    fontFamily="Arial, sans-serif"
+                    fontWeight="bold"
+                    fontSize="10"
+                    fill="white"
+                    textAnchor="middle"
+                  >
+                    B
+                  </text>
                 </svg>
               </div>
               <div className="bg-white rounded px-1.5 py-1 flex items-center justify-center">
                 <svg viewBox="0 0 60 36" className="h-5 w-auto" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="0" y="1" width="20" height="34" rx="3" fill="#D10429"/>
-                  <rect x="12" y="1" width="20" height="34" rx="3" fill="#022E64"/>
-                  <rect x="24" y="1" width="20" height="34" rx="3" fill="#076F74"/>
-                  <text x="22" y="24" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="8" fill="white" textAnchor="middle">UnionPay</text>
+                  <rect x="0" y="1" width="20" height="34" rx="3" fill="#D10429" />
+                  <rect x="12" y="1" width="20" height="34" rx="3" fill="#022E64" />
+                  <rect x="24" y="1" width="20" height="34" rx="3" fill="#076F74" />
+                  <text
+                    x="22"
+                    y="24"
+                    fontFamily="Arial, sans-serif"
+                    fontWeight="bold"
+                    fontSize="8"
+                    fill="white"
+                    textAnchor="middle"
+                  >
+                    UnionPay
+                  </text>
                 </svg>
               </div>
             </div>
@@ -125,9 +203,15 @@ export const Footer: React.FC<FooterProps> = ({ NEIGHBORHOOD_DESTINATIONS }) => 
           <div className="flex flex-wrap justify-center gap-x-3 gap-y-1">
             {footerColumns
               .find((c: { title: string; links: NavFooterLink[] }) => c.title === 'Support & Legal')
-              ?.links.filter((l: NavFooterLink) => ['Terms & Conditions', 'Privacy Policy', 'Cancellation Policy'].includes(l.label))
+              ?.links.filter((l: NavFooterLink) =>
+                ['Terms & Conditions', 'Privacy Policy', 'Cancellation Policy'].includes(l.label),
+              )
               .map((link: NavFooterLink, idx: number) => (
-                <a key={idx} href={link.link} className="inline-flex min-h-[44px] items-center hover:text-gold-light transition-colors">
+                <a
+                  key={idx}
+                  href={link.link}
+                  className="inline-flex min-h-[44px] items-center hover:text-gold-light transition-colors"
+                >
                   {link.label}
                 </a>
               ))}

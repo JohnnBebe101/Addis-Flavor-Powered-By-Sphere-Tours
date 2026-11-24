@@ -37,7 +37,10 @@ export function PlanYourVisitBridge() {
    */
   const contactMethod = formData.contactValue.includes('@') ? 'Email' : 'WhatsApp';
 
-  const handleChange = (field: 'lengthOfStay' | 'interests' | 'helpWith' | 'contactValue' | 'message', value: string) => {
+  const handleChange = (
+    field: 'lengthOfStay' | 'interests' | 'helpWith' | 'contactValue' | 'message',
+    value: string,
+  ) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
     if (errors[field]) {
       setErrors((prev) => {
@@ -60,7 +63,10 @@ export function PlanYourVisitBridge() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.botField) { setIsSuccess(true); return; }
+    if (formData.botField) {
+      setIsSuccess(true);
+      return;
+    }
     if (!validate()) return;
     setIsSubmitting(true);
     try {
@@ -120,19 +126,37 @@ export function PlanYourVisitBridge() {
         <h2 className="text-3xl md:text-4xl font-serif font-bold text-teal mb-4 text-center">
           {bridge.headline}
         </h2>
-        <p className="text-teal/70 text-center mb-10 max-w-2xl mx-auto">
-          {bridge.subheadline}
-        </p>
+        <p className="text-teal/70 text-center mb-10 max-w-2xl mx-auto">{bridge.subheadline}</p>
 
         {/* One Netlify form, five visible fields. */}
-        <form onSubmit={handleSubmit} className="bg-linen-white rounded-2xl p-6 md:p-8 shadow-lg border border-teal/5">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-linen-white rounded-2xl p-6 md:p-8 shadow-lg border border-teal/5"
+        >
           <input type="hidden" name="form-name" value="plan-your-visit" />
           <input type="hidden" name="contactMethod" value={contactMethod} />
-          <p className="hidden"><label htmlFor="planvisit-botField">Don't fill this out: <input id="planvisit-botField" name="botField" value={formData.botField} onChange={(e) => setFormData({ ...formData, botField: e.target.value })} tabIndex={-1} autoComplete="off" /></label></p>
+          <p className="hidden">
+            <label htmlFor="planvisit-botField">
+              Don't fill this out:{' '}
+              <input
+                id="planvisit-botField"
+                name="botField"
+                value={formData.botField}
+                onChange={(e) => setFormData({ ...formData, botField: e.target.value })}
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </label>
+          </p>
 
           {/* Length of stay */}
           <div className="mb-6">
-            <label htmlFor="planvisit-lengthOfStay" className="block text-sm font-mono text-teal/80 mb-2">{bridge.fields[0].label} *</label>
+            <label
+              htmlFor="planvisit-lengthOfStay"
+              className="block text-sm font-mono text-teal/80 mb-2"
+            >
+              {bridge.fields[0].label} *
+            </label>
             <select
               id="planvisit-lengthOfStay"
               name="lengthOfStay"
@@ -143,14 +167,27 @@ export function PlanYourVisitBridge() {
               className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white"
             >
               <option value="">Select duration</option>
-              {bridge.fields[0].options?.map((opt) => <option key={opt} value={opt}>{opt}</option>)}
+              {bridge.fields[0].options?.map((opt) => (
+                <option key={opt} value={opt}>
+                  {opt}
+                </option>
+              ))}
             </select>
-            {errors.lengthOfStay && <p id="planvisit-lengthOfStay-error" className="text-xs text-coffee-red mt-1">{errors.lengthOfStay}</p>}
+            {errors.lengthOfStay && (
+              <p id="planvisit-lengthOfStay-error" className="text-xs text-coffee-red mt-1">
+                {errors.lengthOfStay}
+              </p>
+            )}
           </div>
 
           {/* Interests */}
           <div className="mb-6">
-            <label htmlFor="planvisit-interests" className="block text-sm font-mono text-teal/80 mb-2">{bridge.fields[1].label} *</label>
+            <label
+              htmlFor="planvisit-interests"
+              className="block text-sm font-mono text-teal/80 mb-2"
+            >
+              {bridge.fields[1].label} *
+            </label>
             <select
               id="planvisit-interests"
               name="interests"
@@ -161,14 +198,27 @@ export function PlanYourVisitBridge() {
               className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white"
             >
               <option value="">Choose one</option>
-              {bridge.fields[1].options?.map((opt) => <option key={opt} value={opt}>{opt}</option>)}
+              {bridge.fields[1].options?.map((opt) => (
+                <option key={opt} value={opt}>
+                  {opt}
+                </option>
+              ))}
             </select>
-            {errors.interests && <p id="planvisit-interests-error" className="text-xs text-coffee-red mt-1">{errors.interests}</p>}
+            {errors.interests && (
+              <p id="planvisit-interests-error" className="text-xs text-coffee-red mt-1">
+                {errors.interests}
+              </p>
+            )}
           </div>
 
           {/* Help with */}
           <div className="mb-6">
-            <label htmlFor="planvisit-helpWith" className="block text-sm font-mono text-teal/80 mb-2">{bridge.fields[2].label} *</label>
+            <label
+              htmlFor="planvisit-helpWith"
+              className="block text-sm font-mono text-teal/80 mb-2"
+            >
+              {bridge.fields[2].label} *
+            </label>
             <select
               id="planvisit-helpWith"
               name="helpWith"
@@ -179,14 +229,27 @@ export function PlanYourVisitBridge() {
               className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white"
             >
               <option value="">Choose one</option>
-              {bridge.fields[2].options?.map((opt) => <option key={opt} value={opt}>{opt}</option>)}
+              {bridge.fields[2].options?.map((opt) => (
+                <option key={opt} value={opt}>
+                  {opt}
+                </option>
+              ))}
             </select>
-            {errors.helpWith && <p id="planvisit-helpWith-error" className="text-xs text-coffee-red mt-1">{errors.helpWith}</p>}
+            {errors.helpWith && (
+              <p id="planvisit-helpWith-error" className="text-xs text-coffee-red mt-1">
+                {errors.helpWith}
+              </p>
+            )}
           </div>
 
           {/* Contact details — method is inferred from the value entered */}
           <div className="mb-6">
-            <label htmlFor="planvisit-contactValue" className="block text-sm font-mono text-teal/80 mb-2">{bridge.fields[4].label} *</label>
+            <label
+              htmlFor="planvisit-contactValue"
+              className="block text-sm font-mono text-teal/80 mb-2"
+            >
+              {bridge.fields[4].label} *
+            </label>
             <input
               id="planvisit-contactValue"
               name="contactValue"
@@ -200,12 +263,21 @@ export function PlanYourVisitBridge() {
               placeholder="you@example.com or +251 91 123 4567"
               className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white"
             />
-            {errors.contactValue && <p id="planvisit-contactValue-error" className="text-xs text-coffee-red mt-1">{errors.contactValue}</p>}
+            {errors.contactValue && (
+              <p id="planvisit-contactValue-error" className="text-xs text-coffee-red mt-1">
+                {errors.contactValue}
+              </p>
+            )}
           </div>
 
           {/* Message */}
           <div className="mb-6">
-            <label htmlFor="planvisit-message" className="block text-sm font-mono text-teal/80 mb-2">{bridge.fields[5].label}</label>
+            <label
+              htmlFor="planvisit-message"
+              className="block text-sm font-mono text-teal/80 mb-2"
+            >
+              {bridge.fields[5].label}
+            </label>
             <textarea
               id="planvisit-message"
               name="message"

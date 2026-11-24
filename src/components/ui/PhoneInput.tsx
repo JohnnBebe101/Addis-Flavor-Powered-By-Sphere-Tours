@@ -27,14 +27,15 @@ interface ParsedPhoneValue {
 }
 
 const countries = countryCodesData.countries as CountryCode[];
-const defaultDial = countries.find(c => c.code === countryCodesData.defaultCountryCode)?.dial || '+971';
+const defaultDial =
+  countries.find((c) => c.code === countryCodesData.defaultCountryCode)?.dial || '+971';
 
 function parsePhoneValue(value: string): ParsedPhoneValue {
   if (!value) {
     return { isOther: false, selectedDial: defaultDial, localNumber: '', manualNumber: '' };
   }
 
-  const match = countries.find(c => c.dial && value.startsWith(c.dial));
+  const match = countries.find((c) => c.dial && value.startsWith(c.dial));
   if (match && match.code !== 'OTHER') {
     return {
       isOther: false,
@@ -51,7 +52,7 @@ export function PhoneInput({ value, onChange, required, helperText, id, name }: 
   const generatedId = useId();
   const baseId = id || generatedId;
   const { isOther, selectedDial, localNumber, manualNumber } = parsePhoneValue(value);
-  const selectedCountry = countries.find(c => c.dial === selectedDial);
+  const selectedCountry = countries.find((c) => c.dial === selectedDial);
 
   const handleCountryChange = (dial: string) => {
     if (dial === '') {
@@ -90,7 +91,7 @@ export function PhoneInput({ value, onChange, required, helperText, id, name }: 
                 onChange={(e) => handleCountryChange(e.target.value)}
                 className="appearance-none h-full px-3 py-3 pr-8 rounded-xl border border-teal/10 bg-linen-white text-teal text-sm font-mono focus:outline-none focus:ring-2 focus:ring-coffee-red/20 focus:border-coffee-red cursor-pointer"
               >
-                {countries.map(c => (
+                {countries.map((c) => (
                   <option key={c.code} value={c.dial}>
                     {c.flag} {c.code === 'OTHER' ? 'Other' : c.dial}
                   </option>
@@ -120,7 +121,8 @@ export function PhoneInput({ value, onChange, required, helperText, id, name }: 
       <p id={`${baseId}-help`} className="text-xs text-teal/50 font-mono">
         {isOther
           ? 'Include your country code (e.g., +1 for US, +44 for UK)'
-          : helperText || (selectedCountry && `e.g., ${selectedDial} ${selectedCountry.placeholder}`)}
+          : helperText ||
+            (selectedCountry && `e.g., ${selectedDial} ${selectedCountry.placeholder}`)}
       </p>
     </div>
   );

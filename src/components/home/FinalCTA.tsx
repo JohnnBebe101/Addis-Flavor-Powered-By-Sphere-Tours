@@ -35,7 +35,6 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({
     <section id="final-cta" className="bg-teal">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[480px]">
-
           {/* LEFT PANEL — Dark background with text */}
           <div className="flex flex-col justify-center p-8 md:p-12 lg:p-16 space-y-6">
             {/* Badge */}
@@ -44,7 +43,9 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({
                 <div className="w-14 h-14 rounded-full bg-gold/20 flex items-center justify-center">
                   <span className="text-gold-light font-serif font-bold text-lg">{badge.text}</span>
                 </div>
-                <span className="text-gold-light/90 font-mono text-xs uppercase tracking-wider">{badge.label}</span>
+                <span className="text-gold-light/90 font-mono text-xs uppercase tracking-wider">
+                  {badge.label}
+                </span>
               </div>
             )}
 
@@ -88,12 +89,15 @@ export const FinalCTA: React.FC<FinalCTAProps> = ({
             {/* Gold badge overlay on image */}
             {badge && (
               <div className="absolute top-6 right-6 w-20 h-20 rounded-full bg-gold/90 flex flex-col items-center justify-center shadow-lg">
-                <span className="text-teal font-serif font-bold text-xs uppercase leading-none">{badge.label}</span>
-                <span className="text-teal font-serif font-bold text-xl leading-none mt-0.5">{badge.text}</span>
+                <span className="text-teal font-serif font-bold text-xs uppercase leading-none">
+                  {badge.label}
+                </span>
+                <span className="text-teal font-serif font-bold text-xl leading-none mt-0.5">
+                  {badge.text}
+                </span>
               </div>
             )}
           </div>
-
         </div>
       </div>
     </section>

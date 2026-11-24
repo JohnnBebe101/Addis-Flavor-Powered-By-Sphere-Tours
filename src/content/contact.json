@@ -173,9 +173,25 @@
     "quickContact": {
       "headline": "Quick Contact",
       "channels": [
-        { "type": "whatsapp", "label": "WhatsApp Us", "responseTime": "Instant response", "description": "Chat with us directly for instant answers", "primary": true },
-        { "type": "phone", "label": "Call Us", "responseTime": "Office hours", "description": "Speak with our team directly" },
-        { "type": "email", "label": "Email Us", "responseTime": "Within 24 hours", "description": "Detailed inquiries and written follow-up" }
+        {
+          "type": "whatsapp",
+          "label": "WhatsApp Us",
+          "responseTime": "Instant response",
+          "description": "Chat with us directly for instant answers",
+          "primary": true
+        },
+        {
+          "type": "phone",
+          "label": "Call Us",
+          "responseTime": "Office hours",
+          "description": "Speak with our team directly"
+        },
+        {
+          "type": "email",
+          "label": "Email Us",
+          "responseTime": "Within 24 hours",
+          "description": "Detailed inquiries and written follow-up"
+        }
       ]
     },
     "socialProof": {

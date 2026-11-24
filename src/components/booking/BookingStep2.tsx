@@ -8,7 +8,10 @@ import { PhoneInput } from '../ui/PhoneInput';
 import type { BookingFormData } from '../../types/booking';
 
 interface BookingStep2Props {
-  formData: Pick<BookingFormData, 'fullName' | 'email' | 'phone' | 'whatsapp' | 'pickupLocation' | 'specialRequirements'>;
+  formData: Pick<
+    BookingFormData,
+    'fullName' | 'email' | 'phone' | 'whatsapp' | 'pickupLocation' | 'specialRequirements'
+  >;
   onChange: (field: string, value: string | number) => void;
   showErrors?: boolean;
   translations?: {
@@ -25,7 +28,10 @@ export function BookingStep2({
   return (
     <div className="space-y-4">
       <div className="space-y-1.5">
-        <label htmlFor="booking-fullName" className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+        <label
+          htmlFor="booking-fullName"
+          className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1"
+        >
           <User className="w-3.5 h-3.5 text-gold" />
           <span>Full Name</span>
         </label>
@@ -45,7 +51,10 @@ export function BookingStep2({
       </div>
 
       <div className="space-y-1.5">
-        <label htmlFor="booking-email" className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+        <label
+          htmlFor="booking-email"
+          className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1"
+        >
           <Calendar className="w-3.5 h-3.5 text-gold" />
           <span>Email Address</span>
         </label>
@@ -65,7 +74,10 @@ export function BookingStep2({
       </div>
 
       <div className="space-y-1.5">
-        <label htmlFor="booking-phone" className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+        <label
+          htmlFor="booking-phone"
+          className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1"
+        >
           <Users className="w-3.5 h-3.5 text-gold" />
           <span>Phone Number *</span>
         </label>
@@ -79,7 +91,10 @@ export function BookingStep2({
       </div>
 
       <div className="space-y-1.5">
-        <label htmlFor="booking-whatsapp" className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+        <label
+          htmlFor="booking-whatsapp"
+          className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1"
+        >
           <MessageCircle className="w-3.5 h-3.5 text-gold" />
           <span>WhatsApp Number</span>
         </label>
@@ -93,7 +108,10 @@ export function BookingStep2({
       </div>
 
       <div className="space-y-1.5">
-        <label htmlFor="booking-pickupLocation" className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1">
+        <label
+          htmlFor="booking-pickupLocation"
+          className="text-xs font-mono uppercase text-teal/60 tracking-wider flex items-center space-x-1"
+        >
           <MapPin className="w-3.5 h-3.5 text-gold" />
           <span>Pickup Location</span>
         </label>
@@ -113,7 +131,10 @@ export function BookingStep2({
       </div>
 
       <div className="space-y-1.5">
-        <label htmlFor="booking-specialRequirements" className="text-xs font-mono uppercase text-teal/60 tracking-wider">
+        <label
+          htmlFor="booking-specialRequirements"
+          className="text-xs font-mono uppercase text-teal/60 tracking-wider"
+        >
           Special Requirements
         </label>
         <textarea

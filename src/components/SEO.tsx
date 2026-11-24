@@ -11,7 +11,8 @@ interface SEOProps {
 }
 
 const SITE_TITLE = BRAND.name;
-const DEFAULT_DESCRIPTION = 'Explore Addis Ababa with local experts. City tours, day trips, local guides, car hire, and travel support — powered by Sphere Tour & Travel.';
+const DEFAULT_DESCRIPTION =
+  'Explore Addis Ababa with local experts. City tours, day trips, local guides, car hire, and travel support — powered by Sphere Tour & Travel.';
 const DEFAULT_IMAGE = `${BRAND.origin}/images/hero/addis-ababa-city-hero.jpg`;
 
 export function SEO({
@@ -22,7 +23,9 @@ export function SEO({
   type = 'website',
   noindex = false,
 }: SEOProps) {
-  const fullTitle = title ? `${title} | ${SITE_TITLE}` : `${SITE_TITLE} | City Tours, Day Trips & Local Travel Support`;
+  const fullTitle = title
+    ? `${title} | ${SITE_TITLE}`
+    : `${SITE_TITLE} | City Tours, Day Trips & Local Travel Support`;
   const canonicalUrl = canonical ? `${BRAND.origin}${canonical}` : BRAND.origin;
 
   return (

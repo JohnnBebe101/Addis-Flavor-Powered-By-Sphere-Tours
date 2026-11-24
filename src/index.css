@@ -34,21 +34,21 @@ html {
 }
 
 :root {
-  --brand-primary-orange: #C75122;
-  --brand-primary-orange-hover: #A84318;
-  --brand-trust-blue: #1E5A8A;
-  --brand-trust-blue-hover: #16456B;
-  --brand-nature-green: #3D7A22;
-  --brand-nature-green-hover: #2F5F1A;
-  --brand-ground-brown: #8B5E3C;
-  --bg-light-primary: #FFFFFF;
-  --bg-light-secondary: #F8F9FA;
-  --bg-dark-footer: #1B2430;
+  --brand-primary-orange: #c75122;
+  --brand-primary-orange-hover: #a84318;
+  --brand-trust-blue: #1e5a8a;
+  --brand-trust-blue-hover: #16456b;
+  --brand-nature-green: #3d7a22;
+  --brand-nature-green-hover: #2f5f1a;
+  --brand-ground-brown: #8b5e3c;
+  --bg-light-primary: #ffffff;
+  --bg-light-secondary: #f8f9fa;
+  --bg-dark-footer: #1b2430;
   --text-heading: #111827;
-  --text-body: #4B5563;
-  --text-inverse: #FFFFFF;
-  --border-divider: #E5E7EB;
-  --border-focus: #1E5A8A;
+  --text-body: #4b5563;
+  --text-inverse: #ffffff;
+  --border-divider: #e5e7eb;
+  --border-focus: #1e5a8a;
 }
 
 @theme {
@@ -56,31 +56,31 @@ html {
   --font-sans: 'DM Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-ethiopic: 'Noto Sans Ethiopic', ui-sans-serif, system-ui, sans-serif;
 
-  --color-coffee-red: #C75122;
+  --color-coffee-red: #c75122;
   --color-teal: #111827;
-  --color-sandstone: #F8F9FA;
-  --color-linen-white: #FFFFFF;
-  --color-gold: #1E5A8A;
+  --color-sandstone: #f8f9fa;
+  --color-linen-white: #ffffff;
+  --color-gold: #1e5a8a;
   /* Accessible accent for text on the dark brand background. #1E5A8A only
      reaches ~2.4:1 on #111827; this lightened blue clears 4.5:1. */
-  --color-gold-light: #8ABBE0;
-  --color-dark-bg: #1B2430;
+  --color-gold-light: #8abbe0;
+  --color-dark-bg: #1b2430;
 
-  --color-brand-primary-orange: #C75122;
-  --color-brand-primary-orange-hover: #A84318;
-  --color-brand-trust-blue: #1E5A8A;
-  --color-brand-trust-blue-hover: #16456B;
-  --color-brand-nature-green: #3D7A22;
-  --color-brand-nature-green-hover: #2F5F1A;
-  --color-brand-ground-brown: #8B5E3C;
+  --color-brand-primary-orange: #c75122;
+  --color-brand-primary-orange-hover: #a84318;
+  --color-brand-trust-blue: #1e5a8a;
+  --color-brand-trust-blue-hover: #16456b;
+  --color-brand-nature-green: #3d7a22;
+  --color-brand-nature-green-hover: #2f5f1a;
+  --color-brand-ground-brown: #8b5e3c;
   --color-text-heading: #111827;
-  --color-text-body: #4B5563;
-  --color-text-inverse: #FFFFFF;
-  --color-bg-light-primary: #FFFFFF;
-  --color-bg-light-secondary: #F8F9FA;
-  --color-bg-dark-footer: #1B2430;
-  --color-border-divider: #E5E7EB;
-  --color-border-focus: #1E5A8A;
+  --color-text-body: #4b5563;
+  --color-text-inverse: #ffffff;
+  --color-bg-light-primary: #ffffff;
+  --color-bg-light-secondary: #f8f9fa;
+  --color-bg-dark-footer: #1b2430;
+  --color-border-divider: #e5e7eb;
+  --color-border-focus: #1e5a8a;
 }
 
 /* Scrollbar customization */
@@ -96,14 +96,14 @@ html {
 .shema-border {
   background-image: repeating-linear-gradient(
     45deg,
-    #1E5A8A,
-    #1E5A8A 10px,
-    #C75122 10px,
-    #C75122 20px,
+    #1e5a8a,
+    #1e5a8a 10px,
+    #c75122 10px,
+    #c75122 20px,
     #111827 20px,
     #111827 30px,
-    #F8F9FA 30px,
-    #F8F9FA 40px
+    #f8f9fa 30px,
+    #f8f9fa 40px
   );
   height: 8px;
   width: 100%;

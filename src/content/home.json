@@ -24,9 +24,22 @@
           "id": "tours",
           "label": "Tours",
           "fields": [
-            { "name": "tourType", "label": "What would you like to explore?", "type": "select", "placeholder": "Choose a tour type", "options": ["City Tour", "Day Trip", "Private Tour", "Custom Tour"], "required": true },
+            {
+              "name": "tourType",
+              "label": "What would you like to explore?",
+              "type": "select",
+              "placeholder": "Choose a tour type",
+              "options": ["City Tour", "Day Trip", "Private Tour", "Custom Tour"],
+              "required": true
+            },
             { "name": "date", "label": "Preferred date", "type": "date", "required": true },
-            { "name": "guests", "label": "Number of guests", "type": "number", "min": 1, "required": true }
+            {
+              "name": "guests",
+              "label": "Number of guests",
+              "type": "number",
+              "min": 1,
+              "required": true
+            }
           ],
           "cta": "Search Tours",
           "action": "/tours/"
@@ -35,8 +48,21 @@
           "id": "things-to-do",
           "label": "Things to Do",
           "fields": [
-            { "name": "interest", "label": "What interests you?", "type": "text", "placeholder": "History, markets, coffee, views...", "required": true },
-            { "name": "timeAvailable", "label": "How much time do you have?", "type": "select", "placeholder": "Select duration", "options": ["Half day", "Full day", "2–3 days", "4+ days"], "required": true }
+            {
+              "name": "interest",
+              "label": "What interests you?",
+              "type": "text",
+              "placeholder": "History, markets, coffee, views...",
+              "required": true
+            },
+            {
+              "name": "timeAvailable",
+              "label": "How much time do you have?",
+              "type": "select",
+              "placeholder": "Select duration",
+              "options": ["Half day", "Full day", "2–3 days", "4+ days"],
+              "required": true
+            }
           ],
           "cta": "Explore Addis",
           "action": "/things-to-do/"
@@ -45,9 +71,29 @@
           "id": "hotels",
           "label": "Hotels",
           "fields": [
-            { "name": "area", "label": "Preferred area", "type": "select", "placeholder": "Choose an area", "options": ["Bole", "Kazanchis", "Piassa", "Meskel Square", "Old Airport", "Sheraton Area", "Not sure yet"], "required": true },
+            {
+              "name": "area",
+              "label": "Preferred area",
+              "type": "select",
+              "placeholder": "Choose an area",
+              "options": [
+                "Bole",
+                "Kazanchis",
+                "Piassa",
+                "Meskel Square",
+                "Old Airport",
+                "Sheraton Area",
+                "Not sure yet"
+              ],
+              "required": true
+            },
             { "name": "arrivalDate", "label": "Arrival date", "type": "date", "required": true },
-            { "name": "departureDate", "label": "Departure date", "type": "date", "required": true },
+            {
+              "name": "departureDate",
+              "label": "Departure date",
+              "type": "date",
+              "required": true
+            },
             { "name": "guests", "label": "Guests", "type": "number", "min": 1, "required": true }
           ],
           "cta": "Explore Stays",
@@ -59,8 +105,32 @@
           "label": "Guides",
           "fields": [
             { "name": "date", "label": "Preferred date", "type": "date", "required": true },
-            { "name": "language", "label": "Preferred language", "type": "select", "placeholder": "Choose a language", "options": ["English", "Amharic", "French", "Spanish", "German", "Italian", "Japanese", "Chinese", "Arabic", "Korean"], "required": true },
-            { "name": "interests", "label": "What are you interested in?", "type": "text", "placeholder": "History, food, markets, photography...", "required": true }
+            {
+              "name": "language",
+              "label": "Preferred language",
+              "type": "select",
+              "placeholder": "Choose a language",
+              "options": [
+                "English",
+                "Amharic",
+                "French",
+                "Spanish",
+                "German",
+                "Italian",
+                "Japanese",
+                "Chinese",
+                "Arabic",
+                "Korean"
+              ],
+              "required": true
+            },
+            {
+              "name": "interests",
+              "label": "What are you interested in?",
+              "type": "text",
+              "placeholder": "History, food, markets, photography...",
+              "required": true
+            }
           ],
           "cta": "Find a Guide",
           "action": "/guides/",
@@ -71,8 +141,21 @@
           "label": "Car Hire",
           "fields": [
             { "name": "pickupDate", "label": "Pickup date", "type": "date", "required": true },
-            { "name": "pickupArea", "label": "Pickup area", "type": "select", "placeholder": "Choose an area", "options": ["Bole", "Airport", "City Centre", "Meskel Square", "Other"], "required": true },
-            { "name": "passengers", "label": "Passengers", "type": "number", "min": 1, "required": true }
+            {
+              "name": "pickupArea",
+              "label": "Pickup area",
+              "type": "select",
+              "placeholder": "Choose an area",
+              "options": ["Bole", "Airport", "City Centre", "Meskel Square", "Other"],
+              "required": true
+            },
+            {
+              "name": "passengers",
+              "label": "Passengers",
+              "type": "number",
+              "min": 1,
+              "required": true
+            }
           ],
           "cta": "Request a Quote",
           "action": "/car-hire/",
@@ -297,14 +380,29 @@
         "label": "What interests you most?",
         "type": "multiSelect",
         "required": true,
-        "options": ["History and culture", "Food and coffee", "Markets and local life", "Nature and day trips", "Photography", "Family travel", "Business or layover"]
+        "options": [
+          "History and culture",
+          "Food and coffee",
+          "Markets and local life",
+          "Nature and day trips",
+          "Photography",
+          "Family travel",
+          "Business or layover"
+        ]
       },
       {
         "name": "helpWith",
         "label": "What would you like help with?",
         "type": "multiSelect",
         "required": true,
-        "options": ["Tours", "Private guide", "Car hire", "Airport transfer", "Where to stay", "A custom plan"]
+        "options": [
+          "Tours",
+          "Private guide",
+          "Car hire",
+          "Airport transfer",
+          "Where to stay",
+          "A custom plan"
+        ]
       },
       {
         "name": "contactMethod",

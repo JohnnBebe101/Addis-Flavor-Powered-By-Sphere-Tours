@@ -88,9 +88,7 @@ function MobileAccordionItem({
         >
           <div className="overflow-hidden">
             {desktopItem?.columns && (
-              <div
-                className={`py-3 space-y-4 ${isGlobalDark ? 'bg-white/5' : 'bg-teal/5'}`}
-              >
+              <div className={`py-3 space-y-4 ${isGlobalDark ? 'bg-white/5' : 'bg-teal/5'}`}>
                 {desktopItem.columns.map((col, colIdx) => (
                   <div key={colIdx} className="space-y-3">
                     <h5 className="font-mono text-xs uppercase tracking-widest text-gold font-bold pl-2">

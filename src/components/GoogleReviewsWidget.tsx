@@ -58,7 +58,7 @@ export const GoogleReviewsWidget: React.FC = () => {
         setIsVisible(true);
         observer.disconnect();
       },
-      { threshold: 0, rootMargin: '200px' }
+      { threshold: 0, rootMargin: '200px' },
     );
 
     observer.observe(el);

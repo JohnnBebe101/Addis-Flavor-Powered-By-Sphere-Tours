@@ -183,9 +183,21 @@
     "howItWorks": {
       "headline": "How It Works",
       "steps": [
-        { "title": "Choose Your Tour", "description": "Browse our curated tours and select your perfect experience.", "icon": "Search" },
-        { "title": "Enter Your Details", "description": "Pick your date, number of guests, and contact information.", "icon": "User" },
-        { "title": "Confirmed!", "description": "Your guide contacts you within 2 hours with pickup details.", "icon": "CheckCircle" }
+        {
+          "title": "Choose Your Tour",
+          "description": "Browse our curated tours and select your perfect experience.",
+          "icon": "Search"
+        },
+        {
+          "title": "Enter Your Details",
+          "description": "Pick your date, number of guests, and contact information.",
+          "icon": "User"
+        },
+        {
+          "title": "Confirmed!",
+          "description": "Your guide contacts you within 2 hours with pickup details.",
+          "icon": "CheckCircle"
+        }
       ]
     },
     "sidebar": {

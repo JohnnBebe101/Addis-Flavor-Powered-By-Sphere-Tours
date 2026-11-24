@@ -12,9 +12,7 @@ export const TourListingPage: React.FC = () => {
 
   const allTours = toursData.tours as Tour[];
   const filteredTours =
-    activeFilter === 'all'
-      ? allTours
-      : allTours.filter((t) => t.tourType === activeFilter);
+    activeFilter === 'all' ? allTours : allTours.filter((t) => t.tourType === activeFilter);
 
   const handleFilterChange = (filter: string) => {
     setActiveFilter(filter);
@@ -39,7 +37,8 @@ export const TourListingPage: React.FC = () => {
                   : 'Private & Custom Tours'}
           </h1>
           <p className="text-lg text-teal/70 max-w-3xl mx-auto">
-            Browse our{activeFilter === 'all' ? '' : ' filtered'} city tours, day trips, and private excursions. Book direct and save 15%.
+            Browse our{activeFilter === 'all' ? '' : ' filtered'} city tours, day trips, and private
+            excursions. Book direct and save 15%.
           </p>
         </div>
       </section>
@@ -86,9 +85,7 @@ export const TourListingPage: React.FC = () => {
             </p>
           </div>
 
-          <TourCardGrid
-            tours={filteredTours}
-          />
+          <TourCardGrid tours={filteredTours} />
         </div>
       </section>
 

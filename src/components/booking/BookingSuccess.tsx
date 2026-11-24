@@ -9,7 +9,18 @@ import type { BookingFormData } from '../../types/booking';
 
 interface BookingSuccessProps {
   selectedTour: Tour;
-  formData: Pick<BookingFormData, 'tourId' | 'date' | 'guests' | 'fullName' | 'email' | 'phone' | 'whatsapp' | 'pickupLocation' | 'specialRequirements'>;
+  formData: Pick<
+    BookingFormData,
+    | 'tourId'
+    | 'date'
+    | 'guests'
+    | 'fullName'
+    | 'email'
+    | 'phone'
+    | 'whatsapp'
+    | 'pickupLocation'
+    | 'specialRequirements'
+  >;
   totalPrice: number;
   resetBooking?: () => void;
   translations?: {
@@ -34,35 +45,37 @@ export function BookingSuccess({
   const whatsappNumber = '251911209882';
   const whatsappMessage = encodeURIComponent(
     `🎯 *New Booking Request*\n\n` +
-    `📋 Reference: ${generateRef()}\n` +
-    `🏔️ Tour: ${selectedTour.name}\n` +
-    `📅 Date: ${new Date(formData.date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}\n` +
-    `👥 Guests: ${formData.guests}\n` +
-    `👤 Name: ${formData.fullName}\n` +
-    `📧 Email: ${formData.email}\n` +
-    `📞 Phone: ${formData.phone}\n` +
-    (formData.whatsapp ? `📱 WhatsApp: ${formData.whatsapp}\n` : '') +
-    `📍 Pickup: ${formData.pickupLocation}\n` +
-    (formData.specialRequirements ? `💬 Requirements: ${formData.specialRequirements}\n` : '') +
-    `💰 Total: $${totalPrice} USD\n\n` +
-    `Please confirm this booking. Thank you!`
+      `📋 Reference: ${generateRef()}\n` +
+      `🏔️ Tour: ${selectedTour.name}\n` +
+      `📅 Date: ${new Date(formData.date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}\n` +
+      `👥 Guests: ${formData.guests}\n` +
+      `👤 Name: ${formData.fullName}\n` +
+      `📧 Email: ${formData.email}\n` +
+      `📞 Phone: ${formData.phone}\n` +
+      (formData.whatsapp ? `📱 WhatsApp: ${formData.whatsapp}\n` : '') +
+      `📍 Pickup: ${formData.pickupLocation}\n` +
+      (formData.specialRequirements ? `💬 Requirements: ${formData.specialRequirements}\n` : '') +
+      `💰 Total: $${totalPrice} USD\n\n` +
+      `Please confirm this booking. Thank you!`,
   );
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-  const emailSubject = encodeURIComponent(`Booking Request - ${selectedTour.name} (${generateRef()})`);
+  const emailSubject = encodeURIComponent(
+    `Booking Request - ${selectedTour.name} (${generateRef()})`,
+  );
   const emailBody = encodeURIComponent(
     `Booking Reference: ${generateRef()}\n\n` +
-    `Tour: ${selectedTour.name}\n` +
-    `Date: ${new Date(formData.date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}\n` +
-    `Guests: ${formData.guests}\n` +
-    `Name: ${formData.fullName}\n` +
-    `Email: ${formData.email}\n` +
-    `Phone: ${formData.phone}\n` +
-    (formData.whatsapp ? `WhatsApp: ${formData.whatsapp}\n` : '') +
-    `Pickup: ${formData.pickupLocation}\n` +
-    (formData.specialRequirements ? `Requirements: ${formData.specialRequirements}\n` : '') +
-    `Total: $${totalPrice} USD\n\n` +
-    `Please confirm this booking. Thank you!`
+      `Tour: ${selectedTour.name}\n` +
+      `Date: ${new Date(formData.date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}\n` +
+      `Guests: ${formData.guests}\n` +
+      `Name: ${formData.fullName}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone}\n` +
+      (formData.whatsapp ? `WhatsApp: ${formData.whatsapp}\n` : '') +
+      `Pickup: ${formData.pickupLocation}\n` +
+      (formData.specialRequirements ? `Requirements: ${formData.specialRequirements}\n` : '') +
+      `Total: $${totalPrice} USD\n\n` +
+      `Please confirm this booking. Thank you!`,
   );
   const emailUrl = `mailto:info@addisabababylocals.com?subject=${emailSubject}&body=${emailBody}`;
 
@@ -118,7 +131,9 @@ export function BookingSuccess({
       </div>
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-left max-w-sm mx-auto">
-        <p className="text-xs text-amber-800 font-mono uppercase tracking-wider mb-2">What Happens Next?</p>
+        <p className="text-xs text-amber-800 font-mono uppercase tracking-wider mb-2">
+          What Happens Next?
+        </p>
         <ul className="text-xs text-amber-700 space-y-1">
           <li>• Your guide will contact you via WhatsApp within 2 hours</li>
           <li>• You'll receive confirmation with guide details and pickup time</li>

@@ -3,13 +3,34 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Calendar, Users, MapPin, Check, User, Mail, Phone, MessageCircle, ChevronDown } from 'lucide-react';
+import {
+  Calendar,
+  Users,
+  MapPin,
+  Check,
+  User,
+  Mail,
+  Phone,
+  MessageCircle,
+  ChevronDown,
+} from 'lucide-react';
 import { Tour } from '../../types';
 import type { BookingFormData } from '../../types/booking';
 
 interface BookingStep3Props {
   tour: Tour;
-  formData: Pick<BookingFormData, 'tourId' | 'date' | 'guests' | 'fullName' | 'email' | 'phone' | 'whatsapp' | 'pickupLocation' | 'specialRequirements'>;
+  formData: Pick<
+    BookingFormData,
+    | 'tourId'
+    | 'date'
+    | 'guests'
+    | 'fullName'
+    | 'email'
+    | 'phone'
+    | 'whatsapp'
+    | 'pickupLocation'
+    | 'specialRequirements'
+  >;
   totalPrice: number;
   onEdit?: (step: 1 | 2) => void;
   policiesAgreed: boolean;
@@ -95,9 +116,7 @@ export function BookingStep3({
 
       <div className="bg-sandstone/60 rounded-2xl p-4 border border-teal/10">
         <div className="flex items-center justify-between mb-4">
-          <p className="text-xs font-mono text-teal/60 uppercase tracking-wider">
-            Your Details
-          </p>
+          <p className="text-xs font-mono text-teal/60 uppercase tracking-wider">Your Details</p>
           {onEdit && (
             <button
               onClick={() => onEdit(2)}
@@ -193,9 +212,16 @@ export function BookingStep3({
             <ChevronDown className="w-4 h-4 text-gold" />
           </summary>
           <div className="px-4 pb-4 space-y-2 text-xs text-teal/70">
-            <p><strong>Cancellation:</strong> Free cancellation up to 24 hours before tour start time.</p>
-            <p><strong>Payment:</strong> Pay your guide directly on tour day. No instant charge.</p>
-            <p><strong>Pickup:</strong> Complimentary pickup from central Addis Ababa hotels.</p>
+            <p>
+              <strong>Cancellation:</strong> Free cancellation up to 24 hours before tour start
+              time.
+            </p>
+            <p>
+              <strong>Payment:</strong> Pay your guide directly on tour day. No instant charge.
+            </p>
+            <p>
+              <strong>Pickup:</strong> Complimentary pickup from central Addis Ababa hotels.
+            </p>
           </div>
         </details>
       </div>
@@ -210,8 +236,13 @@ export function BookingStep3({
           className="mt-1 w-4 h-4 rounded border-teal/30 text-coffee-red focus:ring-coffee-red"
           aria-describedby="booking-policies-desc"
         />
-        <span id="booking-policies-desc" className="text-xs text-teal/70 group-hover:text-teal transition-colors">
-          I have read and agree to the <span className="font-bold text-coffee-red">Booking Policies</span> including cancellation and payment terms.
+        <span
+          id="booking-policies-desc"
+          className="text-xs text-teal/70 group-hover:text-teal transition-colors"
+        >
+          I have read and agree to the{' '}
+          <span className="font-bold text-coffee-red">Booking Policies</span> including cancellation
+          and payment terms.
         </span>
       </label>
     </div>

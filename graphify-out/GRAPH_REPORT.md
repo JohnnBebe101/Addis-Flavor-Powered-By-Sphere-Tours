@@ -1,17 +1,17 @@
 # Graph Report - Addis-Flavor-Powered-By-Sphere-Tours  (2026-11-24)
 
 ## Corpus Check
-- 142 files · ~266,520 words
+- 142 files · ~267,229 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 15 file(s) not represented in the graph (top: .woff2 5, (none) 4, .css 2)
 
 ## Summary
-- 634 nodes · 1094 edges · 27 communities (25 shown, 2 thin omitted)
+- 634 nodes · 1095 edges · 27 communities (25 shown, 2 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e418db5c`
+- Built from commit: `f9f979cf`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -52,21 +52,21 @@
 5. `compilerOptions` - 17 edges
 6. `Homepage()` - 16 edges
 7. `Layout()` - 12 edges
-8. `Tour` - 11 edges
-9. `main()` - 11 edges
-10. `SEO()` - 11 edges
+8. `SEO()` - 11 edges
+9. `Tour` - 11 edges
+10. `main()` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `CookiePreferences()` --calls--> `useCookieConsent()`  [EXTRACTED]
   src/components/CookiePreferences.tsx → src/context/cookieConsent.ts
-- `BookingStep2Props` --references--> `BookingFormData`  [EXTRACTED]
-  src/components/booking/BookingStep2.tsx → src/types/booking.ts
-- `TourCardGridProps` --references--> `Tour`  [EXTRACTED]
-  src/components/home/TourCardGrid.tsx → src/types.ts
+- `Layout()` --calls--> `Navbar()`  [EXTRACTED]
+  src/router/Layout.tsx → src/components/Navbar.tsx
 - `Homepage()` --calls--> `SEO()`  [EXTRACTED]
   src/pages/Homepage.tsx → src/components/SEO.tsx
-- `Layout()` --calls--> `Footer()`  [EXTRACTED]
-  src/router/Layout.tsx → src/components/home/Footer.tsx
+- `BookingStep2Props` --references--> `BookingFormData`  [EXTRACTED]
+  src/components/booking/BookingStep2.tsx → src/types/booking.ts
+- `BookingStep2()` --calls--> `PhoneInput()`  [EXTRACTED]
+  src/components/booking/BookingStep2.tsx → src/components/ui/PhoneInput.tsx
 
 ## Import Cycles
 - None detected.
@@ -194,4 +194,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `sharp` connect `ref_fs` to `package.json`, `optimize-images.mjs`?**
   _High betweenness centrality (0.124) - this node is a cross-community bridge._
 - **Should `react` be split into smaller, more focused modules?**
-  _Cohesion score 0.10048309178743961 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.10144927536231885 - nodes in this community are weakly interconnected._
