@@ -37,7 +37,7 @@ export function StableHero() {
             alt="Addis Ababa cityscape at golden hour"
             className="w-full h-full object-cover"
             loading="eager"
-            fetchPriority="low"
+            fetchPriority="high"
             decoding="async"
           />
         </picture>
