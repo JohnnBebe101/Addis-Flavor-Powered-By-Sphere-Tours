@@ -5,8 +5,8 @@ import homeData from '../../content/home.json';
 
 interface FormData {
   lengthOfStay: string;
-  interests: string[];
-  helpWith: string[];
+  interests: string;
+  helpWith: string;
   contactMethod: string;
   contactValue: string;
   message: string;
@@ -15,8 +15,8 @@ interface FormData {
 
 const INITIAL_FORM: FormData = {
   lengthOfStay: '',
-  interests: [],
-  helpWith: [],
+  interests: '',
+  helpWith: '',
   contactMethod: '',
   contactValue: '',
   message: '',
@@ -30,12 +30,15 @@ export function PlanYourVisitBridge() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const handleMultiToggle = (field: 'interests' | 'helpWith', value: string) => {
-    setFormData((prev) => {
-      const arr = prev[field];
-      const next = arr.includes(value) ? arr.filter((v) => v !== value) : [...arr, value];
-      return { ...prev, [field]: next };
-    });
+  /*
+   * The contact method is derived from the single contact field instead of
+   * asking a separate question. That keeps the form at five fields while the
+   * Netlify submission still receives `contactMethod`.
+   */
+  const contactMethod = formData.contactValue.includes('@') ? 'Email' : 'WhatsApp';
+
+  const handleChange = (field: 'lengthOfStay' | 'interests' | 'helpWith' | 'contactValue' | 'message', value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
     if (errors[field]) {
       setErrors((prev) => {
         const next = { ...prev };
@@ -48,9 +51,8 @@ export function PlanYourVisitBridge() {
   const validate = (): boolean => {
     const e: Record<string, string> = {};
     if (!formData.lengthOfStay) e.lengthOfStay = 'Please select how long you are staying.';
-    if (!formData.interests.length) e.interests = 'Please select at least one interest.';
-    if (!formData.helpWith.length) e.helpWith = 'Please select what you need help with.';
-    if (!formData.contactMethod) e.contactMethod = 'Please choose a contact method.';
+    if (!formData.interests) e.interests = 'Please select an interest.';
+    if (!formData.helpWith) e.helpWith = 'Please select what you need help with.';
     if (!formData.contactValue.trim()) e.contactValue = 'Please enter your contact details.';
     setErrors(e);
     return Object.keys(e).length === 0;
@@ -68,9 +70,9 @@ export function PlanYourVisitBridge() {
         body: new URLSearchParams({
           'form-name': 'plan-your-visit',
           lengthOfStay: formData.lengthOfStay,
-          interests: formData.interests.join(', '),
-          helpWith: formData.helpWith.join(', '),
-          contactMethod: formData.contactMethod,
+          interests: formData.interests,
+          helpWith: formData.helpWith,
+          contactMethod,
           contactValue: formData.contactValue,
           message: formData.message,
         }).toString(),
@@ -122,8 +124,10 @@ export function PlanYourVisitBridge() {
           {bridge.subheadline}
         </p>
 
+        {/* One Netlify form, five visible fields. */}
         <form onSubmit={handleSubmit} className="bg-linen-white rounded-2xl p-6 md:p-8 shadow-lg border border-teal/5">
           <input type="hidden" name="form-name" value="plan-your-visit" />
+          <input type="hidden" name="contactMethod" value={contactMethod} />
           <p className="hidden"><label htmlFor="planvisit-botField">Don't fill this out: <input id="planvisit-botField" name="botField" value={formData.botField} onChange={(e) => setFormData({ ...formData, botField: e.target.value })} tabIndex={-1} autoComplete="off" /></label></p>
 
           {/* Length of stay */}
@@ -135,7 +139,7 @@ export function PlanYourVisitBridge() {
               aria-invalid={errors.lengthOfStay ? true : undefined}
               aria-describedby={errors.lengthOfStay ? 'planvisit-lengthOfStay-error' : undefined}
               value={formData.lengthOfStay}
-              onChange={(e) => { setFormData({ ...formData, lengthOfStay: e.target.value }); if (errors.lengthOfStay) setErrors((p) => { const n = { ...p }; delete n.lengthOfStay; return n; }); }}
+              onChange={(e) => handleChange('lengthOfStay', e.target.value)}
               className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white"
             >
               <option value="">Select duration</option>
@@ -144,108 +148,59 @@ export function PlanYourVisitBridge() {
             {errors.lengthOfStay && <p id="planvisit-lengthOfStay-error" className="text-xs text-coffee-red mt-1">{errors.lengthOfStay}</p>}
           </div>
 
-          {/* Interests (multi) */}
+          {/* Interests */}
           <div className="mb-6">
-            <span id="planvisit-interests-label" className="block text-sm font-mono text-teal/80 mb-2">{bridge.fields[1].label} *</span>
-            <div role="group" aria-labelledby="planvisit-interests-label" className="flex flex-wrap gap-2">
-              {bridge.fields[1].options?.map((opt, i) => {
-                const cbId = `planvisit-interests-${i}`;
-                const isSelected = formData.interests.includes(opt);
-                return (
-                  <label
-                    key={opt}
-                    htmlFor={cbId}
-                    className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all cursor-pointer has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-coffee-red/40 ${
-                      isSelected
-                        ? 'bg-coffee-red text-linen-white'
-                        : 'bg-sandstone text-teal/70 hover:bg-teal/10'
-                    }`}
-                  >
-                    <input
-                      type="checkbox"
-                      id={cbId}
-                      name="interests"
-                      value={opt}
-                      checked={isSelected}
-                      onChange={() => handleMultiToggle('interests', opt)}
-                      className="sr-only"
-                    />
-                    {opt}
-                  </label>
-                );
-              })}
-            </div>
-            {errors.interests && <p className="text-xs text-coffee-red mt-1">{errors.interests}</p>}
+            <label htmlFor="planvisit-interests" className="block text-sm font-mono text-teal/80 mb-2">{bridge.fields[1].label} *</label>
+            <select
+              id="planvisit-interests"
+              name="interests"
+              aria-invalid={errors.interests ? true : undefined}
+              aria-describedby={errors.interests ? 'planvisit-interests-error' : undefined}
+              value={formData.interests}
+              onChange={(e) => handleChange('interests', e.target.value)}
+              className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white"
+            >
+              <option value="">Choose one</option>
+              {bridge.fields[1].options?.map((opt) => <option key={opt} value={opt}>{opt}</option>)}
+            </select>
+            {errors.interests && <p id="planvisit-interests-error" className="text-xs text-coffee-red mt-1">{errors.interests}</p>}
           </div>
 
-          {/* Help with (multi) */}
+          {/* Help with */}
           <div className="mb-6">
-            <span id="planvisit-helpWith-label" className="block text-sm font-mono text-teal/80 mb-2">{bridge.fields[2].label} *</span>
-            <div role="group" aria-labelledby="planvisit-helpWith-label" className="flex flex-wrap gap-2">
-              {bridge.fields[2].options?.map((opt, i) => {
-                const cbId = `planvisit-helpWith-${i}`;
-                const isSelected = formData.helpWith.includes(opt);
-                return (
-                  <label
-                    key={opt}
-                    htmlFor={cbId}
-                    className={`px-3 py-1.5 rounded-full text-xs font-mono transition-all cursor-pointer has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-coffee-red/40 ${
-                      isSelected
-                        ? 'bg-coffee-red text-linen-white'
-                        : 'bg-sandstone text-teal/70 hover:bg-teal/10'
-                    }`}
-                  >
-                    <input
-                      type="checkbox"
-                      id={cbId}
-                      name="helpWith"
-                      value={opt}
-                      checked={isSelected}
-                      onChange={() => handleMultiToggle('helpWith', opt)}
-                      className="sr-only"
-                    />
-                    {opt}
-                  </label>
-                );
-              })}
-            </div>
-            {errors.helpWith && <p className="text-xs text-coffee-red mt-1">{errors.helpWith}</p>}
+            <label htmlFor="planvisit-helpWith" className="block text-sm font-mono text-teal/80 mb-2">{bridge.fields[2].label} *</label>
+            <select
+              id="planvisit-helpWith"
+              name="helpWith"
+              aria-invalid={errors.helpWith ? true : undefined}
+              aria-describedby={errors.helpWith ? 'planvisit-helpWith-error' : undefined}
+              value={formData.helpWith}
+              onChange={(e) => handleChange('helpWith', e.target.value)}
+              className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white"
+            >
+              <option value="">Choose one</option>
+              {bridge.fields[2].options?.map((opt) => <option key={opt} value={opt}>{opt}</option>)}
+            </select>
+            {errors.helpWith && <p id="planvisit-helpWith-error" className="text-xs text-coffee-red mt-1">{errors.helpWith}</p>}
           </div>
 
-          {/* Contact method */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-            <div>
-              <label htmlFor="planvisit-contactMethod" className="block text-sm font-mono text-teal/80 mb-2">{bridge.fields[3].label} *</label>
-              <select
-                id="planvisit-contactMethod"
-                name="contactMethod"
-                aria-invalid={errors.contactMethod ? true : undefined}
-                aria-describedby={errors.contactMethod ? 'planvisit-contactMethod-error' : undefined}
-                value={formData.contactMethod}
-                onChange={(e) => { setFormData({ ...formData, contactMethod: e.target.value }); if (errors.contactMethod) setErrors((p) => { const n = { ...p }; delete n.contactMethod; return n; }); }}
-                className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white"
-              >
-                <option value="">Select method</option>
-                {bridge.fields[3].options?.map((opt) => <option key={opt} value={opt}>{opt}</option>)}
-              </select>
-              {errors.contactMethod && <p id="planvisit-contactMethod-error" className="text-xs text-coffee-red mt-1">{errors.contactMethod}</p>}
-            </div>
-            <div>
-              <label htmlFor="planvisit-contactValue" className="block text-sm font-mono text-teal/80 mb-2">{bridge.fields[4].label} *</label>
-              <input
-                id="planvisit-contactValue"
-                name="contactValue"
-                type={formData.contactMethod === 'WhatsApp' ? 'tel' : 'email'}
-                autoComplete={formData.contactMethod === 'WhatsApp' ? 'tel' : 'email'}
-                aria-invalid={errors.contactValue ? true : undefined}
-                aria-describedby={errors.contactValue ? 'planvisit-contactValue-error' : undefined}
-                value={formData.contactValue}
-                onChange={(e) => { setFormData({ ...formData, contactValue: e.target.value }); if (errors.contactValue) setErrors((p) => { const n = { ...p }; delete n.contactValue; return n; }); }}
-                placeholder={formData.contactMethod === 'WhatsApp' ? '+251 91 123 4567' : 'you@example.com'}
-                className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white"
-              />
-              {errors.contactValue && <p id="planvisit-contactValue-error" className="text-xs text-coffee-red mt-1">{errors.contactValue}</p>}
-            </div>
+          {/* Contact details — method is inferred from the value entered */}
+          <div className="mb-6">
+            <label htmlFor="planvisit-contactValue" className="block text-sm font-mono text-teal/80 mb-2">{bridge.fields[4].label} *</label>
+            <input
+              id="planvisit-contactValue"
+              name="contactValue"
+              type="text"
+              inputMode="email"
+              autoComplete="email"
+              aria-invalid={errors.contactValue ? true : undefined}
+              aria-describedby={errors.contactValue ? 'planvisit-contactValue-error' : undefined}
+              value={formData.contactValue}
+              onChange={(e) => handleChange('contactValue', e.target.value)}
+              placeholder="you@example.com or +251 91 123 4567"
+              className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white"
+            />
+            {errors.contactValue && <p id="planvisit-contactValue-error" className="text-xs text-coffee-red mt-1">{errors.contactValue}</p>}
           </div>
 
           {/* Message */}
@@ -256,7 +211,7 @@ export function PlanYourVisitBridge() {
               name="message"
               autoComplete="off"
               value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              onChange={(e) => handleChange('message', e.target.value)}
               rows={4}
               placeholder="Anything that will help us plan..."
               className="w-full px-4 py-3 border border-teal/20 rounded-lg focus:ring-2 focus:ring-coffee-red focus:border-transparent bg-linen-white resize-none"
