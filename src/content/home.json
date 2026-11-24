@@ -1,0 +1,353 @@
+{
+  "hero": {
+    "eyebrow": "ADDIS ABABA BY LOCALS",
+    "headline": "Discover Addis Ababa, Your Way",
+    "supportingCopy": "Explore city tours, day trips, local guides, car hire, accommodation recommendations, and practical travel advice — brought together by Sphere Tour & Travel.",
+    "ctaPrimary": "Explore Tours",
+    "ctaPrimaryLink": "/tours/",
+    "ctaSecondary": "Plan My Visit",
+    "ctaSecondaryLink": "#plan-your-visit",
+    "ctaBookNow": "Book Now",
+    "ctaBookNowLink": "/book/",
+    "supportCue": "Need help planning? Contact the local Sphere Tour & Travel team.",
+    "supportCueLink": "/contact/",
+    "image": "/images/hero/addis-ababa-city-hero.jpg",
+    "badges": [
+      { "label": "City Tours", "icon": "camera" },
+      { "label": "Day Trips", "icon": "mountain" },
+      { "label": "Local Guides", "icon": "users" },
+      { "label": "Car Hire", "icon": "car" }
+    ],
+    "intentWidget": {
+      "tabs": [
+        {
+          "id": "tours",
+          "label": "Tours",
+          "fields": [
+            { "name": "tourType", "label": "What would you like to explore?", "type": "select", "placeholder": "Choose a tour type", "options": ["City Tour", "Day Trip", "Private Tour", "Custom Tour"], "required": true },
+            { "name": "date", "label": "Preferred date", "type": "date", "required": true },
+            { "name": "guests", "label": "Number of guests", "type": "number", "min": 1, "required": true }
+          ],
+          "cta": "Search Tours",
+          "action": "/tours/"
+        },
+        {
+          "id": "things-to-do",
+          "label": "Things to Do",
+          "fields": [
+            { "name": "interest", "label": "What interests you?", "type": "text", "placeholder": "History, markets, coffee, views...", "required": true },
+            { "name": "timeAvailable", "label": "How much time do you have?", "type": "select", "placeholder": "Select duration", "options": ["Half day", "Full day", "2–3 days", "4+ days"], "required": true }
+          ],
+          "cta": "Explore Addis",
+          "action": "/things-to-do/"
+        },
+        {
+          "id": "hotels",
+          "label": "Hotels",
+          "fields": [
+            { "name": "area", "label": "Preferred area", "type": "select", "placeholder": "Choose an area", "options": ["Bole", "Kazanchis", "Piassa", "Meskel Square", "Old Airport", "Sheraton Area", "Not sure yet"], "required": true },
+            { "name": "arrivalDate", "label": "Arrival date", "type": "date", "required": true },
+            { "name": "departureDate", "label": "Departure date", "type": "date", "required": true },
+            { "name": "guests", "label": "Guests", "type": "number", "min": 1, "required": true }
+          ],
+          "cta": "Explore Stays",
+          "action": "/where-to-stay/",
+          "disclosure": "Accommodation options and availability are confirmed after you send your request."
+        },
+        {
+          "id": "guides",
+          "label": "Guides",
+          "fields": [
+            { "name": "date", "label": "Preferred date", "type": "date", "required": true },
+            { "name": "language", "label": "Preferred language", "type": "select", "placeholder": "Choose a language", "options": ["English", "Amharic", "French", "Spanish", "German", "Italian", "Japanese", "Chinese", "Arabic", "Korean"], "required": true },
+            { "name": "interests", "label": "What are you interested in?", "type": "text", "placeholder": "History, food, markets, photography...", "required": true }
+          ],
+          "cta": "Find a Guide",
+          "action": "/guides/",
+          "disclosure": "Guide availability, language capability, and final pricing are confirmed after our team reviews your request."
+        },
+        {
+          "id": "car-hire",
+          "label": "Car Hire",
+          "fields": [
+            { "name": "pickupDate", "label": "Pickup date", "type": "date", "required": true },
+            { "name": "pickupArea", "label": "Pickup area", "type": "select", "placeholder": "Choose an area", "options": ["Bole", "Airport", "City Centre", "Meskel Square", "Other"], "required": true },
+            { "name": "passengers", "label": "Passengers", "type": "number", "min": 1, "required": true }
+          ],
+          "cta": "Request a Quote",
+          "action": "/car-hire/",
+          "disclosure": "Vehicle availability, driver details, and final pricing are confirmed after we review your request."
+        }
+      ]
+    }
+  },
+  "mustSees": {
+    "headline": "Must-Sees in Addis Ababa",
+    "subheadline": "Start with the places that reveal Addis Ababa's history, daily life, faith, art, and mountain views.",
+    "cta": "Explore All Must-Sees"
+  },
+  "welcomeToAddis": {
+    "eyebrow": "WELCOME TO ADDIS ABABA",
+    "headline": "A city of history, conversation, coffee, and constant discovery",
+    "editorialIntro": "Addis Ababa is best explored with context. One street can lead from a national museum to a busy market, a historic cathedral, a contemporary gallery, or a quiet coffee stop. Addis Ababa by Locals brings these experiences together, helping you decide what to see, how to get there, and which local services fit your visit.",
+    "benefits": [
+      {
+        "id": 1,
+        "title": "Local Perspective",
+        "description": "Explore Addis Ababa with people who understand its neighbourhoods, history, and everyday rhythms.",
+        "image": "/images/about/team-hero.jpg",
+        "link": "/guides/",
+        "cta": "Meet Our Guides"
+      },
+      {
+        "id": 2,
+        "title": "Plan Directly",
+        "description": "Speak with the local Sphere Tour & Travel team when you are ready to explore or need help deciding.",
+        "image": "/images/tours/addis-ababa-highlights-holy-trinity.jpg",
+        "link": "/tours/",
+        "cta": "Explore Tours"
+      },
+      {
+        "id": 3,
+        "title": "Powered by Sphere Tour & Travel",
+        "description": "Addis Ababa by Locals is powered by Sphere Tour & Travel, a local team focused on meaningful Ethiopian travel experiences.",
+        "image": "/images/about/cooking.jpg",
+        "link": "/about/",
+        "cta": "About Sphere"
+      },
+      {
+        "id": 4,
+        "title": "Help Along the Way",
+        "description": "Contact us by WhatsApp or email before your visit and while you are in Addis Ababa.",
+        "image": "/images/tours/full-day-addis-ababa-coffee-ceremony.jpg",
+        "link": "/contact/",
+        "cta": "Contact Us"
+      },
+      {
+        "id": 5,
+        "title": "Guest Feedback",
+        "description": "Read recent feedback from travellers through our Google Reviews.",
+        "image": "/images/tours/addis-ababa-highlights-hero.jpg",
+        "link": "/reviews/",
+        "cta": "Read Reviews"
+      }
+    ]
+  },
+  "addisHighlights": {
+    "headline": "Must-Sees in Addis Ababa",
+    "subheadline": "Start with the places that reveal Addis Ababa's history, daily life, faith, art, and mountain views.",
+    "attractions": [
+      {
+        "id": 1,
+        "title": "National Museum of Ethiopia",
+        "description": "Home to Lucy, the 3.2-million-year-old hominid fossil. Recently renovated with improved exhibits.",
+        "link": "/destinations/addis-ababa/",
+        "image": "/images/hero/addis-ababa-national-museum.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Addis Mercato (Merkato)",
+        "description": "Africa's largest open-air market with over 13,000 vendors selling spices, textiles, and coffee.",
+        "link": "/destinations/addis-ababa/",
+        "image": "/images/tours/half-day-addis-ababa-merkato.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Holy Trinity Cathedral",
+        "description": "Architectural masterpiece and final resting place of Emperor Haile Selassie.",
+        "link": "/destinations/addis-ababa/",
+        "image": "/images/tours/addis-ababa-highlights-holy-trinity.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Entoto Park",
+        "description": "Panoramic city views from Addis Ababa's highest point at 3,200 meters.",
+        "link": "/destinations/addis-ababa/",
+        "image": "/images/tours/full-day-addis-ababa-entoto.jpg"
+      }
+    ]
+  },
+  "tourCategorySelector": {
+    "headline": "Choose Your Adventure",
+    "subheadline": "From city highlights to full-day excursions, find an experience that fits your schedule and interests.",
+    "categories": [
+      {
+        "id": "city-tours",
+        "title": "City Tours",
+        "description": "Explore Addis Ababa's museums, markets, historic sites, neighbourhoods, and viewpoints with a local guide.",
+        "priceFrom": "From $42",
+        "link": "/tours/?category=city-tour",
+        "image": "/images/tours/half-day-addis-ababa-hero.jpg"
+      },
+      {
+        "id": "day-trips",
+        "title": "Day Trips",
+        "description": "Travel beyond the city for heritage sites, highland scenery, forests, monasteries, and other approved experiences.",
+        "priceFrom": "From $75",
+        "link": "/tours/?category=day-trip",
+        "image": "/images/tours/debre-libanos-hero.jpg"
+      },
+      {
+        "id": "private-custom",
+        "title": "Private & Custom",
+        "description": "Shape a private day around your interests, pace, and available time.",
+        "priceFrom": "Price on Request",
+        "link": "/custom-tour/",
+        "image": "/images/tours/private-group-hero.jpg"
+      }
+    ]
+  },
+  "featuredTours": {
+    "headline": "Our Most Popular Tours",
+    "subheadline": "Explore guided city tours and day trips with clear itineraries, local context, and direct support from Sphere Tour & Travel."
+  },
+  "serviceCards": {
+    "headline": "Plan Your Visit, Your Way",
+    "subheadline": "Build the practical side of your Addis Ababa stay with local recommendations and direct support.",
+    "services": [
+      {
+        "id": "where-to-stay",
+        "title": "Where to Stay",
+        "description": "Explore neighbourhood-based accommodation recommendations for business stays, short visits, and longer city breaks.",
+        "cta": "Explore Where to Stay",
+        "link": "/where-to-stay/",
+        "icon": "bed"
+      },
+      {
+        "id": "guides",
+        "title": "Find a Local Guide",
+        "description": "Tell us your interests, language needs, and available time. We will help match your enquiry with the right local guide.",
+        "cta": "Request a Guide",
+        "link": "/guides/",
+        "icon": "users"
+      },
+      {
+        "id": "car-hire",
+        "title": "Car Hire & Private Driver",
+        "description": "Request transport for airport pickup, city travel, day trips, or a private driver itinerary.",
+        "cta": "Request a Quote",
+        "link": "/car-hire/",
+        "icon": "car"
+      },
+      {
+        "id": "airport-transfers",
+        "title": "Airport Transfers",
+        "description": "Arrange a transfer or discuss an airport layover tour before you arrive.",
+        "cta": "Plan Your Arrival",
+        "link": "/airport-transfers/",
+        "icon": "plane"
+      }
+    ]
+  },
+  "practicalInfo": {
+    "headline": "First Time in Addis Ababa? Start Here",
+    "subheadline": "Read practical information before you arrive, then use our local team when you need help planning the details.",
+    "columns": [
+      {
+        "id": 1,
+        "title": "Visa & Entry",
+        "description": "Most nationalities require a visa (available on arrival or e-visa). Check requirements before travel.",
+        "image": "/images/travel-guide/airport-layover-planning.jpg",
+        "link": "/travel-guide/"
+      },
+      {
+        "id": 2,
+        "title": "Best Time to Visit",
+        "description": "October to March (dry season, mild temperatures). Peak season November–February with major festivals.",
+        "image": "/images/travel-guide/best-time-to-visit.jpg",
+        "link": "/travel-guide/"
+      },
+      {
+        "id": 3,
+        "title": "Currency & Payments",
+        "description": "Ethiopian Birr (ETB). ATMs widely available. Credit cards accepted at major hotels and restaurants.",
+        "image": "/images/travel-guide/coffee-cultural-etiquette.jpg",
+        "link": "/travel-guide/"
+      },
+      {
+        "id": 4,
+        "title": "Altitude & Health",
+        "description": "Addis Ababa sits at 2,400 meters. Take it easy on your first day, stay hydrated.",
+        "image": "/images/travel-guide/what-to-wear-religious-sites.jpg",
+        "link": "/travel-guide/"
+      }
+    ],
+    "ctaLink": "/travel-guide/",
+    "ctaText": "Read the Travel Guide"
+  },
+  "googleReviews": {
+    "headline": "What Guests Share About Their Time With Us",
+    "subheadline": "Read feedback from travellers who have explored Ethiopia with Sphere Tour & Travel.",
+    "cta": "Read Google Reviews"
+  },
+  "planYourVisitBridge": {
+    "eyebrow": "MAKE THE MOST OF YOUR STAY",
+    "headline": "Not Sure Where to Begin? Plan Your Addis Ababa Visit",
+    "subheadline": "Tell us how long you are staying, what you would like to explore, and how you prefer to travel. We will help you find the right next step.",
+    "fields": [
+      {
+        "name": "lengthOfStay",
+        "label": "How long are you staying?",
+        "type": "select",
+        "required": true,
+        "options": ["Less than 1 day", "1–2 days", "3–4 days", "5+ days", "Not decided"]
+      },
+      {
+        "name": "interests",
+        "label": "What interests you most?",
+        "type": "multiSelect",
+        "required": true,
+        "options": ["History and culture", "Food and coffee", "Markets and local life", "Nature and day trips", "Photography", "Family travel", "Business or layover"]
+      },
+      {
+        "name": "helpWith",
+        "label": "What would you like help with?",
+        "type": "multiSelect",
+        "required": true,
+        "options": ["Tours", "Private guide", "Car hire", "Airport transfer", "Where to stay", "A custom plan"]
+      },
+      {
+        "name": "contactMethod",
+        "label": "How should we contact you?",
+        "type": "select",
+        "required": true,
+        "options": ["WhatsApp", "Email"]
+      },
+      {
+        "name": "contactValue",
+        "label": "WhatsApp number or email address",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "message",
+        "label": "Tell us anything that will help us plan",
+        "type": "textarea",
+        "required": false
+      }
+    ],
+    "submitCta": "Get My Local Plan",
+    "confirmation": {
+      "heading": "Thanks — Your Addis Ababa Plan Is Underway",
+      "body": "We have received your request. A member of the Sphere Tour & Travel team will review your preferences and contact you using your selected method.",
+      "nextActions": [
+        { "label": "Browse City Tours", "link": "/tours/?category=city-tour" },
+        { "label": "Explore Day Trips", "link": "/tours/?category=day-trip" },
+        { "label": "Read the Travel Guide", "link": "/travel-guide/" }
+      ]
+    }
+  },
+  "finalCta": {
+    "headline": "Ready to Explore Addis Ababa?",
+    "subheadline": "Browse our curated tours and day trips, or contact the local Sphere Tour & Travel team for personalised assistance.",
+    "ctaPrimary": "Explore All Tours",
+    "ctaPrimaryLink": "/tours/",
+    "ctaSecondary": "Contact Us",
+    "ctaSecondaryLink": "/contact/",
+    "image": "/images/hero/final-cta-bg.jpg"
+  },
+  "metadata": {
+    "lastUpdated": "2026-09-12",
+    "version": "2.0"
+  }
+}

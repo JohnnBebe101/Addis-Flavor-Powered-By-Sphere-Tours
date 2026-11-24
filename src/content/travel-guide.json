@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "headline": "Ethiopia Travel Guide",
+    "subheadline": "Expert travel guides for Addis Ababa and Ethiopia: best time to visit, what to wear, coffee ceremony etiquette, day trip itineraries, practical tips. Plan your perfect Ethiopian adventure."
+  },
+  "articles": [
+    {
+      "id": "things-to-do-addis-ababa",
+      "slug": "things-to-do-addis-ababa",
+      "category": "Addis Ababa",
+      "title": "Things to Do in Addis Ababa — Top 10 Attractions & Hidden Gems",
+      "excerpt": "From Lucy at the National Museum to the sensory explosion of Addis Mercato, discover the top attractions and hidden gems in Ethiopia's vibrant capital.",
+      "content": "Addis Ababa offers a wealth of experiences for travelers. Start at the National Museum to see Lucy, the 3.2-million-year-old fossil. Explore Addis Mercato, Africa's largest open-air market. Visit Holy Trinity Cathedral and Entoto Park for panoramic views. Don't miss the traditional coffee ceremony and vibrant nightlife. For day trips, Debre Libanos Monastery and Tiya UNESCO Site are must-visits.",
+      "readTime": "8 min read",
+      "image": "/images/travel-guide/things-to-do-addis-ababa.jpg"
+    },
+    {
+      "id": "best-time-to-visit",
+      "slug": "best-time-to-visit",
+      "category": "Practical Information",
+      "title": "Best Time to Visit Addis Ababa — Weather, Festivals & Crowds",
+      "excerpt": "October to March offers dry weather and mild temperatures. Learn about peak tourist season, major festivals (Timket, Meskel), and when to avoid the rainy season.",
+      "content": "The best time to visit Addis Ababa is October to March (dry season, mild temperatures 15–25 °C). Peak tourist season is November–February. Major festivals include Timket (Epiphany, January) and Meskel (Finding of the True Cross, September 27). Avoid the rainy season (June–September) for clearer skies and easier travel.",
+      "readTime": "5 min read",
+      "image": "/images/travel-guide/best-time-to-visit.jpg"
+    },
+    {
+      "id": "what-to-wear-religious-sites",
+      "slug": "what-to-wear-religious-sites",
+      "category": "Cultural Guides",
+      "title": "What to Wear at Religious Sites — Church & Mosque Etiquette",
+      "excerpt": "Modest clothing is essential: shoulders and knees covered, remove shoes, women cover hair. Learn the dress code and behavioral etiquette for visiting Ethiopian churches and mosques.",
+      "content": "When visiting Ethiopian Orthodox churches, dress modestly: shoulders and knees must be covered for both men and women. Remove shoes before entering. Women should cover their hair (scarf provided if needed). Do not point feet at religious objects or people. Photography may be restricted inside churches—ask permission. Speak respectfully and maintain a quiet demeanor.",
+      "readTime": "4 min read",
+      "image": "/images/travel-guide/what-to-wear-religious-sites.jpg"
+    },
+    {
+      "id": "coffee-cultural-etiquette",
+      "slug": "coffee-cultural-etiquette",
+      "category": "Cultural Guides",
+      "title": "Ethiopian Coffee Ceremony Etiquette — *Buna* Traditions Explained",
+      "excerpt": "The traditional *buna* (coffee) ceremony has three rounds: *abol*, *tona*, *bereka*. Learn the cultural significance, proper etiquette, and how to participate respectfully.",
+      "content": "The Ethiopian coffee ceremony (*buna*) is a cornerstone of Ethiopian culture. It has three rounds: *abol* (first, strongest), *tona* (second), and *bereka* (third, meaning 'blessing'). The ceremony is led by a woman who roasts green coffee beans over charcoal, grinds them, and brews the coffee in a *jebena* (clay pot). Incense is burned, and snacks (*kolo*, popcorn) are served. To participate respectfully: accept the coffee with your right hand, sip slowly, and engage in conversation. The ceremony can last 1–2 hours—it's a social ritual, not just a caffeine fix.",
+      "readTime": "6 min read",
+      "image": "/images/travel-guide/coffee-cultural-etiquette.jpg"
+    },
+    {
+      "id": "day-trips-from-addis-ababa",
+      "slug": "day-trips-from-addis-ababa",
+      "category": "Day Trip Guides",
+      "title": "Day Trips from Addis Ababa — Monasteries, UNESCO Sites & Nature",
+      "excerpt": "Escape the city with day trips to Debre Libanos Monastery, Tiya UNESCO Site, Menagesha Forest, and Bishoftu Crater Lakes. Complete guide with distances, travel times, and what to expect.",
+      "content": "Addis Ababa is the perfect base for day trips. Debre Libanos Monastery (90 km, 2 hours) offers 13th-century spirituality and gelada baboons. Tiya UNESCO Site (85 km, 1.5 hours) features ancient stelae. Menagesha Forest (35 km, 1 hour) is a pristine highland rainforest. Bishoftu Crater Lakes (45 km, 1 hour) offers swimming and relaxation. All are accessible within 2 hours and perfect for day trips.",
+      "readTime": "10 min read",
+      "image": "/images/travel-guide/day-trips-from-addis-ababa.jpg"
+    },
+    {
+      "id": "airport-layover-planning",
+      "slug": "airport-layover-planning",
+      "category": "Practical Information",
+      "title": "Airport Layover in Addis Ababa — How to Plan a 4–8 Hour City Tour",
+      "excerpt": "Have a long layover at Bole Airport? Learn how to plan a 4–8 hour city tour, visa requirements, luggage storage, and getting back to the airport in time for your flight.",
+      "content": "Addis Ababa Bole International Airport (ADD) is a major hub for African travel. If you have a 4–8 hour layover, you can explore the city! Visa on arrival is available for most nationalities ($50 USD). Store luggage at the airport ($5–10). Take a taxi or pre-booked tour to the city (15–30 minutes). Visit the National Museum (Lucy), Addis Mercato, and Holy Trinity Cathedral. Return to the airport 2 hours before your flight. We specialize in airport layover tours—contact us for seamless planning.",
+      "readTime": "7 min read",
+      "image": "/images/travel-guide/airport-layover-planning.jpg"
+    }
+  ],
+  "categories": [
+    {
+      "id": "addis-ababa",
+      "name": "Addis Ababa",
+      "count": 1
+    },
+    {
+      "id": "practical-information",
+      "name": "Practical Information",
+      "count": 2
+    },
+    {
+      "id": "cultural-guides",
+      "name": "Cultural Guides",
+      "count": 2
+    },
+    {
+      "id": "day-trip-guides",
+      "name": "Day Trip Guides",
+      "count": 1
+    }
+  ],
+  "metadata": {
+    "totalArticles": 6,
+    "lastUpdated": "2026-08-28",
+    "version": "1.0"
+  }
+}

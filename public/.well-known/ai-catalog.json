@@ -1,0 +1,601 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Addis Ababa by Locals",
+    "documentationUrl": "https://addisabababylocals.com/about/"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:addisabababylocals.com:home:home",
+      "displayName": "Addis Ababa by Locals",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/",
+      "description": "Homepage of Addis Ababa by Locals, a locally owned tour operator in Addis Ababa powered by Sphere Tour & Travel. Start a trip enquiry with your dates and group size, or browse the tour catalogue.",
+      "tags": [
+        "home",
+        "addis ababa",
+        "ethiopia",
+        "tours",
+        "trip enquiry"
+      ],
+      "capabilities": [
+        "trip-enquiry",
+        "tour-discovery",
+        "contact"
+      ],
+      "representativeQueries": [
+        "What tours can I book in Addis Ababa?",
+        "How do I plan a trip to Ethiopia with local guides?",
+        "Can I get an itinerary for my dates and group size?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:catalog:tours",
+      "displayName": "All Tours",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/tours/",
+      "description": "Full tour catalogue: city tours, day trips and private itineraries, each with duration, group size, inclusions, cancellation terms and price.",
+      "tags": [
+        "tours",
+        "catalog",
+        "city tours",
+        "day trips",
+        "private tours"
+      ],
+      "capabilities": [
+        "tour-search",
+        "tour-comparison",
+        "booking"
+      ],
+      "representativeQueries": [
+        "What tours do you offer in Addis Ababa?",
+        "Which day trips run from Addis Ababa?",
+        "What is the difference between your city tours?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:booking:book",
+      "displayName": "Book a Tour",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/book/",
+      "description": "Booking flow: choose a tour, date and number of guests, enter contact and pickup details, and confirm the reservation. Free cancellation up to 24 hours before the tour start time.",
+      "tags": [
+        "booking",
+        "reserve",
+        "date",
+        "guests",
+        "pickup"
+      ],
+      "capabilities": [
+        "tour-booking",
+        "date-selection",
+        "guest-details"
+      ],
+      "representativeQueries": [
+        "How do I book a tour with you?",
+        "Can I reserve a tour for a specific date?",
+        "What details do you need to complete a booking?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:booking:custom-tour",
+      "displayName": "Custom Tour",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/custom-tour/",
+      "description": "Request a tailor-made itinerary: share your dates, interests, group size and budget, and we design the route with you.",
+      "tags": [
+        "custom tour",
+        "itinerary",
+        "tailor-made",
+        "private"
+      ],
+      "capabilities": [
+        "custom-itinerary-request",
+        "trip-planning"
+      ],
+      "representativeQueries": [
+        "Can you design a custom itinerary for me?",
+        "Do you create private tours for families?",
+        "How do I request a tailor-made tour?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:service:guides",
+      "displayName": "Local Guides",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/guides/",
+      "description": "Guide request flow: tell us your interests, dates, group size and language needs, and we match you with a local guide. Available languages are listed on the page.",
+      "tags": [
+        "guides",
+        "local guides",
+        "languages",
+        "guide request"
+      ],
+      "capabilities": [
+        "guide-request",
+        "language-matching",
+        "trip-planning"
+      ],
+      "representativeQueries": [
+        "Can I request a local guide in Addis Ababa?",
+        "Which languages do your guides speak?",
+        "How does guide matching work?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:contact:contact",
+      "displayName": "Contact",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/contact/",
+      "description": "Phone, WhatsApp, email, office hours and the contact form. We respond within 24 hours.",
+      "tags": [
+        "contact",
+        "whatsapp",
+        "email",
+        "support",
+        "office hours"
+      ],
+      "capabilities": [
+        "contact",
+        "support-request",
+        "custom-itinerary-enquiry"
+      ],
+      "representativeQueries": [
+        "How can I contact Addis Ababa by Locals?",
+        "Do you have a WhatsApp number?",
+        "What are your office hours?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:explore:things-to-do",
+      "displayName": "Things to Do",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/things-to-do/",
+      "description": "Curated experiences in Addis Ababa — half-day highlights, cultural activities and day trips — with durations and links to the matching tours.",
+      "tags": [
+        "things to do",
+        "attractions",
+        "experiences",
+        "addis ababa"
+      ],
+      "capabilities": [
+        "experience-discovery",
+        "itinerary-planning"
+      ],
+      "representativeQueries": [
+        "What are the best things to do in Addis Ababa?",
+        "What can I do in Addis Ababa in half a day?",
+        "Which Addis Ababa experiences suit a short stay?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:explore:where-to-stay",
+      "displayName": "Where to Stay",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/where-to-stay/",
+      "description": "Neighbourhood guide to staying in Addis Ababa — Bole, Kazanchis, Piassa, Meskel Square and more — with what each area suits, plus personalised recommendations on request.",
+      "tags": [
+        "accommodation",
+        "neighbourhoods",
+        "bole",
+        "piassa",
+        "kazanchis"
+      ],
+      "capabilities": [
+        "accommodation-guidance",
+        "trip-planning"
+      ],
+      "representativeQueries": [
+        "Which neighbourhood should I stay in when visiting Addis Ababa?",
+        "Where do travellers stay near Bole International Airport?",
+        "Can you recommend an area to stay in Addis Ababa?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:service:airport-transfers",
+      "displayName": "Airport Transfers",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/airport-transfers/",
+      "description": "Bole International Airport transfers to hotels and city destinations, including early departures and layover connections.",
+      "tags": [
+        "airport transfer",
+        "bole airport",
+        "layover",
+        "transfer"
+      ],
+      "capabilities": [
+        "airport-transfer-enquiry",
+        "transfer-booking"
+      ],
+      "representativeQueries": [
+        "Can you arrange a transfer from Bole International Airport?",
+        "Do you offer airport transfers at night?",
+        "How do I book a transfer to my hotel?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:service:car-hire",
+      "displayName": "Car Hire",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/car-hire/",
+      "description": "Car hire with driver for city days and longer trips, with professional drivers and flexible pickup.",
+      "tags": [
+        "car hire",
+        "driver",
+        "transport",
+        "addis ababa"
+      ],
+      "capabilities": [
+        "car-hire-enquiry",
+        "transport-booking"
+      ],
+      "representativeQueries": [
+        "Can I hire a car with a driver in Addis Ababa?",
+        "How much does car hire cost per day?",
+        "Do you offer vehicles for a multi-day trip?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:guide:travel-guide",
+      "displayName": "Ethiopia Travel Guide",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/travel-guide/",
+      "description": "Practical planning articles: best time to visit Ethiopia, what to wear at religious sites, coffee ceremony etiquette, day trips from Addis Ababa and airport layover planning.",
+      "tags": [
+        "travel guide",
+        "ethiopia",
+        "planning",
+        "etiquette",
+        "weather"
+      ],
+      "capabilities": [
+        "trip-planning",
+        "practical-information"
+      ],
+      "representativeQueries": [
+        "When is the best time to visit Ethiopia?",
+        "What should I wear when visiting churches in Ethiopia?",
+        "How does the Ethiopian coffee ceremony work?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:page:why-choose-us",
+      "displayName": "Why Choose Us",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/why-choose-us/",
+      "description": "How we work: local guides, direct booking, licensed operations and free cancellation up to 24 hours before the tour start time.",
+      "tags": [
+        "why choose us",
+        "direct booking",
+        "cancellation",
+        "licensed"
+      ],
+      "capabilities": [
+        "company-information",
+        "booking-policies"
+      ],
+      "representativeQueries": [
+        "Why should I book directly with Addis Ababa by Locals?",
+        "What is your cancellation policy?",
+        "Are your tours licensed?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:page:about",
+      "displayName": "About Us",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/about/",
+      "description": "Locally owned Addis Ababa tour company founded by local guides, licensed by Ministry of Tourism of Ethiopia — our story, our team and how we work.",
+      "tags": [
+        "about",
+        "company",
+        "local guides",
+        "licensed"
+      ],
+      "capabilities": [
+        "company-information",
+        "trust-and-licensing"
+      ],
+      "representativeQueries": [
+        "Who runs Addis Ababa by Locals?",
+        "Are you licensed by the Ministry of Tourism of Ethiopia?",
+        "How long have you been operating in Addis Ababa?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:page:reviews",
+      "displayName": "Reviews",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/reviews/",
+      "description": "Traveller feedback on our tours, published as written reviews you can read before booking.",
+      "tags": [
+        "reviews",
+        "feedback",
+        "travellers"
+      ],
+      "capabilities": [
+        "traveller-feedback",
+        "company-information"
+      ],
+      "representativeQueries": [
+        "What do travellers say about your tours?",
+        "Where can I read reviews of your tours?",
+        "How do customers describe the guides?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:legal:terms",
+      "displayName": "Terms of Service",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/terms/",
+      "description": "Terms of service governing use of this website and its booking services.",
+      "tags": [
+        "terms",
+        "legal",
+        "service terms"
+      ],
+      "capabilities": [
+        "legal-information"
+      ],
+      "representativeQueries": [
+        "What are the terms of service?",
+        "What terms apply to bookings made on this site?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:legal:privacy",
+      "displayName": "Privacy Policy",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/privacy/",
+      "description": "How we collect, use and protect the personal details you send through our enquiry and booking forms.",
+      "tags": [
+        "privacy",
+        "legal",
+        "personal data"
+      ],
+      "capabilities": [
+        "legal-information"
+      ],
+      "representativeQueries": [
+        "What does the privacy policy cover?",
+        "How do you handle my personal data?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:legal:cancellation-policy",
+      "displayName": "Cancellation Policy",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/cancellation-policy/",
+      "description": "Cancellation and refund rules, including free cancellation up to 24 hours before the tour start time.",
+      "tags": [
+        "cancellation",
+        "refunds",
+        "legal"
+      ],
+      "capabilities": [
+        "legal-information",
+        "booking-policies"
+      ],
+      "representativeQueries": [
+        "What is your cancellation policy?",
+        "Can I cancel a tour for a full refund?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:legal:cookies",
+      "displayName": "Cookie Policy",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/cookies/",
+      "description": "Which cookies this website uses and how to control them.",
+      "tags": [
+        "cookies",
+        "legal"
+      ],
+      "capabilities": [
+        "legal-information"
+      ],
+      "representativeQueries": [
+        "What cookies does this website use?",
+        "How can I control cookies on this site?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:tour:half-day-addis-ababa-city-tour",
+      "displayName": "Half-Day Addis Ababa by Locals",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/tours/half-day-addis-ababa-city-tour/",
+      "description": "4-hour guided tour of Addis Ababa's top attractions: National Museum (Lucy fossil), Addis Mercato, Meskel Square. Perfect for layover passengers or travelers with limited time. Duration: 4 hours.",
+      "tags": [
+        "tour",
+        "city-tour",
+        "addis ababa"
+      ],
+      "capabilities": [
+        "tour-details",
+        "availability",
+        "booking"
+      ],
+      "representativeQueries": [
+        "Is the half-day city tour enough for an airport layover?",
+        "What is included in the half-day Addis Ababa tour?",
+        "How long does the half-day city tour take?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:tour:full-day-addis-ababa-city-tour",
+      "displayName": "Full-Day Addis Ababa by Locals",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/tours/full-day-addis-ababa-city-tour/",
+      "description": "8–9 hour comprehensive city tour: National Museum, Ethnological Museum, Holy Trinity Cathedral, Addis Mercato, Entoto Park panoramic views, and traditional coffee ceremony. Duration: 8–9 hours.",
+      "tags": [
+        "tour",
+        "city-tour",
+        "addis ababa"
+      ],
+      "capabilities": [
+        "tour-details",
+        "availability",
+        "booking"
+      ],
+      "representativeQueries": [
+        "What is included in the full-day Addis Ababa tour?",
+        "How long does the full-day city tour take?",
+        "Does the full-day tour include a coffee ceremony?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:tour:addis-ababa-highlights-tour",
+      "displayName": "Addis Ababa Highlights Tour",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/tours/addis-ababa-highlights-tour/",
+      "description": "6-hour tour covering Addis Ababa's essential attractions: National Museum, Holy Trinity Cathedral, Addis Mercato, and Entoto Park. Perfect balance of culture, history, and panoramic views. Duration: 6 hours.",
+      "tags": [
+        "tour",
+        "city-tour",
+        "addis ababa"
+      ],
+      "capabilities": [
+        "tour-details",
+        "availability",
+        "booking"
+      ],
+      "representativeQueries": [
+        "What does the Addis Ababa Highlights Tour cover?",
+        "How long is the Addis Ababa Highlights Tour?",
+        "Is the highlights tour suitable for a first visit?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:tour:debre-libanos-portuguese-bridge",
+      "displayName": "Debre Libanos & Portuguese Bridge Day Trip",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/tours/debre-libanos-portuguese-bridge/",
+      "description": "8–9 hour excursion to Debre Libanos Monastery (13th century), dramatic Blue Nile Gorge views from Portuguese Bridge, and wild gelada baboons in their natural habitat. Duration: 8–9 hours.",
+      "tags": [
+        "tour",
+        "day-trip",
+        "addis ababa"
+      ],
+      "capabilities": [
+        "tour-details",
+        "availability",
+        "booking"
+      ],
+      "representativeQueries": [
+        "Can I see gelada baboons on the Debre Libanos day trip?",
+        "How long is the Debre Libanos and Portuguese Bridge day trip?",
+        "What is included in the Debre Libanos day trip?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:tour:tiya-adadi-mariam-melka-kunture",
+      "displayName": "Tiya, Adadi Mariam & Melka Kunture UNESCO Day Trip",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/tours/tiya-adadi-mariam-melka-kunture/",
+      "description": "9–10 hour archaeological adventure: Tiya UNESCO World Heritage Site (32 carved stone stelae), 13th-century Adadi Mariam rock-hewn church, Melka Kunture Paleolithic site. Duration: 9–10 hours.",
+      "tags": [
+        "tour",
+        "day-trip",
+        "addis ababa"
+      ],
+      "capabilities": [
+        "tour-details",
+        "availability",
+        "booking"
+      ],
+      "representativeQueries": [
+        "What will we see on the Tiya and Adadi Mariam day trip?",
+        "How long is the Tiya UNESCO day trip?",
+        "Is the Tiya day trip suitable for history enthusiasts?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:tour:menagesha-forest-day-trip",
+      "displayName": "Menagesha Forest Day Trip",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/tours/menagesha-forest-day-trip/",
+      "description": "8–9 hour nature excursion through pristine highland rainforest, endemic birds and wildlife, cascading waterfalls, and picnic lunch in nature. Duration: 8–9 hours.",
+      "tags": [
+        "tour",
+        "day-trip",
+        "addis ababa"
+      ],
+      "capabilities": [
+        "tour-details",
+        "availability",
+        "booking"
+      ],
+      "representativeQueries": [
+        "What is included in the Menagesha Forest day trip?",
+        "How long does the Menagesha Forest day trip take?",
+        "Are there waterfalls on the Menagesha Forest day trip?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:tour:bishoftu-crater-lakes",
+      "displayName": "Bishoftu Crater Lakes Day Trip",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/tours/bishoftu-crater-lakes/",
+      "description": "8-hour leisure day trip to five stunning crater lakes in the Ethiopian Rift Valley. Swimming, kayaking, boat rides, and resort facilities. Perfect for families and relaxation. Duration: 8 hours.",
+      "tags": [
+        "tour",
+        "day-trip",
+        "addis ababa"
+      ],
+      "capabilities": [
+        "tour-details",
+        "availability",
+        "booking"
+      ],
+      "representativeQueries": [
+        "Can we swim at the Bishoftu crater lakes?",
+        "How long is the Bishoftu crater lakes day trip?",
+        "What is included in the Bishoftu day trip?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:tour:airport-layover-tour",
+      "displayName": "Airport Layover Tour",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/tours/airport-layover-tour/",
+      "description": "Make the most of your layover with a custom 4–6 hour tour of Addis Ababa's highlights. Flexible timing, airport pickup/drop-off included. Duration: 4–6 hours.",
+      "tags": [
+        "tour",
+        "city-tour",
+        "addis ababa"
+      ],
+      "capabilities": [
+        "tour-details",
+        "availability",
+        "booking"
+      ],
+      "representativeQueries": [
+        "Can I take a tour during an airport layover in Addis Ababa?",
+        "How long is the airport layover tour?",
+        "Will I get back to the airport in time for my flight?"
+      ]
+    },
+    {
+      "identifier": "urn:air:addisabababylocals.com:tour:private-group-tours",
+      "displayName": "Private Group Tours",
+      "type": "text/html",
+      "url": "https://addisabababylocals.com/tours/private-group-tours/",
+      "description": "Fully customizable private tours for groups of 5+. Choose your dates, attractions, and pace. Dedicated guide, private vehicle, flexible itinerary. Duration: Flexible (1–3 days).",
+      "tags": [
+        "tour",
+        "private",
+        "addis ababa"
+      ],
+      "capabilities": [
+        "tour-details",
+        "availability",
+        "booking"
+      ],
+      "representativeQueries": [
+        "Can you arrange a private tour for my group?",
+        "How long can a private group tour be?",
+        "What is included in a private group tour?"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+﻿================================================================================
+LEGACY STRING AUDIT REPORT
+Generated: 2026-08-27 16:12:07
+Branch: migration/production-hardening
+================================================================================
+
+This file catalogs all legacy strings that must be replaced during rebranding.
+Search strings: Addis Flavor, sphere-voyage-ethiopie.com, info@sphere-voyage-ethiopie.com,
+                GEMINI_API_KEY, AI Studio, 0911209882
+
+================================================================================
+1. ADDIS FLAVOR (46 occurrences)
+================================================================================
+src/data.ts:14:    brandName: "Addis Flavor",
+src/data.ts:110:    brandName: "Addis Flavor",
+src/App.tsx:133:    let pageTitle = "Addis Flavor | Authentic Cooking Classes & Home Meals in Addis Ababa";
+src/App.tsx:137:      pageTitle = "Addis Flavor | Cours de cuisine authentiques & repas chez l'habitant ├á Addis-Abeba";
+src/App.tsx:146:        pageTitle = "Become a Host - Share Ethiopian Hospitality | Addis Flavor";
+src/App.tsx:149:        pageTitle = "Devenir H├┤te - Partagez l'hospitalit├⌐ ├⌐thiopienne | Addis Flavor";
+src/App.tsx:157:        pageTitle = "Our Story - Powered by Sphere Tour & Travel Ethiopia | Addis Flavor";
+src/App.tsx:158:        pageDesc = "Learn about Addis Flavor, a premium culinary initiative operated by Sphere Tour and Travel, Addis Ababa's leading sustainable tour agency. Meet our founders and read our community vetting safety guidelines.";
+src/App.tsx:160:        pageTitle = "Notre histoire - Par Sphere Tour & Travel ├ëthiopie | Addis Flavor";
+src/App.tsx:161:        pageDesc = "D├⌐couvrez l'histoire d'Addis Flavor, une initiative culinaire exclusive op├⌐r├⌐e par Sphere Tour and Travel, l'agence leader du tourisme durable ├á Addis-Abeba.";
+src/App.tsx:192:          "description": "Licensed and leading tour operator based in Addis Ababa, Ethiopia, specializing in sustainable, immersive, and cultural journeys like Addis Flavor.",
+src/App.tsx:218:          "name": "Addis Flavor",
+src/App.tsx:337:              "name": "Where do the Addis Flavor cooking classes and food experiences take place?",
+src/App.tsx:345:              "name": "How does pricing and payment work for Addis Flavor tours?",
+src/App.tsx:348:                "text": "Addis Flavor offers professional private tours starting at $25 to $49 per person. Payment is highly flexible: no immediate credit card charges are made on our website. You pay your host directly on-site during your session using cash or local electronic wallet options like Telebirr."
+src/App.tsx:369:              "name": "What is the relationship between Addis Flavor and Sphere Tour and Travel?",
+src/App.tsx:372:                "text": "Addis Flavor is an exclusive, locally managed culinary experience designed, operated, and backed by Sphere Tour and Travel, a leading fully licensed tour operator based in Addis Ababa, Ethiopia. Sphere Travel ensures optimal transit safety, certified hosts, and sustainable tourism standards."
+src/App.tsx:1160:                    ? '"Addis Flavor is a brilliant idea. The world needs it."'
+src/App.tsx:1162:                      ? '"Addis Flavor est une id├⌐e g├⌐niale. Le monde en a besoin."'
+src/App.tsx:1419:                ? `Addis Flavor Powered by Sphere Tour & Travel`
+src/App.tsx:1421:                  ? `Addis Flavor propuls├⌐ par Sphere Tour and Travel`
+src/components\BecomeHost.tsx:19:    introText: "Hosts are at the heart of the Addis Flavor community, and we would love to talk with you if you think you might be a good fit to join our growing community.",
+src/components\BecomeHost.tsx:33:    trustDesc: "We want you to feel 100% comfortable when hosting. This is why we have made sure that every Addis Flavor booking is covered by our host guarantee that covers you should any problems arise. Additionally, we communicate as much information about our guests as possible and allow you to communicate with them directly so that you never have to accept a booking without feeling absolutely comfortable about it.",
+src/components\BecomeHost.tsx:36:    feedbackQuote: "It was a pleasure to host people from all over the world. We had a wonderful interaction and sharing of experiences with our guests. It was gratifying to know that they enjoyed the meal so much. We didn't want our guests to leave and neither did they. We look forward to hosting for Addis Flavor again.",
+src/components\BecomeHost.tsx:54:    successDesc: "Thank you for applying to become an Addis Flavor host! Our community team will review your application and reach out within 2-3 business days for a short phone chat.",
+src/components\BecomeHost.tsx:68:        q: "How much money can I earn as an Addis Flavor host?",
+src/components\BecomeHost.tsx:77:        a: "Addis Flavor provides complete insurance coverage up to $10,000 for property damage and accidental liabilities during any authorized booking session, so you can host with total peace of mind."
+src/components\BecomeHost.tsx:155:    introText: "Les h├┤tes sont au c┼ôur de la communaut├⌐ d'Addis Flavor, et nous serions ravis de discuter avec vous si vous pensez ├¬tre un bon candidat pour rejoindre notre communaut├⌐ en pleine croissance.",
+src/components\BecomeHost.tsx:169:    trustDesc: "Nous voulons que vous vous sentiez ├á 100 % ├á l'aise lorsque vous accueillez des voyageurs. C'est pourquoi nous veillons ├á ce que chaque r├⌐servation Addis Flavor soit couverte par notre garantie d'h├┤te en cas de probl├¿me. De plus, nous communiquons autant d'informations que possible sur nos clients et vous permettons de communiquer directement avec eux afin que vous n'ayez jamais ├á accepter une r├⌐servation sans vous sentir absolument ├á l'aise.",
+src/components\BecomeHost.tsx:172:    feedbackQuote: "Ce fut un plaisir d'accueillir des gens du monde entier. Nous avons eu de formidables interactions et partages d'exp├⌐riences avec nos invit├⌐s. C'├⌐tait gratifiant de savoir qu'ils ont autant appr├⌐ci├⌐ le repas. Nous ne voulions pas que nos invit├⌐s partent, et eux non plus. Nous avons h├óte d'accueillir ├á nouveau pour Addis Flavor.",
+src/components\BecomeHost.tsx:190:    successDesc: "Merci d'avoir postul├⌐ pour devenir h├┤te d'Addis Flavor ! Notre ├⌐quipe examinera votre candidature et vous contactera sous 2 ├á 3 jours ouvrables pour un court entretien t├⌐l├⌐phonique.",
+src/components\BecomeHost.tsx:204:        q: "Combien d'argent puis-je gagner en tant qu'h├┤te d'Addis Flavor ?",
+src/components\BecomeHost.tsx:213:        a: "Addis Flavor offre une couverture d'assurance compl├¿te allant jusqu'├á 10 000 $ pour les dommages mat├⌐riels et les responsabilit├⌐s accidentelles au cours de chaque session de r├⌐servation autoris├⌐e, vous permettant d'accueillir en toute tranquillit├⌐ d'esprit."
+src/components\Navbar.tsx:103:                {/* <img src="/assets/logo.png" alt="Addis Flavor" className="w-full h-full object-contain" /> */}
+src/components\OurStory.tsx:61:        title: "What is Addis Flavor",
+src/components\OurStory.tsx:62:        desc1: "Addis Flavor is like having a friend's mom cook you a home cooked meal in every visit. We connect travelers with local, vetted hosts to share the joy of a homemade meal in their home and learn about their cultural and culinary traditions passed down through generations.",
+src/components\OurStory.tsx:65:        whatWeOfferSubtitle: "To help you experience local cuisine while traveling, Addis Flavor offers in-home meals with our hosts. In addition, we also offer in-home cooking experiences as well as market visits as an add-on to many of the meal experiences. All of our hosts have been vetted to ensure a safe and delightful culinary experience.",
+src/components\OurStory.tsx:78:        startedDesc: "Addis Flavor was founded in partnership with Sphere Tour and Travel to bring travelers closer to the real heartbeat of EthiopiaΓÇöits people, their stories, and their homes. Sphere Travel is renowned for sustainable tour design. Recognizing that culinary exchange is the ultimate form of cultural connection, we designed Addis Flavor to foster meaningful relationships and support local families by creating sustainable income opportunities for passionate home cooks.",
+src/components\OurStory.tsx:87:        f2Desc: "A sustainable tourism pioneer, he co-founded Addis Flavor to empower local families, bringing authentic and respectful tourism straight to the dining rooms of Addis Ababa."
+src/components\OurStory.tsx:125:        a0: "Addis Flavor is an exclusive culinary initiative powered and operated by Sphere Tour and Travel. As a fully licensed travel agency in Ethiopia, Sphere handles booking security, safe transportation, professional guides, and ensures our operations adhere to strict sustainable tourism guidelines.",
+src/components\OurStory.tsx:235:        title: "Qu'est-ce que Addis Flavor",
+src/components\OurStory.tsx:236:        desc1: "Addis Flavor, c'est comme d├⌐guster un repas pr├⌐par├⌐ par la maman d'un ami ├á chaque visite. Nous connectons les voyageurs avec des h├┤tes locaux certifi├⌐s pour partager la joie d'un repas fait maison et d├⌐couvrir les traditions culturelles et culinaires transmises de g├⌐n├⌐ration en g├⌐n├⌐ration.",
+src/components\OurStory.tsx:239:        whatWeOfferSubtitle: "Pour vous aider ├á d├⌐couvrir la cuisine locale lors de vos voyages, Addis Flavor propose des repas chez l'habitant avec nos h├┤tes. De plus, nous proposons ├⌐galement des exp├⌐riences de cuisine ainsi que des visites de march├⌐s comme extension. Tous nos h├┤tes sont certifi├⌐s pour garantir une exp├⌐rience s├╗re et d├⌐licieuse.",
+src/components\OurStory.tsx:252:        startedDesc: "Addis Flavor a ├⌐t├⌐ fond├⌐ en partenariat avec Sphere Tour and Travel pour rapprocher les voyageurs du v├⌐ritable c┼ôur de l'├ëthiopie ΓÇö ses habitants, leurs histoires et leurs maisons. Reconnaissant que l'├⌐change culinaire est la forme ultime de connexion culturelle, nous avons con├ºu Addis Flavor pour encourager des relations enrichissantes et soutenir les familles locales en cr├⌐ant des revenus durables pour des cuisiniers passionn├⌐s.",
+src/components\OurStory.tsx:261:        f2Desc: "Pionnier du tourisme durable, il a cofond├⌐ Addis Flavor pour autonomiser les familles locales, apportant un tourisme authentique directement dans les foyers d'Addis-Abeba."
+src/components\OurStory.tsx:299:        a0: "Addis Flavor est une initiative culinaire exclusive op├⌐r├⌐e par Sphere Tour and Travel. En tant qu'agence de voyage agr├⌐├⌐e en ├ëthiopie, Sphere g├¿re la s├⌐curit├⌐ des r├⌐servations, les transports, les guides et veille ├á ce que nos activit├⌐s respectent les chartes du tourisme durable.",
+
+
+================================================================================
+2. SPHERE-VOYAGE-ETHIOPIE.COM (13 occurrences)
+================================================================================
+src/App.tsx:180:    const siteOrigin = typeof window !== 'undefined' ? window.location.origin : 'https://sphere-voyage-ethiopie.com';
+src/App.tsx:186:          "@id": "https://sphere-voyage-ethiopie.com/#agency",
+src/App.tsx:189:          "url": "https://sphere-voyage-ethiopie.com/en/sphere-travel-ethiopia.html",
+src/App.tsx:221:            "@id": "https://sphere-voyage-ethiopie.com/#agency"
+src/App.tsx:268:            "@id": "https://sphere-voyage-ethiopie.com/#agency"
+src/App.tsx:293:            "@id": "https://sphere-voyage-ethiopie.com/#agency"
+src/App.tsx:318:            "@id": "https://sphere-voyage-ethiopie.com/#agency"
+src/App.tsx:1391:                  <a href="mailto:info@sphere-voyage-ethiopie.com" className="hover:text-gold transition-colors break-all font-sans">info@sphere-voyage-ethiopie.com</a>
+src/components\ContactModal.tsx:291:                      <a href="mailto:info@sphere-voyage-ethiopie.com" className="opacity-80 hover:text-gold transition-colors break-all font-mono font-semibold">info@sphere-voyage-ethiopie.com</a>
+src/components\OurStory.tsx:552:                href="https://sphere-voyage-ethiopie.com/en/sphere-travel-ethiopia.html"
+src/components\OurStory.tsx:784:                  href="mailto:info@sphere-voyage-ethiopie.com"
+src/components\OurStory.tsx:824:                <a href="mailto:info@sphere-voyage-ethiopie.com" className="block opacity-80 hover:text-gold transition-colors break-all text-xs sm:text-sm font-mono">
+src/components\OurStory.tsx:825:                  info@sphere-voyage-ethiopie.com
+
+
+================================================================================
+3. INFO@SPHERE-VOYAGE-ETHIOPIE.COM (5 occurrences)
+================================================================================
+src/App.tsx:1391:                  <a href="mailto:info@sphere-voyage-ethiopie.com" className="hover:text-gold transition-colors break-all font-sans">info@sphere-voyage-ethiopie.com</a>
+src/components\ContactModal.tsx:291:                      <a href="mailto:info@sphere-voyage-ethiopie.com" className="opacity-80 hover:text-gold transition-colors break-all font-mono font-semibold">info@sphere-voyage-ethiopie.com</a>
+src/components\OurStory.tsx:784:                  href="mailto:info@sphere-voyage-ethiopie.com"
+src/components\OurStory.tsx:824:                <a href="mailto:info@sphere-voyage-ethiopie.com" className="block opacity-80 hover:text-gold transition-colors break-all text-xs sm:text-sm font-mono">
+src/components\OurStory.tsx:825:                  info@sphere-voyage-ethiopie.com
+
+
+================================================================================
+4. GEMINI_API_KEY (9 occurrences)
+================================================================================
+.\.env.example:1:# GEMINI_API_KEY: Required for Gemini AI API calls.
+.\.env.example:4:GEMINI_API_KEY="MY_GEMINI_API_KEY"
+.\IMPLEMENTATION_PLAN.md:43:- `GEMINI_API_KEY` ΓÇö 2 files
+.\IMPLEMENTATION_PLAN.md:161:- Zero references to `AI Studio`, `GEMINI_API_KEY` in source
+.\README.md:18:2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+.\UPGRADE_TO_PRODUCTION.md:12:- Secrets and platform-specific instructions (GEMINI_API_KEY, AI Studio links) in README/.env.example and embedded content (security & operational risk).
+.\UPGRADE_TO_PRODUCTION.md:27:   - Problem: GEMINI_API_KEY presence, AI Studio app URLs, and structured-data referencing sphere-voyage domain and contact details. Secrets and domain-specific PII must be removed or parameterized.
+.\UPGRADE_TO_PRODUCTION.md:80:- Immediate quick grep & report: run searches for strings: `GEMINI_API_KEY`, `sphere-voyage`, `Addis Flavor`, `info@sphere-voyage-ethiopie.com`, `0911209882` and produce a find-and-list file for manual review (`scripts/find-legacy-strings.txt`).
+.\UPGRADE_TO_PRODUCTION.md:90:   - Changes: Replace GEMINI_API_KEY specifics with schema and note how to add key in secure store. Remove AI Studio link or move to docs/archive.md. Parameterize structured data fields (siteOrigin, telephone, email) via env and/or config.
+
+
+================================================================================
+5. AI STUDIO (17 occurrences)
+================================================================================
+.\IMPLEMENTATION_PLAN.md:44:- `AI Studio` ΓÇö 3 files
+.\IMPLEMENTATION_PLAN.md:107:### Sprint 1.3 ΓÇö Remove AI Studio Platform Coupling (0.5 day)
+.\IMPLEMENTATION_PLAN.md:111:| `README.md` | All | Rewrite: remove AI Studio banner, GEMINI instructions, AI Studio URL |
+.\IMPLEMENTATION_PLAN.md:114:| `metadata.json` | All | Delete file (AI Studio artifact) |
+.\IMPLEMENTATION_PLAN.md:161:- Zero references to `AI Studio`, `GEMINI_API_KEY` in source
+.\.env.example:2:# AI Studio automatically injects this at runtime from user secrets.
+.\.env.example:3:# Users configure this via the Secrets panel in the AI Studio UI.
+.\.env.example:7:# AI Studio automatically injects this at runtime with the Cloud Run service URL.
+.\vite.config.ts:15:      // HMR is disabled in AI Studio via DISABLE_HMR env var.
+.\README.md:5:# Run and deploy your AI Studio app
+.\README.md:9:View your app in AI Studio: https://ai.studio/apps/d55907c8-d4ad-4f74-952e-06158e5eb538
+.\UPGRADE_TO_PRODUCTION.md:9:Short: the project is a modern Vite + React + TypeScript UI that contains substantial, shipping-ready UI code but also has platform-specific (AI Studio / Gemini) traces, dependency hygiene problems, large monolithic components, missing CI/tests and asset/SEO/security issues that prevent safe production deployment.
+.\UPGRADE_TO_PRODUCTION.md:12:- Secrets and platform-specific instructions (GEMINI_API_KEY, AI Studio links) in README/.env.example and embedded content (security & operational risk).
+.\UPGRADE_TO_PRODUCTION.md:27:   - Problem: GEMINI_API_KEY presence, AI Studio app URLs, and structured-data referencing sphere-voyage domain and contact details. Secrets and domain-specific PII must be removed or parameterized.
+.\UPGRADE_TO_PRODUCTION.md:90:   - Changes: Replace GEMINI_API_KEY specifics with schema and note how to add key in secure store. Remove AI Studio link or move to docs/archive.md. Parameterize structured data fields (siteOrigin, telephone, email) via env and/or config.
+.\UPGRADE_TO_PRODUCTION.md:229:- README.md ΓÇö remove AI Studio/GEMINI specifics.
+.\UPGRADE_TO_PRODUCTION.md:232:- vite.config.ts ΓÇö remove AI Studio HMR comments or document them.
+
+
+================================================================================
+6. PHONE NUMBER 0911209882 (3 occurrences)
+================================================================================
+src/App.tsx:1387:                  <a href="tel:0911209882" className="hover:text-gold transition-colors font-mono font-sans">091 120 9882</a>
+src/components\ContactModal.tsx:287:                      <a href="tel:0911209882" className="opacity-80 hover:text-gold transition-colors font-mono font-bold">091 120 9882</a>
+src/components\OurStory.tsx:817:                  091 120 9882
+
+
+================================================================================
+SUMMARY BY FILE
+================================================================================
+  src/App.tsx : 29 hits
+  src/components\BecomeHost.tsx : 12 hits
+  src/components\ContactModal.tsx : 3 hits
+  src/components\Navbar.tsx : 1 hits
+  src/components\OurStory.tsx : 20 hits
+  src/data.ts : 2 hits
+
+================================================================================
+REBRAND REPLACEMENT MAP
+================================================================================
+  Addis Flavor                    -> Addis Ababa City Tours
+  sphere-voyage-ethiopie.com      -> addisababacitytours.com
+  info@sphere-voyage-ethiopie.com -> info@addisababacitytours.com
+  0911209882                      -> (keep same)
+  Sphere Tour and Travel          -> (keep same - parent company)
+  GEMINI_API_KEY                  -> (delete references)
+  AI Studio references            -> (delete references)
+

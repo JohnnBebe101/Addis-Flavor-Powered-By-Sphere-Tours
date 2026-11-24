@@ -1,0 +1,172 @@
+{
+  "hero": {
+    "headline": "Contact Us",
+    "subheadline": "Have questions about our tours? Want to customize your itinerary? We're here to help. WhatsApp, call, or email us—we respond within 24 hours.",
+    "image": "/images/contact/contact-hero.jpg"
+  },
+  "contactInfo": {
+    "headline": "Get in Touch",
+    "phone": "+251-911-XXX-XXX",
+    "whatsapp": "+251-911-XXX-XXX",
+    "email": "info@addisababacitytour.com",
+    "address": "Sphere Head Office, National Tower, Addis Ababa, Ethiopia",
+    "officeHours": "24/7 (WhatsApp), 9:00 AM – 6:00 PM (Office)"
+  },
+  "contactForm": {
+    "headline": "Send Us a Message",
+    "fields": [
+      {
+        "name": "fullName",
+        "label": "Full Name",
+        "type": "text",
+        "required": true,
+        "placeholder": "John Doe"
+      },
+      {
+        "name": "email",
+        "label": "Email Address",
+        "type": "email",
+        "required": true,
+        "placeholder": "john@example.com"
+      },
+      {
+        "name": "topic",
+        "label": "Topic",
+        "type": "select",
+        "required": true,
+        "options": [
+          "General Inquiry",
+          "Tour Booking",
+          "Custom Tour",
+          "Travel Agent Partnership",
+          "Other"
+        ]
+      },
+      {
+        "name": "message",
+        "label": "Your Message",
+        "type": "textarea",
+        "required": true,
+        "placeholder": "How can we help you?"
+      }
+    ],
+    "submitText": "Send Message",
+    "successMessage": "Thank you for your message! We'll get back to you within 24 hours. For urgent inquiries, please WhatsApp us at +251-911-XXX-XXX. Amesegenalehu!"
+  },
+  "customTourInquiry": {
+    "headline": "Custom Tour Inquiry",
+    "subheadline": "Want a fully customized itinerary? Tell us your interests, travel dates, and group size, and we'll create a personalized tour just for you.",
+    "fields": [
+      {
+        "name": "travelDates",
+        "label": "Travel Dates",
+        "type": "text",
+        "required": true,
+        "placeholder": "e.g., September 15–20, 2026"
+      },
+      {
+        "name": "groupSize",
+        "label": "Group Size",
+        "type": "number",
+        "required": true,
+        "placeholder": "2"
+      },
+      {
+        "name": "interests",
+        "label": "Your Interests",
+        "type": "textarea",
+        "required": true,
+        "placeholder": "History, culture, photography, food, nature, etc."
+      },
+      {
+        "name": "budget",
+        "label": "Budget (per person)",
+        "type": "select",
+        "required": false,
+        "options": [
+          "Budget ($50–100/day)",
+          "Mid-range ($100–200/day)",
+          "Luxury ($200+/day)",
+          "Not sure"
+        ]
+      }
+    ],
+    "submitText": "Request Custom Tour",
+    "successMessage": "Thank you for your custom tour inquiry! We'll create a personalized itinerary and get back to you within 24 hours. Amesegenalehu!"
+  },
+  "travelAgentPartnership": {
+    "headline": "Travel Agent Partnerships",
+    "subheadline": "Are you a travel agent or tour operator? We offer competitive commissions, reliable service, and local expertise for your clients visiting Addis Ababa.",
+    "fields": [
+      {
+        "name": "companyName",
+        "label": "Company Name",
+        "type": "text",
+        "required": true,
+        "placeholder": "Your Travel Agency"
+      },
+      {
+        "name": "website",
+        "label": "Website",
+        "type": "url",
+        "required": false,
+        "placeholder": "https://youragency.com"
+      },
+      {
+        "name": "clientVolume",
+        "label": "Estimated Annual Client Volume to Ethiopia",
+        "type": "select",
+        "required": true,
+        "options": [
+          "1–10 clients",
+          "11–50 clients",
+          "51–100 clients",
+          "100+ clients"
+        ]
+      },
+      {
+        "name": "message",
+        "label": "Your Message",
+        "type": "textarea",
+        "required": true,
+        "placeholder": "Tell us about your agency and partnership interests"
+      }
+    ],
+    "submitText": "Request Partnership Information",
+    "successMessage": "Thank you for your partnership inquiry! We'll send you our partnership package and commission structure within 24 hours. Amesegenalehu!"
+  },
+  "faqs": {
+    "headline": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How quickly do you respond to inquiries?",
+        "answer": "We respond to all inquiries within 24 hours. For urgent inquiries, WhatsApp us at +251-911-XXX-XXX for immediate assistance."
+      },
+      {
+        "question": "Can I book a tour on the same day?",
+        "answer": "Same-day bookings are subject to availability. Contact us via WhatsApp or phone for last-minute availability. We do our best to accommodate, but cannot guarantee."
+      },
+      {
+        "question": "Do you offer airport pickup?",
+        "answer": "Yes! All tours include complimentary hotel pickup and drop-off in central Addis Ababa (Bole, Piassa, Meskel Square areas). Airport pickup can be arranged for an additional fee."
+      },
+      {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept USD, EUR, and ETB (Ethiopian Birr). Credit cards (Visa, Mastercard) accepted for online bookings. Cash payments accepted on tour (exact change appreciated)."
+      }
+    ]
+  },
+  "map": {
+    "headline": "Our Location",
+    "address": "Sphere Head Office, National Tower, Addis Ababa, Ethiopia",
+    "coordinates": {
+      "lat": 9.032,
+      "lng": 38.7469
+    },
+    "embedCode": "<!-- Google Maps embed code goes here -->"
+  },
+  "metadata": {
+    "lastUpdated": "2026-08-28",
+    "version": "1.0"
+  }
+}

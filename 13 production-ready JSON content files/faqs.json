@@ -1,0 +1,167 @@
+{
+  "faqs": {
+    "general": [
+      {
+        "id": "general-1",
+        "category": "General",
+        "question": "How much does an Addis Ababa city tour cost?",
+        "answer": "Half-day tours start from $42 per person, full-day tours from $69, and day trips from $75. Book direct and save 15% compared to online travel agencies like GetYourGuide and Viator."
+      },
+      {
+        "id": "general-2",
+        "category": "General",
+        "question": "What is included in a full-day Addis Ababa tour?",
+        "answer": "All tours include: expert English-speaking guide, private vehicle with driver, hotel pickup and drop-off, all entrance fees, bottled water, and lunch (for full-day tours)."
+      },
+      {
+        "id": "general-3",
+        "category": "General",
+        "question": "Is it safe to book tours directly in Addis Ababa?",
+        "answer": "Yes. We are licensed by Ethiopia's Ministry of Tourism, carry full liability insurance, and have over 500 five-star reviews on TripAdvisor. Your payment is secured with 256-bit SSL encryption."
+      },
+      {
+        "id": "general-4",
+        "category": "General",
+        "question": "Can I customize my tour itinerary?",
+        "answer": "Yes! Private tours are fully customizable. Tell us your interests (history, culture, photography, food) and we'll tailor the route accordingly."
+      },
+      {
+        "id": "general-5",
+        "category": "General",
+        "question": "What is the best time to visit Addis Ababa?",
+        "answer": "October to March (dry season, mild temperatures 15–25 °C). Peak tourist season is November–February, coinciding with major festivals like Timket (Epiphany) in January."
+      },
+      {
+        "id": "general-6",
+        "category": "General",
+        "question": "What is the cancellation policy?",
+        "answer": "Free cancellation up to 24 hours before the tour start time. Cancellations within 24 hours or no-shows are non-refundable. Weather-related cancellations qualify for full refund or free rescheduling."
+      },
+      {
+        "id": "general-7",
+        "category": "General",
+        "question": "Do you offer airport layover tours?",
+        "answer": "Yes! We specialize in airport layover tours (4–6 hours) for travelers with long connections. We'll pick you up from the airport, show you the highlights, and return you in time for your flight."
+      },
+      {
+        "id": "general-8",
+        "category": "General",
+        "question": "What should I bring on a tour?",
+        "answer": "Comfortable walking shoes, sun protection (hat, sunglasses, sunscreen), camera, light jacket (mornings can be cool at 2,400m altitude), and modest clothing for church visits (shoulders and knees covered)."
+      }
+    ],
+    "booking": [
+      {
+        "id": "booking-1",
+        "category": "Booking",
+        "question": "How do I book a tour?",
+        "answer": "Browse our tours, select your preferred date and number of guests, enter your details (name, email, phone, pickup location), and complete your booking securely online. You'll receive instant confirmation and your guide's contact information."
+      },
+      {
+        "id": "booking-2",
+        "category": "Booking",
+        "question": "How far in advance should I book?",
+        "answer": "We recommend booking at least 24 hours in advance. For peak season (November–February) and weekends, book 3–7 days ahead to secure your preferred date."
+      },
+      {
+        "id": "booking-3",
+        "category": "Booking",
+        "question": "Can I book on the same day?",
+        "answer": "Same-day bookings are subject to availability. Contact us via WhatsApp or phone for last-minute availability. We do our best to accommodate, but cannot guarantee."
+      },
+      {
+        "id": "booking-4",
+        "category": "Booking",
+        "question": "What payment methods do you accept?",
+        "answer": "We accept USD, EUR, and ETB (Ethiopian Birr). Credit cards (Visa, Mastercard) accepted for online bookings. Cash payments accepted on tour (exact change appreciated)."
+      },
+      {
+        "id": "booking-5",
+        "category": "Booking",
+        "question": "Is there a child discount?",
+        "answer": "Yes! Children (6–17 years) receive discounted rates. Infants (0–5 years) are free. See individual tour pages for specific pricing."
+      }
+    ],
+    "tours": [
+      {
+        "id": "tours-1",
+        "category": "Tours",
+        "question": "What time do tours start?",
+        "answer": "Half-day tours depart at 08:00 or 14:00. Full-day tours depart at 08:00. Day trips depart between 07:00–08:00 depending on destination. Pickup time confirmed 24 hours before tour."
+      },
+      {
+        "id": "tours-2",
+        "category": "Tours",
+        "question": "How long are the tours?",
+        "answer": "Half-day city tours: 4 hours. Full-day city tours: 8–9 hours. Day trips: 8–10 hours depending on destination. Private tours can be customized to your preferred duration."
+      },
+      {
+        "id": "tours-3",
+        "category": "Tours",
+        "question": "What is the group size?",
+        "answer": "Small group tours: maximum 6 people. Private tours: 1–6 people (larger groups available on request). All tours include dedicated guide and private vehicle."
+      },
+      {
+        "id": "tours-4",
+        "category": "Tours",
+        "question": "Are the tours suitable for children?",
+        "answer": "Yes! Most tours are suitable for children aged 6 and above. Day trips to Menagesha Forest recommended for ages 12+ (moderate to challenging hike). Infants (0–5 years) are free on all tours."
+      },
+      {
+        "id": "tours-5",
+        "category": "Tours",
+        "question": "Are the tours wheelchair accessible?",
+        "answer": "Most tours are not wheelchair accessible due to uneven terrain, stairs, and lack of ramps at historical sites. Bishoftu Crater Lakes tour is wheelchair accessible (resort facilities have ramps). Contact us for specific accessibility questions."
+      },
+      {
+        "id": "tours-6",
+        "category": "Tours",
+        "question": "What if I have dietary restrictions?",
+        "answer": "We accommodate dietary restrictions (vegetarian, vegan, gluten-free, allergies) with advance notice. Please inform us when booking. All tours include vegetarian options. Lunch at local restaurants can be customized."
+      }
+    ],
+    "practical": [
+      {
+        "id": "practical-1",
+        "category": "Practical Information",
+        "question": "Do I need a visa to visit Ethiopia?",
+        "answer": "Most nationalities require a visa (available on arrival or e-visa). Check requirements before travel. We can assist with visa support letters for confirmed bookings."
+      },
+      {
+        "id": "practical-2",
+        "category": "Practical Information",
+        "question": "What currency should I bring?",
+        "answer": "Ethiopian Birr (ETB) is the local currency. ATMs widely available in Addis Ababa. Credit cards accepted at major hotels and restaurants. We accept USD, EUR, and ETB for tour payments."
+      },
+      {
+        "id": "practical-3",
+        "category": "Practical Information",
+        "question": "Is tap water safe to drink?",
+        "answer": "No, tap water is not safe to drink. Bottled water is provided on all tours. We recommend drinking only bottled or filtered water during your stay."
+      },
+      {
+        "id": "practical-4",
+        "category": "Practical Information",
+        "question": "What is the altitude in Addis Ababa?",
+        "answer": "Addis Ababa is at 2,400 meters (7,874 feet) altitude. Take it easy on your first day, stay hydrated, and avoid heavy exertion initially. Most visitors adjust within 24–48 hours."
+      },
+      {
+        "id": "practical-5",
+        "category": "Practical Information",
+        "question": "What should I wear in Addis Ababa?",
+        "answer": "Light layers (mornings cool, afternoons warm), comfortable walking shoes, sun protection (hat, sunglasses, sunscreen). Modest clothing for church visits (shoulders and knees covered)."
+      }
+    ]
+  },
+  "metadata": {
+    "totalFaqs": 22,
+    "categories": [
+      "General",
+      "Booking",
+      "Tours",
+      "Practical Information"
+    ],
+    "lastUpdated": "2026-08-28",
+    "version": "1.0"
+  }
+}

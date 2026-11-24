@@ -6,3 +6,14 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Generated image derivatives + original snapshots (see scripts/optimize-images.mjs)
+.image-cache/
+# Generated webfont glyph set (see scripts/generate-font-text-set.mjs)
+.font-text-set
+public/images/**/*-640.avif
+public/images/**/*-1280.avif
+public/images/**/*-1920.avif
+public/images/**/*-640.webp
+public/images/**/*-1280.webp
+public/images/**/*-1920.webp
