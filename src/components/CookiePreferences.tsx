@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useCookieConsent, type ConsentPreferences } from '../context/CookieConsentContext';
+import { useCookieConsent, type ConsentPreferences } from '../context/cookieConsent';
 
 interface CookiePreferencesProps {
   onClose: () => void;

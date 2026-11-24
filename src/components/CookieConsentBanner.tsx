@@ -1,5 +1,5 @@
 import { useState, useSyncExternalStore, lazy, Suspense } from 'react';
-import { useCookieConsent } from '../context/CookieConsentContext';
+import { useCookieConsent } from '../context/cookieConsent';
 
 /*
  * The preferences dialog opens behind a click, so it is fetched on demand
