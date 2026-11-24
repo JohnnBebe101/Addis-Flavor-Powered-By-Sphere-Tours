@@ -1,6 +1,8 @@
 /// <reference types="vite/client" />
 
 declare module '*.json' {
+  // JSON modules are intentionally loosely typed at the import boundary.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const value: any;
   export default value;
 }

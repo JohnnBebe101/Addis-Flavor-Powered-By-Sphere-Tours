@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import { X, Send, MapPin, Phone, Mail } from 'lucide-react';
 import contactContent from '../content/contact.json';
@@ -98,6 +98,12 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
 
   const t = contactJson.contactForm;
 
+  const resetForm = useCallback(() => {
+    setFormData({ fullName: '', email: '', phone: '', whatsapp: '', topic: '', message: '' });
+    setIsSuccess(false);
+    onClose();
+  }, [onClose]);
+
   useEffect(() => {
     return () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); };
   }, []);
@@ -161,12 +167,6 @@ export default function ContactModal({ isOpen, onClose, isGlobalDark = false }: 
       setIsSending(false);
       setIsSuccess(true);
     }, 1500);
-  };
-
-  const resetForm = () => {
-    setFormData({ fullName: '', email: '', phone: '', whatsapp: '', topic: '', message: '' });
-    setIsSuccess(false);
-    onClose();
   };
 
   if (!isOpen) return null;

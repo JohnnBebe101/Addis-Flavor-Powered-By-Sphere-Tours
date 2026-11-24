@@ -10,7 +10,6 @@ export function DesktopNav({
   isScrolled,
   isGlobalDark,
   translations,
-  onBookClick,
   onContactClick,
   isMobileMenuOpen,
   onToggleMobileMenu,
@@ -77,7 +76,6 @@ export function DesktopNav({
                   item={item as NavMenuItemFromJSON}
                   isScrolled={isScrolled}
                   isGlobalDark={isGlobalDark}
-                  onContactClick={onContactClick}
                   translations={translations}
                 />
               );

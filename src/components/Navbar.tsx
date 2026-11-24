@@ -18,7 +18,6 @@ const MobileDrawer = lazy(() =>
 
 export default function Navbar({
   translations,
-  onBookClick,
   onContactClick,
   isGlobalDark = false,
 }: NavbarProps) {
@@ -56,7 +55,6 @@ export default function Navbar({
         isScrolled={isScrolled}
         isGlobalDark={isGlobalDark}
         translations={translations}
-        onBookClick={handleBookClick}
         onContactClick={handleContactClick}
         isMobileMenuOpen={isMobileMenuOpen}
         onToggleMobileMenu={toggleMobileMenu}

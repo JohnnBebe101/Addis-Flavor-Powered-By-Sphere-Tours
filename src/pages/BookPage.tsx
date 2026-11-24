@@ -96,20 +96,6 @@ export const BookPage: React.FC = () => {
     [selectedTour, formData.guests]
   );
 
-  if (!selectedTour) {
-    return (
-      <div className="min-h-screen bg-linen-white flex items-center justify-center">
-        <div className="text-center space-y-4 p-8">
-          <p className="text-lg font-serif text-teal">No tours available at the moment.</p>
-          <p className="text-sm text-teal/60">Please check back later or contact us for assistance.</p>
-          <a href="/contact/" className="inline-block px-6 py-3 rounded-full bg-coffee-red text-linen-white text-xs uppercase font-bold tracking-wider">
-            Contact Us
-          </a>
-        </div>
-      </div>
-    );
-  }
-
   const handleInputChange = useCallback((field: string, value: string | number) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   }, []);
@@ -156,12 +142,26 @@ export const BookPage: React.FC = () => {
     setShowErrors(false);
   }, []);
 
-  const p = bookingJson.page;
-
   const handleGuestChange = useCallback((delta: number) => {
     const newGuests = Math.max(1, Math.min(10, formData.guests + delta));
     handleInputChange('guests', newGuests);
   }, [formData.guests, handleInputChange]);
+
+  const p = bookingJson.page;
+
+  if (!selectedTour) {
+    return (
+      <div className="min-h-screen bg-linen-white flex items-center justify-center">
+        <div className="text-center space-y-4 p-8">
+          <p className="text-lg font-serif text-teal">No tours available at the moment.</p>
+          <p className="text-sm text-teal/60">Please check back later or contact us for assistance.</p>
+          <a href="/contact/" className="inline-block px-6 py-3 rounded-full bg-coffee-red text-linen-white text-xs uppercase font-bold tracking-wider">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-linen-white">

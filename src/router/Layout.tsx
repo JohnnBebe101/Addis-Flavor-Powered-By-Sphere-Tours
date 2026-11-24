@@ -38,8 +38,6 @@ export const Layout = () => {
     }
   }, [search, navigate]);
 
-  const handleOpenBooking = () => navigate('/book/');
-
   return (
     <CookieConsentProvider>
       <a
@@ -51,7 +49,6 @@ export const Layout = () => {
       <NotificationBar />
       <Navbar
         translations={TRANSLATIONS}
-        onBookClick={handleOpenBooking}
         onContactClick={() => setIsContactOpen(true)}
       />
       <main id="main-content">

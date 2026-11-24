@@ -9,7 +9,6 @@ import { useReducedMotion } from '../../hooks/useReducedMotion';
 export function DesktopDropdownMenu({
   item,
   isScrolled,
-  onContactClick,
   translations,
 }: DesktopDropdownMenuProps) {
   const [isOpen, setIsOpen] = useState(false);

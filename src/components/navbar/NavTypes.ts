@@ -35,7 +35,6 @@ export type NavMobileItemFromJSON = {
 
 export interface NavbarProps {
   translations: Translations;
-  onBookClick: () => void;
   onContactClick: () => void;
   isGlobalDark?: boolean;
 }
@@ -44,7 +43,6 @@ export interface DesktopNavProps {
   isScrolled: boolean;
   isGlobalDark: boolean;
   translations: Translations;
-  onBookClick: () => void;
   onContactClick: () => void;
   isMobileMenuOpen: boolean;
   onToggleMobileMenu: () => void;
@@ -54,7 +52,6 @@ export interface DesktopDropdownMenuProps {
   item: NavMenuItemFromJSON;
   isScrolled: boolean;
   isGlobalDark: boolean;
-  onContactClick: () => void;
   translations: Translations;
 }
 
