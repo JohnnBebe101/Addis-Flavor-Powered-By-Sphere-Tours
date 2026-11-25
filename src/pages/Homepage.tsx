@@ -1,5 +1,4 @@
 import {
-  Fragment,
   isValidElement,
   lazy,
   Suspense,
@@ -68,8 +67,8 @@ const GoogleReviewsWidget = lazy(() =>
 );
 
 /**
- * Reveals the below-the-fold sections one at a time, starting after the hero
- * has painted.
+ * Reveals the below-the-fold sections in small idle batches, starting after the
+ * hero has painted.
  *
  * The homepage renders ~890 elements and ~575 KB of imagery. Rendering all of it
  * in the first commit meant the browser could not paint the hero until the whole
@@ -77,38 +76,74 @@ const GoogleReviewsWidget = lazy(() =>
  * the initial load window — the initial load is what Lighthouse's LCP simulation
  * waits on, so the whole page's weight landed on the LCP.
  *
- * Each section is mounted in its own task so that no single task crosses the
- * 50 ms blocking threshold. Until a section mounts, an empty placeholder keeps
- * the document at its final height: React Router restores scroll in a layout
- * effect, before these sections mount, so restoring a deep position into a
- * hero-only document would otherwise be clamped to the short initial height.
- * Heights are measured per Tailwind breakpoint in `index.css`.
+ * Two mechanisms keep that work off the critical path:
+ *
+ *   1. Batching. Sections are revealed three at a time from an idle callback
+ *      instead of one per `setTimeout(0)`. Nine React commits + full-document
+ *      layout passes became three, and the time budget check stops a batch as
+ *      soon as the main thread needs to go back to higher-priority work.
+ *   2. Layout skipping. Each section lives inside a `scroll-section` wrapper.
+ *      While the section is not yet mounted the wrapper is an empty, fixed-height
+ *      placeholder, so React Router can restore a deep scroll position into a
+ *      document that already has its final height. Once mounted, the wrapper
+ *      gets `content-visibility: auto` (see `index.css`), so the browser skips
+ *      style/layout/paint for sections that are still offscreen. That is what
+ *      removes the multi-second Style & Layout cost on throttled mobile CPUs.
  */
+const REVEAL_BATCH_SIZE = 3;
+
+type IdleDeadlineLike = { didTimeout: boolean; timeRemaining: () => number };
+
+function scheduleIdle(callback: (deadline: IdleDeadlineLike) => void): number {
+  if (typeof window.requestIdleCallback === 'function') {
+    return window.requestIdleCallback(callback, { timeout: 200 });
+  }
+  return window.setTimeout(() => callback({ didTimeout: true, timeRemaining: () => 0 }), 16);
+}
+
+function cancelIdle(handle: number) {
+  if (typeof window.cancelIdleCallback === 'function') {
+    window.cancelIdleCallback(handle);
+  } else {
+    window.clearTimeout(handle);
+  }
+}
+
 function ProgressiveSections({ sections }: { sections: ReactNode[] }) {
   const [visible, setVisible] = useState(0);
   const revealed = useRef(0);
 
   useEffect(() => {
     let cancelled = false;
-    let timer = 0;
+    let handle = 0;
 
-    const revealNext = () => {
+    const revealBatch = (deadline: IdleDeadlineLike) => {
       if (cancelled) return;
-      revealed.current += 1;
-      setVisible(revealed.current);
-      if (revealed.current < sections.length) {
-        timer = window.setTimeout(revealNext, 0);
+
+      let revealedThisBatch = 0;
+      while (revealed.current < sections.length && revealedThisBatch < REVEAL_BATCH_SIZE) {
+        // Stop early if the browser has run out of idle time, unless the callback
+        // was fired by the timeout — then a small batch is still cheaper than
+        // leaving the sections unrevealed.
+        if (!deadline.didTimeout && deadline.timeRemaining() <= 2) break;
+        revealed.current += 1;
+        revealedThisBatch += 1;
       }
+
+      if (revealedThisBatch > 0) setVisible(revealed.current);
+      if (revealed.current < sections.length) handle = scheduleIdle(revealBatch);
     };
 
     // Two frames: the first lets the hero paint, the second starts the reveals.
     const frame = window.requestAnimationFrame(() => {
-      window.requestAnimationFrame(revealNext);
+      window.requestAnimationFrame(() => {
+        handle = scheduleIdle(revealBatch);
+      });
     });
 
     return () => {
       cancelled = true;
-      window.clearTimeout(timer);
+      cancelIdle(handle);
       window.cancelAnimationFrame(frame);
     };
   }, [sections.length]);
@@ -119,16 +154,18 @@ function ProgressiveSections({ sections }: { sections: ReactNode[] }) {
         const sectionKey =
           (isValidElement(section) && typeof section.key === 'string' && section.key) ||
           `section-${index}`;
+        const isRevealed = visible > index;
 
-        return visible > index ? (
-          <Fragment key={sectionKey}>{section}</Fragment>
-        ) : (
+        return (
           <div
             key={sectionKey}
-            aria-hidden="true"
-            data-scroll-placeholder={sectionKey}
-            className="scroll-placeholder"
-          />
+            className="scroll-section"
+            data-scroll-section={sectionKey}
+            data-revealed={isRevealed}
+            aria-hidden={isRevealed ? undefined : true}
+          >
+            {isRevealed ? section : null}
+          </div>
         );
       })}
     </>

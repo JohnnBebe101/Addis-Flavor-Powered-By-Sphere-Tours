@@ -231,165 +231,175 @@ html {
 }
 
 /*
- * Stable heights for the homepage's progressively mounted sections.
+ * Wrappers for the homepage's progressively mounted sections.
  *
- * React Router restores scroll in a layout effect, before the lazy sections
- * mount. Empty placeholders keep the document at its final height so a saved
- * deep position is not clamped to the short hero-only document. Values were
- * measured from the rendered sections at each Tailwind breakpoint; the
- * placeholder is replaced 1:1 by the real section and then removed.
+ * Before a section mounts, the wrapper is an empty placeholder with the exact
+ * measured height, so React Router can restore a deep scroll position into a
+ * document that already has its final height. After it mounts, the wrapper keeps
+ * that height as its intrinsic size and lets the browser skip layout and paint
+ * until the section approaches the viewport (`content-visibility: auto`).
+ *
+ * `contain-intrinsic-size: auto` remembers the real height after the first
+ * render, so the measured estimate is only used while a section has never been
+ * painted. Heights were measured from the rendered sections at each Tailwind
+ * breakpoint.
  */
-.scroll-placeholder {
+.scroll-section[data-revealed='false'] {
   width: 100%;
-  height: var(--scroll-placeholder-height, 600px);
+  height: var(--scroll-section-height, 600px);
   pointer-events: none;
 }
 
-[data-scroll-placeholder='must-sees'] {
-  --scroll-placeholder-height: 1796px;
+.scroll-section[data-revealed='true'] {
+  content-visibility: auto;
+  contain-intrinsic-size: auto var(--scroll-section-height, 600px);
 }
-[data-scroll-placeholder='welcome'] {
-  --scroll-placeholder-height: 1109px;
+
+[data-scroll-section='must-sees'] {
+  --scroll-section-height: 1796px;
 }
-[data-scroll-placeholder='adventure'] {
-  --scroll-placeholder-height: 1409px;
+[data-scroll-section='welcome'] {
+  --scroll-section-height: 1109px;
 }
-[data-scroll-placeholder='tours'] {
-  --scroll-placeholder-height: 4264px;
+[data-scroll-section='adventure'] {
+  --scroll-section-height: 1409px;
 }
-[data-scroll-placeholder='services'] {
-  --scroll-placeholder-height: 1487px;
+[data-scroll-section='tours'] {
+  --scroll-section-height: 4264px;
 }
-[data-scroll-placeholder='practical'] {
-  --scroll-placeholder-height: 1486px;
+[data-scroll-section='services'] {
+  --scroll-section-height: 1487px;
 }
-[data-scroll-placeholder='reviews'] {
-  --scroll-placeholder-height: 888px;
+[data-scroll-section='practical'] {
+  --scroll-section-height: 1486px;
 }
-[data-scroll-placeholder='plan-your-visit'] {
-  --scroll-placeholder-height: 1209px;
+[data-scroll-section='reviews'] {
+  --scroll-section-height: 888px;
 }
-[data-scroll-placeholder='final-cta'] {
-  --scroll-placeholder-height: 637px;
+[data-scroll-section='plan-your-visit'] {
+  --scroll-section-height: 1209px;
+}
+[data-scroll-section='final-cta'] {
+  --scroll-section-height: 637px;
 }
 
 @media (min-width: 640px) {
-  [data-scroll-placeholder='must-sees'] {
-    --scroll-placeholder-height: 1116px;
+  [data-scroll-section='must-sees'] {
+    --scroll-section-height: 1116px;
   }
-  [data-scroll-placeholder='welcome'] {
-    --scroll-placeholder-height: 1174px;
+  [data-scroll-section='welcome'] {
+    --scroll-section-height: 1174px;
   }
-  [data-scroll-placeholder='adventure'] {
-    --scroll-placeholder-height: 623px;
+  [data-scroll-section='adventure'] {
+    --scroll-section-height: 623px;
   }
-  [data-scroll-placeholder='tours'] {
-    --scroll-placeholder-height: 2270px;
+  [data-scroll-section='tours'] {
+    --scroll-section-height: 2270px;
   }
-  [data-scroll-placeholder='services'] {
-    --scroll-placeholder-height: 833px;
+  [data-scroll-section='services'] {
+    --scroll-section-height: 833px;
   }
-  [data-scroll-placeholder='practical'] {
-    --scroll-placeholder-height: 835px;
+  [data-scroll-section='practical'] {
+    --scroll-section-height: 835px;
   }
-  [data-scroll-placeholder='reviews'] {
-    --scroll-placeholder-height: 784px;
+  [data-scroll-section='reviews'] {
+    --scroll-section-height: 784px;
   }
-  [data-scroll-placeholder='plan-your-visit'] {
-    --scroll-placeholder-height: 1045px;
+  [data-scroll-section='plan-your-visit'] {
+    --scroll-section-height: 1045px;
   }
-  [data-scroll-placeholder='final-cta'] {
-    --scroll-placeholder-height: 532px;
+  [data-scroll-section='final-cta'] {
+    --scroll-section-height: 532px;
   }
 }
 
 @media (min-width: 768px) {
-  [data-scroll-placeholder='must-sees'] {
-    --scroll-placeholder-height: 1280px;
+  [data-scroll-section='must-sees'] {
+    --scroll-section-height: 1280px;
   }
-  [data-scroll-placeholder='welcome'] {
-    --scroll-placeholder-height: 1331px;
+  [data-scroll-section='welcome'] {
+    --scroll-section-height: 1331px;
   }
-  [data-scroll-placeholder='adventure'] {
-    --scroll-placeholder-height: 637px;
+  [data-scroll-section='adventure'] {
+    --scroll-section-height: 637px;
   }
-  [data-scroll-placeholder='tours'] {
-    --scroll-placeholder-height: 1340px;
+  [data-scroll-section='tours'] {
+    --scroll-section-height: 1340px;
   }
-  [data-scroll-placeholder='services'] {
-    --scroll-placeholder-height: 791px;
+  [data-scroll-section='services'] {
+    --scroll-section-height: 791px;
   }
-  [data-scroll-placeholder='practical'] {
-    --scroll-placeholder-height: 935px;
+  [data-scroll-section='practical'] {
+    --scroll-section-height: 935px;
   }
-  [data-scroll-placeholder='reviews'] {
-    --scroll-placeholder-height: 500px;
+  [data-scroll-section='reviews'] {
+    --scroll-section-height: 500px;
   }
-  [data-scroll-placeholder='plan-your-visit'] {
-    --scroll-placeholder-height: 1069px;
+  [data-scroll-section='plan-your-visit'] {
+    --scroll-section-height: 1069px;
   }
-  [data-scroll-placeholder='final-cta'] {
-    --scroll-placeholder-height: 576px;
+  [data-scroll-section='final-cta'] {
+    --scroll-section-height: 576px;
   }
 }
 
 @media (min-width: 1024px) {
-  [data-scroll-placeholder='must-sees'] {
-    --scroll-placeholder-height: 717px;
+  [data-scroll-section='must-sees'] {
+    --scroll-section-height: 717px;
   }
-  [data-scroll-placeholder='welcome'] {
-    --scroll-placeholder-height: 662px;
+  [data-scroll-section='welcome'] {
+    --scroll-section-height: 662px;
   }
-  [data-scroll-placeholder='adventure'] {
-    --scroll-placeholder-height: 693px;
+  [data-scroll-section='adventure'] {
+    --scroll-section-height: 693px;
   }
-  [data-scroll-placeholder='tours'] {
-    --scroll-placeholder-height: 1308px;
+  [data-scroll-section='tours'] {
+    --scroll-section-height: 1308px;
   }
-  [data-scroll-placeholder='services'] {
-    --scroll-placeholder-height: 586px;
+  [data-scroll-section='services'] {
+    --scroll-section-height: 586px;
   }
-  [data-scroll-placeholder='practical'] {
-    --scroll-placeholder-height: 473px;
+  [data-scroll-section='practical'] {
+    --scroll-section-height: 473px;
   }
-  [data-scroll-placeholder='reviews'] {
-    --scroll-placeholder-height: 500px;
+  [data-scroll-section='reviews'] {
+    --scroll-section-height: 500px;
   }
-  [data-scroll-placeholder='plan-your-visit'] {
-    --scroll-placeholder-height: 1069px;
+  [data-scroll-section='plan-your-visit'] {
+    --scroll-section-height: 1069px;
   }
-  [data-scroll-placeholder='final-cta'] {
-    --scroll-placeholder-height: 480px;
+  [data-scroll-section='final-cta'] {
+    --scroll-section-height: 480px;
   }
 }
 
 @media (min-width: 1280px) {
-  [data-scroll-placeholder='must-sees'] {
-    --scroll-placeholder-height: 797px;
+  [data-scroll-section='must-sees'] {
+    --scroll-section-height: 797px;
   }
-  [data-scroll-placeholder='welcome'] {
-    --scroll-placeholder-height: 710px;
+  [data-scroll-section='welcome'] {
+    --scroll-section-height: 710px;
   }
-  [data-scroll-placeholder='adventure'] {
-    --scroll-placeholder-height: 757px;
+  [data-scroll-section='adventure'] {
+    --scroll-section-height: 757px;
   }
-  [data-scroll-placeholder='tours'] {
-    --scroll-placeholder-height: 1308px;
+  [data-scroll-section='tours'] {
+    --scroll-section-height: 1308px;
   }
-  [data-scroll-placeholder='services'] {
-    --scroll-placeholder-height: 540px;
+  [data-scroll-section='services'] {
+    --scroll-section-height: 540px;
   }
-  [data-scroll-placeholder='practical'] {
-    --scroll-placeholder-height: 521px;
+  [data-scroll-section='practical'] {
+    --scroll-section-height: 521px;
   }
-  [data-scroll-placeholder='reviews'] {
-    --scroll-placeholder-height: 500px;
+  [data-scroll-section='reviews'] {
+    --scroll-section-height: 500px;
   }
-  [data-scroll-placeholder='plan-your-visit'] {
-    --scroll-placeholder-height: 1069px;
+  [data-scroll-section='plan-your-visit'] {
+    --scroll-section-height: 1069px;
   }
-  [data-scroll-placeholder='final-cta'] {
-    --scroll-placeholder-height: 480px;
+  [data-scroll-section='final-cta'] {
+    --scroll-section-height: 480px;
   }
 }
 

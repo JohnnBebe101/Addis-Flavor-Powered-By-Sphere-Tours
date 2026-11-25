@@ -1,17 +1,17 @@
 # Graph Report - Addis-Flavor-Powered-By-Sphere-Tours  (2026-11-25)
 
 ## Corpus Check
-- 142 files · ~267,461 words
+- 142 files · ~267,670 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 15 file(s) not represented in the graph (top: .woff2 5, (none) 4, .css 2)
 
 ## Summary
-- 634 nodes · 1094 edges · 27 communities (25 shown, 2 thin omitted)
+- 637 nodes · 1099 edges · 27 communities (25 shown, 2 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 8 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `96793e99`
+- Built from commit: `105953db`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -57,16 +57,16 @@
 10. `SEO()` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `Homepage()` --calls--> `LocalBusinessJSONLD()`  [EXTRACTED]
+  src/pages/Homepage.tsx → src/components/JSONLD.tsx
+- `Homepage()` --calls--> `OrganizationJSONLD()`  [EXTRACTED]
+  src/pages/Homepage.tsx → src/components/JSONLD.tsx
 - `Homepage()` --calls--> `SEO()`  [EXTRACTED]
   src/pages/Homepage.tsx → src/components/SEO.tsx
 - `BookingStep2Props` --references--> `BookingFormData`  [EXTRACTED]
   src/components/booking/BookingStep2.tsx → src/types/booking.ts
 - `TourCardGridProps` --references--> `Tour`  [EXTRACTED]
   src/components/home/TourCardGrid.tsx → src/types.ts
-- `Layout()` --calls--> `Footer()`  [EXTRACTED]
-  src/router/Layout.tsx → src/components/home/Footer.tsx
-- `Layout()` --calls--> `Navbar()`  [EXTRACTED]
-  src/router/Layout.tsx → src/components/Navbar.tsx
 
 ## Import Cycles
 - None detected.
@@ -79,7 +79,7 @@ Nodes (74): AboutData, AboutTeamMember, AboutWhyDifferentPoint, BookingData, Boo
 
 ### Community 1 - "Homepage.tsx"
 Cohesion: 0.06
-Nodes (32): GoogleReviewsWidget(), SkeletonPlaceholder(), AddisHighlightsGridProps, FinalCTAProps, HeroIntentRouter(), TAB_ICONS, FormData, INITIAL_FORM (+24 more)
+Nodes (33): GoogleReviewsWidget(), SkeletonPlaceholder(), AddisHighlightsGridProps, FinalCTAProps, HeroIntentRouter(), TAB_ICONS, FormData, INITIAL_FORM (+25 more)
 
 ### Community 2 - "react"
 Cohesion: 0.10
@@ -171,11 +171,11 @@ Nodes (6): svgo@^4.1.0, svgo, changed, checkOnly, files, walk()
 
 ### Community 26 - "JSONLD.tsx"
 Cohesion: 0.11
-Nodes (21): BreadcrumbJSONLD(), BreadcrumbLD, FAQJSONLD(), FAQPageLD, JSONLD(), JSONLDProps, LDData, LocalBusinessLD (+13 more)
+Nodes (23): BreadcrumbJSONLD(), BreadcrumbLD, FAQJSONLD(), FAQPageLD, JSONLD(), JSONLDProps, LDData, LocalBusinessJSONLD() (+15 more)
 
 ## Knowledge Gaps
 - **1 isolated node(s):** `RFC-8141`
-  These have ≤1 connection - possible missing edges. (Counts symbols only; 313 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges. (Counts symbols only; 314 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -190,7 +190,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `react` connect `react` to `Homepage.tsx`, `BookPage.tsx`, `routes.tsx`, `ContactModal.tsx`, `Layout.tsx`, `AboutPage.tsx`, `TourBookingModal.tsx`, `package.json`, `TourDetailPage.tsx`, `TestimonialsCarousel.tsx`, `JSONLD.tsx`?**
   _High betweenness centrality (0.247) - this node is a cross-community bridge._
 - **Should `Homepage.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.06184012066365008 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0602322206095791 - nodes in this community are weakly interconnected._
 - **Why does `sharp` connect `ref_fs` to `package.json`, `optimize-images.mjs`?**
   _High betweenness centrality (0.124) - this node is a cross-community bridge._
 - **Should `react` be split into smaller, more focused modules?**
