@@ -38,7 +38,7 @@ export function StableHero() {
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
-            decoding="async"
+            decoding="sync"
           />
         </picture>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50" />

@@ -40,6 +40,10 @@ export const Layout = () => {
 
   return (
     <CookieConsentProvider>
+      {/* React Router restores scroll in a layout effect. As the first sibling
+          it runs before the Outlet's effects, so lazy page content and
+          progressive homepage sections cannot mutate document height first. */}
+      <ScrollRestoration />
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-coffee-red focus:text-linen-white focus:rounded-lg focus:text-sm focus:font-bold focus:outline-none"
@@ -55,7 +59,6 @@ export const Layout = () => {
           </Suspense>
         </ErrorBoundary>
       </main>
-      <ScrollRestoration />
       <Footer NEIGHBORHOOD_DESTINATIONS={NEIGHBORHOOD_DESTINATIONS} />
       <StickyBookingBar translations={{ bookNowButton: TRANSLATIONS.bookNowButton }} />
       {isContactOpen && (

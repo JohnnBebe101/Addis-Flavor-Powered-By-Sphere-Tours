@@ -75,6 +75,11 @@
       imagesizes="100vw"
       fetchpriority="high"
     />
+    <!-- Deliberately no WebP preload: the homepage is prerendered, so the
+         <picture> fallback is in the first HTML response and WebP-only browsers
+         find it without waiting for JS. A second preload makes AVIF-capable
+         browsers download BOTH formats (measured: 183 KB AVIF + 291 KB WebP),
+         more than doubling the LCP payload. -->
 
   </head>
   <body>
