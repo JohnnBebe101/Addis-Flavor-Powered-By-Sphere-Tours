@@ -618,9 +618,9 @@
     "semantic_hash": ""
   },
   "src/pages/Homepage.tsx": {
-    "mtime": 1795536738.004841,
-    "seen": 1795536895.2941852,
-    "ast_hash": "38438a146bafb751f909c1034b1d6f90",
+    "mtime": 1795624921.0166116,
+    "seen": 1795625101.6112325,
+    "ast_hash": "1f9d31fe0c76f382b8bf71f456cd1a90",
     "semantic_hash": ""
   },
   "src/pages/LegalPage.tsx": {

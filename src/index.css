@@ -230,6 +230,169 @@ html {
   transform: rotate(180deg) scale(1.1);
 }
 
+/*
+ * Stable heights for the homepage's progressively mounted sections.
+ *
+ * React Router restores scroll in a layout effect, before the lazy sections
+ * mount. Empty placeholders keep the document at its final height so a saved
+ * deep position is not clamped to the short hero-only document. Values were
+ * measured from the rendered sections at each Tailwind breakpoint; the
+ * placeholder is replaced 1:1 by the real section and then removed.
+ */
+.scroll-placeholder {
+  width: 100%;
+  height: var(--scroll-placeholder-height, 600px);
+  pointer-events: none;
+}
+
+[data-scroll-placeholder='must-sees'] {
+  --scroll-placeholder-height: 1796px;
+}
+[data-scroll-placeholder='welcome'] {
+  --scroll-placeholder-height: 1109px;
+}
+[data-scroll-placeholder='adventure'] {
+  --scroll-placeholder-height: 1409px;
+}
+[data-scroll-placeholder='tours'] {
+  --scroll-placeholder-height: 4264px;
+}
+[data-scroll-placeholder='services'] {
+  --scroll-placeholder-height: 1487px;
+}
+[data-scroll-placeholder='practical'] {
+  --scroll-placeholder-height: 1486px;
+}
+[data-scroll-placeholder='reviews'] {
+  --scroll-placeholder-height: 888px;
+}
+[data-scroll-placeholder='plan-your-visit'] {
+  --scroll-placeholder-height: 1209px;
+}
+[data-scroll-placeholder='final-cta'] {
+  --scroll-placeholder-height: 637px;
+}
+
+@media (min-width: 640px) {
+  [data-scroll-placeholder='must-sees'] {
+    --scroll-placeholder-height: 1116px;
+  }
+  [data-scroll-placeholder='welcome'] {
+    --scroll-placeholder-height: 1174px;
+  }
+  [data-scroll-placeholder='adventure'] {
+    --scroll-placeholder-height: 623px;
+  }
+  [data-scroll-placeholder='tours'] {
+    --scroll-placeholder-height: 2270px;
+  }
+  [data-scroll-placeholder='services'] {
+    --scroll-placeholder-height: 833px;
+  }
+  [data-scroll-placeholder='practical'] {
+    --scroll-placeholder-height: 835px;
+  }
+  [data-scroll-placeholder='reviews'] {
+    --scroll-placeholder-height: 784px;
+  }
+  [data-scroll-placeholder='plan-your-visit'] {
+    --scroll-placeholder-height: 1045px;
+  }
+  [data-scroll-placeholder='final-cta'] {
+    --scroll-placeholder-height: 532px;
+  }
+}
+
+@media (min-width: 768px) {
+  [data-scroll-placeholder='must-sees'] {
+    --scroll-placeholder-height: 1280px;
+  }
+  [data-scroll-placeholder='welcome'] {
+    --scroll-placeholder-height: 1331px;
+  }
+  [data-scroll-placeholder='adventure'] {
+    --scroll-placeholder-height: 637px;
+  }
+  [data-scroll-placeholder='tours'] {
+    --scroll-placeholder-height: 1340px;
+  }
+  [data-scroll-placeholder='services'] {
+    --scroll-placeholder-height: 791px;
+  }
+  [data-scroll-placeholder='practical'] {
+    --scroll-placeholder-height: 935px;
+  }
+  [data-scroll-placeholder='reviews'] {
+    --scroll-placeholder-height: 500px;
+  }
+  [data-scroll-placeholder='plan-your-visit'] {
+    --scroll-placeholder-height: 1069px;
+  }
+  [data-scroll-placeholder='final-cta'] {
+    --scroll-placeholder-height: 576px;
+  }
+}
+
+@media (min-width: 1024px) {
+  [data-scroll-placeholder='must-sees'] {
+    --scroll-placeholder-height: 717px;
+  }
+  [data-scroll-placeholder='welcome'] {
+    --scroll-placeholder-height: 662px;
+  }
+  [data-scroll-placeholder='adventure'] {
+    --scroll-placeholder-height: 693px;
+  }
+  [data-scroll-placeholder='tours'] {
+    --scroll-placeholder-height: 1308px;
+  }
+  [data-scroll-placeholder='services'] {
+    --scroll-placeholder-height: 586px;
+  }
+  [data-scroll-placeholder='practical'] {
+    --scroll-placeholder-height: 473px;
+  }
+  [data-scroll-placeholder='reviews'] {
+    --scroll-placeholder-height: 500px;
+  }
+  [data-scroll-placeholder='plan-your-visit'] {
+    --scroll-placeholder-height: 1069px;
+  }
+  [data-scroll-placeholder='final-cta'] {
+    --scroll-placeholder-height: 480px;
+  }
+}
+
+@media (min-width: 1280px) {
+  [data-scroll-placeholder='must-sees'] {
+    --scroll-placeholder-height: 797px;
+  }
+  [data-scroll-placeholder='welcome'] {
+    --scroll-placeholder-height: 710px;
+  }
+  [data-scroll-placeholder='adventure'] {
+    --scroll-placeholder-height: 757px;
+  }
+  [data-scroll-placeholder='tours'] {
+    --scroll-placeholder-height: 1308px;
+  }
+  [data-scroll-placeholder='services'] {
+    --scroll-placeholder-height: 540px;
+  }
+  [data-scroll-placeholder='practical'] {
+    --scroll-placeholder-height: 521px;
+  }
+  [data-scroll-placeholder='reviews'] {
+    --scroll-placeholder-height: 500px;
+  }
+  [data-scroll-placeholder='plan-your-visit'] {
+    --scroll-placeholder-height: 1069px;
+  }
+  [data-scroll-placeholder='final-cta'] {
+    --scroll-placeholder-height: 480px;
+  }
+}
+
 /* Reduced motion — disable all non-essential animations */
 @media (prefers-reduced-motion: reduce) {
   *,

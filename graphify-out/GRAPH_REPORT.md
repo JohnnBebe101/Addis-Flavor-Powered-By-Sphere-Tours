@@ -1,7 +1,7 @@
 # Graph Report - Addis-Flavor-Powered-By-Sphere-Tours  (2026-11-25)
 
 ## Corpus Check
-- 142 files · ~267,380 words
+- 142 files · ~267,461 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 15 file(s) not represented in the graph (top: .woff2 5, (none) 4, .css 2)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3da312d5`
+- Built from commit: `96793e99`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -57,12 +57,12 @@
 10. `SEO()` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `Homepage()` --calls--> `SEO()`  [EXTRACTED]
+  src/pages/Homepage.tsx → src/components/SEO.tsx
 - `BookingStep2Props` --references--> `BookingFormData`  [EXTRACTED]
   src/components/booking/BookingStep2.tsx → src/types/booking.ts
 - `TourCardGridProps` --references--> `Tour`  [EXTRACTED]
   src/components/home/TourCardGrid.tsx → src/types.ts
-- `Homepage()` --calls--> `SEO()`  [EXTRACTED]
-  src/pages/Homepage.tsx → src/components/SEO.tsx
 - `Layout()` --calls--> `Footer()`  [EXTRACTED]
   src/router/Layout.tsx → src/components/home/Footer.tsx
 - `Layout()` --calls--> `Navbar()`  [EXTRACTED]

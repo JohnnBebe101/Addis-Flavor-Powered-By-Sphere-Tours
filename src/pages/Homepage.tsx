@@ -1,4 +1,14 @@
-import { lazy, Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import {
+  Fragment,
+  isValidElement,
+  lazy,
+  Suspense,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from 'react';
 import { Link } from 'react-router-dom';
 import {
   MapPin,
@@ -68,8 +78,11 @@ const GoogleReviewsWidget = lazy(() =>
  * waits on, so the whole page's weight landed on the LCP.
  *
  * Each section is mounted in its own task so that no single task crosses the
- * 50 ms blocking threshold. The resulting DOM is identical to the previous
- * markup; only the mount timing differs.
+ * 50 ms blocking threshold. Until a section mounts, an empty placeholder keeps
+ * the document at its final height: React Router restores scroll in a layout
+ * effect, before these sections mount, so restoring a deep position into a
+ * hero-only document would otherwise be clamped to the short initial height.
+ * Heights are measured per Tailwind breakpoint in `index.css`.
  */
 function ProgressiveSections({ sections }: { sections: ReactNode[] }) {
   const [visible, setVisible] = useState(0);
@@ -100,7 +113,26 @@ function ProgressiveSections({ sections }: { sections: ReactNode[] }) {
     };
   }, [sections.length]);
 
-  return <>{sections.slice(0, visible)}</>;
+  return (
+    <>
+      {sections.map((section, index) => {
+        const sectionKey =
+          (isValidElement(section) && typeof section.key === 'string' && section.key) ||
+          `section-${index}`;
+
+        return visible > index ? (
+          <Fragment key={sectionKey}>{section}</Fragment>
+        ) : (
+          <div
+            key={sectionKey}
+            aria-hidden="true"
+            data-scroll-placeholder={sectionKey}
+            className="scroll-placeholder"
+          />
+        );
+      })}
+    </>
+  );
 }
 
 export function Homepage() {
