@@ -40,10 +40,13 @@ export const Layout = () => {
 
   return (
     <CookieConsentProvider>
-      {/* React Router restores scroll in a layout effect. As the first sibling
-          it runs before the Outlet's effects, so lazy page content and
-          progressive homepage sections cannot mutate document height first. */}
-      <ScrollRestoration />
+      {/* React Router restores scroll in a layout effect. The stable pathname
+          key keeps positions per route; restoration still depends on document
+          height staying stable while progressive sections mount. */}
+      <ScrollRestoration
+        getKey={(location) => location.pathname}
+        storageKey="addis-scroll-positions"
+      />
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-coffee-red focus:text-linen-white focus:rounded-lg focus:text-sm focus:font-bold focus:outline-none"
